@@ -18,6 +18,18 @@ npm run format:check
 npm run build
 ```
 
+## Deployment
+
+GitHub Actions publishes the static site to GitHub Pages whenever `main` is
+updated. Set **Settings → Pages → Build and deployment → Source** to
+**Deploy from a branch**, then select the `gh-pages` branch and `/ (root)` after
+the first deployment creates that branch.
+
+Pull requests from branches in this repository receive a canary at
+`https://<owner>.github.io/Noklingo/pr-preview/pr-<number>/`; the workflow adds
+and maintains that URL as a PR comment, then removes the preview when the PR
+closes.
+
 ## Architecture
 
 - `app/` contains the Vite-powered Vinext entry and global styling.

@@ -1,5 +1,12 @@
-const CACHE_VERSION = "noklingo-shell-v1";
-const CORE = ["/", "/manifest.webmanifest", "/icon-192.png", "/icon-512.png"];
+const scopePath = new URL(self.registration.scope).pathname.replace(/\/$/, "");
+const scopedPath = (path) => `${scopePath}${path}`;
+const CACHE_VERSION = `noklingo-shell-v1:${scopePath || "/"}`;
+const CORE = [
+  scopedPath("/"),
+  scopedPath("/manifest.webmanifest"),
+  scopedPath("/icon-192.png"),
+  scopedPath("/icon-512.png"),
+];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -46,10 +53,12 @@ self.addEventListener("fetch", (event) => {
       fetch(event.request)
         .then((response) => {
           const clone = response.clone();
-          caches.open(CACHE_VERSION).then((cache) => cache.put("/", clone));
+          caches
+            .open(CACHE_VERSION)
+            .then((cache) => cache.put(scopedPath("/"), clone));
           return response;
         })
-        .catch(() => caches.match("/")),
+        .catch(() => caches.match(scopedPath("/"))),
     );
     return;
   }

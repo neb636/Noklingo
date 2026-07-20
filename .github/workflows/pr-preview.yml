@@ -1,0 +1,122 @@
+name: PR Canary Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: pr-preview-${{ github.event.number }}
+  cancel-in-progress: true
+
+jobs:
+  deploy-preview:
+    if: github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build static canary
+        run: npm run build:pages
+        env:
+          ASSET_PREFIX: /${{ github.event.repository.name }}/pr-preview/pr-${{ github.event.number }}
+          NEXT_PUBLIC_SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-preview/pr-${{ github.event.number }}/
+
+      - name: Publish canary
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./dist/client
+          destination_dir: pr-preview/pr-${{ github.event.number }}
+          keep_files: true
+
+      - name: Post preview URL to PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const prNumber = context.issue.number;
+            const previewUrl = `https://${owner}.github.io/${repo}/pr-preview/pr-${prNumber}/`;
+            const sha = context.payload.pull_request.head.sha.slice(0, 7);
+            const body = [
+              '## Canary Preview',
+              '',
+              `**Preview URL:** ${previewUrl}`,
+              '',
+              `Last updated for commit \`${sha}\`.`,
+            ].join('\n');
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner,
+              repo,
+              issue_number: prNumber,
+            });
+            const existing = comments.find(
+              (comment) =>
+                comment.user.type === 'Bot' &&
+                comment.body?.includes('## Canary Preview'),
+            );
+
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner,
+                repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: prNumber,
+                body,
+              });
+            }
+
+  cleanup-preview:
+    if: github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          fetch-depth: 1
+          path: gh-pages
+        continue-on-error: true
+        id: checkout
+
+      - name: Remove PR preview directory
+        if: steps.checkout.outcome == 'success'
+        working-directory: gh-pages
+        run: |
+          preview_dir="pr-preview/pr-${{ github.event.number }}"
+          if [ -d "$preview_dir" ]; then
+            rm -rf "$preview_dir"
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "chore: remove PR #${{ github.event.number }} canary preview"
+            git push origin gh-pages
+          fi
+
+      - name: Post cleanup comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: 'The canary preview for this PR has been cleaned up.',
+            });

@@ -58,8 +58,9 @@ function RouteView() {
   }, [route]);
   useEffect(() => {
     if ("serviceWorker" in navigator && process.env.NODE_ENV === "production") {
+      const serviceWorkerUrl = new URL("sw.js", window.location.href);
       navigator.serviceWorker
-        .register("/sw.js")
+        .register(serviceWorkerUrl)
         .then(async () => {
           const registration = await navigator.serviceWorker.ready;
           const urls = performance

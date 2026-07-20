@@ -44,6 +44,9 @@ export default defineConfig(async () => {
   const { cloudflare } = await import("@cloudflare/vite-plugin");
 
   return {
+    base: process.env.ASSET_PREFIX
+      ? `${process.env.ASSET_PREFIX.replace(/\/$/, "")}/`
+      : "/",
     server: isCodexSeatbeltSandbox
       ? { watch: { useFsEvents: false, usePolling: true } }
       : undefined,
