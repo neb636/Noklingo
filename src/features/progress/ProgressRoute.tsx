@@ -67,7 +67,7 @@ export function ProgressRoute() {
           </div>
           <div className="unit-list">
             {course.units.map((unit) => {
-              const percent = unitPercent(unit.id, progress.completedLessonIds);
+              const percent = unitPercent(course, unit.id, progress);
               return (
                 <div className="unit-list-row" key={unit.id}>
                   <span className={`unit-number unit-number-${unit.color}`}>
@@ -124,6 +124,7 @@ export function ProgressRoute() {
                       <strong>{activity.title}</strong>
                       <small>
                         {date} · {activity.accuracy}% accurate
+                        {!activity.passed ? " · checkpoint retry" : ""}
                       </small>
                     </div>
                     <b>+{activity.xp} XP</b>
@@ -141,6 +142,36 @@ export function ProgressRoute() {
           </div>
         </section>
       </div>
+
+      <section className="panel milestone-panel">
+        <div className="panel-heading">
+          <div>
+            <span className="eyebrow">Milestones</span>
+            <h2>Useful wins, not busywork</h2>
+          </div>
+          <Trophy size={26} />
+        </div>
+        <div className="milestone-grid">
+          {course.achievements.map((achievement) => {
+            const unlocked = progress.unlockedAchievementIds.includes(
+              achievement.id,
+            );
+            return (
+              <article
+                className={`milestone-card ${unlocked ? "unlocked" : ""}`}
+                key={achievement.id}
+              >
+                <Star size={20} fill={unlocked ? "currentColor" : "none"} />
+                <div>
+                  <strong>{achievement.title}</strong>
+                  <small>{achievement.description}</small>
+                </div>
+                <span>{unlocked ? "Earned" : "Ahead"}</span>
+              </article>
+            );
+          })}
+        </div>
+      </section>
     </div>
   );
 }

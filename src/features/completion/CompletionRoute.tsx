@@ -8,7 +8,6 @@ import {
   Sparkles,
   Star,
 } from "lucide-react";
-import { course } from "@/src/content/course";
 import { Mascot, NokLogo } from "@/src/components/Mascot";
 import { Button } from "@/src/components/ui";
 import { useAppStore } from "@/src/store/useAppStore";
@@ -17,6 +16,7 @@ export function CompletionRoute() {
   const completion = useAppStore((state) => state.completion);
   const navigate = useAppStore((state) => state.navigate);
   const startLesson = useAppStore((state) => state.startLesson);
+  const startReview = useAppStore((state) => state.startReview);
 
   if (!completion) {
     return (
@@ -27,7 +27,6 @@ export function CompletionRoute() {
     );
   }
 
-  const lesson = course.lessons[completion.lessonId];
   const minuteLabel =
     completion.seconds < 60
       ? `${completion.seconds}s`
@@ -54,10 +53,25 @@ export function CompletionRoute() {
           <Mascot size="large" mood="proud" />
         </div>
         <span className="eyebrow">
-          <Sparkles size={16} /> Lesson complete
+          <Sparkles size={16} />{" "}
+          {completion.mode === "checkpoint"
+            ? completion.passed
+              ? "Checkpoint passed"
+              : "Checkpoint needs another pass"
+            : completion.mode === "review"
+              ? "Review complete"
+              : "Lesson complete"}
         </span>
-        <h1>{lesson.title} is in the bag!</h1>
-        <p>Nok noticed that effort. Your Thai just got a little more useful.</p>
+        <h1>
+          {completion.passed
+            ? `${completion.lessonTitle} is in the bag!`
+            : `${completion.accuracy}% — close, and useful.`}
+        </h1>
+        <p>
+          {completion.passed
+            ? "Nok noticed that effort. Your spoken Thai just got a little more useful."
+            : `This checkpoint needs ${completion.requiredAccuracy ?? 80}%. A short targeted review will bring the missed ideas back before your retry.`}
+        </p>
 
         <div className="xp-pile">
           <Star size={28} fill="currentColor" />
@@ -102,16 +116,35 @@ export function CompletionRoute() {
           </div>
         )}
 
+        {completion.newAchievementTitles.length > 0 && (
+          <div className="achievement-callout">
+            <Crown size={22} />
+            <div>
+              <small>Milestone unlocked</small>
+              <strong>{completion.newAchievementTitles.join(" · ")}</strong>
+            </div>
+          </div>
+        )}
+
         <div className="completion-actions">
-          <Button full onClick={() => navigate("home")}>
-            Back to my path
+          <Button
+            full
+            onClick={() =>
+              completion.passed ? navigate("home") : startReview()
+            }
+          >
+            {completion.passed ? "Back to my path" : "Review missed ideas"}
           </Button>
           <Button
             tone="secondary"
             full
-            onClick={() => startLesson(completion.lessonId)}
+            onClick={() =>
+              completion.mode === "review"
+                ? startReview()
+                : startLesson(completion.lessonId)
+            }
           >
-            Practice again
+            {completion.passed ? "Practice again" : "Retry checkpoint"}
           </Button>
         </div>
       </motion.div>

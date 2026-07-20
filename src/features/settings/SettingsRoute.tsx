@@ -115,6 +115,7 @@ export function SettingsRoute() {
             <button
               className={`switch ${settings.audioEnabled ? "on" : ""}`}
               role="switch"
+              aria-label="Lesson audio"
               aria-checked={settings.audioEnabled}
               onClick={() =>
                 updateSettings({ audioEnabled: !settings.audioEnabled })
@@ -132,6 +133,7 @@ export function SettingsRoute() {
               </span>
             </div>
             <input
+              aria-label="Lesson audio volume"
               type="range"
               min="0"
               max="1"
@@ -143,12 +145,12 @@ export function SettingsRoute() {
               disabled={!settings.audioEnabled}
             />
           </label>
-          <div className="setting-row setting-select">
+          <label className="setting-row setting-select">
             <div>
               <Type size={21} />
               <span>
-                <strong>Romanization</strong>
-                <small>Show pronunciation help</small>
+                <strong>Pronunciation guidance</strong>
+                <small>Romanization remains the exercise language</small>
               </span>
             </div>
             <select
@@ -161,9 +163,28 @@ export function SettingsRoute() {
               }
             >
               <option value="always">Always show</option>
-              <option value="learning">While learning</option>
-              <option value="never">Thai only</option>
+              <option value="learning">Keep detail concise</option>
             </select>
+          </label>
+          <div className="setting-row">
+            <div>
+              <Type size={21} />
+              <span>
+                <strong>Thai script details</strong>
+                <small>Optional source-accuracy view; never required</small>
+              </span>
+            </div>
+            <button
+              className={`switch ${settings.showThaiScript ? "on" : ""}`}
+              role="switch"
+              aria-label="Show optional Thai script details"
+              aria-checked={settings.showThaiScript}
+              onClick={() =>
+                updateSettings({ showThaiScript: !settings.showThaiScript })
+              }
+            >
+              <i />
+            </button>
           </div>
           <div className="setting-row">
             <div>
@@ -176,6 +197,7 @@ export function SettingsRoute() {
             <button
               className={`switch ${settings.darkMode ? "on" : ""}`}
               role="switch"
+              aria-label="Dark mode"
               aria-checked={settings.darkMode}
               onClick={() => updateSettings({ darkMode: !settings.darkMode })}
             >
@@ -193,6 +215,7 @@ export function SettingsRoute() {
             <button
               className={`switch ${settings.reducedMotion ? "on" : ""}`}
               role="switch"
+              aria-label="Reduced motion"
               aria-checked={settings.reducedMotion}
               onClick={() =>
                 updateSettings({ reducedMotion: !settings.reducedMotion })

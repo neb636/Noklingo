@@ -26,6 +26,9 @@ jobs:
 
       - run: npm ci
 
+      - name: Validate learning engine and course
+        run: npm run validate:course && npm run typecheck && npm run lint && npm run test:engine
+
       - name: Build static site
         run: npm run build:pages
         env:

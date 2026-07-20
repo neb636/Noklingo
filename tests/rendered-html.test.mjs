@@ -54,8 +54,9 @@ test("keeps curriculum, persistence, and PWA support separated", async () => {
   ]);
 
   assert.match(page, /<NoklingoApp \/>/);
-  assert.match(course, /warm-welcome/);
-  assert.match(course, /tasty-thai/);
+  assert.match(course, /unit\.warm-welcome/);
+  assert.match(course, /unit\.restaurant/);
+  assert.match(course, /unit\.family-chatter/);
   assert.match(database, /IndexedDB|Dexie|noklingo/i);
   assert.match(serviceWorker, /CACHE_VERSION/);
   assert.match(manifest, /"display": "standalone"/);

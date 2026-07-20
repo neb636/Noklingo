@@ -1,147 +1,81 @@
-export type ExerciseType =
-  | "listen-choice"
-  | "thai-to-english"
-  | "english-to-thai"
-  | "word-order"
-  | "fill-blank"
-  | "matching"
-  | "conversation"
-  | "speaking"
-  | "mistake-review";
+import type { z } from "zod";
+import type {
+  AchievementSchema,
+  ActivitySchema,
+  AnswerRecordSchema,
+  AudioAssetSchema,
+  CheckpointResultSchema,
+  CheckpointSchema,
+  ChoiceSchema,
+  CompletionSummarySchema,
+  CourseSchema,
+  CulturalNoteSchema,
+  DialogueSchema,
+  DialogueTurnSchema,
+  ExerciseAnswerSchema,
+  ExerciseAttemptSchema,
+  ExerciseFeedbackSchema,
+  ExerciseSchema,
+  ExerciseTypeSchema,
+  GrammarNoteSchema,
+  HintSchema,
+  LessonSchema,
+  LessonSessionSchema,
+  LessonStateSchema,
+  MistakeRecordSchema,
+  PairSchema,
+  PathNodeSchema,
+  PersistedAppDataSchema,
+  PhraseSchema,
+  ProfileSchema,
+  ReviewSchedulingStateSchema,
+  ReviewSessionSchema,
+  SectionSchema,
+  SettingsSchema,
+  SkillSchema,
+  SpeakerSchema,
+  UnitSchema,
+  UserProgressSchema,
+  VocabularyItemSchema,
+} from "@/src/domain/schemas";
 
-export type Choice = {
-  id: string;
-  label: string;
-  thai?: string;
-  romanization?: string;
-};
-
-export type Pair = {
-  id: string;
-  left: string;
-  right: string;
-};
-
-export type Exercise = {
-  id: string;
-  type: ExerciseType;
-  prompt: string;
-  instruction: string;
-  thai?: string;
-  romanization?: string;
-  audioRef?: string;
-  choices?: Choice[];
-  tokens?: string[];
-  pairs?: Pair[];
-  correctAnswer: string | string[];
-  acceptedAnswers?: string[];
-  hint?: string;
-  explanation?: string;
-};
-
-export type Lesson = {
-  id: string;
-  unitId: string;
-  title: string;
-  eyebrow: string;
-  description: string;
-  icon: string;
-  xp: number;
-  exercises: Exercise[];
-};
-
-export type PathNode = {
-  id: string;
-  type: "lesson" | "checkpoint" | "review";
-  title: string;
-  lessonId?: string;
-};
-
-export type CourseUnit = {
-  id: string;
-  number: number;
-  title: string;
-  description: string;
-  color: "coral" | "teal";
-  nodes: PathNode[];
-};
-
-export type Course = {
-  id: string;
-  title: string;
-  units: CourseUnit[];
-  lessons: Record<string, Lesson>;
-};
-
-export type Settings = {
-  audioEnabled: boolean;
-  volume: number;
-  romanization: "always" | "learning" | "never";
-  reducedMotion: boolean;
-  darkMode: boolean;
-};
-
-export type Profile = {
-  name: string;
-  onboarded: boolean;
-  dailyGoal: number;
-  motivation: string;
-  familiarity: "new" | "some" | "comfortable";
-};
-
-export type Activity = {
-  id: string;
-  lessonId: string;
-  title: string;
-  xp: number;
-  accuracy: number;
-  completedAt: string;
-};
-
-export type Progress = {
-  totalXp: number;
-  todayXp: number;
-  todayDate: string;
-  currentStreak: number;
-  longestStreak: number;
-  lastPracticeDate: string | null;
-  completedLessonIds: string[];
-  lessonAttempts: Record<string, number>;
-  activities: Activity[];
-  mistakeExerciseIds: string[];
-};
-
-export type ExerciseAnswer = string | string[] | Record<string, string>;
-
-export type AnswerRecord = {
-  exerciseId: string;
-  correct: boolean;
-  answer: ExerciseAnswer;
-};
-
-export type LessonSession = {
-  lessonId: string;
-  exerciseIndex: number;
-  hearts: number;
-  answers: AnswerRecord[];
-  currentAnswer: ExerciseAnswer | null;
-  currentResult: boolean | null;
-  startedAt: string;
-};
-
-export type CompletionSummary = {
-  lessonId: string;
-  xp: number;
-  accuracy: number;
-  mistakes: number;
-  seconds: number;
-  unlockedTitle?: string;
-};
-
-export type PersistedAppData = {
-  version: 1;
-  profile: Profile;
-  settings: Settings;
-  progress: Progress;
-  activeSession: LessonSession | null;
-};
+export type Achievement = z.infer<typeof AchievementSchema>;
+export type Milestone = Achievement;
+export type Activity = z.infer<typeof ActivitySchema>;
+export type AnswerRecord = z.infer<typeof AnswerRecordSchema>;
+export type AudioAsset = z.infer<typeof AudioAssetSchema>;
+export type Checkpoint = z.infer<typeof CheckpointSchema>;
+export type CheckpointResult = z.infer<typeof CheckpointResultSchema>;
+export type Choice = z.infer<typeof ChoiceSchema>;
+export type CompletionSummary = z.infer<typeof CompletionSummarySchema>;
+export type Course = z.infer<typeof CourseSchema>;
+export type CourseUnit = z.infer<typeof UnitSchema>;
+export type CulturalNote = z.infer<typeof CulturalNoteSchema>;
+export type Dialogue = z.infer<typeof DialogueSchema>;
+export type DialogueTurn = z.infer<typeof DialogueTurnSchema>;
+export type Exercise = z.infer<typeof ExerciseSchema>;
+export type ExerciseAnswer = z.infer<typeof ExerciseAnswerSchema>;
+export type ExerciseAttempt = z.infer<typeof ExerciseAttemptSchema>;
+export type ExerciseFeedback = z.infer<typeof ExerciseFeedbackSchema>;
+export type ExerciseType = z.infer<typeof ExerciseTypeSchema>;
+export type GrammarNote = z.infer<typeof GrammarNoteSchema>;
+export type Hint = z.infer<typeof HintSchema>;
+export type Lesson = z.infer<typeof LessonSchema>;
+export type LessonSession = z.infer<typeof LessonSessionSchema>;
+export type LessonState = z.infer<typeof LessonStateSchema>;
+export type MistakeRecord = z.infer<typeof MistakeRecordSchema>;
+export type Pair = z.infer<typeof PairSchema>;
+export type PathNode = z.infer<typeof PathNodeSchema>;
+export type PersistedAppData = z.infer<typeof PersistedAppDataSchema>;
+export type Phrase = z.infer<typeof PhraseSchema>;
+export type Profile = z.infer<typeof ProfileSchema>;
+export type Progress = z.infer<typeof UserProgressSchema>;
+export type ReviewSchedulingState = z.infer<typeof ReviewSchedulingStateSchema>;
+export type ReviewSession = z.infer<typeof ReviewSessionSchema>;
+export type Section = z.infer<typeof SectionSchema>;
+export type Settings = z.infer<typeof SettingsSchema>;
+export type Skill = z.infer<typeof SkillSchema>;
+export type Speaker = z.infer<typeof SpeakerSchema>;
+export type Unit = z.infer<typeof UnitSchema>;
+export type UserProgress = z.infer<typeof UserProgressSchema>;
+export type VocabularyItem = z.infer<typeof VocabularyItemSchema>;
