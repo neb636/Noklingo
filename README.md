@@ -66,6 +66,12 @@ and progression. It reports an author-facing content path for each error.
 - [Course authoring](docs/COURSE_AUTHORING.md) explains how to add vocabulary,
   phrases, speakers, dialogues, exercises, lessons, units, audio, accepted answer
   variants, checkpoints, and review metadata.
+- [Course overview](docs/COURSE_OVERVIEW.md) lists the 14-unit progression,
+  checkpoint gates, Romanization convention, and listening progression.
+- [Thai content style](docs/THAI_CONTENT_STYLE.md) defines naturalness, usage
+  labels, safety notes, and the native-speaker review checklist.
+- [Audio recording workflow](docs/AUDIO_RECORDING_WORKFLOW.md) explains the
+  structured 492-take manifest and human-recording handoff.
 - [Audio assets](public/audio/README.md) defines the recording and filename
   convention, multiple-speaker and slow-audio support, caching, fallbacks, and the
   workflow for replacing TTS with human voices.
@@ -73,8 +79,10 @@ and progression. It reports an author-facing content path for each error.
 ## Architecture
 
 - `app/` contains the Vinext application entry and global styling.
-- `src/content/course.ts` contains the normalized demonstration course, separate
-  from rendering and learner state.
+- `src/content/courseData.ts` contains the normalized course and builders;
+  `src/content/course.ts` is the stable public content entry point.
+- `src/content/audioManifest.ts` derives the complete normal/slow recording
+  manifest from resolved lesson use.
 - `src/domain/schemas.ts` defines Zod runtime schemas and the TypeScript domain
   contracts inferred from them.
 - `src/domain/courseValidation.ts` performs semantic authoring validation such as
@@ -110,13 +118,13 @@ hosting surface. There is no backend, authentication, cloud sync, or paid audio
 API. Learner data remains on the device and can be exported, imported, or reset
 from Settings.
 
-## Demonstration course
+## Conversational Thai Course 1
 
-The polished sample slice covers a first welcome, food/restaurant Thai, and
-casual conversation. It includes multiple speakers, a real checkpoint, generated
-review, mistake-based variations, and every major exercise family. Content is
-intentionally small: it demonstrates the reusable engine rather than pretending
-to be a complete Thai curriculum.
+The first substantial course contains 14 progressive units, 41 short lessons,
+five cumulative checkpoints, and smart-review nodes throughout. It covers core
+survival Thai, introductions, questions, restaurants, shopping, transport,
+hotels, family, daily activities, reactions, plans, casual listening, friendly
+conversation, and emergencies.
 
 Seed content may use `tts:` browser speech while original human audio is being
 recorded. TTS availability varies and is not treated as a guaranteed offline

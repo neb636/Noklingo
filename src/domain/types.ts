@@ -4,6 +4,7 @@ import type {
   ActivitySchema,
   AnswerRecordSchema,
   AudioAssetSchema,
+  AudioManifestEntrySchema,
   CheckpointResultSchema,
   CheckpointSchema,
   ChoiceSchema,
@@ -11,6 +12,7 @@ import type {
   CourseSchema,
   CulturalNoteSchema,
   DialogueSchema,
+  DialogueComprehensionQuestionSchema,
   DialogueTurnSchema,
   ExerciseAnswerSchema,
   ExerciseAttemptSchema,
@@ -44,6 +46,7 @@ export type Milestone = Achievement;
 export type Activity = z.infer<typeof ActivitySchema>;
 export type AnswerRecord = z.infer<typeof AnswerRecordSchema>;
 export type AudioAsset = z.infer<typeof AudioAssetSchema>;
+export type AudioManifestEntry = z.infer<typeof AudioManifestEntrySchema>;
 export type Checkpoint = z.infer<typeof CheckpointSchema>;
 export type CheckpointResult = z.infer<typeof CheckpointResultSchema>;
 export type Choice = z.infer<typeof ChoiceSchema>;
@@ -52,6 +55,9 @@ export type Course = z.infer<typeof CourseSchema>;
 export type CourseUnit = z.infer<typeof UnitSchema>;
 export type CulturalNote = z.infer<typeof CulturalNoteSchema>;
 export type Dialogue = z.infer<typeof DialogueSchema>;
+export type DialogueComprehensionQuestion = z.infer<
+  typeof DialogueComprehensionQuestionSchema
+>;
 export type DialogueTurn = z.infer<typeof DialogueTurnSchema>;
 export type Exercise = z.infer<typeof ExerciseSchema>;
 export type ExerciseAnswer = z.infer<typeof ExerciseAnswerSchema>;

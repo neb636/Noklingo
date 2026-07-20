@@ -37,14 +37,14 @@ test("server-renders the branded Noklingo app shell", async () => {
   );
   assert.match(html, /manifest\.webmanifest/);
   assert.match(html, /Warming up your Thai/);
-  assert.match(html, /og\.png/);
+  assert.match(html, /og-course-one\.png/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|Starter Project/);
 });
 
 test("keeps curriculum, persistence, and PWA support separated", async () => {
   const [page, course, database, serviceWorker, manifest] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
-    readFile(new URL("../src/content/course.ts", import.meta.url), "utf8"),
+    readFile(new URL("../src/content/courseData.ts", import.meta.url), "utf8"),
     readFile(new URL("../src/lib/db.ts", import.meta.url), "utf8"),
     readFile(new URL("../public/sw.js", import.meta.url), "utf8"),
     readFile(

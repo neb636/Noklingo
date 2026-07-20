@@ -220,7 +220,7 @@ export function LessonRoute() {
                     : current.feedback.incorrect}{" "}
                   {current.explanation}
                   {current.feedback.pronunciation
-                    ? ` Pronunciation: ${current.feedback.pronunciation}.`
+                    ? ` Pronunciation: ${current.feedback.pronunciation}`
                     : ""}
                 </p>
                 {current.audioRef && (

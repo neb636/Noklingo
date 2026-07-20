@@ -54,6 +54,22 @@ export const AudioAssetSchema = z
     path: ["src"],
   });
 
+export const AudioManifestEntrySchema = z.object({
+  id: IdSchema,
+  audioAssetId: IdSchema,
+  thaiText: z.string().min(1),
+  romanization: RomanizationSchema,
+  speakerDescription: z.string().min(1),
+  gender: SpeakerGenderSchema,
+  deliverySpeed: z.enum(["normal", "slow"]),
+  emotionalTone: z.string().min(1),
+  context: z.string().min(1),
+  suggestedFilename: z.string().min(1),
+  lessonIds: z.array(IdSchema).min(1),
+  recordingStatus: z.enum(["needs-recording", "recorded"]),
+  recordingNotes: z.string().min(1),
+});
+
 const LearningItemBaseSchema = z.object({
   id: IdSchema,
   thai: z.string().min(1),
@@ -112,6 +128,13 @@ export const DialogueTurnSchema = z.object({
   audioRef: IdSchema.optional(),
 });
 
+export const DialogueComprehensionQuestionSchema = z.object({
+  id: IdSchema,
+  prompt: z.string().min(1),
+  correctAnswer: z.string().min(1),
+  explanation: z.string().min(1),
+});
+
 export const DialogueSchema = z.object({
   id: IdSchema,
   title: z.string().min(1),
@@ -119,6 +142,11 @@ export const DialogueSchema = z.object({
   turns: z.array(DialogueTurnSchema).min(2),
   difficulty: z.number().int().min(1).max(5),
   tags: z.array(IdSchema).min(1),
+  formality: FormalitySchema,
+  usageNotes: z.string().min(1),
+  comprehensionQuestions: z
+    .array(DialogueComprehensionQuestionSchema)
+    .default([]),
 });
 
 export const ExerciseTypeSchema = z.enum([
