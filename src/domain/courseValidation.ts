@@ -191,8 +191,12 @@ export function validateCourseAuthoring(course: Course): AuthoringIssue[] {
     ...course.vocabulary.map(({ id }) => id),
     ...course.phrases.map(({ id }) => id),
   ]);
+  const vocabularyIds = new Set(course.vocabulary.map(({ id }) => id));
   const phraseIds = new Set(course.phrases.map(({ id }) => id));
   const speakerIds = new Set(course.speakers.map(({ id }) => id));
+  const speakerById = new Map(
+    course.speakers.map((speaker) => [speaker.id, speaker]),
+  );
   const audioIds = new Set(course.audioAssets.map(({ id }) => id));
   const audioById = new Map(
     course.audioAssets.map((asset) => [asset.id, asset]),
@@ -237,12 +241,35 @@ export function validateCourseAuthoring(course: Course): AuthoringIssue[] {
     );
   });
 
+  course.units.forEach((unit, unitIndex) => {
+    const owners = course.sections.filter((section) =>
+      section.unitIds.includes(unit.id),
+    );
+    if (owners.length !== 1) {
+      issues.push({
+        severity: "error",
+        path: `units[${unitIndex}].id`,
+        message: `Unit “${unit.id}” must appear in exactly one section (found ${owners.length})`,
+      });
+    } else if (owners[0].id !== unit.sectionId) {
+      issues.push({
+        severity: "error",
+        path: `units[${unitIndex}].sectionId`,
+        message: `Unit declares “${unit.sectionId}” but is listed by “${owners[0].id}”`,
+      });
+    }
+  });
+
   const orderedLessonIds = course.units.flatMap((unit) =>
     unit.nodes.flatMap((node) => (node.lessonId ? [node.lessonId] : [])),
   );
   const lessonOrder = new Map(
     orderedLessonIds.map((lessonId, index) => [lessonId, index]),
   );
+  const lessonNodeOwners = new Map<
+    string,
+    Array<{ unitId: string; type: string }>
+  >();
   course.units.forEach((unit, unitIndex) => {
     requireRef(
       sectionIds.has(unit.sectionId),
@@ -302,7 +329,38 @@ export function validateCourseAuthoring(course: Course): AuthoringIssue[] {
           "lesson",
           node.lessonId,
         );
+      if (node.lessonId) {
+        const owners = lessonNodeOwners.get(node.lessonId) ?? [];
+        owners.push({ unitId: unit.id, type: node.type });
+        lessonNodeOwners.set(node.lessonId, owners);
+      }
     });
+  });
+
+  course.lessons.forEach((lesson, lessonIndex) => {
+    const owners = lessonNodeOwners.get(lesson.id) ?? [];
+    if (owners.length !== 1) {
+      issues.push({
+        severity: "error",
+        path: `lessons[${lessonIndex}].id`,
+        message: `Lesson “${lesson.id}” must appear in exactly one path node (found ${owners.length})`,
+      });
+      return;
+    }
+    if (owners[0].unitId !== lesson.unitId) {
+      issues.push({
+        severity: "error",
+        path: `lessons[${lessonIndex}].unitId`,
+        message: `Lesson belongs to “${lesson.unitId}” but its path node is in “${owners[0].unitId}”`,
+      });
+    }
+    if (owners[0].type !== lesson.kind) {
+      issues.push({
+        severity: "error",
+        path: `lessons[${lessonIndex}].kind`,
+        message: `Lesson kind “${lesson.kind}” does not match path node type “${owners[0].type}”`,
+      });
+    }
   });
 
   course.skills.forEach((skill, skillIndex) => {
@@ -317,6 +375,21 @@ export function validateCourseAuthoring(course: Course): AuthoringIssue[] {
   });
 
   const exerciseIds = new Map<string, string>();
+  const introducedAt = new Map<string, { lessonId: string; order: number }>();
+  for (const lesson of course.lessons) {
+    const order = lessonOrder.get(lesson.id);
+    if (order === undefined) continue;
+    for (const itemId of lesson.introducedItemIds) {
+      const previous = introducedAt.get(itemId);
+      if (previous) {
+        issues.push({
+          severity: "error",
+          path: `lessons.${lesson.id}.introducedItemIds`,
+          message: `Learning item “${itemId}” was already introduced by “${previous.lessonId}”`,
+        });
+      } else introducedAt.set(itemId, { lessonId: lesson.id, order });
+    }
+  }
   course.lessons.forEach((lesson, lessonIndex) => {
     requireRef(
       unitIds.has(lesson.unitId),
@@ -388,6 +461,20 @@ export function validateCourseAuthoring(course: Course): AuthoringIssue[] {
           id,
         ),
       );
+      const currentOrder = lessonOrder.get(lesson.id);
+      exercise.sourceItemIds.forEach((id, index) => {
+        const introduction = introducedAt.get(id);
+        if (
+          currentOrder !== undefined &&
+          (!introduction || introduction.order > currentOrder)
+        ) {
+          issues.push({
+            severity: "error",
+            path: `${exercisePath}.sourceItemIds[${index}]`,
+            message: `Tested item “${id}” must be introduced in this lesson or an earlier path lesson`,
+          });
+        }
+      });
       exercise.hintIds.forEach((id, index) =>
         requireRef(
           hintIds.has(id),
@@ -442,6 +529,13 @@ export function validateCourseAuthoring(course: Course): AuthoringIssue[] {
           });
         }
       }
+      if (hasDuplicate(exercise.acceptedAnswers)) {
+        issues.push({
+          severity: "error",
+          path: `${exercisePath}.acceptedAnswers`,
+          message: "Accepted answers must be unique",
+        });
+      }
     });
     issues.push(...validateLessonComposition(lesson));
   });
@@ -453,6 +547,27 @@ export function validateCourseAuthoring(course: Course): AuthoringIssue[] {
       "speaker",
       asset.speakerId,
     );
+    const speaker = speakerById.get(asset.speakerId);
+    if (
+      speaker?.defaultPoliteParticle === "kha" &&
+      asset.transcriptThai.endsWith("ครับ")
+    ) {
+      issues.push({
+        severity: "error",
+        path: `audioAssets[${index}].transcriptThai`,
+        message: `Speaker “${speaker.id}” normally uses kha but this recording ends in khrap`,
+      });
+    }
+    if (
+      speaker?.defaultPoliteParticle === "khrap" &&
+      /(?:ค่ะ|คะ)$/u.test(asset.transcriptThai)
+    ) {
+      issues.push({
+        severity: "error",
+        path: `audioAssets[${index}].transcriptThai`,
+        message: `Speaker “${speaker.id}” normally uses khrap but this recording ends in kha`,
+      });
+    }
   });
   course.phrases.forEach((phrase, phraseIndex) => {
     if (phrase.audioRef) {
@@ -473,7 +588,7 @@ export function validateCourseAuthoring(course: Course): AuthoringIssue[] {
     }
     phrase.vocabularyIds.forEach((id, index) =>
       requireRef(
-        itemIds.has(id),
+        vocabularyIds.has(id),
         `phrases[${phraseIndex}].vocabularyIds[${index}]`,
         "vocabulary",
         id,
@@ -515,6 +630,14 @@ export function validateCourseAuthoring(course: Course): AuthoringIssue[] {
     }
   });
   course.dialogues.forEach((dialogue, dialogueIndex) => {
+    const questionIds = dialogue.comprehensionQuestions.map(({ id }) => id);
+    if (hasDuplicate(questionIds)) {
+      issues.push({
+        severity: "error",
+        path: `dialogues[${dialogueIndex}].comprehensionQuestions`,
+        message: "Dialogue comprehension question IDs must be unique",
+      });
+    }
     dialogue.turns.forEach((turn, turnIndex) => {
       const path = `dialogues[${dialogueIndex}].turns[${turnIndex}]`;
       requireRef(
@@ -530,6 +653,23 @@ export function validateCourseAuthoring(course: Course): AuthoringIssue[] {
           "phrase",
           turn.phraseId,
         );
+      if (turn.phraseId) {
+        const referencedPhrase = course.phrases.find(
+          ({ id }) => id === turn.phraseId,
+        );
+        if (
+          referencedPhrase &&
+          (referencedPhrase.thai !== turn.thai ||
+            referencedPhrase.romanization !== turn.romanization ||
+            referencedPhrase.meaning !== turn.meaning)
+        ) {
+          issues.push({
+            severity: "error",
+            path: `${path}.phraseId`,
+            message: `Dialogue turn content must match referenced phrase “${turn.phraseId}”`,
+          });
+        }
+      }
       if (turn.audioRef)
         requireRef(
           audioIds.has(turn.audioRef),
@@ -540,6 +680,13 @@ export function validateCourseAuthoring(course: Course): AuthoringIssue[] {
       const turnAsset = turn.audioRef
         ? audioById.get(turn.audioRef)
         : undefined;
+      if (turnAsset && turnAsset.speakerId !== turn.speakerId) {
+        issues.push({
+          severity: "error",
+          path: `${path}.audioRef`,
+          message: `Dialogue audio speaker “${turnAsset.speakerId}” does not match turn speaker “${turn.speakerId}”`,
+        });
+      }
       if (turnAsset && turnAsset.transcriptThai !== turn.thai) {
         issues.push({
           severity: "error",
@@ -556,6 +703,22 @@ export function validateCourseAuthoring(course: Course): AuthoringIssue[] {
       "lesson",
       checkpoint.lessonId,
     );
+    const checkpointLesson = lessonsById.get(checkpoint.lessonId);
+    if (checkpointLesson && checkpointLesson.kind !== "checkpoint") {
+      issues.push({
+        severity: "error",
+        path: `checkpoints[${index}].lessonId`,
+        message: `Checkpoint lesson “${checkpoint.lessonId}” must have kind “checkpoint”`,
+      });
+    }
+    if (checkpoint.passingAccuracy !== 80) {
+      issues.push({
+        severity: "error",
+        path: `checkpoints[${index}].passingAccuracy`,
+        message:
+          "Course checkpoints must use the documented 80% pass threshold",
+      });
+    }
     checkpoint.unlocksUnitIds.forEach((id, unlockIndex) => {
       const path = `checkpoints[${index}].unlocksUnitIds[${unlockIndex}]`;
       requireRef(unitIds.has(id), path, "unit", id);
@@ -573,6 +736,18 @@ export function validateCourseAuthoring(course: Course): AuthoringIssue[] {
           severity: "error",
           path,
           message: `Checkpoint “${checkpoint.id}” must unlock a later unit`,
+        });
+      }
+    });
+  });
+
+  course.skills.forEach((skill, skillIndex) => {
+    skill.itemIds.forEach((itemId, itemIndex) => {
+      if (!introducedAt.has(itemId)) {
+        issues.push({
+          severity: "error",
+          path: `skills[${skillIndex}].itemIds[${itemIndex}]`,
+          message: `Reviewable skill item “${itemId}” is never introduced by a path lesson`,
         });
       }
     });

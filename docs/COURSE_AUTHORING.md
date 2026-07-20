@@ -1,7 +1,7 @@
 # Course authoring guide
 
 Noklingo course content is data, not UI code. Authors define normalized concepts
-and references in `src/content/course.ts`; Zod and semantic validation reject a
+and references in `src/content/courseData.ts`; Zod and semantic validation reject a
 course that the lesson player cannot safely teach.
 
 This guide uses abbreviated objects to emphasize authoring decisions. The schemas
@@ -27,7 +27,9 @@ Keep these constraints in mind:
 
 ## Normalized course structure
 
-`src/content/course.ts` assembles one validated course from separate collections.
+`src/content/courseData.ts` assembles one validated course from separate
+collections. `src/content/course.ts` re-exports the stable public content API so
+app and test imports do not change when authoring files are reorganized.
 The important relationships are:
 
 ```text
@@ -65,6 +67,27 @@ References make the safest workflow dependency-first:
 6. Add lesson/checkpoint/review nodes to a unit and add the unit ID to its section.
 7. Add checkpoint and achievement records where needed.
 8. Run `npm run validate:course`, then play the new path from a clean profile.
+
+Course 1 uses compact `lessonSeeds` plus deterministic builders. Add or correct
+the seed rather than copying a generated exercise object. Each seed supplies one
+anchor vocabulary record, two phrase records, a communicative objective,
+recurring speakers, a dialogue question, and a cultural note. The builder creates
+the eight required exercise modalities and interleaves the prior lesson's item.
+Checkpoint builders clone a balanced modality set from the preceding block and
+must never introduce new IDs.
+
+## Reproducible development progress
+
+In the local development build, add one of these one-shot query parameters to
+reproduce a learner state without clicking through prerequisite lessons:
+
+- `?devProgress=welcome-checkpoint-ready`
+- `?devProgress=after-welcome-checkpoint`
+- `?devProgress=review-ready`
+
+The app consumes and removes the parameter during hydration, writes the seeded
+state to IndexedDB, and then behaves like a normal persisted learner profile.
+Production builds ignore the parameter.
 
 ## Romanization standard
 
@@ -264,6 +287,16 @@ phrase plus audio asset. Keep the exchange short enough to replay comfortably.
   ],
   difficulty: 2,
   tags: ["food", "restaurant"],
+  formality: "polite",
+  usageNotes: "A normal service exchange; use your own particle in production.",
+  comprehensionQuestions: [
+    {
+      id: "question-spice-level",
+      prompt: "How does the customer want the food?",
+      correctAnswer: "Not spicy",
+      explanation: "The customer answers mâi phèt.",
+    },
+  ],
 }
 ```
 
@@ -542,6 +575,10 @@ checks at least:
 - checkpoints below the required exercise mix or with a threshold other than
   80%; and
 - review plans that cannot produce listening, recall, and conversation tasks.
+
+It also validates `src/content/audioManifest.ts`: every audio asset must have one
+normal and one slow recording take, unique suggested filenames, real lesson
+usage, and explicit `recorded` or `needs-recording` status.
 
 Warnings cover optional improvements such as a missing slow recording, sparse
 pronunciation guidance, or overused distractors. A shipped course must have no

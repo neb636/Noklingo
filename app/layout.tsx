@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: assetPath("/og.png"),
-        width: 1734,
-        height: 907,
-        alt: "Noklingo conversational Thai learning path",
+        url: assetPath("/og-course-one.png"),
+        width: 1536,
+        height: 1024,
+        alt: "Noklingo conversational Thai for real life",
       },
     ],
   },
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Noklingo — Speak Thai, little by little",
     description: "Short, playful lessons for useful conversational Thai.",
-    images: [assetPath("/og.png")],
+    images: [assetPath("/og-course-one.png")],
   },
   icons: {
     icon: assetPath("/icon-192.png"),

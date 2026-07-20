@@ -2,6 +2,8 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import { course } from "../src/content/course";
+import { audioManifest } from "../src/content/audioManifest";
+import { createDevelopmentProgress } from "../src/content/developmentProgress";
 import {
   CourseAuthoringError,
   parseCourse,
@@ -111,6 +113,48 @@ test("the normalized demonstration course passes shape and semantic validation",
     ).length,
     0,
   );
+});
+
+test("Course 1 ships a substantial progressive path and complete recording manifest", () => {
+  assert.equal(course.units.length, 14);
+  assert.equal(
+    course.lessons.filter(({ kind }) => kind === "lesson").length,
+    41,
+  );
+  assert.equal(course.checkpoints.length, 5);
+  assert.equal(course.dialogues.length, 41);
+  assert.equal(
+    course.lessons.reduce((sum, lesson) => sum + lesson.exercises.length, 0),
+    450,
+  );
+  assert.equal(audioManifest.length, course.audioAssets.length * 2);
+  assert.ok(
+    audioManifest.every(
+      ({ lessonIds, recordingStatus }) =>
+        lessonIds.length > 0 && recordingStatus === "needs-recording",
+    ),
+  );
+});
+
+test("development progress fixtures expose checkpoint, unlock, and review states", () => {
+  const checkpointReady = createDevelopmentProgress(
+    "welcome-checkpoint-ready",
+    localNoon(2026, 6, 20),
+  );
+  assert.equal(
+    isLessonUnlocked(course, "lesson.welcome-checkpoint", checkpointReady),
+    true,
+  );
+  const unlocked = createDevelopmentProgress(
+    "after-welcome-checkpoint",
+    localNoon(2026, 6, 20),
+  );
+  assert.equal(isUnitUnlocked(course, "unit.introductions", unlocked), true);
+  const reviewReady = createDevelopmentProgress(
+    "review-ready",
+    localNoon(2026, 6, 20),
+  );
+  assert.ok(Object.keys(reviewReady.reviewStates).length > 0);
 });
 
 test("version 1 progress migrates to a validated version 2 snapshot", () => {
@@ -241,6 +285,16 @@ test("course validation reports a useful broken-reference error", () => {
   );
 });
 
+test("course validation rejects testing an item before its introduction", () => {
+  expectAuthoringError(
+    (draft) => {
+      draft.lessons[0].exercises[0].sourceItemIds = ["phrase.where-hospital"];
+    },
+    /lessons\[0\]\.exercises\[0\]\.sourceItemIds\[0\]/u,
+    /must be introduced in this lesson or an earlier path lesson/u,
+  );
+});
+
 test("course validation rejects Thai script in a Romanization field", () => {
   expectAuthoringError(
     (draft) => {
@@ -261,9 +315,10 @@ test("course validation explains poor lesson composition", () => {
       lesson.exercises = lesson.exercises.filter(
         ({ type }) =>
           type !== "conversation-response" &&
-          type !== "personalized-translation",
+          type !== "personalized-translation" &&
+          type !== "dialogue-comprehension",
       );
-      assert.equal(lesson.exercises.length, 6);
+      assert.ok(lesson.exercises.length >= 6);
     },
     /lessons\.lesson\.first-hellos\.exercises/u,
     /needs at least one conversation or dialogue exercise/u,
@@ -470,7 +525,11 @@ test("lesson prerequisites and checkpoint gates are both explicit", () => {
 
   progress = {
     ...progress,
-    completedLessonIds: ["lesson.first-hellos"],
+    completedLessonIds: [
+      "lesson.first-hellos",
+      "lesson.survival-repairs",
+      "lesson.yes-no-okay",
+    ],
   };
   assert.equal(
     isLessonUnlocked(course, "lesson.welcome-checkpoint", progress),
@@ -513,7 +572,16 @@ test("lesson prerequisites and checkpoint gates are both explicit", () => {
 
   progress = {
     ...progress,
-    completedLessonIds: ["lesson.first-hellos", "lesson.welcome-checkpoint"],
+    completedLessonIds: [
+      "lesson.first-hellos",
+      "lesson.survival-repairs",
+      "lesson.yes-no-okay",
+      "lesson.welcome-checkpoint",
+      "lesson.names-first",
+      "lesson.where-you-fit",
+      "lesson.what-and-where",
+      "lesson.ask-again",
+    ],
   };
   assert.equal(
     isLessonUnlocked(course, "lesson.restaurant-basics", progress),
@@ -537,7 +605,11 @@ test("checkpoint completion rejects 79% and passes at the 80% threshold", () => 
       settings: { ...defaultSettings },
       progress: {
         ...defaultProgress(now),
-        completedLessonIds: ["lesson.first-hellos"],
+        completedLessonIds: [
+          "lesson.first-hellos",
+          "lesson.survival-repairs",
+          "lesson.yes-no-okay",
+        ],
       },
       activeSession: null,
       completion: null,
@@ -610,6 +682,10 @@ test("checkpoint completion rejects 79% and passes at the 80% threshold", () => 
     );
     assert.equal(
       isLessonUnlocked(course, "lesson.restaurant-basics", passed.progress),
+      false,
+    );
+    assert.equal(
+      isLessonUnlocked(course, "lesson.names-first", passed.progress),
       true,
     );
   } finally {

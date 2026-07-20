@@ -5,6 +5,10 @@ import {
   exercisesById,
   lessonsById,
 } from "@/src/content/course";
+import {
+  createDevelopmentProgress,
+  type DevelopmentProgressStage,
+} from "@/src/content/developmentProgress";
 import type {
   CompletionSummary,
   Exercise,
@@ -105,6 +109,31 @@ const persist = (state: AppState) =>
 
 const timestampId = (prefix: string, suffix: string) =>
   `${prefix}.${Date.now()}.${suffix}`;
+
+const developmentProgressStages = new Set<DevelopmentProgressStage>([
+  "welcome-checkpoint-ready",
+  "after-welcome-checkpoint",
+  "review-ready",
+]);
+
+const developmentProgressStage = (): DevelopmentProgressStage | null => {
+  if (process.env.NODE_ENV === "production" || typeof window === "undefined")
+    return null;
+  const url = new URL(window.location.href);
+  const stage = url.searchParams.get("devProgress");
+  if (
+    !stage ||
+    !developmentProgressStages.has(stage as DevelopmentProgressStage)
+  )
+    return null;
+  url.searchParams.delete("devProgress");
+  window.history.replaceState(
+    {},
+    "",
+    `${url.pathname}${url.search}${url.hash}`,
+  );
+  return stage as DevelopmentProgressStage;
+};
 
 const swapKhrapAndKha = (value: string) =>
   value
@@ -216,6 +245,21 @@ export const useAppStore = create<AppState>((set, get) => ({
   notice: null,
 
   hydrate: async () => {
+    const developmentStage = developmentProgressStage();
+    if (developmentStage) {
+      set({
+        hydrated: true,
+        route: "home",
+        profile: { ...defaultProfile, onboarded: true },
+        settings: defaultSettings,
+        progress: createDevelopmentProgress(developmentStage),
+        activeSession: null,
+        completion: null,
+        notice: `Loaded development progress: ${developmentStage}.`,
+      });
+      persist(get());
+      return;
+    }
     const data = await loadAppData();
     if (data) {
       set({
