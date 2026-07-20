@@ -10,10 +10,15 @@ import {
   Star,
   Trophy,
 } from "lucide-react";
-import { course, findNextLessonId } from "@/src/content/course";
+import { course, lessonsById } from "@/src/content/course";
 import { Mascot, NokLogo } from "@/src/components/Mascot";
 import { Button, ProgressBar } from "@/src/components/ui";
-import { isLessonUnlocked, unitPercent } from "@/src/lib/progress";
+import {
+  findNextLessonId,
+  isLessonUnlocked,
+  isUnitUnlocked,
+  unitPercent,
+} from "@/src/lib/progress";
 import { useAppStore } from "@/src/store/useAppStore";
 
 export function HomeRoute() {
@@ -21,12 +26,12 @@ export function HomeRoute() {
   const profile = useAppStore((state) => state.profile);
   const activeSession = useAppStore((state) => state.activeSession);
   const startLesson = useAppStore((state) => state.startLesson);
+  const startReview = useAppStore((state) => state.startReview);
   const resumeLesson = useAppStore((state) => state.resumeLesson);
-  const navigate = useAppStore((state) => state.navigate);
   const notice = useAppStore((state) => state.notice);
   const dismissNotice = useAppStore((state) => state.dismissNotice);
-  const nextLessonId = findNextLessonId(progress.completedLessonIds);
-  const nextLesson = course.lessons[nextLessonId];
+  const nextLessonId = findNextLessonId(course, progress);
+  const nextLesson = nextLessonId ? lessonsById[nextLessonId] : null;
   const dailyPercent = Math.round((progress.todayXp / profile.dailyGoal) * 100);
 
   return (
@@ -48,10 +53,35 @@ export function HomeRoute() {
           <span className="eyebrow">Today’s Thai</span>
           <h1>Sà-wàt-dee! Ready for a quick win?</h1>
           <p>
-            Next up: <strong>{nextLesson.title}</strong> · about 4 minutes
+            {activeSession ? (
+              <>
+                Saved: <strong>{activeSession.lessonTitle}</strong> · your exact
+                place is waiting
+              </>
+            ) : nextLesson ? (
+              <>
+                Next up: <strong>{nextLesson.title}</strong> · about{" "}
+                {nextLesson.estimatedMinutes} minutes
+              </>
+            ) : (
+              <>Course slice complete — a personalized review is ready.</>
+            )}
           </p>
-          <Button onClick={() => startLesson(nextLessonId)}>
-            Continue learning <ChevronRight size={20} />
+          <Button
+            onClick={() =>
+              activeSession
+                ? resumeLesson()
+                : nextLessonId
+                  ? startLesson(nextLessonId)
+                  : startReview()
+            }
+          >
+            {activeSession
+              ? "Resume lesson"
+              : nextLesson
+                ? "Continue learning"
+                : "Start smart review"}{" "}
+            <ChevronRight size={20} />
           </Button>
         </div>
         <div className="hero-goal-card">
@@ -88,13 +118,11 @@ export function HomeRoute() {
             <BookOpenCheck size={24} />
           </span>
           <span>
-            <strong>
-              Resume {course.lessons[activeSession.lessonId].title}
-            </strong>
+            <strong>Resume {activeSession.lessonTitle}</strong>
             <small>
               Exercise {activeSession.exerciseIndex + 1} of{" "}
-              {course.lessons[activeSession.lessonId].exercises.length} · your
-              place is saved
+              {activeSession.exerciseQueue.length} · your generated queue and
+              place are saved
             </small>
           </span>
           <ChevronRight size={22} />
@@ -115,7 +143,7 @@ export function HomeRoute() {
 
       <div className="course-path">
         {course.units.map((unit) => {
-          const percent = unitPercent(unit.id, progress.completedLessonIds);
+          const percent = unitPercent(course, unit.id, progress);
           return (
             <section className={`unit unit-${unit.color}`} key={unit.id}>
               <header className="unit-header">
@@ -138,11 +166,8 @@ export function HomeRoute() {
                     ? progress.completedLessonIds.includes(node.lessonId)
                     : percent === 100;
                   const unlocked = node.lessonId
-                    ? isLessonUnlocked(
-                        node.lessonId,
-                        progress.completedLessonIds,
-                      )
-                    : percent === 100;
+                    ? isLessonUnlocked(course, node.lessonId, progress)
+                    : isUnitUnlocked(course, unit.id, progress) && percent > 0;
                   const active = node.lessonId === nextLessonId && !completed;
                   const NodeIcon =
                     node.type === "checkpoint"
@@ -170,7 +195,7 @@ export function HomeRoute() {
                             <strong>{node.title}</strong>
                             <small>
                               {node.type === "lesson"
-                                ? course.lessons[node.lessonId!].eyebrow
+                                ? lessonsById[node.lessonId!].eyebrow
                                 : node.type}
                             </small>
                           </>
@@ -182,7 +207,7 @@ export function HomeRoute() {
                         onClick={() =>
                           node.lessonId
                             ? startLesson(node.lessonId)
-                            : navigate("practice")
+                            : startReview()
                         }
                         aria-label={`${node.title}, ${completed ? "completed" : unlocked ? "available" : "locked"}`}
                       >
@@ -198,7 +223,7 @@ export function HomeRoute() {
                             <strong>{node.title}</strong>
                             <small>
                               {node.type === "lesson"
-                                ? course.lessons[node.lessonId!].eyebrow
+                                ? lessonsById[node.lessonId!].eyebrow
                                 : node.type}
                             </small>
                           </>

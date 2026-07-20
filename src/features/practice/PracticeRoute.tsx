@@ -6,36 +6,18 @@ import {
   Sparkles,
   Target,
 } from "lucide-react";
+import { course } from "@/src/content/course";
 import { Mascot, NokLogo } from "@/src/components/Mascot";
 import { Button } from "@/src/components/ui";
+import { reviewOverview } from "@/src/engine/review";
 import { useAppStore } from "@/src/store/useAppStore";
-
-const weakSkills = [
-  {
-    title: "Polite particles",
-    detail: "ครับ / ค่ะ",
-    strength: 42,
-    color: "coral",
-  },
-  {
-    title: "Listening for tones",
-    detail: "Hear the difference",
-    strength: 58,
-    color: "sun",
-  },
-  {
-    title: "Food requests",
-    detail: "Useful phrases",
-    strength: 71,
-    color: "teal",
-  },
-];
 
 export function PracticeRoute() {
   const progress = useAppStore((state) => state.progress);
   const startLesson = useAppStore((state) => state.startLesson);
-  const lastCompleted = progress.activities[0];
-  const practiceLesson = lastCompleted?.lessonId ?? "hello-there";
+  const startReview = useAppStore((state) => state.startReview);
+  const overview = reviewOverview(course, progress);
+  const reviewMinutes = Math.max(2, Math.ceil(overview.readyCount * 0.55));
 
   return (
     <div className="page-shell practice-page">
@@ -46,7 +28,10 @@ export function PracticeRoute() {
         <div>
           <span className="eyebrow">Practice studio</span>
           <h1>Turn shaky phrases into easy ones.</h1>
-          <p>Nok builds quick reviews from your recent mistakes.</p>
+          <p>
+            Nok mixes recent mistakes, weak phrases, and older material that is
+            due today.
+          </p>
         </div>
         <Mascot size="medium" mood="curious" />
       </section>
@@ -56,25 +41,25 @@ export function PracticeRoute() {
           <Brain size={34} />
         </div>
         <div>
-          <span className="eyebrow">Smart review</span>
-          <h2>
-            {progress.mistakeExerciseIds.length
-              ? `${progress.mistakeExerciseIds.length} phrases are ready`
-              : "Your first review is ready"}
-          </h2>
+          <span className="eyebrow">Generated smart review</span>
+          <h2>{overview.readyCount} focused exercises are ready</h2>
           <p>
-            A focused mix of listening, recall, and speaking. About 3 minutes.
+            {overview.mistakeCount
+              ? `${overview.mistakeCount} unresolved ${overview.mistakeCount === 1 ? "mistake" : "mistakes"} will return in a changed format.`
+              : overview.dueCount
+                ? `${overview.dueCount} learned ${overview.dueCount === 1 ? "item is" : "items are"} due for recall.`
+                : "A balanced starter review is ready; future sessions adapt to every answer."}
           </p>
           <div className="review-meta">
             <span>
-              <Clock3 size={16} /> 3 min
+              <Clock3 size={16} /> about {reviewMinutes} min
             </span>
             <span>
-              <Sparkles size={16} /> +10 XP
+              <Sparkles size={16} /> XP by answer quality
             </span>
           </div>
         </div>
-        <Button onClick={() => startLesson(practiceLesson)}>
+        <Button onClick={startReview}>
           Start review <ChevronRight size={19} />
         </Button>
       </section>
@@ -83,14 +68,16 @@ export function PracticeRoute() {
         <div className="section-title">
           <div>
             <span className="eyebrow">Strengthen next</span>
-            <h2>Skills to revisit</h2>
+            <h2>Skills based on your recalls</h2>
           </div>
           <Target size={25} />
         </div>
         <div className="weak-grid">
-          {weakSkills.map((skill) => (
-            <article className="weak-card" key={skill.title}>
-              <span className={`weak-icon weak-${skill.color}`}>
+          {overview.weakSkills.map((skill, index) => (
+            <article className="weak-card" key={skill.id}>
+              <span
+                className={`weak-icon weak-${["coral", "sun", "teal"][index]}`}
+              >
                 <RotateCcw size={21} />
               </span>
               <div>
@@ -110,20 +97,25 @@ export function PracticeRoute() {
         <div className="section-title">
           <div>
             <span className="eyebrow">Replay</span>
-            <h2>Recent lessons</h2>
+            <h2>Recent sessions</h2>
           </div>
         </div>
         <div className="recent-lessons">
           {progress.activities.length ? (
-            progress.activities.slice(0, 3).map((activity) => (
+            progress.activities.slice(0, 4).map((activity) => (
               <button
                 key={activity.id}
-                onClick={() => startLesson(activity.lessonId)}
+                onClick={() =>
+                  activity.mode === "review"
+                    ? startReview()
+                    : startLesson(activity.lessonId)
+                }
               >
                 <span>
                   <strong>{activity.title}</strong>
                   <small>
                     {activity.accuracy}% accuracy · {activity.xp} XP
+                    {!activity.passed ? " · retry recommended" : ""}
                   </small>
                 </span>
                 <ChevronRight size={20} />
@@ -132,13 +124,11 @@ export function PracticeRoute() {
           ) : (
             <div className="inline-empty">
               <p>
-                Complete a lesson and it will appear here for quick practice.
+                Your completed sessions will show up here. A generated review is
+                available even before your first lesson.
               </p>
-              <Button
-                tone="secondary"
-                onClick={() => startLesson("hello-there")}
-              >
-                Try the first lesson
+              <Button tone="secondary" onClick={startReview}>
+                Try a short review
               </Button>
             </div>
           )}

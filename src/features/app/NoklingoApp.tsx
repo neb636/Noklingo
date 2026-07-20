@@ -1,6 +1,12 @@
 "use client";
 
-import { Component, type ErrorInfo, type ReactNode, useEffect } from "react";
+import {
+  Component,
+  type ErrorInfo,
+  type ReactNode,
+  useEffect,
+  useRef,
+} from "react";
 import { LoaderCircle } from "lucide-react";
 import { AppShell } from "@/src/features/shell/AppShell";
 import { CompletionRoute } from "@/src/features/completion/CompletionRoute";
@@ -10,7 +16,23 @@ import { OnboardingRoute } from "@/src/features/onboarding/OnboardingRoute";
 import { PracticeRoute } from "@/src/features/practice/PracticeRoute";
 import { ProgressRoute } from "@/src/features/progress/ProgressRoute";
 import { SettingsRoute } from "@/src/features/settings/SettingsRoute";
-import { useAppStore } from "@/src/store/useAppStore";
+import { type AppRoute, useAppStore } from "@/src/store/useAppStore";
+
+const appRoutes: AppRoute[] = [
+  "onboarding",
+  "home",
+  "lesson",
+  "complete",
+  "practice",
+  "progress",
+  "settings",
+];
+
+const routeFromHash = () => {
+  if (typeof window === "undefined") return null;
+  const candidate = window.location.hash.replace(/^#\//u, "") as AppRoute;
+  return appRoutes.includes(candidate) ? candidate : null;
+};
 
 class AppErrorBoundary extends Component<
   { children: ReactNode },
@@ -49,13 +71,43 @@ function RouteView() {
   const route = useAppStore((state) => state.route);
   const hydrated = useAppStore((state) => state.hydrated);
   const hydrate = useAppStore((state) => state.hydrate);
+  const navigate = useAppStore((state) => state.navigate);
+  const activeSession = useAppStore((state) => state.activeSession);
+  const initialHashRoute = useRef<AppRoute | null>(routeFromHash());
 
   useEffect(() => {
     void hydrate();
   }, [hydrate]);
   useEffect(() => {
+    if (!hydrated || !initialHashRoute.current) return;
+    const desired = initialHashRoute.current;
+    const safeDesired =
+      desired === "lesson" && !activeSession ? "home" : desired;
+    if (safeDesired !== route) {
+      navigate(safeDesired);
+      return;
+    }
+    initialHashRoute.current = null;
+  }, [activeSession, hydrated, navigate, route]);
+  useEffect(() => {
+    if (!hydrated) return;
+    if (initialHashRoute.current && initialHashRoute.current !== route) return;
     window.history.replaceState(null, "", `#/${route}`);
-  }, [route]);
+  }, [hydrated, route]);
+  useEffect(() => {
+    if (!hydrated) return;
+    const handleHash = () => {
+      const desired = routeFromHash();
+      if (!desired) return;
+      if (desired === "lesson" && !useAppStore.getState().activeSession) {
+        navigate("home");
+      } else {
+        navigate(desired);
+      }
+    };
+    window.addEventListener("hashchange", handleHash);
+    return () => window.removeEventListener("hashchange", handleHash);
+  }, [hydrated, navigate]);
   useEffect(() => {
     if ("serviceWorker" in navigator && process.env.NODE_ENV === "production") {
       const serviceWorkerUrl = new URL("sw.js", window.location.href);

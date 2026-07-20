@@ -52,9 +52,16 @@ export function OnboardingRoute() {
   const [motivation, setMotivation] = useState("Talk with family");
   const [dailyGoal, setDailyGoal] = useState(20);
   const [level, setLevel] = useState<Profile["familiarity"]>("new");
+  const [politeParticle, setPoliteParticle] =
+    useState<Profile["politeParticle"]>("khrap");
 
   const finish = () =>
-    finishOnboarding({ motivation, dailyGoal, familiarity: level });
+    finishOnboarding({
+      motivation,
+      dailyGoal,
+      familiarity: level,
+      politeParticle,
+    });
 
   return (
     <div className="onboarding-page">
@@ -65,8 +72,8 @@ export function OnboardingRoute() {
         </button>
       </header>
       <ProgressBar
-        value={((step + 1) / 3) * 100}
-        label={`Onboarding step ${step + 1} of 3`}
+        value={((step + 1) / 4) * 100}
+        label={`Onboarding step ${step + 1} of 4`}
       />
 
       <div className="onboarding-layout">
@@ -75,8 +82,9 @@ export function OnboardingRoute() {
             {step === 0 && "Sà-wàt-dee! I’m Nok. Let’s get you speaking Thai."}
             {step === 1 && "A little every day beats a lot once in a while."}
             {step === 2 && "Perfect. I’ll meet you right where you are."}
+            {step === 3 && "One tiny choice keeps every example in your voice."}
           </div>
-          <Mascot size="large" mood={step === 2 ? "proud" : "happy"} />
+          <Mascot size="large" mood={step === 3 ? "proud" : "happy"} />
         </div>
 
         <section className="onboarding-card">
@@ -172,6 +180,48 @@ export function OnboardingRoute() {
                   </div>
                 </>
               )}
+
+              {step === 3 && (
+                <>
+                  <span className="eyebrow">Your polite ending</span>
+                  <h1>Which particle do you usually say?</h1>
+                  <p className="section-lede">
+                    Thai speakers commonly use <strong>khrap</strong> or{" "}
+                    <strong>kha</strong> according to their own speaking style.
+                    It follows the speaker, not the listener.
+                  </p>
+                  <div className="select-stack">
+                    {[
+                      {
+                        value: "khrap" as const,
+                        label: "I use khrap",
+                        detail:
+                          "Personalized practice uses khrap; listening still teaches both.",
+                      },
+                      {
+                        value: "kha" as const,
+                        label: "I use kha",
+                        detail:
+                          "Personalized practice uses kha; listening still teaches both.",
+                      },
+                    ].map((option) => (
+                      <button
+                        key={option.value}
+                        className={`select-card select-card-copy ${politeParticle === option.value ? "selected" : ""}`}
+                        onClick={() => setPoliteParticle(option.value)}
+                      >
+                        <span>
+                          <strong>{option.label}</strong>
+                          <small>{option.detail}</small>
+                        </span>
+                        {politeParticle === option.value && (
+                          <Check size={20} className="select-check" />
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                </>
+              )}
             </motion.div>
           </AnimatePresence>
 
@@ -188,10 +238,10 @@ export function OnboardingRoute() {
             <Button
               full
               onClick={() =>
-                step === 2 ? finish() : setStep((value) => value + 1)
+                step === 3 ? finish() : setStep((value) => value + 1)
               }
             >
-              {step === 2 ? "Start learning" : "Continue"}
+              {step === 3 ? "Start learning" : "Continue"}
               <ArrowRight size={20} />
             </Button>
           </div>
