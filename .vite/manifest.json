@@ -11,7 +11,7 @@
     "name": "rolldown-runtime"
   },
   "node_modules/vinext/dist/shims/layout-segment-context.js": {
-    "file": "assets/layout-segment-context-BC1L5FwK.js",
+    "file": "assets/layout-segment-context-DIJmnxxm.js",
     "name": "layout-segment-context",
     "src": "node_modules/vinext/dist/shims/layout-segment-context.js",
     "isDynamicEntry": true,
@@ -22,7 +22,7 @@
     ]
   },
   "src/features/app/NoklingoApp.tsx": {
-    "file": "assets/NoklingoApp-Sv_i67dh.js",
+    "file": "assets/NoklingoApp-D5fb0n5T.js",
     "name": "NoklingoApp",
     "src": "src/features/app/NoklingoApp.tsx",
     "isDynamicEntry": true,
@@ -32,7 +32,7 @@
     ]
   },
   "virtual:vinext-app-browser-entry": {
-    "file": "assets/index-BkIk4kQa.js",
+    "file": "assets/index-KilUU3wd.js",
     "name": "index",
     "src": "virtual:vinext-app-browser-entry",
     "isEntry": true,
