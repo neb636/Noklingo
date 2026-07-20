@@ -44,7 +44,7 @@ a GitHub Pages repository name or environment-specific host.
 ## Audio-asset records
 
 Files are connected to normalized course content through an audio-asset record in
-`src/content/course.ts`. The exact schema lives in `src/domain/schemas.ts`; a
+`src/content/courseData.ts`. The exact schema lives in `src/domain/schemas.ts`; a
 typical record identifies:
 
 - stable audio ID;
@@ -97,6 +97,12 @@ voice while labeling it as different characters. Respect a contributor's chosen
 identity and particle in their speaker record.
 
 ## Recording guidance
+
+The complete Course 1 assignment list is generated in
+`src/content/audioManifest.ts`. Each audio asset produces a normal and slow
+manifest entry with its exact script, speaker direction, lesson context, status,
+and suggested filename. Follow that manifest rather than inventing filenames from
+the examples below.
 
 Use original recordings from a contributor who has agreed to their use in
 Noklingo. Do not copy recordings from another language-learning product, video,
