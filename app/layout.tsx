@@ -48,9 +48,24 @@ export const metadata: Metadata = {
     images: [assetPath("/og-course-one.png")],
   },
   icons: {
-    icon: assetPath("/icon-192.png"),
-    shortcut: assetPath("/icon-192.png"),
-    apple: assetPath("/icon-192.png"),
+    icon: [
+      {
+        url: assetPath("/icon-32.png"),
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        url: assetPath("/icon-192.png"),
+        sizes: "192x192",
+        type: "image/png",
+      },
+    ],
+    shortcut: assetPath("/icon-32.png"),
+    apple: {
+      url: assetPath("/apple-touch-icon.png"),
+      sizes: "180x180",
+      type: "image/png",
+    },
   },
 };
 
