@@ -1,9 +1,11 @@
 const scopePath = new URL(self.registration.scope).pathname.replace(/\/$/, "");
 const scopedPath = (path) => `${scopePath}${path}`;
-const CACHE_VERSION = `noklingo-shell-v1:${scopePath || "/"}`;
+const CACHE_VERSION = `noklingo-shell-v2:${scopePath || "/"}`;
 const CORE = [
   scopedPath("/"),
   scopedPath("/manifest.webmanifest"),
+  scopedPath("/apple-touch-icon.png"),
+  scopedPath("/icon-32.png"),
   scopedPath("/icon-192.png"),
   scopedPath("/icon-512.png"),
 ];

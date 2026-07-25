@@ -36,6 +36,8 @@ test("server-renders the branded Noklingo app shell", async () => {
     /<title>Noklingo — Speak Thai, little by little<\/title>/i,
   );
   assert.match(html, /manifest\.webmanifest/);
+  assert.match(html, /rel="apple-touch-icon"/);
+  assert.match(html, /apple-touch-icon\.png/);
   assert.match(html, /Warming up your Thai/);
   assert.match(html, /og-course-one\.png/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|Starter Project/);
@@ -60,6 +62,8 @@ test("keeps curriculum, persistence, and PWA support separated", async () => {
   assert.match(database, /IndexedDB|Dexie|noklingo/i);
   assert.match(serviceWorker, /CACHE_VERSION/);
   assert.match(manifest, /"display": "standalone"/);
+  assert.match(manifest, /"sizes": "192x192"/);
+  assert.match(manifest, /"sizes": "512x512"/);
 
   await assert.rejects(
     access(
