@@ -1,77 +1,74 @@
-# Thai content style and native review
+# Thai content style and verification
 
-This guide governs learner-facing Thai, Romanization, meanings, feedback,
-dialogues, cultural notes, and safety labels in Noklingo Course 1.
+Noklingo teaches central conversational Thai to English-speaking beginners.
+Learner-facing language should sound plausible in the scene, not like an English
+sentence translated word for word.
 
-## Content voice
+## Cue-card voice
 
-Teach speech a Thai person would plausibly use in the named situation. Prefer a
-short natural response over a complete English-shaped sentence. Reuse older
-material in new situations so the course builds language rather than collecting
-phrases.
+Every knowledge item includes:
 
-- Natural English meaning describes intent; it is not a word-for-word gloss.
-- Add a literal meaning only when it reveals useful Thai structure.
-- Put formal, casual, playful, intimate, region-specific, age-linked, or risky
-  use in `formality` and `usageNotes`, not in a surprise after the learner speaks.
-- Use central conversational Thai as the unmarked course variety. Mark regional
-  alternatives rather than mixing them silently.
-- Keep jokes gentle and relationship-aware. Do not teach insults, body comments,
-  sexual language, or crude slang as beginner social shortcuts.
-- Treat allergy, medical, police, and emergency phrases as communication backups,
-  not guarantees. Cultural notes should recommend location sharing, emergency
-  services, written cards, or a trusted Thai speaker where appropriate.
+- exact Thai script;
+- consistent learner-facing Romanization;
+- natural English meaning;
+- a short usage or relationship context;
+- source transcript-line references; and
+- optional literal, cultural, formality, regional, or safety notes only when they
+  help the learner use the phrase appropriately.
 
-## Politeness and speaker identity
+Prefer short natural responses and common subject omission. Natural meaning
+describes intent; literal meaning is supplementary. Thai script supports source
+accuracy but is never required as a scored answer unless a future literacy
+curriculum explicitly teaches it.
 
-Khrap and kha belong to the speaker's own style. Authored characters keep their
-declared particle; personalized production can swap to the learner's configured
-particle where the exercise explicitly supports that. Do not tell a learner to
-copy the listener's particle.
+## Transcript fidelity
 
-Thai commonly omits pronouns. Full `phǒm` or other pronoun forms are useful early
-scaffolds, but feedback should not imply that repeating a pronoun in every
-sentence is the only natural answer. Family terms and names often do the work of
-English pronouns.
+The structured transcript, WebVTT captions, cue cards, phrase audio, and quiz
+answers must agree with the supplied video. Preserve audible reductions while
+keeping Thai and Romanization aligned. Do not silently repair an unclear line or
+attribute words to the wrong speaker.
 
-## Exercise writing
+If dialogue is inaudible, contradictory, missing from the supplied transcript, or
+not cleared for reuse, block that content. Do not infer it with automatic speech
+recognition, copy it from comments, or invent what a speaker probably said.
 
-Each lesson must contain listening, meaning recognition, phrase construction,
-conversation response, retrieval, immediate explanation, pronunciation support,
-and cultural or usage context. Distractors should be plausible at the learner's
-level but unambiguously wrong for the named situation.
+## Politeness and context
 
-Do not test a learning-item ID before a path lesson introduces it. A visible
-distractor may preview a sound, but it must not be the knowledge needed to solve
-the task. Checkpoints introduce no items. Review exercises retain source-item
-references so mistakes update the correct schedule.
+`khrap` and `kha` follow the speaker's own style, not the listener's. Authored
+video speakers retain their recorded particles. Personalized production may use
+the learner's preferred particle only where the prompt explicitly permits it.
 
-## Native-speaker review checklist
+Mark formal, casual, playful, intimate, regional, age-linked, or potentially rude
+forms before asking the learner to use them. Avoid insults, body comments, sexual
+language, and crude slang as beginner social shortcuts. Health, allergy, police,
+and emergency phrases are communication aids, not guarantees; include practical
+backup advice when appropriate.
 
-Every new or corrected lesson should receive a native-level conversational review
-before human audio is recorded. Reviewers should answer all of the following:
+## Quiz writing
 
-1. Would a Thai speaker naturally say this in the stated setting and relationship?
-2. Does the English meaning capture the intent rather than merely mirror words?
-3. Are Thai script, Romanization, tones, vowel lengths, and syllable boundaries aligned?
-4. Does each speaker use an appropriate particle and politeness level?
-5. Is a shorter omitted-subject form more common at normal speed, and is that noted?
-6. Are casual, playful, formal, intimate, regional, age-linked, or potentially rude forms clearly labeled?
-7. Does the dialogue sound like an exchange rather than two phrasebook entries?
-8. Is the normal-speed audio script what a person would actually say, including natural reductions?
-9. Is every distractor plausible but clearly wrong in this context?
-10. Has every tested item been introduced, and does the lesson retrieve older material?
-11. Does correction feedback explain the useful contrast concisely and accurately?
-12. For health or safety content, does the note avoid overstating what the phrase guarantees?
+Distractors should be plausible at the learner's level but clearly wrong for the
+named situation. Accepted variants must preserve communicative intent and
+politeness. Never make unavailable media, unverified dialogue, or Thai literacy
+necessary to reach the answer.
 
-Record reviewer name, date, dialect background, and any unresolved question in
-the content review ticket. If reviewers disagree on a context-dependent form,
-mark it for follow-up rather than presenting one uncertain judgment as universal.
+For delayed mastery, do not write one question whose feedback reveals the answer
+to another variant in the same attempt. Final correctness is shown after the
+whole mastery quiz.
 
-## Correcting shipped content
+## Native-review checklist
 
-Keep stable IDs when correcting spelling, Romanization, a meaning, usage note, or
-audio delivery without changing the underlying concept. If the spoken intent
-changes materially, create a new learning-item and audio ID, migrate references,
-and leave persisted review history interpretable. Re-run the complete content
-gate and re-record every take whose Thai transcript or particle changed.
+A conversational Thai reviewer should confirm:
+
+1. Would a Thai speaker naturally say each line in this setting and relationship?
+2. Do Thai, Romanization, natural meaning, particles, tones, and vowel lengths
+   agree with the recording?
+3. Do transcript timestamps and captions match the audible speaker turns?
+4. Are cue cards genuinely established by their referenced lines?
+5. Are formality, regionality, humor, and safety implications clearly labeled?
+6. Are every canonical answer and accepted variant natural and unambiguous?
+7. Are distractors plausible without becoming contextually correct?
+8. Does phrase audio reproduce the verified card text?
+
+Record reviewer, date, dialect background, and unresolved questions with the
+content handoff. Keep stable IDs for wording corrections when the communicative
+concept is unchanged; create a new ID when the intended meaning changes.

@@ -1,99 +1,143 @@
 import {
-  Award,
   BookOpenCheck,
   CalendarDays,
+  CheckCircle2,
+  Clock3,
   Flame,
-  Star,
-  Trophy,
+  Target,
 } from "lucide-react";
-import { course } from "@/src/content/course";
 import { NokLogo } from "@/src/components/Mascot";
 import { ProgressBar, StatCard } from "@/src/components/ui";
-import { unitPercent } from "@/src/lib/progress";
+import { curriculum } from "@/src/content/curriculum";
 import { useAppStore } from "@/src/store/useAppStore";
 
+const dateKey = (date = new Date()) =>
+  `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+
+const statusLabel = (status: string | undefined) => {
+  if (status === "mastered") return "Mastered";
+  if (status === "awaiting-mastery") return "Mastery pending";
+  if (status === "introduced") return "Introduced";
+  return "Not started";
+};
+
 export function ProgressRoute() {
-  const progress = useAppStore((state) => state.progress);
+  const lessonProgress = useAppStore((state) => state.lessonProgress);
+  const itemReviewStates = useAppStore((state) => state.itemReviewStates);
+  const attempts = useAppStore((state) => state.attempts);
+  const streak = useAppStore((state) => state.streak);
+  const today = dateKey();
+  const masteredCount = curriculum.lessons.filter(
+    (lesson) => lessonProgress[lesson.id]?.status === "mastered",
+  ).length;
+  const dueCount = Object.values(itemReviewStates).filter(
+    (review) =>
+      review.dueDate <= today &&
+      lessonProgress[review.lessonId]?.status === "mastered",
+  ).length;
+  const delayedAttempts = attempts.filter(
+    (attempt) => attempt.mode === "mastery",
+  );
+  const recentDelayedAttempts = delayedAttempts.slice(-5);
+  const recentAccuracy = recentDelayedAttempts.length
+    ? Math.round(
+        recentDelayedAttempts.reduce(
+          (sum, attempt) => sum + attempt.activeAccuracy,
+          0,
+        ) / recentDelayedAttempts.length,
+      )
+    : 0;
+  const curriculumPercent = Math.round(
+    (masteredCount / Math.max(1, curriculum.lessons.length)) * 100,
+  );
 
   return (
-    <div className="page-shell progress-page">
+    <div className="page-shell progress-page v3-progress-page">
       <header className="mobile-brand">
         <NokLogo />
       </header>
       <div className="page-title">
         <span className="eyebrow">Your progress</span>
-        <h1>Small lessons. Real momentum.</h1>
+        <h1>What you can recall is what you know.</h1>
         <p>
-          Every phrase you finish is one less thing to hesitate over in
-          Thailand.
+          Progress here reflects delayed mastery and spaced review—not points
+          collected on the day you first saw a phrase.
         </p>
       </div>
 
       <div className="stats-grid">
         <StatCard
-          icon={<Star size={24} />}
-          value={progress.totalXp}
-          label="Total XP"
+          icon={<CheckCircle2 size={24} />}
+          value={masteredCount}
+          label="Lessons mastered"
+          accent="teal"
+        />
+        <StatCard
+          icon={<Clock3 size={24} />}
+          value={dueCount}
+          label="Phrases due"
           accent="sun"
         />
         <StatCard
           icon={<Flame size={24} />}
-          value={progress.currentStreak}
+          value={streak.current}
           label="Day streak"
           accent="coral"
         />
         <StatCard
-          icon={<Trophy size={24} />}
-          value={progress.longestStreak}
-          label="Longest streak"
+          icon={<Target size={24} />}
+          value={recentDelayedAttempts.length ? `${recentAccuracy}%` : "—"}
+          label="Recent mastery"
           accent="teal"
         />
-        <StatCard
-          icon={<BookOpenCheck size={24} />}
-          value={progress.completedLessonIds.length}
-          label="Lessons done"
-          accent="sun"
-        />
       </div>
+
+      <section className="panel mastery-overview-panel">
+        <div className="panel-heading">
+          <div>
+            <span className="eyebrow">Curriculum mastery</span>
+            <h2>{curriculumPercent}% truly learned</h2>
+          </div>
+          <BookOpenCheck size={26} />
+        </div>
+        <ProgressBar
+          value={curriculumPercent}
+          label="Curriculum mastery progress"
+        />
+        <p>
+          {masteredCount} of {curriculum.lessons.length} lessons have passed the
+          next-day 90% gate.
+        </p>
+      </section>
 
       <div className="progress-columns">
         <section className="panel">
           <div className="panel-heading">
             <div>
-              <span className="eyebrow">Course map</span>
-              <h2>Unit progress</h2>
+              <span className="eyebrow">Lesson by lesson</span>
+              <h2>Mastery status</h2>
             </div>
-            <Award size={26} />
+            <CheckCircle2 size={26} />
           </div>
-          <div className="unit-list">
-            {course.units.map((unit) => {
-              const percent = unitPercent(course, unit.id, progress);
+          <div className="mastery-lesson-list">
+            {curriculum.lessons.map((lesson) => {
+              const progress = lessonProgress[lesson.id];
+              const best = progress?.bestDelayedAccuracy ?? 0;
               return (
-                <div className="unit-list-row" key={unit.id}>
-                  <span className={`unit-number unit-number-${unit.color}`}>
-                    {unit.number}
-                  </span>
+                <div className="mastery-lesson-row" key={lesson.id}>
+                  <span
+                    className={`mastery-status-dot mastery-status-${progress?.status ?? "unseen"}`}
+                    aria-hidden="true"
+                  />
                   <div>
-                    <div>
-                      <strong>{unit.title}</strong>
-                      <span>{percent}%</span>
-                    </div>
-                    <ProgressBar
-                      value={percent}
-                      label={`${unit.title} progress`}
-                    />
-                    <small>
-                      {
-                        unit.nodes.filter(
-                          (node) =>
-                            node.lessonId &&
-                            progress.completedLessonIds.includes(node.lessonId),
-                        ).length
-                      }{" "}
-                      of {unit.nodes.filter((node) => node.lessonId).length}{" "}
-                      lessons
-                    </small>
+                    <strong>{lesson.title}</strong>
+                    <small>{statusLabel(progress?.status)}</small>
                   </div>
+                  <b>
+                    {progress?.status === "mastered" || best > 0
+                      ? `${best}%`
+                      : "—"}
+                  </b>
                 </div>
               );
             })}
@@ -103,73 +147,89 @@ export function ProgressRoute() {
         <section className="panel">
           <div className="panel-heading">
             <div>
-              <span className="eyebrow">Latest wins</span>
-              <h2>Recent activity</h2>
+              <span className="eyebrow">Latest study</span>
+              <h2>Recent sessions</h2>
             </div>
             <CalendarDays size={26} />
           </div>
-          <div className="activity-list">
-            {progress.activities.length ? (
-              progress.activities.slice(0, 6).map((activity) => {
-                const date = new Intl.DateTimeFormat(undefined, {
-                  month: "short",
-                  day: "numeric",
-                }).format(new Date(activity.completedAt));
-                return (
-                  <div className="activity-row" key={activity.id}>
-                    <span className="activity-dot">
-                      <Star size={17} fill="currentColor" />
-                    </span>
-                    <div>
-                      <strong>{activity.title}</strong>
-                      <small>
-                        {date} · {activity.accuracy}% accurate
-                        {!activity.passed ? " · checkpoint retry" : ""}
-                      </small>
+          <div className="activity-list v3-activity-list">
+            {attempts.length ? (
+              attempts
+                .slice(-7)
+                .reverse()
+                .map((attempt) => {
+                  const lesson = curriculum.lessons.find(
+                    (candidate) => candidate.id === attempt.lessonId,
+                  );
+                  const date = new Intl.DateTimeFormat(undefined, {
+                    month: "short",
+                    day: "numeric",
+                  }).format(new Date(attempt.completedAt));
+                  const displayAccuracy =
+                    attempt.mode === "review"
+                      ? Math.round(
+                          (attempt.reviewCorrect /
+                            Math.max(1, attempt.reviewTotal)) *
+                            100,
+                        )
+                      : attempt.activeAccuracy;
+                  return (
+                    <div className="activity-row" key={attempt.id}>
+                      <span className="activity-dot">
+                        {attempt.passed ? (
+                          <CheckCircle2 size={17} />
+                        ) : (
+                          <Clock3 size={17} />
+                        )}
+                      </span>
+                      <div>
+                        <strong>{lesson?.title ?? "Thai study"}</strong>
+                        <small>
+                          {date} ·{" "}
+                          {attempt.mode === "introduction"
+                            ? "First pass"
+                            : attempt.mode === "review"
+                              ? "Spaced review"
+                              : "Mastery check"}
+                          {attempt.reviewTotal > 0
+                            ? ` · ${attempt.reviewTotal} older review`
+                            : ""}
+                        </small>
+                      </div>
+                      <b>{displayAccuracy}%</b>
                     </div>
-                    <b>+{activity.xp} XP</b>
-                  </div>
-                );
-              })
+                  );
+                })
             ) : (
               <div className="inline-empty">
-                <p>
-                  Your completed lessons will show up here. Your first win is
-                  close.
-                </p>
+                <p>Your first completed study session will appear here.</p>
               </div>
             )}
           </div>
         </section>
       </div>
 
-      <section className="panel milestone-panel">
+      <section className="panel review-health-panel">
         <div className="panel-heading">
           <div>
-            <span className="eyebrow">Milestones</span>
-            <h2>Useful wins, not busywork</h2>
+            <span className="eyebrow">Review health</span>
+            <h2>Your spaced-repetition queue</h2>
           </div>
-          <Trophy size={26} />
+          <Clock3 size={26} />
         </div>
-        <div className="milestone-grid">
-          {course.achievements.map((achievement) => {
-            const unlocked = progress.unlockedAchievementIds.includes(
-              achievement.id,
-            );
-            return (
-              <article
-                className={`milestone-card ${unlocked ? "unlocked" : ""}`}
-                key={achievement.id}
-              >
-                <Star size={20} fill={unlocked ? "currentColor" : "none"} />
-                <div>
-                  <strong>{achievement.title}</strong>
-                  <small>{achievement.description}</small>
-                </div>
-                <span>{unlocked ? "Earned" : "Ahead"}</span>
-              </article>
-            );
-          })}
+        <div className="review-health-grid">
+          <div>
+            <strong>{Object.keys(itemReviewStates).length}</strong>
+            <span>Tracked phrases</span>
+          </div>
+          <div>
+            <strong>{dueCount}</strong>
+            <span>Due now</span>
+          </div>
+          <div>
+            <strong>{streak.longest}</strong>
+            <span>Longest streak</span>
+          </div>
         </div>
       </section>
     </div>

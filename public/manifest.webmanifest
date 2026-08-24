@@ -1,7 +1,7 @@
 {
   "name": "Noklingo — Conversational Thai",
   "short_name": "Noklingo",
-  "description": "Short, playful lessons for useful conversational Thai.",
+  "description": "Short Thai video lessons, cue cards, and next-day memory checks.",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#fffaf1",

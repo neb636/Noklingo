@@ -1,8 +1,11 @@
 import Dexie, { type EntityTable } from "dexie";
-import { exercisesById } from "@/src/content/course";
+import { curriculum } from "@/src/content/curriculum";
 import { PersistedAppDataSchema } from "@/src/domain/schemas";
-import type { PersistedAppData, Progress } from "@/src/domain/types";
-import { defaultProgress, localDateKey } from "@/src/engine/progression";
+import type { PersistedAppDataV3 } from "@/src/domain/types";
+import {
+  createInitialAppData,
+  reconcilePersistedAppData,
+} from "@/src/engine/study";
 
 type AppRecord = {
   id: "app";
@@ -17,159 +20,73 @@ class NoklingoDatabase extends Dexie {
     super("noklingo");
     this.version(1).stores({ app: "&id, updatedAt" });
     this.version(2).stores({ app: "&id, updatedAt" });
+    this.version(3).stores({ app: "&id, updatedAt" });
   }
 }
 
 export const db = new NoklingoDatabase();
 
-type LegacyData = {
-  version?: number;
-  profile?: Record<string, unknown>;
-  settings?: Record<string, unknown>;
-  progress?: Record<string, unknown>;
+export type LoadedAppData = {
+  data: PersistedAppDataV3;
+  resetLegacyData: boolean;
 };
 
-const numberValue = (value: unknown, fallback = 0) =>
-  typeof value === "number" && Number.isFinite(value) ? value : fallback;
-const stringArray = (value: unknown) =>
-  Array.isArray(value)
-    ? value.filter((item): item is string => typeof item === "string")
-    : [];
+export function normalizeStoredAppData(value: unknown): LoadedAppData | null {
+  if (!value) return null;
 
-export function migratePersistedAppData(input: unknown): PersistedAppData {
-  const current = PersistedAppDataSchema.safeParse(input);
-  if (current.success) return current.data;
-
-  const legacy = (
-    input && typeof input === "object" ? input : {}
-  ) as LegacyData;
-  if (legacy.version !== 1) {
-    throw new Error("That file is not a valid Noklingo progress export.");
+  const current = PersistedAppDataSchema.safeParse(value);
+  if (current.success) {
+    return {
+      data: reconcilePersistedAppData(curriculum, current.data),
+      resetLegacyData: false,
+    };
   }
-  const oldProgress = legacy.progress ?? {};
-  const today = localDateKey();
-  const completedLessonIds = stringArray(oldProgress.completedLessonIds);
-  const mistakeExerciseIds = stringArray(oldProgress.mistakeExerciseIds);
-  const base = defaultProgress();
-  const progress: Progress = {
-    ...base,
-    totalXp: numberValue(oldProgress.totalXp),
-    todayXp:
-      oldProgress.todayDate === today ? numberValue(oldProgress.todayXp) : 0,
-    todayDate: today,
-    currentStreak: numberValue(oldProgress.currentStreak),
-    longestStreak: numberValue(oldProgress.longestStreak),
-    lastPracticeDate:
-      typeof oldProgress.lastPracticeDate === "string"
-        ? oldProgress.lastPracticeDate
-        : null,
-    completedLessonIds,
-    lessonAttempts:
-      oldProgress.lessonAttempts &&
-      typeof oldProgress.lessonAttempts === "object"
-        ? (oldProgress.lessonAttempts as Record<string, number>)
-        : {},
-    lessonStates: Object.fromEntries(
-      completedLessonIds.map((lessonId) => [
-        lessonId,
-        {
-          lessonId,
-          status: "completed" as const,
-          attempts: 1,
-          bestAccuracy: 0,
-        },
-      ]),
-    ),
-    activities: Array.isArray(oldProgress.activities)
-      ? oldProgress.activities.flatMap((activity, index) => {
-          if (!activity || typeof activity !== "object") return [];
-          const value = activity as Record<string, unknown>;
-          if (
-            typeof value.lessonId !== "string" ||
-            typeof value.title !== "string" ||
-            typeof value.completedAt !== "string"
-          )
-            return [];
-          return [
-            {
-              id: `activity.migrated-${index}`,
-              lessonId: value.lessonId,
-              title: value.title,
-              xp: numberValue(value.xp),
-              accuracy: numberValue(value.accuracy),
-              completedAt: value.completedAt,
-              mode: "lesson" as const,
-              passed: true,
-            },
-          ];
-        })
-      : [],
-    mistakes: mistakeExerciseIds.flatMap((exerciseId, index) => {
-      const exercise = exercisesById[exerciseId];
-      if (!exercise) return [];
-      const at = new Date().toISOString();
-      return [
-        {
-          id: `mistake.migrated-${index}`,
-          lessonId: "lesson.first-hellos",
-          exerciseId,
-          sourceItemIds: exercise.sourceItemIds,
-          firstSeenAt: at,
-          lastSeenAt: at,
-          timesWrong: 1,
-          successfulCorrections: 0,
-          resolved: false,
-        },
-      ];
-    }),
-  };
 
-  return PersistedAppDataSchema.parse({
-    version: 2,
-    profile: {
-      name:
-        typeof legacy.profile?.name === "string"
-          ? legacy.profile.name
-          : "Learner",
-      onboarded: legacy.profile?.onboarded === true,
-      dailyGoal: numberValue(legacy.profile?.dailyGoal, 20),
-      motivation:
-        typeof legacy.profile?.motivation === "string"
-          ? legacy.profile.motivation
-          : "Talk with family",
-      familiarity: ["new", "some", "comfortable"].includes(
-        String(legacy.profile?.familiarity),
-      )
-        ? legacy.profile?.familiarity
-        : "new",
-      politeParticle: "khrap",
-    },
-    settings: {
-      audioEnabled: legacy.settings?.audioEnabled !== false,
-      volume: numberValue(legacy.settings?.volume, 0.8),
-      romanization:
-        legacy.settings?.romanization === "always" ? "always" : "learning",
-      showThaiScript: false,
-      reducedMotion: legacy.settings?.reducedMotion === true,
-      darkMode: legacy.settings?.darkMode === true,
-    },
-    progress,
-    // Version 1 did not persist a self-contained queue, so resuming it after a
-    // curriculum upgrade would be unsafe. Version 2 sessions resume exactly.
-    activeSession: null,
-  });
+  const legacyVersion =
+    value && typeof value === "object" && "version" in value
+      ? (value as { version?: unknown }).version
+      : undefined;
+  if (legacyVersion === 1 || legacyVersion === 2) {
+    return {
+      data: {
+        ...createInitialAppData(curriculum),
+        redesignNoticeSeen: false,
+      },
+      resetLegacyData: true,
+    };
+  }
+
+  if (legacyVersion === 3 && value && typeof value === "object") {
+    // Preserve valid v3 learning history if only its resumable session was
+    // interrupted or came from content that no longer exists.
+    const withoutSession = PersistedAppDataSchema.safeParse({
+      ...value,
+      activeSession: null,
+    });
+    if (withoutSession.success) {
+      return {
+        data: reconcilePersistedAppData(curriculum, withoutSession.data),
+        resetLegacyData: false,
+      };
+    }
+  }
+
+  throw new Error(
+    "Saved Noklingo data is unreadable. Reset the app from Settings to start again.",
+  );
 }
 
-export const loadAppData = async () => {
-  const value = (await db.app.get("app"))?.data;
-  if (!value) return null;
-  return migratePersistedAppData(value);
-};
+export async function loadAppData(): Promise<LoadedAppData | null> {
+  return normalizeStoredAppData((await db.app.get("app"))?.data);
+}
 
 let saveChain: Promise<void> = Promise.resolve();
 
-export const saveAppData = async (data: PersistedAppData) => {
-  const validated = PersistedAppDataSchema.parse(data);
+export async function saveAppData(data: PersistedAppDataV3) {
+  const parsed = PersistedAppDataSchema.parse(data);
+  const validated = PersistedAppDataSchema.parse(
+    reconcilePersistedAppData(curriculum, parsed),
+  );
   saveChain = saveChain
     .catch(() => undefined)
     .then(() =>
@@ -181,20 +98,50 @@ export const saveAppData = async (data: PersistedAppData) => {
     )
     .then(() => undefined);
   await saveChain;
-};
+}
 
-export const clearAppData = async () => {
-  await db.delete();
-  await db.open();
-};
+export async function clearAppData() {
+  saveChain = saveChain
+    .catch(() => undefined)
+    .then(async () => {
+      await db.delete();
+      await db.open();
+    });
+  await saveChain;
+}
 
-export const exportAppData = async () => {
-  const data = await loadAppData();
+export async function exportAppData() {
+  const loaded = await loadAppData();
+  const data = loaded?.data ?? {
+    ...createInitialAppData(curriculum),
+    redesignNoticeSeen: true,
+  };
   return JSON.stringify(data, null, 2);
-};
+}
 
-export const importAppData = async (raw: string) => {
-  const parsed = migratePersistedAppData(JSON.parse(raw));
-  await saveAppData(parsed);
-  return parsed;
-};
+export async function importAppData(raw: string) {
+  let input: unknown;
+  try {
+    input = JSON.parse(raw);
+  } catch {
+    throw new Error("That file is not valid JSON.");
+  }
+
+  const parsed = PersistedAppDataSchema.safeParse(input);
+  if (!parsed.success) {
+    const version =
+      input && typeof input === "object" && "version" in input
+        ? (input as { version?: unknown }).version
+        : undefined;
+    if (version === 1 || version === 2) {
+      throw new Error(
+        "That progress file belongs to Noklingo's previous learning system and cannot be imported into v3.",
+      );
+    }
+    throw new Error("That file is not a valid Noklingo v3 progress export.");
+  }
+
+  const reconciled = reconcilePersistedAppData(curriculum, parsed.data);
+  await saveAppData(reconciled);
+  return reconciled;
+}

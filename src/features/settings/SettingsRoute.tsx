@@ -3,6 +3,7 @@ import {
   Download,
   FileDown,
   FileUp,
+  Languages,
   Moon,
   RotateCcw,
   Smartphone,
@@ -22,7 +23,7 @@ interface InstallPromptEvent extends Event {
 export function SettingsRoute() {
   const settings = useAppStore((state) => state.settings);
   const updateSettings = useAppStore((state) => state.updateSettings);
-  const replaceData = useAppStore((state) => state.replaceData);
+  const hydrate = useAppStore((state) => state.hydrate);
   const reset = useAppStore((state) => state.reset);
   const fileRef = useRef<HTMLInputElement>(null);
   const [message, setMessage] = useState<string | null>(null);
@@ -40,40 +41,50 @@ export function SettingsRoute() {
   }, []);
 
   const exportProgress = async () => {
-    const raw = await exportAppData();
-    const blob = new Blob([raw], { type: "application/json" });
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = `noklingo-progress-${new Date().toISOString().slice(0, 10)}.json`;
-    link.click();
-    URL.revokeObjectURL(link.href);
-    setMessage("Progress exported. Keep that file somewhere safe.");
+    try {
+      const raw = await exportAppData();
+      const blob = new Blob([raw], { type: "application/json" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = `noklingo-v3-${new Date().toISOString().slice(0, 10)}.json`;
+      link.click();
+      URL.revokeObjectURL(link.href);
+      setMessage("Your v3 progress backup is ready.");
+    } catch (error) {
+      setMessage(
+        error instanceof Error ? error.message : "Could not export progress.",
+      );
+    }
   };
 
   const importProgress = async (file: File | undefined) => {
     if (!file) return;
     try {
-      const data = await importAppData(await file.text());
-      replaceData(data);
-      setMessage("Progress imported successfully.");
+      await importAppData(await file.text());
+      await hydrate();
+      setMessage("Your v3 progress was imported successfully.");
     } catch (error) {
       setMessage(
         error instanceof Error ? error.message : "Could not import that file.",
       );
+    } finally {
+      if (fileRef.current) fileRef.current.value = "";
     }
   };
 
   const resetAll = async () => {
     if (
       window.confirm(
-        "Reset Noklingo? This permanently removes all local progress and settings.",
+        "Reset Noklingo? This permanently removes all local lesson mastery, review history, streaks, and settings.",
       )
-    )
+    ) {
       await reset();
+      setMessage("Noklingo has been reset. Your first video is ready.");
+    }
   };
 
   return (
-    <div className="page-shell settings-page">
+    <div className="page-shell settings-page v3-settings-page">
       <header className="mobile-brand">
         <NokLogo />
       </header>
@@ -81,13 +92,15 @@ export function SettingsRoute() {
         <span className="eyebrow">Settings</span>
         <h1>Make Noklingo feel like yours.</h1>
         <p>
-          Your settings and progress live on this device — no account required.
+          Your settings and learning history live on this device—no account
+          required.
         </p>
       </div>
+
       {message && (
         <div className="settings-message" role="status">
           {message}
-          <button onClick={() => setMessage(null)} aria-label="Dismiss">
+          <button onClick={() => setMessage(null)} aria-label="Dismiss message">
             ×
           </button>
         </div>
@@ -101,21 +114,22 @@ export function SettingsRoute() {
             </span>
             <div>
               <h2>Sound & display</h2>
-              <p>Adjust how lessons look and sound.</p>
+              <p>Adjust how videos, cue cards, and quizzes feel.</p>
             </div>
           </div>
+
           <div className="setting-row">
             <div>
               <Speaker size={21} />
               <span>
-                <strong>Lesson audio</strong>
-                <small>Play Thai phrases and feedback</small>
+                <strong>Phrase audio</strong>
+                <small>Play Thai examples and listening questions</small>
               </span>
             </div>
             <button
               className={`switch ${settings.audioEnabled ? "on" : ""}`}
               role="switch"
-              aria-label="Lesson audio"
+              aria-label="Phrase audio"
               aria-checked={settings.audioEnabled}
               onClick={() =>
                 updateSettings({ audioEnabled: !settings.audioEnabled })
@@ -124,16 +138,17 @@ export function SettingsRoute() {
               <i />
             </button>
           </div>
+
           <label className="setting-row setting-slider">
             <div>
               <Volume2 size={21} />
               <span>
-                <strong>Volume</strong>
+                <strong>Audio volume</strong>
                 <small>{Math.round(settings.volume * 100)}%</small>
               </span>
             </div>
             <input
-              aria-label="Lesson audio volume"
+              aria-label="Phrase audio volume"
               type="range"
               min="0"
               max="1"
@@ -145,12 +160,13 @@ export function SettingsRoute() {
               disabled={!settings.audioEnabled}
             />
           </label>
+
           <label className="setting-row setting-select">
             <div>
               <Type size={21} />
               <span>
-                <strong>Pronunciation guidance</strong>
-                <small>Romanization remains the exercise language</small>
+                <strong>Romanization</strong>
+                <small>Choose how often pronunciation guidance appears</small>
               </span>
             </div>
             <select
@@ -163,21 +179,23 @@ export function SettingsRoute() {
               }
             >
               <option value="always">Always show</option>
-              <option value="learning">Keep detail concise</option>
+              <option value="learning">Show while learning</option>
+              <option value="never">Hide it</option>
             </select>
           </label>
+
           <div className="setting-row">
             <div>
-              <Type size={21} />
+              <Languages size={21} />
               <span>
-                <strong>Thai script details</strong>
-                <small>Optional source-accuracy view; never required</small>
+                <strong>Thai script</strong>
+                <small>Show Thai alongside pronunciation guidance</small>
               </span>
             </div>
             <button
               className={`switch ${settings.showThaiScript ? "on" : ""}`}
               role="switch"
-              aria-label="Show optional Thai script details"
+              aria-label="Show Thai script"
               aria-checked={settings.showThaiScript}
               onClick={() =>
                 updateSettings({ showThaiScript: !settings.showThaiScript })
@@ -186,6 +204,29 @@ export function SettingsRoute() {
               <i />
             </button>
           </div>
+
+          <label className="setting-row setting-select">
+            <div>
+              <Languages size={21} />
+              <span>
+                <strong>Preferred polite particle</strong>
+                <small>Used in personalized phrase variants</small>
+              </span>
+            </div>
+            <select
+              value={settings.politeParticle}
+              onChange={(event) =>
+                updateSettings({
+                  politeParticle: event.target
+                    .value as typeof settings.politeParticle,
+                })
+              }
+            >
+              <option value="khrap">ครับ · khrap</option>
+              <option value="kha">ค่ะ · kha</option>
+            </select>
+          </label>
+
           <div className="setting-row">
             <div>
               <Moon size={21} />
@@ -204,12 +245,13 @@ export function SettingsRoute() {
               <i />
             </button>
           </div>
+
           <div className="setting-row">
             <div>
               <Smartphone size={21} />
               <span>
                 <strong>Reduced motion</strong>
-                <small>Limit celebrations and transitions</small>
+                <small>Limit card transitions and celebrations</small>
               </span>
             </div>
             <button
@@ -234,7 +276,7 @@ export function SettingsRoute() {
               </span>
               <div>
                 <h2>Install Noklingo</h2>
-                <p>Keep it on your home screen and learn offline.</p>
+                <p>Keep it on your home screen for easy daily study.</p>
               </div>
             </div>
             {installPrompt ? (
@@ -251,7 +293,7 @@ export function SettingsRoute() {
               <p className="install-help">
                 On iPhone or iPad, choose{" "}
                 <strong>Share → Add to Home Screen</strong>. On desktop, look
-                for the install icon in your browser’s address bar.
+                for the install icon in the address bar.
               </p>
             )}
           </section>
@@ -268,22 +310,26 @@ export function SettingsRoute() {
             </div>
             <div className="data-actions">
               <Button tone="secondary" onClick={exportProgress}>
-                <FileDown size={18} /> Export progress
+                <FileDown size={18} /> Export v3 progress
               </Button>
               <Button tone="secondary" onClick={() => fileRef.current?.click()}>
-                <FileUp size={18} /> Import progress
+                <FileUp size={18} /> Import v3 progress
               </Button>
               <input
                 ref={fileRef}
                 type="file"
                 hidden
-                accept="application/json"
+                accept="application/json,.json"
                 onChange={(event) => importProgress(event.target.files?.[0])}
               />
             </div>
+            <p className="data-version-note">
+              Older v1/v2 progress files are intentionally incompatible with the
+              redesigned learning model.
+            </p>
             <div className="danger-zone">
               <div>
-                <strong>Reset all progress</strong>
+                <strong>Reset all learning data</strong>
                 <small>This cannot be undone unless you export first.</small>
               </div>
               <Button tone="danger" onClick={resetAll}>
@@ -293,8 +339,9 @@ export function SettingsRoute() {
           </section>
         </div>
       </div>
+
       <footer className="settings-footer">
-        Noklingo · Offline-first conversational Thai · Made with care
+        Noklingo · Video-first conversational Thai · Stored on this device
       </footer>
     </div>
   );

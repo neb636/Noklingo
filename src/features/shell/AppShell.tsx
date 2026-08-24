@@ -1,7 +1,7 @@
 import {
   BookOpen,
   ChartNoAxesColumnIncreasing,
-  Dumbbell,
+  House,
   Settings,
 } from "lucide-react";
 import type { ReactNode } from "react";
@@ -9,9 +9,9 @@ import { NokLogo } from "@/src/components/Mascot";
 import type { AppRoute } from "@/src/store/useAppStore";
 import { useAppStore } from "@/src/store/useAppStore";
 
-const items: { route: AppRoute; label: string; icon: typeof BookOpen }[] = [
-  { route: "home", label: "Learn", icon: BookOpen },
-  { route: "practice", label: "Practice", icon: Dumbbell },
+const items: { route: AppRoute; label: string; icon: typeof House }[] = [
+  { route: "today", label: "Today", icon: House },
+  { route: "library", label: "Library", icon: BookOpen },
   { route: "progress", label: "Progress", icon: ChartNoAxesColumnIncreasing },
   { route: "settings", label: "Settings", icon: Settings },
 ];
@@ -20,8 +20,8 @@ export function AppShell({ children }: { children: ReactNode }) {
   const route = useAppStore((state) => state.route);
   const navigate = useAppStore((state) => state.navigate);
   const settings = useAppStore((state) => state.settings);
-  const progress = useAppStore((state) => state.progress);
-  const immersive = ["onboarding", "lesson", "complete"].includes(route);
+  const streak = useAppStore((state) => state.streak);
+  const immersive = route === "study" || route === "results";
 
   return (
     <div
@@ -46,8 +46,8 @@ export function AppShell({ children }: { children: ReactNode }) {
           <div className="sidebar-streak">
             <span aria-hidden="true">🔥</span>
             <div>
-              <strong>{progress.currentStreak} day streak</strong>
-              <small>Keep your flame glowing</small>
+              <strong>{streak.current} day streak</strong>
+              <small>Intro or mastery earns today</small>
             </div>
           </div>
         </aside>

@@ -8,22 +8,20 @@ import {
   useRef,
 } from "react";
 import { LoaderCircle } from "lucide-react";
-import { AppShell } from "@/src/features/shell/AppShell";
-import { CompletionRoute } from "@/src/features/completion/CompletionRoute";
-import { HomeRoute } from "@/src/features/home/HomeRoute";
-import { LessonRoute } from "@/src/features/lesson/LessonRoute";
-import { OnboardingRoute } from "@/src/features/onboarding/OnboardingRoute";
-import { PracticeRoute } from "@/src/features/practice/PracticeRoute";
+import { LibraryRoute } from "@/src/features/library/LibraryRoute";
 import { ProgressRoute } from "@/src/features/progress/ProgressRoute";
+import { ResultsRoute } from "@/src/features/results/ResultsRoute";
 import { SettingsRoute } from "@/src/features/settings/SettingsRoute";
+import { AppShell } from "@/src/features/shell/AppShell";
+import { StudyRoute } from "@/src/features/study/StudyRoute";
+import { TodayRoute } from "@/src/features/today/TodayRoute";
 import { type AppRoute, useAppStore } from "@/src/store/useAppStore";
 
 const appRoutes: AppRoute[] = [
-  "onboarding",
-  "home",
-  "lesson",
-  "complete",
-  "practice",
+  "today",
+  "study",
+  "results",
+  "library",
   "progress",
   "settings",
 ];
@@ -73,74 +71,82 @@ function RouteView() {
   const hydrate = useAppStore((state) => state.hydrate);
   const navigate = useAppStore((state) => state.navigate);
   const activeSession = useAppStore((state) => state.activeSession);
+  const completion = useAppStore((state) => state.completion);
   const initialHashRoute = useRef<AppRoute | null>(routeFromHash());
 
   useEffect(() => {
     void hydrate();
   }, [hydrate]);
+
   useEffect(() => {
     if (!hydrated || !initialHashRoute.current) return;
     const desired = initialHashRoute.current;
     const safeDesired =
-      desired === "lesson" && !activeSession ? "home" : desired;
-    if (safeDesired !== route) {
-      navigate(safeDesired);
-      return;
-    }
+      desired === "study" && !activeSession
+        ? "today"
+        : desired === "results" && !completion
+          ? "today"
+          : desired;
     initialHashRoute.current = null;
-  }, [activeSession, hydrated, navigate, route]);
+    if (safeDesired !== route) navigate(safeDesired);
+  }, [activeSession, completion, hydrated, navigate, route]);
+
   useEffect(() => {
     if (!hydrated) return;
     if (initialHashRoute.current && initialHashRoute.current !== route) return;
     window.history.replaceState(null, "", `#/${route}`);
   }, [hydrated, route]);
+
   useEffect(() => {
     if (!hydrated) return;
     const handleHash = () => {
       const desired = routeFromHash();
       if (!desired) return;
-      if (desired === "lesson" && !useAppStore.getState().activeSession) {
-        navigate("home");
-      } else {
-        navigate(desired);
-      }
+      const state = useAppStore.getState();
+      if (desired === "study" && !state.activeSession) navigate("today");
+      else if (desired === "results" && !state.completion) navigate("today");
+      else navigate(desired);
     };
     window.addEventListener("hashchange", handleHash);
     return () => window.removeEventListener("hashchange", handleHash);
   }, [hydrated, navigate]);
+
   useEffect(() => {
-    if ("serviceWorker" in navigator && process.env.NODE_ENV === "production") {
-      const serviceWorkerUrl = new URL("sw.js", window.location.href);
-      navigator.serviceWorker
-        .register(serviceWorkerUrl)
-        .then(async () => {
-          const registration = await navigator.serviceWorker.ready;
-          const urls = performance
-            .getEntriesByType("resource")
-            .map((entry) => entry.name)
-            .filter((url) => url.startsWith(window.location.origin));
-          registration.active?.postMessage({ type: "CACHE_URLS", urls });
-        })
-        .catch(() => undefined);
-    }
+    if (
+      !("serviceWorker" in navigator) ||
+      process.env.NODE_ENV !== "production"
+    )
+      return;
+    const serviceWorkerUrl = new URL("sw.js", window.location.href);
+    navigator.serviceWorker
+      .register(serviceWorkerUrl)
+      .then(async () => {
+        const registration = await navigator.serviceWorker.ready;
+        const urls = performance
+          .getEntriesByType("resource")
+          .map((entry) => entry.name)
+          .filter((url) => url.startsWith(window.location.origin));
+        registration.active?.postMessage({ type: "CACHE_URLS", urls });
+      })
+      .catch(() => undefined);
   }, []);
 
-  if (!hydrated)
+  if (!hydrated) {
     return (
       <div className="app-loading">
         <div className="loading-bird">นก</div>
         <LoaderCircle className="spin" size={24} />
-        <span>Warming up your Thai…</span>
+        <span>Getting today’s Thai ready…</span>
       </div>
     );
+  }
 
   return (
     <AppShell>
-      {route === "onboarding" && <OnboardingRoute />}
-      {route === "home" && <HomeRoute />}
-      {route === "lesson" && <LessonRoute />}
-      {route === "complete" && <CompletionRoute />}
-      {route === "practice" && <PracticeRoute />}
+      {route === "today" && <TodayRoute />}
+      {route === "study" && <StudyRoute />}
+      {route === "results" && <ResultsRoute />}
+      {route === "library" && <LibraryRoute />}
       {route === "progress" && <ProgressRoute />}
       {route === "settings" && <SettingsRoute />}
     </AppShell>

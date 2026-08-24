@@ -18,8 +18,9 @@ const assetPath = (path: string) => `${assetPrefix}${path}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Noklingo — Speak Thai, little by little",
-  description: "A playful, offline-first path to useful conversational Thai.",
+  title: "Noklingo — Remember the Thai you learn",
+  description:
+    "Short Thai video lessons, cue cards, and next-day memory checks.",
   applicationName: "Noklingo",
   manifest: assetPath("/manifest.webmanifest"),
   appleWebApp: {
@@ -29,8 +30,8 @@ export const metadata: Metadata = {
   },
   formatDetection: { telephone: false },
   openGraph: {
-    title: "Noklingo — Speak Thai, little by little",
-    description: "Short, playful lessons for useful conversational Thai.",
+    title: "Noklingo — Remember the Thai you learn",
+    description: "Video lessons and delayed recall for conversational Thai.",
     type: "website",
     images: [
       {
@@ -43,8 +44,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Noklingo — Speak Thai, little by little",
-    description: "Short, playful lessons for useful conversational Thai.",
+    title: "Noklingo — Remember the Thai you learn",
+    description: "Video lessons and delayed recall for conversational Thai.",
     images: [assetPath("/og-course-one.png")],
   },
   icons: {
