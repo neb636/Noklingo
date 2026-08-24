@@ -1,0 +1,13 @@
+{
+  "name": "Thai Study",
+  "short_name": "Thai Study",
+  "description": "A calm, local-first notebook for learning conversational Thai from short videos.",
+  "start_url": "./today/",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4efe6",
+  "theme_color": "#f4efe6",
+  "icons": [
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
