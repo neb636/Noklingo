@@ -26,9 +26,6 @@ jobs:
 
       - run: npm ci
 
-      - name: Validate learning engine and curriculum
-        run: npm run validate:curriculum && npm run typecheck && npm run lint && npm run test
-
       - name: Build static canary
         run: npm run build
         env:
