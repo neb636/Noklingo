@@ -3,6 +3,8 @@
 Thai Study is an offline-first, static PWA for learning conversational Thai
 from short, authorized video lessons. Its learning loop is intentionally quiet:
 
+Live site: [neb636.github.io/Noklingo](https://neb636.github.io/Noklingo/)
+
 > watch → notice → make a first pass → retrieve tomorrow → return later
 
 There are no points, hearts, achievements, checkpoint statistics, or course
