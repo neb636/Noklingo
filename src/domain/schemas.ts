@@ -204,7 +204,6 @@ export const SettingsSchema = z.object({
   showThaiScript: z.boolean(),
   thaiSize: z.enum(["standard", "large"]),
   reduceMotion: z.boolean(),
-  captionsByDefault: z.boolean(),
   politeParticle: z.enum(["khráp", "khâ", "both"]),
 });
 export const StreakStateSchema = z.object({

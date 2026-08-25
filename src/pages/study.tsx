@@ -89,7 +89,6 @@ function VideoStage({ lesson }: { lesson: VideoLesson }) {
   const [watchComplete, setWatchComplete] = useState(false);
   const watchedSeconds = useRef(0);
   const lastTime = useRef(0);
-  const settings = useStudyStore((state) => state.settings);
   const completeVideo = useStudyStore((state) => state.completeVideo);
 
   function resetPlayback() {
@@ -113,7 +112,7 @@ function VideoStage({ lesson }: { lesson: VideoLesson }) {
     <div className="video-column">
       {!mediaError ? <video key={retryKey} className="lesson-video portrait-video" controls playsInline preload="metadata" poster={assetPath(lesson.media.posterSrc)} onLoadedMetadata={resetPlayback} onTimeUpdate={(event) => noteProgress(event.currentTarget)} onEnded={(event) => finishPlayback(event.currentTarget)} onError={() => setMediaError(true)}>
         <source src={assetPath(lesson.media.videoSrc)} type="video/mp4" />
-        {lesson.media.captionsSrc && <track default={settings.captionsByDefault} kind="captions" src={assetPath(lesson.media.captionsSrc)} srcLang="th" label="Reviewed Thai and English" />}
+        {lesson.media.captionsSrc && <track kind="captions" src={assetPath(lesson.media.captionsSrc)} srcLang="th" label="Reviewed Thai and English" />}
       </video> : <div className="media-fallback media-failed portrait-fallback" role="alert"><div className="frame-corners" /><span className="fallback-play"><CircleAlert size={23} /></span><p>{lesson.media.fallbackMessage}</p><small>Playback unavailable · study can continue deliberately</small></div>}
       {mediaError ? <div className="video-error-action"><p>The local video may be offline, unsupported, or temporarily unavailable. Retry it, or deliberately continue this introduction without media.</p><div className="inline-actions"><button className="secondary-button" onClick={() => { setMediaError(false); setRetryKey((value) => value + 1); }}>Retry video <RefreshCw size={17} /></button><button className="secondary-button" onClick={() => completeVideo(true)}>Continue without video <ArrowRight size={17} /></button></div></div>
         : <div className="watch-note"><Play size={17} /><span>Watch the complete clip once. Cue cards open when playback ends.</span></div>}
@@ -186,7 +185,6 @@ function MatchingQuestion({ entry, question }: { entry: SessionQueueEntry; quest
 function DraftPreview({ lesson }: { lesson: VideoLesson }) {
   const [mediaError, setMediaError] = useState(false);
   const [retryKey, setRetryKey] = useState(0);
-  const settings = useStudyStore((state) => state.settings);
   const intake = lesson.draftTranscript;
 
   return <div className="page study-page draft-preview-page">
@@ -199,7 +197,7 @@ function DraftPreview({ lesson }: { lesson: VideoLesson }) {
       <div className="draft-video-column">
         {!mediaError ? <video key={retryKey} className="lesson-video portrait-video draft-video" controls playsInline preload="metadata" poster={assetPath(lesson.media.posterSrc)} onError={() => setMediaError(true)}>
           <source src={assetPath(lesson.media.videoSrc)} type="video/mp4" />
-          {lesson.media.captionsSrc && <track default={settings.captionsByDefault} kind="captions" src={assetPath(lesson.media.captionsSrc)} srcLang={intake?.detectedLanguage ?? "th"} label="Machine draft captions · unverified" />}
+          {lesson.media.captionsSrc && <track kind="captions" src={assetPath(lesson.media.captionsSrc)} srcLang={intake?.detectedLanguage ?? "th"} label="Machine draft captions · unverified" />}
         </video> : <div className="media-fallback media-failed portrait-fallback" role="alert"><div className="frame-corners" /><span className="fallback-play"><CircleAlert size={23} /></span><p>{lesson.media.fallbackMessage}</p><small>Local draft media unavailable</small></div>}
         <div className="draft-media-meta"><span>{formatDuration(lesson.media.durationSeconds)} · 720 × 1280 portrait MP4</span><span>{lesson.media.captionsStatus === "machine-draft" ? "Machine captions available" : "No caption intake"}</span></div>
         {mediaError && <button className="secondary-button" onClick={() => { setMediaError(false); setRetryKey((value) => value + 1); }}>Retry local video <RefreshCw size={17} /></button>}
@@ -222,7 +220,7 @@ function Replay({ lesson }: { lesson: VideoLesson }) {
   const settings = useStudyStore((state) => state.settings);
   const cards = cueCards.filter((card) => lesson.cueCardIds.includes(card.id));
   return <div className="page study-page"><header className="study-header"><div><p className="eyebrow">Disposable replay · no progress recorded</p><h1>{lesson.title}</h1><p>Video and cue cards only. Review dates, attempts, mastery, and consistency will not change.</p></div><AppLink href="/library/" className="secondary-button">Return to Library</AppLink></header>
-    {stage === "video" ? <section>{mediaError ? <div className="media-fallback media-failed portrait-fallback replay-video" role="alert"><CircleAlert size={24} /><p>{lesson.media.fallbackMessage}</p><small>Replay media unavailable</small></div> : <video className="lesson-video portrait-video replay-video" controls playsInline preload="metadata" poster={assetPath(lesson.media.posterSrc)} onError={() => setMediaError(true)}><source src={assetPath(lesson.media.videoSrc)} type="video/mp4" />{lesson.media.captionsSrc && <track default={settings.captionsByDefault} kind="captions" src={assetPath(lesson.media.captionsSrc)} srcLang="th" label="Reviewed Thai and English" />}</video>}<div className="page-actions"><button className="primary-button" onClick={() => setStage("cards")}>Replay cue cards <ArrowRight size={17} /></button></div></section>
+    {stage === "video" ? <section>{mediaError ? <div className="media-fallback media-failed portrait-fallback replay-video" role="alert"><CircleAlert size={24} /><p>{lesson.media.fallbackMessage}</p><small>Replay media unavailable</small></div> : <video className="lesson-video portrait-video replay-video" controls playsInline preload="metadata" poster={assetPath(lesson.media.posterSrc)} onError={() => setMediaError(true)}><source src={assetPath(lesson.media.videoSrc)} type="video/mp4" />{lesson.media.captionsSrc && <track kind="captions" src={assetPath(lesson.media.captionsSrc)} srcLang="th" label="Reviewed Thai and English" />}</video>}<div className="page-actions"><button className="primary-button" onClick={() => setStage("cards")}>Replay cue cards <ArrowRight size={17} /></button></div></section>
       : <section><div className="cue-grid">{cards.map((card, index) => <article className="cue-card tactile-card" key={card.id}><span className="card-index">{String(index + 1).padStart(2, "0")}</span><PhraseAudioButton card={card} compact />{settings.showThaiScript && <p className="thai cue-thai">{withPreferredParticle(card.thai, settings.politeParticle)}</p>}{settings.showRomanization && <p className="romanization">{withPreferredParticle(card.romanization, settings.politeParticle)}</p>}<h3>{card.naturalMeaning}</h3><p>{card.usage}</p></article>)}</div></section>}
   </div>;
 }

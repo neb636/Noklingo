@@ -24,7 +24,7 @@ export const defaultSnapshot: AppSnapshot = {
   settings: {
     audioEnabled: true, volume: 0.75, speechRate: 0.85, theme: "system",
     showRomanization: true, showThaiScript: true, thaiSize: "standard",
-    reduceMotion: false, captionsByDefault: true, politeParticle: "both",
+    reduceMotion: false, politeParticle: "both",
   },
   streak: { currentDays: 0, longestDays: 0 },
 };
