@@ -6,6 +6,7 @@ import { Howl } from "howler";
 import type { CueCard } from "@/domain/schemas";
 import { assetPath } from "@/lib/asset-path";
 import { useStudyStore } from "@/state/study-store";
+import { withPreferredParticle } from "@/lib/language-display";
 
 export function PhraseAudioButton({ card, compact = false }: { card: CueCard; compact?: boolean }) {
   const [speaking, setSpeaking] = useState(false);
@@ -14,9 +15,11 @@ export function PhraseAudioButton({ card, compact = false }: { card: CueCard; co
   function speechFallback() {
     if (!("speechSynthesis" in window)) return setSpeaking(false);
     window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(card.thai.replace("…", ""));
+    const spokenThai = withPreferredParticle(card.thai, settings.politeParticle).replaceAll("…", "");
+    const utterance = new SpeechSynthesisUtterance(spokenThai);
     utterance.lang = "th-TH";
     utterance.rate = settings.speechRate;
+    utterance.volume = settings.volume;
     utterance.onend = () => setSpeaking(false);
     utterance.onerror = () => setSpeaking(false);
     window.speechSynthesis.speak(utterance);
@@ -28,7 +31,7 @@ export function PhraseAudioButton({ card, compact = false }: { card: CueCard; co
     if (!card.phraseAudioSrc) return speechFallback();
     const sound = new Howl({
       src: [assetPath(card.phraseAudioSrc)], html5: true,
-      rate: settings.speechRate,
+      rate: settings.speechRate, volume: settings.volume,
       onend: () => setSpeaking(false),
       onloaderror: () => speechFallback(),
       onplayerror: () => speechFallback(),
@@ -37,7 +40,7 @@ export function PhraseAudioButton({ card, compact = false }: { card: CueCard; co
   }
 
   return (
-    <button className={compact ? "icon-button" : "audio-button"} onClick={play} disabled={!settings.audioEnabled} aria-label={`Hear ${card.thai}`}>
+    <button className={compact ? "icon-button" : "audio-button"} onClick={play} disabled={!settings.audioEnabled} aria-label={`Hear ${withPreferredParticle(card.thai, settings.politeParticle)}`}>
       <Volume2 size={compact ? 18 : 17} aria-hidden="true" />
       {!compact && <span>{speaking ? "Speaking…" : "Hear phrase"}</span>}
     </button>

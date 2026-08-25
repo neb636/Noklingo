@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { Download, HardDrive, Moon, RotateCcw, SunMedium, Upload, Volume2 } from "lucide-react";
+import { Download, HardDrive, Languages, Moon, RotateCcw, SunMedium, Upload, Volume2 } from "lucide-react";
 import { AppSnapshotSchema } from "@/domain/schemas";
 import { clearLocalData, writeSnapshot } from "@/data/db";
 import { PageHeader } from "@/components/PageHeader";
@@ -21,7 +21,7 @@ export default function SettingsPage() {
     const url = URL.createObjectURL(new Blob([data], { type: "application/json" }));
     const link = document.createElement("a");
     link.href = url;
-    link.download = `thai-study-${new Date().toISOString().slice(0, 10)}.json`;
+    link.download = `thai-study-v2-${new Date().toISOString().slice(0, 10)}.json`;
     link.click();
     URL.revokeObjectURL(url);
     setMessage("Local study data exported.");
@@ -35,7 +35,7 @@ export default function SettingsPage() {
       replaceSnapshot(parsed);
       setMessage("Import complete. Your local record has been replaced.");
     } catch {
-      setMessage("That file is not a valid Thai Study export.");
+      setMessage("That file is not a current Thai Study v2 export. Nothing was changed.");
     }
     if (inputRef.current) inputRef.current.value = "";
   }
@@ -58,12 +58,33 @@ export default function SettingsPage() {
           <SettingRow title="Phrase audio" description="Play local recordings when available, with browser speech as a fallback.">
             <Switch checked={settings.audioEnabled} onChange={(value) => updateSettings({ audioEnabled: value })} label="Phrase audio" />
           </SettingRow>
+          <SettingRow title="Volume" description={`${Math.round(settings.volume * 100)}% for phrase audio and speech fallback`}>
+            <input aria-label="Phrase audio volume" type="range" min="0" max="1" step="0.05" value={settings.volume} onChange={(event) => updateSettings({ volume: Number(event.target.value) })} />
+          </SettingRow>
           <SettingRow title="Speech fallback speed" description={`${settings.speechRate.toFixed(2)}× playback rate`}>
             <input aria-label="Speech fallback speed" type="range" min="0.5" max="1.25" step="0.05" value={settings.speechRate} onChange={(event) => updateSettings({ speechRate: Number(event.target.value) })} />
           </SettingRow>
           <SettingRow title="Captions on first watch" description="Show the lesson caption track when video begins.">
             <Switch checked={settings.captionsByDefault} onChange={(value) => updateSettings({ captionsByDefault: value })} label="Captions on first watch" />
           </SettingRow>
+        </section>
+
+        <section className="settings-section">
+          <div className="settings-title"><Languages size={20} /><div><p className="eyebrow">Language display</p><h2>Reading support</h2></div></div>
+          <SettingRow title="Thai script" description="Show Thai text in transcripts, cards, and answer choices.">
+            <Switch checked={settings.showThaiScript} onChange={(value) => updateSettings({ showThaiScript: value })} label="Thai script" />
+          </SettingRow>
+          <SettingRow title="Romanization" description="Show tone-marked romanization alongside Thai.">
+            <Switch checked={settings.showRomanization} onChange={(value) => updateSettings({ showRomanization: value })} label="Romanization" />
+          </SettingRow>
+          <SettingRow title="Preferred polite particle" description="Use your preferred ending in practice prompts where a choice is possible.">
+            <div className="segmented" aria-label="Preferred polite particle">
+              <button className={settings.politeParticle === "khráp" ? "selected" : ""} onClick={() => updateSettings({ politeParticle: "khráp" })}>ครับ</button>
+              <button className={settings.politeParticle === "khâ" ? "selected" : ""} onClick={() => updateSettings({ politeParticle: "khâ" })}>ค่ะ</button>
+              <button className={settings.politeParticle === "both" ? "selected" : ""} onClick={() => updateSettings({ politeParticle: "both" })}>Both</button>
+            </div>
+          </SettingRow>
+          <p className="setting-footnote">At least Thai script or romanization remains visible so study prompts never become blank.</p>
         </section>
 
         <section className="settings-section">

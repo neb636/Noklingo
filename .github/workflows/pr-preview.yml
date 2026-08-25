@@ -27,13 +27,12 @@ jobs:
       - run: npm ci
 
       - name: Validate learning engine and curriculum
-        run: npm run validate:curriculum && npm run typecheck && npm run lint && npm run test:engine
+        run: npm run validate:curriculum && npm run typecheck && npm run lint && npm run test
 
       - name: Build static canary
-        run: npm run build:pages
+        run: npm run build
         env:
-          ASSET_PREFIX: /${{ github.event.repository.name }}/pr-preview/pr-${{ github.event.number }}
-          NEXT_PUBLIC_SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-preview/pr-${{ github.event.number }}/
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}/pr-preview/pr-${{ github.event.number }}
 
       - name: Publish canary
         uses: peaceiris/actions-gh-pages@v4

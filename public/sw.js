@@ -1,5 +1,5 @@
 /* Thai Study: prefix-safe, offline-first service worker. */
-const VERSION = "thai-study-v1";
+const VERSION = "thai-study-v2";
 const SHELL_CACHE = `${VERSION}-shell`;
 const ASSET_CACHE = `${VERSION}-assets`;
 

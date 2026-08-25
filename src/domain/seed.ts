@@ -4,6 +4,7 @@ import {
   type CueCard,
   type VideoLesson,
 } from "./schemas";
+import reviewedPackages from "@/content/lesson-packages.json";
 
 // DRAFT LANGUAGE CONTENT — requires review by a qualified Thai language editor.
 const draftLessons: VideoLesson[] = [
@@ -14,6 +15,11 @@ const draftLessons: VideoLesson[] = [
     objective: "Ask for one drink and respond naturally to a short follow-up.",
     description: "A quiet counter exchange with three high-frequency phrases.",
     contentStatus: "draft",
+    source: {
+      label: "Learn Thai IRL · Instagram Reel",
+      url: "https://www.instagram.com/learnthai_irl/reel/Db-0OFPSuuJ/",
+      permissionStatus: "authorized",
+    },
     media: {
       videoSrc: "/lessons/coffee-order/intro.mp4",
       posterSrc: "/lessons/coffee-order/poster.jpg",
@@ -57,24 +63,41 @@ const draftLessons: VideoLesson[] = [
         verificationStatus: "draft",
       },
     ],
-    cueCardIds: ["request-one", "sweet-question", "not-sweet"],
+    cueCardIds: ["request-one", "iced-coffee", "one-glass", "sweet-question", "not-sweet"],
     quizBank: [
       {
         id: "coffee-q1",
         itemId: "request-one",
+        interactionType: "meaning-recognition",
         prompt: "Which phrase asks for one iced coffee?",
         choices: ["ขอกาแฟเย็นหนึ่งแก้วครับ", "หวานไหมคะ", "ไม่หวานครับ"],
         correctIndex: 0,
         explanation: "ขอ introduces the request; หนึ่งแก้ว gives the quantity and classifier.",
+        scored: true,
+        verificationStatus: "draft",
       },
       {
         id: "coffee-q2",
         itemId: "not-sweet",
+        interactionType: "situation-response",
         prompt: "The server asks หวานไหมคะ. Choose a concise reply for ‘not sweet.’",
         choices: ["หวานไหมคะ", "ไม่หวานครับ", "หนึ่งแก้วครับ"],
         correctIndex: 1,
         explanation: "ไม่ negates หวาน, giving ‘not sweet.’",
+        scored: true,
+        verificationStatus: "draft",
       },
+      { id: "coffee-q3", itemId: "iced-coffee", interactionType: "meaning-recognition", prompt: "Which expression means ‘iced coffee’?", choices: ["กาแฟเย็น", "หนึ่งแก้ว", "ไม่หวาน"], correctIndex: 0, explanation: "กาแฟ is coffee and เย็น indicates iced or cold here.", scored: true, verificationStatus: "draft" },
+      { id: "coffee-q4", itemId: "one-glass", interactionType: "meaning-recognition", prompt: "Choose the quantity phrase for one glass or cup.", choices: ["หนึ่งแก้ว", "กาแฟเย็น", "หวานไหม"], correctIndex: 0, explanation: "หนึ่ง is one and แก้ว is the classifier used for a glass or cup.", scored: true, verificationStatus: "draft" },
+      { id: "coffee-q5", itemId: "sweet-question", interactionType: "situation-response", prompt: "A server wants to ask whether you want it sweet. What do they say?", choices: ["ไม่หวานครับ", "หวานไหมคะ", "ขอหนึ่งแก้ว"], correctIndex: 1, explanation: "หวานไหม forms a yes/no question about sweetness.", scored: true, verificationStatus: "draft" },
+      { id: "coffee-q6", itemId: "request-one", interactionType: "phrase-construction", prompt: "Build the polite request frame.", constructionTokens: ["ขอ", "กาแฟเย็น", "หนึ่งแก้ว", "ครับ"], correctConstruction: ["ขอ", "กาแฟเย็น", "หนึ่งแก้ว", "ครับ"], explanation: "The request begins with ขอ, followed by the item, quantity, and polite particle.", scored: true, verificationStatus: "draft" },
+      { id: "coffee-q7", itemId: "not-sweet", interactionType: "phrase-construction", prompt: "Build ‘Not sweet, please.’", constructionTokens: ["ไม่", "หวาน", "ครับ"], correctConstruction: ["ไม่", "หวาน", "ครับ"], explanation: "ไม่ comes before the adjective it negates.", scored: true, verificationStatus: "draft" },
+      { id: "coffee-q8", itemId: "iced-coffee", interactionType: "listening", prompt: "Listen, then choose the phrase you heard.", choices: ["กาแฟเย็น", "กาแฟร้อน", "ไม่หวาน"], correctIndex: 0, explanation: "The target phrase is กาแฟเย็น, iced coffee.", scored: true, verificationStatus: "draft" },
+      { id: "coffee-q9", itemId: "one-glass", interactionType: "situation-response", prompt: "You are clarifying that you want one cup. Which fragment fits?", choices: ["หนึ่งแก้ว", "หวานไหม", "กาแฟเย็น"], correctIndex: 0, explanation: "หนึ่งแก้ว supplies the number and classifier.", scored: true, verificationStatus: "draft" },
+      { id: "coffee-q10", itemId: "sweet-question", interactionType: "meaning-recognition", prompt: "What is the natural meaning of หวานไหมคะ?", choices: ["Would you like it sweet?", "Is it iced?", "One cup, please."], correctIndex: 0, explanation: "ไหม turns the sweetness prompt into a yes/no question.", scored: true, verificationStatus: "draft" },
+      { id: "coffee-q11", itemId: "request-one", interactionType: "situation-response", prompt: "You have reached the counter and want to order politely. Choose the best opening.", choices: ["ขอกาแฟเย็นหนึ่งแก้วครับ", "หวานไหมคะ", "ไม่หวาน"], correctIndex: 0, explanation: "ขอ is the natural request opening in this draft exchange.", scored: true, verificationStatus: "draft" },
+      { id: "coffee-q12", itemId: "not-sweet", interactionType: "meaning-recognition", prompt: "Which phrase states a preference for no sweetness?", choices: ["หวานไหมคะ", "ไม่หวานครับ", "กาแฟเย็น"], correctIndex: 1, explanation: "ไม่หวาน means not sweet.", scored: true, verificationStatus: "draft" },
+      { id: "coffee-speak", itemId: "request-one", interactionType: "self-guided-speaking", prompt: "Say the complete order aloud at a comfortable pace.", explanation: "Speaking is self-guided and never counted toward mastery.", scored: false, verificationStatus: "draft" },
     ],
   },
   {
@@ -84,6 +107,7 @@ const draftLessons: VideoLesson[] = [
     objective: "Ask what something costs and catch the number in reply.",
     description: "A short exchange at a neighborhood market stall.",
     contentStatus: "draft",
+    source: undefined,
     media: {
       videoSrc: "/lessons/market-price/intro.mp4",
       posterSrc: "/lessons/market-price/poster.jpg",
@@ -103,6 +127,7 @@ const draftLessons: VideoLesson[] = [
     objective: "Name a destination and confirm that the driver understood.",
     description: "The first seconds of a practical ride conversation.",
     contentStatus: "draft",
+    source: undefined,
     media: {
       videoSrc: "/lessons/ride-destination/intro.mp4",
       posterSrc: "/lessons/ride-destination/poster.jpg",
@@ -129,6 +154,28 @@ const draftCueCards: CueCard[] = [
     verificationStatus: "draft",
   },
   {
+    id: "iced-coffee",
+    lessonId: "coffee-order",
+    thai: "กาแฟเย็น",
+    romanization: "gaa-fɛɛ yen",
+    naturalMeaning: "iced coffee",
+    usage: "The drink name used inside the longer request.",
+    literalNote: "coffee + cool/cold",
+    transcriptReferences: ["coffee-1"],
+    verificationStatus: "draft",
+  },
+  {
+    id: "one-glass",
+    lessonId: "coffee-order",
+    thai: "หนึ่งแก้ว",
+    romanization: "nʉ̀ng gɛ̂ɛo",
+    naturalMeaning: "one glass / one cup",
+    usage: "A number followed by the classifier commonly used for drinks.",
+    culturalNote: "Thai counting expressions normally pair a number with an appropriate classifier.",
+    transcriptReferences: ["coffee-1"],
+    verificationStatus: "draft",
+  },
+  {
     id: "sweet-question",
     lessonId: "coffee-order",
     thai: "หวานไหมคะ",
@@ -150,6 +197,14 @@ const draftCueCards: CueCard[] = [
   },
 ];
 
-export const lessons = VideoLessonSchema.array().parse(draftLessons);
-export const cueCards = CueCardSchema.array().parse(draftCueCards);
+const mergedLessons = new Map(draftLessons.map((lesson) => [lesson.id, lesson]));
+for (const lesson of VideoLessonSchema.array().parse(reviewedPackages.lessons)) mergedLessons.set(lesson.id, lesson);
+const mergedCards = new Map(draftCueCards.map((card) => [card.id, card]));
+for (const card of CueCardSchema.array().parse(reviewedPackages.cueCards)) mergedCards.set(card.id, card);
+
+export const lessons = [...mergedLessons.values()].sort((a, b) => a.order - b.order);
+export const cueCards = [...mergedCards.values()];
 export const firstLesson = lessons[0];
+export const studyLessons = lessons.filter((lesson) =>
+  lesson.cueCardIds.length >= 5 && lesson.quizBank.filter((question) => question.scored).length >= 10,
+);

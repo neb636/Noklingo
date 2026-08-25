@@ -10,7 +10,11 @@
     "start": "vinext start",
     "typecheck": "tsc --noEmit",
     "lint": "eslint . --max-warnings=0",
-    "check": "npm run typecheck && npm run lint && npm run build"
+    "test": "vitest run",
+    "test:engine": "vitest run tests/engine.test.ts",
+    "validate:curriculum": "node --import tsx scripts/validate-curriculum.ts",
+    "lesson:import": "node --import tsx scripts/import-lesson.ts",
+    "check": "npm run validate:curriculum && npm run typecheck && npm run lint && npm run test && npm run build"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^6.0.1",
@@ -27,6 +31,8 @@
     "zustand": "^5.0.8"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.2",
     "@types/howler": "^2.2.12",
     "@types/node": "^24.3.0",
     "@types/react": "^19.1.12",
@@ -34,7 +40,11 @@
     "@vitejs/plugin-rsc": "^0.5.3",
     "eslint": "^9.34.0",
     "eslint-config-next": "^16.1.6",
+    "fake-indexeddb": "^6.2.5",
+    "jsdom": "^30.0.1",
+    "tsx": "^4.23.12",
     "typescript": "^5.9.2",
-    "vite": "^8.0.0"
+    "vite": "^8.0.0",
+    "vitest": "^4.1.11"
   }
 }
