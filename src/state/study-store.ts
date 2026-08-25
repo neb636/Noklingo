@@ -45,6 +45,7 @@ interface StudyState extends AppSnapshot {
   answerChoice: (displayedChoiceIndex: number) => void;
   answerConstruction: (tokens: string[]) => void;
   answerMatching: (pairs: Array<{ left: string; right: string }>) => void;
+  continueAfterFeedback: () => void;
   finishSession: () => void;
   abandonSession: () => void;
   clearLastResult: () => void;
@@ -64,7 +65,13 @@ function currentEntry(session: ActiveStudySession) {
 function addAnswer(state: StudyState, answer: SessionAnswer): Partial<StudyState> {
   const session = state.activeSession;
   if (!session || answerFor(session, answer.queueId)) return {};
-  return { activeSession: { ...session, answers: [...session.answers, answer], questionIndex: session.questionIndex + 1 } };
+  const teachImmediately = session.mode === "introduction" || session.mode === "standalone-review";
+  return { activeSession: {
+    ...session,
+    answers: [...session.answers, answer],
+    questionIndex: teachImmediately ? session.questionIndex : session.questionIndex + 1,
+    feedbackQueueId: teachImmediately ? answer.queueId : undefined,
+  } };
 }
 
 function attemptId(sessionId: string, queueId: string): string {
@@ -141,9 +148,14 @@ export const useStudyStore = create<StudyState>((set) => ({
     if (!session || !entry) return state;
     return addAnswer(state, { queueId: entry.queueId, matchedPairs: pairs, correct: gradeMatching(entry, pairs), answeredAt: new Date().toISOString() });
   }),
+  continueAfterFeedback: () => set((state) => {
+    const session = state.activeSession;
+    if (!session?.feedbackQueueId || session.queue[session.questionIndex]?.queueId !== session.feedbackQueueId) return state;
+    return { activeSession: { ...session, feedbackQueueId: undefined, questionIndex: session.questionIndex + 1 } };
+  }),
   finishSession: () => set((state) => {
     const session = state.activeSession;
-    if (!session || session.answers.length !== session.queue.length) return state;
+    if (!session || session.feedbackQueueId || session.questionIndex !== session.queue.length || session.answers.length !== session.queue.length) return state;
     const now = new Date();
     const nowIso = now.toISOString();
     const today = localDateKey(now);
@@ -152,7 +164,12 @@ export const useStudyStore = create<StudyState>((set) => ({
     const reviewEntries = session.queue.filter((entry) => entry.source === "review");
     const activeCorrect = activeEntries.filter((entry) => answerMap.get(entry.queueId)?.correct).length;
     const reviewCorrect = reviewEntries.filter((entry) => answerMap.get(entry.queueId)?.correct).length;
-    const passed = session.mode === "mastery" ? passesMastery(activeCorrect, activeEntries.length) : undefined;
+    const itemSuccess = session.lessonId
+      ? (lessons.find((lesson) => lesson.id === session.lessonId)?.cueCardIds ?? []).map((itemId) => activeEntries
+        .filter((entry) => entry.itemId === itemId)
+        .some((entry) => answerMap.get(entry.queueId)?.correct === true))
+      : [];
+    const passed = session.mode === "mastery" ? passesMastery(activeCorrect, activeEntries.length, itemSuccess) : undefined;
     const completed: CompletedStudySession = {
       ...session, localDate: today, stage: "results", completedAt: nowIso,
       activeCorrect, activeTotal: activeEntries.length, reviewCorrect, reviewTotal: reviewEntries.length, passed,

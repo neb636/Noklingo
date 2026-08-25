@@ -12,6 +12,7 @@ import { writeSnapshot } from "@/data/db";
 import { assetPath } from "@/lib/asset-path";
 import { useClientReady } from "@/lib/use-client-ready";
 import { withPreferredParticle } from "@/lib/language-display";
+import { answerFor } from "@/engine/learning-engine";
 import { activeCard, activeQuestion, snapshotFromState, useStudyStore } from "@/state/study-store";
 
 export default function StudyPage() {
@@ -142,8 +143,20 @@ function RetrievalStage({ card, session }: { card: (typeof cueCards)[number]; se
 
 function QuizStage({ session, entry, question }: { session: ActiveStudySession; entry: SessionQueueEntry; question?: QuizQuestion }) {
   if (!question) return <StudyEmpty title="This queue is stale" body="The bundled curriculum no longer contains one of its questions. Return to Today to rebuild it." />;
-  const delayed = session.mode !== "introduction";
-  return <section className="quiz-section"><div className="section-lead"><p className="eyebrow">{session.mode === "introduction" ? "Diagnostic" : entry.source === "review" ? "Older review" : "Active lesson"} · {session.questionIndex + 1} of {session.queue.length}</p><h2>{delayed ? "Answer the complete queue" : "A short first-pass check"}</h2><p>{delayed ? "Corrections stay hidden until every answer is complete." : "This helps shape tomorrow’s retrieval; it cannot grant mastery today."}</p></div><QuestionCard key={entry.queueId} entry={entry} question={question} /></section>;
+  const delayed = session.mode === "mastery";
+  const answer = answerFor(session, entry.queueId);
+  return <section className="quiz-section"><div className="section-lead"><p className="eyebrow">{session.mode === "introduction" ? "Diagnostic" : entry.source === "review" ? "Older review" : "Active lesson"} · {session.questionIndex + 1} of {session.queue.length}</p><h2>{delayed ? "Answer the complete queue" : session.mode === "introduction" ? "A short first-pass check" : "Recall, correct, continue"}</h2><p>{delayed ? "Corrections stay hidden until every answer is complete." : session.mode === "introduction" ? "Each answer teaches immediately; mastery still begins tomorrow." : "Use the correction now, before this phrase is scheduled again."}</p></div>{session.feedbackQueueId === entry.queueId && answer ? <AnswerFeedback entry={entry} question={question} correct={answer.correct} /> : <QuestionCard key={entry.queueId} entry={entry} question={question} />}</section>;
+}
+
+function AnswerFeedback({ entry, question, correct }: { entry: SessionQueueEntry; question: QuizQuestion; correct: boolean }) {
+  const card = cueCards.find((item) => item.id === entry.itemId);
+  const continueAfterFeedback = useStudyStore((state) => state.continueAfterFeedback);
+  return <article className={`quiz-card answer-feedback ${correct ? "correct" : "incorrect"}`} role="status">
+    <p className="eyebrow">{correct ? "Recalled accurately" : "Keep this correction"}</p>
+    {card && <><p className="thai correction-answer" lang="th">{card.thai}</p><p className="romanization">{card.romanization}</p><h3>{card.naturalMeaning}</h3><PhraseAudioButton card={card} /></>}
+    <p>{question.explanation}</p>
+    <button className="primary-button" onClick={continueAfterFeedback}>Continue <ArrowRight size={17} /></button>
+  </article>;
 }
 
 function QuestionCard({ entry, question }: { entry: SessionQueueEntry; question: QuizQuestion }) {
@@ -187,7 +200,7 @@ function DraftPreview({ lesson }: { lesson: VideoLesson }) {
       <div><p className="eyebrow">Editorial draft · lesson plan {String(lesson.order).padStart(2, "0")}</p><h1>{lesson.title}</h1><p>{lesson.objective.replace(/^Draft plan —\s*/, "")}</p></div>
       <AppLink href="/library/" className="secondary-button">Return to Library</AppLink>
     </header>
-    <div className="draft-integrity-note" role="note"><FileWarning size={20} aria-hidden="true" /><div><b>Local media, not verified curriculum</b><p>Watch the short clip, then review the screenshot-derived phrase cards. This preview records no progress and has no audio or scored questions.</p></div></div>
+    <div className="draft-integrity-note" role="note"><FileWarning size={20} aria-hidden="true" /><div><b>Local media, not verified curriculum</b><p>Watch the short clip, then review the screenshot-derived phrase cards. This preview records no progress or scored questions; locally generated instructor pronunciation is available only where the matcher is confident.</p></div></div>
     {stage === "video" ? <section className="draft-video-stage">
       <div className="draft-video-column">
         {!mediaError ? <video key={retryKey} className="lesson-video portrait-video draft-video" controls playsInline preload="metadata" poster={assetPath(lesson.media.posterSrc)} onEnded={() => setWatchComplete(true)} onError={() => setMediaError(true)}>
@@ -199,7 +212,7 @@ function DraftPreview({ lesson }: { lesson: VideoLesson }) {
         {lesson.source && <a className="source-note draft-source-note" href={lesson.source.url} target="_blank" rel="noreferrer">Source attribution only · not verification <ExternalLink size={12} /></a>}
       </div>
     </section> : card ? <section className="single-card-stage draft-card-stage"><div className="section-lead"><p className="eyebrow">Draft cue card {cardIndex + 1} of {cards.length}</p><h2>Recall the phrase from the clip</h2><p>These fields were transcribed from the on-screen lesson text.</p></div>
-      <article className="cue-card tactile-card focused-card"><span className="draft-label">screenshot-derived · draft</span>{settings.showThaiScript && <p className="thai cue-thai" lang="th">{withPreferredParticle(card.thai, settings.politeParticle)}</p>}{settings.showRomanization && <p className="romanization">{withPreferredParticle(card.romanization, settings.politeParticle)}</p>}<h3>{card.naturalMeaning}</h3></article>
+      <article className="cue-card tactile-card focused-card"><span className="draft-label">screenshot-derived · draft</span><PhraseAudioButton card={card} compact />{settings.showThaiScript && <p className="thai cue-thai" lang="th">{withPreferredParticle(card.thai, settings.politeParticle)}</p>}{settings.showRomanization && <p className="romanization">{withPreferredParticle(card.romanization, settings.politeParticle)}</p>}<h3>{card.naturalMeaning}</h3></article>
       <footer className="study-footer"><button className="secondary-button" onClick={() => setStage("video")}>Watch again</button><span>{cardIndex + 1} of {cards.length}</span><button className="primary-button" onClick={() => setCardIndex((value) => value === cards.length - 1 ? 0 : value + 1)}>{cardIndex === cards.length - 1 ? "Start cards again" : "Next cue card"}<ArrowRight size={18} /></button></footer>
     </section> : <StudyEmpty title="No cue cards yet" body="This draft does not have screenshot-derived lesson text." />}
   </div>;

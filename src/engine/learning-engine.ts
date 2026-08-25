@@ -1,4 +1,9 @@
 import { cueCards, lessons, studyLessons } from "@/domain/seed";
+import {
+  diagnosticQuestionCount,
+  masteryQuestionCount,
+  passesAdaptiveMastery,
+} from "@/domain/lesson-sizing";
 import type {
   ActiveStudySession, AppSnapshot, ItemReviewState, LessonProgress, QuizQuestion,
   SessionAnswer, SessionMode, SessionQueueEntry, StreakState, VideoLesson,
@@ -6,10 +11,10 @@ import type {
 import { addLocalDays, compareLocalDates, localDaysBetween } from "./local-date";
 import { deterministicShuffle } from "./deterministic";
 
-export const CURRICULUM_VERSION = "2026-08-25-screenshot-cards-v3";
+export const CURRICULUM_VERSION = "2026-08-25-adaptive-lessons-v4";
 
-export function passesMastery(activeCorrect: number, activeTotal: number): boolean {
-  return activeTotal === 10 && activeCorrect >= 9;
+export function passesMastery(activeCorrect: number, activeTotal: number, itemSuccess: readonly boolean[] = [true]): boolean {
+  return passesAdaptiveMastery(activeCorrect, activeTotal, itemSuccess);
 }
 
 export type TodayAction =
@@ -110,11 +115,11 @@ export function buildSession(params: {
   let stage: ActiveStudySession["stage"];
 
   if (params.mode === "introduction" && params.lesson) {
-    queue = buildActiveQuestionQueue(params.lesson, Math.min(5, params.lesson.quizBank.length), seed);
+    queue = buildActiveQuestionQueue(params.lesson, diagnosticQuestionCount(params.lesson), seed);
     cardOrder = params.lesson.cueCardIds;
     stage = "video";
   } else if (params.mode === "mastery" && params.lesson) {
-    const active = buildActiveQuestionQueue(params.lesson, 10, seed);
+    const active = buildActiveQuestionQueue(params.lesson, masteryQuestionCount(params.lesson), seed);
     const review = dueReviewStates(params.snapshot, params.today)
       .filter((state) => cueCards.find((card) => card.id === state.itemId)?.lessonId !== params.lesson?.id)
       .slice(0, 3).flatMap((state) => {

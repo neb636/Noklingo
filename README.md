@@ -30,14 +30,19 @@ The draft inventory lives in `src/content/draft-reels.json` and its cards in
 `src/content/lesson-packages.json`. A reviewed lesson with the same stable ID
 replaces its draft plan after it passes the publication gate.
 
+Draft cue cards can additionally use locally generated excerpts of the original
+instructor audio. This remains an authoring step: FFmpeg and a local Whisper
+model generate normal `.m4a` assets, while the shipped application only plays
+the result. See [curriculum authoring](docs/CURRICULUM_AUTHORING.md#generate-instructor-pronunciation-locally).
+
 ## Publication gate
 
 A release-ready `VideoLesson` must have all of the following:
 
 - an authorized same-origin local MP4 and poster with confirmed duration;
-- 5–10 verified cue cards with usage text and bundled local phrase audio;
+- 1–10 verified cue cards with usage text and bundled local phrase audio;
 - at least two valid scored question variants for every cue-card item and at
-  least ten valid scored questions overall;
+  least four valid scored questions overall;
 - scored coverage of listening, situation/response, meaning recognition, and
   phrase recall through phrase construction;
 - explicit bundled local audio for every listening question.
@@ -54,13 +59,15 @@ contract and review workflow.
 Once a lesson passes that gate:
 
 - A first introduction requires completed local video playback, or an explicit
-  media-error bypass, before 5–10 cue cards and a short diagnostic.
+  media-error bypass, before 1–10 cue cards and one immediate-feedback
+  diagnostic question per phrase.
 - The diagnostic never grants mastery. A mastery check first becomes available
   on the next local calendar day.
 - A mastery session begins with meaning/context retrieval cards and ends with
-  ten active-lesson questions. Nine correct answers are required.
+  an adaptive 4–10 question check. Every phrase must be recalled and no more
+  than one answer may be missed.
 - Up to three due questions from older mastered lessons may be interleaved.
-  They do not affect the ten-question gate or relock a lesson.
+  They do not affect the adaptive mastery gate or relock a lesson.
 - Review intervals follow roughly 2, 5, 12, and 30 days, then adapt. A missed
   review returns tomorrow.
 - Video, cue-card, retrieval, and quiz progress is durable. The exact question

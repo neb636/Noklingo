@@ -1,0 +1,9 @@
+{
+  "model": "large-v3",
+  "paddingBeforeMs": 150,
+  "paddingAfterMs": 250,
+  "minimumClipDurationMs": 450,
+  "maximumClipDurationMs": 5500,
+  "confidenceThreshold": 0.84,
+  "ambiguityMargin": 0.08
+}

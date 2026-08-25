@@ -5,6 +5,7 @@ import { LoaderCircle, RotateCcw, Volume2, VolumeX } from "lucide-react";
 import { Howl } from "howler";
 import type { CueCard } from "@/domain/schemas";
 import { assetPath } from "@/lib/asset-path";
+import { pronunciationAudioSrc } from "@/lib/pronunciation-audio";
 import { useStudyStore } from "@/state/study-store";
 import { withPreferredParticle } from "@/lib/language-display";
 
@@ -92,7 +93,7 @@ export function PhraseAudioButton({ card, compact = false }: { card: CueCard; co
   const particle = useStudyStore((state) => state.settings.politeParticle);
   return (
     <LocalAudioButton
-      src={card.phraseAudioSrc}
+      src={pronunciationAudioSrc(card)}
       label={withPreferredParticle(card.thai, particle)}
       compact={compact}
     />

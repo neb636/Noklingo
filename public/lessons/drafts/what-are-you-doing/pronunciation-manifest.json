@@ -1,0 +1,189 @@
+{
+  "lessonId": "what-are-you-doing",
+  "sourceVideo": "/lessons/drafts/what-are-you-doing/intro.mp4",
+  "sourceHash": "122ba024e22a4893251e3b20c0098db4c685a66ca8252c9e8fb881bb67daf931",
+  "model": "large-v3",
+  "generatedAt": "2026-08-25T22:29:28.418Z",
+  "clips": [
+    {
+      "cueCardId": "draft-what-are-you-doing-1",
+      "thai": "กำลังไป",
+      "audio": "/lessons/drafts/what-are-you-doing/audio/draft-what-are-you-doing-1.m4a",
+      "status": "matched",
+      "start": 3.89,
+      "end": 5.29,
+      "transcriptMatch": "กำลังไป",
+      "confidence": 0.9892950320243835,
+      "candidates": [
+        {
+          "start": 4.04,
+          "end": 5.04,
+          "transcriptMatch": "กำลังไป",
+          "confidence": 0.9892950320243835,
+          "exact": true,
+          "segmentIndex": 1
+        },
+        {
+          "start": 4.24,
+          "end": 5.04,
+          "transcriptMatch": "ำลังไป",
+          "confidence": 0.8701694203785488,
+          "exact": false,
+          "segmentIndex": 1
+        },
+        {
+          "start": 4.04,
+          "end": 6.98,
+          "transcriptMatch": "กำลังไป ทำ",
+          "confidence": 0.8651167916400092,
+          "exact": false,
+          "segmentIndex": 1
+        }
+      ]
+    },
+    {
+      "cueCardId": "draft-what-are-you-doing-2",
+      "thai": "ทำอะไรอยู่",
+      "status": "ambiguous",
+      "candidates": [
+        {
+          "start": 5.44,
+          "end": 8.58,
+          "transcriptMatch": " ทำอะไรอยู่",
+          "confidence": 0.9705077551305294,
+          "exact": true,
+          "segmentIndex": 1
+        },
+        {
+          "start": 4.8,
+          "end": 8.58,
+          "transcriptMatch": "ไป ทำอะไรอยู่",
+          "confidence": 0.8961041959524154,
+          "exact": false,
+          "segmentIndex": 1
+        },
+        {
+          "start": 5.44,
+          "end": 9.2,
+          "transcriptMatch": " ทำอะไรอยู่ อย",
+          "confidence": 0.8771180313825606,
+          "exact": false,
+          "segmentIndex": 1
+        },
+        {
+          "start": 4.8,
+          "end": 9.2,
+          "transcriptMatch": "ไป ทำอะไรอยู่ อย",
+          "confidence": 0.8173466860254606,
+          "exact": false,
+          "segmentIndex": 1
+        }
+      ],
+      "diagnostic": "The top candidate is too close to another occurrence."
+    },
+    {
+      "cueCardId": "draft-what-are-you-doing-3",
+      "thai": "อยู่ไหน",
+      "audio": "/lessons/drafts/what-are-you-doing/audio/draft-what-are-you-doing-3.m4a",
+      "status": "matched",
+      "start": 8.43,
+      "end": 11.61,
+      "transcriptMatch": " อยู่ไหน",
+      "confidence": 0.9752852892875672,
+      "candidates": [
+        {
+          "start": 8.58,
+          "end": 11.36,
+          "transcriptMatch": " อยู่ไหน",
+          "confidence": 0.9752852892875672,
+          "exact": true,
+          "segmentIndex": 1
+        },
+        {
+          "start": 7.98,
+          "end": 11.36,
+          "transcriptMatch": "ู่ อยู่ไหน",
+          "confidence": 0.8702101325988769,
+          "exact": false,
+          "segmentIndex": 1
+        },
+        {
+          "start": 8.58,
+          "end": 13.36,
+          "transcriptMatch": " อยู่ไหน จะ",
+          "confidence": 0.8667098126411438,
+          "exact": false,
+          "segmentIndex": 1
+        }
+      ]
+    },
+    {
+      "cueCardId": "draft-what-are-you-doing-4",
+      "thai": "จะไปไหน",
+      "audio": "/lessons/drafts/what-are-you-doing/audio/draft-what-are-you-doing-4.m4a",
+      "status": "matched",
+      "start": 11.33,
+      "end": 14.61,
+      "transcriptMatch": " จะไปไหน",
+      "confidence": 0.9953408902883529,
+      "candidates": [
+        {
+          "start": 11.48,
+          "end": 14.36,
+          "transcriptMatch": " จะไปไหน",
+          "confidence": 0.9953408902883529,
+          "exact": true,
+          "segmentIndex": 1
+        },
+        {
+          "start": 9.92,
+          "end": 14.36,
+          "transcriptMatch": "หน จะไปไหน",
+          "confidence": 0.8862390394210815,
+          "exact": false,
+          "segmentIndex": 1
+        },
+        {
+          "start": 11.48,
+          "end": 16.14,
+          "transcriptMatch": " จะไปไหน แล",
+          "confidence": 0.8807434048652649,
+          "exact": false,
+          "segmentIndex": 1
+        }
+      ]
+    },
+    {
+      "cueCardId": "draft-what-are-you-doing-5",
+      "thai": "แล้วเจอกัน",
+      "status": "ambiguous",
+      "candidates": [
+        {
+          "start": 14.36,
+          "end": 19.06,
+          "transcriptMatch": " แล้วเจอกัน",
+          "confidence": 0.9955266787324633,
+          "exact": true,
+          "segmentIndex": 1
+        },
+        {
+          "start": 13.8,
+          "end": 19.06,
+          "transcriptMatch": "หน แล้วเจอกัน",
+          "confidence": 0.9160793466866015,
+          "exact": false,
+          "segmentIndex": 1
+        },
+        {
+          "start": 14.36,
+          "end": 18.82,
+          "transcriptMatch": " แล้วเจอกั",
+          "confidence": 0.906784991145134,
+          "exact": false,
+          "segmentIndex": 1
+        }
+      ],
+      "diagnostic": "The top candidate is too close to another occurrence."
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "lessonId": "parting-safely",
+  "sourceVideo": "/lessons/drafts/parting-safely/intro.mp4",
+  "sourceHash": "3bb51dfe20f4b41cec8987fd3fd2145c9708523038aa9781ee61d9bc164d2b71",
+  "model": "large-v3",
+  "generatedAt": "2026-08-25T22:30:51.727Z",
+  "clips": [
+    {
+      "cueCardId": "draft-parting-safely-1",
+      "thai": "ไปละนะ",
+      "audio": "/lessons/drafts/parting-safely/audio/draft-parting-safely-1.m4a",
+      "status": "matched",
+      "start": 4.109999999999999,
+      "end": 5.43,
+      "transcriptMatch": " ไปละนะ",
+      "confidence": 0.9688450032472611,
+      "candidates": [
+        {
+          "start": 4.26,
+          "end": 5.18,
+          "transcriptMatch": " ไปละนะ",
+          "confidence": 0.9688450032472611,
+          "exact": true,
+          "segmentIndex": 0
+        },
+        {
+          "start": 3.32,
+          "end": 5.18,
+          "transcriptMatch": " instead ไปละนะ",
+          "confidence": 0.8486050092152188,
+          "exact": false,
+          "segmentIndex": 0
+        },
+        {
+          "start": 4.26,
+          "end": 5.54,
+          "transcriptMatch": " ไปละนะ I",
+          "confidence": 0.8329156750610898,
+          "exact": false,
+          "segmentIndex": 0
+        }
+      ]
+    },
+    {
+      "cueCardId": "draft-parting-safely-2",
+      "thai": "กลับดีๆนะ",
+      "audio": "/lessons/drafts/parting-safely/audio/draft-parting-safely-2.m4a",
+      "status": "matched",
+      "start": 8.73,
+      "end": 10.87,
+      "transcriptMatch": " กลับดีๆนะ",
+      "confidence": 0.9882175792753697,
+      "candidates": [
+        {
+          "start": 8.88,
+          "end": 10.62,
+          "transcriptMatch": " กลับดีๆนะ",
+          "confidence": 0.9882175792753697,
+          "exact": true,
+          "segmentIndex": 0
+        },
+        {
+          "start": 8.34,
+          "end": 10.62,
+          "transcriptMatch": " safe กลับดีๆนะ",
+          "confidence": 0.9005093136628469,
+          "exact": false,
+          "segmentIndex": 0
+        },
+        {
+          "start": 8.88,
+          "end": 11.24,
+          "transcriptMatch": " กลับดีๆนะ Get",
+          "confidence": 0.9001444903214773,
+          "exact": false,
+          "segmentIndex": 0
+        },
+        {
+          "start": 9.34,
+          "end": 10.62,
+          "transcriptMatch": "ลับดีๆนะ",
+          "confidence": 0.8979189044710189,
+          "exact": false,
+          "segmentIndex": 0
+        }
+      ]
+    },
+    {
+      "cueCardId": "draft-parting-safely-3",
+      "thai": "ขับรถดีๆ",
+      "audio": "/lessons/drafts/parting-safely/audio/draft-parting-safely-3.m4a",
+      "status": "matched",
+      "start": 6.17,
+      "end": 7.99,
+      "transcriptMatch": " ขับรถดีๆ",
+      "confidence": 0.9877002620697022,
+      "candidates": [
+        {
+          "start": 6.32,
+          "end": 7.74,
+          "transcriptMatch": " ขับรถดีๆ",
+          "confidence": 0.9877002620697022,
+          "exact": true,
+          "segmentIndex": 0
+        },
+        {
+          "start": 5.8,
+          "end": 7.74,
+          "transcriptMatch": " off ขับรถดีๆ",
+          "confidence": 0.890516206158532,
+          "exact": false,
+          "segmentIndex": 0
+        },
+        {
+          "start": 6.32,
+          "end": 7.64,
+          "transcriptMatch": " ขับรถดี",
+          "confidence": 0.8891937923431397,
+          "exact": false,
+          "segmentIndex": 0
+        },
+        {
+          "start": 6.32,
+          "end": 8.34,
+          "transcriptMatch": " ขับรถดีๆ Drive",
+          "confidence": 0.883576876454883,
+          "exact": false,
+          "segmentIndex": 0
+        },
+        {
+          "start": 6.76,
+          "end": 7.74,
+          "transcriptMatch": "ับรถดีๆ",
+          "confidence": 0.8761011985370091,
+          "exact": false,
+          "segmentIndex": 0
+        }
+      ]
+    },
+    {
+      "cueCardId": "draft-parting-safely-4",
+      "thai": "ถึงแล้วบอกด้วยนะ",
+      "status": "ambiguous",
+      "candidates": [
+        {
+          "start": 12.2,
+          "end": 13.76,
+          "transcriptMatch": " ถึงแล้วบอกด้วยนะ",
+          "confidence": 0.9994780766963959,
+          "exact": true,
+          "segmentIndex": 0
+        },
+        {
+          "start": 11.52,
+          "end": 13.76,
+          "transcriptMatch": " safe ถึงแล้วบอกด้วยนะ",
+          "confidence": 0.9475467801417701,
+          "exact": false,
+          "segmentIndex": 0
+        },
+        {
+          "start": 12.62,
+          "end": 13.76,
+          "transcriptMatch": "ึงแล้วบอกด้วยนะ",
+          "confidence": 0.9444497615640813,
+          "exact": false,
+          "segmentIndex": 0
+        },
+        {
+          "start": 12.2,
+          "end": 13.66,
+          "transcriptMatch": " ถึงแล้วบอกด้วย",
+          "confidence": 0.8895364252003757,
+          "exact": false,
+          "segmentIndex": 0
+        },
+        {
+          "start": 12.72,
+          "end": 13.76,
+          "transcriptMatch": "งแล้วบอกด้วยนะ",
+          "confidence": 0.8894003252983094,
+          "exact": false,
+          "segmentIndex": 0
+        }
+      ],
+      "diagnostic": "The top candidate is too close to another occurrence."
+    }
+  ]
+}

@@ -9,6 +9,7 @@ import type {
   VideoLesson,
 } from "./schemas";
 import { cueCards as bundledCards, lessons as bundledLessons } from "./seed";
+import { diagnosticQuestionCount, masteryQuestionCount, minimumQuestionBankSize, passesAdaptiveMastery } from "./lesson-sizing";
 
 export type CurriculumIssue = { lessonId: string; message: string };
 export type CurriculumValidationOptions = {
@@ -155,7 +156,7 @@ export function validateCurriculum(
     for (const path of [lesson.media.videoSrc, lesson.media.posterSrc]) {
       if (path && options.assetExists && !options.assetExists(path)) issues.push({ lessonId: lesson.id, message: `Bundled media is missing: ${path}.` });
     }
-    if (lesson.cueCardIds.length < 5 || lesson.cueCardIds.length > 10) issues.push({ lessonId: lesson.id, message: "Verified lessons require 5–10 cue cards." });
+    if (lesson.cueCardIds.length < 1 || lesson.cueCardIds.length > 10) issues.push({ lessonId: lesson.id, message: "Verified lessons require 1–10 cue cards." });
     if (lessonCards.some((card) => card.verificationStatus !== "verified" || !card.usage || !localExtension(card.phraseAudioSrc, [".m4a", ".mp3", ".wav", ".ogg"]))) {
       issues.push({ lessonId: lesson.id, message: "Verified cue cards require verified language and bundled phrase audio." });
     }
@@ -193,8 +194,15 @@ export function validateCurriculum(
     for (const card of lessonCards) {
       const variants = activeQuestions.filter((question) => question.itemId === card.id);
       if (variants.length < 2) issues.push({ lessonId: lesson.id, message: `Cue card ${card.id} requires at least two valid scored quiz variants.` });
+      if (!variants.some((question) => ["listening", "meaning-recognition"].includes(question.interactionType))) {
+        issues.push({ lessonId: lesson.id, message: `Cue card ${card.id} requires a receptive quiz variant.` });
+      }
+      if (!variants.some((question) => ["situation-response", "phrase-construction"].includes(question.interactionType))) {
+        issues.push({ lessonId: lesson.id, message: `Cue card ${card.id} requires a contextual or productive quiz variant.` });
+      }
     }
-    if (activeQuestions.length < 10) issues.push({ lessonId: lesson.id, message: "Verified lessons require at least ten valid active questions." });
+    const minimumQuestions = minimumQuestionBankSize(lesson);
+    if (activeQuestions.length < minimumQuestions) issues.push({ lessonId: lesson.id, message: `Verified lessons require at least ${minimumQuestions} valid active questions.` });
     if (scored.some((question) => question.verificationStatus !== "verified")) issues.push({ lessonId: lesson.id, message: "Verified lessons cannot score unverified questions." });
     for (const type of requiredQuestionTypes) {
       if (!activeQuestions.some((question) => question.interactionType === type)) issues.push({ lessonId: lesson.id, message: `Verified lesson is missing valid ${type} questions.` });
@@ -271,8 +279,8 @@ export function isSessionCompatible(
   if (new Set(queueIds).size !== queueIds.length || new Set(questionKeys).size !== questionKeys.length) return false;
   const activeEntries = session.queue.filter((entry) => entry.source === "active");
   const reviewEntries = session.queue.filter((entry) => entry.source === "review");
-  if (session.mode === "introduction" && (activeEntries.length !== 5 || reviewEntries.length)) return false;
-  if (session.mode === "mastery" && (activeEntries.length !== 10 || reviewEntries.length > 3 || session.queue.length !== activeEntries.length + reviewEntries.length)) return false;
+  if (session.mode === "introduction" && (activeEntries.length !== diagnosticQuestionCount(lesson!) || reviewEntries.length)) return false;
+  if (session.mode === "mastery" && (activeEntries.length !== masteryQuestionCount(lesson!) || reviewEntries.length > 3 || session.queue.length !== activeEntries.length + reviewEntries.length)) return false;
   if (session.mode === "standalone-review" && (activeEntries.length || reviewEntries.length < 1 || reviewEntries.length > 10)) return false;
   if (session.mode === "introduction" && new Set(activeEntries.map((entry) => entry.itemId)).size !== activeEntries.length) return false;
   if (session.mode === "mastery" && expectedCards.some((itemId) => !activeEntries.some((entry) => entry.itemId === itemId))) return false;
@@ -292,7 +300,13 @@ export function isSessionCompatible(
   }
 
   if (new Set(session.answers.map((answer) => answer.queueId)).size !== session.answers.length) return false;
-  if (session.answers.length > session.queue.length || session.questionIndex !== session.answers.length) return false;
+  if (session.answers.length > session.queue.length) return false;
+  const immediateFeedback = session.mode === "introduction" || session.mode === "standalone-review";
+  if (session.feedbackQueueId) {
+    if (!immediateFeedback || session.answers.length !== session.questionIndex + 1
+      || session.queue[session.questionIndex]?.queueId !== session.feedbackQueueId
+      || session.answers.at(-1)?.queueId !== session.feedbackQueueId) return false;
+  } else if (session.questionIndex !== session.answers.length) return false;
   for (const [index, answer] of session.answers.entries()) {
     const entry = session.queue[index];
     const question = entry && questionFor(entry, curriculum);
@@ -305,14 +319,17 @@ export function isSessionCompatible(
   if (!completed && session.stage === "video" && (session.videoCompleted || session.videoBypassed)) return false;
   if (!completed && session.stage !== "video" && session.mode === "introduction" && session.videoCompleted === session.videoBypassed) return false;
   if (session.mode !== "introduction" && (session.videoCompleted || session.videoBypassed)) return false;
-  if (completed && session.answers.length !== session.queue.length) return false;
+  if (completed && (session.answers.length !== session.queue.length || session.feedbackQueueId)) return false;
   if (completed) {
     const stored = session as CompletedStudySession;
     const activeCorrect = session.queue.filter((entry, index) => entry.source === "active" && session.answers[index]?.correct).length;
     const reviewCorrect = session.queue.filter((entry, index) => entry.source === "review" && session.answers[index]?.correct).length;
     if (stored.activeTotal !== activeEntries.length || stored.reviewTotal !== reviewEntries.length
       || stored.activeCorrect !== activeCorrect || stored.reviewCorrect !== reviewCorrect) return false;
-    const expectedPassed = session.mode === "mastery" ? activeEntries.length === 10 && activeCorrect >= 9 : undefined;
+    const itemSuccess = lesson?.cueCardIds.map((itemId) => activeEntries
+      .filter((entry) => entry.itemId === itemId)
+      .some((entry) => session.answers.find((answer) => answer.queueId === entry.queueId)?.correct === true)) ?? [];
+    const expectedPassed = session.mode === "mastery" ? passesAdaptiveMastery(activeCorrect, activeEntries.length, itemSuccess) : undefined;
     if (stored.passed !== expectedPassed) return false;
   }
   return true;

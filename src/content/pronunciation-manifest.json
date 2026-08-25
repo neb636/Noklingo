@@ -1,0 +1,5155 @@
+{
+  "version": 1,
+  "lessons": [
+    {
+      "lessonId": "affectionate-phrases",
+      "sourceVideo": "/lessons/drafts/affectionate-phrases/intro.mp4",
+      "sourceHash": "df675d99453f3f290b77bdeb2b5024bdf4641df51ed1b217a52b0f4b44c84976",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:34:14.408Z",
+      "clips": [
+        {
+          "cueCardId": "draft-affectionate-phrases-1",
+          "thai": "รักนะ",
+          "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-1.m4a",
+          "status": "matched",
+          "start": 3.75,
+          "end": 4.85,
+          "transcriptMatch": "รักนะ",
+          "confidence": 0.992692237496376,
+          "candidates": [
+            {
+              "start": 3.9,
+              "end": 4.6,
+              "transcriptMatch": "รักนะ",
+              "confidence": 0.992692237496376,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 3.9,
+              "end": 5.96,
+              "transcriptMatch": "รักนะ ค",
+              "confidence": 0.8325219384034476,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-affectionate-phrases-2",
+          "thai": "คุณสวยมาก",
+          "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-2.m4a",
+          "status": "matched",
+          "start": 4.7299999999999995,
+          "end": 8.89,
+          "transcriptMatch": " คุณสวยมาก",
+          "confidence": 0.9887127540792737,
+          "candidates": [
+            {
+              "start": 4.88,
+              "end": 8.64,
+              "transcriptMatch": " คุณสวยมาก",
+              "confidence": 0.9887127540792737,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 5.96,
+              "end": 8.64,
+              "transcriptMatch": "ุณสวยมาก",
+              "confidence": 0.9015247560871971,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 4.88,
+              "end": 10.72,
+              "transcriptMatch": " คุณสวยมาก ค",
+              "confidence": 0.9013477343022823,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 4.46,
+              "end": 8.64,
+              "transcriptMatch": "นะ คุณสวยมาก",
+              "confidence": 0.9013351216614247,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 4.88,
+              "end": 8,
+              "transcriptMatch": " คุณสวยมา",
+              "confidence": 0.8890651734007728,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-affectionate-phrases-3",
+          "thai": "คิดถึงจัง",
+          "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-3.m4a",
+          "status": "matched",
+          "start": 8.49,
+          "end": 13.07,
+          "transcriptMatch": " คิดถึงจัง",
+          "confidence": 0.9989921069145202,
+          "candidates": [
+            {
+              "start": 8.64,
+              "end": 12.82,
+              "transcriptMatch": " คิดถึงจัง",
+              "confidence": 0.9989921069145202,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 8,
+              "end": 12.82,
+              "transcriptMatch": "ก คิดถึงจัง",
+              "confidence": 0.9110860533714294,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 8.64,
+              "end": 13.02,
+              "transcriptMatch": " คิดถึงจัง ก",
+              "confidence": 0.9052260868549348,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 10.78,
+              "end": 12.82,
+              "transcriptMatch": "ิดถึงจัง",
+              "confidence": 0.9018642680181397,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 8.64,
+              "end": 12.44,
+              "transcriptMatch": " คิดถึงจั",
+              "confidence": 0.901098649336232,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-affectionate-phrases-4",
+          "thai": "กอดหน่อย",
+          "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-4.m4a",
+          "status": "matched",
+          "start": 12.67,
+          "end": 16.67,
+          "transcriptMatch": " กอดหน่อย",
+          "confidence": 0.9744811695814133,
+          "candidates": [
+            {
+              "start": 12.82,
+              "end": 16.42,
+              "transcriptMatch": " กอดหน่อย",
+              "confidence": 0.9744811695814133,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 12.44,
+              "end": 16.42,
+              "transcriptMatch": "ง กอดหน่อย",
+              "confidence": 0.8803371597660912,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 12.82,
+              "end": 19.49,
+              "transcriptMatch": " กอดหน่อย ฝ",
+              "confidence": 0.8801841946632143,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 13.02,
+              "end": 16.42,
+              "transcriptMatch": "อดหน่อย",
+              "confidence": 0.8711110222339631,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-affectionate-phrases-5",
+          "thai": "ฝันดีนะ",
+          "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-5.m4a",
+          "status": "matched",
+          "start": 16.560000000000002,
+          "end": 20.68,
+          "transcriptMatch": " ฝันดีนะ",
+          "confidence": 0.9979639202356339,
+          "candidates": [
+            {
+              "start": 16.71,
+              "end": 20.43,
+              "transcriptMatch": " ฝันดีนะ",
+              "confidence": 0.9979639202356339,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 16.04,
+              "end": 20.43,
+              "transcriptMatch": "อย ฝันดีนะ",
+              "confidence": 0.8882473960944585,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 19.59,
+              "end": 20.43,
+              "transcriptMatch": "ันดีนะ",
+              "confidence": 0.872073060648782,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lessonId": "coffee-order",
+      "sourceVideo": "/lessons/drafts/coffee-order/intro.mp4",
+      "sourceHash": "9d4014a3d22986099e9e0903aec3df3d7f70794f118ffc8e73b2302bc1f57b0d",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:29:05.327Z",
+      "clips": [
+        {
+          "cueCardId": "draft-coffee-order-1",
+          "thai": "เอาโกโก้เย็นหวานน้อยครับ",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 14.4,
+              "end": 16.62,
+              "transcriptMatch": "เอาโกโก้เย็นหวานน้อยครับ",
+              "confidence": 0.9625761477315896,
+              "exact": true,
+              "segmentIndex": 3
+            },
+            {
+              "start": 14.4,
+              "end": 16.5,
+              "transcriptMatch": "เอาโกโก้เย็นหวานน้อยครั",
+              "confidence": 0.9238310417595009,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 14.4,
+              "end": 16.94,
+              "transcriptMatch": "เอาโกโก้เย็นหวานน้อยครับ เอ",
+              "confidence": 0.9235741961237043,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 14.4,
+              "end": 16.42,
+              "transcriptMatch": "เอาโกโก้เย็นหวานน้อยคร",
+              "confidence": 0.8848599609389316,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 14.4,
+              "end": 17.44,
+              "transcriptMatch": "เอาโกโก้เย็นหวานน้อยครับ เอา",
+              "confidence": 0.8627665067245326,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 14.64,
+              "end": 16.62,
+              "transcriptMatch": "โกโก้เย็นหวานน้อยครับ",
+              "confidence": 0.8557347020835561,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 14.4,
+              "end": 17.68,
+              "transcriptMatch": "เอาโกโก้เย็นหวานน้อยครับ เอาค",
+              "confidence": 0.8331663213701701,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 14.64,
+              "end": 16.5,
+              "transcriptMatch": "โกโก้เย็นหวานน้อยครั",
+              "confidence": 0.8169272008452876,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 14.64,
+              "end": 16.94,
+              "transcriptMatch": "โกโก้เย็นหวานน้อยครับ เอ",
+              "confidence": 0.8146681694996855,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 14.4,
+              "end": 16.2,
+              "transcriptMatch": "เอาโกโก้เย็นหวานน้อย",
+              "confidence": 0.810234150607915,
+              "exact": false,
+              "segmentIndex": 3
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        },
+        {
+          "cueCardId": "draft-coffee-order-2",
+          "thai": "เอาคาราเมลมัคคิอาโตหวานน้อยค่ะ",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 16.62,
+              "end": 19.82,
+              "transcriptMatch": " เอาคาราเมลมัคคิอาโตหวานน้อยค่ะ",
+              "confidence": 0.9633442725374305,
+              "exact": true,
+              "segmentIndex": 3
+            },
+            {
+              "start": 16.5,
+              "end": 19.82,
+              "transcriptMatch": "บ เอาคาราเมลมัคคิอาโตหวานน้อยค่ะ",
+              "confidence": 0.9363665520206123,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 16.62,
+              "end": 19.66,
+              "transcriptMatch": " เอาคาราเมลมัคคิอาโตหวานน้อยค่",
+              "confidence": 0.9324987159770814,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 16.42,
+              "end": 19.82,
+              "transcriptMatch": "ับ เอาคาราเมลมัคคิอาโตหวานน้อยค่ะ",
+              "confidence": 0.91104694880398,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 16.94,
+              "end": 19.82,
+              "transcriptMatch": "าคาราเมลมัคคิอาโตหวานน้อยค่ะ",
+              "confidence": 0.9078779040775784,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 16.5,
+              "end": 19.66,
+              "transcriptMatch": "บ เอาคาราเมลมัคคิอาโตหวานน้อยค่",
+              "confidence": 0.904691622880499,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 16.62,
+              "end": 19.6,
+              "transcriptMatch": " เอาคาราเมลมัคคิอาโตหวานน้อยค",
+              "confidence": 0.9015128712518065,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 16.2,
+              "end": 19.82,
+              "transcriptMatch": "ครับ เอาคาราเมลมัคคิอาโตหวานน้อยค่ะ",
+              "confidence": 0.8865050194265235,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 16.42,
+              "end": 19.66,
+              "transcriptMatch": "ับ เอาคาราเมลมัคคิอาโตหวานน้อยค่",
+              "confidence": 0.8795937092051751,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 17.44,
+              "end": 19.82,
+              "transcriptMatch": "คาราเมลมัคคิอาโตหวานน้อยค่ะ",
+              "confidence": 0.8772662454690194,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 16.94,
+              "end": 19.66,
+              "transcriptMatch": "าคาราเมลมัคคิอาโตหวานน้อยค่",
+              "confidence": 0.8771057420815683,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 16.5,
+              "end": 19.6,
+              "transcriptMatch": "บ เอาคาราเมลมัคคิอาโตหวานน้อยค",
+              "confidence": 0.8738382261397528,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 16.62,
+              "end": 19.38,
+              "transcriptMatch": " เอาคาราเมลมัคคิอาโตหวานน้อย",
+              "confidence": 0.8708105276716934,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 16.2,
+              "end": 19.66,
+              "transcriptMatch": "ครับ เอาคาราเมลมัคคิอาโตหวานน้อยค่",
+              "confidence": 0.8552778857021056,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 17.68,
+              "end": 19.82,
+              "transcriptMatch": "าราเมลมัคคิอาโตหวานน้อยค่ะ",
+              "confidence": 0.8498112241429366,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 17.44,
+              "end": 19.66,
+              "transcriptMatch": "คาราเมลมัคคิอาโตหวานน้อยค่",
+              "confidence": 0.846370576475832,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 16.94,
+              "end": 19.6,
+              "transcriptMatch": "าคาราเมลมัคคิอาโตหวานน้อยค",
+              "confidence": 0.8461935874189848,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 16.42,
+              "end": 19.6,
+              "transcriptMatch": "ับ เอาคาราเมลมัคคิอาโตหวานน้อยค",
+              "confidence": 0.8460182737225298,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 16.5,
+              "end": 19.38,
+              "transcriptMatch": "บ เอาคาราเมลมัคคิอาโตหวานน้อย",
+              "confidence": 0.8432675216234685,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 16.14,
+              "end": 19.82,
+              "transcriptMatch": "อยครับ เอาคาราเมลมัคคิอาโตหวานน้อยค่ะ",
+              "confidence": 0.8419431768663366,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 16.2,
+              "end": 19.6,
+              "transcriptMatch": "ครับ เอาคาราเมลมัคคิอาโตหวานน้อยค",
+              "confidence": 0.8220130969994853,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 17.68,
+              "end": 19.66,
+              "transcriptMatch": "าราเมลมัคคิอาโตหวานน้อยค่",
+              "confidence": 0.8189306016424824,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 16.94,
+              "end": 19.38,
+              "transcriptMatch": "าคาราเมลมัคคิอาโตหวานน้อย",
+              "confidence": 0.8155854520573035,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 16.42,
+              "end": 19.38,
+              "transcriptMatch": "ับ เอาคาราเมลมัคคิอาโตหวานน้อย",
+              "confidence": 0.8155621838770397,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 17.44,
+              "end": 19.6,
+              "transcriptMatch": "คาราเมลมัคคิอาโตหวานน้อยค",
+              "confidence": 0.8153164859274555,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 16.14,
+              "end": 19.66,
+              "transcriptMatch": "อยครับ เอาคาราเมลมัคคิอาโตหวานน้อยค่",
+              "confidence": 0.811221196097664,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 16.62,
+              "end": 19.32,
+              "transcriptMatch": " เอาคาราเมลมัคคิอาโตหวานน้",
+              "confidence": 0.8101830522448776,
+              "exact": false,
+              "segmentIndex": 3
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        }
+      ]
+    },
+    {
+      "lessonId": "common-verbs",
+      "sourceVideo": "/lessons/drafts/common-verbs/intro.mp4",
+      "sourceHash": "3f83ccd706e547723f02dd2c2f58675522160fc96836d57c516edbb1dc12c139",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:19:19.344Z",
+      "clips": [
+        {
+          "cueCardId": "draft-common-verbs-1",
+          "thai": "กิน",
+          "audio": "/lessons/drafts/common-verbs/audio/draft-common-verbs-1.m4a",
+          "status": "matched",
+          "start": 0.41000000000000003,
+          "end": 2.09,
+          "transcriptMatch": " กิน",
+          "confidence": 0.9800271677970886,
+          "candidates": [
+            {
+              "start": 0.56,
+              "end": 1.84,
+              "transcriptMatch": " กิน",
+              "confidence": 0.9800271677970886,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-common-verbs-2",
+          "thai": "นอน",
+          "audio": "/lessons/drafts/common-verbs/audio/draft-common-verbs-2.m4a",
+          "status": "matched",
+          "start": 1.6900000000000002,
+          "end": 4.35,
+          "transcriptMatch": " นอน",
+          "confidence": 0.9646559381484985,
+          "candidates": [
+            {
+              "start": 1.84,
+              "end": 4.1,
+              "transcriptMatch": " นอน",
+              "confidence": 0.9646559381484985,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-common-verbs-3",
+          "thai": "ชอบ",
+          "audio": "/lessons/drafts/common-verbs/audio/draft-common-verbs-3.m4a",
+          "status": "matched",
+          "start": 4.17,
+          "end": 6.77,
+          "transcriptMatch": " ชอบ",
+          "confidence": 0.9988553524017334,
+          "candidates": [
+            {
+              "start": 4.32,
+              "end": 6.52,
+              "transcriptMatch": " ชอบ",
+              "confidence": 0.9988553524017334,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-common-verbs-4",
+          "thai": "ไป",
+          "audio": "/lessons/drafts/common-verbs/audio/draft-common-verbs-4.m4a",
+          "status": "matched",
+          "start": 6.409999999999999,
+          "end": 8.37,
+          "transcriptMatch": " ไป",
+          "confidence": 0.9905744886398316,
+          "candidates": [
+            {
+              "start": 6.56,
+              "end": 8.12,
+              "transcriptMatch": " ไป",
+              "confidence": 0.9905744886398316,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-common-verbs-5",
+          "thai": "พูด",
+          "audio": "/lessons/drafts/common-verbs/audio/draft-common-verbs-5.m4a",
+          "status": "matched",
+          "start": 8.67,
+          "end": 10.39,
+          "transcriptMatch": " พูด",
+          "confidence": 0.999793119430542,
+          "candidates": [
+            {
+              "start": 8.82,
+              "end": 10.14,
+              "transcriptMatch": " พูด",
+              "confidence": 0.999793119430542,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lessonId": "compliments",
+      "sourceVideo": "/lessons/drafts/compliments/intro.mp4",
+      "sourceHash": "46b0935f16058c669f6196def7082c6cdf1c4b0f05e919517a2f302cd27d9a2d",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:32:00.759Z",
+      "clips": [
+        {
+          "cueCardId": "draft-compliments-1",
+          "thai": "ยิ้มสวยมาก",
+          "audio": "/lessons/drafts/compliments/audio/draft-compliments-1.m4a",
+          "status": "matched",
+          "start": 4.409999999999999,
+          "end": 6.67,
+          "transcriptMatch": "ยิ้มสวยมาก",
+          "confidence": 0.9922163054347038,
+          "candidates": [
+            {
+              "start": 4.56,
+              "end": 6.42,
+              "transcriptMatch": "ยิ้มสวยมาก",
+              "confidence": 0.9922163054347038,
+              "exact": true,
+              "segmentIndex": 2
+            },
+            {
+              "start": 5.08,
+              "end": 6.42,
+              "transcriptMatch": "ิ้มสวยมาก",
+              "confidence": 0.9103508041926793,
+              "exact": false,
+              "segmentIndex": 2
+            },
+            {
+              "start": 4.56,
+              "end": 5.9,
+              "transcriptMatch": "ยิ้มสวยมา",
+              "confidence": 0.9031195748192924,
+              "exact": false,
+              "segmentIndex": 2
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-compliments-2",
+          "thai": "ใจดีจัง",
+          "audio": "/lessons/drafts/compliments/audio/draft-compliments-2.m4a",
+          "status": "matched",
+          "start": 8.48,
+          "end": 10.66,
+          "transcriptMatch": "ใจดีจัง",
+          "confidence": 0.9961599104745047,
+          "candidates": [
+            {
+              "start": 8.63,
+              "end": 10.41,
+              "transcriptMatch": "ใจดีจัง",
+              "confidence": 0.9961599104745047,
+              "exact": true,
+              "segmentIndex": 4
+            },
+            {
+              "start": 9.25,
+              "end": 10.41,
+              "transcriptMatch": "จดีจัง",
+              "confidence": 0.8741264709404537,
+              "exact": false,
+              "segmentIndex": 4
+            },
+            {
+              "start": 8.63,
+              "end": 10.19,
+              "transcriptMatch": "ใจดีจั",
+              "confidence": 0.8698184594086239,
+              "exact": false,
+              "segmentIndex": 4
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-compliments-3",
+          "thai": "เก่งมาก",
+          "audio": "/lessons/drafts/compliments/audio/draft-compliments-3.m4a",
+          "status": "matched",
+          "start": 11.48,
+          "end": 13.3,
+          "transcriptMatch": "เก่งมาก",
+          "confidence": 0.9993754451274872,
+          "candidates": [
+            {
+              "start": 11.63,
+              "end": 13.05,
+              "transcriptMatch": "เก่งมาก",
+              "confidence": 0.9993754451274872,
+              "exact": true,
+              "segmentIndex": 6
+            },
+            {
+              "start": 11.63,
+              "end": 12.53,
+              "transcriptMatch": "เก่งมา",
+              "confidence": 0.8735279982856342,
+              "exact": false,
+              "segmentIndex": 6
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-compliments-4",
+          "thai": "ดูดีมาก",
+          "audio": "/lessons/drafts/compliments/audio/draft-compliments-4.m4a",
+          "status": "matched",
+          "start": 13.719999999999999,
+          "end": 15.78,
+          "transcriptMatch": "ดูดีมาก",
+          "confidence": 0.9993288278579712,
+          "candidates": [
+            {
+              "start": 13.87,
+              "end": 15.53,
+              "transcriptMatch": "ดูดีมาก",
+              "confidence": 0.9993288278579712,
+              "exact": true,
+              "segmentIndex": 8
+            },
+            {
+              "start": 14.19,
+              "end": 15.53,
+              "transcriptMatch": "ูดีมาก",
+              "confidence": 0.8741059018543789,
+              "exact": false,
+              "segmentIndex": 8
+            },
+            {
+              "start": 13.87,
+              "end": 15.01,
+              "transcriptMatch": "ดูดีมา",
+              "confidence": 0.873495704310281,
+              "exact": false,
+              "segmentIndex": 8
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-compliments-5",
+          "thai": "คุยสนุกจัง",
+          "audio": "/lessons/drafts/compliments/audio/draft-compliments-5.m4a",
+          "status": "matched",
+          "start": 16.540000000000003,
+          "end": 18.76,
+          "transcriptMatch": "คุยสนุกจัง",
+          "confidence": 0.9995935072898865,
+          "candidates": [
+            {
+              "start": 16.69,
+              "end": 18.51,
+              "transcriptMatch": "คุยสนุกจัง",
+              "confidence": 0.9995935072898865,
+              "exact": true,
+              "segmentIndex": 10
+            },
+            {
+              "start": 17.17,
+              "end": 18.51,
+              "transcriptMatch": "ุยสนุกจัง",
+              "confidence": 0.9118146017392477,
+              "exact": false,
+              "segmentIndex": 10
+            },
+            {
+              "start": 16.69,
+              "end": 18.27,
+              "transcriptMatch": "คุยสนุกจั",
+              "confidence": 0.9115508726437886,
+              "exact": false,
+              "segmentIndex": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lessonId": "connectors",
+      "sourceVideo": "/lessons/drafts/connectors/intro.mp4",
+      "sourceHash": "bfc7a8905266679b712968943e43755dfb33fa1a8c8ea3b2adca4710dc43fd1f",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:19:56.852Z",
+      "clips": [
+        {
+          "cueCardId": "draft-connectors-1",
+          "thai": "และก็",
+          "audio": "/lessons/drafts/connectors/audio/draft-connectors-1.m4a",
+          "status": "matched",
+          "start": 0,
+          "end": 1.71,
+          "transcriptMatch": "และก็",
+          "confidence": 0.9334783922880888,
+          "candidates": [
+            {
+              "start": 0,
+              "end": 1.46,
+              "transcriptMatch": "และก็",
+              "confidence": 0.9334783922880888,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 0,
+              "end": 2.24,
+              "transcriptMatch": "และก็ ห",
+              "confidence": 0.7899291932781538,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-connectors-2",
+          "thai": "หรือ",
+          "audio": "/lessons/drafts/connectors/audio/draft-connectors-2.m4a",
+          "status": "matched",
+          "start": 1.31,
+          "end": 3.47,
+          "transcriptMatch": " หรือ",
+          "confidence": 0.9866693639755248,
+          "candidates": [
+            {
+              "start": 1.46,
+              "end": 3.22,
+              "transcriptMatch": " หรือ",
+              "confidence": 0.9866693639755248,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-connectors-3",
+          "thai": "แต่",
+          "audio": "/lessons/drafts/connectors/audio/draft-connectors-3.m4a",
+          "status": "matched",
+          "start": 3.0700000000000003,
+          "end": 5.21,
+          "transcriptMatch": " แต่",
+          "confidence": 0.9947920799255371,
+          "candidates": [
+            {
+              "start": 3.22,
+              "end": 4.96,
+              "transcriptMatch": " แต่",
+              "confidence": 0.9947920799255371,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-connectors-4",
+          "thai": "ก็เลย",
+          "audio": "/lessons/drafts/connectors/audio/draft-connectors-4.m4a",
+          "status": "matched",
+          "start": 4.81,
+          "end": 6.63,
+          "transcriptMatch": " ก็เลย",
+          "confidence": 0.9670993983745575,
+          "candidates": [
+            {
+              "start": 4.96,
+              "end": 6.38,
+              "transcriptMatch": " ก็เลย",
+              "confidence": 0.9670993983745575,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 3.92,
+              "end": 6.38,
+              "transcriptMatch": "่ ก็เลย",
+              "confidence": 0.8277105348308882,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 4.96,
+              "end": 6.82,
+              "transcriptMatch": " ก็เลย ก",
+              "confidence": 0.8123187052210172,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-connectors-5",
+          "thai": "กับ",
+          "audio": "/lessons/drafts/connectors/audio/draft-connectors-5.m4a",
+          "status": "matched",
+          "start": 6.2299999999999995,
+          "end": 8.57,
+          "transcriptMatch": " กับ",
+          "confidence": 0.9530362594127655,
+          "candidates": [
+            {
+              "start": 6.38,
+              "end": 8.32,
+              "transcriptMatch": " กับ",
+              "confidence": 0.9530362594127655,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-connectors-6",
+          "thai": "เพราะว่า",
+          "audio": "/lessons/drafts/connectors/audio/draft-connectors-6.m4a",
+          "status": "matched",
+          "start": 8.17,
+          "end": 10.73,
+          "transcriptMatch": " เพราะว่า",
+          "confidence": 0.9984591894490378,
+          "candidates": [
+            {
+              "start": 8.32,
+              "end": 10.48,
+              "transcriptMatch": " เพราะว่า",
+              "confidence": 0.9984591894490378,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 8.1,
+              "end": 10.48,
+              "transcriptMatch": "บ เพราะว่า",
+              "confidence": 0.9008334141804112,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 8.32,
+              "end": 10.28,
+              "transcriptMatch": " เพราะว่",
+              "confidence": 0.8882130271196366,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lessonId": "country-names",
+      "sourceVideo": "/lessons/drafts/country-names/intro.mp4",
+      "sourceHash": "74c71e51953c5f10952f72ef664239d7046472f6187884a7240ae765a6002ea0",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:25:14.047Z",
+      "clips": [
+        {
+          "cueCardId": "draft-country-names-1",
+          "thai": "คุณมาจากประเทศอะไร",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 0.11,
+              "end": 1.77,
+              "transcriptMatch": "คุณมาจากประเทศอะไร",
+              "confidence": 0.996835081468929,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 0.37,
+              "end": 1.77,
+              "transcriptMatch": "ุณมาจากประเทศอะไร",
+              "confidence": 0.950273150033421,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 0.11,
+              "end": 4.09,
+              "transcriptMatch": "คุณมาจากประเทศอะไร ฉ",
+              "confidence": 0.9410314529673441,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 0.49,
+              "end": 1.77,
+              "transcriptMatch": "ณมาจากประเทศอะไร",
+              "confidence": 0.9013370626502566,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 0.11,
+              "end": 4.87,
+              "transcriptMatch": "คุณมาจากประเทศอะไร ฉั",
+              "confidence": 0.9002930563103695,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 0.37,
+              "end": 4.09,
+              "transcriptMatch": "ุณมาจากประเทศอะไร ฉ",
+              "confidence": 0.8908223497092422,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 0.11,
+              "end": 5.05,
+              "transcriptMatch": "คุณมาจากประเทศอะไร ฉัน",
+              "confidence": 0.8634034509371434,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 0.55,
+              "end": 1.77,
+              "transcriptMatch": "มาจากประเทศอะไร",
+              "confidence": 0.8523385480542978,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 0.37,
+              "end": 4.87,
+              "transcriptMatch": "ุณมาจากประเทศอะไร ฉั",
+              "confidence": 0.8505729836705875,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 0.49,
+              "end": 4.09,
+              "transcriptMatch": "ณมาจากประเทศอะไร ฉ",
+              "confidence": 0.8408347910319766,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        },
+        {
+          "cueCardId": "draft-country-names-2",
+          "thai": "ฉันมาจากประเทศ",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 2.17,
+              "end": 6.53,
+              "transcriptMatch": " ฉันมาจากประเทศ",
+              "confidence": 0.9875771850422025,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 4.09,
+              "end": 6.53,
+              "transcriptMatch": "ันมาจากประเทศ",
+              "confidence": 0.9363418390637352,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 1.51,
+              "end": 6.53,
+              "transcriptMatch": "อะไร ฉันมาจากประเทศ",
+              "confidence": 0.9296867961012053,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 2.17,
+              "end": 6.25,
+              "transcriptMatch": " ฉันมาจากประเท",
+              "confidence": 0.9233406179185425,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 4.87,
+              "end": 6.53,
+              "transcriptMatch": "นมาจากประเทศ",
+              "confidence": 0.8734292161038945,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 4.09,
+              "end": 6.25,
+              "transcriptMatch": "ันมาจากประเท",
+              "confidence": 0.8733855685165951,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 1.51,
+              "end": 6.25,
+              "transcriptMatch": "อะไร ฉันมาจากประเท",
+              "confidence": 0.8614753229862878,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        },
+        {
+          "cueCardId": "draft-country-names-3",
+          "thai": "ประเทศ",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 0.97,
+              "end": 1.51,
+              "transcriptMatch": "ประเทศ",
+              "confidence": 0.9992081412672996,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 5.75,
+              "end": 6.53,
+              "transcriptMatch": "ประเทศ",
+              "confidence": 0.9986363381147385,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 0.81,
+              "end": 1.51,
+              "transcriptMatch": "ากประเทศ",
+              "confidence": 0.8736453193596432,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 5.43,
+              "end": 6.53,
+              "transcriptMatch": "ากประเทศ",
+              "confidence": 0.8731864134243557,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 0.97,
+              "end": 1.77,
+              "transcriptMatch": "ประเทศอะไร",
+              "confidence": 0.8728754753044674,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 5.95,
+              "end": 6.53,
+              "transcriptMatch": "ระเทศ",
+              "confidence": 0.85330770333608,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 1.13,
+              "end": 1.51,
+              "transcriptMatch": "ระเทศ",
+              "confidence": 0.8531869192918142,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 0.97,
+              "end": 1.43,
+              "transcriptMatch": "ประเท",
+              "confidence": 0.852324136098226,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 5.75,
+              "end": 6.25,
+              "transcriptMatch": "ประเท",
+              "confidence": 0.8515177830060323,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        }
+      ]
+    },
+    {
+      "lessonId": "directions",
+      "sourceVideo": "/lessons/drafts/directions/intro.mp4",
+      "sourceHash": "0a7882eaea6be4f98527b8f994189b3a58aff15b6cae6c130797dccee5b29177",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:25:37.015Z",
+      "clips": [
+        {
+          "cueCardId": "draft-directions-1",
+          "thai": "ตรงไป",
+          "audio": "/lessons/drafts/directions/audio/draft-directions-1.m4a",
+          "status": "matched",
+          "start": 0,
+          "end": 2.59,
+          "transcriptMatch": "ตรงไป",
+          "confidence": 0.9701886417716742,
+          "candidates": [
+            {
+              "start": 0,
+              "end": 2.34,
+              "transcriptMatch": "ตรงไป",
+              "confidence": 0.9701886417716742,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 0,
+              "end": 4.66,
+              "transcriptMatch": "ตรงไป เล",
+              "confidence": 0.812101876517137,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-directions-2",
+          "thai": "เลี้ยวขวา",
+          "audio": "/lessons/drafts/directions/audio/draft-directions-2.m4a",
+          "status": "matched",
+          "start": 2.37,
+          "end": 6.61,
+          "transcriptMatch": " เลี้ยวขวา",
+          "confidence": 0.9788758000305721,
+          "candidates": [
+            {
+              "start": 2.52,
+              "end": 6.36,
+              "transcriptMatch": " เลี้ยวขวา",
+              "confidence": 0.9788758000305721,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 1.9,
+              "end": 6.36,
+              "transcriptMatch": "ไป เลี้ยวขวา",
+              "confidence": 0.8932892349064351,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 2.52,
+              "end": 7.66,
+              "transcriptMatch": " เลี้ยวขวา เล",
+              "confidence": 0.8899735060036182,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 2.52,
+              "end": 5.98,
+              "transcriptMatch": " เลี้ยวขว",
+              "confidence": 0.8776663096083535,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-directions-3",
+          "thai": "เลี้ยวซ้าย",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 6.46,
+              "end": 9.92,
+              "transcriptMatch": " เลี้ยวซ้าย",
+              "confidence": 0.9931029830660139,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 5.98,
+              "end": 9.92,
+              "transcriptMatch": "า เลี้ยวซ้าย",
+              "confidence": 0.9138983696699141,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 6.46,
+              "end": 10.32,
+              "transcriptMatch": " เลี้ยวซ้าย ก",
+              "confidence": 0.9083187025785445,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 5.7,
+              "end": 9.92,
+              "transcriptMatch": "วา เลี้ยวซ้าย",
+              "confidence": 0.8472412562370301,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 6.46,
+              "end": 12.56,
+              "transcriptMatch": " เลี้ยวซ้าย กล",
+              "confidence": 0.8429019252459209,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 5.98,
+              "end": 10.32,
+              "transcriptMatch": "า เลี้ยวซ้าย ก",
+              "confidence": 0.8428906329472861,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        },
+        {
+          "cueCardId": "draft-directions-4",
+          "thai": "กลับรถ",
+          "audio": "/lessons/drafts/directions/audio/draft-directions-4.m4a",
+          "status": "matched",
+          "start": 9.77,
+          "end": 13.39,
+          "transcriptMatch": " กลับรถ",
+          "confidence": 0.9921012580394745,
+          "candidates": [
+            {
+              "start": 9.92,
+              "end": 13.14,
+              "transcriptMatch": " กลับรถ",
+              "confidence": 0.9921012580394745,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 9.66,
+              "end": 13.14,
+              "transcriptMatch": "าย กลับรถ",
+              "confidence": 0.8675096542494638,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 10.32,
+              "end": 13.14,
+              "transcriptMatch": "ลับรถ",
+              "confidence": 0.8528890951474508,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 9.92,
+              "end": 12.94,
+              "transcriptMatch": " กลับร",
+              "confidence": 0.8438776725133261,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lessonId": "encouragement",
+      "sourceVideo": "/lessons/drafts/encouragement/intro.mp4",
+      "sourceHash": "c37ef63e2427f5385e41e9541dc9743c8608e5c2062d1ac0307772259afe0e5d",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:31:31.420Z",
+      "clips": [
+        {
+          "cueCardId": "draft-encouragement-1",
+          "thai": "อยู่ด้วยกันไปนานๆนะ",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 3.84,
+              "end": 5.64,
+              "transcriptMatch": " อยู่ด้วยกันไปนานๆนะ",
+              "confidence": 0.9959875677182124,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 3.12,
+              "end": 5.64,
+              "transcriptMatch": " this อยู่ด้วยกันไปนานๆนะ",
+              "confidence": 0.9491990076814378,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 3.84,
+              "end": 6.44,
+              "transcriptMatch": " อยู่ด้วยกันไปนานๆนะ ส",
+              "confidence": 0.9451741232786859,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 3.84,
+              "end": 6.78,
+              "transcriptMatch": " อยู่ด้วยกันไปนานๆนะ สู้",
+              "confidence": 0.9053496588582085,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 3.84,
+              "end": 5.36,
+              "transcriptMatch": " อยู่ด้วยกันไปนานๆ",
+              "confidence": 0.9044640822159616,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 3.98,
+              "end": 5.64,
+              "transcriptMatch": "ู่ด้วยกันไปนานๆนะ",
+              "confidence": 0.9033181280838816,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 3.12,
+              "end": 6.44,
+              "transcriptMatch": " this อยู่ด้วยกันไปนานๆนะ ส",
+              "confidence": 0.903216173064141,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 3.12,
+              "end": 6.78,
+              "transcriptMatch": " this อยู่ด้วยกันไปนานๆนะ สู้",
+              "confidence": 0.8671459667012096,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 3.84,
+              "end": 5.12,
+              "transcriptMatch": " อยู่ด้วยกันไปนาน",
+              "confidence": 0.8599664663241811,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 3.12,
+              "end": 5.36,
+              "transcriptMatch": " this อยู่ด้วยกันไปนานๆ",
+              "confidence": 0.8550599901299727,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 3.98,
+              "end": 6.44,
+              "transcriptMatch": "ู่ด้วยกันไปนานๆนะ ส",
+              "confidence": 0.8496676954204736,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        },
+        {
+          "cueCardId": "draft-encouragement-2",
+          "thai": "สู้ๆนะ",
+          "audio": "/lessons/drafts/encouragement/audio/draft-encouragement-2.m4a",
+          "status": "matched",
+          "start": 5.55,
+          "end": 9.89,
+          "transcriptMatch": " สู้ๆนะ",
+          "confidence": 0.9580486510694027,
+          "candidates": [
+            {
+              "start": 5.7,
+              "end": 9.64,
+              "transcriptMatch": " สู้ๆนะ",
+              "confidence": 0.9580486510694027,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 5.36,
+              "end": 9.64,
+              "transcriptMatch": "นะ สู้ๆนะ",
+              "confidence": 0.8372627244165965,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 6.44,
+              "end": 9.64,
+              "transcriptMatch": "ู้ๆนะ",
+              "confidence": 0.8305317529042562,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 5.7,
+              "end": 10.38,
+              "transcriptMatch": " สู้ๆนะ อย",
+              "confidence": 0.8294012899569103,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-encouragement-3",
+          "thai": "อยากได้อะไรมั้ย",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 9.8,
+              "end": 12.74,
+              "transcriptMatch": " อยากได้อะไรมั้ย",
+              "confidence": 0.9785747926682233,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 6.78,
+              "end": 12.74,
+              "transcriptMatch": "นะ อยากได้อะไรมั้ย",
+              "confidence": 0.9229301168521244,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 9.8,
+              "end": 15.46,
+              "transcriptMatch": " อยากได้อะไรมั้ย เด",
+              "confidence": 0.9193477890640497,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 9.8,
+              "end": 12.7,
+              "transcriptMatch": " อยากได้อะไรมั้",
+              "confidence": 0.9168720308315187,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 6.78,
+              "end": 15.46,
+              "transcriptMatch": "นะ อยากได้อะไรมั้ย เด",
+              "confidence": 0.8706608694252722,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 10.38,
+              "end": 12.74,
+              "transcriptMatch": "ากได้อะไรมั้ย",
+              "confidence": 0.8662688191334407,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 6.78,
+              "end": 12.7,
+              "transcriptMatch": "นะ อยากได้อะไรมั้",
+              "confidence": 0.8578596157679955,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 9.8,
+              "end": 15.6,
+              "transcriptMatch": " อยากได้อะไรมั้ย เดี",
+              "confidence": 0.8250504239772758,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        },
+        {
+          "cueCardId": "draft-encouragement-4",
+          "thai": "เดี๋ยวโทรหานะ",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 12.74,
+              "end": 16.66,
+              "transcriptMatch": " เดี๋ยวโทรหานะ",
+              "confidence": 0.9881325460360809,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 12.7,
+              "end": 16.66,
+              "transcriptMatch": "ย เดี๋ยวโทรหานะ",
+              "confidence": 0.9262499792474721,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 12.44,
+              "end": 16.66,
+              "transcriptMatch": "ั้ย เดี๋ยวโทรหานะ",
+              "confidence": 0.8720006011583102,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 15.46,
+              "end": 16.66,
+              "transcriptMatch": "ี๋ยวโทรหานะ",
+              "confidence": 0.8575080092320075,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 12.74,
+              "end": 16.42,
+              "transcriptMatch": " เดี๋ยวโทรหา",
+              "confidence": 0.8519839593315354,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        }
+      ]
+    },
+    {
+      "lessonId": "feeling-unwell",
+      "sourceVideo": "/lessons/drafts/feeling-unwell/intro.mp4",
+      "sourceHash": "94e3f2b14f06afaeb60917f3dcd8fdc14a9c634ce475a85a211856e014bd4f8f",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:26:41.037Z",
+      "clips": [
+        {
+          "cueCardId": "draft-feeling-unwell-1",
+          "thai": "ก็ดี",
+          "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-1.m4a",
+          "status": "matched",
+          "start": 4.2299999999999995,
+          "end": 5.69,
+          "transcriptMatch": "ก็ดี",
+          "confidence": 0.9860913676023484,
+          "candidates": [
+            {
+              "start": 4.38,
+              "end": 5.44,
+              "transcriptMatch": "ก็ดี",
+              "confidence": 0.9860913676023484,
+              "exact": true,
+              "segmentIndex": 2
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-feeling-unwell-2",
+          "thai": "ไม่ค่อยสบาย",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 6.36,
+              "end": 8.2,
+              "transcriptMatch": " ไม่ค่อยสบาย",
+              "confidence": 0.9993963885307312,
+              "exact": true,
+              "segmentIndex": 2
+            },
+            {
+              "start": 6,
+              "end": 8.2,
+              "transcriptMatch": " good ไม่ค่อยสบาย",
+              "confidence": 0.9255862347284952,
+              "exact": false,
+              "segmentIndex": 2
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        },
+        {
+          "cueCardId": "draft-feeling-unwell-3",
+          "thai": "ช่วงนี้ยุ่งมาก",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 10.58,
+              "end": 11.96,
+              "transcriptMatch": " ช่วงนี้ยุ่งมาก",
+              "confidence": 0.9990667182207107,
+              "exact": true,
+              "segmentIndex": 3
+            },
+            {
+              "start": 10.06,
+              "end": 11.96,
+              "transcriptMatch": " well ช่วงนี้ยุ่งมาก",
+              "confidence": 0.9404372059259659,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 10.74,
+              "end": 11.96,
+              "transcriptMatch": "่วงนี้ยุ่งมาก",
+              "confidence": 0.9361655362550314,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 10.58,
+              "end": 11.56,
+              "transcriptMatch": " ช่วงนี้ยุ่งมา",
+              "confidence": 0.9361320083172291,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 10.06,
+              "end": 11.56,
+              "transcriptMatch": " well ช่วงนี้ยุ่งมา",
+              "confidence": 0.8733215799501964,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 10.84,
+              "end": 11.96,
+              "transcriptMatch": "วงนี้ยุ่งมาก",
+              "confidence": 0.8732395719460079,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 10.74,
+              "end": 11.56,
+              "transcriptMatch": "่วงนี้ยุ่งมา",
+              "confidence": 0.8732186657360622,
+              "exact": false,
+              "segmentIndex": 3
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        },
+        {
+          "cueCardId": "draft-feeling-unwell-4",
+          "thai": "ก็โอเค",
+          "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-4.m4a",
+          "status": "matched",
+          "start": 13.629999999999999,
+          "end": 15.19,
+          "transcriptMatch": " ก็โอเค",
+          "confidence": 0.9884405303001403,
+          "candidates": [
+            {
+              "start": 13.78,
+              "end": 14.94,
+              "transcriptMatch": " ก็โอเค",
+              "confidence": 0.9884405303001403,
+              "exact": true,
+              "segmentIndex": 4
+            },
+            {
+              "start": 13.28,
+              "end": 14.94,
+              "transcriptMatch": " lately ก็โอเค",
+              "confidence": 0.8645277294090816,
+              "exact": false,
+              "segmentIndex": 4
+            },
+            {
+              "start": 13.78,
+              "end": 15.62,
+              "transcriptMatch": " ก็โอเค I",
+              "confidence": 0.8557644363812038,
+              "exact": false,
+              "segmentIndex": 4
+            },
+            {
+              "start": 14.28,
+              "end": 14.94,
+              "transcriptMatch": "็โอเค",
+              "confidence": 0.8521669479211172,
+              "exact": false,
+              "segmentIndex": 4
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-feeling-unwell-5",
+          "thai": "เหมือนเดิม",
+          "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-5.m4a",
+          "status": "matched",
+          "start": 16.37,
+          "end": 17.93,
+          "transcriptMatch": "เหมือนเดิม",
+          "confidence": 0.990411593743733,
+          "candidates": [
+            {
+              "start": 16.52,
+              "end": 17.68,
+              "transcriptMatch": "เหมือนเดิม",
+              "confidence": 0.990411593743733,
+              "exact": true,
+              "segmentIndex": 5
+            },
+            {
+              "start": 16.52,
+              "end": 18.5,
+              "transcriptMatch": "เหมือนเดิม Same",
+              "confidence": 0.9039551119506358,
+              "exact": false,
+              "segmentIndex": 5
+            },
+            {
+              "start": 16.52,
+              "end": 17.46,
+              "transcriptMatch": "เหมือนเดิ",
+              "confidence": 0.900820168375969,
+              "exact": false,
+              "segmentIndex": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lessonId": "food-allergies",
+      "sourceVideo": "/lessons/drafts/food-allergies/intro.mp4",
+      "sourceHash": "208e36f313d9213df0f0642484c2de85a9efeb483fa5d9a4c0a90ba65ec4d7b0",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:27:32.771Z",
+      "clips": [
+        {
+          "cueCardId": "draft-food-allergies-1",
+          "thai": "ฉันแพ้",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 11.5,
+              "end": 14.58,
+              "transcriptMatch": " ฉันแพ้",
+              "confidence": 0.9996274232864379,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 7.3,
+              "end": 10.9,
+              "transcriptMatch": " ฉันแพ้",
+              "confidence": 0.9995225489139556,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 2.38,
+              "end": 3.68,
+              "transcriptMatch": "ฉันแพ้",
+              "confidence": 0.9917928791046142,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 3.72,
+              "end": 4.6,
+              "transcriptMatch": " ฉันแพ้",
+              "confidence": 0.9795980554819107,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 11.26,
+              "end": 14.58,
+              "transcriptMatch": "ว ฉันแพ้",
+              "confidence": 0.8739313888549806,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 7.02,
+              "end": 10.9,
+              "transcriptMatch": "ง ฉันแพ้",
+              "confidence": 0.8737888782364982,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 7.3,
+              "end": 11.06,
+              "transcriptMatch": " ฉันแพ้ถ",
+              "confidence": 0.8669576862880162,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 3.46,
+              "end": 4.6,
+              "transcriptMatch": "้ ฉันแพ้",
+              "confidence": 0.8567728507518769,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 3.72,
+              "end": 4.78,
+              "transcriptMatch": " ฉันแพ้ก",
+              "confidence": 0.8544000766958509,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 2.38,
+              "end": 3.92,
+              "transcriptMatch": "ฉันแพ้ ฉ",
+              "confidence": 0.8541499149799348,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 9,
+              "end": 10.9,
+              "transcriptMatch": "ันแพ้",
+              "confidence": 0.8530619238217673,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 13.36,
+              "end": 14.58,
+              "transcriptMatch": "ันแพ้",
+              "confidence": 0.8530391944249471,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 11.5,
+              "end": 14.3,
+              "transcriptMatch": " ฉันแพ",
+              "confidence": 0.8528947871526082,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 7.3,
+              "end": 10.56,
+              "transcriptMatch": " ฉันแพ",
+              "confidence": 0.8527737344106039,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 3.92,
+              "end": 4.6,
+              "transcriptMatch": "ันแพ้",
+              "confidence": 0.8471925738652548,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 2.7,
+              "end": 3.68,
+              "transcriptMatch": "ันแพ้",
+              "confidence": 0.8468720863660177,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 2.38,
+              "end": 3.46,
+              "transcriptMatch": "ฉันแพ",
+              "confidence": 0.8435204637845358,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        },
+        {
+          "cueCardId": "draft-food-allergies-2",
+          "thai": "ฉันแพ้กุ้ง",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 3.72,
+              "end": 7.28,
+              "transcriptMatch": " ฉันแพ้กุ้ง",
+              "confidence": 0.9858340185880661,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 3.46,
+              "end": 7.28,
+              "transcriptMatch": "้ ฉันแพ้กุ้ง",
+              "confidence": 0.9071056189320303,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 3.72,
+              "end": 9,
+              "transcriptMatch": " ฉันแพ้กุ้ง ฉ",
+              "confidence": 0.9069847751747477,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 3.92,
+              "end": 7.28,
+              "transcriptMatch": "ันแพ้กุ้ง",
+              "confidence": 0.9064497839609782,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 3.72,
+              "end": 7.02,
+              "transcriptMatch": " ฉันแพ้กุ้",
+              "confidence": 0.8963281479676565,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 3.72,
+              "end": 9.1,
+              "transcriptMatch": " ฉันแพ้กุ้ง ฉั",
+              "confidence": 0.8413987784584364,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 3.46,
+              "end": 9,
+              "transcriptMatch": "้ ฉันแพ้กุ้ง ฉ",
+              "confidence": 0.8413878457744917,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 3.2,
+              "end": 7.28,
+              "transcriptMatch": "พ้ ฉันแพ้กุ้ง",
+              "confidence": 0.8396523921688398,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        },
+        {
+          "cueCardId": "draft-food-allergies-3",
+          "thai": "ฉันแพ้ถั่ว",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 7.3,
+              "end": 11.28,
+              "transcriptMatch": " ฉันแพ้ถั่ว",
+              "confidence": 0.9936456314722697,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 7.02,
+              "end": 11.28,
+              "transcriptMatch": "ง ฉันแพ้ถั่ว",
+              "confidence": 0.914219753742218,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 7.3,
+              "end": 13.36,
+              "transcriptMatch": " ฉันแพ้ถั่ว ฉ",
+              "confidence": 0.9142045917510986,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 9,
+              "end": 11.28,
+              "transcriptMatch": "ันแพ้ถั่ว",
+              "confidence": 0.9050397927761078,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 7.3,
+              "end": 13.78,
+              "transcriptMatch": " ฉันแพ้ถั่ว ฉั",
+              "confidence": 0.8480635644450333,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 6.9,
+              "end": 11.28,
+              "transcriptMatch": "้ง ฉันแพ้ถั่ว",
+              "confidence": 0.8480260349764969,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 7.02,
+              "end": 13.36,
+              "transcriptMatch": "ง ฉันแพ้ถั่ว ฉ",
+              "confidence": 0.848009039849946,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        },
+        {
+          "cueCardId": "draft-food-allergies-4",
+          "thai": "ฉันแพ้นมวัว",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 11.5,
+              "end": 15.54,
+              "transcriptMatch": " ฉันแพ้นมวัว",
+              "confidence": 0.9938785819573835,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 11.26,
+              "end": 15.54,
+              "transcriptMatch": "ว ฉันแพ้นมวัว",
+              "confidence": 0.9210349653164546,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 11.5,
+              "end": 15.32,
+              "transcriptMatch": " ฉันแพ้นมวั",
+              "confidence": 0.9135909051895141,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 13.36,
+              "end": 15.54,
+              "transcriptMatch": "ันแพ้นมวัว",
+              "confidence": 0.9133429167270659,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 11.06,
+              "end": 15.54,
+              "transcriptMatch": "ั่ว ฉันแพ้นมวัว",
+              "confidence": 0.8589824062127333,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        }
+      ]
+    },
+    {
+      "lessonId": "food-flavors",
+      "sourceVideo": "/lessons/drafts/food-flavors/intro.mp4",
+      "sourceHash": "812494cc82f9901cce5a1c71c4f06cb7f052767ae5f8b43915bdd2537c247655",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:27:06.008Z",
+      "clips": [
+        {
+          "cueCardId": "draft-food-flavors-1",
+          "thai": "เปรี้ยว",
+          "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-1.m4a",
+          "status": "matched",
+          "start": 0.49,
+          "end": 2.13,
+          "transcriptMatch": " เปรี้ยว",
+          "confidence": 0.9987120833396912,
+          "candidates": [
+            {
+              "start": 0.64,
+              "end": 1.88,
+              "transcriptMatch": " เปรี้ยว",
+              "confidence": 0.9987120833396912,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 0.4,
+              "end": 1.88,
+              "transcriptMatch": "์ เปรี้ยว",
+              "confidence": 0.8885639214515686,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 0.64,
+              "end": 1.48,
+              "transcriptMatch": " เปรี้ย",
+              "confidence": 0.8726848128012249,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 0.64,
+              "end": 2.42,
+              "transcriptMatch": " เปรี้ยว ห",
+              "confidence": 0.8720234689116478,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-food-flavors-2",
+          "thai": "หวาน",
+          "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-2.m4a",
+          "status": "matched",
+          "start": 1.73,
+          "end": 4.07,
+          "transcriptMatch": " หวาน",
+          "confidence": 0.9659659880399704,
+          "candidates": [
+            {
+              "start": 1.88,
+              "end": 3.82,
+              "transcriptMatch": " หวาน",
+              "confidence": 0.9659659880399704,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-food-flavors-3",
+          "thai": "เค็ม",
+          "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-3.m4a",
+          "status": "matched",
+          "start": 3.67,
+          "end": 5.91,
+          "transcriptMatch": " เค็ม",
+          "confidence": 0.9761244118213653,
+          "candidates": [
+            {
+              "start": 3.82,
+              "end": 5.66,
+              "transcriptMatch": " เค็ม",
+              "confidence": 0.9761244118213653,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-food-flavors-4",
+          "thai": "เผ็ด",
+          "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-4.m4a",
+          "status": "matched",
+          "start": 5.51,
+          "end": 7.87,
+          "transcriptMatch": " เผ็ด",
+          "confidence": 0.9853024023771286,
+          "candidates": [
+            {
+              "start": 5.66,
+              "end": 7.62,
+              "transcriptMatch": " เผ็ด",
+              "confidence": 0.9853024023771286,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-food-flavors-5",
+          "thai": "ขม",
+          "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-5.m4a",
+          "status": "matched",
+          "start": 7.949999999999999,
+          "end": 10.33,
+          "transcriptMatch": " ขม",
+          "confidence": 0.9954673063755035,
+          "candidates": [
+            {
+              "start": 8.1,
+              "end": 10.08,
+              "transcriptMatch": " ขม",
+              "confidence": 0.9954673063755035,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-food-flavors-6",
+          "thai": "จืด",
+          "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-6.m4a",
+          "status": "matched",
+          "start": 10.29,
+          "end": 12.47,
+          "transcriptMatch": " จืด",
+          "confidence": 0.9945257759094238,
+          "candidates": [
+            {
+              "start": 10.44,
+              "end": 12.22,
+              "transcriptMatch": " จืด",
+              "confidence": 0.9945257759094238,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lessonId": "its-okay",
+      "sourceVideo": "/lessons/drafts/its-okay/intro.mp4",
+      "sourceHash": "d1fa9fe35c4c1649b186f2bc2a0d94a381e00de3ce196e9de5a79a67271c8a3f",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:33:17.571Z",
+      "clips": [
+        {
+          "cueCardId": "draft-its-okay-1",
+          "thai": "ไม่เป็นไร",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 4.36,
+              "end": 5.6,
+              "transcriptMatch": " ไม่เป็นไร",
+              "confidence": 0.9946130359172821,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 2.56,
+              "end": 3.96,
+              "transcriptMatch": "ไม่เป็นไร",
+              "confidence": 0.9783336770534515,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 3.68,
+              "end": 5.6,
+              "transcriptMatch": "ไร ไม่เป็นไร",
+              "confidence": 0.9059426299503872,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 4.36,
+              "end": 6.18,
+              "transcriptMatch": " ไม่เป็นไร ช",
+              "confidence": 0.891697005706174,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 2.56,
+              "end": 5.02,
+              "transcriptMatch": "ไม่เป็นไร ไม",
+              "confidence": 0.8896999303272792,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        },
+        {
+          "cueCardId": "draft-its-okay-2",
+          "thai": "ช่างมันเถอะ",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 5.82,
+              "end": 8.8,
+              "transcriptMatch": " ช่างมันเถอะ",
+              "confidence": 0.9794780179485678,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 26.02,
+              "end": 28.32,
+              "transcriptMatch": " ช่างมันเถอะ",
+              "confidence": 0.9154997556749731,
+              "exact": true,
+              "segmentIndex": 3
+            },
+            {
+              "start": 6.18,
+              "end": 8.8,
+              "transcriptMatch": "่างมันเถอะ",
+              "confidence": 0.9122319027355739,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 5.4,
+              "end": 8.8,
+              "transcriptMatch": "ไร ช่างมันเถอะ",
+              "confidence": 0.9078532406687736,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 5.82,
+              "end": 11.1,
+              "transcriptMatch": " ช่างมันเถอะ ไม",
+              "confidence": 0.9062613388895988,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 5.4,
+              "end": 11.1,
+              "transcriptMatch": "ไร ช่างมันเถอะ ไม",
+              "confidence": 0.8457360918590655,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 27.56,
+              "end": 28.32,
+              "transcriptMatch": "่างมันเถอะ",
+              "confidence": 0.8404487044018294,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 26.02,
+              "end": 28.72,
+              "transcriptMatch": " ช่างมันเถอะ ไม",
+              "confidence": 0.8389622863382101,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 25.52,
+              "end": 28.32,
+              "transcriptMatch": "ไร ช่างมันเถอะ",
+              "confidence": 0.8382708283824225,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 25.52,
+              "end": 28.72,
+              "transcriptMatch": "ไร ช่างมันเถอะ ไม",
+              "confidence": 0.7737253833239754,
+              "exact": false,
+              "segmentIndex": 3
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        },
+        {
+          "cueCardId": "draft-its-okay-3",
+          "thai": "ไม่ต้องห่วง",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 9.66,
+              "end": 13.48,
+              "transcriptMatch": " ไม่ต้องห่วง",
+              "confidence": 0.9959392627080281,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 28.4,
+              "end": 30.34,
+              "transcriptMatch": " ไม่ต้องห่วง",
+              "confidence": 0.9419950740536054,
+              "exact": true,
+              "segmentIndex": 3
+            },
+            {
+              "start": 8.64,
+              "end": 13.48,
+              "transcriptMatch": "อะ ไม่ต้องห่วง",
+              "confidence": 0.9230000290075937,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 9.66,
+              "end": 16.9,
+              "transcriptMatch": " ไม่ต้องห่วง ไม",
+              "confidence": 0.9226407839457194,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 9.66,
+              "end": 13,
+              "transcriptMatch": " ไม่ต้องห่ว",
+              "confidence": 0.9154361981153487,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 27.9,
+              "end": 30.34,
+              "transcriptMatch": "อะ ไม่ต้องห่วง",
+              "confidence": 0.8728055908779303,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 28.4,
+              "end": 31.28,
+              "transcriptMatch": " ไม่ต้องห่วง ไม",
+              "confidence": 0.8633898812929789,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 8.64,
+              "end": 16.9,
+              "transcriptMatch": "อะ ไม่ต้องห่วง ไม",
+              "confidence": 0.8609446056906159,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 28.4,
+              "end": 30.08,
+              "transcriptMatch": " ไม่ต้องห่ว",
+              "confidence": 0.8548347083851694,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 27.9,
+              "end": 31.28,
+              "transcriptMatch": "อะ ไม่ต้องห่วง ไม",
+              "confidence": 0.8055849956965946,
+              "exact": false,
+              "segmentIndex": 3
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        },
+        {
+          "cueCardId": "draft-its-okay-4",
+          "thai": "ไม่ต้องคิดมาก",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 13.54,
+              "end": 18.98,
+              "transcriptMatch": " ไม่ต้องคิดมาก",
+              "confidence": 0.9979890720844269,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 19,
+              "end": 21,
+              "transcriptMatch": " ไม่ต้องคิดมาก",
+              "confidence": 0.9906128252744675,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 31.18,
+              "end": 32.24,
+              "transcriptMatch": " ไม่ต้องคิดมาก",
+              "confidence": 0.9482243607975542,
+              "exact": true,
+              "segmentIndex": 3
+            },
+            {
+              "start": 13,
+              "end": 18.98,
+              "transcriptMatch": "ง ไม่ต้องคิดมาก",
+              "confidence": 0.935311448078651,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 13.54,
+              "end": 18.5,
+              "transcriptMatch": " ไม่ต้องคิดมา",
+              "confidence": 0.9300777752582844,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 13.54,
+              "end": 19.68,
+              "transcriptMatch": " ไม่ต้องคิดมาก ไม",
+              "confidence": 0.92953952577207,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 18.5,
+              "end": 21,
+              "transcriptMatch": "ก ไม่ต้องคิดมาก",
+              "confidence": 0.9286054232368222,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 19,
+              "end": 20.66,
+              "transcriptMatch": " ไม่ต้องคิดมา",
+              "confidence": 0.9218983240310963,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 30.08,
+              "end": 32.24,
+              "transcriptMatch": "ง ไม่ต้องคิดมาก",
+              "confidence": 0.8900084578134604,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 31.18,
+              "end": 33.96,
+              "transcriptMatch": " ไม่ต้องคิดมาก ช",
+              "confidence": 0.8793503735306395,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 31.18,
+              "end": 31.76,
+              "transcriptMatch": " ไม่ต้องคิดมา",
+              "confidence": 0.878731653467776,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 13,
+              "end": 19.68,
+              "transcriptMatch": "ง ไม่ต้องคิดมาก ไม",
+              "confidence": 0.8756939278642337,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 18.24,
+              "end": 21,
+              "transcriptMatch": "มาก ไม่ต้องคิดมาก",
+              "confidence": 0.8747873501578968,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 16.9,
+              "end": 18.98,
+              "transcriptMatch": "่ต้องคิดมาก",
+              "confidence": 0.8627934859960507,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 13,
+              "end": 18.5,
+              "transcriptMatch": "ง ไม่ต้องคิดมา",
+              "confidence": 0.8626048372158637,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 19.68,
+              "end": 21,
+              "transcriptMatch": "่ต้องคิดมาก",
+              "confidence": 0.8612437866895626,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 18.5,
+              "end": 20.66,
+              "transcriptMatch": "ก ไม่ต้องคิดมา",
+              "confidence": 0.8552429505953422,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 30.08,
+              "end": 33.96,
+              "transcriptMatch": "ง ไม่ต้องคิดมาก ช",
+              "confidence": 0.8296300566388916,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 31.28,
+              "end": 32.24,
+              "transcriptMatch": "่ต้องคิดมาก",
+              "confidence": 0.81938950997037,
+              "exact": false,
+              "segmentIndex": 3
+            },
+            {
+              "start": 30.08,
+              "end": 31.76,
+              "transcriptMatch": "ง ไม่ต้องคิดมา",
+              "confidence": 0.816324749599569,
+              "exact": false,
+              "segmentIndex": 3
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        },
+        {
+          "cueCardId": "draft-its-okay-5",
+          "thai": "ชิลๆ",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 23.36,
+              "end": 24.84,
+              "transcriptMatch": " ชิลๆ",
+              "confidence": 0.9941328340768814,
+              "exact": true,
+              "segmentIndex": 2
+            },
+            {
+              "start": 21.9,
+              "end": 23.06,
+              "transcriptMatch": "ชิลๆ",
+              "confidence": 0.9220329234004021,
+              "exact": true,
+              "segmentIndex": 2
+            },
+            {
+              "start": 33.96,
+              "end": 33.96,
+              "transcriptMatch": " ชิลๆ",
+              "confidence": 0.8808409713837319,
+              "exact": true,
+              "segmentIndex": 3
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        }
+      ]
+    },
+    {
+      "lessonId": "large-numbers",
+      "sourceVideo": "/lessons/drafts/large-numbers/intro.mp4",
+      "sourceHash": "e90f4ddf03265fd55242ffb18eb06b75ec43d23eca480d8180f981a41f52d7b7",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:23:01.960Z",
+      "clips": [
+        {
+          "cueCardId": "draft-large-numbers-1",
+          "thai": "หนึ่ง",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 17.94,
+              "end": 18.82,
+              "transcriptMatch": " หนึ่ง",
+              "confidence": 0.9999825692176819,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 13.92,
+              "end": 14.66,
+              "transcriptMatch": " หนึ่ง",
+              "confidence": 0.9999773979187012,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 11.86,
+              "end": 12.54,
+              "transcriptMatch": " หนึ่ง",
+              "confidence": 0.999972734451294,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 15.94,
+              "end": 16.7,
+              "transcriptMatch": " หนึ่ง",
+              "confidence": 0.9999650955200196,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 8.38,
+              "end": 9.16,
+              "transcriptMatch": " หนึ่ง",
+              "confidence": 0.9999610364437104,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 20.12,
+              "end": 21.04,
+              "transcriptMatch": " หนึ่ง",
+              "confidence": 0.9999609488248825,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 6.7,
+              "end": 7.58,
+              "transcriptMatch": " หนึ่ง",
+              "confidence": 0.9999538874626159,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 3.42,
+              "end": 4.26,
+              "transcriptMatch": " หนึ่ง",
+              "confidence": 0.9999502986669541,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 4.84,
+              "end": 5.78,
+              "transcriptMatch": " หนึ่ง",
+              "confidence": 0.9999496227502823,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 1.86,
+              "end": 2.56,
+              "transcriptMatch": " หนึ่ง",
+              "confidence": 0.9999002254009247,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 0,
+              "end": 0.7,
+              "transcriptMatch": "หนึ่ง",
+              "confidence": 0.9733858934789896,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 17.4,
+              "end": 18.82,
+              "transcriptMatch": "าน หนึ่ง",
+              "confidence": 0.8533149154980978,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 13.4,
+              "end": 14.66,
+              "transcriptMatch": "าน หนึ่ง",
+              "confidence": 0.853310283501943,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 11.3,
+              "end": 12.54,
+              "transcriptMatch": "าน หนึ่ง",
+              "confidence": 0.8533075669606527,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 15.38,
+              "end": 16.7,
+              "transcriptMatch": "าน หนึ่ง",
+              "confidence": 0.8533008364041647,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 11.86,
+              "end": 12.84,
+              "transcriptMatch": " หนึ่งร",
+              "confidence": 0.8532963445981344,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 19.64,
+              "end": 21.04,
+              "transcriptMatch": "าน หนึ่ง",
+              "confidence": 0.8532955935796103,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 6.26,
+              "end": 7.58,
+              "transcriptMatch": "น หนึ่ง",
+              "confidence": 0.8532880490620931,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 4.52,
+              "end": 5.78,
+              "transcriptMatch": "น หนึ่ง",
+              "confidence": 0.8532718756993612,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 2.94,
+              "end": 4.26,
+              "transcriptMatch": "อย หนึ่ง",
+              "confidence": 0.8532499888737997,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 1.66,
+              "end": 2.56,
+              "transcriptMatch": "บ หนึ่ง",
+              "confidence": 0.8532483652432761,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 7.8,
+              "end": 9.16,
+              "transcriptMatch": "น หนึ่ง",
+              "confidence": 0.8530455101331076,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 1.86,
+              "end": 2.8,
+              "transcriptMatch": " หนึ่งร",
+              "confidence": 0.8529599126180014,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 4.84,
+              "end": 6.02,
+              "transcriptMatch": " หนึ่งหม",
+              "confidence": 0.8493890255292257,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 0,
+              "end": 1.48,
+              "transcriptMatch": "หนึ่ง ส",
+              "confidence": 0.8316380430658659,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        }
+      ]
+    },
+    {
+      "lessonId": "making-up",
+      "sourceVideo": "/lessons/drafts/making-up/intro.mp4",
+      "sourceHash": "12aa3b11f037d675f0704a6f8feaa6937412049dc53c4510e52b90aa18a0388f",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:33:49.031Z",
+      "clips": [
+        {
+          "cueCardId": "draft-making-up-1",
+          "thai": "ขอโทษครับ",
+          "audio": "/lessons/drafts/making-up/audio/draft-making-up-1.m4a",
+          "status": "matched",
+          "start": 2.5100000000000002,
+          "end": 4.67,
+          "transcriptMatch": "ขอโทษครับ",
+          "confidence": 0.9945287308096886,
+          "candidates": [
+            {
+              "start": 2.66,
+              "end": 4.42,
+              "transcriptMatch": "ขอโทษครับ",
+              "confidence": 0.9945287308096886,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 2.66,
+              "end": 5.2,
+              "transcriptMatch": "ขอโทษครับ ผม",
+              "confidence": 0.9058896616299947,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 2.92,
+              "end": 4.42,
+              "transcriptMatch": "อโทษครับ",
+              "confidence": 0.9013645529368566,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 2.66,
+              "end": 4.22,
+              "transcriptMatch": "ขอโทษครั",
+              "confidence": 0.8959752184625656,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-making-up-2",
+          "thai": "ผมผิดไปแล้ว",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 4.42,
+              "end": 8.13,
+              "transcriptMatch": " ผมผิดไปแล้ว",
+              "confidence": 0.9968618762493133,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 4.22,
+              "end": 8.13,
+              "transcriptMatch": "บ ผมผิดไปแล้ว",
+              "confidence": 0.9238726536432902,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 4.42,
+              "end": 8.57,
+              "transcriptMatch": " ผมผิดไปแล้ว ด",
+              "confidence": 0.9205577731132507,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 4.42,
+              "end": 7.77,
+              "transcriptMatch": " ผมผิดไปแล้",
+              "confidence": 0.916432877608708,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 4.1,
+              "end": 8.13,
+              "transcriptMatch": "ับ ผมผิดไปแล้ว",
+              "confidence": 0.8620975177654853,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 4.22,
+              "end": 8.57,
+              "transcriptMatch": "บ ผมผิดไปแล้ว ด",
+              "confidence": 0.8591132676968207,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 4.42,
+              "end": 9.67,
+              "transcriptMatch": " ผมผิดไปแล้ว ดี",
+              "confidence": 0.8590707371601691,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        },
+        {
+          "cueCardId": "draft-making-up-3",
+          "thai": "ดีกันนะ",
+          "audio": "/lessons/drafts/making-up/audio/draft-making-up-3.m4a",
+          "status": "matched",
+          "start": 7.98,
+          "end": 10.56,
+          "transcriptMatch": " ดีกันนะ",
+          "confidence": 0.9904585039615631,
+          "candidates": [
+            {
+              "start": 8.13,
+              "end": 10.31,
+              "transcriptMatch": " ดีกันนะ",
+              "confidence": 0.9904585039615631,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 7.77,
+              "end": 10.31,
+              "transcriptMatch": "ว ดีกันนะ",
+              "confidence": 0.8818022700718471,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 8.13,
+              "end": 11.03,
+              "transcriptMatch": " ดีกันนะ ใ",
+              "confidence": 0.8726464198316847,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 8.57,
+              "end": 10.31,
+              "transcriptMatch": "ีกันนะ",
+              "confidence": 0.8688109294346401,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-making-up-4",
+          "thai": "ใจเย็นๆนะ",
+          "audio": "/lessons/drafts/making-up/audio/draft-making-up-4.m4a",
+          "status": "matched",
+          "start": 10.34,
+          "end": 13.16,
+          "transcriptMatch": " ใจเย็นๆนะ",
+          "confidence": 0.9833696138858795,
+          "candidates": [
+            {
+              "start": 10.49,
+              "end": 12.91,
+              "transcriptMatch": " ใจเย็นๆนะ",
+              "confidence": 0.9833696138858795,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 10.11,
+              "end": 12.91,
+              "transcriptMatch": "นะ ใจเย็นๆนะ",
+              "confidence": 0.8969564592540265,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 11.03,
+              "end": 12.91,
+              "transcriptMatch": "จเย็นๆนะ",
+              "confidence": 0.893524452580346,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 10.49,
+              "end": 13.51,
+              "transcriptMatch": " ใจเย็นๆนะ โ",
+              "confidence": 0.889367551624775,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-making-up-5",
+          "thai": "โอ๋ๆไม่โกรธนะ",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 12.99,
+              "end": 16.83,
+              "transcriptMatch": " โอ๋ๆไม่โกรธนะ",
+              "confidence": 0.969070764221251,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 12.63,
+              "end": 16.83,
+              "transcriptMatch": "นะ โอ๋ๆไม่โกรธนะ",
+              "confidence": 0.9053823890417283,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 13.51,
+              "end": 16.83,
+              "transcriptMatch": "อ๋ๆไม่โกรธนะ",
+              "confidence": 0.9047502213713642,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 15.19,
+              "end": 16.83,
+              "transcriptMatch": "๋ๆไม่โกรธนะ",
+              "confidence": 0.8341405463113616,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 12.99,
+              "end": 16.63,
+              "transcriptMatch": " โอ๋ๆไม่โกรธ",
+              "confidence": 0.8310063970269491,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        }
+      ]
+    },
+    {
+      "lessonId": "movie-invitation",
+      "sourceVideo": "/lessons/drafts/movie-invitation/intro.mp4",
+      "sourceHash": "987613dd5f5722c3c404e70d7ee6854d799815c3689627c131d2cc8d512bb7ab",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:30:25.516Z",
+      "clips": [
+        {
+          "cueCardId": "draft-movie-invitation-1",
+          "thai": "ไปกินข้าวกันมั้ย",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 4.4,
+              "end": 6.74,
+              "transcriptMatch": "ไปกินข้าวกันมั้ย",
+              "confidence": 0.982843718459973,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 4.4,
+              "end": 6.5,
+              "transcriptMatch": "ไปกินข้าวกันมั้",
+              "confidence": 0.926455598399043,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 4.4,
+              "end": 8.94,
+              "transcriptMatch": "ไปกินข้าวกันมั้ย ไป",
+              "confidence": 0.9246802754925579,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 4.68,
+              "end": 6.74,
+              "transcriptMatch": "กินข้าวกันมั้ย",
+              "confidence": 0.8764184256643057,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 4.4,
+              "end": 9.62,
+              "transcriptMatch": "ไปกินข้าวกันมั้ย ไปด",
+              "confidence": 0.8389631072502386,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        },
+        {
+          "cueCardId": "draft-movie-invitation-2",
+          "thai": "ไปดูหนังกันมั้ย",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 6.74,
+              "end": 11.14,
+              "transcriptMatch": " ไปดูหนังกันมั้ย",
+              "confidence": 0.9896273881196975,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 6.5,
+              "end": 11.14,
+              "transcriptMatch": "ย ไปดูหนังกันมั้ย",
+              "confidence": 0.9353869089713462,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 6.74,
+              "end": 13.4,
+              "transcriptMatch": " ไปดูหนังกันมั้ย ไป",
+              "confidence": 0.9352455458274254,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 6.74,
+              "end": 10.88,
+              "transcriptMatch": " ไปดูหนังกันมั้",
+              "confidence": 0.9300194564443647,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 6.5,
+              "end": 13.4,
+              "transcriptMatch": "ย ไปดูหนังกันมั้ย ไป",
+              "confidence": 0.8873772493029843,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 6.18,
+              "end": 11.14,
+              "transcriptMatch": "ั้ย ไปดูหนังกันมั้ย",
+              "confidence": 0.8871508386756192,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 8.94,
+              "end": 11.14,
+              "transcriptMatch": "ดูหนังกันมั้ย",
+              "confidence": 0.8810545992273273,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 6.5,
+              "end": 10.88,
+              "transcriptMatch": "ย ไปดูหนังกันมั้",
+              "confidence": 0.872254042784373,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 6.18,
+              "end": 13.4,
+              "transcriptMatch": "ั้ย ไปดูหนังกันมั้ย ไป",
+              "confidence": 0.8444791296323141,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 6.74,
+              "end": 13.64,
+              "transcriptMatch": " ไปดูหนังกันมั้ย ไปด",
+              "confidence": 0.8442567957582928,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        },
+        {
+          "cueCardId": "draft-movie-invitation-3",
+          "thai": "ไปดื่มกาแฟกันมั้ย",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 11.14,
+              "end": 15.48,
+              "transcriptMatch": " ไปดื่มกาแฟกันมั้ย",
+              "confidence": 0.9992604429381234,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 10.88,
+              "end": 15.48,
+              "transcriptMatch": "ย ไปดื่มกาแฟกันมั้ย",
+              "confidence": 0.9504196114010282,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 11.14,
+              "end": 16.08,
+              "transcriptMatch": " ไปดื่มกาแฟกันมั้ย อย",
+              "confidence": 0.9499714416927761,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 11.14,
+              "end": 15.26,
+              "transcriptMatch": " ไปดื่มกาแฟกันมั้",
+              "confidence": 0.947439535796912,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 10.56,
+              "end": 15.48,
+              "transcriptMatch": "ั้ย ไปดื่มกาแฟกันมั้ย",
+              "confidence": 0.9067099847840636,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 10.88,
+              "end": 16.08,
+              "transcriptMatch": "ย ไปดื่มกาแฟกันมั้ย อย",
+              "confidence": 0.9062988124238818,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 13.4,
+              "end": 15.48,
+              "transcriptMatch": "ดื่มกาแฟกันมั้ย",
+              "confidence": 0.8958538776824917,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 10.88,
+              "end": 15.26,
+              "transcriptMatch": "ย ไปดื่มกาแฟกันมั้",
+              "confidence": 0.8957303343099706,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 10.56,
+              "end": 16.08,
+              "transcriptMatch": "ั้ย ไปดื่มกาแฟกันมั้ย อย",
+              "confidence": 0.8669837516055388,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 11.14,
+              "end": 16.18,
+              "transcriptMatch": " ไปดื่มกาแฟกันมั้ย อยาก",
+              "confidence": 0.8669268982410431,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 10.56,
+              "end": 15.26,
+              "transcriptMatch": "ั้ย ไปดื่มกาแฟกันมั้",
+              "confidence": 0.8526315973599752,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 13.64,
+              "end": 15.48,
+              "transcriptMatch": "ื่มกาแฟกันมั้ย",
+              "confidence": 0.8440597477379967,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 13.4,
+              "end": 15.26,
+              "transcriptMatch": "ดื่มกาแฟกันมั้",
+              "confidence": 0.8440385243121316,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 11.14,
+              "end": 14.92,
+              "transcriptMatch": " ไปดื่มกาแฟกันม",
+              "confidence": 0.8438517340842415,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 13.4,
+              "end": 16.08,
+              "transcriptMatch": "ดื่มกาแฟกันมั้ย อย",
+              "confidence": 0.8436517052389995,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        },
+        {
+          "cueCardId": "draft-movie-invitation-4",
+          "thai": "อยากไปเดทกับผมมั้ย",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 15.48,
+              "end": 19.4,
+              "transcriptMatch": " อยากไปเดทกับผมมั้ย",
+              "confidence": 0.993638447523117,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 15.26,
+              "end": 19.4,
+              "transcriptMatch": "ย อยากไปเดทกับผมมั้ย",
+              "confidence": 0.947811320494061,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 14.92,
+              "end": 19.4,
+              "transcriptMatch": "ั้ย อยากไปเดทกับผมมั้ย",
+              "confidence": 0.9065398107596807,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 16.08,
+              "end": 19.4,
+              "transcriptMatch": "ากไปเดทกับผมมั้ย",
+              "confidence": 0.8958951870118728,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 15.48,
+              "end": 19.06,
+              "transcriptMatch": " อยากไปเดทกับผมม",
+              "confidence": 0.8457095275719961,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        }
+      ]
+    },
+    {
+      "lessonId": "parting-safely",
+      "sourceVideo": "/lessons/drafts/parting-safely/intro.mp4",
+      "sourceHash": "3bb51dfe20f4b41cec8987fd3fd2145c9708523038aa9781ee61d9bc164d2b71",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:30:51.727Z",
+      "clips": [
+        {
+          "cueCardId": "draft-parting-safely-1",
+          "thai": "ไปละนะ",
+          "audio": "/lessons/drafts/parting-safely/audio/draft-parting-safely-1.m4a",
+          "status": "matched",
+          "start": 4.109999999999999,
+          "end": 5.43,
+          "transcriptMatch": " ไปละนะ",
+          "confidence": 0.9688450032472611,
+          "candidates": [
+            {
+              "start": 4.26,
+              "end": 5.18,
+              "transcriptMatch": " ไปละนะ",
+              "confidence": 0.9688450032472611,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 3.32,
+              "end": 5.18,
+              "transcriptMatch": " instead ไปละนะ",
+              "confidence": 0.8486050092152188,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 4.26,
+              "end": 5.54,
+              "transcriptMatch": " ไปละนะ I",
+              "confidence": 0.8329156750610898,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-parting-safely-2",
+          "thai": "กลับดีๆนะ",
+          "audio": "/lessons/drafts/parting-safely/audio/draft-parting-safely-2.m4a",
+          "status": "matched",
+          "start": 8.73,
+          "end": 10.87,
+          "transcriptMatch": " กลับดีๆนะ",
+          "confidence": 0.9882175792753697,
+          "candidates": [
+            {
+              "start": 8.88,
+              "end": 10.62,
+              "transcriptMatch": " กลับดีๆนะ",
+              "confidence": 0.9882175792753697,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 8.34,
+              "end": 10.62,
+              "transcriptMatch": " safe กลับดีๆนะ",
+              "confidence": 0.9005093136628469,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 8.88,
+              "end": 11.24,
+              "transcriptMatch": " กลับดีๆนะ Get",
+              "confidence": 0.9001444903214773,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 9.34,
+              "end": 10.62,
+              "transcriptMatch": "ลับดีๆนะ",
+              "confidence": 0.8979189044710189,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-parting-safely-3",
+          "thai": "ขับรถดีๆ",
+          "audio": "/lessons/drafts/parting-safely/audio/draft-parting-safely-3.m4a",
+          "status": "matched",
+          "start": 6.17,
+          "end": 7.99,
+          "transcriptMatch": " ขับรถดีๆ",
+          "confidence": 0.9877002620697022,
+          "candidates": [
+            {
+              "start": 6.32,
+              "end": 7.74,
+              "transcriptMatch": " ขับรถดีๆ",
+              "confidence": 0.9877002620697022,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 5.8,
+              "end": 7.74,
+              "transcriptMatch": " off ขับรถดีๆ",
+              "confidence": 0.890516206158532,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 6.32,
+              "end": 7.64,
+              "transcriptMatch": " ขับรถดี",
+              "confidence": 0.8891937923431397,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 6.32,
+              "end": 8.34,
+              "transcriptMatch": " ขับรถดีๆ Drive",
+              "confidence": 0.883576876454883,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 6.76,
+              "end": 7.74,
+              "transcriptMatch": "ับรถดีๆ",
+              "confidence": 0.8761011985370091,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-parting-safely-4",
+          "thai": "ถึงแล้วบอกด้วยนะ",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 12.2,
+              "end": 13.76,
+              "transcriptMatch": " ถึงแล้วบอกด้วยนะ",
+              "confidence": 0.9994780766963959,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 11.52,
+              "end": 13.76,
+              "transcriptMatch": " safe ถึงแล้วบอกด้วยนะ",
+              "confidence": 0.9475467801417701,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 12.62,
+              "end": 13.76,
+              "transcriptMatch": "ึงแล้วบอกด้วยนะ",
+              "confidence": 0.9444497615640813,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 12.2,
+              "end": 13.66,
+              "transcriptMatch": " ถึงแล้วบอกด้วย",
+              "confidence": 0.8895364252003757,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 12.72,
+              "end": 13.76,
+              "transcriptMatch": "งแล้วบอกด้วยนะ",
+              "confidence": 0.8894003252983094,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        }
+      ]
+    },
+    {
+      "lessonId": "quantities",
+      "sourceVideo": "/lessons/drafts/quantities/intro.mp4",
+      "sourceHash": "a96e169c21cd452a36684c00ddfcbdbffc4c587216c12ee33fc9d5d8a945e427",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:24:08.369Z",
+      "clips": [
+        {
+          "cueCardId": "draft-quantities-1",
+          "thai": "ไม่มีเลย",
+          "audio": "/lessons/drafts/quantities/audio/draft-quantities-1.m4a",
+          "status": "matched",
+          "start": 0,
+          "end": 2.67,
+          "transcriptMatch": "ไม่มีเลย",
+          "confidence": 0.9726878544390202,
+          "candidates": [
+            {
+              "start": 0,
+              "end": 2.42,
+              "transcriptMatch": "ไม่มีเลย",
+              "confidence": 0.9726878544390202,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 0,
+              "end": 4.18,
+              "transcriptMatch": "ไม่มีเลย น",
+              "confidence": 0.8730514795167578,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-quantities-2",
+          "thai": "นิดหน่อย",
+          "audio": "/lessons/drafts/quantities/audio/draft-quantities-2.m4a",
+          "status": "matched",
+          "start": 2.5100000000000002,
+          "end": 5.83,
+          "transcriptMatch": " นิดหน่อย",
+          "confidence": 0.9921853876113892,
+          "candidates": [
+            {
+              "start": 2.66,
+              "end": 5.58,
+              "transcriptMatch": " นิดหน่อย",
+              "confidence": 0.9921853876113892,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 2.1,
+              "end": 5.58,
+              "transcriptMatch": "เลย นิดหน่อย",
+              "confidence": 0.8930117923494368,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 2.66,
+              "end": 6.18,
+              "transcriptMatch": " นิดหน่อย บ",
+              "confidence": 0.889227119816674,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 4.18,
+              "end": 5.58,
+              "transcriptMatch": "ิดหน่อย",
+              "confidence": 0.8883152108192444,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-quantities-3",
+          "thai": "บางส่วน",
+          "audio": "/lessons/drafts/quantities/audio/draft-quantities-3.m4a",
+          "status": "matched",
+          "start": 5.43,
+          "end": 8.71,
+          "transcriptMatch": " บางส่วน",
+          "confidence": 0.991836678981781,
+          "candidates": [
+            {
+              "start": 5.58,
+              "end": 8.46,
+              "transcriptMatch": " บางส่วน",
+              "confidence": 0.991836678981781,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 5.32,
+              "end": 8.46,
+              "transcriptMatch": "อย บางส่วน",
+              "confidence": 0.8829623351778303,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 6.18,
+              "end": 8.46,
+              "transcriptMatch": "างส่วน",
+              "confidence": 0.8733053375652858,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 5.58,
+              "end": 9.7,
+              "transcriptMatch": " บางส่วน คร",
+              "confidence": 0.8725733048575265,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 5.58,
+              "end": 8.14,
+              "transcriptMatch": " บางส่ว",
+              "confidence": 0.8644954096249172,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-quantities-4",
+          "thai": "ครึ่งนึง",
+          "audio": "/lessons/drafts/quantities/audio/draft-quantities-4.m4a",
+          "status": "matched",
+          "start": 8.31,
+          "end": 11.31,
+          "transcriptMatch": " ครึ่งนึง",
+          "confidence": 0.9773827465942928,
+          "candidates": [
+            {
+              "start": 8.46,
+              "end": 11.06,
+              "transcriptMatch": " ครึ่งนึง",
+              "confidence": 0.9773827465942928,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 8.14,
+              "end": 11.06,
+              "transcriptMatch": "น ครึ่งนึง",
+              "confidence": 0.8824285751415623,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 8.46,
+              "end": 11.9,
+              "transcriptMatch": " ครึ่งนึง ส",
+              "confidence": 0.8822491881085766,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 8.46,
+              "end": 10.78,
+              "transcriptMatch": " ครึ่งนึ",
+              "confidence": 0.863661168217659,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-quantities-5",
+          "thai": "ส่วนมาก",
+          "audio": "/lessons/drafts/quantities/audio/draft-quantities-5.m4a",
+          "status": "matched",
+          "start": 10.91,
+          "end": 14.17,
+          "transcriptMatch": " ส่วนมาก",
+          "confidence": 0.9996685397624969,
+          "candidates": [
+            {
+              "start": 11.06,
+              "end": 13.92,
+              "transcriptMatch": " ส่วนมาก",
+              "confidence": 0.9996685397624969,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 10.78,
+              "end": 13.92,
+              "transcriptMatch": "ง ส่วนมาก",
+              "confidence": 0.889674779347011,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 11.06,
+              "end": 14.94,
+              "transcriptMatch": " ส่วนมาก ท",
+              "confidence": 0.8896394620622907,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 11.9,
+              "end": 13.92,
+              "transcriptMatch": "่วนมาก",
+              "confidence": 0.8741806618145535,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 11.06,
+              "end": 13.4,
+              "transcriptMatch": " ส่วนมา",
+              "confidence": 0.8738915611675808,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-quantities-6",
+          "thai": "ทั้งหมด",
+          "audio": "/lessons/drafts/quantities/audio/draft-quantities-6.m4a",
+          "status": "matched",
+          "start": 13.77,
+          "end": 16.37,
+          "transcriptMatch": " ทั้งหมด",
+          "confidence": 0.9997497291564942,
+          "candidates": [
+            {
+              "start": 13.92,
+              "end": 16.12,
+              "transcriptMatch": " ทั้งหมด",
+              "confidence": 0.9997497291564942,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 13.4,
+              "end": 16.12,
+              "transcriptMatch": "ก ทั้งหมด",
+              "confidence": 0.8897884416580201,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 14.94,
+              "end": 16.12,
+              "transcriptMatch": "ั้งหมด",
+              "confidence": 0.8741066267660687,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 13.92,
+              "end": 15.8,
+              "transcriptMatch": " ทั้งหม",
+              "confidence": 0.873976183789117,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lessonId": "question-words",
+      "sourceVideo": "/lessons/drafts/question-words/intro.mp4",
+      "sourceHash": "d32d3fb844c51f0bc7420081cbae5f0fefc6801dcc05a3d858876a78939a7a25",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:19:37.851Z",
+      "clips": [
+        {
+          "cueCardId": "draft-question-words-1",
+          "thai": "อะไร",
+          "audio": "/lessons/drafts/question-words/audio/draft-question-words-1.m4a",
+          "status": "matched",
+          "start": 0.41000000000000003,
+          "end": 1.51,
+          "transcriptMatch": " อะไร",
+          "confidence": 0.9169803667068481,
+          "candidates": [
+            {
+              "start": 0.56,
+              "end": 1.26,
+              "transcriptMatch": " อะไร",
+              "confidence": 0.9169803667068481,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-question-words-2",
+          "thai": "ที่ไหน",
+          "audio": "/lessons/drafts/question-words/audio/draft-question-words-2.m4a",
+          "status": "matched",
+          "start": 1.6300000000000001,
+          "end": 4.49,
+          "transcriptMatch": " ที่ไหน",
+          "confidence": 0.983668802678585,
+          "candidates": [
+            {
+              "start": 1.78,
+              "end": 4.24,
+              "transcriptMatch": " ที่ไหน",
+              "confidence": 0.983668802678585,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 1.78,
+              "end": 5.7,
+              "transcriptMatch": " ที่ไหน เม",
+              "confidence": 0.8567456315926143,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 2.06,
+              "end": 4.24,
+              "transcriptMatch": "ี่ไหน",
+              "confidence": 0.8525955708821615,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 0.56,
+              "end": 4.24,
+              "transcriptMatch": " อะไร ที่ไหน",
+              "confidence": 0.844616829769952,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-question-words-3",
+          "thai": "เมื่อไหร่",
+          "audio": "/lessons/drafts/question-words/audio/draft-question-words-3.m4a",
+          "status": "matched",
+          "start": 4.09,
+          "end": 7.31,
+          "transcriptMatch": " เมื่อไหร่",
+          "confidence": 0.982391757113593,
+          "candidates": [
+            {
+              "start": 4.24,
+              "end": 7.06,
+              "transcriptMatch": " เมื่อไหร่",
+              "confidence": 0.982391757113593,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 3.68,
+              "end": 7.06,
+              "transcriptMatch": "หน เมื่อไหร่",
+              "confidence": 0.8965824913680553,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 4.24,
+              "end": 8.66,
+              "transcriptMatch": " เมื่อไหร่ ทำ",
+              "confidence": 0.8964293631613255,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 4.24,
+              "end": 6.66,
+              "transcriptMatch": " เมื่อไหร",
+              "confidence": 0.8835874362124336,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-question-words-4",
+          "thai": "ทำไม",
+          "audio": "/lessons/drafts/question-words/audio/draft-question-words-4.m4a",
+          "status": "matched",
+          "start": 6.909999999999999,
+          "end": 9.45,
+          "transcriptMatch": " ทำไม",
+          "confidence": 0.9967770898342132,
+          "candidates": [
+            {
+              "start": 7.06,
+              "end": 9.2,
+              "transcriptMatch": " ทำไม",
+              "confidence": 0.9967770898342132,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-question-words-5",
+          "thai": "ยังไง",
+          "audio": "/lessons/drafts/question-words/audio/draft-question-words-5.m4a",
+          "status": "matched",
+          "start": 9.45,
+          "end": 12.13,
+          "transcriptMatch": " ยังไง",
+          "confidence": 0.9964022650718689,
+          "candidates": [
+            {
+              "start": 9.6,
+              "end": 11.88,
+              "transcriptMatch": " ยังไง",
+              "confidence": 0.9964022650718689,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 8.66,
+              "end": 11.88,
+              "transcriptMatch": "ไม ยังไง",
+              "confidence": 0.8494788165887197,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lessonId": "time-units",
+      "sourceVideo": "/lessons/drafts/time-units/intro.mp4",
+      "sourceHash": "5f3c8cab77a3e0b214612ae27de44fa58607175710483881aa258818e21c7661",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:23:23.367Z",
+      "clips": [
+        {
+          "cueCardId": "draft-time-units-1",
+          "thai": "นาที",
+          "audio": "/lessons/drafts/time-units/audio/draft-time-units-1.m4a",
+          "status": "matched",
+          "start": 0.49,
+          "end": 2.35,
+          "transcriptMatch": " นาที",
+          "confidence": 0.9945807647705078,
+          "candidates": [
+            {
+              "start": 0.64,
+              "end": 2.1,
+              "transcriptMatch": " นาที",
+              "confidence": 0.9945807647705078,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-time-units-2",
+          "thai": "ชั่วโมง",
+          "audio": "/lessons/drafts/time-units/audio/draft-time-units-2.m4a",
+          "status": "matched",
+          "start": 1.9500000000000002,
+          "end": 5.17,
+          "transcriptMatch": " ชั่วโมง",
+          "confidence": 0.9928940844535827,
+          "candidates": [
+            {
+              "start": 2.1,
+              "end": 4.92,
+              "transcriptMatch": " ชั่วโมง",
+              "confidence": 0.9928940844535827,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 1.62,
+              "end": 4.92,
+              "transcriptMatch": "ี ชั่วโมง",
+              "confidence": 0.8838782048225403,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 2.1,
+              "end": 5.78,
+              "transcriptMatch": " ชั่วโมง ว",
+              "confidence": 0.8828896396500724,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 3.5,
+              "end": 4.92,
+              "transcriptMatch": "ั่วโมง",
+              "confidence": 0.8738227392605373,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 2.1,
+              "end": 4.4,
+              "transcriptMatch": " ชั่วโม",
+              "confidence": 0.8658657666615078,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-time-units-3",
+          "thai": "วัน",
+          "audio": "/lessons/drafts/time-units/audio/draft-time-units-3.m4a",
+          "status": "matched",
+          "start": 4.77,
+          "end": 7.01,
+          "transcriptMatch": " วัน",
+          "confidence": 0.9974237179756165,
+          "candidates": [
+            {
+              "start": 4.92,
+              "end": 6.76,
+              "transcriptMatch": " วัน",
+              "confidence": 0.9974237179756165,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-time-units-4",
+          "thai": "เดือน",
+          "audio": "/lessons/drafts/time-units/audio/draft-time-units-4.m4a",
+          "status": "matched",
+          "start": 6.609999999999999,
+          "end": 9.25,
+          "transcriptMatch": " เดือน",
+          "confidence": 0.9947036588191986,
+          "candidates": [
+            {
+              "start": 6.76,
+              "end": 9,
+              "transcriptMatch": " เดือน",
+              "confidence": 0.9947036588191986,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 6.34,
+              "end": 9,
+              "transcriptMatch": "น เดือน",
+              "confidence": 0.8493246548374495,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 6.76,
+              "end": 10.38,
+              "transcriptMatch": " เดือน ป",
+              "confidence": 0.8491625778873761,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-time-units-5",
+          "thai": "ปี",
+          "audio": "/lessons/drafts/time-units/audio/draft-time-units-5.m4a",
+          "status": "matched",
+          "start": 8.87,
+          "end": 11.19,
+          "transcriptMatch": " ปี",
+          "confidence": 0.9992781960964203,
+          "candidates": [
+            {
+              "start": 9.02,
+              "end": 10.94,
+              "transcriptMatch": " ปี",
+              "confidence": 0.9992781960964203,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lessonId": "times-of-day",
+      "sourceVideo": "/lessons/drafts/times-of-day/intro.mp4",
+      "sourceHash": "6a30c26d9d7687bcfa08545612b6a09dce58a361b0636306d1d9d4cf219caebc",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:23:45.573Z",
+      "clips": [
+        {
+          "cueCardId": "draft-times-of-day-1",
+          "thai": "เช้า",
+          "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-1.m4a",
+          "status": "matched",
+          "start": 0.61,
+          "end": 2.45,
+          "transcriptMatch": " เช้า",
+          "confidence": 0.98084253013134,
+          "candidates": [
+            {
+              "start": 0.76,
+              "end": 2.2,
+              "transcriptMatch": " เช้า",
+              "confidence": 0.98084253013134,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-times-of-day-2",
+          "thai": "สาย",
+          "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-2.m4a",
+          "status": "matched",
+          "start": 2.0500000000000003,
+          "end": 4.71,
+          "transcriptMatch": " สาย",
+          "confidence": 0.9810025715827941,
+          "candidates": [
+            {
+              "start": 2.2,
+              "end": 4.46,
+              "transcriptMatch": " สาย",
+              "confidence": 0.9810025715827941,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-times-of-day-3",
+          "thai": "เที่ยง",
+          "status": "unmatched",
+          "candidates": [],
+          "diagnostic": "No candidate reached the confidence threshold."
+        },
+        {
+          "cueCardId": "draft-times-of-day-4",
+          "thai": "บ่าย",
+          "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-4.m4a",
+          "status": "matched",
+          "start": 7.1899999999999995,
+          "end": 10.27,
+          "transcriptMatch": " บ่าย",
+          "confidence": 0.9760718727111817,
+          "candidates": [
+            {
+              "start": 7.34,
+              "end": 10.02,
+              "transcriptMatch": " บ่าย",
+              "confidence": 0.9760718727111817,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-times-of-day-5",
+          "thai": "เย็น",
+          "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-5.m4a",
+          "status": "matched",
+          "start": 9.87,
+          "end": 13.55,
+          "transcriptMatch": " เย็น",
+          "confidence": 0.9899545669555664,
+          "candidates": [
+            {
+              "start": 10.02,
+              "end": 13.3,
+              "transcriptMatch": " เย็น",
+              "confidence": 0.9899545669555664,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-times-of-day-6",
+          "thai": "กลางคืน",
+          "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-6.m4a",
+          "status": "matched",
+          "start": 13.15,
+          "end": 16.09,
+          "transcriptMatch": " กลางคืน",
+          "confidence": 0.9859671479463578,
+          "candidates": [
+            {
+              "start": 13.3,
+              "end": 15.84,
+              "transcriptMatch": " กลางคืน",
+              "confidence": 0.9859671479463578,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 13.64,
+              "end": 15.84,
+              "transcriptMatch": "ลางคืน",
+              "confidence": 0.8740506440571376,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 13.3,
+              "end": 15.56,
+              "transcriptMatch": " กลางคื",
+              "confidence": 0.8574613336494992,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lessonId": "waking-up",
+      "sourceVideo": "/lessons/drafts/waking-up/intro.mp4",
+      "sourceHash": "38ac7b13d8838e5d0be70af7769124b728df855f31cb215d72b864a2bfe1abd4",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:29:55.219Z",
+      "clips": [
+        {
+          "cueCardId": "draft-waking-up-1",
+          "thai": "ร้อนจัง",
+          "audio": "/lessons/drafts/waking-up/audio/draft-waking-up-1.m4a",
+          "status": "matched",
+          "start": 3.0100000000000002,
+          "end": 4.77,
+          "transcriptMatch": "ร้อนจัง",
+          "confidence": 0.9900586009025574,
+          "candidates": [
+            {
+              "start": 3.16,
+              "end": 4.52,
+              "transcriptMatch": "ร้อนจัง",
+              "confidence": 0.9900586009025574,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 3.6,
+              "end": 4.52,
+              "transcriptMatch": "้อนจัง",
+              "confidence": 0.8728787218502589,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 3.16,
+              "end": 5,
+              "transcriptMatch": "ร้อนจัง ถ",
+              "confidence": 0.8673915863888605,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 3.16,
+              "end": 4.32,
+              "transcriptMatch": "ร้อนจั",
+              "confidence": 0.8623679915836879,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-waking-up-2",
+          "thai": "ถึงยัง",
+          "audio": "/lessons/drafts/waking-up/audio/draft-waking-up-2.m4a",
+          "status": "matched",
+          "start": 4.39,
+          "end": 6.99,
+          "transcriptMatch": " ถึงยัง",
+          "confidence": 0.9817869338393211,
+          "candidates": [
+            {
+              "start": 4.54,
+              "end": 6.74,
+              "transcriptMatch": " ถึงยัง",
+              "confidence": 0.9817869338393211,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 4.32,
+              "end": 6.74,
+              "transcriptMatch": "ง ถึงยัง",
+              "confidence": 0.8586659745659148,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 4.54,
+              "end": 8.24,
+              "transcriptMatch": " ถึงยัง ต",
+              "confidence": 0.8581633469888142,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 5,
+              "end": 6.74,
+              "transcriptMatch": "ึงยัง",
+              "confidence": 0.851199754079183,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 4.54,
+              "end": 6.52,
+              "transcriptMatch": " ถึงยั",
+              "confidence": 0.8315021199782691,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-waking-up-3",
+          "thai": "ตื่นแล้ว",
+          "audio": "/lessons/drafts/waking-up/audio/draft-waking-up-3.m4a",
+          "status": "matched",
+          "start": 6.59,
+          "end": 10.29,
+          "transcriptMatch": " ตื่นแล้ว",
+          "confidence": 0.9983911716938019,
+          "candidates": [
+            {
+              "start": 6.74,
+              "end": 10.04,
+              "transcriptMatch": " ตื่นแล้ว",
+              "confidence": 0.9983911716938019,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 6.52,
+              "end": 10.04,
+              "transcriptMatch": "ง ตื่นแล้ว",
+              "confidence": 0.900825750789945,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 6.74,
+              "end": 10.98,
+              "transcriptMatch": " ตื่นแล้ว ห",
+              "confidence": 0.899912493872264,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 8.24,
+              "end": 10.04,
+              "transcriptMatch": "ื่นแล้ว",
+              "confidence": 0.8887850408554078,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 6.74,
+              "end": 9.66,
+              "transcriptMatch": " ตื่นแล้",
+              "confidence": 0.8880956902503967,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-waking-up-4",
+          "thai": "หิวแล้ว",
+          "audio": "/lessons/drafts/waking-up/audio/draft-waking-up-4.m4a",
+          "status": "matched",
+          "start": 9.889999999999999,
+          "end": 12.73,
+          "transcriptMatch": " หิวแล้ว",
+          "confidence": 0.9975666975975037,
+          "candidates": [
+            {
+              "start": 10.04,
+              "end": 12.48,
+              "transcriptMatch": " หิวแล้ว",
+              "confidence": 0.9975666975975037,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 9.66,
+              "end": 12.48,
+              "transcriptMatch": "ว หิวแล้ว",
+              "confidence": 0.8878955377851214,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 10.98,
+              "end": 12.48,
+              "transcriptMatch": "ิวแล้ว",
+              "confidence": 0.8726687771252224,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 10.04,
+              "end": 12.36,
+              "transcriptMatch": " หิวแล้",
+              "confidence": 0.8713811193874904,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-waking-up-5",
+          "thai": "กินไรดี",
+          "audio": "/lessons/drafts/waking-up/audio/draft-waking-up-5.m4a",
+          "status": "matched",
+          "start": 12.33,
+          "end": 15.49,
+          "transcriptMatch": " กินไรดี",
+          "confidence": 0.9815587329864502,
+          "candidates": [
+            {
+              "start": 12.48,
+              "end": 15.24,
+              "transcriptMatch": " กินไรดี",
+              "confidence": 0.9815587329864502,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 12.36,
+              "end": 15.24,
+              "transcriptMatch": "ว กินไรดี",
+              "confidence": 0.8741822225706918,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 12.48,
+              "end": 14.82,
+              "transcriptMatch": " กินไรด",
+              "confidence": 0.8525168086460659,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lessonId": "weather",
+      "sourceVideo": "/lessons/drafts/weather/intro.mp4",
+      "sourceHash": "dc1953b9f0ca785e90c0c58ef66859383eacb730ed155a3d269f91062a682846",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:26:01.953Z",
+      "clips": [
+        {
+          "cueCardId": "draft-weather-1",
+          "thai": "ร้อน",
+          "audio": "/lessons/drafts/weather/audio/draft-weather-1.m4a",
+          "status": "matched",
+          "start": 0.39,
+          "end": 1.73,
+          "transcriptMatch": " ร้อน",
+          "confidence": 0.9993429017066956,
+          "candidates": [
+            {
+              "start": 0.54,
+              "end": 1.48,
+              "transcriptMatch": " ร้อน",
+              "confidence": 0.9993429017066956,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-weather-2",
+          "thai": "เย็น",
+          "audio": "/lessons/drafts/weather/audio/draft-weather-2.m4a",
+          "status": "matched",
+          "start": 1.33,
+          "end": 3.75,
+          "transcriptMatch": " เย็น",
+          "confidence": 0.9770587703771889,
+          "candidates": [
+            {
+              "start": 1.48,
+              "end": 3.5,
+              "transcriptMatch": " เย็น",
+              "confidence": 0.9770587703771889,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-weather-3",
+          "thai": "หนาว",
+          "audio": "/lessons/drafts/weather/audio/draft-weather-3.m4a",
+          "status": "matched",
+          "start": 3.35,
+          "end": 6.07,
+          "transcriptMatch": " หนาว",
+          "confidence": 0.9973347449302673,
+          "candidates": [
+            {
+              "start": 3.5,
+              "end": 5.82,
+              "transcriptMatch": " หนาว",
+              "confidence": 0.9973347449302673,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-weather-4",
+          "thai": "ฝนตก",
+          "audio": "/lessons/drafts/weather/audio/draft-weather-4.m4a",
+          "status": "matched",
+          "start": 5.67,
+          "end": 7.91,
+          "transcriptMatch": " ฝนตก",
+          "confidence": 0.9989290690422058,
+          "candidates": [
+            {
+              "start": 5.82,
+              "end": 7.66,
+              "transcriptMatch": " ฝนตก",
+              "confidence": 0.9989290690422058,
+              "exact": true,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-weather-5",
+          "thai": "แดดออก",
+          "audio": "/lessons/drafts/weather/audio/draft-weather-5.m4a",
+          "status": "matched",
+          "start": 7.529999999999999,
+          "end": 9.77,
+          "transcriptMatch": " แดดออก",
+          "confidence": 0.996461925983429,
+          "candidates": [
+            {
+              "start": 7.68,
+              "end": 9.52,
+              "transcriptMatch": " แดดออก",
+              "confidence": 0.996461925983429,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 7.36,
+              "end": 9.52,
+              "transcriptMatch": "ก แดดออก",
+              "confidence": 0.8713183447292874,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 7.68,
+              "end": 10.72,
+              "transcriptMatch": " แดดออก เม",
+              "confidence": 0.8661776873043605,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 8.62,
+              "end": 9.52,
+              "transcriptMatch": "ดดออก",
+              "confidence": 0.8521827818950017,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-weather-6",
+          "thai": "เมฆมาก",
+          "audio": "/lessons/drafts/weather/audio/draft-weather-6.m4a",
+          "status": "matched",
+          "start": 9.37,
+          "end": 11.83,
+          "transcriptMatch": " เมฆมาก",
+          "confidence": 0.976386913433671,
+          "candidates": [
+            {
+              "start": 9.52,
+              "end": 11.58,
+              "transcriptMatch": " เมฆมาก",
+              "confidence": 0.976386913433671,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 9.08,
+              "end": 11.58,
+              "transcriptMatch": "อก เมฆมาก",
+              "confidence": 0.8553886117509434,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 9.52,
+              "end": 12.58,
+              "transcriptMatch": " เมฆมาก ล",
+              "confidence": 0.8551313228181431,
+              "exact": false,
+              "segmentIndex": 0
+            },
+            {
+              "start": 9.52,
+              "end": 11.18,
+              "transcriptMatch": " เมฆมา",
+              "confidence": 0.8218545060356459,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-weather-7",
+          "thai": "ลมแรง",
+          "audio": "/lessons/drafts/weather/audio/draft-weather-7.m4a",
+          "status": "matched",
+          "start": 11.43,
+          "end": 13.71,
+          "transcriptMatch": " ลมแรง",
+          "confidence": 0.9994947118759155,
+          "candidates": [
+            {
+              "start": 11.58,
+              "end": 13.46,
+              "transcriptMatch": " ลมแรง",
+              "confidence": 0.9994947118759155,
+              "exact": true,
+              "segmentIndex": 0
+            },
+            {
+              "start": 11.18,
+              "end": 13.46,
+              "transcriptMatch": "ก ลมแรง",
+              "confidence": 0.852909615834554,
+              "exact": false,
+              "segmentIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "lessonId": "what-are-you-doing",
+      "sourceVideo": "/lessons/drafts/what-are-you-doing/intro.mp4",
+      "sourceHash": "122ba024e22a4893251e3b20c0098db4c685a66ca8252c9e8fb881bb67daf931",
+      "model": "large-v3",
+      "generatedAt": "2026-08-25T22:29:28.418Z",
+      "clips": [
+        {
+          "cueCardId": "draft-what-are-you-doing-1",
+          "thai": "กำลังไป",
+          "audio": "/lessons/drafts/what-are-you-doing/audio/draft-what-are-you-doing-1.m4a",
+          "status": "matched",
+          "start": 3.89,
+          "end": 5.29,
+          "transcriptMatch": "กำลังไป",
+          "confidence": 0.9892950320243835,
+          "candidates": [
+            {
+              "start": 4.04,
+              "end": 5.04,
+              "transcriptMatch": "กำลังไป",
+              "confidence": 0.9892950320243835,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 4.24,
+              "end": 5.04,
+              "transcriptMatch": "ำลังไป",
+              "confidence": 0.8701694203785488,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 4.04,
+              "end": 6.98,
+              "transcriptMatch": "กำลังไป ทำ",
+              "confidence": 0.8651167916400092,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-what-are-you-doing-2",
+          "thai": "ทำอะไรอยู่",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 5.44,
+              "end": 8.58,
+              "transcriptMatch": " ทำอะไรอยู่",
+              "confidence": 0.9705077551305294,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 4.8,
+              "end": 8.58,
+              "transcriptMatch": "ไป ทำอะไรอยู่",
+              "confidence": 0.8961041959524154,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 5.44,
+              "end": 9.2,
+              "transcriptMatch": " ทำอะไรอยู่ อย",
+              "confidence": 0.8771180313825606,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 4.8,
+              "end": 9.2,
+              "transcriptMatch": "ไป ทำอะไรอยู่ อย",
+              "confidence": 0.8173466860254606,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        },
+        {
+          "cueCardId": "draft-what-are-you-doing-3",
+          "thai": "อยู่ไหน",
+          "audio": "/lessons/drafts/what-are-you-doing/audio/draft-what-are-you-doing-3.m4a",
+          "status": "matched",
+          "start": 8.43,
+          "end": 11.61,
+          "transcriptMatch": " อยู่ไหน",
+          "confidence": 0.9752852892875672,
+          "candidates": [
+            {
+              "start": 8.58,
+              "end": 11.36,
+              "transcriptMatch": " อยู่ไหน",
+              "confidence": 0.9752852892875672,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 7.98,
+              "end": 11.36,
+              "transcriptMatch": "ู่ อยู่ไหน",
+              "confidence": 0.8702101325988769,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 8.58,
+              "end": 13.36,
+              "transcriptMatch": " อยู่ไหน จะ",
+              "confidence": 0.8667098126411438,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-what-are-you-doing-4",
+          "thai": "จะไปไหน",
+          "audio": "/lessons/drafts/what-are-you-doing/audio/draft-what-are-you-doing-4.m4a",
+          "status": "matched",
+          "start": 11.33,
+          "end": 14.61,
+          "transcriptMatch": " จะไปไหน",
+          "confidence": 0.9953408902883529,
+          "candidates": [
+            {
+              "start": 11.48,
+              "end": 14.36,
+              "transcriptMatch": " จะไปไหน",
+              "confidence": 0.9953408902883529,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 9.92,
+              "end": 14.36,
+              "transcriptMatch": "หน จะไปไหน",
+              "confidence": 0.8862390394210815,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 11.48,
+              "end": 16.14,
+              "transcriptMatch": " จะไปไหน แล",
+              "confidence": 0.8807434048652649,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ]
+        },
+        {
+          "cueCardId": "draft-what-are-you-doing-5",
+          "thai": "แล้วเจอกัน",
+          "status": "ambiguous",
+          "candidates": [
+            {
+              "start": 14.36,
+              "end": 19.06,
+              "transcriptMatch": " แล้วเจอกัน",
+              "confidence": 0.9955266787324633,
+              "exact": true,
+              "segmentIndex": 1
+            },
+            {
+              "start": 13.8,
+              "end": 19.06,
+              "transcriptMatch": "หน แล้วเจอกัน",
+              "confidence": 0.9160793466866015,
+              "exact": false,
+              "segmentIndex": 1
+            },
+            {
+              "start": 14.36,
+              "end": 18.82,
+              "transcriptMatch": " แล้วเจอกั",
+              "confidence": 0.906784991145134,
+              "exact": false,
+              "segmentIndex": 1
+            }
+          ],
+          "diagnostic": "The top candidate is too close to another occurrence."
+        }
+      ]
+    }
+  ]
+}

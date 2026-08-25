@@ -1,0 +1,169 @@
+{
+  "lessonId": "connectors",
+  "sourceVideo": "/lessons/drafts/connectors/intro.mp4",
+  "sourceHash": "bfc7a8905266679b712968943e43755dfb33fa1a8c8ea3b2adca4710dc43fd1f",
+  "model": "large-v3",
+  "generatedAt": "2026-08-25T22:19:56.852Z",
+  "clips": [
+    {
+      "cueCardId": "draft-connectors-1",
+      "thai": "และก็",
+      "audio": "/lessons/drafts/connectors/audio/draft-connectors-1.m4a",
+      "status": "matched",
+      "start": 0,
+      "end": 1.71,
+      "transcriptMatch": "และก็",
+      "confidence": 0.9334783922880888,
+      "candidates": [
+        {
+          "start": 0,
+          "end": 1.46,
+          "transcriptMatch": "และก็",
+          "confidence": 0.9334783922880888,
+          "exact": true,
+          "segmentIndex": 0
+        },
+        {
+          "start": 0,
+          "end": 2.24,
+          "transcriptMatch": "และก็ ห",
+          "confidence": 0.7899291932781538,
+          "exact": false,
+          "segmentIndex": 0
+        }
+      ]
+    },
+    {
+      "cueCardId": "draft-connectors-2",
+      "thai": "หรือ",
+      "audio": "/lessons/drafts/connectors/audio/draft-connectors-2.m4a",
+      "status": "matched",
+      "start": 1.31,
+      "end": 3.47,
+      "transcriptMatch": " หรือ",
+      "confidence": 0.9866693639755248,
+      "candidates": [
+        {
+          "start": 1.46,
+          "end": 3.22,
+          "transcriptMatch": " หรือ",
+          "confidence": 0.9866693639755248,
+          "exact": true,
+          "segmentIndex": 0
+        }
+      ]
+    },
+    {
+      "cueCardId": "draft-connectors-3",
+      "thai": "แต่",
+      "audio": "/lessons/drafts/connectors/audio/draft-connectors-3.m4a",
+      "status": "matched",
+      "start": 3.0700000000000003,
+      "end": 5.21,
+      "transcriptMatch": " แต่",
+      "confidence": 0.9947920799255371,
+      "candidates": [
+        {
+          "start": 3.22,
+          "end": 4.96,
+          "transcriptMatch": " แต่",
+          "confidence": 0.9947920799255371,
+          "exact": true,
+          "segmentIndex": 0
+        }
+      ]
+    },
+    {
+      "cueCardId": "draft-connectors-4",
+      "thai": "ก็เลย",
+      "audio": "/lessons/drafts/connectors/audio/draft-connectors-4.m4a",
+      "status": "matched",
+      "start": 4.81,
+      "end": 6.63,
+      "transcriptMatch": " ก็เลย",
+      "confidence": 0.9670993983745575,
+      "candidates": [
+        {
+          "start": 4.96,
+          "end": 6.38,
+          "transcriptMatch": " ก็เลย",
+          "confidence": 0.9670993983745575,
+          "exact": true,
+          "segmentIndex": 0
+        },
+        {
+          "start": 3.92,
+          "end": 6.38,
+          "transcriptMatch": "่ ก็เลย",
+          "confidence": 0.8277105348308882,
+          "exact": false,
+          "segmentIndex": 0
+        },
+        {
+          "start": 4.96,
+          "end": 6.82,
+          "transcriptMatch": " ก็เลย ก",
+          "confidence": 0.8123187052210172,
+          "exact": false,
+          "segmentIndex": 0
+        }
+      ]
+    },
+    {
+      "cueCardId": "draft-connectors-5",
+      "thai": "กับ",
+      "audio": "/lessons/drafts/connectors/audio/draft-connectors-5.m4a",
+      "status": "matched",
+      "start": 6.2299999999999995,
+      "end": 8.57,
+      "transcriptMatch": " กับ",
+      "confidence": 0.9530362594127655,
+      "candidates": [
+        {
+          "start": 6.38,
+          "end": 8.32,
+          "transcriptMatch": " กับ",
+          "confidence": 0.9530362594127655,
+          "exact": true,
+          "segmentIndex": 0
+        }
+      ]
+    },
+    {
+      "cueCardId": "draft-connectors-6",
+      "thai": "เพราะว่า",
+      "audio": "/lessons/drafts/connectors/audio/draft-connectors-6.m4a",
+      "status": "matched",
+      "start": 8.17,
+      "end": 10.73,
+      "transcriptMatch": " เพราะว่า",
+      "confidence": 0.9984591894490378,
+      "candidates": [
+        {
+          "start": 8.32,
+          "end": 10.48,
+          "transcriptMatch": " เพราะว่า",
+          "confidence": 0.9984591894490378,
+          "exact": true,
+          "segmentIndex": 0
+        },
+        {
+          "start": 8.1,
+          "end": 10.48,
+          "transcriptMatch": "บ เพราะว่า",
+          "confidence": 0.9008334141804112,
+          "exact": false,
+          "segmentIndex": 0
+        },
+        {
+          "start": 8.32,
+          "end": 10.28,
+          "transcriptMatch": " เพราะว่",
+          "confidence": 0.8882130271196366,
+          "exact": false,
+          "segmentIndex": 0
+        }
+      ]
+    }
+  ]
+}
