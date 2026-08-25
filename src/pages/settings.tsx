@@ -72,7 +72,7 @@ export default function SettingsPage() {
 
         <section className="settings-section">
           <div className="settings-title"><Languages size={20} /><div><p className="eyebrow">Language display</p><h2>Reading support</h2></div></div>
-          <SettingRow title="Thai script" description="Show Thai text in transcripts, cards, and answer choices.">
+          <SettingRow title="Thai script" description="Show Thai text in cards and answer choices.">
             <Switch checked={settings.showThaiScript} onChange={(value) => updateSettings({ showThaiScript: value })} label="Thai script" />
           </SettingRow>
           <SettingRow title="Romanization" description="Show tone-marked romanization alongside Thai.">

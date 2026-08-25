@@ -15,12 +15,12 @@ describe("IndexedDB snapshot persistence", () => {
     await db.delete();
   });
 
-  it("round-trips the active fixed queue and answers", async () => {
+  it("discards an active scored session for an editorial draft", async () => {
     const activeSession = buildSession({ mode: "introduction", lesson: firstLesson, snapshot: defaultSnapshot, today: "2026-08-24", nowIso: "2026-08-24T12:00:00.000Z" });
     const saved = { ...defaultSnapshot, activeSession: { ...activeSession, stage: "cue-cards" as const, cardIndex: 2 } };
     await writeSnapshot(saved);
     const result = await readSnapshot(defaultSnapshot);
-    expect(result.snapshot.activeSession).toEqual(saved.activeSession);
+    expect(result.snapshot.activeSession).toBeNull();
     expect(result.incompatible).toBe(false);
   });
 
