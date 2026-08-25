@@ -1,128 +1,172 @@
 # Thai Study
 
-Thai Study is a private-use, offline-first notebook for learning conversational
-Thai from short, authorized video lessons. Its learning loop is intentionally
-quiet:
+Thai Study is an offline-first, static PWA for learning conversational Thai
+from short, authorized video lessons. Its learning loop is intentionally quiet:
 
 > watch → notice → make a first pass → retrieve tomorrow → return later
 
 There are no points, hearts, achievements, checkpoint statistics, or course
 path. The interface presents one relevant action at a time.
 
+## Current curriculum state
+
+The repository contains 24 locally bundled Reel plans in an editorially useful
+order. Every draft has a same-origin MP4, poster, and confirmed duration. Twelve
+also have machine-generated WebVTT and timestamped machine transcript notes.
+
+All 24 remain explicitly `draft`. Machine output is shown only in the draft
+preview with an unverified label; it is never used for cue cards, scored
+questions, mastery, or review scheduling. An Instagram URL is attribution, not
+evidence that the dialogue or timestamps were verified.
+
+The reviewed registry is currently empty, so there are zero active study
+lessons. Today shows an editorial hold and Library exposes the ordered local
+draft previews. This is intentional: the app does not invent Thai, guess
+timestamps, synthesize substitute phrase audio, or publish automatic
+transcription merely to make the study loop appear populated.
+
+The draft inventory lives in `src/content/draft-reels.json`; reviewed lessons
+and cue cards live in `src/content/lesson-packages.json`. A reviewed lesson with
+the same stable ID replaces its draft plan after it passes the publication
+gate.
+
+## Publication gate
+
+A release-ready `VideoLesson` must have all of the following:
+
+- an authorized same-origin local MP4, local poster, local WebVTT captions,
+  confirmed duration, and reviewed caption status;
+- a nonempty timestamped transcript whose lines are all verified and remain
+  within the confirmed media duration;
+- 5–10 verified cue cards, each linked to real transcript lines and bundled
+  with local phrase audio;
+- at least two valid scored question variants for every cue-card item and at
+  least ten valid scored questions overall;
+- scored coverage of listening, situation/response, meaning recognition, and
+  phrase recall through phrase construction;
+- explicit bundled local audio for every listening question.
+
+Validation also rejects missing assets, invalid or orphaned references,
+duplicate lesson/order/cue-card/question/transcript IDs, duplicate cue-card
+entries, unreachable or ambiguous answers, insufficient cue-card coverage, and
+questions that depend on unavailable media or unverified language. See
+[the curriculum authoring guide](docs/CURRICULUM_AUTHORING.md) for the package
+contract and review workflow.
+
 ## Learning behavior
 
-- A first introduction requires a completed local video playback, or an
-  explicit media-error bypass, before 5–10 cue cards and a short diagnostic.
+Once a lesson passes that gate:
+
+- A first introduction requires completed local video playback, or an explicit
+  media-error bypass, before 5–10 cue cards and a short diagnostic.
 - The diagnostic never grants mastery. A mastery check first becomes available
   on the next local calendar day.
 - A mastery session begins with meaning/context retrieval cards and ends with
   ten active-lesson questions. Nine correct answers are required.
 - Up to three due questions from older mastered lessons may be interleaved.
-  They never affect the ten-question gate or relock a lesson.
+  They do not affect the ten-question gate or relock a lesson.
 - Review intervals follow roughly 2, 5, 12, and 30 days, then adapt. A missed
   review returns tomorrow.
-- Video, cue-card, retrieval, and quiz progress is durable. The fixed question
-  queue, shuffled choices, current position, and answers are stored in
-  IndexedDB.
+- Video, cue-card, retrieval, and quiz progress is durable. The exact question
+  queue, shuffled choices, current position, and answers are stored locally.
 - Replays are disposable and never change progress, review schedules,
   consistency, or attempts.
 
 Local calendar helpers avoid elapsed-hour calculations, so eligibility and
 consistency remain stable across daylight-saving transitions and missed days.
 
-## Stack and local data
+## Stack, persistence, and offline behavior
 
 - Next.js 16 and React 19, statically exported through Vinext/Vite
 - Zustand for live client state
-- Dexie/IndexedDB for durable version-2 data
+- Dexie/IndexedDB for durable schema-v3 data
 - Zod for curriculum, persistence, import, and export contracts
 - Framer Motion, Howler, and Lucide
-- A scoped service worker for the shell and safe complete assets
+- A prefix-scoped, versioned service worker for the application shell and safe
+  complete assets
 
-The version-2 IndexedDB schema replaces the incompatible foundation prototype
-record and shows one concise notice when that reset occurs. Export and import
-accept only the current schema. A stale imported session is discarded without
-destroying otherwise valid progress.
+Schema v3 is intentionally incompatible with earlier prototypes. The first v3
+launch clears old progress **and settings** instead of attempting a migration,
+then shows one concise redesign notice. Export emits only a v3 snapshot. Import
+rejects malformed, v1, or v2 files with a plain-language message and changes
+nothing.
 
-## First video and authorized media
+Valid v3 imports and resumed records are reconciled against the bundled
+curriculum version. Progress, reviews, attempts, and completed sessions that
+still point to published curriculum are retained. An active session is kept
+only when its lesson, cards, question IDs, exact queue, shuffle permutations,
+answers, and stage remain valid; otherwise that active session is discarded
+without destroying the rest of the valid record.
 
-The first lesson keeps this authoring/source note:
+Service-worker caches use the v3 product namespace, deployment scope, and a
+content-derived build revision. Activation removes older owned caches. The
+hashed application shell is precached, while MP4 and byte-range responses stay
+network-only so a partial video response can never be mistaken for a complete
+offline asset. Video failure has an explicit retry/fallback path.
 
-<https://www.instagram.com/learnthai_irl/reel/Db-0OFPSuuJ/>
+## Author a reviewed lesson
 
-The repository does not scrape Instagram, embed the Reel at runtime, or claim a
-guessed transcript is verified. To save an authorized copy locally:
+Acquire media only through an authorized manual transfer or a creator-enabled
+download. The application and lesson importer do not fetch Instagram media.
 
-1. Use Instagram's visible **Download** action if the creator enabled it, or ask
-   the creator for the original MP4. This is the acquisition step; the app has
-   no downloader.
-2. Put the untouched file at
-   `content-inbox/<lesson-id>/source.mp4`. The entire inbox is gitignored.
-3. Add `lesson.json`, `captions.vtt`, and an optional `audio/` directory using
-   the reviewed-package contract in
-   [docs/CURRICULUM_AUTHORING.md](docs/CURRICULUM_AUTHORING.md).
-4. Validate without changing the repository:
+1. Put the reviewed package in `content-inbox/<lesson-id>/` using the structure
+   in [docs/CURRICULUM_AUTHORING.md](docs/CURRICULUM_AUTHORING.md).
+2. Validate without changing the repository:
 
    ```bash
    npm run lesson:import -- content-inbox/<lesson-id>
    ```
 
-5. After review, normalize and install the package:
+3. Correct every reported editorial, reference, answer, or media issue.
+4. Normalize and install the accepted package:
 
    ```bash
    npm run lesson:import -- content-inbox/<lesson-id> --apply
    ```
 
-The importer requires `ffmpeg`. It writes an H.264/AAC fast-start MP4, poster,
-captions, and phrase audio below `public/lessons/<lesson-id>/`, then updates the
-ordered JSON curriculum registry. Until that completes, lesson one remains
-visibly marked as draft and its explicit “Continue without video” route keeps
-the engine testable without pretending media exists.
+The importer requires `ffmpeg` and `ffprobe`. It emits H.264/AAC fast-start
+video, a JPEG poster, reviewed WebVTT, and local audio under
+`public/lessons/<lesson-id>/`, then updates the ordered reviewed registry.
 
-## Add future daily lessons
+## Run and build
 
-Use the same reviewed-package pipeline for every new Reel:
-
-1. Record the source URL and permission scope.
-2. Acquire the authorized original or creator-enabled download manually.
-3. Produce a timestamped transcript and WebVTT captions.
-4. Have the Thai, romanization, natural meaning, and cultural notes reviewed.
-5. Author 5–10 cue cards and at least ten deterministic scored questions with
-   complete cue-card coverage.
-6. Bundle phrase/listening audio, validate, preview locally, and commit the
-   generated lesson assets and registry update.
-
-This deliberately automates normalization and validation, not acquisition or
-language judgment. It remains dependable if Instagram changes its page markup,
-and it prevents a daily post from becoming curriculum before review.
-
-## Run and verify
-
-Node.js 22+ and `ffmpeg` are recommended.
+Node.js 22+ is recommended. `ffmpeg` and `ffprobe` are additionally required
+for reviewed lesson imports.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Run the full release gate:
+Run the release checks without automated tests:
 
 ```bash
-npm run check
+npm run check:release
 ```
 
-This runs curriculum validation, TypeScript, ESLint, Vitest, and the static
-production build. The site is emitted to `dist/client/`.
+`check:release` validates curriculum and assets, type-checks, lints, and builds
+the static site. The broader `npm run check` command additionally runs Vitest.
+The production artifact is written to `dist/client/`.
 
-## GitHub Pages and privacy
+To reproduce a GitHub Pages project-site build below `/Noklingo`:
 
-The workflow deploys below `/<repository-name>` and passes public assets through
-the shared prefix helper. Video files are same-origin and never eagerly
-requested for locked lessons. MP4 and byte-range responses remain outside the
-service-worker cache; playback failure always has a deliberate study fallback.
+```bash
+NEXT_PUBLIC_BASE_PATH=/Noklingo npm run build
+```
 
-Access control is not implemented in this release. Ordinary personal GitHub
-Pages sites and their bundled MP4 files are public, even when the source
-repository is private. Do not deploy media whose permission is limited to local
-use until a real authenticated hosting boundary is selected. A client-side
-password prompt would not protect static files.
+Use the actual repository name in place of `Noklingo`. The finalizer validates
+that emitted routes, manifest URLs, icons, service-worker precache entries, and
+other internal references remain inside that prefix. The Pages workflow sets
+the prefix automatically.
+
+Before release, manually exercise the vertical slice at desktop and narrow
+mobile breakpoints, including iPhone Safari/PWA behavior, light and dark modes,
+reduced motion, captions, media-failure recovery, offline shell navigation, and
+horizontal-overflow checks.
+
+## GitHub Pages and media visibility
+
+Access control is not implemented. A normal GitHub Pages project and every
+bundled MP4 are public even when the source repository is private. Do not deploy
+media whose permission is limited to local use. A client-side password prompt
+would not protect static assets; restricted media needs authenticated hosting.

@@ -1,48 +1,100 @@
 "use client";
 
-import { useState } from "react";
-import { Volume2 } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { LoaderCircle, RotateCcw, Volume2, VolumeX } from "lucide-react";
 import { Howl } from "howler";
 import type { CueCard } from "@/domain/schemas";
 import { assetPath } from "@/lib/asset-path";
 import { useStudyStore } from "@/state/study-store";
 import { withPreferredParticle } from "@/lib/language-display";
 
-export function PhraseAudioButton({ card, compact = false }: { card: CueCard; compact?: boolean }) {
-  const [speaking, setSpeaking] = useState(false);
-  const settings = useStudyStore((state) => state.settings);
+type AudioState = "idle" | "loading" | "playing" | "error";
 
-  function speechFallback() {
-    if (!("speechSynthesis" in window)) return setSpeaking(false);
-    window.speechSynthesis.cancel();
-    const spokenThai = withPreferredParticle(card.thai, settings.politeParticle).replaceAll("…", "");
-    const utterance = new SpeechSynthesisUtterance(spokenThai);
-    utterance.lang = "th-TH";
-    utterance.rate = settings.speechRate;
-    utterance.volume = settings.volume;
-    utterance.onend = () => setSpeaking(false);
-    utterance.onerror = () => setSpeaking(false);
-    window.speechSynthesis.speak(utterance);
+export function LocalAudioButton({
+  src,
+  label,
+  compact = false,
+}: {
+  src?: string;
+  label: string;
+  compact?: boolean;
+}) {
+  const [audioState, setAudioState] = useState<AudioState>("idle");
+  const soundRef = useRef<Howl | null>(null);
+  const settings = useStudyStore((state) => state.settings);
+  const updateSettings = useStudyStore((state) => state.updateSettings);
+
+  useEffect(() => () => { soundRef.current?.unload(); }, []);
+
+  function stopAndReset(next: AudioState) {
+    soundRef.current?.unload();
+    soundRef.current = null;
+    setAudioState(next);
   }
 
   function play() {
-    if (!settings.audioEnabled || speaking) return;
-    setSpeaking(true);
-    if (!card.phraseAudioSrc) return speechFallback();
+    if (!settings.audioEnabled) {
+      updateSettings({ audioEnabled: true });
+      setAudioState("idle");
+      return;
+    }
+    if (!src || audioState === "loading" || audioState === "playing") return;
+
+    setAudioState("loading");
     const sound = new Howl({
-      src: [assetPath(card.phraseAudioSrc)], html5: true,
-      rate: settings.speechRate, volume: settings.volume,
-      onend: () => setSpeaking(false),
-      onloaderror: () => speechFallback(),
-      onplayerror: () => speechFallback(),
+      src: [assetPath(src)],
+      html5: true,
+      rate: settings.speechRate,
+      volume: settings.volume,
+      onplay: () => setAudioState("playing"),
+      onend: () => stopAndReset("idle"),
+      onloaderror: () => stopAndReset("error"),
+      onplayerror: () => stopAndReset("error"),
     });
+    soundRef.current = sound;
     sound.play();
   }
 
+  const unavailable = !src;
+  const buttonLabel = !settings.audioEnabled
+    ? `Turn sound on for ${label}`
+    : unavailable
+      ? `${label} is unavailable`
+      : audioState === "error"
+        ? `Retry ${label}`
+        : audioState === "playing"
+          ? `Playing ${label}`
+          : `Play ${label}`;
+  const Icon = !settings.audioEnabled || unavailable
+    ? VolumeX
+    : audioState === "loading"
+      ? LoaderCircle
+      : audioState === "error"
+        ? RotateCcw
+        : Volume2;
+
   return (
-    <button className={compact ? "icon-button" : "audio-button"} onClick={play} disabled={!settings.audioEnabled} aria-label={`Hear ${withPreferredParticle(card.thai, settings.politeParticle)}`}>
-      <Volume2 size={compact ? 18 : 17} aria-hidden="true" />
-      {!compact && <span>{speaking ? "Speaking…" : "Hear phrase"}</span>}
+    <button
+      type="button"
+      className={`${compact ? "icon-button" : "audio-button"}${audioState === "error" ? " audio-error" : ""}`}
+      onClick={play}
+      disabled={unavailable}
+      aria-label={buttonLabel}
+      aria-live="polite"
+    >
+      <Icon className={audioState === "loading" ? "spin" : undefined} size={compact ? 18 : 17} aria-hidden="true" />
+      {!compact && <span>{buttonLabel}</span>}
     </button>
+  );
+}
+
+export function PhraseAudioButton({ card, compact = false }: { card: CueCard; compact?: boolean }) {
+  const particle = useStudyStore((state) => state.settings.politeParticle);
+  return (
+    <LocalAudioButton
+      src={card.phraseAudioSrc}
+      label={withPreferredParticle(card.thai, particle)}
+      compact={compact}
+    />
   );
 }

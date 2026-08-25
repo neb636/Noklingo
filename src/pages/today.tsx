@@ -1,7 +1,7 @@
 "use client";
 
-import { ArrowRight, BookOpen, CheckCircle2, Clock3, RotateCcw } from "lucide-react";
-import { motion, useReducedMotion } from "framer-motion";
+import { ArrowRight, BookOpen, CheckCircle2, Clock3, FileCheck2, RotateCcw } from "lucide-react";
+import { motion, useReducedMotionConfig } from "framer-motion";
 import { PageHeader } from "@/components/PageHeader";
 import { AppLink } from "@/components/AppLink";
 import { writeSnapshot } from "@/data/db";
@@ -12,7 +12,7 @@ import { snapshotFromState, useStudyStore } from "@/state/study-store";
 
 export default function TodayPage() {
   const state = useStudyStore();
-  const reduce = useReducedMotion();
+  const reduce = useReducedMotionConfig();
   const today = localDateKey();
   const action = state.hydrated ? selectTodayAction(snapshotFromState(state), today) : undefined;
   const dateLabel = new Intl.DateTimeFormat(undefined, { weekday: "long", month: "long", day: "numeric" }).format(new Date());
@@ -52,6 +52,7 @@ export default function TodayPage() {
           : action.kind === "mastery" ? <button className="primary-button" onClick={() => void start("mastery", action.lesson.id)}>Begin mastery check <ArrowRight size={18} /></button>
           : action.kind === "standalone-review" ? <button className="primary-button" onClick={() => void start("standalone-review")}>Begin due review <ArrowRight size={18} /></button>
           : action.kind === "wait" ? <AppLink href="/library/" className="secondary-button">Revisit the lesson <BookOpen size={18} /></AppLink>
+          : action.kind === "editorial-hold" ? <AppLink href="/library/" className="primary-button">Review draft library <FileCheck2 size={18} /></AppLink>
           : <AppLink href="/progress/" className="primary-button">View curriculum <CheckCircle2 size={18} /></AppLink>}
       </motion.section>
 
@@ -74,5 +75,6 @@ function actionCopy(action: ReturnType<typeof selectTodayAction> | undefined) {
   if (action.kind === "mastery") return { number: String(action.lesson.order).padStart(2, "0"), eyebrow: "Delayed mastery is due", title: action.lesson.title, description: "Bring the Thai back before looking, then complete a fixed ten-question check.", time: "About 7 minutes", detail: "9 of 10 to master" };
   if (action.kind === "wait") return { number: "⌁", eyebrow: "Let memory settle", title: `Return ${formatLocalDate(action.eligibleDate)}`, description: "The first pass is complete. The next useful action is delayed retrieval after a local calendar day has passed.", time: "No study due", detail: "Replay is optional" };
   if (action.kind === "standalone-review") return { number: "↻", eyebrow: "Spaced review is due", title: `${Math.min(10, action.dueCount)} older phrase${action.dueCount === 1 ? "" : "s"}`, description: "A fixed queue from mastered lessons is ready. Results appear only at the end.", time: "About 5 minutes", detail: `${action.dueCount} due item${action.dueCount === 1 ? "" : "s"}` };
+  if (action.kind === "editorial-hold") return { number: "⌁", eyebrow: "Curriculum in review", title: `${action.draftCount} local clips are staged`, description: "Every supplied Reel is available as an explicit draft preview. Scored study stays closed until a lesson passes transcript, audio, cue-card, and quiz review.", time: "Preview anytime", detail: "No draft affects progress" };
   return { number: "✓", eyebrow: "Curriculum complete", title: "Everything published is mastered", description: "There is no review due today. Your library and learning record remain available.", time: "Nothing due", detail: "Return when review is ready" };
 }

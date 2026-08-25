@@ -6,7 +6,7 @@ import type {
 import { addLocalDays, compareLocalDates, localDaysBetween } from "./local-date";
 import { deterministicShuffle } from "./deterministic";
 
-export const CURRICULUM_VERSION = "2026-08-greenfield-1";
+export const CURRICULUM_VERSION = "2026-08-25-reel-intake-v3";
 
 export function passesMastery(activeCorrect: number, activeTotal: number): boolean {
   return activeTotal === 10 && activeCorrect >= 9;
@@ -18,6 +18,7 @@ export type TodayAction =
   | { kind: "wait"; lesson: VideoLesson; eligibleDate: string }
   | { kind: "introduction"; lesson: VideoLesson }
   | { kind: "standalone-review"; dueCount: number }
+  | { kind: "editorial-hold"; draftCount: number }
   | { kind: "complete"; dueCount: number };
 
 export function lessonProgress(snapshot: Pick<AppSnapshot, "lessonProgress">, lessonId: string): LessonProgress | undefined {
@@ -51,6 +52,9 @@ export function selectTodayAction(snapshot: AppSnapshot, today: string): TodayAc
   if (next) return { kind: "introduction", lesson: next };
 
   const dueCount = dueReviewStates(snapshot, today).length;
+  if (!studyLessons.length && lessons.some((lesson) => lesson.contentStatus === "draft")) {
+    return { kind: "editorial-hold", draftCount: lessons.filter((lesson) => lesson.contentStatus === "draft").length };
+  }
   return dueCount > 0 ? { kind: "standalone-review", dueCount } : { kind: "complete", dueCount: 0 };
 }
 
@@ -130,6 +134,7 @@ export function buildSession(params: {
 
   return {
     id: `session-${params.mode}-${lessonId ?? "review"}-${params.today}-${attemptNumber}`,
+    curriculumVersion: CURRICULUM_VERSION,
     mode: params.mode, lessonId, localDate: params.today, attemptNumber, stage,
     cardOrder, cardIndex: 0, cardRevealed: false, videoCompleted: false, videoBypassed: false,
     queue, questionIndex: 0, answers: [], startedAt: params.nowIso,

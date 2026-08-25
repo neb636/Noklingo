@@ -8,13 +8,14 @@ import {
 } from "@/domain/schemas";
 import {
   answerFor, buildSession, findQuestion, gradeChoice, gradeConstruction, gradeMatching,
-  nextReviewState, passesMastery, updateConsistency,
+  nextReviewState, passesMastery, updateConsistency, CURRICULUM_VERSION,
 } from "@/engine/learning-engine";
 import { addLocalDays, localDateKey } from "@/engine/local-date";
 import { compareLocalDates } from "@/engine/local-date";
 
 export const defaultSnapshot: AppSnapshot = {
-  version: 2,
+  version: 3,
+  curriculumVersion: CURRICULUM_VERSION,
   lessonProgress: [],
   reviewStates: [],
   attempts: [],
@@ -31,8 +32,10 @@ export const defaultSnapshot: AppSnapshot = {
 interface StudyState extends AppSnapshot {
   hydrated: boolean;
   hydrationNotice: boolean;
-  hydrate: (snapshot: AppSnapshot, incompatible?: boolean) => void;
+  staleSessionNotice: boolean;
+  hydrate: (snapshot: AppSnapshot, incompatible?: boolean, staleSessionDropped?: boolean) => void;
   dismissHydrationNotice: () => void;
+  dismissStaleSessionNotice: () => void;
   startIntroduction: (lessonId: string) => void;
   startMastery: (lessonId: string) => void;
   startStandaloneReview: () => void;
@@ -72,8 +75,18 @@ export const useStudyStore = create<StudyState>((set) => ({
   ...defaultSnapshot,
   hydrated: false,
   hydrationNotice: false,
-  hydrate: (snapshot, incompatible = false) => set({ ...reconcileSnapshot(AppSnapshotSchema.parse(snapshot)), hydrated: true, hydrationNotice: incompatible }),
+  staleSessionNotice: false,
+  hydrate: (snapshot, incompatible = false, staleSessionDropped = false) => {
+    const reconciled = reconcileForCurrentCurriculum(snapshot);
+    set({
+      ...reconciled,
+      hydrated: true,
+      hydrationNotice: incompatible,
+      staleSessionNotice: staleSessionDropped || (snapshot.activeSession !== null && reconciled.activeSession === null),
+    });
+  },
   dismissHydrationNotice: () => set({ hydrationNotice: false }),
+  dismissStaleSessionNotice: () => set({ staleSessionNotice: false }),
   startIntroduction: (lessonId) => set((state) => {
     if (state.activeSession) return state;
     const lesson = lessonById(lessonId);
@@ -96,7 +109,7 @@ export const useStudyStore = create<StudyState>((set) => ({
   startStandaloneReview: () => set((state) => {
     if (state.activeSession) return state;
     const now = new Date();
-    if (!studyLessons.every((lesson) => state.lessonProgress.find((entry) => entry.lessonId === lesson.id)?.status === "mastered")) return state;
+    if (!studyLessons.length || !studyLessons.every((lesson) => state.lessonProgress.find((entry) => entry.lessonId === lesson.id)?.status === "mastered")) return state;
     return { activeSession: buildSession({ mode: "standalone-review", snapshot: state, today: localDateKey(now), nowIso: now.toISOString() }) };
   }),
   completeVideo: (bypassed = false) => set((state) => state.activeSession?.stage === "video" ? {
@@ -207,13 +220,29 @@ export const useStudyStore = create<StudyState>((set) => ({
     }
     return { settings: next };
   }),
-  replaceSnapshot: (snapshot) => set({ ...reconcileSnapshot(AppSnapshotSchema.parse(snapshot)), hydrated: true, hydrationNotice: false }),
-  reset: () => set({ ...defaultSnapshot, hydrated: true, hydrationNotice: false }),
+  replaceSnapshot: (snapshot) => set({
+    ...reconcileForCurrentCurriculum(snapshot),
+    hydrated: true,
+    hydrationNotice: false,
+    staleSessionNotice: false,
+  }),
+  reset: () => set({
+    ...defaultSnapshot,
+    hydrated: true,
+    hydrationNotice: false,
+    staleSessionNotice: false,
+  }),
 }));
+
+export function reconcileForCurrentCurriculum(snapshot: AppSnapshot): AppSnapshot {
+  const parsed = AppSnapshotSchema.parse(snapshot);
+  return reconcileSnapshot(parsed, lessons, cueCards, CURRICULUM_VERSION);
+}
 
 export function snapshotFromState(state: StudyState): AppSnapshot {
   return AppSnapshotSchema.parse({
-    version: 2, lessonProgress: state.lessonProgress, reviewStates: state.reviewStates,
+    version: 3, curriculumVersion: CURRICULUM_VERSION,
+    lessonProgress: state.lessonProgress, reviewStates: state.reviewStates,
     attempts: state.attempts, completedSessions: state.completedSessions,
     activeSession: state.activeSession, lastResultSessionId: state.lastResultSessionId,
     settings: state.settings, streak: state.streak,

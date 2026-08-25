@@ -5,7 +5,7 @@ import { Download, HardDrive, Languages, Moon, RotateCcw, SunMedium, Upload, Vol
 import { AppSnapshotSchema } from "@/domain/schemas";
 import { clearLocalData, writeSnapshot } from "@/data/db";
 import { PageHeader } from "@/components/PageHeader";
-import { snapshotFromState, useStudyStore } from "@/state/study-store";
+import { reconcileForCurrentCurriculum, snapshotFromState, useStudyStore } from "@/state/study-store";
 
 export default function SettingsPage() {
   const settings = useStudyStore((state) => state.settings);
@@ -21,7 +21,7 @@ export default function SettingsPage() {
     const url = URL.createObjectURL(new Blob([data], { type: "application/json" }));
     const link = document.createElement("a");
     link.href = url;
-    link.download = `thai-study-v2-${new Date().toISOString().slice(0, 10)}.json`;
+    link.download = `thai-study-v3-${new Date().toISOString().slice(0, 10)}.json`;
     link.click();
     URL.revokeObjectURL(url);
     setMessage("Local study data exported.");
@@ -31,11 +31,15 @@ export default function SettingsPage() {
     if (!file) return;
     try {
       const parsed = AppSnapshotSchema.parse(JSON.parse(await file.text()));
-      await writeSnapshot(parsed);
-      replaceSnapshot(parsed);
-      setMessage("Import complete. Your local record has been replaced.");
+      const reconciled = reconcileForCurrentCurriculum(parsed);
+      const staleSessionDropped = parsed.activeSession !== null && reconciled.activeSession === null;
+      await writeSnapshot(reconciled);
+      replaceSnapshot(reconciled);
+      setMessage(staleSessionDropped
+        ? "Import complete. A stale session was discarded; your other valid progress was kept."
+        : "Import complete. Your current-schema local record has been replaced.");
     } catch {
-      setMessage("That file is not a current Thai Study v2 export. Nothing was changed.");
+      setMessage("That file is not a current Thai Study v3 export. Nothing was changed.");
     }
     if (inputRef.current) inputRef.current.value = "";
   }
@@ -55,14 +59,14 @@ export default function SettingsPage() {
       <div className="settings-layout">
         <section className="settings-section">
           <div className="settings-title"><Volume2 size={20} /><div><p className="eyebrow">Audio</p><h2>Listening</h2></div></div>
-          <SettingRow title="Phrase audio" description="Play local recordings when available, with browser speech as a fallback.">
+          <SettingRow title="Phrase audio" description="Play the exact local recordings bundled with reviewed lessons.">
             <Switch checked={settings.audioEnabled} onChange={(value) => updateSettings({ audioEnabled: value })} label="Phrase audio" />
           </SettingRow>
-          <SettingRow title="Volume" description={`${Math.round(settings.volume * 100)}% for phrase audio and speech fallback`}>
+          <SettingRow title="Volume" description={`${Math.round(settings.volume * 100)}% for bundled lesson audio`}>
             <input aria-label="Phrase audio volume" type="range" min="0" max="1" step="0.05" value={settings.volume} onChange={(event) => updateSettings({ volume: Number(event.target.value) })} />
           </SettingRow>
-          <SettingRow title="Speech fallback speed" description={`${settings.speechRate.toFixed(2)}× playback rate`}>
-            <input aria-label="Speech fallback speed" type="range" min="0.5" max="1.25" step="0.05" value={settings.speechRate} onChange={(event) => updateSettings({ speechRate: Number(event.target.value) })} />
+          <SettingRow title="Phrase playback speed" description={`${settings.speechRate.toFixed(2)}× playback rate`}>
+            <input aria-label="Phrase playback speed" type="range" min="0.5" max="1.25" step="0.05" value={settings.speechRate} onChange={(event) => updateSettings({ speechRate: Number(event.target.value) })} />
           </SettingRow>
           <SettingRow title="Captions on first watch" description="Show the lesson caption track when video begins.">
             <Switch checked={settings.captionsByDefault} onChange={(value) => updateSettings({ captionsByDefault: value })} label="Captions on first watch" />
@@ -78,10 +82,10 @@ export default function SettingsPage() {
             <Switch checked={settings.showRomanization} onChange={(value) => updateSettings({ showRomanization: value })} label="Romanization" />
           </SettingRow>
           <SettingRow title="Preferred polite particle" description="Use your preferred ending in practice prompts where a choice is possible.">
-            <div className="segmented" aria-label="Preferred polite particle">
-              <button className={settings.politeParticle === "khráp" ? "selected" : ""} onClick={() => updateSettings({ politeParticle: "khráp" })}>ครับ</button>
-              <button className={settings.politeParticle === "khâ" ? "selected" : ""} onClick={() => updateSettings({ politeParticle: "khâ" })}>ค่ะ</button>
-              <button className={settings.politeParticle === "both" ? "selected" : ""} onClick={() => updateSettings({ politeParticle: "both" })}>Both</button>
+            <div className="segmented" role="group" aria-label="Preferred polite particle">
+              <button aria-pressed={settings.politeParticle === "khráp"} className={settings.politeParticle === "khráp" ? "selected" : ""} onClick={() => updateSettings({ politeParticle: "khráp" })} lang="th">ครับ</button>
+              <button aria-pressed={settings.politeParticle === "khâ"} className={settings.politeParticle === "khâ" ? "selected" : ""} onClick={() => updateSettings({ politeParticle: "khâ" })} lang="th">ค่ะ</button>
+              <button aria-pressed={settings.politeParticle === "both"} className={settings.politeParticle === "both" ? "selected" : ""} onClick={() => updateSettings({ politeParticle: "both" })}>Both</button>
             </div>
           </SettingRow>
           <p className="setting-footnote">At least Thai script or romanization remains visible so study prompts never become blank.</p>
@@ -90,12 +94,12 @@ export default function SettingsPage() {
         <section className="settings-section">
           <div className="settings-title"><SunMedium size={20} /><div><p className="eyebrow">Display</p><h2>Reading</h2></div></div>
           <SettingRow title="Appearance" description="Use the device setting or choose directly.">
-            <div className="segmented" aria-label="Appearance">
-              {(["system", "light", "dark"] as const).map((theme) => <button key={theme} className={settings.theme === theme ? "selected" : ""} onClick={() => updateSettings({ theme })}>{theme === "dark" && <Moon size={14} />}{theme}</button>)}
+            <div className="segmented" role="group" aria-label="Appearance">
+              {(["system", "light", "dark"] as const).map((theme) => <button key={theme} aria-pressed={settings.theme === theme} className={settings.theme === theme ? "selected" : ""} onClick={() => updateSettings({ theme })}>{theme === "dark" && <Moon size={14} />}{theme}</button>)}
             </div>
           </SettingRow>
           <SettingRow title="Thai text size" description="Increase Thai independently from interface copy.">
-            <div className="segmented"><button className={settings.thaiSize === "standard" ? "selected" : ""} onClick={() => updateSettings({ thaiSize: "standard" })}>Standard</button><button className={settings.thaiSize === "large" ? "selected" : ""} onClick={() => updateSettings({ thaiSize: "large" })}>Large</button></div>
+            <div className="segmented" role="group" aria-label="Thai text size"><button aria-pressed={settings.thaiSize === "standard"} className={settings.thaiSize === "standard" ? "selected" : ""} onClick={() => updateSettings({ thaiSize: "standard" })}>Standard</button><button aria-pressed={settings.thaiSize === "large"} className={settings.thaiSize === "large" ? "selected" : ""} onClick={() => updateSettings({ thaiSize: "large" })}>Large</button></div>
           </SettingRow>
           <SettingRow title="Reduce motion" description="Remove non-essential interface transitions.">
             <Switch checked={settings.reduceMotion} onChange={(value) => updateSettings({ reduceMotion: value })} label="Reduce motion" />

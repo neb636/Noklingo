@@ -3,18 +3,57 @@ import { z } from "zod";
 export const LocalDateSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
 export const VerificationStatusSchema = z.enum(["draft", "verified"]);
 
+export const LocalAssetPathSchema = z.string().min(2).superRefine((path, context) => {
+  if (!path.startsWith("/") || path.startsWith("//") || path.includes("..") || /^(?:[a-z]+:)?\/\//i.test(path)) {
+    context.addIssue({ code: "custom", message: "Media must use a same-origin local asset path." });
+  }
+});
+
 export const LessonMediaSchema = z.object({
-  videoSrc: z.string(), posterSrc: z.string(), captionsSrc: z.string(),
-  durationSeconds: z.number().nonnegative(),
+  videoSrc: LocalAssetPathSchema,
+  posterSrc: LocalAssetPathSchema,
+  captionsSrc: LocalAssetPathSchema.optional(),
+  durationSeconds: z.number().finite().positive(),
+  durationStatus: z.enum(["estimated", "confirmed"]),
+  captionsStatus: z.enum(["unavailable", "machine-draft", "reviewed"]),
   availability: z.enum(["draft-unavailable", "available"]),
   fallbackMessage: z.string().min(1),
 });
 
 export const TranscriptLineSchema = z.object({
-  id: z.string(), startSeconds: z.number().nonnegative(), endSeconds: z.number().positive(),
-  speaker: z.string(), thai: z.string(), romanization: z.string(), naturalEnglish: z.string(),
-  literalNote: z.string().optional(), contextNote: z.string().optional(),
+  id: z.string().min(1),
+  startSeconds: z.number().finite().nonnegative(),
+  endSeconds: z.number().finite().positive(),
+  speaker: z.string().min(1),
+  thai: z.string().min(1),
+  romanization: z.string().min(1),
+  naturalEnglish: z.string().min(1),
+  literalNote: z.string().min(1).optional(),
+  contextNote: z.string().min(1).optional(),
   verificationStatus: VerificationStatusSchema,
+}).superRefine((line, context) => {
+  if (line.endSeconds <= line.startSeconds) {
+    context.addIssue({ code: "custom", path: ["endSeconds"], message: "Transcript lines must end after they start." });
+  }
+});
+
+export const DraftTranscriptSegmentSchema = z.object({
+  id: z.string().min(1),
+  startSeconds: z.number().finite().nonnegative(),
+  endSeconds: z.number().finite().positive(),
+  text: z.string().min(1),
+}).superRefine((segment, context) => {
+  if (segment.endSeconds <= segment.startSeconds) {
+    context.addIssue({ code: "custom", path: ["endSeconds"], message: "Draft transcript segments must end after they start." });
+  }
+});
+
+export const DraftTranscriptSchema = z.object({
+  generatedAt: z.string().min(1),
+  model: z.string().min(1),
+  detectedLanguage: z.string().min(1),
+  languageProbability: z.number().min(0).max(1),
+  segments: z.array(DraftTranscriptSegmentSchema).min(1),
 });
 
 export const InteractionTypeSchema = z.enum([
@@ -23,49 +62,77 @@ export const InteractionTypeSchema = z.enum([
 ]);
 
 export const QuizQuestionSchema = z.object({
-  id: z.string(), itemId: z.string(), interactionType: InteractionTypeSchema,
-  prompt: z.string(), choices: z.array(z.string()).min(2).optional(),
+  id: z.string().min(1),
+  itemId: z.string().min(1),
+  interactionType: InteractionTypeSchema,
+  prompt: z.string().min(1),
+  choices: z.array(z.string().min(1)).min(2).optional(),
   correctIndex: z.number().int().nonnegative().optional(),
-  constructionTokens: z.array(z.string()).min(2).optional(),
-  correctConstruction: z.array(z.string()).min(2).optional(),
-  matchingPairs: z.array(z.object({ left: z.string(), right: z.string() })).min(2).optional(),
-  audioSrc: z.string().optional(), explanation: z.string(), scored: z.boolean(),
+  constructionTokens: z.array(z.string().min(1)).min(2).optional(),
+  correctConstruction: z.array(z.string().min(1)).min(2).optional(),
+  matchingPairs: z.array(z.object({ left: z.string().min(1), right: z.string().min(1) })).min(2).optional(),
+  audioSrc: LocalAssetPathSchema.optional(),
+  explanation: z.string().min(1),
+  scored: z.boolean(),
   verificationStatus: VerificationStatusSchema,
 });
 
 export const VideoLessonSchema = z.object({
-  id: z.string(), order: z.number().int().positive(), title: z.string(), objective: z.string(),
-  description: z.string(), media: LessonMediaSchema, transcript: z.array(TranscriptLineSchema),
-  cueCardIds: z.array(z.string()), quizBank: z.array(QuizQuestionSchema),
+  id: z.string().min(1),
+  order: z.number().int().positive(),
+  title: z.string().min(1),
+  objective: z.string().min(1),
+  description: z.string().min(1),
+  media: LessonMediaSchema,
+  transcript: z.array(TranscriptLineSchema),
+  draftTranscript: DraftTranscriptSchema.optional(),
+  cueCardIds: z.array(z.string().min(1)),
+  quizBank: z.array(QuizQuestionSchema),
   contentStatus: VerificationStatusSchema,
   source: z.object({
-    label: z.string(), url: z.string().url(),
+    label: z.string().min(1),
+    url: z.string().url(),
     permissionStatus: z.enum(["pending", "authorized"]),
   }).optional(),
 });
 
 export const KnowledgeItemSchema = z.object({
-  id: z.string(), lessonId: z.string(), thai: z.string(), romanization: z.string(),
-  naturalMeaning: z.string(), usage: z.string(), literalNote: z.string().optional(),
-  culturalNote: z.string().optional(), transcriptReferences: z.array(z.string()),
-  phraseAudioSrc: z.string().optional(), verificationStatus: VerificationStatusSchema,
+  id: z.string().min(1),
+  lessonId: z.string().min(1),
+  thai: z.string().min(1),
+  romanization: z.string().min(1),
+  naturalMeaning: z.string().min(1),
+  usage: z.string().min(1),
+  literalNote: z.string().min(1).optional(),
+  culturalNote: z.string().min(1).optional(),
+  transcriptReferences: z.array(z.string().min(1)).min(1),
+  phraseAudioSrc: LocalAssetPathSchema.optional(),
+  verificationStatus: VerificationStatusSchema,
 });
 export const CueCardSchema = KnowledgeItemSchema;
 
 export const LessonProgressStatusSchema = z.enum(["unseen", "introduced", "awaiting-mastery", "mastered"]);
 export const LessonProgressSchema = z.object({
-  lessonId: z.string(), status: LessonProgressStatusSchema,
-  introducedAt: z.string().datetime().optional(), introducedDate: LocalDateSchema.optional(),
-  masteryEligibleDate: LocalDateSchema.optional(), lastMasteryAttemptDate: LocalDateSchema.optional(),
-  masteredAt: z.string().datetime().optional(), masteredDate: LocalDateSchema.optional(),
+  lessonId: z.string().min(1),
+  status: LessonProgressStatusSchema,
+  introducedAt: z.string().datetime().optional(),
+  introducedDate: LocalDateSchema.optional(),
+  masteryEligibleDate: LocalDateSchema.optional(),
+  lastMasteryAttemptDate: LocalDateSchema.optional(),
+  masteredAt: z.string().datetime().optional(),
+  masteredDate: LocalDateSchema.optional(),
   lastStudiedAt: z.string().datetime().optional(),
 });
 
 export const RecallResultSchema = z.enum(["again", "remembered"]);
 export const ItemReviewStateSchema = z.object({
-  itemId: z.string(), dueDate: LocalDateSchema, intervalDays: z.number().int().nonnegative(),
-  ease: z.number().min(1.3).max(3), successfulRecalls: z.number().int().nonnegative(),
-  lastResult: RecallResultSchema.optional(), lastReviewedAt: z.string().datetime().optional(),
+  itemId: z.string().min(1),
+  dueDate: LocalDateSchema,
+  intervalDays: z.number().int().nonnegative(),
+  ease: z.number().min(1.3).max(3),
+  successfulRecalls: z.number().int().nonnegative(),
+  lastResult: RecallResultSchema.optional(),
+  lastReviewedAt: z.string().datetime().optional(),
 });
 
 export const SessionModeSchema = z.enum(["introduction", "mastery", "standalone-review"]);
@@ -73,51 +140,89 @@ export const SessionStageSchema = z.enum([
   "video", "cue-cards", "diagnostic", "retrieval-cards", "mastery-quiz", "results",
 ]);
 export const SessionQueueEntrySchema = z.object({
-  queueId: z.string(), questionId: z.string(), lessonId: z.string(), itemId: z.string(),
-  source: z.enum(["active", "review"]), choiceOrder: z.array(z.number().int().nonnegative()).optional(),
+  queueId: z.string().min(1),
+  questionId: z.string().min(1),
+  lessonId: z.string().min(1),
+  itemId: z.string().min(1),
+  source: z.enum(["active", "review"]),
+  choiceOrder: z.array(z.number().int().nonnegative()).optional(),
   tokenOrder: z.array(z.number().int().nonnegative()).optional(),
   pairOrder: z.array(z.number().int().nonnegative()).optional(),
 });
 export const SessionAnswerSchema = z.object({
-  queueId: z.string(), selectedChoice: z.number().int().nonnegative().optional(),
+  queueId: z.string().min(1),
+  selectedChoice: z.number().int().nonnegative().optional(),
   constructedTokens: z.array(z.string()).optional(),
   matchedPairs: z.array(z.object({ left: z.string(), right: z.string() })).optional(),
-  correct: z.boolean(), answeredAt: z.string().datetime(),
+  correct: z.boolean(),
+  answeredAt: z.string().datetime(),
 });
 export const ActiveStudySessionSchema = z.object({
-  id: z.string(), mode: SessionModeSchema, lessonId: z.string().optional(), localDate: LocalDateSchema,
-  attemptNumber: z.number().int().positive(), stage: SessionStageSchema, cardOrder: z.array(z.string()),
-  cardIndex: z.number().int().nonnegative(), cardRevealed: z.boolean(),
-  videoCompleted: z.boolean(), videoBypassed: z.boolean(), queue: z.array(SessionQueueEntrySchema),
-  questionIndex: z.number().int().nonnegative(), answers: z.array(SessionAnswerSchema),
-  startedAt: z.string().datetime(), completedAt: z.string().datetime().optional(),
+  id: z.string().min(1),
+  curriculumVersion: z.string().min(1),
+  mode: SessionModeSchema,
+  lessonId: z.string().optional(),
+  localDate: LocalDateSchema,
+  attemptNumber: z.number().int().positive(),
+  stage: SessionStageSchema,
+  cardOrder: z.array(z.string()),
+  cardIndex: z.number().int().nonnegative(),
+  cardRevealed: z.boolean(),
+  videoCompleted: z.boolean(),
+  videoBypassed: z.boolean(),
+  queue: z.array(SessionQueueEntrySchema),
+  questionIndex: z.number().int().nonnegative(),
+  answers: z.array(SessionAnswerSchema),
+  startedAt: z.string().datetime(),
+  completedAt: z.string().datetime().optional(),
 });
 export const CompletedStudySessionSchema = ActiveStudySessionSchema.extend({
-  completedAt: z.string().datetime(), activeCorrect: z.number().int().nonnegative(),
-  activeTotal: z.number().int().nonnegative(), reviewCorrect: z.number().int().nonnegative(),
-  reviewTotal: z.number().int().nonnegative(), passed: z.boolean().optional(),
+  completedAt: z.string().datetime(),
+  activeCorrect: z.number().int().nonnegative(),
+  activeTotal: z.number().int().nonnegative(),
+  reviewCorrect: z.number().int().nonnegative(),
+  reviewTotal: z.number().int().nonnegative(),
+  passed: z.boolean().optional(),
 });
 export const StudyAttemptSchema = z.object({
-  id: z.string(), sessionId: z.string(), lessonId: z.string(), itemId: z.string(),
-  questionId: z.string(), source: z.enum(["diagnostic", "active-mastery", "spaced-review"]),
-  correct: z.boolean(), createdAt: z.string().datetime(),
+  id: z.string().min(1),
+  sessionId: z.string().min(1),
+  lessonId: z.string().min(1),
+  itemId: z.string().min(1),
+  questionId: z.string().min(1),
+  source: z.enum(["diagnostic", "active-mastery", "spaced-review"]),
+  correct: z.boolean(),
+  createdAt: z.string().datetime(),
 });
 
 export const SettingsSchema = z.object({
-  audioEnabled: z.boolean(), volume: z.number().min(0).max(1), speechRate: z.number().min(0.5).max(1.25),
-  theme: z.enum(["system", "light", "dark"]), showRomanization: z.boolean(), showThaiScript: z.boolean(),
-  thaiSize: z.enum(["standard", "large"]), reduceMotion: z.boolean(), captionsByDefault: z.boolean(),
+  audioEnabled: z.boolean(),
+  volume: z.number().min(0).max(1),
+  speechRate: z.number().min(0.5).max(1.25),
+  theme: z.enum(["system", "light", "dark"]),
+  showRomanization: z.boolean(),
+  showThaiScript: z.boolean(),
+  thaiSize: z.enum(["standard", "large"]),
+  reduceMotion: z.boolean(),
+  captionsByDefault: z.boolean(),
   politeParticle: z.enum(["khráp", "khâ", "both"]),
 });
 export const StreakStateSchema = z.object({
-  currentDays: z.number().int().nonnegative(), longestDays: z.number().int().nonnegative(),
+  currentDays: z.number().int().nonnegative(),
+  longestDays: z.number().int().nonnegative(),
   lastStudyDate: LocalDateSchema.optional(),
 });
 export const AppSnapshotSchema = z.object({
-  version: z.literal(2), lessonProgress: z.array(LessonProgressSchema),
-  reviewStates: z.array(ItemReviewStateSchema), attempts: z.array(StudyAttemptSchema),
-  completedSessions: z.array(CompletedStudySessionSchema), activeSession: ActiveStudySessionSchema.nullable(),
-  lastResultSessionId: z.string().optional(), settings: SettingsSchema, streak: StreakStateSchema,
+  version: z.literal(3),
+  curriculumVersion: z.string().min(1),
+  lessonProgress: z.array(LessonProgressSchema),
+  reviewStates: z.array(ItemReviewStateSchema),
+  attempts: z.array(StudyAttemptSchema),
+  completedSessions: z.array(CompletedStudySessionSchema),
+  activeSession: ActiveStudySessionSchema.nullable(),
+  lastResultSessionId: z.string().optional(),
+  settings: SettingsSchema,
+  streak: StreakStateSchema,
 });
 
 export type VideoLesson = z.infer<typeof VideoLessonSchema>;

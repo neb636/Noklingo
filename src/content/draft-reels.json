@@ -1,0 +1,1234 @@
+{
+  "lessons": [
+    {
+      "id": "common-verbs",
+      "order": 1,
+      "title": "Essential verbs",
+      "objective": "Draft plan — Recognize a small set of high-frequency action words.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/DcQ3KtgSPKN/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/common-verbs/intro.mp4",
+        "posterSrc": "/lessons/drafts/common-verbs/poster.jpg",
+        "captionsSrc": "/lessons/drafts/common-verbs/captions.vtt",
+        "durationSeconds": 11.7,
+        "durationStatus": "confirmed",
+        "captionsStatus": "machine-draft",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-24T21:34:29",
+        "model": "small",
+        "detectedLanguage": "th",
+        "languageProbability": 0.87,
+        "segments": [
+          {
+            "id": "common-verbs-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 7,
+            "text": "อิท กิน สลิป นอน ไลค ชอบ"
+          },
+          {
+            "id": "common-verbs-machine-2",
+            "startSeconds": 7,
+            "endSeconds": 11.5,
+            "text": "โก ไป สปีก พูด"
+          }
+        ]
+      },
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "question-words",
+      "order": 2,
+      "title": "What, where, when, why, how",
+      "objective": "Draft plan — Notice the core words used to ask for information.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/Dbsw7PxyKUN/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/question-words/intro.mp4",
+        "posterSrc": "/lessons/drafts/question-words/poster.jpg",
+        "durationSeconds": 12.188,
+        "durationStatus": "confirmed",
+        "captionsStatus": "unavailable",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "connectors",
+      "order": 3,
+      "title": "Conversation connectors",
+      "objective": "Draft plan — Recognize small words that connect ideas in speech.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/DcLreBDSxkH/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/connectors/intro.mp4",
+        "posterSrc": "/lessons/drafts/connectors/poster.jpg",
+        "captionsSrc": "/lessons/drafts/connectors/captions.vtt",
+        "durationSeconds": 10.795,
+        "durationStatus": "confirmed",
+        "captionsStatus": "machine-draft",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-24T21:34:29",
+        "model": "small",
+        "detectedLanguage": "en",
+        "languageProbability": 0.3894,
+        "segments": [
+          {
+            "id": "connectors-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 10.64,
+            "text": "in, like or, or, but, but, so, got løy, with, gub, because, proa."
+          }
+        ]
+      },
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "large-numbers",
+      "order": 4,
+      "title": "Powers of ten",
+      "objective": "Draft plan — Notice the pattern behind increasingly large Thai numbers.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/DbdObkDyVQs/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/large-numbers/intro.mp4",
+        "posterSrc": "/lessons/drafts/large-numbers/poster.jpg",
+        "durationSeconds": 22.637,
+        "durationStatus": "confirmed",
+        "captionsStatus": "unavailable",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "time-units",
+      "order": 5,
+      "title": "Minute through year",
+      "objective": "Draft plan — Recognize words for minutes, hours, days, months, and years.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/Db8M4GTygAD/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/time-units/intro.mp4",
+        "posterSrc": "/lessons/drafts/time-units/poster.jpg",
+        "durationSeconds": 11.77,
+        "durationStatus": "confirmed",
+        "captionsStatus": "unavailable",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "times-of-day",
+      "order": 6,
+      "title": "Morning through night",
+      "objective": "Draft plan — Distinguish common parts of the day in context.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/Db0cod_S1wT/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/times-of-day/intro.mp4",
+        "posterSrc": "/lessons/drafts/times-of-day/poster.jpg",
+        "durationSeconds": 16.437,
+        "durationStatus": "confirmed",
+        "captionsStatus": "unavailable",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "quantities",
+      "order": 7,
+      "title": "None through all",
+      "objective": "Draft plan — Compare expressions for none, some, half, most, and all.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/DcYjinlyu2w/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/quantities/intro.mp4",
+        "posterSrc": "/lessons/drafts/quantities/poster.jpg",
+        "captionsSrc": "/lessons/drafts/quantities/captions.vtt",
+        "durationSeconds": 16.6,
+        "durationStatus": "confirmed",
+        "captionsStatus": "machine-draft",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-24T21:34:29",
+        "model": "small",
+        "detectedLanguage": "th",
+        "languageProbability": 0.7941,
+        "segments": [
+          {
+            "id": "quantities-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 3.12,
+            "text": "นอน ไม่มีเลย"
+          },
+          {
+            "id": "quantities-machine-2",
+            "startSeconds": 3.12,
+            "endSeconds": 5.92,
+            "text": "A little bit นิดหน่อย"
+          },
+          {
+            "id": "quantities-machine-3",
+            "startSeconds": 5.92,
+            "endSeconds": 8.7,
+            "text": "สำ บางส่วน"
+          },
+          {
+            "id": "quantities-machine-4",
+            "startSeconds": 8.7,
+            "endSeconds": 11.3,
+            "text": "Half ครึ่งหนึ่ง"
+          },
+          {
+            "id": "quantities-machine-5",
+            "startSeconds": 11.3,
+            "endSeconds": 15,
+            "text": "Most ส่วนมาก อ้อ"
+          },
+          {
+            "id": "quantities-machine-6",
+            "startSeconds": 15,
+            "endSeconds": 16.48,
+            "text": "ทั้งหมด"
+          }
+        ]
+      },
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "country-names",
+      "order": 8,
+      "title": "Countries in Thai",
+      "objective": "Draft plan — Recognize a selection of country names in Thai.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/DblMh82SJ0G/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/country-names/intro.mp4",
+        "posterSrc": "/lessons/drafts/country-names/poster.jpg",
+        "durationSeconds": 36.453,
+        "durationStatus": "confirmed",
+        "captionsStatus": "unavailable",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "directions",
+      "order": 9,
+      "title": "Straight, turns, and U-turns",
+      "objective": "Draft plan — Listen for practical movement and turning directions.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/Dbnq6cpSqOQ/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/directions/intro.mp4",
+        "posterSrc": "/lessons/drafts/directions/poster.jpg",
+        "durationSeconds": 13.674,
+        "durationStatus": "confirmed",
+        "captionsStatus": "unavailable",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "weather",
+      "order": 10,
+      "title": "Everyday weather",
+      "objective": "Draft plan — Recognize several everyday ways to describe the weather.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/DcGiG_XydRu/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/weather/intro.mp4",
+        "posterSrc": "/lessons/drafts/weather/poster.jpg",
+        "captionsSrc": "/lessons/drafts/weather/captions.vtt",
+        "durationSeconds": 13.814,
+        "durationStatus": "confirmed",
+        "captionsStatus": "machine-draft",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-24T21:34:29",
+        "model": "small",
+        "detectedLanguage": "th",
+        "languageProbability": 0.6768,
+        "segments": [
+          {
+            "id": "weather-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 3.9,
+            "text": "ฮัด ร้อน โคต เย็น"
+          },
+          {
+            "id": "weather-machine-2",
+            "startSeconds": 3.9,
+            "endSeconds": 13.8,
+            "text": "เฟริโคต นาว แรนิง ฟนตก ซันี่ แดดออก คลาวดี เมกมาก วินดี ลมแรง"
+          }
+        ]
+      },
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "feeling-unwell",
+      "order": 11,
+      "title": "Saying you feel sick",
+      "objective": "Draft plan — Recognize useful ways to say that you do not feel well.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/DbvUdUsyqjb/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/feeling-unwell/intro.mp4",
+        "posterSrc": "/lessons/drafts/feeling-unwell/poster.jpg",
+        "durationSeconds": 24.75,
+        "durationStatus": "confirmed",
+        "captionsStatus": "unavailable",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "food-flavors",
+      "order": 12,
+      "title": "Describing flavors",
+      "objective": "Draft plan — Distinguish several basic ways to describe food.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/DcBXuuUS0k9/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/food-flavors/intro.mp4",
+        "posterSrc": "/lessons/drafts/food-flavors/poster.jpg",
+        "captionsSrc": "/lessons/drafts/food-flavors/captions.vtt",
+        "durationSeconds": 12.792,
+        "durationStatus": "confirmed",
+        "captionsStatus": "machine-draft",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-24T21:34:29",
+        "model": "small",
+        "detectedLanguage": "th",
+        "languageProbability": 0.4711,
+        "segments": [
+          {
+            "id": "food-flavors-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 8.6,
+            "text": "สาวเวอร์ พรีเวอร์ สวีด หวาน สาวที่ เขม สไปซี่ เผ็ด"
+          },
+          {
+            "id": "food-flavors-machine-2",
+            "startSeconds": 8.6,
+            "endSeconds": 12.6,
+            "text": "วิทย์ คม แบลน จืด"
+          }
+        ]
+      },
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "food-allergies",
+      "order": 13,
+      "title": "Communicating allergies",
+      "objective": "Draft plan — Notice the frame used to name common food allergies.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/DcTZKYUSK9N/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/food-allergies/intro.mp4",
+        "posterSrc": "/lessons/drafts/food-allergies/poster.jpg",
+        "captionsSrc": "/lessons/drafts/food-allergies/captions.vtt",
+        "durationSeconds": 20.269,
+        "durationStatus": "confirmed",
+        "captionsStatus": "machine-draft",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-24T21:34:29",
+        "model": "small",
+        "detectedLanguage": "en",
+        "languageProbability": 0.8128,
+        "segments": [
+          {
+            "id": "food-allergies-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 2.5,
+            "text": "How to say your food allergies in Thai?"
+          },
+          {
+            "id": "food-allergies-machine-2",
+            "startSeconds": 2.5,
+            "endSeconds": 5.5,
+            "text": "ฉัน แพ อัม โอล จิก ทู"
+          },
+          {
+            "id": "food-allergies-machine-3",
+            "startSeconds": 5.5,
+            "endSeconds": 7.5,
+            "text": "ฉัน แพ กุ่ง"
+          },
+          {
+            "id": "food-allergies-machine-4",
+            "startSeconds": 7.5,
+            "endSeconds": 9.5,
+            "text": "อัม โอล จิก ทู ชิม"
+          },
+          {
+            "id": "food-allergies-machine-5",
+            "startSeconds": 9.5,
+            "endSeconds": 13.5,
+            "text": "ฉัน แพ ทู อัม โอล จิก ทู นัด"
+          },
+          {
+            "id": "food-allergies-machine-6",
+            "startSeconds": 13.5,
+            "endSeconds": 17.5,
+            "text": "ฉัน แพ นม บว อัม โอล จิก ทู แด รี"
+          },
+          {
+            "id": "food-allergies-machine-7",
+            "startSeconds": 17.5,
+            "endSeconds": 20.5,
+            "text": "Save this for a next meal in Thailand."
+          }
+        ]
+      },
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "coffee-order",
+      "order": 14,
+      "title": "Ordering coffee",
+      "objective": "Draft plan — Follow a real café visit and identify the ordering pattern.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/DcV9636yyq5/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/coffee-order/intro.mp4",
+        "posterSrc": "/lessons/drafts/coffee-order/poster.jpg",
+        "captionsSrc": "/lessons/drafts/coffee-order/captions.vtt",
+        "durationSeconds": 32.668,
+        "durationStatus": "confirmed",
+        "captionsStatus": "machine-draft",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-24T21:34:29",
+        "model": "small",
+        "detectedLanguage": "en",
+        "languageProbability": 0.6977,
+        "segments": [
+          {
+            "id": "coffee-order-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 3.68,
+            "text": "Today I'm gonna show you how to order coffee in Thai with my student."
+          },
+          {
+            "id": "coffee-order-machine-2",
+            "startSeconds": 3.68,
+            "endSeconds": 10.4,
+            "text": "I have arrived at the cafe. I come here pretty often because it's cozy and perfect to have a listen."
+          },
+          {
+            "id": "coffee-order-machine-3",
+            "startSeconds": 10.4,
+            "endSeconds": 14.24,
+            "text": "They also have many options for drinks and food. So let's order."
+          },
+          {
+            "id": "coffee-order-machine-4",
+            "startSeconds": 20.24,
+            "endSeconds": 25.76,
+            "text": "And here are our drinks. You can just say the type of coffee. Then hot,"
+          },
+          {
+            "id": "coffee-order-machine-5",
+            "startSeconds": 25.76,
+            "endSeconds": 32.32,
+            "text": "hot, iced, yin. And then your preference. If you like this content, comment below. Bye."
+          }
+        ]
+      },
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "what-are-you-doing",
+      "order": 15,
+      "title": "An everyday check-in",
+      "objective": "Draft plan — Listen for short questions used in everyday conversation.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/Dbf8YlbSj_X/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/what-are-you-doing/intro.mp4",
+        "posterSrc": "/lessons/drafts/what-are-you-doing/poster.jpg",
+        "durationSeconds": 21.081,
+        "durationStatus": "confirmed",
+        "captionsStatus": "unavailable",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "waking-up",
+      "order": 16,
+      "title": "Morning check-ins",
+      "objective": "Draft plan — Follow a few short phrases used after waking up.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/Db5pmXqytEc/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/waking-up/intro.mp4",
+        "posterSrc": "/lessons/drafts/waking-up/poster.jpg",
+        "durationSeconds": 22.916,
+        "durationStatus": "confirmed",
+        "captionsStatus": "unavailable",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "movie-invitation",
+      "order": 17,
+      "title": "Making an invitation",
+      "objective": "Draft plan — Notice invitation patterns for simple shared activities.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/DbqLsjeT7bn/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/movie-invitation/intro.mp4",
+        "posterSrc": "/lessons/drafts/movie-invitation/poster.jpg",
+        "durationSeconds": 25.609,
+        "durationStatus": "confirmed",
+        "captionsStatus": "unavailable",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "parting-safely",
+      "order": 18,
+      "title": "Natural goodbyes",
+      "objective": "Draft plan — Compare several warm ways to leave and check in later.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/DcD9zQ8SQ8v/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/parting-safely/intro.mp4",
+        "posterSrc": "/lessons/drafts/parting-safely/poster.jpg",
+        "captionsSrc": "/lessons/drafts/parting-safely/captions.vtt",
+        "durationSeconds": 21.151,
+        "durationStatus": "confirmed",
+        "captionsStatus": "machine-draft",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-24T21:34:29",
+        "model": "small",
+        "detectedLanguage": "th",
+        "languageProbability": 0.8859,
+        "segments": [
+          {
+            "id": "parting-safely-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 2.48,
+            "text": "แล้วเจอกัน is boring"
+          },
+          {
+            "id": "parting-safely-machine-2",
+            "startSeconds": 2.48,
+            "endSeconds": 4.6,
+            "text": "use these phrases instead"
+          },
+          {
+            "id": "parting-safely-machine-3",
+            "startSeconds": 4.6,
+            "endSeconds": 5.64,
+            "text": "ไปแล้วนะ"
+          },
+          {
+            "id": "parting-safely-machine-4",
+            "startSeconds": 5.64,
+            "endSeconds": 6.72,
+            "text": "I'm off"
+          },
+          {
+            "id": "parting-safely-machine-5",
+            "startSeconds": 6.72,
+            "endSeconds": 8.32,
+            "text": "ขับรถดีดี"
+          },
+          {
+            "id": "parting-safely-machine-6",
+            "startSeconds": 8.32,
+            "endSeconds": 9.6,
+            "text": "drive safe"
+          },
+          {
+            "id": "parting-safely-machine-7",
+            "startSeconds": 9.6,
+            "endSeconds": 11.12,
+            "text": "กลับดีดีนะ"
+          },
+          {
+            "id": "parting-safely-machine-8",
+            "startSeconds": 11.12,
+            "endSeconds": 12.6,
+            "text": "get home safe"
+          },
+          {
+            "id": "parting-safely-machine-9",
+            "startSeconds": 12.6,
+            "endSeconds": 14.48,
+            "text": "ถึงแล้วบอกด้วยนะ"
+          },
+          {
+            "id": "parting-safely-machine-10",
+            "startSeconds": 14.48,
+            "endSeconds": 16.12,
+            "text": "let me know when you get there"
+          },
+          {
+            "id": "parting-safely-machine-11",
+            "startSeconds": 16.12,
+            "endSeconds": 17.76,
+            "text": "if you want to be my student"
+          },
+          {
+            "id": "parting-safely-machine-12",
+            "startSeconds": 17.76,
+            "endSeconds": 19.36,
+            "text": "DM me for more details"
+          },
+          {
+            "id": "parting-safely-machine-13",
+            "startSeconds": 19.36,
+            "endSeconds": 20.36,
+            "text": "bye bye"
+          }
+        ]
+      },
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "encouragement",
+      "order": 19,
+      "title": "Keep going",
+      "objective": "Draft plan — Listen for short phrases that encourage someone to continue.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/Db-0OFPSuuJ/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/encouragement/intro.mp4",
+        "posterSrc": "/lessons/drafts/encouragement/poster.jpg",
+        "durationSeconds": 24.727,
+        "durationStatus": "confirmed",
+        "captionsStatus": "unavailable",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "compliments",
+      "order": 20,
+      "title": "Kind things to say",
+      "objective": "Draft plan — Notice short, friendly compliments for everyday conversation.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/DcJHCxwygGy/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/compliments/intro.mp4",
+        "posterSrc": "/lessons/drafts/compliments/poster.jpg",
+        "captionsSrc": "/lessons/drafts/compliments/captions.vtt",
+        "durationSeconds": 20.617,
+        "durationStatus": "confirmed",
+        "captionsStatus": "machine-draft",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-24T21:34:29",
+        "model": "small",
+        "detectedLanguage": "th",
+        "languageProbability": 0.494,
+        "segments": [
+          {
+            "id": "compliments-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 2,
+            "text": "หัวดร่อยล่ะที่สุดท้ายผู้"
+          },
+          {
+            "id": "compliments-machine-2",
+            "startSeconds": 2,
+            "endSeconds": 4.48,
+            "text": "คือทำดับคำพลิมน์"
+          },
+          {
+            "id": "compliments-machine-3",
+            "startSeconds": 4.48,
+            "endSeconds": 6.46,
+            "text": "ต้องกลับมาก"
+          },
+          {
+            "id": "compliments-machine-4",
+            "startSeconds": 6.46,
+            "endSeconds": 8.96,
+            "text": "Your smile is really beautiful"
+          },
+          {
+            "id": "compliments-machine-5",
+            "startSeconds": 8.96,
+            "endSeconds": 10.56,
+            "text": "ใจดีจัง"
+          },
+          {
+            "id": "compliments-machine-6",
+            "startSeconds": 10.56,
+            "endSeconds": 11.92,
+            "text": "You are so kind"
+          },
+          {
+            "id": "compliments-machine-7",
+            "startSeconds": 11.92,
+            "endSeconds": 13.46,
+            "text": "เก่งมาก"
+          },
+          {
+            "id": "compliments-machine-8",
+            "startSeconds": 13.46,
+            "endSeconds": 14.28,
+            "text": "Well done"
+          },
+          {
+            "id": "compliments-machine-9",
+            "startSeconds": 14.28,
+            "endSeconds": 15.7,
+            "text": "ดูดีมาก"
+          },
+          {
+            "id": "compliments-machine-10",
+            "startSeconds": 15.7,
+            "endSeconds": 16.8,
+            "text": "You look great"
+          },
+          {
+            "id": "compliments-machine-11",
+            "startSeconds": 16.8,
+            "endSeconds": 18.8,
+            "text": "คุยสนุกจัง"
+          },
+          {
+            "id": "compliments-machine-12",
+            "startSeconds": 18.8,
+            "endSeconds": 20.4,
+            "text": "You are so fun to talk to"
+          }
+        ]
+      },
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "its-okay",
+      "order": 21,
+      "title": "Reassuring responses",
+      "objective": "Draft plan — Compare reassuring responses used in different situations.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/DcbIu-OyPNB/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/its-okay/intro.mp4",
+        "posterSrc": "/lessons/drafts/its-okay/poster.jpg",
+        "captionsSrc": "/lessons/drafts/its-okay/captions.vtt",
+        "durationSeconds": 34.108,
+        "durationStatus": "confirmed",
+        "captionsStatus": "machine-draft",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-24T21:34:29",
+        "model": "small",
+        "detectedLanguage": "th",
+        "languageProbability": 0.6627,
+        "segments": [
+          {
+            "id": "its-okay-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 4.28,
+            "text": "แปลกคอ้อย ไม่เป็นไร"
+          },
+          {
+            "id": "its-okay-machine-2",
+            "startSeconds": 4.58,
+            "endSeconds": 7.46,
+            "text": "ไม่เป็นไร ไม่เอาต้องข้าPlease"
+          },
+          {
+            "id": "its-okay-machine-3",
+            "startSeconds": 8.02,
+            "endSeconds": 9.78,
+            "text": "ช่างมันเถอะ"
+          },
+          {
+            "id": "its-okay-machine-4",
+            "startSeconds": 9.78,
+            "endSeconds": 11.6,
+            "text": "อย่าคือก็ได้"
+          },
+          {
+            "id": "its-okay-machine-5",
+            "startSeconds": 11.6,
+            "endSeconds": 13.6,
+            "text": "ไม่ต้องหวัง"
+          },
+          {
+            "id": "its-okay-machine-6",
+            "startSeconds": 14.18,
+            "endSeconds": 15.96,
+            "text": "ไม่ต้องหวัง"
+          },
+          {
+            "id": "its-okay-machine-7",
+            "startSeconds": 15.96,
+            "endSeconds": 16.5,
+            "text": "โดนavoir"
+          },
+          {
+            "id": "its-okay-machine-8",
+            "startSeconds": 16.5,
+            "endSeconds": 18.4,
+            "text": "ไม่ต้องคิดมาก"
+          },
+          {
+            "id": "its-okay-machine-9",
+            "startSeconds": 19.18,
+            "endSeconds": 21.18,
+            "text": "ไม่ต้องคิดมาก"
+          },
+          {
+            "id": "its-okay-machine-10",
+            "startSeconds": 21.74,
+            "endSeconds": 23.24,
+            "text": "โต android"
+          },
+          {
+            "id": "its-okay-machine-11",
+            "startSeconds": 24.26,
+            "endSeconds": 26.06,
+            "text": "โตด  מא่ม grandmother"
+          },
+          {
+            "id": "its-okay-machine-12",
+            "startSeconds": 26.06,
+            "endSeconds": 27.08,
+            "text": "สวั Dean"
+          },
+          {
+            "id": "its-okay-machine-13",
+            "startSeconds": 27.08,
+            "endSeconds": 29.08,
+            "text": "ขอบคุณที่สบาย ผมทายที่ชิงใหม่"
+          },
+          {
+            "id": "its-okay-machine-14",
+            "startSeconds": 29.08,
+            "endSeconds": 31.28,
+            "text": "และผมพยายามกำลังอินไทย"
+          },
+          {
+            "id": "its-okay-machine-15",
+            "startSeconds": 31.28,
+            "endSeconds": 33.84,
+            "text": "ดีเอมนี่ For More Details บายบาย"
+          }
+        ]
+      },
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "making-up",
+      "order": 22,
+      "title": "Apologies and reconciliation",
+      "objective": "Draft plan — Notice apology and de-escalation phrases in an informal setting.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/DcOP6I7y_i9/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/making-up/intro.mp4",
+        "posterSrc": "/lessons/drafts/making-up/poster.jpg",
+        "captionsSrc": "/lessons/drafts/making-up/captions.vtt",
+        "durationSeconds": 22.358,
+        "durationStatus": "confirmed",
+        "captionsStatus": "machine-draft",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-24T21:34:29",
+        "model": "small",
+        "detectedLanguage": "th",
+        "languageProbability": 0.8434,
+        "segments": [
+          {
+            "id": "making-up-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 4,
+            "text": "แอคทราบคุณมีสัมทีกว่า ไม่มีความราย"
+          },
+          {
+            "id": "making-up-machine-2",
+            "startSeconds": 4,
+            "endSeconds": 5,
+            "text": "ขอโทษครับ"
+          },
+          {
+            "id": "making-up-machine-3",
+            "startSeconds": 5,
+            "endSeconds": 7,
+            "text": "ฉันโทษ"
+          },
+          {
+            "id": "making-up-machine-4",
+            "startSeconds": 7,
+            "endSeconds": 8,
+            "text": "ผมผิดไปแล้ว"
+          },
+          {
+            "id": "making-up-machine-5",
+            "startSeconds": 8,
+            "endSeconds": 9,
+            "text": "ฉันไม่ได้"
+          },
+          {
+            "id": "making-up-machine-6",
+            "startSeconds": 9,
+            "endSeconds": 11,
+            "text": "ดีกันนะ"
+          },
+          {
+            "id": "making-up-machine-7",
+            "startSeconds": 11,
+            "endSeconds": 12,
+            "text": "let's make up"
+          },
+          {
+            "id": "making-up-machine-8",
+            "startSeconds": 12,
+            "endSeconds": 13,
+            "text": "ใจเย็นๆนะ"
+          },
+          {
+            "id": "making-up-machine-9",
+            "startSeconds": 13,
+            "endSeconds": 14,
+            "text": "คามดาว"
+          },
+          {
+            "id": "making-up-machine-10",
+            "startSeconds": 14,
+            "endSeconds": 15,
+            "text": "โอเค"
+          },
+          {
+            "id": "making-up-machine-11",
+            "startSeconds": 15,
+            "endSeconds": 17,
+            "text": "โอ.. ไม่โกรศนะ"
+          },
+          {
+            "id": "making-up-machine-12",
+            "startSeconds": 17,
+            "endSeconds": 19,
+            "text": "อ๋อ.. ไม่มีสัมที"
+          },
+          {
+            "id": "making-up-machine-13",
+            "startSeconds": 19,
+            "endSeconds": 22,
+            "text": "ให้ก็รู้ว่าความมาก ไม่มีสัมที"
+          },
+          {
+            "id": "making-up-machine-14",
+            "startSeconds": 22,
+            "endSeconds": 23,
+            "text": "บาย"
+          }
+        ]
+      },
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "affectionate-phrases",
+      "order": 23,
+      "title": "Affection and care",
+      "objective": "Draft plan — Listen for a handful of warm phrases between close people.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/DbLLNypSMDH/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/affectionate-phrases/intro.mp4",
+        "posterSrc": "/lessons/drafts/affectionate-phrases/poster.jpg",
+        "captionsSrc": "/lessons/drafts/affectionate-phrases/captions.vtt",
+        "durationSeconds": 26.933,
+        "durationStatus": "confirmed",
+        "captionsStatus": "machine-draft",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-24T21:34:29",
+        "model": "small",
+        "detectedLanguage": "th",
+        "languageProbability": 0.6759,
+        "segments": [
+          {
+            "id": "affectionate-phrases-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 4,
+            "text": "Wanna impress your Thai girlfriend? You need to know these words."
+          },
+          {
+            "id": "affectionate-phrases-machine-2",
+            "startSeconds": 4,
+            "endSeconds": 6.7,
+            "text": "รักนะ. Love you."
+          },
+          {
+            "id": "affectionate-phrases-machine-3",
+            "startSeconds": 6.7,
+            "endSeconds": 11,
+            "text": "คุณสวยมาก. You are very pretty."
+          },
+          {
+            "id": "affectionate-phrases-machine-4",
+            "startSeconds": 11,
+            "endSeconds": 15.3,
+            "text": "คิดถึงจัง. I miss you so much."
+          },
+          {
+            "id": "affectionate-phrases-machine-5",
+            "startSeconds": 15.3,
+            "endSeconds": 19,
+            "text": "กอดน้อย. Can I have a hug?"
+          },
+          {
+            "id": "affectionate-phrases-machine-6",
+            "startSeconds": 19,
+            "endSeconds": 22.5,
+            "text": "ฟันดีนะ. Good night."
+          },
+          {
+            "id": "affectionate-phrases-machine-7",
+            "startSeconds": 22.5,
+            "endSeconds": 26,
+            "text": "Use these words with her and let me know the result."
+          },
+          {
+            "id": "affectionate-phrases-machine-8",
+            "startSeconds": 26,
+            "endSeconds": 27,
+            "text": "ไป!"
+          }
+        ]
+      },
+      "cueCardIds": [],
+      "quizBank": []
+    },
+    {
+      "id": "thai-slang-upgrades",
+      "order": 24,
+      "title": "Beginner versus native slang",
+      "objective": "Draft plan — Compare beginner vocabulary with more colloquial alternatives.",
+      "description": "A locally bundled Reel awaiting transcript and Thai-language editorial review.",
+      "contentStatus": "draft",
+      "source": {
+        "label": "Learn Thai IRL · supplied local Reel",
+        "url": "https://www.instagram.com/learnthai_irl/reel/DbihFsvyEEf/",
+        "permissionStatus": "authorized"
+      },
+      "media": {
+        "videoSrc": "/lessons/drafts/thai-slang-upgrades/intro.mp4",
+        "posterSrc": "/lessons/drafts/thai-slang-upgrades/poster.jpg",
+        "durationSeconds": 18.55,
+        "durationStatus": "confirmed",
+        "captionsStatus": "unavailable",
+        "availability": "available",
+        "fallbackMessage": "This local draft clip could not be played on this device."
+      },
+      "transcript": [],
+      "cueCardIds": [],
+      "quizBank": []
+    }
+  ]
+}

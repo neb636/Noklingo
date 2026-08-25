@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vinext dev",
+    "prebuild": "npm run validate:curriculum && npm run typecheck",
     "build": "vinext build",
     "postbuild": "node scripts/finalize-static.mjs",
     "start": "vinext start",
@@ -14,6 +15,7 @@
     "test:engine": "vitest run tests/engine.test.ts",
     "validate:curriculum": "node --import tsx scripts/validate-curriculum.ts",
     "lesson:import": "node --import tsx scripts/import-lesson.ts",
+    "check:release": "npm run validate:curriculum && npm run typecheck && npm run lint && npm run build",
     "check": "npm run validate:curriculum && npm run typecheck && npm run lint && npm run test && npm run build"
   },
   "dependencies": {
