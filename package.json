@@ -15,6 +15,11 @@
     "test:engine": "vitest run tests/engine.test.ts",
     "validate:curriculum": "node --import tsx scripts/validate-curriculum.ts",
     "lesson:import": "node --import tsx scripts/import-lesson.ts",
+    "lesson:import-all": "node --import tsx scripts/import-all-lessons.ts",
+    "lesson:readiness": "node --import tsx scripts/curriculum-readiness.ts",
+    "lesson:scaffold-all": "node --import tsx scripts/scaffold-lesson-intake.ts",
+    "pronunciation:setup": "zsh scripts/setup-pronunciation.sh",
+    "pronunciation:generate": "node --import tsx scripts/generate-pronunciation.ts",
     "check:release": "npm run validate:curriculum && npm run typecheck && npm run lint && npm run build",
     "check": "npm run validate:curriculum && npm run typecheck && npm run lint && npm run test && npm run build"
   },

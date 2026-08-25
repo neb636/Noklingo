@@ -57,7 +57,7 @@ function CorrectionList({ session, source }: { session: CompletedStudySession; s
 
 function summaryLine(session: CompletedStudySession) {
   if (session.mode === "introduction") return `${session.activeCorrect} of ${session.activeTotal} diagnostic answers correct · mastery still begins tomorrow`;
-  if (session.mode === "mastery") return `${session.activeCorrect} of 10 active-lesson answers correct${session.reviewTotal ? ` · ${session.reviewTotal} older reviews kept separate` : ""}`;
+  if (session.mode === "mastery") return `${session.activeCorrect} of ${session.activeTotal} active-lesson answers correct${session.reviewTotal ? ` · ${session.reviewTotal} older reviews kept separate` : ""}`;
   return `${session.reviewCorrect} of ${session.reviewTotal} due items recalled`;
 }
 

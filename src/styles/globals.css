@@ -179,6 +179,11 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .recall-buttons button:hover { border-color: var(--sage); background: var(--sage-soft); }
 .quiz-section { max-width: 880px; margin: 0 auto; }
 .quiz-card { border: 0; padding: 26px 0; border-top: 1px solid var(--line); }
+.answer-feedback { display: grid; justify-items: start; gap: 8px; padding: 28px; background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--sage); border-radius: 6px; }
+.answer-feedback.incorrect { border-left-color: var(--accent); }
+.answer-feedback .correction-answer { font-size: calc(var(--thai-size) * 1.05); margin: 5px 0 0; }
+.answer-feedback .romanization, .answer-feedback h3, .answer-feedback > p { margin: 0; }
+.answer-feedback > p:not(.eyebrow):last-of-type { color: var(--muted); margin: 8px 0; }
 .quiz-card legend { width: 100%; display: flex; gap: 15px; align-items: baseline; font-family: Iowan Old Style, Georgia, serif; font-size: 1.12rem; padding: 0 0 17px; }
 .quiz-card legend span { color: var(--accent); font-size: .75rem; }
 .choice-list { display: grid; gap: 8px; }

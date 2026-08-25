@@ -42,3 +42,5 @@ next-env.d.ts
 /outputs/
 /work/
 /content-inbox/
+/tools/pronunciation-generator/.venv/
+/tools/pronunciation-generator/.cache/

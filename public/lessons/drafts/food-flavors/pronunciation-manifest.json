@@ -1,0 +1,153 @@
+{
+  "lessonId": "food-flavors",
+  "sourceVideo": "/lessons/drafts/food-flavors/intro.mp4",
+  "sourceHash": "812494cc82f9901cce5a1c71c4f06cb7f052767ae5f8b43915bdd2537c247655",
+  "model": "large-v3",
+  "generatedAt": "2026-08-25T22:27:06.008Z",
+  "clips": [
+    {
+      "cueCardId": "draft-food-flavors-1",
+      "thai": "เปรี้ยว",
+      "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-1.m4a",
+      "status": "matched",
+      "start": 0.49,
+      "end": 2.13,
+      "transcriptMatch": " เปรี้ยว",
+      "confidence": 0.9987120833396912,
+      "candidates": [
+        {
+          "start": 0.64,
+          "end": 1.88,
+          "transcriptMatch": " เปรี้ยว",
+          "confidence": 0.9987120833396912,
+          "exact": true,
+          "segmentIndex": 0
+        },
+        {
+          "start": 0.4,
+          "end": 1.88,
+          "transcriptMatch": "์ เปรี้ยว",
+          "confidence": 0.8885639214515686,
+          "exact": false,
+          "segmentIndex": 0
+        },
+        {
+          "start": 0.64,
+          "end": 1.48,
+          "transcriptMatch": " เปรี้ย",
+          "confidence": 0.8726848128012249,
+          "exact": false,
+          "segmentIndex": 0
+        },
+        {
+          "start": 0.64,
+          "end": 2.42,
+          "transcriptMatch": " เปรี้ยว ห",
+          "confidence": 0.8720234689116478,
+          "exact": false,
+          "segmentIndex": 0
+        }
+      ]
+    },
+    {
+      "cueCardId": "draft-food-flavors-2",
+      "thai": "หวาน",
+      "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-2.m4a",
+      "status": "matched",
+      "start": 1.73,
+      "end": 4.07,
+      "transcriptMatch": " หวาน",
+      "confidence": 0.9659659880399704,
+      "candidates": [
+        {
+          "start": 1.88,
+          "end": 3.82,
+          "transcriptMatch": " หวาน",
+          "confidence": 0.9659659880399704,
+          "exact": true,
+          "segmentIndex": 0
+        }
+      ]
+    },
+    {
+      "cueCardId": "draft-food-flavors-3",
+      "thai": "เค็ม",
+      "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-3.m4a",
+      "status": "matched",
+      "start": 3.67,
+      "end": 5.91,
+      "transcriptMatch": " เค็ม",
+      "confidence": 0.9761244118213653,
+      "candidates": [
+        {
+          "start": 3.82,
+          "end": 5.66,
+          "transcriptMatch": " เค็ม",
+          "confidence": 0.9761244118213653,
+          "exact": true,
+          "segmentIndex": 0
+        }
+      ]
+    },
+    {
+      "cueCardId": "draft-food-flavors-4",
+      "thai": "เผ็ด",
+      "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-4.m4a",
+      "status": "matched",
+      "start": 5.51,
+      "end": 7.87,
+      "transcriptMatch": " เผ็ด",
+      "confidence": 0.9853024023771286,
+      "candidates": [
+        {
+          "start": 5.66,
+          "end": 7.62,
+          "transcriptMatch": " เผ็ด",
+          "confidence": 0.9853024023771286,
+          "exact": true,
+          "segmentIndex": 0
+        }
+      ]
+    },
+    {
+      "cueCardId": "draft-food-flavors-5",
+      "thai": "ขม",
+      "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-5.m4a",
+      "status": "matched",
+      "start": 7.949999999999999,
+      "end": 10.33,
+      "transcriptMatch": " ขม",
+      "confidence": 0.9954673063755035,
+      "candidates": [
+        {
+          "start": 8.1,
+          "end": 10.08,
+          "transcriptMatch": " ขม",
+          "confidence": 0.9954673063755035,
+          "exact": true,
+          "segmentIndex": 0
+        }
+      ]
+    },
+    {
+      "cueCardId": "draft-food-flavors-6",
+      "thai": "จืด",
+      "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-6.m4a",
+      "status": "matched",
+      "start": 10.29,
+      "end": 12.47,
+      "transcriptMatch": " จืด",
+      "confidence": 0.9945257759094238,
+      "candidates": [
+        {
+          "start": 10.44,
+          "end": 12.22,
+          "transcriptMatch": " จืด",
+          "confidence": 0.9945257759094238,
+          "exact": true,
+          "segmentIndex": 0
+        }
+      ]
+    }
+  ]
+}

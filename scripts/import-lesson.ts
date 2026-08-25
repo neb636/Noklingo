@@ -1,6 +1,7 @@
 import { execFileSync, spawnSync } from "node:child_process";
 import { cpSync, existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { basename, join, resolve, sep } from "node:path";
+import { z } from "zod";
 import { validateCurriculum } from "../src/domain/curriculum-validation";
 import { CueCardSchema, VideoLessonSchema, type CueCard, type VideoLesson } from "../src/domain/schemas";
 
@@ -16,10 +17,26 @@ const packageDir = resolve(packageArg);
 const definitionPath = join(packageDir, "lesson.json");
 const sourcePath = join(packageDir, "source.mp4");
 const audioDir = join(packageDir, "audio");
-for (const required of [definitionPath, sourcePath, audioDir]) {
+const audioClipsPath = join(packageDir, "audio-clips.json");
+for (const required of [definitionPath, sourcePath]) {
   if (!existsSync(required)) throw new Error(`Missing required package input: ${required}`);
 }
-if (!statSync(audioDir).isDirectory()) throw new Error(`Required package input is not a directory: ${audioDir}`);
+const hasAudioDir = existsSync(audioDir) && statSync(audioDir).isDirectory();
+const hasAudioClips = existsSync(audioClipsPath);
+if (hasAudioDir === hasAudioClips) throw new Error("Provide exactly one audio source: audio/ or audio-clips.json.");
+
+const AudioClipManifestSchema = z.object({
+  clips: z.array(z.object({
+    output: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*\.m4a$/),
+    startSeconds: z.number().finite().nonnegative(),
+    endSeconds: z.number().finite().positive(),
+  })).min(1),
+});
+const audioClipManifest = hasAudioClips
+  ? AudioClipManifestSchema.parse(JSON.parse(readFileSync(audioClipsPath, "utf8")))
+  : undefined;
+const clipByOutput = new Map(audioClipManifest?.clips.map((clip) => [clip.output, clip]) ?? []);
+if (clipByOutput.size !== (audioClipManifest?.clips.length ?? 0)) throw new Error("Audio clip output names must be unique.");
 
 const raw = JSON.parse(readFileSync(definitionPath, "utf8"));
 const lesson = VideoLessonSchema.parse(raw.lesson);
@@ -60,6 +77,12 @@ if (!sourceMetadata.videoCodecs.includes("h264") || !sourceMetadata.audioCodecs.
 if (Math.abs(sourceMetadata.durationSeconds - lesson.media.durationSeconds) > 0.25) {
   throw new Error(`Declared duration ${lesson.media.durationSeconds}s does not match source duration ${sourceMetadata.durationSeconds.toFixed(3)}s.`);
 }
+for (const clip of audioClipManifest?.clips ?? []) {
+  const duration = clip.endSeconds - clip.startSeconds;
+  if (duration < 0.25 || duration > 10 || clip.endSeconds > sourceMetadata.durationSeconds) {
+    throw new Error(`Invalid audio excerpt ${clip.output}: use a 0.25–10 second range inside source.mp4.`);
+  }
+}
 
 const repoRoot = resolve(import.meta.dirname, "..");
 const registryPath = join(repoRoot, "src", "content", "lesson-packages.json");
@@ -84,11 +107,17 @@ const declaredAudio = [...new Set([
   ...packageCards.map((card) => card.phraseAudioSrc),
   ...lesson.quizBank.map((question) => question.audioSrc),
 ].filter((path): path is string => Boolean(path)))];
+const declaredOutputs = new Set(declaredAudio.map((path) => path.split("/audio/")[1]));
+if (audioClipManifest && (declaredOutputs.size !== clipByOutput.size || [...declaredOutputs].some((output) => !output || !clipByOutput.has(output)))) {
+  throw new Error("audio-clips.json must exactly cover every declared lesson audio asset, without extras.");
+}
 for (const audioPath of declaredAudio) {
   const input = intakeAsset(audioPath, lesson, packageCards);
   if (!input) throw new Error(`Missing declared audio input: ${audioPath}`);
-  const metadata = probeMedia(input);
-  if (!metadata.audioCodecs.length) throw new Error(`Declared audio has no playable audio stream: ${audioPath}`);
+  if (hasAudioDir) {
+    const metadata = probeMedia(input);
+    if (!metadata.audioCodecs.length) throw new Error(`Declared audio has no playable audio stream: ${audioPath}`);
+  }
 }
 
 console.log(`Validated ${lesson.id}: ${packageCards.length} cue cards, ${lesson.quizBank.filter((question) => question.scored).length} scored questions, ${sourceMetadata.durationSeconds.toFixed(3)}s.`);
@@ -101,7 +130,16 @@ const mediaDir = join(repoRoot, "public", "lessons", lesson.id);
 mkdirSync(mediaDir, { recursive: true });
 execFileSync("ffmpeg", ["-y", "-i", sourcePath, "-c:v", "libx264", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", join(mediaDir, "intro.mp4")], { stdio: "inherit" });
 execFileSync("ffmpeg", ["-y", "-ss", "00:00:01", "-i", sourcePath, "-frames:v", "1", "-q:v", "2", join(mediaDir, "poster.jpg")], { stdio: "inherit" });
-cpSync(audioDir, join(mediaDir, "audio"), { recursive: true });
+const installedAudioDir = join(mediaDir, "audio");
+mkdirSync(installedAudioDir, { recursive: true });
+if (hasAudioDir) cpSync(audioDir, installedAudioDir, { recursive: true });
+for (const clip of audioClipManifest?.clips ?? []) {
+  const clipDuration = clip.endSeconds - clip.startSeconds;
+  execFileSync("ffmpeg", [
+    "-y", "-ss", String(clip.startSeconds), "-i", sourcePath, "-t", String(clipDuration),
+    "-vn", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", join(installedAudioDir, clip.output),
+  ], { stdio: "inherit" });
+}
 
 const normalizedMetadata = probeMedia(join(mediaDir, "intro.mp4"));
 if (!normalizedMetadata.videoCodecs.includes("h264") || !normalizedMetadata.audioCodecs.includes("aac")
@@ -110,6 +148,9 @@ if (!normalizedMetadata.videoCodecs.includes("h264") || !normalizedMetadata.audi
 }
 for (const path of [lesson.media.videoSrc, lesson.media.posterSrc, ...packageCards.map((card) => card.phraseAudioSrc), ...lesson.quizBank.map((question) => question.audioSrc)]) {
   if (path && !existsSync(publicAsset(path))) throw new Error(`Generated bundle is missing declared asset: ${path}`);
+}
+for (const audioPath of declaredAudio) {
+  if (!probeMedia(publicAsset(audioPath)).audioCodecs.length) throw new Error(`Installed audio is not playable: ${audioPath}`);
 }
 
 const installedIssues = validateCurriculum(nextLessons, nextCards, {
@@ -130,6 +171,7 @@ function intakeAsset(localPath: string, targetLesson: VideoLesson, cards: CueCar
   if (!declaredAudio.has(localPath)) return undefined;
   const relativeAudio = localPath.split("/audio/")[1];
   if (!relativeAudio || relativeAudio.includes("..")) return undefined;
+  if (audioClipManifest) return clipByOutput.has(relativeAudio) ? sourcePath : undefined;
   const file = resolve(audioDir, relativeAudio);
   return file.startsWith(`${audioDir}${sep}`) && existsSync(file) ? file : undefined;
 }

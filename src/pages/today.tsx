@@ -6,6 +6,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { AppLink } from "@/components/AppLink";
 import { writeSnapshot } from "@/data/db";
 import { selectTodayAction } from "@/engine/learning-engine";
+import { masteryQuestionCount } from "@/domain/lesson-sizing";
 import { formatLocalDate, localDateKey } from "@/engine/local-date";
 import { assetPath } from "@/lib/asset-path";
 import { useClientReady } from "@/lib/use-client-ready";
@@ -79,7 +80,10 @@ function actionCopy(action: ReturnType<typeof selectTodayAction> | undefined) {
   if (!action) return { number: "··", eyebrow: "Local record", title: "Opening your notebook", description: "Reading the study state stored in this browser.", time: "A moment", detail: "Stored locally" };
   if (action.kind === "resume") return { number: "↳", eyebrow: "Unfinished session", title: action.session.mode === "standalone-review" ? "Continue due review" : `Continue ${action.session.mode}`, description: "Your exact stage, fixed queue, and answers are waiting where you left them.", time: "Resume", detail: `${action.session.stage.replace("-", " ")}` };
   if (action.kind === "introduction") return { number: String(action.lesson.order).padStart(2, "0"), eyebrow: "New lesson", title: action.lesson.title, description: action.lesson.objective, time: "About 8 minutes", detail: "Mastery begins tomorrow" };
-  if (action.kind === "mastery") return { number: String(action.lesson.order).padStart(2, "0"), eyebrow: "Delayed mastery is due", title: action.lesson.title, description: "Bring the Thai back before looking, then complete a fixed ten-question check.", time: "About 7 minutes", detail: "9 of 10 to master" };
+  if (action.kind === "mastery") {
+    const count = masteryQuestionCount(action.lesson);
+    return { number: String(action.lesson.order).padStart(2, "0"), eyebrow: "Delayed mastery is due", title: action.lesson.title, description: `Bring the Thai back before looking, then complete a fixed ${count}-question check.`, time: "About 7 minutes", detail: `${Math.max(1, count - 1)} of ${count}, with every phrase recalled` };
+  }
   if (action.kind === "wait") return { number: "⌁", eyebrow: "Let memory settle", title: `Return ${formatLocalDate(action.eligibleDate)}`, description: "The first pass is complete. The next useful action is delayed retrieval after a local calendar day has passed.", time: "No study due", detail: "Replay is optional" };
   if (action.kind === "standalone-review") return { number: "↻", eyebrow: "Spaced review is due", title: `${Math.min(10, action.dueCount)} older phrase${action.dueCount === 1 ? "" : "s"}`, description: "A fixed queue from mastered lessons is ready. Results appear only at the end.", time: "About 5 minutes", detail: `${action.dueCount} due item${action.dueCount === 1 ? "" : "s"}` };
   if (action.kind === "editorial-hold") return { number: "⌁", eyebrow: "Curriculum in review", title: `${action.draftCount} local clips are staged`, description: "Every supplied Reel is available as an explicit draft preview with screenshot-derived cue cards. Scored study stays closed until a lesson passes audio, cue-card, and quiz review.", time: "Preview anytime", detail: "No draft affects progress" };

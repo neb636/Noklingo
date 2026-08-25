@@ -66,6 +66,13 @@ export const KnowledgeItemSchema = z.object({
   literalNote: z.string().min(1).optional(),
   culturalNote: z.string().min(1).optional(),
   phraseAudioSrc: LocalAssetPathSchema.optional(),
+  pronunciationOverride: z.object({
+    startSeconds: z.number().finite().nonnegative(),
+    endSeconds: z.number().finite().positive(),
+    matchText: z.string().min(1).optional(),
+  }).refine((value) => value.endSeconds > value.startSeconds, {
+    message: "Pronunciation override endSeconds must be after startSeconds.",
+  }).optional(),
   verificationStatus: VerificationStatusSchema,
 });
 export const CueCardSchema = KnowledgeItemSchema;
@@ -132,6 +139,7 @@ export const ActiveStudySessionSchema = z.object({
   queue: z.array(SessionQueueEntrySchema),
   questionIndex: z.number().int().nonnegative(),
   answers: z.array(SessionAnswerSchema),
+  feedbackQueueId: z.string().min(1).optional(),
   startedAt: z.string().datetime(),
   completedAt: z.string().datetime().optional(),
 });
