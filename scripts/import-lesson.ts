@@ -1,0 +1,172 @@
+import { execFileSync, spawnSync } from "node:child_process";
+import { cpSync, existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
+import { basename, join, resolve, sep } from "node:path";
+import { validateCurriculum, webVttIssues } from "../src/domain/curriculum-validation";
+import { CueCardSchema, VideoLessonSchema, type CueCard, type VideoLesson } from "../src/domain/schemas";
+
+const args = process.argv.slice(2);
+const packageArg = args.find((arg) => !arg.startsWith("--"));
+const apply = args.includes("--apply");
+if (!packageArg) {
+  console.error("Usage: npm run lesson:import -- content-inbox/<lesson-id> [--apply]");
+  process.exit(1);
+}
+
+const packageDir = resolve(packageArg);
+const definitionPath = join(packageDir, "lesson.json");
+const sourcePath = join(packageDir, "source.mp4");
+const captionsPath = join(packageDir, "captions.vtt");
+const audioDir = join(packageDir, "audio");
+for (const required of [definitionPath, sourcePath, captionsPath, audioDir]) {
+  if (!existsSync(required)) throw new Error(`Missing required package input: ${required}`);
+}
+if (!statSync(audioDir).isDirectory()) throw new Error(`Required package input is not a directory: ${audioDir}`);
+
+const raw = JSON.parse(readFileSync(definitionPath, "utf8"));
+const lesson = VideoLessonSchema.parse(raw.lesson);
+const packageCards = CueCardSchema.array().parse(raw.cueCards);
+if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(lesson.id)) throw new Error("Lesson ids must be lowercase URL-safe slugs.");
+if (lesson.contentStatus !== "verified") throw new Error("Only reviewed packages marked verified may be imported.");
+if (lesson.media.durationStatus !== "confirmed" || lesson.media.captionsStatus !== "reviewed") throw new Error("Verified packages require confirmed duration and reviewed captions metadata.");
+if (lesson.source?.permissionStatus !== "authorized") throw new Error("A verified package requires an authorized source record.");
+if (lesson.media.availability !== "available") throw new Error("Imported lesson media must be marked available.");
+
+const expectedMediaRoot = `/lessons/${lesson.id}`;
+if (lesson.media.videoSrc !== `${expectedMediaRoot}/intro.mp4`
+  || lesson.media.posterSrc !== `${expectedMediaRoot}/poster.jpg`
+  || lesson.media.captionsSrc !== `${expectedMediaRoot}/captions.vtt`) {
+  throw new Error(`Lesson media paths must be ${expectedMediaRoot}/intro.mp4, poster.jpg, and captions.vtt.`);
+}
+if (packageCards.some((card) => card.lessonId !== lesson.id)) throw new Error("Every cue card in the package must belong to the imported lesson.");
+const declaredCardIds = new Set(lesson.cueCardIds);
+if (packageCards.length !== declaredCardIds.size
+  || packageCards.some((card) => !declaredCardIds.has(card.id))
+  || lesson.cueCardIds.some((id) => !packageCards.some((card) => card.id === id))) {
+  throw new Error("The package cue cards must exactly match lesson.cueCardIds, without duplicates or extras.");
+}
+for (const audioPath of [
+  ...packageCards.map((card) => card.phraseAudioSrc),
+  ...lesson.quizBank.map((question) => question.audioSrc),
+].filter((path): path is string => Boolean(path))) {
+  if (!audioPath.startsWith(`${expectedMediaRoot}/audio/`)) {
+    throw new Error(`Lesson audio must be bundled below ${expectedMediaRoot}/audio/: ${audioPath}`);
+  }
+}
+
+const captions = readFileSync(captionsPath, "utf8");
+validateVtt(captions, lesson.media.durationSeconds);
+
+for (const tool of ["ffmpeg", "ffprobe"]) {
+  if (spawnSync(tool, ["-version"], { stdio: "ignore" }).status !== 0) throw new Error(`${tool} is required to validate and normalize lesson media.`);
+}
+const sourceMetadata = probeMedia(sourcePath);
+if (!sourceMetadata.videoCodecs.includes("h264") || !sourceMetadata.audioCodecs.includes("aac")) {
+  throw new Error("source.mp4 must contain H.264 video and AAC audio.");
+}
+if (Math.abs(sourceMetadata.durationSeconds - lesson.media.durationSeconds) > 0.25) {
+  throw new Error(`Declared duration ${lesson.media.durationSeconds}s does not match source duration ${sourceMetadata.durationSeconds.toFixed(3)}s.`);
+}
+
+const repoRoot = resolve(import.meta.dirname, "..");
+const registryPath = join(repoRoot, "src", "content", "lesson-packages.json");
+const registry = JSON.parse(readFileSync(registryPath, "utf8")) as { lessons: unknown[]; cueCards: unknown[] };
+const existingLessons = VideoLessonSchema.array().parse(registry.lessons);
+const existingCards = CueCardSchema.array().parse(registry.cueCards);
+const existingIssues = validateCurriculum(existingLessons, existingCards, {
+  assetExists: (localPath) => existsSync(publicAsset(localPath)),
+  assetText: (localPath) => existsSync(publicAsset(localPath)) ? readFileSync(publicAsset(localPath), "utf8") : undefined,
+});
+if (existingIssues.length) throw new Error(`Existing reviewed registry is invalid: ${existingIssues[0].lessonId}: ${existingIssues[0].message}`);
+
+const nextLessons = [...existingLessons.filter((entry) => entry.id !== lesson.id), lesson].sort((a, b) => a.order - b.order);
+const nextCards = [...existingCards.filter((entry) => entry.lessonId !== lesson.id), ...packageCards];
+const packageIssues = validateCurriculum(nextLessons, nextCards, {
+  assetExists: (localPath) => intakeAsset(localPath, lesson, packageCards) !== undefined || existsSync(publicAsset(localPath)),
+  assetText: (localPath) => localPath === lesson.media.captionsSrc
+    ? captions
+    : existsSync(publicAsset(localPath)) ? readFileSync(publicAsset(localPath), "utf8") : undefined,
+});
+if (packageIssues.length) {
+  throw new Error(packageIssues.map((issue) => `${issue.lessonId}: ${issue.message}`).join("\n"));
+}
+
+const declaredAudio = [...new Set([
+  ...packageCards.map((card) => card.phraseAudioSrc),
+  ...lesson.quizBank.map((question) => question.audioSrc),
+].filter((path): path is string => Boolean(path)))];
+for (const audioPath of declaredAudio) {
+  const input = intakeAsset(audioPath, lesson, packageCards);
+  if (!input) throw new Error(`Missing declared audio input: ${audioPath}`);
+  const metadata = probeMedia(input);
+  if (!metadata.audioCodecs.length) throw new Error(`Declared audio has no playable audio stream: ${audioPath}`);
+}
+
+console.log(`Validated ${lesson.id}: ${packageCards.length} cue cards, ${lesson.quizBank.filter((question) => question.scored).length} scored questions, ${sourceMetadata.durationSeconds.toFixed(3)}s.`);
+if (!apply) {
+  console.log("Dry run complete. Add --apply to normalize media and update the reviewed curriculum registry.");
+  process.exit(0);
+}
+
+const mediaDir = join(repoRoot, "public", "lessons", lesson.id);
+mkdirSync(mediaDir, { recursive: true });
+execFileSync("ffmpeg", ["-y", "-i", sourcePath, "-c:v", "libx264", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", join(mediaDir, "intro.mp4")], { stdio: "inherit" });
+execFileSync("ffmpeg", ["-y", "-ss", "00:00:01", "-i", sourcePath, "-frames:v", "1", "-q:v", "2", join(mediaDir, "poster.jpg")], { stdio: "inherit" });
+cpSync(captionsPath, join(mediaDir, "captions.vtt"));
+cpSync(audioDir, join(mediaDir, "audio"), { recursive: true });
+
+const normalizedMetadata = probeMedia(join(mediaDir, "intro.mp4"));
+if (!normalizedMetadata.videoCodecs.includes("h264") || !normalizedMetadata.audioCodecs.includes("aac")
+  || Math.abs(normalizedMetadata.durationSeconds - lesson.media.durationSeconds) > 0.25) {
+  throw new Error("Normalized lesson media failed codec or duration verification.");
+}
+for (const path of [lesson.media.videoSrc, lesson.media.posterSrc, lesson.media.captionsSrc, ...packageCards.map((card) => card.phraseAudioSrc), ...lesson.quizBank.map((question) => question.audioSrc)]) {
+  if (path && !existsSync(publicAsset(path))) throw new Error(`Generated bundle is missing declared asset: ${path}`);
+}
+
+const installedIssues = validateCurriculum(nextLessons, nextCards, {
+  assetExists: (localPath) => existsSync(publicAsset(localPath)),
+  assetText: (localPath) => existsSync(publicAsset(localPath)) ? readFileSync(publicAsset(localPath), "utf8") : undefined,
+});
+if (installedIssues.length) throw new Error(installedIssues.map((issue) => `${issue.lessonId}: ${issue.message}`).join("\n"));
+
+writeFileSync(registryPath, `${JSON.stringify({ lessons: nextLessons, cueCards: nextCards }, null, 2)}\n`);
+console.log(`Imported ${basename(packageDir)} into public/lessons/${lesson.id} and updated the reviewed registry.`);
+
+function intakeAsset(localPath: string, targetLesson: VideoLesson, cards: CueCard[]): string | undefined {
+  if (localPath === targetLesson.media.videoSrc) return sourcePath;
+  if (localPath === targetLesson.media.posterSrc) return sourcePath; // The importer creates the poster from this verified source.
+  if (localPath === targetLesson.media.captionsSrc) return captionsPath;
+  const declaredAudio = new Set([
+    ...cards.map((card) => card.phraseAudioSrc),
+    ...targetLesson.quizBank.map((question) => question.audioSrc),
+  ].filter((path): path is string => Boolean(path)));
+  if (!declaredAudio.has(localPath)) return undefined;
+  const relativeAudio = localPath.split("/audio/")[1];
+  if (!relativeAudio || relativeAudio.includes("..")) return undefined;
+  const file = resolve(audioDir, relativeAudio);
+  return file.startsWith(`${audioDir}${sep}`) && existsSync(file) ? file : undefined;
+}
+
+function publicAsset(localPath: string) {
+  const publicRoot = join(repoRoot, "public");
+  const file = resolve(publicRoot, localPath.replace(/^\/+/, ""));
+  if (file !== publicRoot && !file.startsWith(`${publicRoot}${sep}`)) throw new Error(`Unsafe public asset path: ${localPath}`);
+  return file;
+}
+
+function probeMedia(path: string) {
+  const result = execFileSync("ffprobe", ["-v", "error", "-show_entries", "format=duration:stream=codec_type,codec_name", "-of", "json", path], { encoding: "utf8" });
+  const metadata = JSON.parse(result) as { format?: { duration?: string }; streams?: Array<{ codec_type?: string; codec_name?: string }> };
+  const durationSeconds = Number(metadata.format?.duration);
+  if (!Number.isFinite(durationSeconds) || durationSeconds <= 0) throw new Error(`Could not confirm media duration: ${path}`);
+  return {
+    durationSeconds,
+    videoCodecs: (metadata.streams ?? []).filter((stream) => stream.codec_type === "video").map((stream) => stream.codec_name),
+    audioCodecs: (metadata.streams ?? []).filter((stream) => stream.codec_type === "audio").map((stream) => stream.codec_name),
+  };
+}
+
+function validateVtt(text: string, durationSeconds: number) {
+  const issues = webVttIssues(text, durationSeconds);
+  if (issues.length) throw new Error(`Invalid captions.vtt:\n${issues.join("\n")}`);
+}

@@ -1,143 +1,172 @@
-# Noklingo
+# Thai Study
 
-Noklingo is an offline-first, single-learner web app for practical spoken Thai.
-It uses short, game-like lessons built around listening, useful conversation,
-retrieval practice, immediate feedback, mistake recovery, and spaced review.
+Thai Study is an offline-first, static PWA for learning conversational Thai
+from short, authorized video lessons. Its learning loop is intentionally quiet:
 
-The learner sees consistent Romanization and natural English meaning. Thai script
-is preserved underneath for linguistic and audio accuracy, but reading or typing
-Thai is never required to complete an exercise.
+> watch → notice → make a first pass → retrieve tomorrow → return later
 
-## What the engine supports
+There are no points, hearts, achievements, checkpoint statistics, or course
+path. The interface presents one relevant action at a time.
 
-- Data-driven courses, units, lessons, dialogues, vocabulary, phrases, speakers,
-  audio, checkpoints, and review plans
-- Eleven reusable exercise families covering listening, recognition, recall,
-  phrase building, conversation, dialogue comprehension, speaking, mistake
-  correction, and personalized practice
-- Immediate corrective feedback with canonical answers, short explanations,
-  pronunciation help, and audio replay
-- First-attempt accuracy, retry-aware XP, hint handling, five-heart recovery,
-  resumable sessions, milestones, and an 80% checkpoint threshold
-- Explicit prerequisites and deterministic lesson generation
-- A deterministic SM-2-inspired review scheduler that mixes recent mistakes,
-  weak concepts, older due material, listening, recall, and conversation
-- Local-calendar daily XP and streak behavior that remains sensible across DST
-  changes and travel
-- Multiple speakers, normal/slow human recordings, browser TTS placeholders,
-  targeted preload, caching, and accessible missing-audio fallback
-- Fully local version 2 persistence through Zustand and Dexie, with export,
-  import, and reset but no account or cloud dependency
+## Current curriculum state
 
-The scheduler is an original, documented approximation designed to create
-familiar successful language-app behavior; it does not claim to reproduce a
-proprietary algorithm.
+The repository contains 24 locally bundled Reel plans in an editorially useful
+order. Every draft has a same-origin MP4, poster, confirmed duration,
+machine-generated WebVTT, and timestamped machine transcript notes.
 
-## Development
+All 24 remain explicitly `draft`. Machine output is shown only in the draft
+preview with an unverified label; it is never used for cue cards, scored
+questions, mastery, or review scheduling. An Instagram URL is attribution, not
+evidence that the dialogue or timestamps were verified.
 
-Requires Node.js 22.13 or later.
+The reviewed registry is currently empty, so there are zero active study
+lessons. Today shows an editorial hold and Library exposes the ordered local
+draft previews. This is intentional: the app does not invent Thai, guess
+timestamps, synthesize substitute phrase audio, or publish automatic
+transcription merely to make the study loop appear populated.
+
+The draft inventory lives in `src/content/draft-reels.json`; reviewed lessons
+and cue cards live in `src/content/lesson-packages.json`. A reviewed lesson with
+the same stable ID replaces its draft plan after it passes the publication
+gate.
+
+## Publication gate
+
+A release-ready `VideoLesson` must have all of the following:
+
+- an authorized same-origin local MP4, local poster, local WebVTT captions,
+  confirmed duration, and reviewed caption status;
+- a nonempty timestamped transcript whose lines are all verified and remain
+  within the confirmed media duration;
+- 5–10 verified cue cards, each linked to real transcript lines and bundled
+  with local phrase audio;
+- at least two valid scored question variants for every cue-card item and at
+  least ten valid scored questions overall;
+- scored coverage of listening, situation/response, meaning recognition, and
+  phrase recall through phrase construction;
+- explicit bundled local audio for every listening question.
+
+Validation also rejects missing assets, invalid or orphaned references,
+duplicate lesson/order/cue-card/question/transcript IDs, duplicate cue-card
+entries, unreachable or ambiguous answers, insufficient cue-card coverage, and
+questions that depend on unavailable media or unverified language. See
+[the curriculum authoring guide](docs/CURRICULUM_AUTHORING.md) for the package
+contract and review workflow.
+
+## Learning behavior
+
+Once a lesson passes that gate:
+
+- A first introduction requires completed local video playback, or an explicit
+  media-error bypass, before 5–10 cue cards and a short diagnostic.
+- The diagnostic never grants mastery. A mastery check first becomes available
+  on the next local calendar day.
+- A mastery session begins with meaning/context retrieval cards and ends with
+  ten active-lesson questions. Nine correct answers are required.
+- Up to three due questions from older mastered lessons may be interleaved.
+  They do not affect the ten-question gate or relock a lesson.
+- Review intervals follow roughly 2, 5, 12, and 30 days, then adapt. A missed
+  review returns tomorrow.
+- Video, cue-card, retrieval, and quiz progress is durable. The exact question
+  queue, shuffled choices, current position, and answers are stored locally.
+- Replays are disposable and never change progress, review schedules,
+  consistency, or attempts.
+
+Local calendar helpers avoid elapsed-hour calculations, so eligibility and
+consistency remain stable across daylight-saving transitions and missed days.
+
+## Stack, persistence, and offline behavior
+
+- Next.js 16 and React 19, statically exported through Vinext/Vite
+- Zustand for live client state
+- Dexie/IndexedDB for durable schema-v3 data
+- Zod for curriculum, persistence, import, and export contracts
+- Framer Motion, Howler, and Lucide
+- A prefix-scoped, versioned service worker for the application shell and safe
+  complete assets
+
+Schema v3 is intentionally incompatible with earlier prototypes. The first v3
+launch clears old progress **and settings** instead of attempting a migration,
+then shows one concise redesign notice. Export emits only a v3 snapshot. Import
+rejects malformed, v1, or v2 files with a plain-language message and changes
+nothing.
+
+Valid v3 imports and resumed records are reconciled against the bundled
+curriculum version. Progress, reviews, attempts, and completed sessions that
+still point to published curriculum are retained. An active session is kept
+only when its lesson, cards, question IDs, exact queue, shuffle permutations,
+answers, and stage remain valid; otherwise that active session is discarded
+without destroying the rest of the valid record.
+
+Service-worker caches use the v3 product namespace, deployment scope, and a
+content-derived build revision. Activation removes older owned caches. The
+hashed application shell is precached, while MP4 and byte-range responses stay
+network-only so a partial video response can never be mistaken for a complete
+offline asset. Video failure has an explicit retry/fallback path.
+
+## Author a reviewed lesson
+
+Acquire media only through an authorized manual transfer or a creator-enabled
+download. The application and lesson importer do not fetch Instagram media.
+
+1. Put the reviewed package in `content-inbox/<lesson-id>/` using the structure
+   in [docs/CURRICULUM_AUTHORING.md](docs/CURRICULUM_AUTHORING.md).
+2. Validate without changing the repository:
+
+   ```bash
+   npm run lesson:import -- content-inbox/<lesson-id>
+   ```
+
+3. Correct every reported editorial, reference, answer, or media issue.
+4. Normalize and install the accepted package:
+
+   ```bash
+   npm run lesson:import -- content-inbox/<lesson-id> --apply
+   ```
+
+The importer requires `ffmpeg` and `ffprobe`. It emits H.264/AAC fast-start
+video, a JPEG poster, reviewed WebVTT, and local audio under
+`public/lessons/<lesson-id>/`, then updates the ordered reviewed registry.
+
+## Run and build
+
+Node.js 22+ is recommended. `ffmpeg` and `ffprobe` are additionally required
+for reviewed lesson imports.
 
 ```bash
 npm install
-npm run validate:course
 npm run dev
 ```
 
-Run the complete local gate before merging:
+Run the release checks without automated tests:
 
 ```bash
-npm run validate:course
-npm run typecheck
-npm run lint
-npm run format:check
-npm test
-npm run build
+npm run check:release
 ```
 
-`validate:course` parses content with Zod and then checks cross-references,
-prerequisites, answer reachability, audio files, Romanization, lesson composition,
-and progression. It reports an author-facing content path for each error.
+`check:release` validates curriculum and assets, type-checks, lints, and builds
+the static site. The broader `npm run check` command additionally runs Vitest.
+The production artifact is written to `dist/client/`.
 
-## Documentation
+To reproduce a GitHub Pages project-site build below `/Noklingo`:
 
-- [Learning engine](docs/LEARNING_ENGINE.md) describes lesson generation,
-  grading, XP, hearts and recovery, progression, checkpoints, review scheduling,
-  streak dates, and local persistence.
-- [Course authoring](docs/COURSE_AUTHORING.md) explains how to add vocabulary,
-  phrases, speakers, dialogues, exercises, lessons, units, audio, accepted answer
-  variants, checkpoints, and review metadata.
-- [Course overview](docs/COURSE_OVERVIEW.md) lists the 14-unit progression,
-  checkpoint gates, Romanization convention, and listening progression.
-- [Thai content style](docs/THAI_CONTENT_STYLE.md) defines naturalness, usage
-  labels, safety notes, and the native-speaker review checklist.
-- [Audio recording workflow](docs/AUDIO_RECORDING_WORKFLOW.md) explains the
-  structured 492-take manifest and human-recording handoff.
-- [Audio assets](public/audio/README.md) defines the recording and filename
-  convention, multiple-speaker and slow-audio support, caching, fallbacks, and the
-  workflow for replacing TTS with human voices.
-
-## Architecture
-
-- `app/` contains the Vinext application entry and global styling.
-- `src/content/courseData.ts` contains the normalized course and builders;
-  `src/content/course.ts` is the stable public content entry point.
-- `src/content/audioManifest.ts` derives the complete normal/slow recording
-  manifest from resolved lesson use.
-- `src/domain/schemas.ts` defines Zod runtime schemas and the TypeScript domain
-  contracts inferred from them.
-- `src/domain/courseValidation.ts` performs semantic authoring validation such as
-  duplicate-ID, broken-reference, audio, prerequisite, progression, answer, and
-  lesson-variety checks.
-- `src/engine/` contains pure grading, scoring, progression, lesson-generation,
-  and review-scheduling logic. An explicit clock and seed keep it testable and
-  deterministic.
-- `src/features/lesson/` contains the exercise renderer registry and lesson
-  player. The UI renders engine results instead of owning learning rules.
-- `src/store/` uses Zustand to coordinate routes and the active session.
-- `src/lib/db.ts` stores version 2 learner data and resumable sessions in
-  IndexedDB through Dexie.
-- `src/lib/audio.ts` resolves speaker assets, plays normal or slow audio through
-  Howler, handles TTS placeholders, and preloads only the next likely clips.
-- `public/sw.js` caches the application shell and successful same-origin assets
-  for later offline use.
-
-The browser flow is:
-
-```text
-normalized content
-  -> Zod parsing
-  -> semantic validation
-  -> pure learning engine
-  -> exercise registry and learner UI
-  -> Zustand session coordination
-  -> Dexie version 2 persistence
+```bash
+NEXT_PUBLIC_BASE_PATH=/Noklingo npm run build
 ```
 
-Noklingo uses Vinext because it provides the Vite-based runtime required by the
-hosting surface. There is no backend, authentication, cloud sync, or paid audio
-API. Learner data remains on the device and can be exported, imported, or reset
-from Settings.
+Use the actual repository name in place of `Noklingo`. The finalizer validates
+that emitted routes, manifest URLs, icons, service-worker precache entries, and
+other internal references remain inside that prefix. The Pages workflow sets
+the prefix automatically.
 
-## Conversational Thai Course 1
+Before release, manually exercise the vertical slice at desktop and narrow
+mobile breakpoints, including iPhone Safari/PWA behavior, light and dark modes,
+reduced motion, captions, media-failure recovery, offline shell navigation, and
+horizontal-overflow checks.
 
-The first substantial course contains 14 progressive units, 41 short lessons,
-five cumulative checkpoints, and smart-review nodes throughout. It covers core
-survival Thai, introductions, questions, restaurants, shopping, transport,
-hotels, family, daily activities, reactions, plans, casual listening, friendly
-conversation, and emergencies.
+## GitHub Pages and media visibility
 
-Seed content may use `tts:` browser speech while original human audio is being
-recorded. TTS availability varies and is not treated as a guaranteed offline
-voice. Human files can replace placeholders through normalized audio records
-without changing renderers or scoring.
-
-## Deployment
-
-GitHub Actions publishes the static site to GitHub Pages whenever `main` is
-updated. Set **Settings → Pages → Build and deployment → Source** to
-**Deploy from a branch**, then select the `gh-pages` branch and `/ (root)` after
-the first deployment creates that branch.
-
-Pull requests receive a canary at
-`https://<owner>.github.io/Noklingo/pr-preview/pr-<number>/`; the workflow updates
-that URL as a PR comment and removes the preview when the pull request closes.
+Access control is not implemented. A normal GitHub Pages project and every
+bundled MP4 are public even when the source repository is private. Do not deploy
+media whose permission is limited to local use. A client-side password prompt
+would not protect static assets; restricted media needs authenticated hosting.

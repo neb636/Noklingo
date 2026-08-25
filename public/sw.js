@@ -1,84 +1,104 @@
-const scopePath = new URL(self.registration.scope).pathname.replace(/\/$/, "");
-const scopedPath = (path) => `${scopePath}${path}`;
-const CACHE_VERSION = `noklingo-shell-v2:${scopePath || "/"}`;
-const CORE = [
-  scopedPath("/"),
-  scopedPath("/manifest.webmanifest"),
-  scopedPath("/apple-touch-icon.png"),
-  scopedPath("/icon-32.png"),
-  scopedPath("/icon-192.png"),
-  scopedPath("/icon-512.png"),
-];
+/* Thai Study: prefix-safe, offline-first service worker.
+ *
+ * The final static-build step replaces the two tokens below with a content
+ * revision and the complete, non-video application shell. Keeping the source
+ * file as a template makes cache rotation deterministic without coupling the
+ * browser runtime to a server or deployment-specific absolute path.
+ */
+const PRODUCT_CACHE_VERSION = "noklingo-thai-study-v3";
+const BUILD_REVISION = "__THAI_STUDY_BUILD_REVISION__";
+const PRECACHE_PATHS = /* __THAI_STUDY_PRECACHE_PATHS__ */ [];
+const scopeUrl = new URL(self.registration.scope);
+const scopePath = scopeUrl.pathname.endsWith("/") ? scopeUrl.pathname : `${scopeUrl.pathname}/`;
+const scopeCacheKey = scopePath.replace(/^\/+|\/+$/g, "").replace(/[^a-z\d._-]+/gi, "-") || "root";
+const CACHE_NAMESPACE = `${PRODUCT_CACHE_VERSION}-${scopeCacheKey}`;
+const SHELL_CACHE = `${CACHE_NAMESPACE}-${BUILD_REVISION}-shell`;
+const ASSET_CACHE = `${CACHE_NAMESPACE}-${BUILD_REVISION}-assets`;
+const CURRENT_CACHES = new Set([SHELL_CACHE, ASSET_CACHE]);
+const LEGACY_CACHES = new Set(["thai-study-v2-shell", "thai-study-v2-assets"]);
+const precacheUrls = PRECACHE_PATHS.map((path) => new URL(path, scopeUrl).href);
+const precacheUrlSet = new Set(precacheUrls);
+
+function ownsCache(cacheName) {
+  return cacheName.startsWith(`${CACHE_NAMESPACE}-`) || LEGACY_CACHES.has(cacheName);
+}
+
+function isWithinScope(url) {
+  return url.origin === scopeUrl.origin && url.pathname.startsWith(scopePath);
+}
+
+function isCacheableResponse(response) {
+  return response.ok && response.status === 200 && !response.headers.has("Content-Range");
+}
+
+function isSafeCompleteAsset(request, url) {
+  const safeDestination = ["script", "style", "font", "image", "track", "audio"].includes(request.destination);
+  const safeExtension = /\.(?:css|js|mjs|json|webmanifest|svg|png|jpe?g|webp|gif|ico|woff2?|ttf|otf|vtt|m4a|mp3|aac|ogg|wav)$/i.test(url.pathname);
+  return safeDestination || safeExtension;
+}
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_VERSION).then((cache) => cache.addAll(CORE)),
+    caches.open(SHELL_CACHE)
+      .then((cache) => cache.addAll(precacheUrls.map((url) => new Request(url, { cache: "reload" }))))
+      .then(() => self.skipWaiting()),
   );
 });
 
 self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches
-      .keys()
-      .then((keys) =>
-        Promise.all(
-          keys
-            .filter(
-              (key) => key.startsWith("noklingo-") && key !== CACHE_VERSION,
-            )
-            .map((key) => caches.delete(key)),
-        ),
-      ),
+    caches.keys()
+      .then((keys) => Promise.all(
+        keys.filter((key) => ownsCache(key) && !CURRENT_CACHES.has(key)).map((key) => caches.delete(key)),
+      ))
+      .then(() => self.clients.claim()),
   );
 });
 
-self.addEventListener("message", (event) => {
-  if (event.data?.type === "CACHE_URLS" && Array.isArray(event.data.urls)) {
-    event.waitUntil(
-      caches
-        .open(CACHE_VERSION)
-        .then((cache) =>
-          Promise.allSettled(event.data.urls.map((url) => cache.add(url))),
-        ),
-    );
-  }
-  if (event.data?.type === "SKIP_WAITING") self.skipWaiting();
-});
-
 self.addEventListener("fetch", (event) => {
-  if (event.request.method !== "GET") return;
-  const url = new URL(event.request.url);
-  if (url.origin !== self.location.origin) return;
+  const request = event.request;
+  if (request.method !== "GET") return;
+  const url = new URL(request.url);
+  if (!isWithinScope(url)) return;
 
-  if (event.request.mode === "navigate") {
+  // Partial responses and video are deliberately network-only. A byte range
+  // must never be mistaken for a complete asset, and MP4s are not prefetched.
+  const isVideo = url.pathname.toLowerCase().endsWith(".mp4") || request.destination === "video";
+  if (request.headers.has("range") || isVideo) return;
+
+  if (request.mode === "navigate") {
     event.respondWith(
-      fetch(event.request)
+      fetch(request)
         .then((response) => {
-          const clone = response.clone();
-          caches
-            .open(CACHE_VERSION)
-            .then((cache) => cache.put(scopedPath("/"), clone));
+          if (isCacheableResponse(response)) {
+            const copy = response.clone();
+            void caches.open(SHELL_CACHE).then((cache) => cache.put(request, copy));
+          }
           return response;
         })
-        .catch(() => caches.match(scopedPath("/"))),
+        .catch(async () => {
+          const shellCache = await caches.open(SHELL_CACHE);
+          const cached = await shellCache.match(request, { ignoreSearch: true });
+          if (cached) return cached;
+          const fallback = await shellCache.match(new URL("./today/", scopeUrl));
+          return fallback || new Response(
+            "Thai Study is offline. Open the app once while connected to finish installation.",
+            { status: 503, headers: { "Content-Type": "text/plain; charset=utf-8" } },
+          );
+        }),
     );
     return;
   }
 
+  if (!isSafeCompleteAsset(request, url)) return;
+
   event.respondWith(
-    caches.match(event.request).then((cached) => {
-      const network = fetch(event.request)
-        .then((response) => {
-          if (response.ok) {
-            const clone = response.clone();
-            caches
-              .open(CACHE_VERSION)
-              .then((cache) => cache.put(event.request, clone));
-          }
-          return response;
-        })
-        .catch(() => cached);
-      return cached || network;
+    caches.open(precacheUrlSet.has(url.href) ? SHELL_CACHE : ASSET_CACHE).then(async (cache) => {
+      const cached = await cache.match(request);
+      if (cached) return cached;
+      const response = await fetch(request);
+      if (isCacheableResponse(response)) void cache.put(request, response.clone());
+      return response;
     }),
   );
 });

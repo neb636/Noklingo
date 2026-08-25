@@ -1,26 +1,21 @@
 {
-  "name": "Noklingo — Conversational Thai",
-  "short_name": "Noklingo",
-  "description": "Short, playful lessons for useful conversational Thai.",
-  "start_url": "./",
-  "display": "standalone",
-  "background_color": "#fffaf1",
-  "theme_color": "#f77c63",
-  "orientation": "portrait-primary",
+  "id": "/",
+  "name": "Thai Study",
+  "short_name": "Thai Study",
+  "description": "A calm, local-first notebook for learning conversational Thai from short videos.",
   "lang": "en",
-  "categories": ["education", "lifestyle"],
+  "dir": "ltr",
+  "start_url": "./today/",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "background_color": "#f4efe6",
+  "theme_color": "#f4efe6",
+  "categories": ["education"],
   "icons": [
-    {
-      "src": "icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    }
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "./icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }
