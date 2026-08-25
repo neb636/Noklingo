@@ -1,7 +1,7 @@
 import { execFileSync, spawnSync } from "node:child_process";
 import { cpSync, existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { basename, join, resolve, sep } from "node:path";
-import { validateCurriculum, webVttIssues } from "../src/domain/curriculum-validation";
+import { validateCurriculum } from "../src/domain/curriculum-validation";
 import { CueCardSchema, VideoLessonSchema, type CueCard, type VideoLesson } from "../src/domain/schemas";
 
 const args = process.argv.slice(2);
@@ -15,9 +15,8 @@ if (!packageArg) {
 const packageDir = resolve(packageArg);
 const definitionPath = join(packageDir, "lesson.json");
 const sourcePath = join(packageDir, "source.mp4");
-const captionsPath = join(packageDir, "captions.vtt");
 const audioDir = join(packageDir, "audio");
-for (const required of [definitionPath, sourcePath, captionsPath, audioDir]) {
+for (const required of [definitionPath, sourcePath, audioDir]) {
   if (!existsSync(required)) throw new Error(`Missing required package input: ${required}`);
 }
 if (!statSync(audioDir).isDirectory()) throw new Error(`Required package input is not a directory: ${audioDir}`);
@@ -27,15 +26,13 @@ const lesson = VideoLessonSchema.parse(raw.lesson);
 const packageCards = CueCardSchema.array().parse(raw.cueCards);
 if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(lesson.id)) throw new Error("Lesson ids must be lowercase URL-safe slugs.");
 if (lesson.contentStatus !== "verified") throw new Error("Only reviewed packages marked verified may be imported.");
-if (lesson.media.durationStatus !== "confirmed" || lesson.media.captionsStatus !== "reviewed") throw new Error("Verified packages require confirmed duration and reviewed captions metadata.");
+if (lesson.media.durationStatus !== "confirmed") throw new Error("Verified packages require a confirmed duration.");
 if (lesson.source?.permissionStatus !== "authorized") throw new Error("A verified package requires an authorized source record.");
 if (lesson.media.availability !== "available") throw new Error("Imported lesson media must be marked available.");
 
 const expectedMediaRoot = `/lessons/${lesson.id}`;
-if (lesson.media.videoSrc !== `${expectedMediaRoot}/intro.mp4`
-  || lesson.media.posterSrc !== `${expectedMediaRoot}/poster.jpg`
-  || lesson.media.captionsSrc !== `${expectedMediaRoot}/captions.vtt`) {
-  throw new Error(`Lesson media paths must be ${expectedMediaRoot}/intro.mp4, poster.jpg, and captions.vtt.`);
+if (lesson.media.videoSrc !== `${expectedMediaRoot}/intro.mp4` || lesson.media.posterSrc !== `${expectedMediaRoot}/poster.jpg`) {
+  throw new Error(`Lesson media paths must be ${expectedMediaRoot}/intro.mp4 and poster.jpg.`);
 }
 if (packageCards.some((card) => card.lessonId !== lesson.id)) throw new Error("Every cue card in the package must belong to the imported lesson.");
 const declaredCardIds = new Set(lesson.cueCardIds);
@@ -52,9 +49,6 @@ for (const audioPath of [
     throw new Error(`Lesson audio must be bundled below ${expectedMediaRoot}/audio/: ${audioPath}`);
   }
 }
-
-const captions = readFileSync(captionsPath, "utf8");
-validateVtt(captions, lesson.media.durationSeconds);
 
 for (const tool of ["ffmpeg", "ffprobe"]) {
   if (spawnSync(tool, ["-version"], { stdio: "ignore" }).status !== 0) throw new Error(`${tool} is required to validate and normalize lesson media.`);
@@ -74,7 +68,6 @@ const existingLessons = VideoLessonSchema.array().parse(registry.lessons);
 const existingCards = CueCardSchema.array().parse(registry.cueCards);
 const existingIssues = validateCurriculum(existingLessons, existingCards, {
   assetExists: (localPath) => existsSync(publicAsset(localPath)),
-  assetText: (localPath) => existsSync(publicAsset(localPath)) ? readFileSync(publicAsset(localPath), "utf8") : undefined,
 });
 if (existingIssues.length) throw new Error(`Existing reviewed registry is invalid: ${existingIssues[0].lessonId}: ${existingIssues[0].message}`);
 
@@ -82,9 +75,6 @@ const nextLessons = [...existingLessons.filter((entry) => entry.id !== lesson.id
 const nextCards = [...existingCards.filter((entry) => entry.lessonId !== lesson.id), ...packageCards];
 const packageIssues = validateCurriculum(nextLessons, nextCards, {
   assetExists: (localPath) => intakeAsset(localPath, lesson, packageCards) !== undefined || existsSync(publicAsset(localPath)),
-  assetText: (localPath) => localPath === lesson.media.captionsSrc
-    ? captions
-    : existsSync(publicAsset(localPath)) ? readFileSync(publicAsset(localPath), "utf8") : undefined,
 });
 if (packageIssues.length) {
   throw new Error(packageIssues.map((issue) => `${issue.lessonId}: ${issue.message}`).join("\n"));
@@ -111,7 +101,6 @@ const mediaDir = join(repoRoot, "public", "lessons", lesson.id);
 mkdirSync(mediaDir, { recursive: true });
 execFileSync("ffmpeg", ["-y", "-i", sourcePath, "-c:v", "libx264", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", join(mediaDir, "intro.mp4")], { stdio: "inherit" });
 execFileSync("ffmpeg", ["-y", "-ss", "00:00:01", "-i", sourcePath, "-frames:v", "1", "-q:v", "2", join(mediaDir, "poster.jpg")], { stdio: "inherit" });
-cpSync(captionsPath, join(mediaDir, "captions.vtt"));
 cpSync(audioDir, join(mediaDir, "audio"), { recursive: true });
 
 const normalizedMetadata = probeMedia(join(mediaDir, "intro.mp4"));
@@ -119,13 +108,12 @@ if (!normalizedMetadata.videoCodecs.includes("h264") || !normalizedMetadata.audi
   || Math.abs(normalizedMetadata.durationSeconds - lesson.media.durationSeconds) > 0.25) {
   throw new Error("Normalized lesson media failed codec or duration verification.");
 }
-for (const path of [lesson.media.videoSrc, lesson.media.posterSrc, lesson.media.captionsSrc, ...packageCards.map((card) => card.phraseAudioSrc), ...lesson.quizBank.map((question) => question.audioSrc)]) {
+for (const path of [lesson.media.videoSrc, lesson.media.posterSrc, ...packageCards.map((card) => card.phraseAudioSrc), ...lesson.quizBank.map((question) => question.audioSrc)]) {
   if (path && !existsSync(publicAsset(path))) throw new Error(`Generated bundle is missing declared asset: ${path}`);
 }
 
 const installedIssues = validateCurriculum(nextLessons, nextCards, {
   assetExists: (localPath) => existsSync(publicAsset(localPath)),
-  assetText: (localPath) => existsSync(publicAsset(localPath)) ? readFileSync(publicAsset(localPath), "utf8") : undefined,
 });
 if (installedIssues.length) throw new Error(installedIssues.map((issue) => `${issue.lessonId}: ${issue.message}`).join("\n"));
 
@@ -135,7 +123,6 @@ console.log(`Imported ${basename(packageDir)} into public/lessons/${lesson.id} a
 function intakeAsset(localPath: string, targetLesson: VideoLesson, cards: CueCard[]): string | undefined {
   if (localPath === targetLesson.media.videoSrc) return sourcePath;
   if (localPath === targetLesson.media.posterSrc) return sourcePath; // The importer creates the poster from this verified source.
-  if (localPath === targetLesson.media.captionsSrc) return captionsPath;
   const declaredAudio = new Set([
     ...cards.map((card) => card.phraseAudioSrc),
     ...targetLesson.quizBank.map((question) => question.audioSrc),
@@ -164,9 +151,4 @@ function probeMedia(path: string) {
     videoCodecs: (metadata.streams ?? []).filter((stream) => stream.codec_type === "video").map((stream) => stream.codec_name),
     audioCodecs: (metadata.streams ?? []).filter((stream) => stream.codec_type === "audio").map((stream) => stream.codec_name),
   };
-}
-
-function validateVtt(text: string, durationSeconds: number) {
-  const issues = webVttIssues(text, durationSeconds);
-  if (issues.length) throw new Error(`Invalid captions.vtt:\n${issues.join("\n")}`);
 }

@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync } from "node:fs";
 import { resolve, sep } from "node:path";
 import { validateCurriculum } from "../src/domain/curriculum-validation";
 import { cueCards, lessons } from "../src/domain/seed";
@@ -13,10 +13,6 @@ function assetFile(localPath: string) {
 
 const issues = validateCurriculum(lessons, cueCards, {
   assetExists: (localPath) => existsSync(assetFile(localPath)),
-  assetText: (localPath) => {
-    const file = assetFile(localPath);
-    return existsSync(file) ? readFileSync(file, "utf8") : undefined;
-  },
 });
 if (issues.length) {
   for (const issue of issues) console.error(`${issue.lessonId}: ${issue.message}`);

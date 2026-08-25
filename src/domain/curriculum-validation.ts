@@ -13,7 +13,6 @@ import { cueCards as bundledCards, lessons as bundledLessons } from "./seed";
 export type CurriculumIssue = { lessonId: string; message: string };
 export type CurriculumValidationOptions = {
   assetExists?: (localPath: string) => boolean;
-  assetText?: (localPath: string) => string | undefined;
 };
 
 const requiredQuestionTypes = [
@@ -96,57 +95,6 @@ export function questionIssues(question: QuizQuestion): string[] {
   return issues;
 }
 
-function parseVttTimestamp(value: string): number | undefined {
-  const match = /^(?:(\d{2,}):)?(\d{2}):(\d{2})\.(\d{3})$/.exec(value);
-  if (!match) return undefined;
-  const hours = Number(match[1] ?? 0);
-  const minutes = Number(match[2]);
-  const seconds = Number(match[3]);
-  const milliseconds = Number(match[4]);
-  if (minutes >= 60 || seconds >= 60) return undefined;
-  return hours * 3600 + minutes * 60 + seconds + milliseconds / 1000;
-}
-
-export function webVttIssues(text: string, durationSeconds: number): string[] {
-  const issues: string[] = [];
-  const lines = text.replace(/^\uFEFF/, "").replace(/\r\n?/g, "\n").split("\n");
-  if (!/^WEBVTT(?:[ \t].*)?$/.test(lines[0]?.trimEnd() ?? "")) return ["Caption file must begin with a valid WEBVTT header"];
-
-  let cueCount = 0;
-  let previousStart = -1;
-  for (let index = 1; index < lines.length; index += 1) {
-    const line = lines[index];
-    if (!line.includes("-->")) continue;
-    const timing = /^([^ \t]+)[ \t]+-->[ \t]+([^ \t]+)(?:[ \t]+.*)?$/.exec(line.trim());
-    if (!timing) {
-      issues.push(`Caption cue on line ${index + 1} has malformed timing`);
-      continue;
-    }
-    const start = parseVttTimestamp(timing[1]);
-    const end = parseVttTimestamp(timing[2]);
-    if (start === undefined || end === undefined) {
-      issues.push(`Caption cue on line ${index + 1} has an invalid timestamp`);
-      continue;
-    }
-    cueCount += 1;
-    if (end <= start) issues.push(`Caption cue on line ${index + 1} must end after it starts`);
-    if (end > durationSeconds + 0.05) issues.push(`Caption cue on line ${index + 1} exceeds the confirmed media duration`);
-    if (start < previousStart) issues.push(`Caption cue on line ${index + 1} is out of chronological order`);
-    previousStart = start;
-
-    let payloadIndex = index + 1;
-    let hasPayload = false;
-    while (payloadIndex < lines.length && lines[payloadIndex].trim()) {
-      if (lines[payloadIndex].includes("-->")) break;
-      hasPayload ||= Boolean(lines[payloadIndex].trim());
-      payloadIndex += 1;
-    }
-    if (!hasPayload) issues.push(`Caption cue on line ${index + 1} has no text`);
-  }
-  if (!cueCount) issues.push("Caption file must contain at least one timestamped cue");
-  return [...new Set(issues)];
-}
-
 function pushDuplicateIssues(
   issues: CurriculumIssue[],
   values: Array<{ value: string | number; lessonId: string }>,
@@ -181,14 +129,7 @@ export function validateCurriculum(
   }
 
   for (const lesson of curriculum) {
-    const transcriptIds = new Set(lesson.transcript.map((line) => line.id));
-    if (transcriptIds.size !== lesson.transcript.length) issues.push({ lessonId: lesson.id, message: "Duplicate transcript line id." });
     if (new Set(lesson.cueCardIds).size !== lesson.cueCardIds.length) issues.push({ lessonId: lesson.id, message: "Duplicate cue-card entry." });
-
-    for (const [index, line] of lesson.transcript.entries()) {
-      if (line.endSeconds > lesson.media.durationSeconds + 0.05) issues.push({ lessonId: lesson.id, message: `Transcript line ${line.id} exceeds confirmed media duration.` });
-      if (index > 0 && line.startSeconds < lesson.transcript[index - 1].startSeconds) issues.push({ lessonId: lesson.id, message: `Transcript line ${line.id} is out of chronological order.` });
-    }
 
     for (const itemId of lesson.cueCardIds) {
       const card = cardById.get(itemId);
@@ -208,34 +149,17 @@ export function validateCurriculum(
     if (lesson.source?.permissionStatus !== "authorized") issues.push({ lessonId: lesson.id, message: "Verified lessons require an authorized source record." });
     if (lesson.media.availability !== "available") issues.push({ lessonId: lesson.id, message: "Verified lesson media is unavailable." });
     if (lesson.media.durationStatus !== "confirmed") issues.push({ lessonId: lesson.id, message: "Verified lessons require a confirmed duration." });
-    if (lesson.media.captionsStatus !== "reviewed") issues.push({ lessonId: lesson.id, message: "Verified lessons require reviewed captions." });
     if (!localExtension(lesson.media.videoSrc, [".mp4"])) issues.push({ lessonId: lesson.id, message: "Verified video must be a local MP4." });
     if (!localExtension(lesson.media.posterSrc, [".jpg", ".jpeg", ".png", ".webp"])) issues.push({ lessonId: lesson.id, message: "Verified lessons require a local poster image." });
-    if (!localExtension(lesson.media.captionsSrc, [".vtt"])) issues.push({ lessonId: lesson.id, message: "Verified lessons require local WebVTT captions." });
 
-    for (const path of [lesson.media.videoSrc, lesson.media.posterSrc, lesson.media.captionsSrc]) {
+    for (const path of [lesson.media.videoSrc, lesson.media.posterSrc]) {
       if (path && options.assetExists && !options.assetExists(path)) issues.push({ lessonId: lesson.id, message: `Bundled media is missing: ${path}.` });
     }
-    if (lesson.media.captionsSrc && options.assetText) {
-      const text = options.assetText(lesson.media.captionsSrc);
-      if (text === undefined) issues.push({ lessonId: lesson.id, message: "Caption file could not be read." });
-      else for (const message of webVttIssues(text, lesson.media.durationSeconds)) issues.push({ lessonId: lesson.id, message: `${message}.` });
-    }
-
-    if (!lesson.transcript.length || lesson.transcript.some((line) => line.verificationStatus !== "verified")) {
-      issues.push({ lessonId: lesson.id, message: "Verified lessons require a nonempty verified transcript." });
-    }
     if (lesson.cueCardIds.length < 5 || lesson.cueCardIds.length > 10) issues.push({ lessonId: lesson.id, message: "Verified lessons require 5–10 cue cards." });
-    if (lessonCards.some((card) => card.verificationStatus !== "verified" || !localExtension(card.phraseAudioSrc, [".m4a", ".mp3", ".wav", ".ogg"]))) {
+    if (lessonCards.some((card) => card.verificationStatus !== "verified" || !card.usage || !localExtension(card.phraseAudioSrc, [".m4a", ".mp3", ".wav", ".ogg"]))) {
       issues.push({ lessonId: lesson.id, message: "Verified cue cards require verified language and bundled phrase audio." });
     }
     for (const card of lessonCards) {
-      if (new Set(card.transcriptReferences).size !== card.transcriptReferences.length) {
-        issues.push({ lessonId: lesson.id, message: `Cue card ${card.id} has duplicate transcript references.` });
-      }
-      if (!card.transcriptReferences.length || card.transcriptReferences.some((id) => !transcriptIds.has(id))) {
-        issues.push({ lessonId: lesson.id, message: `Cue card ${card.id} has an invalid transcript reference.` });
-      }
       if (card.phraseAudioSrc && options.assetExists && !options.assetExists(card.phraseAudioSrc)) {
         issues.push({ lessonId: lesson.id, message: `Bundled phrase audio is missing: ${card.phraseAudioSrc}.` });
       }
@@ -263,8 +187,7 @@ export function validateCurriculum(
         && lesson.cueCardIds.includes(question.itemId)
         && card?.lessonId === lesson.id
         && card.verificationStatus === "verified"
-        && card.transcriptReferences.length > 0
-        && card.transcriptReferences.every((id) => transcriptIds.has(id))
+        && Boolean(card.usage)
         && audioAvailable;
     });
     for (const card of lessonCards) {

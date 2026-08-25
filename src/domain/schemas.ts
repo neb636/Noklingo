@@ -12,48 +12,10 @@ export const LocalAssetPathSchema = z.string().min(2).superRefine((path, context
 export const LessonMediaSchema = z.object({
   videoSrc: LocalAssetPathSchema,
   posterSrc: LocalAssetPathSchema,
-  captionsSrc: LocalAssetPathSchema.optional(),
   durationSeconds: z.number().finite().positive(),
   durationStatus: z.enum(["estimated", "confirmed"]),
-  captionsStatus: z.enum(["unavailable", "machine-draft", "reviewed"]),
   availability: z.enum(["draft-unavailable", "available"]),
   fallbackMessage: z.string().min(1),
-});
-
-export const TranscriptLineSchema = z.object({
-  id: z.string().min(1),
-  startSeconds: z.number().finite().nonnegative(),
-  endSeconds: z.number().finite().positive(),
-  speaker: z.string().min(1),
-  thai: z.string().min(1),
-  romanization: z.string().min(1),
-  naturalEnglish: z.string().min(1),
-  literalNote: z.string().min(1).optional(),
-  contextNote: z.string().min(1).optional(),
-  verificationStatus: VerificationStatusSchema,
-}).superRefine((line, context) => {
-  if (line.endSeconds <= line.startSeconds) {
-    context.addIssue({ code: "custom", path: ["endSeconds"], message: "Transcript lines must end after they start." });
-  }
-});
-
-export const DraftTranscriptSegmentSchema = z.object({
-  id: z.string().min(1),
-  startSeconds: z.number().finite().nonnegative(),
-  endSeconds: z.number().finite().positive(),
-  text: z.string().min(1),
-}).superRefine((segment, context) => {
-  if (segment.endSeconds <= segment.startSeconds) {
-    context.addIssue({ code: "custom", path: ["endSeconds"], message: "Draft transcript segments must end after they start." });
-  }
-});
-
-export const DraftTranscriptSchema = z.object({
-  generatedAt: z.string().min(1),
-  model: z.string().min(1),
-  detectedLanguage: z.string().min(1),
-  languageProbability: z.number().min(0).max(1),
-  segments: z.array(DraftTranscriptSegmentSchema).min(1),
 });
 
 export const InteractionTypeSchema = z.enum([
@@ -84,8 +46,6 @@ export const VideoLessonSchema = z.object({
   objective: z.string().min(1),
   description: z.string().min(1),
   media: LessonMediaSchema,
-  transcript: z.array(TranscriptLineSchema),
-  draftTranscript: DraftTranscriptSchema.optional(),
   cueCardIds: z.array(z.string().min(1)),
   quizBank: z.array(QuizQuestionSchema),
   contentStatus: VerificationStatusSchema,
@@ -102,10 +62,9 @@ export const KnowledgeItemSchema = z.object({
   thai: z.string().min(1),
   romanization: z.string().min(1),
   naturalMeaning: z.string().min(1),
-  usage: z.string().min(1),
+  usage: z.string().min(1).optional(),
   literalNote: z.string().min(1).optional(),
   culturalNote: z.string().min(1).optional(),
-  transcriptReferences: z.array(z.string().min(1)).min(1),
   phraseAudioSrc: LocalAssetPathSchema.optional(),
   verificationStatus: VerificationStatusSchema,
 });
@@ -204,7 +163,6 @@ export const SettingsSchema = z.object({
   showThaiScript: z.boolean(),
   thaiSize: z.enum(["standard", "large"]),
   reduceMotion: z.boolean(),
-  captionsByDefault: z.boolean(),
   politeParticle: z.enum(["khráp", "khâ", "both"]),
 });
 export const StreakStateSchema = z.object({
@@ -227,7 +185,6 @@ export const AppSnapshotSchema = z.object({
 
 export type VideoLesson = z.infer<typeof VideoLessonSchema>;
 export type LessonMedia = z.infer<typeof LessonMediaSchema>;
-export type TranscriptLine = z.infer<typeof TranscriptLineSchema>;
 export type QuizQuestion = z.infer<typeof QuizQuestionSchema>;
 export type KnowledgeItem = z.infer<typeof KnowledgeItemSchema>;
 export type CueCard = z.infer<typeof CueCardSchema>;

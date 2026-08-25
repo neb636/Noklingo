@@ -89,7 +89,6 @@ function VideoStage({ lesson }: { lesson: VideoLesson }) {
   const [watchComplete, setWatchComplete] = useState(false);
   const watchedSeconds = useRef(0);
   const lastTime = useRef(0);
-  const settings = useStudyStore((state) => state.settings);
   const completeVideo = useStudyStore((state) => state.completeVideo);
 
   function resetPlayback() {
@@ -113,22 +112,12 @@ function VideoStage({ lesson }: { lesson: VideoLesson }) {
     <div className="video-column">
       {!mediaError ? <video key={retryKey} className="lesson-video portrait-video" controls playsInline preload="metadata" poster={assetPath(lesson.media.posterSrc)} onLoadedMetadata={resetPlayback} onTimeUpdate={(event) => noteProgress(event.currentTarget)} onEnded={(event) => finishPlayback(event.currentTarget)} onError={() => setMediaError(true)}>
         <source src={assetPath(lesson.media.videoSrc)} type="video/mp4" />
-        {lesson.media.captionsSrc && <track default={settings.captionsByDefault} kind="captions" src={assetPath(lesson.media.captionsSrc)} srcLang="th" label="Reviewed Thai and English" />}
       </video> : <div className="media-fallback media-failed portrait-fallback" role="alert"><div className="frame-corners" /><span className="fallback-play"><CircleAlert size={23} /></span><p>{lesson.media.fallbackMessage}</p><small>Playback unavailable · study can continue deliberately</small></div>}
       {mediaError ? <div className="video-error-action"><p>The local video may be offline, unsupported, or temporarily unavailable. Retry it, or deliberately continue this introduction without media.</p><div className="inline-actions"><button className="secondary-button" onClick={() => { setMediaError(false); setRetryKey((value) => value + 1); }}>Retry video <RefreshCw size={17} /></button><button className="secondary-button" onClick={() => completeVideo(true)}>Continue without video <ArrowRight size={17} /></button></div></div>
         : <div className="watch-note"><Play size={17} /><span>Watch the complete clip once. Cue cards open when playback ends.</span></div>}
       {watchComplete && <button className="primary-button" onClick={() => completeVideo(false)}>Open cue cards <ArrowRight size={17} /></button>}
     </div>
-    <TranscriptPanel lesson={lesson} />
   </section>;
-}
-
-function TranscriptPanel({ lesson }: { lesson: VideoLesson }) {
-  const [showEnglish, setShowEnglish] = useState(true);
-  const settings = useStudyStore((state) => state.settings);
-  return <div className="transcript-panel"><div className="panel-heading"><div><span className="eyebrow">Reviewed transcript</span><h2>What to listen for</h2></div><button className="text-button" aria-pressed={!showEnglish} onClick={() => setShowEnglish(!showEnglish)}><Eye size={16} />{showEnglish ? "Hide English" : "Show English"}</button></div>
-    <div className="transcript-lines">{lesson.transcript.map((line) => <article key={line.id} className="transcript-line"><div className="line-time">{Math.floor(line.startSeconds / 60)}:{String(Math.floor(line.startSeconds % 60)).padStart(2, "0")}</div><div><span className="speaker">{line.speaker}</span>{settings.showThaiScript && <p className="thai" lang="th">{line.thai}</p>}{settings.showRomanization && <p className="romanization">{line.romanization}</p>}{showEnglish && <p className="translation">{line.naturalEnglish}</p>}</div></article>)}</div>
-  </div>;
 }
 
 function CueCardStage({ card, session }: { card: (typeof cueCards)[number]; session: ActiveStudySession }) {
@@ -186,33 +175,33 @@ function MatchingQuestion({ entry, question }: { entry: SessionQueueEntry; quest
 function DraftPreview({ lesson }: { lesson: VideoLesson }) {
   const [mediaError, setMediaError] = useState(false);
   const [retryKey, setRetryKey] = useState(0);
+  const [stage, setStage] = useState<"video" | "cards">("video");
+  const [cardIndex, setCardIndex] = useState(0);
+  const [watchComplete, setWatchComplete] = useState(false);
   const settings = useStudyStore((state) => state.settings);
-  const intake = lesson.draftTranscript;
+  const cards = cueCards.filter((card) => lesson.cueCardIds.includes(card.id));
+  const card = cards[cardIndex];
 
   return <div className="page study-page draft-preview-page">
     <header className="study-header">
       <div><p className="eyebrow">Editorial draft · lesson plan {String(lesson.order).padStart(2, "0")}</p><h1>{lesson.title}</h1><p>{lesson.objective.replace(/^Draft plan —\s*/, "")}</p></div>
       <AppLink href="/library/" className="secondary-button">Return to Library</AppLink>
     </header>
-    <div className="draft-integrity-note" role="note"><FileWarning size={20} aria-hidden="true" /><div><b>Local media, not verified curriculum</b><p>This clip is fully bundled for editorial preview. Machine notes and timestamps remain unverified, so there are no cue cards, phrase audio, or scored questions yet.</p></div></div>
-    <section className="draft-preview-grid">
+    <div className="draft-integrity-note" role="note"><FileWarning size={20} aria-hidden="true" /><div><b>Local media, not verified curriculum</b><p>Watch the short clip, then review the screenshot-derived phrase cards. This preview records no progress and has no audio or scored questions.</p></div></div>
+    {stage === "video" ? <section className="draft-video-stage">
       <div className="draft-video-column">
-        {!mediaError ? <video key={retryKey} className="lesson-video portrait-video draft-video" controls playsInline preload="metadata" poster={assetPath(lesson.media.posterSrc)} onError={() => setMediaError(true)}>
+        {!mediaError ? <video key={retryKey} className="lesson-video portrait-video draft-video" controls playsInline preload="metadata" poster={assetPath(lesson.media.posterSrc)} onEnded={() => setWatchComplete(true)} onError={() => setMediaError(true)}>
           <source src={assetPath(lesson.media.videoSrc)} type="video/mp4" />
-          {lesson.media.captionsSrc && <track default={settings.captionsByDefault} kind="captions" src={assetPath(lesson.media.captionsSrc)} srcLang={intake?.detectedLanguage ?? "th"} label="Machine draft captions · unverified" />}
         </video> : <div className="media-fallback media-failed portrait-fallback" role="alert"><div className="frame-corners" /><span className="fallback-play"><CircleAlert size={23} /></span><p>{lesson.media.fallbackMessage}</p><small>Local draft media unavailable</small></div>}
-        <div className="draft-media-meta"><span>{formatDuration(lesson.media.durationSeconds)} · 720 × 1280 portrait MP4</span><span>{lesson.media.captionsStatus === "machine-draft" ? "Machine captions available" : "No caption intake"}</span></div>
-        {mediaError && <button className="secondary-button" onClick={() => { setMediaError(false); setRetryKey((value) => value + 1); }}>Retry local video <RefreshCw size={17} /></button>}
+        <div className="draft-media-meta"><span>{formatDuration(lesson.media.durationSeconds)} · 720 × 1280 portrait MP4</span><span>{cards.length} screenshot-derived cards</span></div>
+        {!mediaError && <div className="inline-actions">{watchComplete ? <button className="primary-button" onClick={() => setStage("cards")}>Open cue cards <ArrowRight size={17} /></button> : <span className="watch-note"><Play size={17} />Cue cards open when the clip ends.</span>}</div>}
+        {mediaError && <div className="inline-actions"><button className="secondary-button" onClick={() => { setMediaError(false); setRetryKey((value) => value + 1); }}>Retry local video <RefreshCw size={17} /></button><button className="primary-button" onClick={() => setStage("cards")}>Review cue cards without video <ArrowRight size={17} /></button></div>}
         {lesson.source && <a className="source-note draft-source-note" href={lesson.source.url} target="_blank" rel="noreferrer">Source attribution only · not verification <ExternalLink size={12} /></a>}
       </div>
-      <aside className="transcript-panel machine-panel">
-        <div className="panel-heading"><div><span className="eyebrow">Machine intake</span><h2>Raw listening notes</h2></div>{intake && <span className="machine-badge">unverified</span>}</div>
-        {intake ? <>
-          <p className="machine-disclaimer">Generated with {intake.model}; language detection {Math.round(intake.languageProbability * 100)}%. Text may be wrong and is never used for scoring.</p>
-          <div className="transcript-lines">{intake.segments.map((segment) => <article key={segment.id} className="transcript-line machine-line"><div className="line-time">{clockTime(segment.startSeconds)}</div><p>{segment.text}</p></article>)}</div>
-        </> : <div className="empty-intake"><FileWarning size={23} /><h3>No transcript intake</h3><p>This plan contains only the supplied local video and confirmed container metadata. Speech has not been transcribed or reviewed.</p></div>}
-      </aside>
-    </section>
+    </section> : card ? <section className="single-card-stage draft-card-stage"><div className="section-lead"><p className="eyebrow">Draft cue card {cardIndex + 1} of {cards.length}</p><h2>Recall the phrase from the clip</h2><p>These fields were transcribed from the on-screen lesson text.</p></div>
+      <article className="cue-card tactile-card focused-card"><span className="draft-label">screenshot-derived · draft</span>{settings.showThaiScript && <p className="thai cue-thai" lang="th">{withPreferredParticle(card.thai, settings.politeParticle)}</p>}{settings.showRomanization && <p className="romanization">{withPreferredParticle(card.romanization, settings.politeParticle)}</p>}<h3>{card.naturalMeaning}</h3></article>
+      <footer className="study-footer"><button className="secondary-button" onClick={() => setStage("video")}>Watch again</button><span>{cardIndex + 1} of {cards.length}</span><button className="primary-button" onClick={() => setCardIndex((value) => value === cards.length - 1 ? 0 : value + 1)}>{cardIndex === cards.length - 1 ? "Start cards again" : "Next cue card"}<ArrowRight size={18} /></button></footer>
+    </section> : <StudyEmpty title="No cue cards yet" body="This draft does not have screenshot-derived lesson text." />}
   </div>;
 }
 
@@ -222,7 +211,7 @@ function Replay({ lesson }: { lesson: VideoLesson }) {
   const settings = useStudyStore((state) => state.settings);
   const cards = cueCards.filter((card) => lesson.cueCardIds.includes(card.id));
   return <div className="page study-page"><header className="study-header"><div><p className="eyebrow">Disposable replay · no progress recorded</p><h1>{lesson.title}</h1><p>Video and cue cards only. Review dates, attempts, mastery, and consistency will not change.</p></div><AppLink href="/library/" className="secondary-button">Return to Library</AppLink></header>
-    {stage === "video" ? <section>{mediaError ? <div className="media-fallback media-failed portrait-fallback replay-video" role="alert"><CircleAlert size={24} /><p>{lesson.media.fallbackMessage}</p><small>Replay media unavailable</small></div> : <video className="lesson-video portrait-video replay-video" controls playsInline preload="metadata" poster={assetPath(lesson.media.posterSrc)} onError={() => setMediaError(true)}><source src={assetPath(lesson.media.videoSrc)} type="video/mp4" />{lesson.media.captionsSrc && <track default={settings.captionsByDefault} kind="captions" src={assetPath(lesson.media.captionsSrc)} srcLang="th" label="Reviewed Thai and English" />}</video>}<div className="page-actions"><button className="primary-button" onClick={() => setStage("cards")}>Replay cue cards <ArrowRight size={17} /></button></div></section>
+    {stage === "video" ? <section>{mediaError ? <div className="media-fallback media-failed portrait-fallback replay-video" role="alert"><CircleAlert size={24} /><p>{lesson.media.fallbackMessage}</p><small>Replay media unavailable</small></div> : <video className="lesson-video portrait-video replay-video" controls playsInline preload="metadata" poster={assetPath(lesson.media.posterSrc)} onError={() => setMediaError(true)}><source src={assetPath(lesson.media.videoSrc)} type="video/mp4" /></video>}<div className="page-actions"><button className="primary-button" onClick={() => setStage("cards")}>Replay cue cards <ArrowRight size={17} /></button></div></section>
       : <section><div className="cue-grid">{cards.map((card, index) => <article className="cue-card tactile-card" key={card.id}><span className="card-index">{String(index + 1).padStart(2, "0")}</span><PhraseAudioButton card={card} compact />{settings.showThaiScript && <p className="thai cue-thai">{withPreferredParticle(card.thai, settings.politeParticle)}</p>}{settings.showRomanization && <p className="romanization">{withPreferredParticle(card.romanization, settings.politeParticle)}</p>}<h3>{card.naturalMeaning}</h3><p>{card.usage}</p></article>)}</div></section>}
   </div>;
 }
@@ -233,10 +222,6 @@ function StudyEmpty({ title, body }: { title: string; body: string }) {
 
 function interactionLabel(type: QuizQuestion["interactionType"]) {
   return ({ listening: "Listening", "situation-response": "Situation / response", "meaning-recognition": "Meaning recognition", "phrase-construction": "Phrase construction", matching: "Matching", "self-guided-speaking": "Speaking" })[type];
-}
-
-function clockTime(seconds: number) {
-  return `${Math.floor(seconds / 60)}:${String(Math.floor(seconds % 60)).padStart(2, "0")}`;
 }
 
 function formatDuration(seconds: number) {

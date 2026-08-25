@@ -6,7 +6,7 @@ import type {
 import { addLocalDays, compareLocalDates, localDaysBetween } from "./local-date";
 import { deterministicShuffle } from "./deterministic";
 
-export const CURRICULUM_VERSION = "2026-08-25-reel-intake-v3";
+export const CURRICULUM_VERSION = "2026-08-25-screenshot-cards-v3";
 
 export function passesMastery(activeCorrect: number, activeTotal: number): boolean {
   return activeTotal === 10 && activeCorrect >= 9;

@@ -4,7 +4,7 @@ import { ArrowRight, ExternalLink, FileWarning, Film, LockKeyhole, Play, RotateC
 import Image from "next/image";
 import { AppLink } from "@/components/AppLink";
 import { PageHeader } from "@/components/PageHeader";
-import { lessons, studyLessons } from "@/domain/seed";
+import { cueCards, lessons, studyLessons } from "@/domain/seed";
 import { assetPath } from "@/lib/asset-path";
 import { useStudyStore } from "@/state/study-store";
 
@@ -16,11 +16,11 @@ export default function LibraryPage() {
   const draftLessons = lessons.filter((lesson) => lesson.contentStatus === "draft");
 
   return <div className="page">
-    <PageHeader eyebrow="Lesson library" title="Short exchanges, kept in order." intro="Published lessons unlock in sequence. Supplied Reel media stays in a separate editorial shelf until its language, audio, captions, and question bank pass review." side={<span className="count-label">{studyLessons.length} published · {draftLessons.length} drafts</span>} />
+    <PageHeader eyebrow="Lesson library" title="Short exchanges, kept in order." intro="Published lessons unlock in sequence. Supplied Reel media stays in a separate editorial shelf until its language, audio, and question bank pass review." side={<span className="count-label">{studyLessons.length} published · {draftLessons.length} drafts</span>} />
 
     <section className="library-section" aria-labelledby="published-heading">
       <div className="section-heading"><div><p className="eyebrow">Scored curriculum</p><h2 id="published-heading">Published lessons</h2></div><span>{studyLessons.length} ready</span></div>
-      {studyLessons.length === 0 ? <div className="curriculum-hold tactile-card"><FileWarning size={22} aria-hidden="true" /><div><h3>Editorial review comes first</h3><p>No Reel has the verified transcript, phrase audio, cue-card coverage, and quiz variants required for scored study. Draft previews remain available below without affecting progress.</p></div></div> : null}
+      {studyLessons.length === 0 ? <div className="curriculum-hold tactile-card"><FileWarning size={22} aria-hidden="true" /><div><h3>Editorial review comes first</h3><p>No Reel has the verified phrase audio, cue-card coverage, and quiz variants required for scored study. Draft previews remain available below without affecting progress.</p></div></div> : null}
       <div className="library-list">{studyLessons.map((lesson) => {
       const lessonState = progress.find((item) => item.lessonId === lesson.id)?.status ?? "unseen";
       const isMastered = lessonState === "mastered";
@@ -48,7 +48,7 @@ export default function LibraryPage() {
           <span className="draft-duration">{formatDuration(lesson.media.durationSeconds)}</span>
           <span className="draft-play"><Play size={18} fill="currentColor" aria-hidden="true" /></span>
         </AppLink>
-        <div className="draft-card-copy"><div className="lesson-labels"><span>draft plan</span><span>{lesson.media.captionsStatus === "machine-draft" ? "machine notes" : "video only"}</span></div><h3>{lesson.title}</h3><p>{lesson.objective.replace(/^Draft plan —\s*/, "")}</p>
+        <div className="draft-card-copy"><div className="lesson-labels"><span>draft plan</span><span>{cueCards.filter((card) => card.lessonId === lesson.id).length} cue cards</span></div><h3>{lesson.title}</h3><p>{lesson.objective.replace(/^Draft plan —\s*/, "")}</p>
           <div className="draft-card-actions"><AppLink href={`/study/?preview=${encodeURIComponent(lesson.id)}`} className="text-link">Preview local clip <ArrowRight size={14} /></AppLink>{lesson.source && <a className="source-note" href={lesson.source.url} target="_blank" rel="noreferrer" aria-label={`Open source attribution for ${lesson.title}`}>Attribution <ExternalLink size={12} /></a>}</div>
         </div>
       </article>)}</div>

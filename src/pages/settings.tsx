@@ -68,14 +68,11 @@ export default function SettingsPage() {
           <SettingRow title="Phrase playback speed" description={`${settings.speechRate.toFixed(2)}× playback rate`}>
             <input aria-label="Phrase playback speed" type="range" min="0.5" max="1.25" step="0.05" value={settings.speechRate} onChange={(event) => updateSettings({ speechRate: Number(event.target.value) })} />
           </SettingRow>
-          <SettingRow title="Captions on first watch" description="Show the lesson caption track when video begins.">
-            <Switch checked={settings.captionsByDefault} onChange={(value) => updateSettings({ captionsByDefault: value })} label="Captions on first watch" />
-          </SettingRow>
         </section>
 
         <section className="settings-section">
           <div className="settings-title"><Languages size={20} /><div><p className="eyebrow">Language display</p><h2>Reading support</h2></div></div>
-          <SettingRow title="Thai script" description="Show Thai text in transcripts, cards, and answer choices.">
+          <SettingRow title="Thai script" description="Show Thai text in cards and answer choices.">
             <Switch checked={settings.showThaiScript} onChange={(value) => updateSettings({ showThaiScript: value })} label="Thai script" />
           </SettingRow>
           <SettingRow title="Romanization" description="Show tone-marked romanization alongside Thai.">

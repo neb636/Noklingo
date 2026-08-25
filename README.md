@@ -10,36 +10,32 @@ path. The interface presents one relevant action at a time.
 
 ## Current curriculum state
 
-The repository contains 24 locally bundled Reel plans in an editorially useful
-order. Every draft has a same-origin MP4, poster, confirmed duration,
-machine-generated WebVTT, and timestamped machine transcript notes.
+The repository contains 23 locally bundled Reel plans in an editorially useful
+order. Every draft has a same-origin MP4, poster, confirmed duration, and
+screenshot-derived cue cards.
 
-All 24 remain explicitly `draft`. Machine output is shown only in the draft
-preview with an unverified label; it is never used for cue cards, scored
-questions, mastery, or review scheduling. An Instagram URL is attribution, not
-evidence that the dialogue or timestamps were verified.
+All 23 remain explicitly `draft`. Draft previews play the short clip and then
+step through the visible Thai, romanization, and English captured from the
+lesson screenshots. An Instagram URL is attribution, not evidence that the
+language has been independently verified.
 
 The reviewed registry is currently empty, so there are zero active study
 lessons. Today shows an editorial hold and Library exposes the ordered local
-draft previews. This is intentional: the app does not invent Thai, guess
-timestamps, synthesize substitute phrase audio, or publish automatic
-transcription merely to make the study loop appear populated.
+draft previews. This is intentional: the app does not invent Thai, synthesize
+substitute phrase audio, or publish unreviewed language merely to make the
+study loop appear populated.
 
-The draft inventory lives in `src/content/draft-reels.json`; reviewed lessons
-and cue cards live in `src/content/lesson-packages.json`. A reviewed lesson with
-the same stable ID replaces its draft plan after it passes the publication
-gate.
+The draft inventory lives in `src/content/draft-reels.json` and its cards in
+`src/content/draft-cue-cards.json`; reviewed lessons and cue cards live in
+`src/content/lesson-packages.json`. A reviewed lesson with the same stable ID
+replaces its draft plan after it passes the publication gate.
 
 ## Publication gate
 
 A release-ready `VideoLesson` must have all of the following:
 
-- an authorized same-origin local MP4, local poster, local WebVTT captions,
-  confirmed duration, and reviewed caption status;
-- a nonempty timestamped transcript whose lines are all verified and remain
-  within the confirmed media duration;
-- 5–10 verified cue cards, each linked to real transcript lines and bundled
-  with local phrase audio;
+- an authorized same-origin local MP4 and poster with confirmed duration;
+- 5–10 verified cue cards with usage text and bundled local phrase audio;
 - at least two valid scored question variants for every cue-card item and at
   least ten valid scored questions overall;
 - scored coverage of listening, situation/response, meaning recognition, and
@@ -47,9 +43,9 @@ A release-ready `VideoLesson` must have all of the following:
 - explicit bundled local audio for every listening question.
 
 Validation also rejects missing assets, invalid or orphaned references,
-duplicate lesson/order/cue-card/question/transcript IDs, duplicate cue-card
-entries, unreachable or ambiguous answers, insufficient cue-card coverage, and
-questions that depend on unavailable media or unverified language. See
+duplicate lesson/order/cue-card/question IDs, duplicate cue-card entries,
+unreachable or ambiguous answers, insufficient cue-card coverage, and questions
+that depend on unavailable media or unverified language. See
 [the curriculum authoring guide](docs/CURRICULUM_AUTHORING.md) for the package
 contract and review workflow.
 
@@ -125,7 +121,7 @@ download. The application and lesson importer do not fetch Instagram media.
    ```
 
 The importer requires `ffmpeg` and `ffprobe`. It emits H.264/AAC fast-start
-video, a JPEG poster, reviewed WebVTT, and local audio under
+video, a JPEG poster, and local audio under
 `public/lessons/<lesson-id>/`, then updates the ordered reviewed registry.
 
 ## Run and build
@@ -161,7 +157,7 @@ the prefix automatically.
 
 Before release, manually exercise the vertical slice at desktop and narrow
 mobile breakpoints, including iPhone Safari/PWA behavior, light and dark modes,
-reduced motion, captions, media-failure recovery, offline shell navigation, and
+reduced motion, media-failure recovery, offline shell navigation, and
 horizontal-overflow checks.
 
 ## GitHub Pages and media visibility
