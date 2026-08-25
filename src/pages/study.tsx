@@ -10,17 +10,21 @@ import { cueCards, lessons } from "@/domain/seed";
 import type { ActiveStudySession, QuizQuestion, SessionQueueEntry, VideoLesson } from "@/domain/schemas";
 import { writeSnapshot } from "@/data/db";
 import { assetPath } from "@/lib/asset-path";
+import { useClientReady } from "@/lib/use-client-ready";
 import { withPreferredParticle } from "@/lib/language-display";
 import { activeCard, activeQuestion, snapshotFromState, useStudyStore } from "@/state/study-store";
 
 export default function StudyPage() {
   const router = useRouter();
+  const clientReady = useClientReady();
   const previewId = typeof router.query.preview === "string" ? router.query.preview : undefined;
   const replayId = typeof router.query.replay === "string" ? router.query.replay : undefined;
   const previewLesson = previewId ? lessons.find((lesson) => lesson.id === previewId && lesson.contentStatus === "draft") : undefined;
   const replayLesson = replayId ? lessons.find((lesson) => lesson.id === replayId) : undefined;
   const hydrated = useStudyStore((state) => state.hydrated);
   const progress = useStudyStore((state) => state.lessonProgress);
+
+  if (!clientReady) return <StudyEmpty title="Opening your session…" body="Reading the exact stage and fixed queue stored in this browser." />;
   if (previewLesson) return <DraftPreview lesson={previewLesson} />;
   if (replayLesson) {
     if (!hydrated) return <StudyEmpty title="Opening the library…" body="Checking that this replay is available in your local record." />;

@@ -11,8 +11,8 @@ path. The interface presents one relevant action at a time.
 ## Current curriculum state
 
 The repository contains 24 locally bundled Reel plans in an editorially useful
-order. Every draft has a same-origin MP4, poster, and confirmed duration. Twelve
-also have machine-generated WebVTT and timestamped machine transcript notes.
+order. Every draft has a same-origin MP4, poster, confirmed duration,
+machine-generated WebVTT, and timestamped machine transcript notes.
 
 All 24 remain explicitly `draft`. Machine output is shown only in the draft
 preview with an unverified label; it is never used for cue cards, scored

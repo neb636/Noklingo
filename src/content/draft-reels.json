@@ -24,7 +24,7 @@
       },
       "transcript": [],
       "draftTranscript": {
-        "generatedAt": "2026-08-24T21:34:29",
+        "generatedAt": "2026-08-25T00:42:58",
         "model": "small",
         "detectedLanguage": "th",
         "languageProbability": 0.87,
@@ -61,13 +61,40 @@
       "media": {
         "videoSrc": "/lessons/drafts/question-words/intro.mp4",
         "posterSrc": "/lessons/drafts/question-words/poster.jpg",
+        "captionsSrc": "/lessons/drafts/question-words/captions.vtt",
         "durationSeconds": 12.188,
         "durationStatus": "confirmed",
-        "captionsStatus": "unavailable",
+        "captionsStatus": "machine-draft",
         "availability": "available",
         "fallbackMessage": "This local draft clip could not be played on this device."
       },
       "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-25T00:42:58",
+        "model": "small",
+        "detectedLanguage": "th",
+        "languageProbability": 0.9341,
+        "segments": [
+          {
+            "id": "question-words-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 3.34,
+            "text": "วอตอร์ไอร์ไห์ ไวร์"
+          },
+          {
+            "id": "question-words-machine-2",
+            "startSeconds": 3.34,
+            "endSeconds": 5.8,
+            "text": "ที่ไหน วิน"
+          },
+          {
+            "id": "question-words-machine-3",
+            "startSeconds": 5.8,
+            "endSeconds": 12.08,
+            "text": "มือไหล ไหว ทำไม หาว ยังไง"
+          }
+        ]
+      },
       "cueCardIds": [],
       "quizBank": []
     },
@@ -95,7 +122,7 @@
       },
       "transcript": [],
       "draftTranscript": {
-        "generatedAt": "2026-08-24T21:34:29",
+        "generatedAt": "2026-08-25T00:42:58",
         "model": "small",
         "detectedLanguage": "en",
         "languageProbability": 0.3894,
@@ -126,13 +153,28 @@
       "media": {
         "videoSrc": "/lessons/drafts/large-numbers/intro.mp4",
         "posterSrc": "/lessons/drafts/large-numbers/poster.jpg",
+        "captionsSrc": "/lessons/drafts/large-numbers/captions.vtt",
         "durationSeconds": 22.637,
         "durationStatus": "confirmed",
-        "captionsStatus": "unavailable",
+        "captionsStatus": "machine-draft",
         "availability": "available",
         "fallbackMessage": "This local draft clip could not be played on this device."
       },
       "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-25T00:42:58",
+        "model": "small",
+        "detectedLanguage": "th",
+        "languageProbability": 0.8458,
+        "segments": [
+          {
+            "id": "large-numbers-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 22.54,
+            "text": "1, 10, 100, 1000, 10, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100"
+          }
+        ]
+      },
       "cueCardIds": [],
       "quizBank": []
     },
@@ -151,13 +193,28 @@
       "media": {
         "videoSrc": "/lessons/drafts/time-units/intro.mp4",
         "posterSrc": "/lessons/drafts/time-units/poster.jpg",
+        "captionsSrc": "/lessons/drafts/time-units/captions.vtt",
         "durationSeconds": 11.77,
         "durationStatus": "confirmed",
-        "captionsStatus": "unavailable",
+        "captionsStatus": "machine-draft",
         "availability": "available",
         "fallbackMessage": "This local draft clip could not be played on this device."
       },
       "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-25T00:42:58",
+        "model": "small",
+        "detectedLanguage": "th",
+        "languageProbability": 0.34,
+        "segments": [
+          {
+            "id": "time-units-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 11.64,
+            "text": "มีนิด นาที อาวุ่น ชั่วมอง ดี วัน มัน ดือน ยีร ปี"
+          }
+        ]
+      },
       "cueCardIds": [],
       "quizBank": []
     },
@@ -176,13 +233,28 @@
       "media": {
         "videoSrc": "/lessons/drafts/times-of-day/intro.mp4",
         "posterSrc": "/lessons/drafts/times-of-day/poster.jpg",
+        "captionsSrc": "/lessons/drafts/times-of-day/captions.vtt",
         "durationSeconds": 16.437,
         "durationStatus": "confirmed",
-        "captionsStatus": "unavailable",
+        "captionsStatus": "machine-draft",
         "availability": "available",
         "fallbackMessage": "This local draft clip could not be played on this device."
       },
       "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-25T00:42:58",
+        "model": "small",
+        "detectedLanguage": "th",
+        "languageProbability": 0.7491,
+        "segments": [
+          {
+            "id": "times-of-day-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 16.26,
+            "text": "Morning. ชาว. Late morning. สาย. นุ่น. เที่ยง. Afternoon. บาย. Late afternoon. ยิน. Night. กลางคืน."
+          }
+        ]
+      },
       "cueCardIds": [],
       "quizBank": []
     },
@@ -210,7 +282,7 @@
       },
       "transcript": [],
       "draftTranscript": {
-        "generatedAt": "2026-08-24T21:34:29",
+        "generatedAt": "2026-08-25T00:42:58",
         "model": "small",
         "detectedLanguage": "th",
         "languageProbability": 0.7941,
@@ -271,13 +343,160 @@
       "media": {
         "videoSrc": "/lessons/drafts/country-names/intro.mp4",
         "posterSrc": "/lessons/drafts/country-names/poster.jpg",
+        "captionsSrc": "/lessons/drafts/country-names/captions.vtt",
         "durationSeconds": 36.453,
         "durationStatus": "confirmed",
-        "captionsStatus": "unavailable",
+        "captionsStatus": "machine-draft",
         "availability": "available",
         "fallbackMessage": "This local draft clip could not be played on this device."
       },
       "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-25T00:42:58",
+        "model": "small",
+        "detectedLanguage": "th",
+        "languageProbability": 0.581,
+        "segments": [
+          {
+            "id": "country-names-machine-1",
+            "startSeconds": 0.11,
+            "endSeconds": 4.41,
+            "text": "คุณมาจากประเทศอะไร? What country do you come from?"
+          },
+          {
+            "id": "country-names-machine-2",
+            "startSeconds": 4.41,
+            "endSeconds": 7.61,
+            "text": "ฉันมาจากประเทศ จีน"
+          },
+          {
+            "id": "country-names-machine-3",
+            "startSeconds": 7.61,
+            "endSeconds": 8.61,
+            "text": "China"
+          },
+          {
+            "id": "country-names-machine-4",
+            "startSeconds": 8.61,
+            "endSeconds": 10.11,
+            "text": "Singapore"
+          },
+          {
+            "id": "country-names-machine-5",
+            "startSeconds": 10.11,
+            "endSeconds": 11.11,
+            "text": "Singapore"
+          },
+          {
+            "id": "country-names-machine-6",
+            "startSeconds": 11.11,
+            "endSeconds": 12.11,
+            "text": "Taiwan"
+          },
+          {
+            "id": "country-names-machine-7",
+            "startSeconds": 12.11,
+            "endSeconds": 13.61,
+            "text": "Taiwan"
+          },
+          {
+            "id": "country-names-machine-8",
+            "startSeconds": 13.61,
+            "endSeconds": 14.61,
+            "text": "India"
+          },
+          {
+            "id": "country-names-machine-9",
+            "startSeconds": 14.61,
+            "endSeconds": 15.61,
+            "text": "India"
+          },
+          {
+            "id": "country-names-machine-10",
+            "startSeconds": 15.61,
+            "endSeconds": 17.61,
+            "text": "America"
+          },
+          {
+            "id": "country-names-machine-11",
+            "startSeconds": 17.61,
+            "endSeconds": 19.61,
+            "text": "The United States of America"
+          },
+          {
+            "id": "country-names-machine-12",
+            "startSeconds": 19.61,
+            "endSeconds": 20.61,
+            "text": "England"
+          },
+          {
+            "id": "country-names-machine-13",
+            "startSeconds": 20.61,
+            "endSeconds": 21.61,
+            "text": "England"
+          },
+          {
+            "id": "country-names-machine-14",
+            "startSeconds": 21.61,
+            "endSeconds": 23.11,
+            "text": "Japan"
+          },
+          {
+            "id": "country-names-machine-15",
+            "startSeconds": 23.11,
+            "endSeconds": 24.61,
+            "text": "Japan"
+          },
+          {
+            "id": "country-names-machine-16",
+            "startSeconds": 24.61,
+            "endSeconds": 25.61,
+            "text": "Korea"
+          },
+          {
+            "id": "country-names-machine-17",
+            "startSeconds": 25.61,
+            "endSeconds": 27.61,
+            "text": "South Korea"
+          },
+          {
+            "id": "country-names-machine-18",
+            "startSeconds": 27.61,
+            "endSeconds": 28.61,
+            "text": "Canada"
+          },
+          {
+            "id": "country-names-machine-19",
+            "startSeconds": 28.61,
+            "endSeconds": 29.61,
+            "text": "Canada"
+          },
+          {
+            "id": "country-names-machine-20",
+            "startSeconds": 29.61,
+            "endSeconds": 31.11,
+            "text": "Farang say it"
+          },
+          {
+            "id": "country-names-machine-21",
+            "startSeconds": 31.11,
+            "endSeconds": 32.11,
+            "text": "Friends"
+          },
+          {
+            "id": "country-names-machine-22",
+            "startSeconds": 32.11,
+            "endSeconds": 34.11,
+            "text": "What about you? Where are you from?"
+          },
+          {
+            "id": "country-names-machine-23",
+            "startSeconds": 34.11,
+            "endSeconds": 36.11,
+            "text": "Let me know in the comments"
+          }
+        ]
+      },
       "cueCardIds": [],
       "quizBank": []
     },
@@ -296,13 +515,46 @@
       "media": {
         "videoSrc": "/lessons/drafts/directions/intro.mp4",
         "posterSrc": "/lessons/drafts/directions/poster.jpg",
+        "captionsSrc": "/lessons/drafts/directions/captions.vtt",
         "durationSeconds": 13.674,
         "durationStatus": "confirmed",
-        "captionsStatus": "unavailable",
+        "captionsStatus": "machine-draft",
         "availability": "available",
         "fallbackMessage": "This local draft clip could not be played on this device."
       },
       "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-25T00:42:58",
+        "model": "small",
+        "detectedLanguage": "th",
+        "languageProbability": 0.9436,
+        "segments": [
+          {
+            "id": "directions-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 2.88,
+            "text": "Go straight ตรงไป"
+          },
+          {
+            "id": "directions-machine-2",
+            "startSeconds": 2.88,
+            "endSeconds": 6.62,
+            "text": "Turn right เลี้ยวขวา"
+          },
+          {
+            "id": "directions-machine-3",
+            "startSeconds": 6.62,
+            "endSeconds": 10.42,
+            "text": "Turn left เลี้ยวสาย"
+          },
+          {
+            "id": "directions-machine-4",
+            "startSeconds": 10.42,
+            "endSeconds": 13.5,
+            "text": "You turn กลับรถ"
+          }
+        ]
+      },
       "cueCardIds": [],
       "quizBank": []
     },
@@ -330,7 +582,7 @@
       },
       "transcript": [],
       "draftTranscript": {
-        "generatedAt": "2026-08-24T21:34:29",
+        "generatedAt": "2026-08-25T00:42:58",
         "model": "small",
         "detectedLanguage": "th",
         "languageProbability": 0.6768,
@@ -367,13 +619,76 @@
       "media": {
         "videoSrc": "/lessons/drafts/feeling-unwell/intro.mp4",
         "posterSrc": "/lessons/drafts/feeling-unwell/poster.jpg",
+        "captionsSrc": "/lessons/drafts/feeling-unwell/captions.vtt",
         "durationSeconds": 24.75,
         "durationStatus": "confirmed",
-        "captionsStatus": "unavailable",
+        "captionsStatus": "machine-draft",
         "availability": "available",
         "fallbackMessage": "This local draft clip could not be played on this device."
       },
       "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-25T00:42:58",
+        "model": "small",
+        "detectedLanguage": "th",
+        "languageProbability": 0.6863,
+        "segments": [
+          {
+            "id": "feeling-unwell-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 2.46,
+            "text": "Don't be boring saying สบายดี"
+          },
+          {
+            "id": "feeling-unwell-machine-2",
+            "startSeconds": 2.46,
+            "endSeconds": 4.78,
+            "text": "Here's how Thai people actually answer"
+          },
+          {
+            "id": "feeling-unwell-machine-3",
+            "startSeconds": 4.78,
+            "endSeconds": 6.54,
+            "text": "ก็ดี I'm good"
+          },
+          {
+            "id": "feeling-unwell-machine-4",
+            "startSeconds": 6.54,
+            "endSeconds": 10.62,
+            "text": "ไม่ค่อยสบาย I'm not feeling very well"
+          },
+          {
+            "id": "feeling-unwell-machine-5",
+            "startSeconds": 10.62,
+            "endSeconds": 14.22,
+            "text": "ช่วงนี้ยุ่งมาก I've been very busy lately"
+          },
+          {
+            "id": "feeling-unwell-machine-6",
+            "startSeconds": 14.22,
+            "endSeconds": 16.84,
+            "text": "ก็โอเค I'm okay"
+          },
+          {
+            "id": "feeling-unwell-machine-7",
+            "startSeconds": 16.84,
+            "endSeconds": 19.5,
+            "text": "เหมือนเดิม same as always"
+          },
+          {
+            "id": "feeling-unwell-machine-8",
+            "startSeconds": 19.5,
+            "endSeconds": 22.68,
+            "text": "Now you sound a lot more natural when speaking Thai"
+          },
+          {
+            "id": "feeling-unwell-machine-9",
+            "startSeconds": 22.68,
+            "endSeconds": 24.18,
+            "text": "Follow for more"
+          }
+        ]
+      },
       "cueCardIds": [],
       "quizBank": []
     },
@@ -401,7 +716,7 @@
       },
       "transcript": [],
       "draftTranscript": {
-        "generatedAt": "2026-08-24T21:34:29",
+        "generatedAt": "2026-08-25T00:42:58",
         "model": "small",
         "detectedLanguage": "th",
         "languageProbability": 0.4711,
@@ -447,7 +762,7 @@
       },
       "transcript": [],
       "draftTranscript": {
-        "generatedAt": "2026-08-24T21:34:29",
+        "generatedAt": "2026-08-25T00:42:58",
         "model": "small",
         "detectedLanguage": "en",
         "languageProbability": 0.8128,
@@ -523,7 +838,7 @@
       },
       "transcript": [],
       "draftTranscript": {
-        "generatedAt": "2026-08-24T21:34:29",
+        "generatedAt": "2026-08-25T00:42:58",
         "model": "small",
         "detectedLanguage": "en",
         "languageProbability": 0.6977,
@@ -578,13 +893,64 @@
       "media": {
         "videoSrc": "/lessons/drafts/what-are-you-doing/intro.mp4",
         "posterSrc": "/lessons/drafts/what-are-you-doing/poster.jpg",
+        "captionsSrc": "/lessons/drafts/what-are-you-doing/captions.vtt",
         "durationSeconds": 21.081,
         "durationStatus": "confirmed",
-        "captionsStatus": "unavailable",
+        "captionsStatus": "machine-draft",
         "availability": "available",
         "fallbackMessage": "This local draft clip could not be played on this device."
       },
       "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-25T00:42:58",
+        "model": "small",
+        "detectedLanguage": "th",
+        "languageProbability": 0.8227,
+        "segments": [
+          {
+            "id": "what-are-you-doing-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 4,
+            "text": "You hear this every day in Thailand but do you really know the meaning?"
+          },
+          {
+            "id": "what-are-you-doing-machine-2",
+            "startSeconds": 4,
+            "endSeconds": 7,
+            "text": "กำลังไป I'm on my way"
+          },
+          {
+            "id": "what-are-you-doing-machine-3",
+            "startSeconds": 7,
+            "endSeconds": 10,
+            "text": "ทำอะไรอยู่ What are you doing?"
+          },
+          {
+            "id": "what-are-you-doing-machine-4",
+            "startSeconds": 10,
+            "endSeconds": 13,
+            "text": "อยู่ไหน Where are you?"
+          },
+          {
+            "id": "what-are-you-doing-machine-5",
+            "startSeconds": 13,
+            "endSeconds": 16,
+            "text": "จะไปไหน Where are you going?"
+          },
+          {
+            "id": "what-are-you-doing-machine-6",
+            "startSeconds": 16,
+            "endSeconds": 18,
+            "text": "Where are you heading to?"
+          },
+          {
+            "id": "what-are-you-doing-machine-7",
+            "startSeconds": 18,
+            "endSeconds": 21,
+            "text": "แล้วเจอกัน See you later"
+          }
+        ]
+      },
       "cueCardIds": [],
       "quizBank": []
     },
@@ -603,13 +969,76 @@
       "media": {
         "videoSrc": "/lessons/drafts/waking-up/intro.mp4",
         "posterSrc": "/lessons/drafts/waking-up/poster.jpg",
+        "captionsSrc": "/lessons/drafts/waking-up/captions.vtt",
         "durationSeconds": 22.916,
         "durationStatus": "confirmed",
-        "captionsStatus": "unavailable",
+        "captionsStatus": "machine-draft",
         "availability": "available",
         "fallbackMessage": "This local draft clip could not be played on this device."
       },
       "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-25T00:42:58",
+        "model": "small",
+        "detectedLanguage": "en",
+        "languageProbability": 0.6185,
+        "segments": [
+          {
+            "id": "waking-up-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 3.2,
+            "text": "If you are learning Thai, you need to know these phrases."
+          },
+          {
+            "id": "waking-up-machine-2",
+            "startSeconds": 3.2,
+            "endSeconds": 6.02,
+            "text": "RON CHUNG IS SO HOT."
+          },
+          {
+            "id": "waking-up-machine-3",
+            "startSeconds": 6.02,
+            "endSeconds": 8.96,
+            "text": "THÜNG YANG HAVE YOU ARRIVED YET?"
+          },
+          {
+            "id": "waking-up-machine-4",
+            "startSeconds": 8.96,
+            "endSeconds": 11.12,
+            "text": "TÜ LÀU I'M AWAKE."
+          },
+          {
+            "id": "waking-up-machine-5",
+            "startSeconds": 11.12,
+            "endSeconds": 14.22,
+            "text": "HIU LÀU I'M HUNGRY."
+          },
+          {
+            "id": "waking-up-machine-6",
+            "startSeconds": 14.22,
+            "endSeconds": 16.8,
+            "text": "GIN LÀI BEE, WHY SHOULD WE EAT?"
+          },
+          {
+            "id": "waking-up-machine-7",
+            "startSeconds": 16.8,
+            "endSeconds": 20.36,
+            "text": "I provide private classes in Chiang Mai and online."
+          },
+          {
+            "id": "waking-up-machine-8",
+            "startSeconds": 20.36,
+            "endSeconds": 22.16,
+            "text": "DM me for more detail."
+          },
+          {
+            "id": "waking-up-machine-9",
+            "startSeconds": 22.16,
+            "endSeconds": 22.8,
+            "text": "See you!"
+          }
+        ]
+      },
       "cueCardIds": [],
       "quizBank": []
     },
@@ -628,13 +1057,94 @@
       "media": {
         "videoSrc": "/lessons/drafts/movie-invitation/intro.mp4",
         "posterSrc": "/lessons/drafts/movie-invitation/poster.jpg",
+        "captionsSrc": "/lessons/drafts/movie-invitation/captions.vtt",
         "durationSeconds": 25.609,
         "durationStatus": "confirmed",
-        "captionsStatus": "unavailable",
+        "captionsStatus": "machine-draft",
         "availability": "available",
         "fallbackMessage": "This local draft clip could not be played on this device."
       },
       "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-25T00:42:58",
+        "model": "small",
+        "detectedLanguage": "th",
+        "languageProbability": 0.6438,
+        "segments": [
+          {
+            "id": "movie-invitation-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 1.7,
+            "text": "Wanna ask Thai girls out?"
+          },
+          {
+            "id": "movie-invitation-machine-2",
+            "startSeconds": 1.7,
+            "endSeconds": 4.5,
+            "text": "Don't just say I like you. Try these."
+          },
+          {
+            "id": "movie-invitation-machine-3",
+            "startSeconds": 4.5,
+            "endSeconds": 7.2,
+            "text": "ไปกินข้าวกันไหม?"
+          },
+          {
+            "id": "movie-invitation-machine-4",
+            "startSeconds": 7.2,
+            "endSeconds": 9.3,
+            "text": "Wanna grab a meal together?"
+          },
+          {
+            "id": "movie-invitation-machine-5",
+            "startSeconds": 9.3,
+            "endSeconds": 11.5,
+            "text": "ไปดูนังกันไหม?"
+          },
+          {
+            "id": "movie-invitation-machine-6",
+            "startSeconds": 11.5,
+            "endSeconds": 13.3,
+            "text": "Wanna go watch a movie?"
+          },
+          {
+            "id": "movie-invitation-machine-7",
+            "startSeconds": 13.3,
+            "endSeconds": 15.9,
+            "text": "ไปดื่มกาแฟกันไหม?"
+          },
+          {
+            "id": "movie-invitation-machine-8",
+            "startSeconds": 15.9,
+            "endSeconds": 17.6,
+            "text": "Wanna grab a coffee?"
+          },
+          {
+            "id": "movie-invitation-machine-9",
+            "startSeconds": 17.6,
+            "endSeconds": 20.1,
+            "text": "อยากไปเด็ดกับผมไหม?"
+          },
+          {
+            "id": "movie-invitation-machine-10",
+            "startSeconds": 20.1,
+            "endSeconds": 22.1,
+            "text": "Wanna go on a date with me?"
+          },
+          {
+            "id": "movie-invitation-machine-11",
+            "startSeconds": 22.1,
+            "endSeconds": 24.5,
+            "text": "Save this for your next date in Thailand."
+          },
+          {
+            "id": "movie-invitation-machine-12",
+            "startSeconds": 24.5,
+            "endSeconds": 25.5,
+            "text": "Good luck!"
+          }
+        ]
+      },
       "cueCardIds": [],
       "quizBank": []
     },
@@ -662,7 +1172,7 @@
       },
       "transcript": [],
       "draftTranscript": {
-        "generatedAt": "2026-08-24T21:34:29",
+        "generatedAt": "2026-08-25T00:42:58",
         "model": "small",
         "detectedLanguage": "th",
         "languageProbability": 0.8859,
@@ -765,13 +1275,82 @@
       "media": {
         "videoSrc": "/lessons/drafts/encouragement/intro.mp4",
         "posterSrc": "/lessons/drafts/encouragement/poster.jpg",
+        "captionsSrc": "/lessons/drafts/encouragement/captions.vtt",
         "durationSeconds": 24.727,
         "durationStatus": "confirmed",
-        "captionsStatus": "unavailable",
+        "captionsStatus": "machine-draft",
         "availability": "available",
         "fallbackMessage": "This local draft clip could not be played on this device."
       },
       "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-25T00:42:58",
+        "model": "small",
+        "detectedLanguage": "th",
+        "languageProbability": 0.7909,
+        "segments": [
+          {
+            "id": "encouragement-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 3.76,
+            "text": "อย่าทำให้คุณผู้ที่คุณรักหรอก อย่าคุณสินะ"
+          },
+          {
+            "id": "encouragement-machine-2",
+            "startSeconds": 3.76,
+            "endSeconds": 5.88,
+            "text": "อยู่ด้วยกันไปนานๆนะ"
+          },
+          {
+            "id": "encouragement-machine-3",
+            "startSeconds": 5.88,
+            "endSeconds": 8.8,
+            "text": "มันอยู่ดีกว่า เพื่อเท่าหมาก"
+          },
+          {
+            "id": "encouragement-machine-4",
+            "startSeconds": 8.8,
+            "endSeconds": 11.34,
+            "text": "สู้สู้นะ คิดว่า"
+          },
+          {
+            "id": "encouragement-machine-5",
+            "startSeconds": 11.34,
+            "endSeconds": 13.2,
+            "text": "อยากได้อะไรไหม"
+          },
+          {
+            "id": "encouragement-machine-6",
+            "startSeconds": 13.2,
+            "endSeconds": 15.24,
+            "text": "อาหารอะไรอยากให้"
+          },
+          {
+            "id": "encouragement-machine-7",
+            "startSeconds": 15.24,
+            "endSeconds": 17.04,
+            "text": "เดี๋ยวโทษหานะ"
+          },
+          {
+            "id": "encouragement-machine-8",
+            "startSeconds": 17.04,
+            "endSeconds": 18.6,
+            "text": "ช่วยสู้สู้"
+          },
+          {
+            "id": "encouragement-machine-9",
+            "startSeconds": 18.6,
+            "endSeconds": 21.54,
+            "text": "ไม่ความบอกสิ่ง ช่วยช่วย"
+          },
+          {
+            "id": "encouragement-machine-10",
+            "startSeconds": 21.54,
+            "endSeconds": 24.8,
+            "text": "เก่งข้าคือคุณหนูกับ"
+          }
+        ]
+      },
       "cueCardIds": [],
       "quizBank": []
     },
@@ -799,7 +1378,7 @@
       },
       "transcript": [],
       "draftTranscript": {
-        "generatedAt": "2026-08-24T21:34:29",
+        "generatedAt": "2026-08-25T00:42:58",
         "model": "small",
         "detectedLanguage": "th",
         "languageProbability": 0.494,
@@ -905,7 +1484,7 @@
       },
       "transcript": [],
       "draftTranscript": {
-        "generatedAt": "2026-08-24T21:34:29",
+        "generatedAt": "2026-08-25T00:42:58",
         "model": "small",
         "detectedLanguage": "th",
         "languageProbability": 0.6627,
@@ -1029,7 +1608,7 @@
       },
       "transcript": [],
       "draftTranscript": {
-        "generatedAt": "2026-08-24T21:34:29",
+        "generatedAt": "2026-08-25T00:42:58",
         "model": "small",
         "detectedLanguage": "th",
         "languageProbability": 0.8434,
@@ -1147,7 +1726,7 @@
       },
       "transcript": [],
       "draftTranscript": {
-        "generatedAt": "2026-08-24T21:34:29",
+        "generatedAt": "2026-08-25T00:42:58",
         "model": "small",
         "detectedLanguage": "th",
         "languageProbability": 0.6759,
@@ -1220,13 +1799,46 @@
       "media": {
         "videoSrc": "/lessons/drafts/thai-slang-upgrades/intro.mp4",
         "posterSrc": "/lessons/drafts/thai-slang-upgrades/poster.jpg",
+        "captionsSrc": "/lessons/drafts/thai-slang-upgrades/captions.vtt",
         "durationSeconds": 18.55,
         "durationStatus": "confirmed",
-        "captionsStatus": "unavailable",
+        "captionsStatus": "machine-draft",
         "availability": "available",
         "fallbackMessage": "This local draft clip could not be played on this device."
       },
       "transcript": [],
+      "draftTranscript": {
+        "generatedAt": "2026-08-25T00:42:58",
+        "model": "small",
+        "detectedLanguage": "th",
+        "languageProbability": 0.6876,
+        "segments": [
+          {
+            "id": "thai-slang-upgrades-machine-1",
+            "startSeconds": 0,
+            "endSeconds": 3,
+            "text": "You can say สวย หรือ"
+          },
+          {
+            "id": "thai-slang-upgrades-machine-2",
+            "startSeconds": 3.5,
+            "endSeconds": 11.9,
+            "text": "รด สับ จึง ปัง โซ แซบ คือที่ ตัวแม่"
+          },
+          {
+            "id": "thai-slang-upgrades-machine-3",
+            "startSeconds": 12.1,
+            "endSeconds": 13.1,
+            "text": "ฟาด"
+          },
+          {
+            "id": "thai-slang-upgrades-machine-4",
+            "startSeconds": 13.1,
+            "endSeconds": 18.1,
+            "text": "I provide private classes at DM if you want to learn Thai with me. Bye"
+          }
+        ]
+      },
       "cueCardIds": [],
       "quizBank": []
     }

@@ -1,21 +1,28 @@
 "use client";
 
 import { ArrowRight, BookOpen, CheckCircle2, Clock3, FileCheck2, RotateCcw } from "lucide-react";
-import { motion, useReducedMotionConfig } from "framer-motion";
+import { motion } from "framer-motion";
 import { PageHeader } from "@/components/PageHeader";
 import { AppLink } from "@/components/AppLink";
 import { writeSnapshot } from "@/data/db";
 import { selectTodayAction } from "@/engine/learning-engine";
 import { formatLocalDate, localDateKey } from "@/engine/local-date";
 import { assetPath } from "@/lib/asset-path";
+import { useClientReady } from "@/lib/use-client-ready";
 import { snapshotFromState, useStudyStore } from "@/state/study-store";
 
 export default function TodayPage() {
   const state = useStudyStore();
-  const reduce = useReducedMotionConfig();
+  const clientReady = useClientReady();
   const today = localDateKey();
   const action = state.hydrated ? selectTodayAction(snapshotFromState(state), today) : undefined;
-  const dateLabel = new Intl.DateTimeFormat(undefined, { weekday: "long", month: "long", day: "numeric" }).format(new Date());
+  const dateLabel = clientReady
+    ? new Intl.DateTimeFormat(undefined, {
+      weekday: "long",
+      month: "long",
+      day: "numeric",
+    }).format(new Date())
+    : "Today";
 
   async function start(kind: "introduction" | "mastery" | "standalone-review", lessonId?: string) {
     if (kind === "introduction" && lessonId) useStudyStore.getState().startIntroduction(lessonId);
@@ -35,7 +42,7 @@ export default function TodayPage() {
         intro="A quiet sequence of watching, noticing, and retrieving—paced by what memory is ready to do today."
       />
 
-      <motion.section className="today-action tactile-card" initial={reduce ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.32 }}>
+      <motion.section className="today-action tactile-card" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.32 }}>
         <div className="action-number">{copy.number}</div>
         <div className="action-copy">
           <p className="eyebrow">{copy.eyebrow}</p>

@@ -1,6 +1,6 @@
 # Learn Thai IRL — Reel Dialogue Logs
 
-Generated 2026-08-24T21:34:29. Timestamps refer to each MP4.
+Generated 2026-08-25T00:44:05. Timestamps refer to each MP4.
 
 ## [learnthai_irl_2026-07-24_11-54-17_DbLLNypSMDH.mp4](../learnthai_irl_2026-07-24_11-54-17_DbLLNypSMDH.mp4)
 
@@ -18,6 +18,198 @@ Generated 2026-08-24T21:34:29. Timestamps refer to each MP4.
 - `00:19.000–00:22.500` ฟันดีนะ. Good night.
 - `00:22.500–00:26.000` Use these words with her and let me know the result.
 - `00:26.000–00:27.000` ไป!
+
+## [learnthai_irl_2026-07-31_12-07-54_DbdObkDyVQs.mp4](../learnthai_irl_2026-07-31_12-07-54_DbdObkDyVQs.mp4)
+
+**Detected language:** `th`
+
+**Instagram caption:**
+
+**Dialogue transcript:**
+
+- `00:00.000–00:22.540` 1, 10, 100, 1000, 10, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100
+
+## [learnthai_irl_2026-08-01_13-34-18_Dbf8YlbSj_X.mp4](../learnthai_irl_2026-08-01_13-34-18_Dbf8YlbSj_X.mp4)
+
+**Detected language:** `th`
+
+**Instagram caption:**
+
+**Dialogue transcript:**
+
+- `00:00.000–00:04.000` You hear this every day in Thailand but do you really know the meaning?
+- `00:04.000–00:07.000` กำลังไป I'm on my way
+- `00:07.000–00:10.000` ทำอะไรอยู่ What are you doing?
+- `00:10.000–00:13.000` อยู่ไหน Where are you?
+- `00:13.000–00:16.000` จะไปไหน Where are you going?
+- `00:16.000–00:18.000` Where are you heading to?
+- `00:18.000–00:21.000` แล้วเจอกัน See you later
+
+## [learnthai_irl_2026-08-02_13-28-02_DbihFsvyEEf.mp4](../learnthai_irl_2026-08-02_13-28-02_DbihFsvyEEf.mp4)
+
+**Detected language:** `th`
+
+**Instagram caption:**
+
+**Dialogue transcript:**
+
+- `00:00.000–00:03.000` You can say สวย หรือ
+- `00:03.500–00:11.900` รด สับ จึง ปัง โซ แซบ คือที่ ตัวแม่
+- `00:12.100–00:13.100` ฟาด
+- `00:13.100–00:18.100` I provide private classes at DM if you want to learn Thai with me. Bye
+
+## [learnthai_irl_2026-08-03_14-26-18_DblMh82SJ0G.mp4](../learnthai_irl_2026-08-03_14-26-18_DblMh82SJ0G.mp4)
+
+**Detected language:** `th`
+
+**Instagram caption:**
+
+**Dialogue transcript:**
+
+- `00:00.110–00:04.410` คุณมาจากประเทศอะไร? What country do you come from?
+- `00:04.410–00:07.610` ฉันมาจากประเทศ จีน
+- `00:07.610–00:08.610` China
+- `00:08.610–00:10.110` Singapore
+- `00:10.110–00:11.110` Singapore
+- `00:11.110–00:12.110` Taiwan
+- `00:12.110–00:13.610` Taiwan
+- `00:13.610–00:14.610` India
+- `00:14.610–00:15.610` India
+- `00:15.610–00:17.610` America
+- `00:17.610–00:19.610` The United States of America
+- `00:19.610–00:20.610` England
+- `00:20.610–00:21.610` England
+- `00:21.610–00:23.110` Japan
+- `00:23.110–00:24.610` Japan
+- `00:24.610–00:25.610` Korea
+- `00:25.610–00:27.610` South Korea
+- `00:27.610–00:28.610` Canada
+- `00:28.610–00:29.610` Canada
+- `00:29.610–00:31.110` Farang say it
+- `00:31.110–00:32.110` Friends
+- `00:32.110–00:34.110` What about you? Where are you from?
+- `00:34.110–00:36.110` Let me know in the comments
+
+## [learnthai_irl_2026-08-04_13-28-24_Dbnq6cpSqOQ.mp4](../learnthai_irl_2026-08-04_13-28-24_Dbnq6cpSqOQ.mp4)
+
+**Detected language:** `th`
+
+**Instagram caption:**
+
+**Dialogue transcript:**
+
+- `00:00.000–00:02.880` Go straight ตรงไป
+- `00:02.880–00:06.620` Turn right เลี้ยวขวา
+- `00:06.620–00:10.420` Turn left เลี้ยวสาย
+- `00:10.420–00:13.500` You turn กลับรถ
+
+## [learnthai_irl_2026-08-05_12-54-00_DbqLsjeT7bn.mp4](../learnthai_irl_2026-08-05_12-54-00_DbqLsjeT7bn.mp4)
+
+**Detected language:** `th`
+
+**Instagram caption:**
+
+**Dialogue transcript:**
+
+- `00:00.000–00:01.700` Wanna ask Thai girls out?
+- `00:01.700–00:04.500` Don't just say I like you. Try these.
+- `00:04.500–00:07.200` ไปกินข้าวกันไหม?
+- `00:07.200–00:09.300` Wanna grab a meal together?
+- `00:09.300–00:11.500` ไปดูนังกันไหม?
+- `00:11.500–00:13.300` Wanna go watch a movie?
+- `00:13.300–00:15.900` ไปดื่มกาแฟกันไหม?
+- `00:15.900–00:17.600` Wanna grab a coffee?
+- `00:17.600–00:20.100` อยากไปเด็ดกับผมไหม?
+- `00:20.100–00:22.100` Wanna go on a date with me?
+- `00:22.100–00:24.500` Save this for your next date in Thailand.
+- `00:24.500–00:25.500` Good luck!
+
+## [learnthai_irl_2026-08-06_12-58-07_Dbsw7PxyKUN.mp4](../learnthai_irl_2026-08-06_12-58-07_Dbsw7PxyKUN.mp4)
+
+**Detected language:** `th`
+
+**Instagram caption:**
+
+**Dialogue transcript:**
+
+- `00:00.000–00:03.340` วอตอร์ไอร์ไห์ ไวร์
+- `00:03.340–00:05.800` ที่ไหน วิน
+- `00:05.800–00:12.080` มือไหล ไหว ทำไม หาว ยังไง
+
+## [learnthai_irl_2026-08-07_12-47-39_DbvUdUsyqjb.mp4](../learnthai_irl_2026-08-07_12-47-39_DbvUdUsyqjb.mp4)
+
+**Detected language:** `th`
+
+**Instagram caption:**
+
+**Dialogue transcript:**
+
+- `00:00.000–00:02.460` Don't be boring saying สบายดี
+- `00:02.460–00:04.780` Here's how Thai people actually answer
+- `00:04.780–00:06.540` ก็ดี I'm good
+- `00:06.540–00:10.620` ไม่ค่อยสบาย I'm not feeling very well
+- `00:10.620–00:14.220` ช่วงนี้ยุ่งมาก I've been very busy lately
+- `00:14.220–00:16.840` ก็โอเค I'm okay
+- `00:16.840–00:19.500` เหมือนเดิม same as always
+- `00:19.500–00:22.680` Now you sound a lot more natural when speaking Thai
+- `00:22.680–00:24.180` Follow for more
+
+## [learnthai_irl_2026-08-09_12-33-56_Db0cod_S1wT.mp4](../learnthai_irl_2026-08-09_12-33-56_Db0cod_S1wT.mp4)
+
+**Detected language:** `th`
+
+**Instagram caption:**
+
+**Dialogue transcript:**
+
+- `00:00.000–00:16.260` Morning. ชาว. Late morning. สาย. นุ่น. เที่ยง. Afternoon. บาย. Late afternoon. ยิน. Night. กลางคืน.
+
+## [learnthai_irl_2026-08-11_13-05-14_Db5pmXqytEc.mp4](../learnthai_irl_2026-08-11_13-05-14_Db5pmXqytEc.mp4)
+
+**Detected language:** `en`
+
+**Instagram caption:**
+
+**Dialogue transcript:**
+
+- `00:00.000–00:03.200` If you are learning Thai, you need to know these phrases.
+- `00:03.200–00:06.020` RON CHUNG IS SO HOT.
+- `00:06.020–00:08.960` THÜNG YANG HAVE YOU ARRIVED YET?
+- `00:08.960–00:11.120` TÜ LÀU I'M AWAKE.
+- `00:11.120–00:14.220` HIU LÀU I'M HUNGRY.
+- `00:14.220–00:16.800` GIN LÀI BEE, WHY SHOULD WE EAT?
+- `00:16.800–00:20.360` I provide private classes in Chiang Mai and online.
+- `00:20.360–00:22.160` DM me for more detail.
+- `00:22.160–00:22.800` See you!
+
+## [learnthai_irl_2026-08-12_12-50-40_Db8M4GTygAD.mp4](../learnthai_irl_2026-08-12_12-50-40_Db8M4GTygAD.mp4)
+
+**Detected language:** `th`
+
+**Instagram caption:**
+
+**Dialogue transcript:**
+
+- `00:00.000–00:11.640` มีนิด นาที อาวุ่น ชั่วมอง ดี วัน มัน ดือน ยีร ปี
+
+## [learnthai_irl_2026-08-13_13-15-33_Db-0OFPSuuJ.mp4](../learnthai_irl_2026-08-13_13-15-33_Db-0OFPSuuJ.mp4)
+
+**Detected language:** `th`
+
+**Instagram caption:**
+
+**Dialogue transcript:**
+
+- `00:00.000–00:03.760` อย่าทำให้คุณผู้ที่คุณรักหรอก อย่าคุณสินะ
+- `00:03.760–00:05.880` อยู่ด้วยกันไปนานๆนะ
+- `00:05.880–00:08.800` มันอยู่ดีกว่า เพื่อเท่าหมาก
+- `00:08.800–00:11.340` สู้สู้นะ คิดว่า
+- `00:11.340–00:13.200` อยากได้อะไรไหม
+- `00:13.200–00:15.240` อาหารอะไรอยากให้
+- `00:15.240–00:17.040` เดี๋ยวโทษหานะ
+- `00:17.040–00:18.600` ช่วยสู้สู้
+- `00:18.600–00:21.540` ไม่ความบอกสิ่ง ช่วยช่วย
+- `00:21.540–00:24.800` เก่งข้าคือคุณหนูกับ
 
 ## [learnthai_irl_2026-08-14_13-05-05_DcBXuuUS0k9.mp4](../learnthai_irl_2026-08-14_13-05-05_DcBXuuUS0k9.mp4)
 
