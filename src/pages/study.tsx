@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import { useRouter } from "next/router";
-import { ArrowRight, Check, CircleAlert, ExternalLink, Eye, FileWarning, Mic2, Play, RefreshCw, RotateCcw } from "lucide-react";
+import { ArrowRight, Check, CircleAlert, ExternalLink, Eye, Mic2, Play, RefreshCw, RotateCcw } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotionConfig } from "framer-motion";
 import { AppLink } from "@/components/AppLink";
 import { LocalAudioButton, PhraseAudioButton } from "@/components/PhraseAudioButton";
@@ -26,11 +26,11 @@ export default function StudyPage() {
   const progress = useStudyStore((state) => state.lessonProgress);
 
   if (!clientReady) return <StudyEmpty title="Opening your session…" body="Reading the exact stage and fixed queue stored in this browser." />;
-  if (previewLesson) return <DraftPreview lesson={previewLesson} />;
+  if (previewLesson) return <LessonViewer lesson={previewLesson} />;
   if (replayLesson) {
     if (!hydrated) return <StudyEmpty title="Opening the library…" body="Checking that this replay is available in your local record." />;
     if (progress.some((entry) => entry.lessonId === replayLesson.id && entry.status === "mastered")) return <Replay lesson={replayLesson} />;
-    return <StudyEmpty title="Replay unavailable" body="Only mastered, published lessons can be replayed. Draft media has its own clearly marked preview." />;
+    return <StudyEmpty title="Replay unavailable" body="Only mastered lessons can be replayed. Browse the lesson library to watch any short lesson." />;
   }
   if (previewId || replayId) return <StudyEmpty title="Lesson not found" body="This preview does not match the bundled curriculum." />;
   return <DurableStudy />;
@@ -185,7 +185,7 @@ function MatchingQuestion({ entry, question }: { entry: SessionQueueEntry; quest
   return <fieldset className="quiz-card"><legend><span>Matching</span>{question.prompt}</legend><div className="matching-list">{pairs.map((pair) => <label key={pair.left}><span>{pair.left}</span><select value={answers[pair.left] ?? ""} onChange={(event) => setAnswers((value) => ({ ...value, [pair.left]: event.target.value }))}><option value="">Choose…</option>{right.map((choice) => <option key={choice}>{choice}</option>)}</select></label>)}</div><button className="primary-button" disabled={Object.keys(answers).length !== pairs.length} onClick={() => submit(pairs.map((pair) => ({ left: pair.left, right: answers[pair.left] })))}>Save answer <ArrowRight size={17} /></button></fieldset>;
 }
 
-function DraftPreview({ lesson }: { lesson: VideoLesson }) {
+function LessonViewer({ lesson }: { lesson: VideoLesson }) {
   const [mediaError, setMediaError] = useState(false);
   const [retryKey, setRetryKey] = useState(0);
   const [stage, setStage] = useState<"video" | "cards">("video");
@@ -197,24 +197,24 @@ function DraftPreview({ lesson }: { lesson: VideoLesson }) {
 
   return <div className="page study-page draft-preview-page">
     <header className="study-header">
-      <div><p className="eyebrow">Editorial draft · lesson plan {String(lesson.order).padStart(2, "0")}</p><h1>{lesson.title}</h1><p>{lesson.objective.replace(/^Draft plan —\s*/, "")}</p></div>
+      <div><p className="eyebrow">Watch &amp; notice · lesson {String(lesson.order).padStart(2, "0")}</p><h1>{lesson.title}</h1><p>{lesson.objective.replace(/^Draft plan —\s*/, "")}</p></div>
       <AppLink href="/library/" className="secondary-button">Return to Library</AppLink>
     </header>
-    <div className="draft-integrity-note" role="note"><FileWarning size={20} aria-hidden="true" /><div><b>Local media, not verified curriculum</b><p>Watch the short clip, then review the screenshot-derived phrase cards. This preview records no progress or scored questions; locally generated instructor pronunciation is available only where the matcher is confident.</p></div></div>
+    <div className="lesson-viewer-note" role="note"><Play size={19} aria-hidden="true" /><div><b>A short lesson, yours to revisit</b><p>Watch the clip, then move through the on-screen phrase cards. This is a self-paced lesson and does not change your learning record.</p></div></div>
     {stage === "video" ? <section className="draft-video-stage">
       <div className="draft-video-column">
         {!mediaError ? <video key={retryKey} className="lesson-video portrait-video draft-video" controls playsInline preload="metadata" poster={assetPath(lesson.media.posterSrc)} onEnded={() => setWatchComplete(true)} onError={() => setMediaError(true)}>
           <source src={assetPath(lesson.media.videoSrc)} type="video/mp4" />
-        </video> : <div className="media-fallback media-failed portrait-fallback" role="alert"><div className="frame-corners" /><span className="fallback-play"><CircleAlert size={23} /></span><p>{lesson.media.fallbackMessage}</p><small>Local draft media unavailable</small></div>}
-        <div className="draft-media-meta"><span>{formatDuration(lesson.media.durationSeconds)} · 720 × 1280 portrait MP4</span><span>{cards.length} screenshot-derived cards</span></div>
+        </video> : <div className="media-fallback media-failed portrait-fallback" role="alert"><div className="frame-corners" /><span className="fallback-play"><CircleAlert size={23} /></span><p>{lesson.media.fallbackMessage}</p><small>Lesson media unavailable</small></div>}
+        <div className="draft-media-meta"><span>{formatDuration(lesson.media.durationSeconds)} · short portrait video</span><span>{cards.length} phrase cards</span></div>
         {!mediaError && <div className="inline-actions">{watchComplete ? <button className="primary-button" onClick={() => setStage("cards")}>Open cue cards <ArrowRight size={17} /></button> : <span className="watch-note"><Play size={17} />Cue cards open when the clip ends.</span>}</div>}
         {mediaError && <div className="inline-actions"><button className="secondary-button" onClick={() => { setMediaError(false); setRetryKey((value) => value + 1); }}>Retry local video <RefreshCw size={17} /></button><button className="primary-button" onClick={() => setStage("cards")}>Review cue cards without video <ArrowRight size={17} /></button></div>}
-        {lesson.source && <a className="source-note draft-source-note" href={lesson.source.url} target="_blank" rel="noreferrer">Source attribution only · not verification <ExternalLink size={12} /></a>}
+        {lesson.source && <a className="source-note draft-source-note" href={lesson.source.url} target="_blank" rel="noreferrer">Source <ExternalLink size={12} /></a>}
       </div>
-    </section> : card ? <section className="single-card-stage draft-card-stage"><div className="section-lead"><p className="eyebrow">Draft cue card {cardIndex + 1} of {cards.length}</p><h2>Recall the phrase from the clip</h2><p>These fields were transcribed from the on-screen lesson text.</p></div>
-      <article className="cue-card tactile-card focused-card"><span className="draft-label">screenshot-derived · draft</span><PhraseAudioButton card={card} compact />{settings.showThaiScript && <p className="thai cue-thai" lang="th">{withPreferredParticle(card.thai, settings.politeParticle)}</p>}{settings.showRomanization && <p className="romanization">{withPreferredParticle(card.romanization, settings.politeParticle)}</p>}<h3>{card.naturalMeaning}</h3></article>
+    </section> : card ? <section className="single-card-stage draft-card-stage"><div className="section-lead"><p className="eyebrow">Phrase card {cardIndex + 1} of {cards.length}</p><h2>Recall the phrase from the clip</h2><p>Use the on-screen language as a prompt, then return to the clip whenever you want more context.</p></div>
+      <article className="cue-card tactile-card focused-card"><span className="draft-label">from this lesson</span><PhraseAudioButton card={card} compact />{settings.showThaiScript && <p className="thai cue-thai" lang="th">{withPreferredParticle(card.thai, settings.politeParticle)}</p>}{settings.showRomanization && <p className="romanization">{withPreferredParticle(card.romanization, settings.politeParticle)}</p>}<h3>{card.naturalMeaning}</h3></article>
       <footer className="study-footer"><button className="secondary-button" onClick={() => setStage("video")}>Watch again</button><span>{cardIndex + 1} of {cards.length}</span><button className="primary-button" onClick={() => setCardIndex((value) => value === cards.length - 1 ? 0 : value + 1)}>{cardIndex === cards.length - 1 ? "Start cards again" : "Next cue card"}<ArrowRight size={18} /></button></footer>
-    </section> : <StudyEmpty title="No cue cards yet" body="This draft does not have screenshot-derived lesson text." />}
+    </section> : <StudyEmpty title="No phrase cards yet" body="This lesson does not have on-screen phrase cards yet." />}
   </div>;
 }
 

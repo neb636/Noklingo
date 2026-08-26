@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/router";
 import {
-  BookOpen, CalendarDays, ChartNoAxesColumnIncreasing, Library,
+  BookOpen, CalendarDays, Library,
   Settings, Sparkles,
 } from "lucide-react";
 import { AppProviders } from "./AppProviders";
@@ -12,7 +12,6 @@ const navItems = [
   { href: "/today", label: "Today", icon: CalendarDays },
   { href: "/study", label: "Study", icon: BookOpen },
   { href: "/library", label: "Library", icon: Library },
-  { href: "/progress", label: "Progress", icon: ChartNoAxesColumnIncreasing },
   { href: "/settings", label: "Settings", icon: Settings },
 ];
 
