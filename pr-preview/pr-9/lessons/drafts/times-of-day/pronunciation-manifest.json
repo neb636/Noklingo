@@ -1,0 +1,132 @@
+{
+  "lessonId": "times-of-day",
+  "sourceVideo": "/lessons/drafts/times-of-day/intro.mp4",
+  "sourceHash": "6a30c26d9d7687bcfa08545612b6a09dce58a361b0636306d1d9d4cf219caebc",
+  "model": "large-v3",
+  "generatedAt": "2026-08-25T22:23:45.573Z",
+  "clips": [
+    {
+      "cueCardId": "draft-times-of-day-1",
+      "thai": "เช้า",
+      "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-1.m4a",
+      "status": "matched",
+      "start": 0.61,
+      "end": 2.45,
+      "transcriptMatch": " เช้า",
+      "confidence": 0.98084253013134,
+      "candidates": [
+        {
+          "start": 0.76,
+          "end": 2.2,
+          "transcriptMatch": " เช้า",
+          "confidence": 0.98084253013134,
+          "exact": true,
+          "segmentIndex": 0
+        }
+      ]
+    },
+    {
+      "cueCardId": "draft-times-of-day-2",
+      "thai": "สาย",
+      "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-2.m4a",
+      "status": "matched",
+      "start": 2.0500000000000003,
+      "end": 4.71,
+      "transcriptMatch": " สาย",
+      "confidence": 0.9810025715827941,
+      "candidates": [
+        {
+          "start": 2.2,
+          "end": 4.46,
+          "transcriptMatch": " สาย",
+          "confidence": 0.9810025715827941,
+          "exact": true,
+          "segmentIndex": 0
+        }
+      ]
+    },
+    {
+      "cueCardId": "draft-times-of-day-3",
+      "thai": "เที่ยง",
+      "status": "unmatched",
+      "candidates": [],
+      "diagnostic": "No candidate reached the confidence threshold."
+    },
+    {
+      "cueCardId": "draft-times-of-day-4",
+      "thai": "บ่าย",
+      "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-4.m4a",
+      "status": "matched",
+      "start": 7.1899999999999995,
+      "end": 10.27,
+      "transcriptMatch": " บ่าย",
+      "confidence": 0.9760718727111817,
+      "candidates": [
+        {
+          "start": 7.34,
+          "end": 10.02,
+          "transcriptMatch": " บ่าย",
+          "confidence": 0.9760718727111817,
+          "exact": true,
+          "segmentIndex": 0
+        }
+      ]
+    },
+    {
+      "cueCardId": "draft-times-of-day-5",
+      "thai": "เย็น",
+      "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-5.m4a",
+      "status": "matched",
+      "start": 9.87,
+      "end": 13.55,
+      "transcriptMatch": " เย็น",
+      "confidence": 0.9899545669555664,
+      "candidates": [
+        {
+          "start": 10.02,
+          "end": 13.3,
+          "transcriptMatch": " เย็น",
+          "confidence": 0.9899545669555664,
+          "exact": true,
+          "segmentIndex": 0
+        }
+      ]
+    },
+    {
+      "cueCardId": "draft-times-of-day-6",
+      "thai": "กลางคืน",
+      "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-6.m4a",
+      "status": "matched",
+      "start": 13.15,
+      "end": 16.09,
+      "transcriptMatch": " กลางคืน",
+      "confidence": 0.9859671479463578,
+      "candidates": [
+        {
+          "start": 13.3,
+          "end": 15.84,
+          "transcriptMatch": " กลางคืน",
+          "confidence": 0.9859671479463578,
+          "exact": true,
+          "segmentIndex": 0
+        },
+        {
+          "start": 13.64,
+          "end": 15.84,
+          "transcriptMatch": "ลางคืน",
+          "confidence": 0.8740506440571376,
+          "exact": false,
+          "segmentIndex": 0
+        },
+        {
+          "start": 13.3,
+          "end": 15.56,
+          "transcriptMatch": " กลางคื",
+          "confidence": 0.8574613336494992,
+          "exact": false,
+          "segmentIndex": 0
+        }
+      ]
+    }
+  ]
+}
