@@ -23,7 +23,7 @@ export type TodayAction =
   | { kind: "wait"; lesson: VideoLesson; eligibleDate: string }
   | { kind: "introduction"; lesson: VideoLesson }
   | { kind: "standalone-review"; dueCount: number }
-  | { kind: "editorial-hold"; draftCount: number }
+  | { kind: "lesson-library"; lessonCount: number }
   | { kind: "complete"; dueCount: number };
 
 export function lessonProgress(snapshot: Pick<AppSnapshot, "lessonProgress">, lessonId: string): LessonProgress | undefined {
@@ -57,8 +57,8 @@ export function selectTodayAction(snapshot: AppSnapshot, today: string): TodayAc
   if (next) return { kind: "introduction", lesson: next };
 
   const dueCount = dueReviewStates(snapshot, today).length;
-  if (!studyLessons.length && lessons.some((lesson) => lesson.contentStatus === "draft")) {
-    return { kind: "editorial-hold", draftCount: lessons.filter((lesson) => lesson.contentStatus === "draft").length };
+  if (!studyLessons.length && lessons.length) {
+    return { kind: "lesson-library", lessonCount: lessons.length };
   }
   return dueCount > 0 ? { kind: "standalone-review", dueCount } : { kind: "complete", dueCount: 0 };
 }

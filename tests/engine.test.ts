@@ -8,16 +8,16 @@ import { buildActiveQuestionQueue, buildSession, nextReviewState, passesMastery,
 import { addLocalDays, localDateOrdinal, localDaysBetween } from "../src/engine/local-date";
 import { defaultSnapshot } from "../src/state/study-store";
 
-describe("curriculum in review", () => {
+describe("lesson collection", () => {
   it("keeps the bundled curriculum valid and exposes screenshot-derived cards", () => {
     expect(validateCurriculum()).toEqual([]);
     expect(firstLesson.contentStatus).toBe("draft");
     expect(firstLesson.cueCardIds).toHaveLength(5);
   });
 
-  it("keeps scored study closed while no verified lessons exist", () => {
-    expect(selectTodayAction(defaultSnapshot, "2026-08-24").kind).toBe("editorial-hold");
-    expect(selectTodayAction({ ...defaultSnapshot, lessonProgress: [{ lessonId: firstLesson.id, status: "mastered" }] }, "2026-08-24").kind).toBe("editorial-hold");
+  it("offers the lesson library while no scored lessons exist", () => {
+    expect(selectTodayAction(defaultSnapshot, "2026-08-24").kind).toBe("lesson-library");
+    expect(selectTodayAction({ ...defaultSnapshot, lessonProgress: [{ lessonId: firstLesson.id, status: "mastered" }] }, "2026-08-24").kind).toBe("lesson-library");
   });
 
   it("does not build a scoreable queue from a draft lesson", () => {

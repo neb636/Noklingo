@@ -68,7 +68,7 @@ describe("server/client hydration", () => {
     const { container, root } = await hydrate(markup, <StudyPage />, errors);
 
     expect(errors).toEqual([]);
-    expect(container).toHaveTextContent("Local media, not verified curriculum");
+    expect(container).toHaveTextContent("A short lesson, yours to revisit");
     await act(async () => root.unmount());
   });
 });

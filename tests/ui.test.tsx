@@ -24,29 +24,29 @@ beforeEach(() => {
 });
 afterEach(cleanup);
 
-describe("editorial draft UI", () => {
-  it("shows an editorial hold instead of a scored action", () => {
+describe("lesson collection UI", () => {
+  it("offers the lesson collection while scored study is unavailable", () => {
     render(<TodayPage />);
-    expect(screen.getByRole("heading", { name: /23 local clips are staged/i })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /review draft library/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /23 short lessons are ready/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /browse lessons/i })).toBeInTheDocument();
   });
 
-  it("opens screenshot-derived cue cards only after the draft video ends", () => {
+  it("opens phrase cards after the lesson video ends", () => {
     query = { preview: "common-verbs" };
     const { container } = render(<StudyPage />);
     const video = container.querySelector("video");
     expect(video).not.toBeNull();
     fireEvent.ended(video!);
     fireEvent.click(screen.getByRole("button", { name: /open cue cards/i }));
-    expect(screen.getByText(/draft cue card 1 of 5/i)).toBeInTheDocument();
+    expect(screen.getByText(/phrase card 1 of 5/i)).toBeInTheDocument();
     expect(screen.getByText("กิน")).toBeInTheDocument();
     expect(screen.getByText("eat")).toBeInTheDocument();
   });
 
-  it("keeps draft previews separate from published lessons", () => {
+  it("presents the supplied clips as a learner-facing collection", () => {
     const { container } = render(<LibraryPage />);
-    expect(screen.getByText(/editorial review comes first/i)).toBeInTheDocument();
-    expect(screen.getAllByText(/cue cards/i).length).toBeGreaterThan(0);
+    expect(screen.getByRole("heading", { name: /keep exploring/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /watch lesson 1: essential verbs/i })).toBeInTheDocument();
     expect(container.querySelector("video")).toBeNull();
   });
 });
