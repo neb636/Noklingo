@@ -32,12 +32,12 @@ describe("learning engine primitives", () => {
   it("accepts a verified one-card lesson and keeps immediate feedback resumable", () => {
     const card = CueCardSchema.parse({
       id: "thin-card", lessonId: "thin", thai: "หนึ่งแสน", romanization: "neung saen",
-      naturalMeaning: "one hundred thousand", usage: "Use this when stating an amount of 100,000.",
+      emoji: "1️⃣", naturalMeaning: "one hundred thousand", usage: "Use this when stating an amount of 100,000.",
       phraseAudioSrc: "/lessons/thin/audio/thin-card.m4a", verificationStatus: "verified",
     });
     const common = { itemId: card.id, scored: true, verificationStatus: "verified" as const, explanation: "หนึ่งแสน means one hundred thousand." };
     const lesson = VideoLessonSchema.parse({
-      id: "thin", order: 1, title: "Thin lesson", objective: "Recall one amount.", description: "One useful amount.",
+      id: "thin", order: 1, topicEmoji: "🔢", title: "Thin lesson", objective: "Recall one amount.", description: "One useful amount.",
       media: { videoSrc: "/lessons/thin/intro.mp4", posterSrc: "/lessons/thin/poster.jpg", durationSeconds: 5, durationStatus: "confirmed", availability: "available", fallbackMessage: "Unavailable." },
       cueCardIds: [card.id], contentStatus: "verified",
       source: { label: "Authorized test source", url: "https://example.com/source", permissionStatus: "authorized" },

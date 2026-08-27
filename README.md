@@ -1,6 +1,6 @@
-# Thai Study
+# NokLingo
 
-Thai Study is an offline-first, static PWA for learning conversational Thai
+NokLingo is an offline-first, static PWA for learning conversational Thai
 from short, authorized video lessons. Its learning loop is intentionally quiet:
 
 Live site: [neb636.github.io/Noklingo](https://neb636.github.io/Noklingo/)
@@ -16,10 +16,11 @@ The repository contains 23 locally bundled Reel plans in an editorially useful
 order. Every draft has a same-origin MP4, poster, confirmed duration, and
 screenshot-derived cue cards.
 
-All 23 remain explicitly `draft`. Draft previews play the short clip and then
-step through the visible Thai, romanization, and English captured from the
-lesson screenshots. An Instagram URL is attribution, not evidence that the
-language has been independently verified.
+All 23 remain explicitly `draft`. Draft previews open with a compact lesson
+plan, use an immersive video player, move through swipeable cue cards, and end
+with a visual practice quiz. That practice stays local and does not alter the
+mastery record. An Instagram URL is attribution, not evidence that the language
+has been independently verified.
 
 The reviewed registry is currently empty, so there are zero active study
 lessons. Today shows an editorial hold and Library exposes the ordered local
@@ -103,7 +104,7 @@ only when its lesson, cards, question IDs, exact queue, shuffle permutations,
 answers, and stage remain valid; otherwise that active session is discarded
 without destroying the rest of the valid record.
 
-Service-worker caches use the v3 product namespace, deployment scope, and a
+Service-worker caches use the NokLingo product namespace, deployment scope, and a
 content-derived build revision. Activation removes older owned caches. The
 hashed application shell is precached, while MP4 and byte-range responses stay
 network-only so a partial video response can never be mistaken for a complete

@@ -21,7 +21,7 @@ export default function SettingsPage() {
     const url = URL.createObjectURL(new Blob([data], { type: "application/json" }));
     const link = document.createElement("a");
     link.href = url;
-    link.download = `thai-study-v3-${new Date().toISOString().slice(0, 10)}.json`;
+    link.download = `noklingo-v3-${new Date().toISOString().slice(0, 10)}.json`;
     link.click();
     URL.revokeObjectURL(url);
     setMessage("Local study data exported.");
@@ -39,7 +39,7 @@ export default function SettingsPage() {
         ? "Import complete. A stale session was discarded; your other valid progress was kept."
         : "Import complete. Your current-schema local record has been replaced.");
     } catch {
-      setMessage("That file is not a current Thai Study v3 export. Nothing was changed.");
+      setMessage("That file is not a current NokLingo v3 export. Nothing was changed.");
     }
     if (inputRef.current) inputRef.current.value = "";
   }

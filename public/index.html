@@ -4,20 +4,33 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#f4efe6" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#181b19" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f7f8fc" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#111318" media="(prefers-color-scheme: dark)" />
+    <meta name="application-name" content="NokLingo" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="Thai Study" />
+    <meta name="apple-mobile-web-app-title" content="NokLingo" />
+    <meta name="description" content="Learn Thai through real conversations." />
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./icon.svg" type="image/svg+xml" sizes="any" />
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" sizes="180x180" />
-    <meta http-equiv="refresh" content="0; url=./today/" />
-    <title>Thai Study</title>
-    <script>window.location.replace(new URL("./today/", window.location.href).href);</script>
+    <title>NokLingo</title>
+    <script>
+      (() => {
+        const welcomeSeenKey = "noklingo:welcome-seen:v1";
+        let destination = "./welcome/";
+        try {
+          if (window.localStorage.getItem(welcomeSeenKey)) destination = "./today/";
+        } catch {
+          // A private browsing policy may deny storage; Welcome remains safe.
+        }
+        window.location.replace(new URL(destination, window.location.href).href);
+      })();
+    </script>
   </head>
   <body>
-    <p><a href="./today/">Continue to Thai Study</a></p>
+    <p>Opening NokLingo…</p>
+    <noscript><p><a href="./welcome/">Open NokLingo</a></p></noscript>
   </body>
 </html>

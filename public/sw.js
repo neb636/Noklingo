@@ -1,13 +1,13 @@
-/* Thai Study: prefix-safe, offline-first service worker.
+/* NokLingo: prefix-safe, offline-first service worker.
  *
  * The final static-build step replaces the two tokens below with a content
  * revision and the complete, non-video application shell. Keeping the source
  * file as a template makes cache rotation deterministic without coupling the
  * browser runtime to a server or deployment-specific absolute path.
  */
-const PRODUCT_CACHE_VERSION = "noklingo-thai-study-v3";
-const BUILD_REVISION = "__THAI_STUDY_BUILD_REVISION__";
-const PRECACHE_PATHS = /* __THAI_STUDY_PRECACHE_PATHS__ */ [];
+const PRODUCT_CACHE_VERSION = "noklingo-v4";
+const BUILD_REVISION = "__NOKLINGO_BUILD_REVISION__";
+const PRECACHE_PATHS = /* __NOKLINGO_PRECACHE_PATHS__ */ [];
 const scopeUrl = new URL(self.registration.scope);
 const scopePath = scopeUrl.pathname.endsWith("/") ? scopeUrl.pathname : `${scopeUrl.pathname}/`;
 const scopeCacheKey = scopePath.replace(/^\/+|\/+$/g, "").replace(/[^a-z\d._-]+/gi, "-") || "root";
@@ -15,12 +15,13 @@ const CACHE_NAMESPACE = `${PRODUCT_CACHE_VERSION}-${scopeCacheKey}`;
 const SHELL_CACHE = `${CACHE_NAMESPACE}-${BUILD_REVISION}-shell`;
 const ASSET_CACHE = `${CACHE_NAMESPACE}-${BUILD_REVISION}-assets`;
 const CURRENT_CACHES = new Set([SHELL_CACHE, ASSET_CACHE]);
-const LEGACY_CACHES = new Set(["thai-study-v2-shell", "thai-study-v2-assets"]);
+const LEGACY_CACHE_PREFIXES = ["noklingo-thai-study-v3-", "thai-study-v2-"];
 const precacheUrls = PRECACHE_PATHS.map((path) => new URL(path, scopeUrl).href);
 const precacheUrlSet = new Set(precacheUrls);
 
 function ownsCache(cacheName) {
-  return cacheName.startsWith(`${CACHE_NAMESPACE}-`) || LEGACY_CACHES.has(cacheName);
+  return cacheName.startsWith(`${CACHE_NAMESPACE}-`)
+    || LEGACY_CACHE_PREFIXES.some((prefix) => cacheName.startsWith(prefix));
 }
 
 function isWithinScope(url) {
@@ -82,7 +83,7 @@ self.addEventListener("fetch", (event) => {
           if (cached) return cached;
           const fallback = await shellCache.match(new URL("./today/", scopeUrl));
           return fallback || new Response(
-            "Thai Study is offline. Open the app once while connected to finish installation.",
+            "NokLingo is offline. Open the app once while connected to finish installation.",
             { status: 503, headers: { "Content-Type": "text/plain; charset=utf-8" } },
           );
         }),

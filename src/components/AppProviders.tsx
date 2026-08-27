@@ -43,10 +43,10 @@ export function AppProviders({ children }: { children: React.ReactNode }) {
     for (const meta of document.querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]')) {
       const darkMeta = meta.media.includes("dark");
       meta.content = settings.theme === "dark"
-        ? "#181b19"
+        ? "#111318"
         : settings.theme === "light"
-          ? "#f4efe6"
-          : darkMeta ? "#181b19" : "#f4efe6";
+          ? "#f7f8fc"
+          : darkMeta ? "#111318" : "#f7f8fc";
     }
   }, [settings]);
 
@@ -57,7 +57,7 @@ export function AppProviders({ children }: { children: React.ReactNode }) {
 
   return <MotionConfig reducedMotion={settings.reduceMotion ? "always" : "user"}>
     {hydrationNotice && <div className="redesign-notice" role="status">
-      <span>Thai Study was redesigned. Incompatible earlier data was cleared once on this device.</span>
+      <span>NokLingo was redesigned. Incompatible earlier data was cleared once on this device.</span>
       <button onClick={dismissHydrationNotice} aria-label="Dismiss notice">×</button>
     </div>}
     {staleSessionNotice && !hydrationNotice && <div className="redesign-notice" role="status">

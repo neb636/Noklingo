@@ -1,10 +1,12 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
-import { ArrowRight, Check, CircleAlert, ExternalLink, Eye, Mic2, Play, RefreshCw, RotateCcw } from "lucide-react";
+import { ArrowRight, Check, Eye, Mic2, RotateCcw, X } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotionConfig } from "framer-motion";
 import { AppLink } from "@/components/AppLink";
+import { LessonExperience } from "@/components/LessonExperience";
+import { LessonVideoScreen } from "@/components/LessonVideoScreen";
 import { LocalAudioButton, PhraseAudioButton } from "@/components/PhraseAudioButton";
 import { cueCards, lessons } from "@/domain/seed";
 import type { ActiveStudySession, QuizQuestion, SessionQueueEntry, VideoLesson } from "@/domain/schemas";
@@ -20,16 +22,16 @@ export default function StudyPage() {
   const clientReady = useClientReady();
   const previewId = typeof router.query.preview === "string" ? router.query.preview : undefined;
   const replayId = typeof router.query.replay === "string" ? router.query.replay : undefined;
-  const previewLesson = previewId ? lessons.find((lesson) => lesson.id === previewId && lesson.contentStatus === "draft") : undefined;
+  const previewLesson = previewId ? lessons.find((lesson) => lesson.id === previewId) : undefined;
   const replayLesson = replayId ? lessons.find((lesson) => lesson.id === replayId) : undefined;
   const hydrated = useStudyStore((state) => state.hydrated);
   const progress = useStudyStore((state) => state.lessonProgress);
 
   if (!clientReady) return <StudyEmpty title="Opening your session…" body="Reading the exact stage and fixed queue stored in this browser." />;
-  if (previewLesson) return <LessonViewer lesson={previewLesson} />;
+  if (previewLesson) return <LessonExperience lesson={previewLesson} />;
   if (replayLesson) {
     if (!hydrated) return <StudyEmpty title="Opening the library…" body="Checking that this replay is available in your local record." />;
-    if (progress.some((entry) => entry.lessonId === replayLesson.id && entry.status === "mastered")) return <Replay lesson={replayLesson} />;
+    if (progress.some((entry) => entry.lessonId === replayLesson.id && entry.status === "mastered")) return <LessonExperience lesson={replayLesson} />;
     return <StudyEmpty title="Replay unavailable" body="Only mastered lessons can be replayed. Browse the lesson library to watch any short lesson." />;
   }
   if (previewId || replayId) return <StudyEmpty title="Lesson not found" body="This preview does not match the bundled curriculum." />;
@@ -85,47 +87,16 @@ function DurableStudy() {
 }
 
 function VideoStage({ lesson }: { lesson: VideoLesson }) {
-  const [mediaError, setMediaError] = useState(lesson.media.availability !== "available");
-  const [retryKey, setRetryKey] = useState(0);
-  const [watchComplete, setWatchComplete] = useState(false);
-  const watchedSeconds = useRef(0);
-  const lastTime = useRef(0);
+  const fullscreenRef = useRef<HTMLElement>(null);
   const completeVideo = useStudyStore((state) => state.completeVideo);
-
-  function resetPlayback() {
-    watchedSeconds.current = 0;
-    lastTime.current = 0;
-    setWatchComplete(false);
-  }
-
-  function noteProgress(video: HTMLVideoElement) {
-    const delta = video.currentTime - lastTime.current;
-    if (!video.seeking && delta > 0 && delta < 1.5) watchedSeconds.current += delta;
-    lastTime.current = video.currentTime;
-  }
-
-  function finishPlayback(video: HTMLVideoElement) {
-    const required = Math.max(1, Math.min(video.duration - 1, video.duration * 0.82));
-    setWatchComplete(watchedSeconds.current >= required);
-  }
-
-  return <section className="study-grid">
-    <div className="video-column">
-      {!mediaError ? <video key={retryKey} className="lesson-video portrait-video" controls playsInline preload="metadata" poster={assetPath(lesson.media.posterSrc)} onLoadedMetadata={resetPlayback} onTimeUpdate={(event) => noteProgress(event.currentTarget)} onEnded={(event) => finishPlayback(event.currentTarget)} onError={() => setMediaError(true)}>
-        <source src={assetPath(lesson.media.videoSrc)} type="video/mp4" />
-      </video> : <div className="media-fallback media-failed portrait-fallback" role="alert"><div className="frame-corners" /><span className="fallback-play"><CircleAlert size={23} /></span><p>{lesson.media.fallbackMessage}</p><small>Playback unavailable · study can continue deliberately</small></div>}
-      {mediaError ? <div className="video-error-action"><p>The local video may be offline, unsupported, or temporarily unavailable. Retry it, or deliberately continue this introduction without media.</p><div className="inline-actions"><button className="secondary-button" onClick={() => { setMediaError(false); setRetryKey((value) => value + 1); }}>Retry video <RefreshCw size={17} /></button><button className="secondary-button" onClick={() => completeVideo(true)}>Continue without video <ArrowRight size={17} /></button></div></div>
-        : <div className="watch-note"><Play size={17} /><span>Watch the complete clip once. Cue cards open when playback ends.</span></div>}
-      {watchComplete && <button className="primary-button" onClick={() => completeVideo(false)}>Open cue cards <ArrowRight size={17} /></button>}
-    </div>
-  </section>;
+  return <section ref={fullscreenRef} className="durable-video-host"><LessonVideoScreen lesson={lesson} fullscreenTargetRef={fullscreenRef} onClose={() => window.location.assign(assetPath("/today/"))} onContinue={(bypassed) => completeVideo(Boolean(bypassed))} requireCompletedWatch /></section>;
 }
 
 function CueCardStage({ card, session }: { card: (typeof cueCards)[number]; session: ActiveStudySession }) {
   const settings = useStudyStore((state) => state.settings);
   const advance = useStudyStore((state) => state.advanceCard);
   return <section className="single-card-stage"><div className="section-lead"><p className="eyebrow">Cue card {session.cardIndex + 1} of {session.cardOrder.length}</p><h2>Notice the phrase in context</h2><p>Read for natural use rather than word-for-word equivalence.</p></div>
-    <article className="cue-card tactile-card focused-card"><PhraseAudioButton card={card} compact />{settings.showThaiScript && <p className="thai cue-thai">{withPreferredParticle(card.thai, settings.politeParticle)}</p>}{settings.showRomanization && <p className="romanization">{withPreferredParticle(card.romanization, settings.politeParticle)}</p>}<h3>{card.naturalMeaning}</h3><p>{card.usage}</p>{card.literalNote && <p className="card-note"><b>Literal note</b> {card.literalNote}</p>}{card.culturalNote && <p className="card-note"><b>Context</b> {card.culturalNote}</p>}<span className="draft-label">{card.verificationStatus} language</span></article>
+    <article className="cue-card tactile-card focused-card"><PhraseAudioButton card={card} compact /><span className="cue-emoji" aria-hidden="true">{card.emoji}</span><h3>{card.naturalMeaning}</h3>{settings.showThaiScript && <p className="thai cue-thai">{withPreferredParticle(card.thai, settings.politeParticle)}</p>}{settings.showRomanization && <p className="romanization">{withPreferredParticle(card.romanization, settings.politeParticle)}</p>}<p>{card.usage}</p>{card.literalNote && <p className="card-note"><b>Literal note</b> {card.literalNote}</p>}{card.culturalNote && <p className="card-note"><b>Context</b> {card.culturalNote}</p>}<span className="draft-label">{card.verificationStatus} language</span></article>
     <footer className="study-footer"><span>{session.cardIndex + 1} of {session.cardOrder.length}</span><button className="primary-button" onClick={advance}>{session.cardIndex === session.cardOrder.length - 1 ? "Begin diagnostic" : "Next cue card"}<ArrowRight size={18} /></button></footer>
   </section>;
 }
@@ -145,14 +116,20 @@ function QuizStage({ session, entry, question }: { session: ActiveStudySession; 
   if (!question) return <StudyEmpty title="This queue is stale" body="The bundled curriculum no longer contains one of its questions. Return to Today to rebuild it." />;
   const delayed = session.mode === "mastery";
   const answer = answerFor(session, entry.queueId);
-  return <section className="quiz-section"><div className="section-lead"><p className="eyebrow">{session.mode === "introduction" ? "Diagnostic" : entry.source === "review" ? "Older review" : "Active lesson"} · {session.questionIndex + 1} of {session.queue.length}</p><h2>{delayed ? "Answer the complete queue" : session.mode === "introduction" ? "A short first-pass check" : "Recall, correct, continue"}</h2><p>{delayed ? "Corrections stay hidden until every answer is complete." : session.mode === "introduction" ? "Each answer teaches immediately; mastery still begins tomorrow." : "Use the correction now, before this phrase is scheduled again."}</p></div>{session.feedbackQueueId === entry.queueId && answer ? <AnswerFeedback entry={entry} question={question} correct={answer.correct} /> : <QuestionCard key={entry.queueId} entry={entry} question={question} />}</section>;
+  const progress = Math.min(1, (session.questionIndex + 1) / Math.max(1, session.queue.length));
+  return <section className="quiz-section durable-quiz-screen">
+    <header className="quiz-topbar"><button type="button" className="plain-icon-button" onClick={() => window.location.assign(assetPath("/today/"))} aria-label="Close quiz"><X size={22} /></button><div><span><i style={{ width: `${progress * 100}%` }} /></span><small>{session.mode === "introduction" ? "Diagnostic" : entry.source === "review" ? "Older review" : "Active lesson"}</small></div><b>{session.questionIndex + 1} / {session.queue.length}</b></header>
+    <div className="durable-quiz-content"><div className="section-lead"><h2>{delayed ? "Answer the complete queue" : session.mode === "introduction" ? "A short first-pass check" : "Recall, correct, continue"}</h2><p>{delayed ? "Corrections stay hidden until every answer is complete." : session.mode === "introduction" ? "Each answer teaches immediately; mastery still begins tomorrow." : "Use the correction now, before this phrase is scheduled again."}</p></div>{session.feedbackQueueId === entry.queueId && answer ? <AnswerFeedback entry={entry} question={question} correct={answer.correct} /> : <QuestionCard key={entry.queueId} entry={entry} question={question} />}</div>
+  </section>;
 }
 
 function AnswerFeedback({ entry, question, correct }: { entry: SessionQueueEntry; question: QuizQuestion; correct: boolean }) {
   const card = cueCards.find((item) => item.id === entry.itemId);
   const continueAfterFeedback = useStudyStore((state) => state.continueAfterFeedback);
+  const feedbackRef = useRef<HTMLParagraphElement>(null);
+  useEffect(() => { feedbackRef.current?.focus(); }, []);
   return <article className={`quiz-card answer-feedback ${correct ? "correct" : "incorrect"}`} role="status">
-    <p className="eyebrow">{correct ? "Recalled accurately" : "Keep this correction"}</p>
+    <p ref={feedbackRef} tabIndex={-1} className="eyebrow">{correct ? "Recalled accurately" : "Keep this correction"}</p>
     {card && <><p className="thai correction-answer" lang="th">{card.thai}</p><p className="romanization">{card.romanization}</p><h3>{card.naturalMeaning}</h3><PhraseAudioButton card={card} /></>}
     <p>{question.explanation}</p>
     <button className="primary-button" onClick={continueAfterFeedback}>Continue <ArrowRight size={17} /></button>
@@ -162,19 +139,25 @@ function AnswerFeedback({ entry, question, correct }: { entry: SessionQueueEntry
 function QuestionCard({ entry, question }: { entry: SessionQueueEntry; question: QuizQuestion }) {
   const answerChoice = useStudyStore((state) => state.answerChoice);
   const settings = useStudyStore((state) => state.settings);
+  const [selectedIndex, setSelectedIndex] = useState<number>();
+  const questionRef = useRef<HTMLFieldSetElement>(null);
+  useEffect(() => { questionRef.current?.focus(); }, []);
   if (question.interactionType === "phrase-construction") return <ConstructionQuestion entry={entry} question={question} />;
   if (question.interactionType === "matching") return <MatchingQuestion entry={entry} question={question} />;
   const order = entry.choiceOrder ?? question.choices?.map((_, index) => index) ?? [];
-  return <fieldset className="quiz-card"><legend><span>{interactionLabel(question.interactionType)}</span>{question.prompt}</legend>{question.interactionType === "listening" && <LocalAudioButton src={question.audioSrc} label="listening question audio" />}
-    <div className="choice-list">{order.map((originalIndex, displayIndex) => { const choice = withPreferredParticle(question.choices?.[originalIndex] ?? "", settings.politeParticle); const thai = /\p{Script=Thai}/u.test(choice); return <button type="button" key={`${originalIndex}-${choice}`} onClick={() => answerChoice(displayIndex)}><span>{String.fromCharCode(65 + displayIndex)}</span><b className={thai ? "thai" : ""} lang={thai ? "th" : undefined}>{choice}</b></button>; })}</div>
+  return <fieldset ref={questionRef} tabIndex={-1} className="quiz-card durable-question-card"><legend><span>{interactionLabel(question.interactionType)}</span>{question.prompt}</legend>{question.interactionType === "listening" && <LocalAudioButton src={question.audioSrc} label="listening question audio" />}
+    <div className="choice-list durable-choice-grid">{order.map((originalIndex, displayIndex) => { const choice = withPreferredParticle(question.choices?.[originalIndex] ?? "", settings.politeParticle); const thai = /\p{Script=Thai}/u.test(choice); return <button type="button" className={selectedIndex === displayIndex ? "selected" : ""} aria-pressed={selectedIndex === displayIndex} key={`${originalIndex}-${choice}`} onClick={() => setSelectedIndex(displayIndex)}><span>{String.fromCharCode(65 + displayIndex)}</span><b className={thai ? "thai" : ""} lang={thai ? "th" : undefined}>{choice}</b></button>; })}</div>
+    <button type="button" className="gradient-button durable-check-button" disabled={selectedIndex === undefined} onClick={() => selectedIndex !== undefined && answerChoice(selectedIndex)}>Check answer</button>
   </fieldset>;
 }
 
 function ConstructionQuestion({ entry, question }: { entry: SessionQueueEntry; question: QuizQuestion }) {
   const [selected, setSelected] = useState<string[]>([]);
   const submit = useStudyStore((state) => state.answerConstruction);
+  const questionRef = useRef<HTMLFieldSetElement>(null);
+  useEffect(() => { questionRef.current?.focus(); }, []);
   const tokens = (entry.tokenOrder ?? []).map((index) => question.constructionTokens?.[index]).filter((token): token is string => Boolean(token));
-  return <fieldset className="quiz-card construction-card"><legend><span>Phrase construction</span>{question.prompt}</legend><div className="construction-answer">{selected.length ? selected.map((token, index) => <button key={`${token}-${index}`} onClick={() => setSelected((value) => value.filter((_, itemIndex) => itemIndex !== index))} className="thai" lang="th">{token}</button>) : <p>Choose tokens in order.</p>}</div><div className="token-bank">{tokens.map((token, index) => <button key={`${token}-${index}`} className="thai" lang="th" disabled={selected.filter((item) => item === token).length >= tokens.filter((item) => item === token).length} onClick={() => setSelected((value) => [...value, token])}>{token}</button>)}</div><button className="primary-button" disabled={selected.length !== question.correctConstruction?.length} onClick={() => submit(selected)}>Save answer <ArrowRight size={17} /></button></fieldset>;
+  return <fieldset ref={questionRef} tabIndex={-1} className="quiz-card construction-card"><legend><span>Phrase construction</span>{question.prompt}</legend><div className="construction-answer">{selected.length ? selected.map((token, index) => <button key={`${token}-${index}`} onClick={() => setSelected((value) => value.filter((_, itemIndex) => itemIndex !== index))} className="thai" lang="th">{token}</button>) : <p>Choose tokens in order.</p>}</div><div className="token-bank">{tokens.map((token, index) => <button key={`${token}-${index}`} className="thai" lang="th" disabled={selected.filter((item) => item === token).length >= tokens.filter((item) => item === token).length} onClick={() => setSelected((value) => [...value, token])}>{token}</button>)}</div><button className="primary-button" disabled={selected.length !== question.correctConstruction?.length} onClick={() => submit(selected)}>Save answer <ArrowRight size={17} /></button></fieldset>;
 }
 
 function MatchingQuestion({ entry, question }: { entry: SessionQueueEntry; question: QuizQuestion }) {
@@ -182,51 +165,9 @@ function MatchingQuestion({ entry, question }: { entry: SessionQueueEntry; quest
   const right = (entry.pairOrder ?? pairs.map((_, index) => index)).map((index) => pairs[index]?.right).filter(Boolean);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const submit = useStudyStore((state) => state.answerMatching);
-  return <fieldset className="quiz-card"><legend><span>Matching</span>{question.prompt}</legend><div className="matching-list">{pairs.map((pair) => <label key={pair.left}><span>{pair.left}</span><select value={answers[pair.left] ?? ""} onChange={(event) => setAnswers((value) => ({ ...value, [pair.left]: event.target.value }))}><option value="">Choose…</option>{right.map((choice) => <option key={choice}>{choice}</option>)}</select></label>)}</div><button className="primary-button" disabled={Object.keys(answers).length !== pairs.length} onClick={() => submit(pairs.map((pair) => ({ left: pair.left, right: answers[pair.left] })))}>Save answer <ArrowRight size={17} /></button></fieldset>;
-}
-
-function LessonViewer({ lesson }: { lesson: VideoLesson }) {
-  const [mediaError, setMediaError] = useState(false);
-  const [retryKey, setRetryKey] = useState(0);
-  const [stage, setStage] = useState<"video" | "cards">("video");
-  const [cardIndex, setCardIndex] = useState(0);
-  const [watchComplete, setWatchComplete] = useState(false);
-  const settings = useStudyStore((state) => state.settings);
-  const cards = cueCards.filter((card) => lesson.cueCardIds.includes(card.id));
-  const card = cards[cardIndex];
-
-  return <div className="page study-page draft-preview-page">
-    <header className="study-header">
-      <div><p className="eyebrow">Watch &amp; notice · lesson {String(lesson.order).padStart(2, "0")}</p><h1>{lesson.title}</h1><p>{lesson.objective.replace(/^Draft plan —\s*/, "")}</p></div>
-      <AppLink href="/library/" className="secondary-button">Return to Library</AppLink>
-    </header>
-    <div className="lesson-viewer-note" role="note"><Play size={19} aria-hidden="true" /><div><b>A short lesson, yours to revisit</b><p>Watch the clip, then move through the on-screen phrase cards. This is a self-paced lesson and does not change your learning record.</p></div></div>
-    {stage === "video" ? <section className="draft-video-stage">
-      <div className="draft-video-column">
-        {!mediaError ? <video key={retryKey} className="lesson-video portrait-video draft-video" controls playsInline preload="metadata" poster={assetPath(lesson.media.posterSrc)} onEnded={() => setWatchComplete(true)} onError={() => setMediaError(true)}>
-          <source src={assetPath(lesson.media.videoSrc)} type="video/mp4" />
-        </video> : <div className="media-fallback media-failed portrait-fallback" role="alert"><div className="frame-corners" /><span className="fallback-play"><CircleAlert size={23} /></span><p>{lesson.media.fallbackMessage}</p><small>Lesson media unavailable</small></div>}
-        <div className="draft-media-meta"><span>{formatDuration(lesson.media.durationSeconds)} · short portrait video</span><span>{cards.length} phrase cards</span></div>
-        {!mediaError && <div className="inline-actions">{watchComplete ? <button className="primary-button" onClick={() => setStage("cards")}>Open cue cards <ArrowRight size={17} /></button> : <span className="watch-note"><Play size={17} />Cue cards open when the clip ends.</span>}</div>}
-        {mediaError && <div className="inline-actions"><button className="secondary-button" onClick={() => { setMediaError(false); setRetryKey((value) => value + 1); }}>Retry local video <RefreshCw size={17} /></button><button className="primary-button" onClick={() => setStage("cards")}>Review cue cards without video <ArrowRight size={17} /></button></div>}
-        {lesson.source && <a className="source-note draft-source-note" href={lesson.source.url} target="_blank" rel="noreferrer">Source <ExternalLink size={12} /></a>}
-      </div>
-    </section> : card ? <section className="single-card-stage draft-card-stage"><div className="section-lead"><p className="eyebrow">Phrase card {cardIndex + 1} of {cards.length}</p><h2>Recall the phrase from the clip</h2><p>Use the on-screen language as a prompt, then return to the clip whenever you want more context.</p></div>
-      <article className="cue-card tactile-card focused-card"><span className="draft-label">from this lesson</span><PhraseAudioButton card={card} compact />{settings.showThaiScript && <p className="thai cue-thai" lang="th">{withPreferredParticle(card.thai, settings.politeParticle)}</p>}{settings.showRomanization && <p className="romanization">{withPreferredParticle(card.romanization, settings.politeParticle)}</p>}<h3>{card.naturalMeaning}</h3></article>
-      <footer className="study-footer"><button className="secondary-button" onClick={() => setStage("video")}>Watch again</button><span>{cardIndex + 1} of {cards.length}</span><button className="primary-button" onClick={() => setCardIndex((value) => value === cards.length - 1 ? 0 : value + 1)}>{cardIndex === cards.length - 1 ? "Start cards again" : "Next cue card"}<ArrowRight size={18} /></button></footer>
-    </section> : <StudyEmpty title="No phrase cards yet" body="This lesson does not have on-screen phrase cards yet." />}
-  </div>;
-}
-
-function Replay({ lesson }: { lesson: VideoLesson }) {
-  const [stage, setStage] = useState<"video" | "cards">("video");
-  const [mediaError, setMediaError] = useState(lesson.media.availability !== "available");
-  const settings = useStudyStore((state) => state.settings);
-  const cards = cueCards.filter((card) => lesson.cueCardIds.includes(card.id));
-  return <div className="page study-page"><header className="study-header"><div><p className="eyebrow">Disposable replay · no progress recorded</p><h1>{lesson.title}</h1><p>Video and cue cards only. Review dates, attempts, mastery, and consistency will not change.</p></div><AppLink href="/library/" className="secondary-button">Return to Library</AppLink></header>
-    {stage === "video" ? <section>{mediaError ? <div className="media-fallback media-failed portrait-fallback replay-video" role="alert"><CircleAlert size={24} /><p>{lesson.media.fallbackMessage}</p><small>Replay media unavailable</small></div> : <video className="lesson-video portrait-video replay-video" controls playsInline preload="metadata" poster={assetPath(lesson.media.posterSrc)} onError={() => setMediaError(true)}><source src={assetPath(lesson.media.videoSrc)} type="video/mp4" /></video>}<div className="page-actions"><button className="primary-button" onClick={() => setStage("cards")}>Replay cue cards <ArrowRight size={17} /></button></div></section>
-      : <section><div className="cue-grid">{cards.map((card, index) => <article className="cue-card tactile-card" key={card.id}><span className="card-index">{String(index + 1).padStart(2, "0")}</span><PhraseAudioButton card={card} compact />{settings.showThaiScript && <p className="thai cue-thai">{withPreferredParticle(card.thai, settings.politeParticle)}</p>}{settings.showRomanization && <p className="romanization">{withPreferredParticle(card.romanization, settings.politeParticle)}</p>}<h3>{card.naturalMeaning}</h3><p>{card.usage}</p></article>)}</div></section>}
-  </div>;
+  const questionRef = useRef<HTMLFieldSetElement>(null);
+  useEffect(() => { questionRef.current?.focus(); }, []);
+  return <fieldset ref={questionRef} tabIndex={-1} className="quiz-card"><legend><span>Matching</span>{question.prompt}</legend><div className="matching-list">{pairs.map((pair) => <label key={pair.left}><span>{pair.left}</span><select value={answers[pair.left] ?? ""} onChange={(event) => setAnswers((value) => ({ ...value, [pair.left]: event.target.value }))}><option value="">Choose…</option>{right.map((choice) => <option key={choice}>{choice}</option>)}</select></label>)}</div><button className="primary-button" disabled={Object.keys(answers).length !== pairs.length} onClick={() => submit(pairs.map((pair) => ({ left: pair.left, right: answers[pair.left] })))}>Save answer <ArrowRight size={17} /></button></fieldset>;
 }
 
 function StudyEmpty({ title, body }: { title: string; body: string }) {
@@ -235,9 +176,4 @@ function StudyEmpty({ title, body }: { title: string; body: string }) {
 
 function interactionLabel(type: QuizQuestion["interactionType"]) {
   return ({ listening: "Listening", "situation-response": "Situation / response", "meaning-recognition": "Meaning recognition", "phrase-construction": "Phrase construction", matching: "Matching", "self-guided-speaking": "Speaking" })[type];
-}
-
-function formatDuration(seconds: number) {
-  const rounded = Math.round(seconds);
-  return `${Math.floor(rounded / 60)}:${String(rounded % 60).padStart(2, "0")}`;
 }

@@ -3,6 +3,7 @@
     {
       "id": "common-verbs",
       "order": 1,
+      "topicEmoji": "🏃",
       "title": "Essential verbs",
       "objective": "Draft plan — Recognize a small set of high-frequency action words.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
@@ -32,6 +33,7 @@
     {
       "id": "question-words",
       "order": 2,
+      "topicEmoji": "❓",
       "title": "What, where, when, why, how",
       "objective": "Draft plan — Notice the core words used to ask for information.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
@@ -61,6 +63,7 @@
     {
       "id": "connectors",
       "order": 3,
+      "topicEmoji": "🔗",
       "title": "Conversation connectors",
       "objective": "Draft plan — Recognize small words that connect ideas in speech.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
@@ -91,6 +94,7 @@
     {
       "id": "large-numbers",
       "order": 4,
+      "topicEmoji": "🔢",
       "title": "Powers of ten",
       "objective": "Draft plan — Notice the pattern behind increasingly large Thai numbers.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
@@ -116,6 +120,7 @@
     {
       "id": "time-units",
       "order": 5,
+      "topicEmoji": "⏱️",
       "title": "Minute through year",
       "objective": "Draft plan — Recognize words for minutes, hours, days, months, and years.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
@@ -145,6 +150,7 @@
     {
       "id": "times-of-day",
       "order": 6,
+      "topicEmoji": "🌅",
       "title": "Morning through night",
       "objective": "Draft plan — Distinguish common parts of the day in context.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
@@ -175,6 +181,7 @@
     {
       "id": "quantities",
       "order": 7,
+      "topicEmoji": "⚖️",
       "title": "None through all",
       "objective": "Draft plan — Compare expressions for none, some, half, most, and all.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
@@ -205,6 +212,7 @@
     {
       "id": "country-names",
       "order": 8,
+      "topicEmoji": "🌍",
       "title": "Countries in Thai",
       "objective": "Draft plan — Recognize a selection of country names in Thai.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
@@ -232,6 +240,7 @@
     {
       "id": "directions",
       "order": 9,
+      "topicEmoji": "🧭",
       "title": "Straight, turns, and U-turns",
       "objective": "Draft plan — Listen for practical movement and turning directions.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
@@ -260,6 +269,7 @@
     {
       "id": "weather",
       "order": 10,
+      "topicEmoji": "🌦️",
       "title": "Everyday weather",
       "objective": "Draft plan — Recognize several everyday ways to describe the weather.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
@@ -291,6 +301,7 @@
     {
       "id": "feeling-unwell",
       "order": 11,
+      "topicEmoji": "🤒",
       "title": "Saying you feel sick",
       "objective": "Draft plan — Recognize useful ways to say that you do not feel well.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
@@ -320,6 +331,7 @@
     {
       "id": "food-flavors",
       "order": 12,
+      "topicEmoji": "😋",
       "title": "Describing flavors",
       "objective": "Draft plan — Distinguish several basic ways to describe food.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
@@ -350,6 +362,7 @@
     {
       "id": "food-allergies",
       "order": 13,
+      "topicEmoji": "🤧",
       "title": "Communicating allergies",
       "objective": "Draft plan — Notice the frame used to name common food allergies.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
@@ -378,6 +391,7 @@
     {
       "id": "coffee-order",
       "order": 14,
+      "topicEmoji": "☕",
       "title": "Ordering coffee",
       "objective": "Draft plan — Follow a real café visit and identify the ordering pattern.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
@@ -404,6 +418,7 @@
     {
       "id": "what-are-you-doing",
       "order": 15,
+      "topicEmoji": "💬",
       "title": "An everyday check-in",
       "objective": "Draft plan — Listen for short questions used in everyday conversation.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
@@ -433,6 +448,7 @@
     {
       "id": "waking-up",
       "order": 16,
+      "topicEmoji": "⏰",
       "title": "Morning check-ins",
       "objective": "Draft plan — Follow a few short phrases used after waking up.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
@@ -462,6 +478,7 @@
     {
       "id": "movie-invitation",
       "order": 17,
+      "topicEmoji": "🎬",
       "title": "Making an invitation",
       "objective": "Draft plan — Notice invitation patterns for simple shared activities.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
@@ -490,6 +507,7 @@
     {
       "id": "parting-safely",
       "order": 18,
+      "topicEmoji": "👋",
       "title": "Natural goodbyes",
       "objective": "Draft plan — Compare several warm ways to leave and check in later.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
@@ -518,6 +536,7 @@
     {
       "id": "encouragement",
       "order": 19,
+      "topicEmoji": "💪",
       "title": "Keep going",
       "objective": "Draft plan — Listen for short phrases that encourage someone to continue.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
@@ -546,6 +565,7 @@
     {
       "id": "compliments",
       "order": 20,
+      "topicEmoji": "✨",
       "title": "Kind things to say",
       "objective": "Draft plan — Notice short, friendly compliments for everyday conversation.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
@@ -575,6 +595,7 @@
     {
       "id": "its-okay",
       "order": 21,
+      "topicEmoji": "🤝",
       "title": "Reassuring responses",
       "objective": "Draft plan — Compare reassuring responses used in different situations.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
@@ -604,6 +625,7 @@
     {
       "id": "making-up",
       "order": 22,
+      "topicEmoji": "🕊️",
       "title": "Apologies and reconciliation",
       "objective": "Draft plan — Notice apology and de-escalation phrases in an informal setting.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
@@ -633,6 +655,7 @@
     {
       "id": "affectionate-phrases",
       "order": 23,
+      "topicEmoji": "❤️",
       "title": "Affection and care",
       "objective": "Draft plan — Listen for a handful of warm phrases between close people.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",

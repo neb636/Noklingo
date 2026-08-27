@@ -47,6 +47,7 @@ console.log(`Created ${draftLessons.length} review packages. Fill each checklist
 function reviewChecklist(id: string, title: string, cardCount: number) {
   return `# ${title} review\n\n` +
     `- [ ] Confirm public redistribution rights for video and extracted audio.\n` +
+    `- [ ] Confirm the lesson topic emoji and every cue-card emoji match the intended meaning.\n` +
     `- [ ] Verify Thai, romanization, and natural meaning for all ${cardCount} cards.\n` +
     `- [ ] Add a practical usage note to every card.\n` +
     `- [ ] Fill exact phrase timestamps, then rename audio-clips.template.json to audio-clips.json.\n` +
