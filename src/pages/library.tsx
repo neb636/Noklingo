@@ -23,17 +23,20 @@ export default function LibraryPage() {
 
       <div className="lesson-library-track" aria-label="Lesson collection">
         {lessons.map((lesson) => <article key={lesson.id} className="compact-lesson-card">
-          <AppLink href={`/study/?preview=${encodeURIComponent(lesson.id)}`} className="compact-lesson-poster" aria-label={`Open lesson ${lesson.order}: ${lesson.title}`}>
-            <Image src={assetPath(lesson.media.posterSrc)} width={720} height={1280} sizes="(max-width: 767px) 76vw, (max-width: 1200px) 31vw, 250px" unoptimized alt="" />
-            <span className="compact-lesson-order">Lesson {lesson.order}</span>
-            <span className="compact-lesson-play"><Play size={18} fill="currentColor" /></span>
+          <AppLink href={`/study/?preview=${encodeURIComponent(lesson.id)}`} className="compact-lesson-link" aria-label={`Open lesson ${lesson.order}: ${lesson.title}`}>
+            <div className="compact-lesson-poster" aria-hidden="true">
+              <Image className="compact-lesson-backdrop" src={assetPath(lesson.media.posterSrc)} width={720} height={1280} sizes="(max-width: 767px) 112px, 168px" unoptimized alt="" />
+              <Image className="compact-lesson-portrait" src={assetPath(lesson.media.posterSrc)} width={720} height={1280} sizes="(max-width: 767px) 92px, 126px" unoptimized alt="" />
+              <span className="compact-lesson-play"><Play size={16} fill="currentColor" /></span>
+            </div>
+            <div className="compact-lesson-copy">
+              <span className="compact-lesson-order">Lesson {String(lesson.order).padStart(2, "0")}</span>
+              <div className="compact-lesson-title"><span className="lesson-topic-emoji" aria-hidden="true">{lesson.topicEmoji}</span><h3>{lesson.title}</h3></div>
+              <p>{lesson.objective.replace(/^Draft plan —\s*/, "")}</p>
+              <div className="compact-lesson-meta"><span><Clock3 size={14} /> {formatDuration(lesson.media.durationSeconds)}</span><span><Layers3 size={14} /> {cardCount(lesson.id)} cards</span></div>
+              <span className="compact-lesson-action">Start lesson <ArrowRight size={17} /></span>
+            </div>
           </AppLink>
-          <div className="compact-lesson-copy">
-            <span className="lesson-topic-emoji" aria-hidden="true">{lesson.topicEmoji}</span>
-            <div><h3>{lesson.title}</h3><p>{lesson.objective.replace(/^Draft plan —\s*/, "")}</p></div>
-            <div className="compact-lesson-meta"><span><Clock3 size={14} /> {formatDuration(lesson.media.durationSeconds)}</span><span><Layers3 size={14} /> {cardCount(lesson.id)} cards</span></div>
-            <AppLink href={`/study/?preview=${encodeURIComponent(lesson.id)}`} className="compact-lesson-link">Open lesson <ArrowRight size={16} /></AppLink>
-          </div>
         </article>)}
       </div>
 

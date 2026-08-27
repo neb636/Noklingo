@@ -41,7 +41,8 @@ describe("lesson collection UI", () => {
     Object.defineProperty(HTMLElement.prototype, "requestFullscreen", { configurable: true, value: requestFullscreen });
     query = { preview: "common-verbs" };
     const { container } = render(<StudyPage />);
-    fireEvent.click(screen.getByRole("button", { name: /play video/i }));
+    expect(screen.getByRole("heading", { name: /essential verbs/i })).not.toHaveFocus();
+    fireEvent.click(screen.getByRole("button", { name: "Play Essential verbs video" }));
     expect(requestFullscreen).toHaveBeenCalledOnce();
     expect(requestFullscreen.mock.instances[0]).toBe(container.querySelector(".lesson-flow"));
     expect(container.querySelector("video")).not.toBeNull();

@@ -67,6 +67,9 @@ export function PracticeQuiz({
           <p className="quiz-instruction">Choose the correct translation</p>
           {settings.showThaiScript && <h1 className="quiz-prompt thai" lang="th">{withPreferredParticle(promptCard.thai, settings.politeParticle)}</h1>}
           {settings.showRomanization && <p className="quiz-prompt-romanization">{withPreferredParticle(promptCard.romanization, settings.politeParticle)}</p>}
+          <div className="quiz-audio-replay">
+            <PhraseAudioButton key={question.id} card={promptCard} autoPlayDelayMs={1000} autoPlayKey={question.id} displayLabel="Hear again" />
+          </div>
         </div>
 
         <div className="quiz-choice-grid" role="group" aria-label="Answer choices">

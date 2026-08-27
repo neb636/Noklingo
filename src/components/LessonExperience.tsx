@@ -52,20 +52,19 @@ function LessonOverview({
   onPlay: () => void;
   onSkip: () => void;
 }) {
-  const headingRef = useRef<HTMLHeadingElement>(null);
-  useEffect(() => { headingRef.current?.focus(); }, []);
   return <section className="lesson-overview-screen">
     <StudyTopBar title={`Lesson ${lesson.order}`} onBack={onBack} />
     <div className="lesson-overview-copy">
       <p className="lesson-kicker">Watch · notice · practice</p>
-      <h1 ref={headingRef} tabIndex={-1}>{lesson.topicEmoji} {lesson.title}</h1>
+      <h1>{lesson.topicEmoji} {lesson.title}</h1>
       <p>{lesson.objective.replace(/^Draft plan —\s*/, "")}</p>
     </div>
-    <div className="lesson-overview-poster">
-      <Image src={assetPath(lesson.media.posterSrc)} width={720} height={1280} priority unoptimized alt="" />
+    <button type="button" className="lesson-overview-poster" onClick={onPlay} aria-label={`Play ${lesson.title} video`}>
+      <Image src={assetPath(lesson.media.posterSrc)} width={720} height={1280} sizes="(max-width: 600px) 46vw, 230px" priority unoptimized alt="" />
       <span className="lesson-poster-emoji" aria-hidden="true">{lesson.topicEmoji}</span>
+      <span className="lesson-poster-play" aria-hidden="true"><Play size={19} fill="currentColor" /></span>
       <span className="lesson-poster-duration"><Clock3 size={14} /> {formatDuration(lesson.media.durationSeconds)}</span>
-    </div>
+    </button>
     <div className="lesson-overview-meta"><span>{cardCount} cue card{cardCount === 1 ? "" : "s"}</span><span>Practice quiz included</span></div>
     <div className="lesson-overview-actions">
       <button type="button" className="black-button" onClick={onPlay}><Play size={18} fill="currentColor" /> Play video</button>
