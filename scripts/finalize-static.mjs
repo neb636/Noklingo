@@ -11,7 +11,7 @@ import {
 import { extname, join, relative, sep } from "node:path";
 
 const output = join(process.cwd(), "dist", "client");
-const routes = ["today", "study", "results", "library", "settings"];
+const routes = ["welcome", "today", "study", "results", "library", "settings"];
 const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH ?? "");
 const baseSegments = basePath ? basePath.slice(1).split("/") : [];
 const viewportTag = '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" data-next-head="" />';
@@ -181,15 +181,15 @@ async function buildRevision(paths, swTemplate) {
 }
 
 function injectServiceWorkerManifest(template, revision, paths) {
-  const revisionToken = "__THAI_STUDY_BUILD_REVISION__";
-  const precacheToken = "/* __THAI_STUDY_PRECACHE_PATHS__ */ []";
+  const revisionToken = "__NOKLINGO_BUILD_REVISION__";
+  const precacheToken = "/* __NOKLINGO_PRECACHE_PATHS__ */ []";
   if (countOccurrences(template, revisionToken) !== 1 || countOccurrences(template, precacheToken) !== 1) {
     throw new Error("Service-worker build tokens are missing or duplicated.");
   }
   const generated = template
     .replace(revisionToken, revision)
     .replace(precacheToken, JSON.stringify(paths, null, 2));
-  if (generated.includes(revisionToken) || generated.includes("__THAI_STUDY_PRECACHE_PATHS__")) {
+  if (generated.includes(revisionToken) || generated.includes("__NOKLINGO_PRECACHE_PATHS__")) {
     throw new Error("Service-worker build tokens were not fully replaced.");
   }
   return generated;

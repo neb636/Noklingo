@@ -16,7 +16,10 @@ fills the missing editorial fields and explicitly verifies it.
 
 Cue cards copy the visible on-screen Thai, romanization, and English. Keep the
 original display wording, do not infer unseen text, and mark every draft card
-with `"verificationStatus": "draft"`.
+with `"verificationStatus": "draft"`. Every lesson also requires a nonblank
+`"topicEmoji"`, and every cue card requires a nonblank `"emoji"`. Choose a
+clear pictorial summary of the topic or phrase and preserve these values when a
+draft is copied into a review package.
 
 ## Publishing a lesson
 
@@ -25,6 +28,7 @@ qualified review. A verified package needs:
 
 - an authorized source record;
 - a confirmed local MP4 and poster;
+- reviewed topic and cue-card emoji metadata;
 - 1–10 verified cue cards with usage text and bundled phrase audio;
 - at least two valid, verified scored variants per card and at least four
   questions per lesson, including the required interaction types.

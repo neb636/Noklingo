@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, ExternalLink, Play } from "lucide-react";
+import { ArrowRight, Clock3, Layers3, Play } from "lucide-react";
 import Image from "next/image";
 import { AppLink } from "@/components/AppLink";
 import { PageHeader } from "@/components/PageHeader";
@@ -8,46 +8,37 @@ import { cueCards, lessons } from "@/domain/seed";
 import { assetPath } from "@/lib/asset-path";
 
 export default function LibraryPage() {
-  const firstLesson = lessons[0];
-  const remainingLessons = lessons.slice(1);
-
-  return <div className="page">
+  return <div className="page library-page">
     <PageHeader
       eyebrow="Lesson library"
-      title="Useful Thai, one short lesson at a time."
-      intro="Watch a real exchange, notice the language that matters, and return whenever you want a phrase to feel familiar."
-      side={<span className="count-label">{lessons.length} short lessons</span>}
+      title="Thai you can use today."
+      intro="Short real-world videos, friendly cue cards, and a quick practice round—at your own pace."
+      side={<span className="count-label">{lessons.length} lessons</span>}
     />
 
-    {firstLesson && <section className="collection-start tactile-card" aria-labelledby="start-heading">
-      <AppLink href={`/study/?preview=${encodeURIComponent(firstLesson.id)}`} className="collection-start-poster" aria-label={`Watch lesson 1: ${firstLesson.title}`}>
-        <Image src={assetPath(firstLesson.media.posterSrc)} width={480} height={853} priority unoptimized alt="" />
-        <span className="collection-play"><Play size={18} fill="currentColor" aria-hidden="true" /></span>
-      </AppLink>
-      <div className="collection-start-copy">
-        <p className="eyebrow">Start here · lesson {String(firstLesson.order).padStart(2, "0")}</p>
-        <h2 id="start-heading">{firstLesson.title}</h2>
-        <p>{firstLesson.description}</p>
-        <div className="collection-meta"><span>{formatDuration(firstLesson.media.durationSeconds)} to watch</span><span>{cardCount(firstLesson.id)} phrase cards</span></div>
-        <AppLink href={`/study/?preview=${encodeURIComponent(firstLesson.id)}`} className="primary-button">Watch lesson <ArrowRight size={17} /></AppLink>
+    <section className="lesson-library-section" aria-labelledby="lesson-library-heading">
+      <div className="lesson-library-heading">
+        <div><p className="eyebrow">Choose your next topic</p><h2 id="lesson-library-heading">Explore the collection</h2></div>
       </div>
-    </section>}
 
-    <section className="library-section lesson-collection" aria-labelledby="collection-heading">
-      <div className="section-heading"><div><p className="eyebrow">Your collection</p><h2 id="collection-heading">Keep exploring</h2><p>From everyday building blocks to moments you can use in conversation.</p></div><span>{remainingLessons.length} more lessons</span></div>
-      <div className="lesson-collection-grid">{remainingLessons.map((lesson) => <article className="lesson-collection-card tactile-card" key={lesson.id}>
-        <AppLink href={`/study/?preview=${encodeURIComponent(lesson.id)}`} className="lesson-poster" aria-label={`Watch lesson ${lesson.order}: ${lesson.title}`}>
-          <Image src={assetPath(lesson.media.posterSrc)} width={360} height={640} sizes="(max-width: 700px) 42vw, (max-width: 1100px) 24vw, 210px" unoptimized alt="" />
-          <span className="lesson-order">{String(lesson.order).padStart(2, "0")}</span>
-          <span className="lesson-duration">{formatDuration(lesson.media.durationSeconds)}</span>
-          <span className="lesson-play"><Play size={18} fill="currentColor" aria-hidden="true" /></span>
-        </AppLink>
-        <div className="lesson-card-copy"><div className="lesson-labels"><span>Watch &amp; notice</span><span>{cardCount(lesson.id)} phrases</span></div><h3>{lesson.title}</h3><p>{lesson.objective.replace(/^Draft plan —\s*/, "")}</p>
-          <div className="lesson-card-actions"><AppLink href={`/study/?preview=${encodeURIComponent(lesson.id)}`} className="text-link">Open lesson <ArrowRight size={14} /></AppLink>{lesson.source && <a className="source-note" href={lesson.source.url} target="_blank" rel="noreferrer" aria-label={`Open source attribution for ${lesson.title}`}>Source <ExternalLink size={12} /></a>}</div>
-        </div>
-      </article>)}</div>
+      <div className="lesson-library-track" aria-label="Lesson collection">
+        {lessons.map((lesson) => <article key={lesson.id} className="compact-lesson-card">
+          <AppLink href={`/study/?preview=${encodeURIComponent(lesson.id)}`} className="compact-lesson-poster" aria-label={`Open lesson ${lesson.order}: ${lesson.title}`}>
+            <Image src={assetPath(lesson.media.posterSrc)} width={720} height={1280} sizes="(max-width: 767px) 76vw, (max-width: 1200px) 31vw, 250px" unoptimized alt="" />
+            <span className="compact-lesson-order">Lesson {lesson.order}</span>
+            <span className="compact-lesson-play"><Play size={18} fill="currentColor" /></span>
+          </AppLink>
+          <div className="compact-lesson-copy">
+            <span className="lesson-topic-emoji" aria-hidden="true">{lesson.topicEmoji}</span>
+            <div><h3>{lesson.title}</h3><p>{lesson.objective.replace(/^Draft plan —\s*/, "")}</p></div>
+            <div className="compact-lesson-meta"><span><Clock3 size={14} /> {formatDuration(lesson.media.durationSeconds)}</span><span><Layers3 size={14} /> {cardCount(lesson.id)} cards</span></div>
+            <AppLink href={`/study/?preview=${encodeURIComponent(lesson.id)}`} className="compact-lesson-link">Open lesson <ArrowRight size={16} /></AppLink>
+          </div>
+        </article>)}
+      </div>
+
     </section>
-    <p className="library-footnote">Lessons are short, self-paced explorations. Watching and phrase cards never change your learning record.</p>
+    <p className="library-footnote">Library visits and practice quizzes do not change your mastery record.</p>
   </div>;
 }
 

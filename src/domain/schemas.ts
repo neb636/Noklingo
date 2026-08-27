@@ -42,6 +42,7 @@ export const QuizQuestionSchema = z.object({
 export const VideoLessonSchema = z.object({
   id: z.string().min(1),
   order: z.number().int().positive(),
+  topicEmoji: z.string().trim().min(1),
   title: z.string().min(1),
   objective: z.string().min(1),
   description: z.string().min(1),
@@ -59,6 +60,7 @@ export const VideoLessonSchema = z.object({
 export const KnowledgeItemSchema = z.object({
   id: z.string().min(1),
   lessonId: z.string().min(1),
+  emoji: z.string().trim().min(1),
   thai: z.string().min(1),
   romanization: z.string().min(1),
   naturalMeaning: z.string().min(1),
