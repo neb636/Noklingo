@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useEffectEvent, useRef, useState } from "react";
 import { LoaderCircle, RotateCcw, Volume2, VolumeX } from "lucide-react";
 import { Howl } from "howler";
 import type { CueCard } from "@/domain/schemas";
@@ -15,10 +15,16 @@ export function LocalAudioButton({
   src,
   label,
   compact = false,
+  autoPlayDelayMs,
+  autoPlayKey,
+  displayLabel,
 }: {
   src?: string;
   label: string;
   compact?: boolean;
+  autoPlayDelayMs?: number;
+  autoPlayKey?: string;
+  displayLabel?: string;
 }) {
   const [audioState, setAudioState] = useState<AudioState>("idle");
   const soundRef = useRef<Howl | null>(null);
@@ -56,6 +62,14 @@ export function LocalAudioButton({
     sound.play();
   }
 
+  const playAfterDelay = useEffectEvent(play);
+
+  useEffect(() => {
+    if (autoPlayDelayMs === undefined || !settings.audioEnabled || !src) return;
+    const timeout = window.setTimeout(() => playAfterDelay(), autoPlayDelayMs);
+    return () => window.clearTimeout(timeout);
+  }, [autoPlayDelayMs, autoPlayKey, settings.audioEnabled, src]);
+
   const unavailable = !src;
   const buttonLabel = !settings.audioEnabled
     ? `Turn sound on for ${label}`
@@ -84,18 +98,33 @@ export function LocalAudioButton({
       aria-live="polite"
     >
       <Icon className={audioState === "loading" ? "spin" : undefined} size={compact ? 18 : 17} aria-hidden="true" />
-      {!compact && <span>{buttonLabel}</span>}
+      {!compact && <span>{displayLabel ?? buttonLabel}</span>}
     </button>
   );
 }
 
-export function PhraseAudioButton({ card, compact = false }: { card: CueCard; compact?: boolean }) {
+export function PhraseAudioButton({
+  card,
+  compact = false,
+  autoPlayDelayMs,
+  autoPlayKey,
+  displayLabel,
+}: {
+  card: CueCard;
+  compact?: boolean;
+  autoPlayDelayMs?: number;
+  autoPlayKey?: string;
+  displayLabel?: string;
+}) {
   const particle = useStudyStore((state) => state.settings.politeParticle);
   return (
     <LocalAudioButton
       src={pronunciationAudioSrc(card)}
       label={withPreferredParticle(card.thai, particle)}
       compact={compact}
+      autoPlayDelayMs={autoPlayDelayMs}
+      autoPlayKey={autoPlayKey}
+      displayLabel={displayLabel}
     />
   );
 }
