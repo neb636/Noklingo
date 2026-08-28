@@ -3,319 +3,175 @@
   "sourceVideo": "/lessons/drafts/movie-invitation/intro.mp4",
   "sourceHash": "987613dd5f5722c3c404e70d7ee6854d799815c3689627c131d2cc8d512bb7ab",
   "model": "large-v3",
-  "generatedAt": "2026-08-25T22:30:25.516Z",
+  "generatedAt": "2026-08-27T23:44:32.182Z",
   "clips": [
     {
       "cueCardId": "draft-movie-invitation-1",
-      "thai": "ไปกินข้าวกันมั้ย",
-      "status": "ambiguous",
-      "candidates": [
-        {
-          "start": 4.4,
-          "end": 6.74,
-          "transcriptMatch": "ไปกินข้าวกันมั้ย",
-          "confidence": 0.982843718459973,
-          "exact": true,
-          "segmentIndex": 1
-        },
-        {
-          "start": 4.4,
-          "end": 6.5,
-          "transcriptMatch": "ไปกินข้าวกันมั้",
-          "confidence": 0.926455598399043,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 4.4,
-          "end": 8.94,
-          "transcriptMatch": "ไปกินข้าวกันมั้ย ไป",
-          "confidence": 0.9246802754925579,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 4.68,
-          "end": 6.74,
-          "transcriptMatch": "กินข้าวกันมั้ย",
-          "confidence": 0.8764184256643057,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 4.4,
-          "end": 9.62,
-          "transcriptMatch": "ไปกินข้าวกันมั้ย ไปด",
-          "confidence": 0.8389631072502386,
-          "exact": false,
-          "segmentIndex": 1
-        }
-      ],
-      "diagnostic": "The top candidate is too close to another occurrence."
+      "thaiText": "ไปกินข้าวกันมั้ย",
+      "englishText": "Wanna grab a meal together?",
+      "thai": {
+        "audio": "/lessons/drafts/movie-invitation/audio/draft-movie-invitation-1-th.m4a",
+        "status": "matched",
+        "start": 4.25,
+        "end": 6.54,
+        "transcriptMatch": "ไปกินข้าวกันมั้ย",
+        "confidence": 0.982843718459973,
+        "candidates": [
+          {
+            "start": 4.4,
+            "end": 6.54,
+            "transcriptMatch": "ไปกินข้าวกันมั้ย",
+            "confidence": 0.982843718459973,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/movie-invitation/audio/draft-movie-invitation-1-en.m4a",
+        "status": "matched",
+        "start": 6.54,
+        "end": 8.81,
+        "transcriptMatch": " Wanna grab a meal together?",
+        "confidence": 0.9753947479128837,
+        "candidates": [
+          {
+            "start": 6.54,
+            "end": 8.56,
+            "transcriptMatch": " Wanna grab a meal together?",
+            "confidence": 0.9753947479128837,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-movie-invitation-2",
-      "thai": "ไปดูหนังกันมั้ย",
-      "status": "ambiguous",
-      "candidates": [
-        {
-          "start": 6.74,
-          "end": 11.14,
-          "transcriptMatch": " ไปดูหนังกันมั้ย",
-          "confidence": 0.9896273881196975,
-          "exact": true,
-          "segmentIndex": 1
-        },
-        {
-          "start": 6.5,
-          "end": 11.14,
-          "transcriptMatch": "ย ไปดูหนังกันมั้ย",
-          "confidence": 0.9353869089713462,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 6.74,
-          "end": 13.4,
-          "transcriptMatch": " ไปดูหนังกันมั้ย ไป",
-          "confidence": 0.9352455458274254,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 6.74,
-          "end": 10.88,
-          "transcriptMatch": " ไปดูหนังกันมั้",
-          "confidence": 0.9300194564443647,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 6.5,
-          "end": 13.4,
-          "transcriptMatch": "ย ไปดูหนังกันมั้ย ไป",
-          "confidence": 0.8873772493029843,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 6.18,
-          "end": 11.14,
-          "transcriptMatch": "ั้ย ไปดูหนังกันมั้ย",
-          "confidence": 0.8871508386756192,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 8.94,
-          "end": 11.14,
-          "transcriptMatch": "ดูหนังกันมั้ย",
-          "confidence": 0.8810545992273273,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 6.5,
-          "end": 10.88,
-          "transcriptMatch": "ย ไปดูหนังกันมั้",
-          "confidence": 0.872254042784373,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 6.18,
-          "end": 13.4,
-          "transcriptMatch": "ั้ย ไปดูหนังกันมั้ย ไป",
-          "confidence": 0.8444791296323141,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 6.74,
-          "end": 13.64,
-          "transcriptMatch": " ไปดูหนังกันมั้ย ไปด",
-          "confidence": 0.8442567957582928,
-          "exact": false,
-          "segmentIndex": 1
-        }
-      ],
-      "diagnostic": "The top candidate is too close to another occurrence."
+      "thaiText": "ไปดูหนังกันมั้ย",
+      "englishText": "Wanna go watch a movie?",
+      "thai": {
+        "audio": "/lessons/drafts/movie-invitation/audio/draft-movie-invitation-2-th.m4a",
+        "status": "matched",
+        "start": 9.07,
+        "end": 10.88,
+        "transcriptMatch": " ไปดูหนังกันมั้ย",
+        "confidence": 0.998868800997734,
+        "candidates": [
+          {
+            "start": 9.22,
+            "end": 10.88,
+            "transcriptMatch": " ไปดูหนังกันมั้ย",
+            "confidence": 0.998868800997734,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/movie-invitation/audio/draft-movie-invitation-2-en.m4a",
+        "status": "matched",
+        "start": 10.88,
+        "end": 13.05,
+        "transcriptMatch": " Wanna go watch a movie?",
+        "confidence": 0.9808992350101471,
+        "candidates": [
+          {
+            "start": 10.88,
+            "end": 12.8,
+            "transcriptMatch": " Wanna go watch a movie?",
+            "confidence": 0.9808992350101471,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-movie-invitation-3",
-      "thai": "ไปดื่มกาแฟกันมั้ย",
-      "status": "ambiguous",
-      "candidates": [
-        {
-          "start": 11.14,
-          "end": 15.48,
-          "transcriptMatch": " ไปดื่มกาแฟกันมั้ย",
-          "confidence": 0.9992604429381234,
-          "exact": true,
-          "segmentIndex": 1
-        },
-        {
-          "start": 10.88,
-          "end": 15.48,
-          "transcriptMatch": "ย ไปดื่มกาแฟกันมั้ย",
-          "confidence": 0.9504196114010282,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 11.14,
-          "end": 16.08,
-          "transcriptMatch": " ไปดื่มกาแฟกันมั้ย อย",
-          "confidence": 0.9499714416927761,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 11.14,
-          "end": 15.26,
-          "transcriptMatch": " ไปดื่มกาแฟกันมั้",
-          "confidence": 0.947439535796912,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 10.56,
-          "end": 15.48,
-          "transcriptMatch": "ั้ย ไปดื่มกาแฟกันมั้ย",
-          "confidence": 0.9067099847840636,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 10.88,
-          "end": 16.08,
-          "transcriptMatch": "ย ไปดื่มกาแฟกันมั้ย อย",
-          "confidence": 0.9062988124238818,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 13.4,
-          "end": 15.48,
-          "transcriptMatch": "ดื่มกาแฟกันมั้ย",
-          "confidence": 0.8958538776824917,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 10.88,
-          "end": 15.26,
-          "transcriptMatch": "ย ไปดื่มกาแฟกันมั้",
-          "confidence": 0.8957303343099706,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 10.56,
-          "end": 16.08,
-          "transcriptMatch": "ั้ย ไปดื่มกาแฟกันมั้ย อย",
-          "confidence": 0.8669837516055388,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 11.14,
-          "end": 16.18,
-          "transcriptMatch": " ไปดื่มกาแฟกันมั้ย อยาก",
-          "confidence": 0.8669268982410431,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 10.56,
-          "end": 15.26,
-          "transcriptMatch": "ั้ย ไปดื่มกาแฟกันมั้",
-          "confidence": 0.8526315973599752,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 13.64,
-          "end": 15.48,
-          "transcriptMatch": "ื่มกาแฟกันมั้ย",
-          "confidence": 0.8440597477379967,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 13.4,
-          "end": 15.26,
-          "transcriptMatch": "ดื่มกาแฟกันมั้",
-          "confidence": 0.8440385243121316,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 11.14,
-          "end": 14.92,
-          "transcriptMatch": " ไปดื่มกาแฟกันม",
-          "confidence": 0.8438517340842415,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 13.4,
-          "end": 16.08,
-          "transcriptMatch": "ดื่มกาแฟกันมั้ย อย",
-          "confidence": 0.8436517052389995,
-          "exact": false,
-          "segmentIndex": 1
-        }
-      ],
-      "diagnostic": "The top candidate is too close to another occurrence."
+      "thaiText": "ไปดื่มกาแฟกันมั้ย",
+      "englishText": "Wanna grab a coffee?",
+      "thai": {
+        "audio": "/lessons/drafts/movie-invitation/audio/draft-movie-invitation-3-th.m4a",
+        "status": "matched",
+        "start": 13.19,
+        "end": 15.42,
+        "transcriptMatch": " ไปดื่มกาแฟกันมั้ย",
+        "confidence": 0.9992920792102814,
+        "candidates": [
+          {
+            "start": 13.34,
+            "end": 15.42,
+            "transcriptMatch": " ไปดื่มกาแฟกันมั้ย",
+            "confidence": 0.9992920792102814,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/movie-invitation/audio/draft-movie-invitation-3-en.m4a",
+        "status": "matched",
+        "start": 15.42,
+        "end": 17.35,
+        "transcriptMatch": " Wanna grab a coffee?",
+        "confidence": 0.9861792117357254,
+        "candidates": [
+          {
+            "start": 15.42,
+            "end": 17.1,
+            "transcriptMatch": " Wanna grab a coffee?",
+            "confidence": 0.9861792117357254,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-movie-invitation-4",
-      "thai": "อยากไปเดทกับผมมั้ย",
-      "status": "ambiguous",
-      "candidates": [
-        {
-          "start": 15.48,
-          "end": 19.4,
-          "transcriptMatch": " อยากไปเดทกับผมมั้ย",
-          "confidence": 0.993638447523117,
-          "exact": true,
-          "segmentIndex": 1
-        },
-        {
-          "start": 15.26,
-          "end": 19.4,
-          "transcriptMatch": "ย อยากไปเดทกับผมมั้ย",
-          "confidence": 0.947811320494061,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 14.92,
-          "end": 19.4,
-          "transcriptMatch": "ั้ย อยากไปเดทกับผมมั้ย",
-          "confidence": 0.9065398107596807,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 16.08,
-          "end": 19.4,
-          "transcriptMatch": "ากไปเดทกับผมมั้ย",
-          "confidence": 0.8958951870118728,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 15.48,
-          "end": 19.06,
-          "transcriptMatch": " อยากไปเดทกับผมม",
-          "confidence": 0.8457095275719961,
-          "exact": false,
-          "segmentIndex": 1
-        }
-      ],
-      "diagnostic": "The top candidate is too close to another occurrence."
+      "thaiText": "อยากไปเดทกับผมมั้ย",
+      "englishText": "Wanna go on a date with me?",
+      "thai": {
+        "audio": "/lessons/drafts/movie-invitation/audio/draft-movie-invitation-4-th.m4a",
+        "status": "matched",
+        "start": 17.470000000000002,
+        "end": 19.38,
+        "transcriptMatch": " อยากไปเดทกับผมมั้ย",
+        "confidence": 0.9951598876714707,
+        "candidates": [
+          {
+            "start": 17.62,
+            "end": 19.38,
+            "transcriptMatch": " อยากไปเดทกับผมมั้ย",
+            "confidence": 0.9951598876714707,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/movie-invitation/audio/draft-movie-invitation-4-en.m4a",
+        "status": "matched",
+        "start": 19.38,
+        "end": 21.81,
+        "transcriptMatch": " Wanna go on a date with me?",
+        "confidence": 0.9879663157463073,
+        "candidates": [
+          {
+            "start": 19.38,
+            "end": 21.56,
+            "transcriptMatch": " Wanna go on a date with me?",
+            "confidence": 0.9879663157463073,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "pairStatus": "complete"
     }
   ]
 }

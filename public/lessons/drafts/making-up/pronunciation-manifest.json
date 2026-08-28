@@ -3,251 +3,127 @@
   "sourceVideo": "/lessons/drafts/making-up/intro.mp4",
   "sourceHash": "12aa3b11f037d675f0704a6f8feaa6937412049dc53c4510e52b90aa18a0388f",
   "model": "large-v3",
-  "generatedAt": "2026-08-25T22:33:49.031Z",
+  "generatedAt": "2026-08-27T23:44:34.178Z",
   "clips": [
     {
       "cueCardId": "draft-making-up-1",
-      "thai": "ขอโทษครับ",
-      "audio": "/lessons/drafts/making-up/audio/draft-making-up-1.m4a",
-      "status": "matched",
-      "start": 2.5100000000000002,
-      "end": 4.67,
-      "transcriptMatch": "ขอโทษครับ",
-      "confidence": 0.9945287308096886,
-      "candidates": [
-        {
-          "start": 2.66,
-          "end": 4.42,
-          "transcriptMatch": "ขอโทษครับ",
-          "confidence": 0.9945287308096886,
-          "exact": true,
-          "segmentIndex": 1
-        },
-        {
-          "start": 2.66,
-          "end": 5.2,
-          "transcriptMatch": "ขอโทษครับ ผม",
-          "confidence": 0.9058896616299947,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 2.92,
-          "end": 4.42,
-          "transcriptMatch": "อโทษครับ",
-          "confidence": 0.9013645529368566,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 2.66,
-          "end": 4.22,
-          "transcriptMatch": "ขอโทษครั",
-          "confidence": 0.8959752184625656,
-          "exact": false,
-          "segmentIndex": 1
-        }
-      ]
+      "thaiText": "ขอโทษครับ",
+      "englishText": "I’m sorry",
+      "thai": {
+        "audio": "/lessons/drafts/making-up/audio/draft-making-up-1-th.m4a",
+        "status": "overridden",
+        "start": 2.29,
+        "end": 4.3,
+        "transcriptMatch": "ขอโทษครับ",
+        "confidence": 1,
+        "candidates": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/making-up/audio/draft-making-up-1-en.m4a",
+        "status": "overridden",
+        "start": 4.3,
+        "end": 6.0425,
+        "transcriptMatch": "I’m sorry",
+        "confidence": 1,
+        "candidates": []
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-making-up-2",
-      "thai": "ผมผิดไปแล้ว",
-      "status": "ambiguous",
-      "candidates": [
-        {
-          "start": 4.42,
-          "end": 8.13,
-          "transcriptMatch": " ผมผิดไปแล้ว",
-          "confidence": 0.9968618762493133,
-          "exact": true,
-          "segmentIndex": 1
-        },
-        {
-          "start": 4.22,
-          "end": 8.13,
-          "transcriptMatch": "บ ผมผิดไปแล้ว",
-          "confidence": 0.9238726536432902,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 4.42,
-          "end": 8.57,
-          "transcriptMatch": " ผมผิดไปแล้ว ด",
-          "confidence": 0.9205577731132507,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 4.42,
-          "end": 7.77,
-          "transcriptMatch": " ผมผิดไปแล้",
-          "confidence": 0.916432877608708,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 4.1,
-          "end": 8.13,
-          "transcriptMatch": "ับ ผมผิดไปแล้ว",
-          "confidence": 0.8620975177654853,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 4.22,
-          "end": 8.57,
-          "transcriptMatch": "บ ผมผิดไปแล้ว ด",
-          "confidence": 0.8591132676968207,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 4.42,
-          "end": 9.67,
-          "transcriptMatch": " ผมผิดไปแล้ว ดี",
-          "confidence": 0.8590707371601691,
-          "exact": false,
-          "segmentIndex": 1
-        }
-      ],
-      "diagnostic": "The top candidate is too close to another occurrence."
+      "thaiText": "ผมผิดไปแล้ว",
+      "englishText": "I was wrong",
+      "thai": {
+        "audio": "/lessons/drafts/making-up/audio/draft-making-up-2-th.m4a",
+        "status": "overridden",
+        "start": 6.0425,
+        "end": 7.95,
+        "transcriptMatch": "ผมผิดไปแล้ว",
+        "confidence": 1,
+        "candidates": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/making-up/audio/draft-making-up-2-en.m4a",
+        "status": "overridden",
+        "start": 7.95,
+        "end": 9.055,
+        "transcriptMatch": "I was wrong",
+        "confidence": 1,
+        "candidates": []
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-making-up-3",
-      "thai": "ดีกันนะ",
-      "audio": "/lessons/drafts/making-up/audio/draft-making-up-3.m4a",
-      "status": "matched",
-      "start": 7.98,
-      "end": 10.56,
-      "transcriptMatch": " ดีกันนะ",
-      "confidence": 0.9904585039615631,
-      "candidates": [
-        {
-          "start": 8.13,
-          "end": 10.31,
-          "transcriptMatch": " ดีกันนะ",
-          "confidence": 0.9904585039615631,
-          "exact": true,
-          "segmentIndex": 1
-        },
-        {
-          "start": 7.77,
-          "end": 10.31,
-          "transcriptMatch": "ว ดีกันนะ",
-          "confidence": 0.8818022700718471,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 8.13,
-          "end": 11.03,
-          "transcriptMatch": " ดีกันนะ ใ",
-          "confidence": 0.8726464198316847,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 8.57,
-          "end": 10.31,
-          "transcriptMatch": "ีกันนะ",
-          "confidence": 0.8688109294346401,
-          "exact": false,
-          "segmentIndex": 1
-        }
-      ]
+      "thaiText": "ดีกันนะ",
+      "englishText": "Let’s make up",
+      "thai": {
+        "audio": "/lessons/drafts/making-up/audio/draft-making-up-3-th.m4a",
+        "status": "overridden",
+        "start": 9.055,
+        "end": 10.31,
+        "transcriptMatch": "ดีกันนะ",
+        "confidence": 1,
+        "candidates": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/making-up/audio/draft-making-up-3-en.m4a",
+        "status": "overridden",
+        "start": 10.31,
+        "end": 11.585,
+        "transcriptMatch": "Let’s make up",
+        "confidence": 1,
+        "candidates": []
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-making-up-4",
-      "thai": "ใจเย็นๆนะ",
-      "audio": "/lessons/drafts/making-up/audio/draft-making-up-4.m4a",
-      "status": "matched",
-      "start": 10.34,
-      "end": 13.16,
-      "transcriptMatch": " ใจเย็นๆนะ",
-      "confidence": 0.9833696138858795,
-      "candidates": [
-        {
-          "start": 10.49,
-          "end": 12.91,
-          "transcriptMatch": " ใจเย็นๆนะ",
-          "confidence": 0.9833696138858795,
-          "exact": true,
-          "segmentIndex": 1
-        },
-        {
-          "start": 10.11,
-          "end": 12.91,
-          "transcriptMatch": "นะ ใจเย็นๆนะ",
-          "confidence": 0.8969564592540265,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 11.03,
-          "end": 12.91,
-          "transcriptMatch": "จเย็นๆนะ",
-          "confidence": 0.893524452580346,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 10.49,
-          "end": 13.51,
-          "transcriptMatch": " ใจเย็นๆนะ โ",
-          "confidence": 0.889367551624775,
-          "exact": false,
-          "segmentIndex": 1
-        }
-      ]
+      "thaiText": "ใจเย็นๆนะ",
+      "englishText": "Calm down, okay?",
+      "thai": {
+        "audio": "/lessons/drafts/making-up/audio/draft-making-up-4-th.m4a",
+        "status": "overridden",
+        "start": 11.585,
+        "end": 12.91,
+        "transcriptMatch": "ใจเย็นๆนะ",
+        "confidence": 1,
+        "candidates": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/making-up/audio/draft-making-up-4-en.m4a",
+        "status": "overridden",
+        "start": 12.91,
+        "end": 13.84,
+        "transcriptMatch": "calm down",
+        "confidence": 1,
+        "candidates": []
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-making-up-5",
-      "thai": "โอ๋ๆไม่โกรธนะ",
-      "status": "ambiguous",
-      "candidates": [
-        {
-          "start": 12.99,
-          "end": 16.83,
-          "transcriptMatch": " โอ๋ๆไม่โกรธนะ",
-          "confidence": 0.969070764221251,
-          "exact": true,
-          "segmentIndex": 1
-        },
-        {
-          "start": 12.63,
-          "end": 16.83,
-          "transcriptMatch": "นะ โอ๋ๆไม่โกรธนะ",
-          "confidence": 0.9053823890417283,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 13.51,
-          "end": 16.83,
-          "transcriptMatch": "อ๋ๆไม่โกรธนะ",
-          "confidence": 0.9047502213713642,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 15.19,
-          "end": 16.83,
-          "transcriptMatch": "๋ๆไม่โกรธนะ",
-          "confidence": 0.8341405463113616,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 12.99,
-          "end": 16.63,
-          "transcriptMatch": " โอ๋ๆไม่โกรธ",
-          "confidence": 0.8310063970269491,
-          "exact": false,
-          "segmentIndex": 1
-        }
-      ],
-      "diagnostic": "The top candidate is too close to another occurrence."
+      "thaiText": "โอ๋ๆไม่โกรธนะ",
+      "englishText": "Aw, don’t be mad",
+      "thai": {
+        "audio": "/lessons/drafts/making-up/audio/draft-making-up-5-th.m4a",
+        "status": "overridden",
+        "start": 14.25,
+        "end": 16.81,
+        "transcriptMatch": "โอ๋ๆไม่โกรธนะ",
+        "confidence": 1,
+        "candidates": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/making-up/audio/draft-making-up-5-en.m4a",
+        "status": "overridden",
+        "start": 16.81,
+        "end": 18.88,
+        "transcriptMatch": "don't be mad",
+        "confidence": 1,
+        "candidates": []
+      },
+      "pairStatus": "complete"
     }
   ]
 }

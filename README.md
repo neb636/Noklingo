@@ -33,22 +33,23 @@ The draft inventory lives in `src/content/draft-reels.json` and its cards in
 `src/content/lesson-packages.json`. A reviewed lesson with the same stable ID
 replaces its draft plan after it passes the publication gate.
 
-Draft cue cards can additionally use locally generated excerpts of the original
-instructor audio. This remains an authoring step: FFmpeg and a local Whisper
-model generate normal `.m4a` assets, while the shipped application only plays
-the result. See [curriculum authoring](docs/CURRICULUM_AUTHORING.md#generate-instructor-pronunciation-locally).
+Draft cue cards can additionally use separate Thai and English excerpts of the
+original instructor audio. This remains an authoring step: FFmpeg and a local
+multilingual Whisper model generate normal `.m4a` assets, while the shipped
+application plays Thai, waits 750 ms on learning cards, and then plays English.
+Quiz playback always uses only the Thai asset. See [curriculum authoring](docs/CURRICULUM_AUTHORING.md#generate-instructor-pronunciation-locally).
 
 ## Publication gate
 
 A release-ready `VideoLesson` must have all of the following:
 
 - an authorized same-origin local MP4 and poster with confirmed duration;
-- 1–10 verified cue cards with usage text and bundled local phrase audio;
+- 1–10 verified cue cards with usage text and bundled local Thai and English audio;
 - at least two valid scored question variants for every cue-card item and at
   least four valid scored questions overall;
 - scored coverage of listening, situation/response, meaning recognition, and
   phrase recall through phrase construction;
-- explicit bundled local audio for every listening question.
+- explicit bundled local Thai audio for every listening question.
 
 Validation also rejects missing assets, invalid or orphaned references,
 duplicate lesson/order/cue-card/question IDs, duplicate cue-card entries,

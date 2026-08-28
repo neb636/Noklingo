@@ -6,7 +6,7 @@ import type { CueCard, VideoLesson } from "@/domain/schemas";
 import { buildPracticeQuiz } from "@/engine/practice-quiz";
 import { withPreferredParticle } from "@/lib/language-display";
 import { useStudyStore } from "@/state/study-store";
-import { PhraseAudioButton } from "./PhraseAudioButton";
+import { ConceptAudioButton, ThaiAudioButton } from "./PhraseAudioButton";
 
 export function PracticeQuiz({
   lesson,
@@ -68,7 +68,7 @@ export function PracticeQuiz({
           {settings.showThaiScript && <h1 className="quiz-prompt thai" lang="th">{withPreferredParticle(promptCard.thai, settings.politeParticle)}</h1>}
           {settings.showRomanization && <p className="quiz-prompt-romanization">{withPreferredParticle(promptCard.romanization, settings.politeParticle)}</p>}
           <div className="quiz-audio-replay">
-            <PhraseAudioButton key={question.id} card={promptCard} autoPlayDelayMs={1000} autoPlayKey={question.id} displayLabel="Hear again" />
+            <ThaiAudioButton key={question.id} card={promptCard} autoPlayDelayMs={1000} autoPlayKey={question.id} displayLabel="Hear again" />
           </div>
         </div>
 
@@ -97,7 +97,7 @@ export function PracticeQuiz({
 
         {checked && <div className={`quiz-feedback-card ${selectedCorrectly ? "correct" : "incorrect"}`} role="status">
           <div><span>{selectedCorrectly ? "Correct — nice work" : "Incorrect — keep this one"}</span><strong>{promptCard.emoji} {promptCard.naturalMeaning}</strong></div>
-          <PhraseAudioButton card={promptCard} compact />
+          <ConceptAudioButton card={promptCard} compact />
         </div>}
         <p className="sr-only" aria-live="polite">{checked ? selectedCorrectly ? "Correct answer." : `Incorrect. The correct answer is ${promptCard.naturalMeaning}.` : `Question ${questionIndex + 1} of ${questions.length}.`}</p>
       </div>

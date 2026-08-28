@@ -3,130 +3,291 @@
   "sourceVideo": "/lessons/drafts/times-of-day/intro.mp4",
   "sourceHash": "6a30c26d9d7687bcfa08545612b6a09dce58a361b0636306d1d9d4cf219caebc",
   "model": "large-v3",
-  "generatedAt": "2026-08-25T22:23:45.573Z",
+  "generatedAt": "2026-08-27T23:44:28.569Z",
   "clips": [
     {
       "cueCardId": "draft-times-of-day-1",
-      "thai": "เช้า",
-      "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-1.m4a",
-      "status": "matched",
-      "start": 0.61,
-      "end": 2.45,
-      "transcriptMatch": " เช้า",
-      "confidence": 0.98084253013134,
-      "candidates": [
-        {
-          "start": 0.76,
-          "end": 2.2,
-          "transcriptMatch": " เช้า",
-          "confidence": 0.98084253013134,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "เช้า",
+      "englishText": "Morning",
+      "thai": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-1-th.m4a",
+        "status": "matched",
+        "start": 0.6,
+        "end": 2.1975000000000002,
+        "transcriptMatch": " เช้า",
+        "confidence": 0.9752939710021019,
+        "candidates": [
+          {
+            "start": 0.6,
+            "end": 2.24,
+            "transcriptMatch": " เช้า",
+            "confidence": 0.9752939710021019,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-1-en.m4a",
+        "status": "matched",
+        "start": 0,
+        "end": 0.6,
+        "transcriptMatch": "Morning",
+        "confidence": 0.9837063503265381,
+        "candidates": [
+          {
+            "start": 0,
+            "end": 0.6,
+            "transcriptMatch": "Morning",
+            "confidence": 0.9837063503265381,
+            "exact": true,
+            "segmentIndex": 0
+          },
+          {
+            "start": 2.78,
+            "end": 3.38,
+            "transcriptMatch": " morning",
+            "confidence": 0.9625224661827088,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-times-of-day-2",
-      "thai": "สาย",
-      "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-2.m4a",
-      "status": "matched",
-      "start": 2.0500000000000003,
-      "end": 4.71,
-      "transcriptMatch": " สาย",
-      "confidence": 0.9810025715827941,
-      "candidates": [
-        {
-          "start": 2.2,
-          "end": 4.46,
-          "transcriptMatch": " สาย",
-          "confidence": 0.9810025715827941,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "สาย",
+      "englishText": "Late morning",
+      "thai": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-2-th.m4a",
+        "status": "matched",
+        "start": 3.69,
+        "end": 4.797499999999999,
+        "transcriptMatch": " สาย",
+        "confidence": 0.9966738748550414,
+        "candidates": [
+          {
+            "start": 3.84,
+            "end": 4.6,
+            "transcriptMatch": " สาย",
+            "confidence": 0.9966738748550414,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-2-en.m4a",
+        "status": "matched",
+        "start": 2.1975000000000002,
+        "end": 3.61,
+        "transcriptMatch": " Late morning",
+        "confidence": 0.9547648310661316,
+        "candidates": [
+          {
+            "start": 2.24,
+            "end": 3.38,
+            "transcriptMatch": " Late morning",
+            "confidence": 0.9547648310661316,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-times-of-day-3",
-      "thai": "เที่ยง",
-      "status": "unmatched",
-      "candidates": [],
-      "diagnostic": "No candidate reached the confidence threshold."
+      "thaiText": "เที่ยง",
+      "englishText": "Noon",
+      "thai": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-3-th.m4a",
+        "status": "matched",
+        "start": 6.2,
+        "end": 7.359999999999999,
+        "transcriptMatch": " เที่ยง",
+        "confidence": 0.9977383407950401,
+        "candidates": [
+          {
+            "start": 6.2,
+            "end": 7.2,
+            "transcriptMatch": " เที่ยง",
+            "confidence": 0.9977383407950401,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-3-en.m4a",
+        "status": "matched",
+        "start": 4.797499999999999,
+        "end": 6.2,
+        "transcriptMatch": " Noon",
+        "confidence": 0.9835719704627991,
+        "candidates": [
+          {
+            "start": 11.18,
+            "end": 11.92,
+            "transcriptMatch": " afternoon",
+            "confidence": 0.9991937351226807,
+            "exact": true,
+            "segmentIndex": 0
+          },
+          {
+            "start": 8.12,
+            "end": 8.74,
+            "transcriptMatch": "noon",
+            "confidence": 0.9969743251800537,
+            "exact": true,
+            "segmentIndex": 0
+          },
+          {
+            "start": 4.6,
+            "end": 6.2,
+            "transcriptMatch": " Noon",
+            "confidence": 0.9835719704627991,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-times-of-day-4",
-      "thai": "บ่าย",
-      "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-4.m4a",
-      "status": "matched",
-      "start": 7.1899999999999995,
-      "end": 10.27,
-      "transcriptMatch": " บ่าย",
-      "confidence": 0.9760718727111817,
-      "candidates": [
-        {
-          "start": 7.34,
-          "end": 10.02,
-          "transcriptMatch": " บ่าย",
-          "confidence": 0.9760718727111817,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "บ่าย",
+      "englishText": "Afternoon",
+      "thai": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-4-th.m4a",
+        "status": "matched",
+        "start": 8.74,
+        "end": 10.07,
+        "transcriptMatch": " บ่าย",
+        "confidence": 0.993155562877655,
+        "candidates": [
+          {
+            "start": 8.74,
+            "end": 9.82,
+            "transcriptMatch": " บ่าย",
+            "confidence": 0.993155562877655,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-4-en.m4a",
+        "status": "matched",
+        "start": 7.359999999999999,
+        "end": 8.74,
+        "transcriptMatch": " Afternoon",
+        "confidence": 0.9953164231777192,
+        "candidates": [
+          {
+            "start": 11.18,
+            "end": 11.92,
+            "transcriptMatch": " afternoon",
+            "confidence": 0.9991937351226807,
+            "exact": true,
+            "segmentIndex": 0
+          },
+          {
+            "start": 7.2,
+            "end": 8.74,
+            "transcriptMatch": " Afternoon",
+            "confidence": 0.9953164231777192,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-times-of-day-5",
-      "thai": "เย็น",
-      "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-5.m4a",
-      "status": "matched",
-      "start": 9.87,
-      "end": 13.55,
-      "transcriptMatch": " เย็น",
-      "confidence": 0.9899545669555664,
-      "candidates": [
-        {
-          "start": 10.02,
-          "end": 13.3,
-          "transcriptMatch": " เย็น",
-          "confidence": 0.9899545669555664,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "เย็น",
+      "englishText": "Late afternoon",
+      "thai": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-5-th.m4a",
+        "status": "matched",
+        "start": 11.92,
+        "end": 13.205,
+        "transcriptMatch": " เย็น",
+        "confidence": 0.9972290086746216,
+        "candidates": [
+          {
+            "start": 11.92,
+            "end": 13.32,
+            "transcriptMatch": " เย็น",
+            "confidence": 0.9972290086746216,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-5-en.m4a",
+        "status": "matched",
+        "start": 10.100000000000001,
+        "end": 11.92,
+        "transcriptMatch": " Late afternoon",
+        "confidence": 0.9910422551631928,
+        "candidates": [
+          {
+            "start": 9.82,
+            "end": 11.92,
+            "transcriptMatch": " Late afternoon",
+            "confidence": 0.9910422551631928,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-times-of-day-6",
-      "thai": "กลางคืน",
-      "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-6.m4a",
-      "status": "matched",
-      "start": 13.15,
-      "end": 16.09,
-      "transcriptMatch": " กลางคืน",
-      "confidence": 0.9859671479463578,
-      "candidates": [
-        {
-          "start": 13.3,
-          "end": 15.84,
-          "transcriptMatch": " กลางคืน",
-          "confidence": 0.9859671479463578,
-          "exact": true,
-          "segmentIndex": 0
-        },
-        {
-          "start": 13.64,
-          "end": 15.84,
-          "transcriptMatch": "ลางคืน",
-          "confidence": 0.8740506440571376,
-          "exact": false,
-          "segmentIndex": 0
-        },
-        {
-          "start": 13.3,
-          "end": 15.56,
-          "transcriptMatch": " กลางคื",
-          "confidence": 0.8574613336494992,
-          "exact": false,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "กลางคืน",
+      "englishText": "Night",
+      "thai": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-6-th.m4a",
+        "status": "matched",
+        "start": 14.16,
+        "end": 16.130000000000003,
+        "transcriptMatch": " กลางคืน",
+        "confidence": 0.998897202014923,
+        "candidates": [
+          {
+            "start": 14.16,
+            "end": 15.88,
+            "transcriptMatch": " กลางคืน",
+            "confidence": 0.998897202014923,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-6-en.m4a",
+        "status": "matched",
+        "start": 13.205,
+        "end": 14.16,
+        "transcriptMatch": " Night",
+        "confidence": 0.9929964017868043,
+        "candidates": [
+          {
+            "start": 13.32,
+            "end": 14.16,
+            "transcriptMatch": " Night",
+            "confidence": 0.9929964017868043,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     }
   ]
 }

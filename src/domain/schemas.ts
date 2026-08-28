@@ -67,13 +67,23 @@ export const KnowledgeItemSchema = z.object({
   usage: z.string().min(1).optional(),
   literalNote: z.string().min(1).optional(),
   culturalNote: z.string().min(1).optional(),
-  phraseAudioSrc: LocalAssetPathSchema.optional(),
-  pronunciationOverride: z.object({
-    startSeconds: z.number().finite().nonnegative(),
-    endSeconds: z.number().finite().positive(),
-    matchText: z.string().min(1).optional(),
-  }).refine((value) => value.endSeconds > value.startSeconds, {
-    message: "Pronunciation override endSeconds must be after startSeconds.",
+  thaiAudioSrc: LocalAssetPathSchema.optional(),
+  englishAudioSrc: LocalAssetPathSchema.optional(),
+  pronunciationOverrides: z.object({
+    thai: z.object({
+      startSeconds: z.number().finite().nonnegative(),
+      endSeconds: z.number().finite().positive(),
+      matchText: z.string().min(1).optional(),
+    }).refine((value) => value.endSeconds > value.startSeconds, {
+      message: "Thai pronunciation override endSeconds must be after startSeconds.",
+    }).optional(),
+    english: z.object({
+      startSeconds: z.number().finite().nonnegative(),
+      endSeconds: z.number().finite().positive(),
+      matchText: z.string().min(1).optional(),
+    }).refine((value) => value.endSeconds > value.startSeconds, {
+      message: "English pronunciation override endSeconds must be after startSeconds.",
+    }).optional(),
   }).optional(),
   verificationStatus: VerificationStatusSchema,
 });

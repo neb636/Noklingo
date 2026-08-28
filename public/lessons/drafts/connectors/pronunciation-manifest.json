@@ -3,167 +3,250 @@
   "sourceVideo": "/lessons/drafts/connectors/intro.mp4",
   "sourceHash": "bfc7a8905266679b712968943e43755dfb33fa1a8c8ea3b2adca4710dc43fd1f",
   "model": "large-v3",
-  "generatedAt": "2026-08-25T22:19:56.852Z",
+  "generatedAt": "2026-08-27T23:44:27.915Z",
   "clips": [
     {
       "cueCardId": "draft-connectors-1",
-      "thai": "และก็",
-      "audio": "/lessons/drafts/connectors/audio/draft-connectors-1.m4a",
-      "status": "matched",
-      "start": 0,
-      "end": 1.71,
-      "transcriptMatch": "และก็",
-      "confidence": 0.9334783922880888,
-      "candidates": [
-        {
-          "start": 0,
-          "end": 1.46,
-          "transcriptMatch": "และก็",
-          "confidence": 0.9334783922880888,
-          "exact": true,
-          "segmentIndex": 0
-        },
-        {
-          "start": 0,
-          "end": 2.24,
-          "transcriptMatch": "และก็ ห",
-          "confidence": 0.7899291932781538,
-          "exact": false,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "และก็",
+      "englishText": "And",
+      "thai": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-1-th.m4a",
+        "status": "overridden",
+        "start": 0.41000000000000003,
+        "end": 1.3975,
+        "transcriptMatch": "แล้วก็",
+        "confidence": 1,
+        "candidates": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-1-en.m4a",
+        "status": "matched",
+        "start": 0,
+        "end": 0.41000000000000003,
+        "transcriptMatch": "And",
+        "confidence": 0.8935213544964791,
+        "candidates": [
+          {
+            "start": 0,
+            "end": 0.3,
+            "transcriptMatch": "And",
+            "confidence": 0.8935213544964791,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-connectors-2",
-      "thai": "หรือ",
-      "audio": "/lessons/drafts/connectors/audio/draft-connectors-2.m4a",
-      "status": "matched",
-      "start": 1.31,
-      "end": 3.47,
-      "transcriptMatch": " หรือ",
-      "confidence": 0.9866693639755248,
-      "candidates": [
-        {
-          "start": 1.46,
-          "end": 3.22,
-          "transcriptMatch": " หรือ",
-          "confidence": 0.9866693639755248,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "หรือ",
+      "englishText": "Or",
+      "thai": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-2-th.m4a",
+        "status": "matched",
+        "start": 2.27,
+        "end": 3.2475,
+        "transcriptMatch": " หรือ",
+        "confidence": 0.9996163707971573,
+        "candidates": [
+          {
+            "start": 2.42,
+            "end": 3.32,
+            "transcriptMatch": " หรือ",
+            "confidence": 0.9996163707971573,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-2-en.m4a",
+        "status": "matched",
+        "start": 1.3975,
+        "end": 2.24,
+        "transcriptMatch": " Or",
+        "confidence": 0.9005218368768692,
+        "candidates": [
+          {
+            "start": 1.42,
+            "end": 2.06,
+            "transcriptMatch": " Or",
+            "confidence": 0.9005218368768692,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-connectors-3",
-      "thai": "แต่",
-      "audio": "/lessons/drafts/connectors/audio/draft-connectors-3.m4a",
-      "status": "matched",
-      "start": 3.0700000000000003,
-      "end": 5.21,
-      "transcriptMatch": " แต่",
-      "confidence": 0.9947920799255371,
-      "candidates": [
-        {
-          "start": 3.22,
-          "end": 4.96,
-          "transcriptMatch": " แต่",
-          "confidence": 0.9947920799255371,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "แต่",
+      "englishText": "But",
+      "thai": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-3-th.m4a",
+        "status": "matched",
+        "start": 3.98,
+        "end": 4.895,
+        "transcriptMatch": " แต่",
+        "confidence": 0.999250944852829,
+        "candidates": [
+          {
+            "start": 4.12,
+            "end": 5.04,
+            "transcriptMatch": " แต่",
+            "confidence": 0.999250944852829,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-3-en.m4a",
+        "status": "matched",
+        "start": 3.2475,
+        "end": 3.98,
+        "transcriptMatch": " But",
+        "confidence": 0.9757637095451355,
+        "candidates": [
+          {
+            "start": 3.32,
+            "end": 3.84,
+            "transcriptMatch": " But",
+            "confidence": 0.9757637095451355,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-connectors-4",
-      "thai": "ก็เลย",
-      "audio": "/lessons/drafts/connectors/audio/draft-connectors-4.m4a",
-      "status": "matched",
-      "start": 4.81,
-      "end": 6.63,
-      "transcriptMatch": " ก็เลย",
-      "confidence": 0.9670993983745575,
-      "candidates": [
-        {
-          "start": 4.96,
-          "end": 6.38,
-          "transcriptMatch": " ก็เลย",
-          "confidence": 0.9670993983745575,
-          "exact": true,
-          "segmentIndex": 0
-        },
-        {
-          "start": 3.92,
-          "end": 6.38,
-          "transcriptMatch": "่ ก็เลย",
-          "confidence": 0.8277105348308882,
-          "exact": false,
-          "segmentIndex": 0
-        },
-        {
-          "start": 4.96,
-          "end": 6.82,
-          "transcriptMatch": " ก็เลย ก",
-          "confidence": 0.8123187052210172,
-          "exact": false,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "ก็เลย",
+      "englishText": "So",
+      "thai": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-4-th.m4a",
+        "status": "matched",
+        "start": 5.42,
+        "end": 6.42,
+        "transcriptMatch": " ก็เลย",
+        "confidence": 0.9970805931091309,
+        "candidates": [
+          {
+            "start": 5.42,
+            "end": 6.44,
+            "transcriptMatch": " ก็เลย",
+            "confidence": 0.9970805931091309,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-4-en.m4a",
+        "status": "matched",
+        "start": 4.895,
+        "end": 5.42,
+        "transcriptMatch": " So",
+        "confidence": 0.9510419750213623,
+        "candidates": [
+          {
+            "start": 5.04,
+            "end": 5.42,
+            "transcriptMatch": " So",
+            "confidence": 0.9510419750213623,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-connectors-5",
-      "thai": "กับ",
-      "audio": "/lessons/drafts/connectors/audio/draft-connectors-5.m4a",
-      "status": "matched",
-      "start": 6.2299999999999995,
-      "end": 8.57,
-      "transcriptMatch": " กับ",
-      "confidence": 0.9530362594127655,
-      "candidates": [
-        {
-          "start": 6.38,
-          "end": 8.32,
-          "transcriptMatch": " กับ",
-          "confidence": 0.9530362594127655,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "กับ",
+      "englishText": "With",
+      "thai": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-5-th.m4a",
+        "status": "matched",
+        "start": 7.28,
+        "end": 8.265,
+        "transcriptMatch": " กับ",
+        "confidence": 0.9888846850395203,
+        "candidates": [
+          {
+            "start": 7.28,
+            "end": 8.3,
+            "transcriptMatch": " กับ",
+            "confidence": 0.9888846850395203,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-5-en.m4a",
+        "status": "matched",
+        "start": 6.42,
+        "end": 7.28,
+        "transcriptMatch": " With",
+        "confidence": 0.9828450918197632,
+        "candidates": [
+          {
+            "start": 6.44,
+            "end": 7.28,
+            "transcriptMatch": " With",
+            "confidence": 0.9828450918197632,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-connectors-6",
-      "thai": "เพราะว่า",
-      "audio": "/lessons/drafts/connectors/audio/draft-connectors-6.m4a",
-      "status": "matched",
-      "start": 8.17,
-      "end": 10.73,
-      "transcriptMatch": " เพราะว่า",
-      "confidence": 0.9984591894490378,
-      "candidates": [
-        {
-          "start": 8.32,
-          "end": 10.48,
-          "transcriptMatch": " เพราะว่า",
-          "confidence": 0.9984591894490378,
-          "exact": true,
-          "segmentIndex": 0
-        },
-        {
-          "start": 8.1,
-          "end": 10.48,
-          "transcriptMatch": "บ เพราะว่า",
-          "confidence": 0.9008334141804112,
-          "exact": false,
-          "segmentIndex": 0
-        },
-        {
-          "start": 8.32,
-          "end": 10.28,
-          "transcriptMatch": " เพราะว่",
-          "confidence": 0.8882130271196366,
-          "exact": false,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "เพราะว่า",
+      "englishText": "Because",
+      "thai": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-6-th.m4a",
+        "status": "matched",
+        "start": 9.08,
+        "end": 10.73,
+        "transcriptMatch": " เพราะว่า",
+        "confidence": 0.996481329032353,
+        "candidates": [
+          {
+            "start": 9.08,
+            "end": 10.48,
+            "transcriptMatch": " เพราะว่า",
+            "confidence": 0.996481329032353,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-6-en.m4a",
+        "status": "matched",
+        "start": 8.265,
+        "end": 9.08,
+        "transcriptMatch": " Because",
+        "confidence": 0.9859579420089721,
+        "candidates": [
+          {
+            "start": 8.3,
+            "end": 9.08,
+            "transcriptMatch": " Because",
+            "confidence": 0.9859579420089721,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     }
   ]
 }

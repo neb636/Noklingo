@@ -9,10 +9,11 @@ The reviewed curriculum uses this layout:
 ```
 <lesson-id>/intro.mp4
 <lesson-id>/poster.jpg
-<lesson-id>/audio/<phrase-or-question>.m4a
+<lesson-id>/audio/<cue-card-id>-th.m4a
+<lesson-id>/audio/<cue-card-id>-en.m4a
 ```
 
 There are no caption or transcript assets in the lesson pipeline. A reviewed
 lesson must still have an authorized source, confirmed local media, verified cue
-cards with phrase audio, and a complete verified question bank before it can be
-published.
+cards with separate Thai and English audio, and a complete verified question
+bank whose listening questions reuse Thai audio before it can be published.

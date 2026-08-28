@@ -3,179 +3,217 @@
   "sourceVideo": "/lessons/drafts/compliments/intro.mp4",
   "sourceHash": "46b0935f16058c669f6196def7082c6cdf1c4b0f05e919517a2f302cd27d9a2d",
   "model": "large-v3",
-  "generatedAt": "2026-08-25T22:32:00.759Z",
+  "generatedAt": "2026-08-27T23:44:33.296Z",
   "clips": [
     {
       "cueCardId": "draft-compliments-1",
-      "thai": "ยิ้มสวยมาก",
-      "audio": "/lessons/drafts/compliments/audio/draft-compliments-1.m4a",
-      "status": "matched",
-      "start": 4.409999999999999,
-      "end": 6.67,
-      "transcriptMatch": "ยิ้มสวยมาก",
-      "confidence": 0.9922163054347038,
-      "candidates": [
-        {
-          "start": 4.56,
-          "end": 6.42,
-          "transcriptMatch": "ยิ้มสวยมาก",
-          "confidence": 0.9922163054347038,
-          "exact": true,
-          "segmentIndex": 2
-        },
-        {
-          "start": 5.08,
-          "end": 6.42,
-          "transcriptMatch": "ิ้มสวยมาก",
-          "confidence": 0.9103508041926793,
-          "exact": false,
-          "segmentIndex": 2
-        },
-        {
-          "start": 4.56,
-          "end": 5.9,
-          "transcriptMatch": "ยิ้มสวยมา",
-          "confidence": 0.9031195748192924,
-          "exact": false,
-          "segmentIndex": 2
-        }
-      ]
+      "thaiText": "ยิ้มสวยมาก",
+      "englishText": "Your smile is very beautiful",
+      "thai": {
+        "audio": "/lessons/drafts/compliments/audio/draft-compliments-1-th.m4a",
+        "status": "matched",
+        "start": 4.409999999999999,
+        "end": 6.42,
+        "transcriptMatch": "ยิ้มสวยมาก",
+        "confidence": 0.9905907656252384,
+        "candidates": [
+          {
+            "start": 4.56,
+            "end": 6.42,
+            "transcriptMatch": "ยิ้มสวยมาก",
+            "confidence": 0.9905907656252384,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/compliments/audio/draft-compliments-1-en.m4a",
+        "status": "matched",
+        "start": 6.42,
+        "end": 8.6225,
+        "transcriptMatch": " Your smile is very beautiful",
+        "confidence": 0.9700481517314911,
+        "candidates": [
+          {
+            "start": 6.42,
+            "end": 8.61,
+            "transcriptMatch": " Your smile is very beautiful",
+            "confidence": 0.9700481517314911,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-compliments-2",
-      "thai": "ใจดีจัง",
-      "audio": "/lessons/drafts/compliments/audio/draft-compliments-2.m4a",
-      "status": "matched",
-      "start": 8.48,
-      "end": 10.66,
-      "transcriptMatch": "ใจดีจัง",
-      "confidence": 0.9961599104745047,
-      "candidates": [
-        {
-          "start": 8.63,
-          "end": 10.41,
-          "transcriptMatch": "ใจดีจัง",
-          "confidence": 0.9961599104745047,
-          "exact": true,
-          "segmentIndex": 4
-        },
-        {
-          "start": 9.25,
-          "end": 10.41,
-          "transcriptMatch": "จดีจัง",
-          "confidence": 0.8741264709404537,
-          "exact": false,
-          "segmentIndex": 4
-        },
-        {
-          "start": 8.63,
-          "end": 10.19,
-          "transcriptMatch": "ใจดีจั",
-          "confidence": 0.8698184594086239,
-          "exact": false,
-          "segmentIndex": 4
-        }
-      ]
+      "thaiText": "ใจดีจัง",
+      "englishText": "You’re so kind",
+      "thai": {
+        "audio": "/lessons/drafts/compliments/audio/draft-compliments-2-th.m4a",
+        "status": "matched",
+        "start": 8.76,
+        "end": 10.45,
+        "transcriptMatch": " ใจดีจัง",
+        "confidence": 0.9996103388922555,
+        "candidates": [
+          {
+            "start": 8.91,
+            "end": 10.45,
+            "transcriptMatch": " ใจดีจัง",
+            "confidence": 0.9996103388922555,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/compliments/audio/draft-compliments-2-en.m4a",
+        "status": "matched",
+        "start": 10.45,
+        "end": 11.69,
+        "transcriptMatch": " You’re so kind",
+        "confidence": 0.9503203723721754,
+        "candidates": [
+          {
+            "start": 10.45,
+            "end": 11.53,
+            "transcriptMatch": " You’re so kind",
+            "confidence": 0.9503203723721754,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-compliments-3",
-      "thai": "เก่งมาก",
-      "audio": "/lessons/drafts/compliments/audio/draft-compliments-3.m4a",
-      "status": "matched",
-      "start": 11.48,
-      "end": 13.3,
-      "transcriptMatch": "เก่งมาก",
-      "confidence": 0.9993754451274872,
-      "candidates": [
-        {
-          "start": 11.63,
-          "end": 13.05,
-          "transcriptMatch": "เก่งมาก",
-          "confidence": 0.9993754451274872,
-          "exact": true,
-          "segmentIndex": 6
-        },
-        {
-          "start": 11.63,
-          "end": 12.53,
-          "transcriptMatch": "เก่งมา",
-          "confidence": 0.8735279982856342,
-          "exact": false,
-          "segmentIndex": 6
-        }
-      ]
+      "thaiText": "เก่งมาก",
+      "englishText": "Well done!",
+      "thai": {
+        "audio": "/lessons/drafts/compliments/audio/draft-compliments-3-th.m4a",
+        "status": "matched",
+        "start": 11.69,
+        "end": 13.15,
+        "transcriptMatch": " เก่งมาก",
+        "confidence": 0.9885589146912098,
+        "candidates": [
+          {
+            "start": 11.53,
+            "end": 13.15,
+            "transcriptMatch": " เก่งมาก",
+            "confidence": 0.9885589146912098,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/compliments/audio/draft-compliments-3-en.m4a",
+        "status": "matched",
+        "start": 13.15,
+        "end": 14.12,
+        "transcriptMatch": " Well done!",
+        "confidence": 0.9764770448207856,
+        "candidates": [
+          {
+            "start": 13.15,
+            "end": 13.87,
+            "transcriptMatch": " Well done!",
+            "confidence": 0.9764770448207856,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-compliments-4",
-      "thai": "ดูดีมาก",
-      "audio": "/lessons/drafts/compliments/audio/draft-compliments-4.m4a",
-      "status": "matched",
-      "start": 13.719999999999999,
-      "end": 15.78,
-      "transcriptMatch": "ดูดีมาก",
-      "confidence": 0.9993288278579712,
-      "candidates": [
-        {
-          "start": 13.87,
-          "end": 15.53,
-          "transcriptMatch": "ดูดีมาก",
-          "confidence": 0.9993288278579712,
-          "exact": true,
-          "segmentIndex": 8
-        },
-        {
-          "start": 14.19,
-          "end": 15.53,
-          "transcriptMatch": "ูดีมาก",
-          "confidence": 0.8741059018543789,
-          "exact": false,
-          "segmentIndex": 8
-        },
-        {
-          "start": 13.87,
-          "end": 15.01,
-          "transcriptMatch": "ดูดีมา",
-          "confidence": 0.873495704310281,
-          "exact": false,
-          "segmentIndex": 8
-        }
-      ]
+      "thaiText": "ดูดีมาก",
+      "englishText": "You look great",
+      "thai": {
+        "audio": "/lessons/drafts/compliments/audio/draft-compliments-4-th.m4a",
+        "status": "matched",
+        "start": 14.21,
+        "end": 15.51,
+        "transcriptMatch": " ดูดีมาก",
+        "confidence": 0.9997210431098937,
+        "candidates": [
+          {
+            "start": 14.21,
+            "end": 15.51,
+            "transcriptMatch": " ดูดีมาก",
+            "confidence": 0.9997210431098937,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/compliments/audio/draft-compliments-4-en.m4a",
+        "status": "matched",
+        "start": 15.51,
+        "end": 16.92,
+        "transcriptMatch": " You look great",
+        "confidence": 0.9948513555526733,
+        "candidates": [
+          {
+            "start": 15.51,
+            "end": 16.67,
+            "transcriptMatch": " You look great",
+            "confidence": 0.9948513555526733,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-compliments-5",
-      "thai": "คุยสนุกจัง",
-      "audio": "/lessons/drafts/compliments/audio/draft-compliments-5.m4a",
-      "status": "matched",
-      "start": 16.540000000000003,
-      "end": 18.76,
-      "transcriptMatch": "คุยสนุกจัง",
-      "confidence": 0.9995935072898865,
-      "candidates": [
-        {
-          "start": 16.69,
-          "end": 18.51,
-          "transcriptMatch": "คุยสนุกจัง",
-          "confidence": 0.9995935072898865,
-          "exact": true,
-          "segmentIndex": 10
-        },
-        {
-          "start": 17.17,
-          "end": 18.51,
-          "transcriptMatch": "ุยสนุกจัง",
-          "confidence": 0.9118146017392477,
-          "exact": false,
-          "segmentIndex": 10
-        },
-        {
-          "start": 16.69,
-          "end": 18.27,
-          "transcriptMatch": "คุยสนุกจั",
-          "confidence": 0.9115508726437886,
-          "exact": false,
-          "segmentIndex": 10
-        }
-      ]
+      "thaiText": "คุยสนุกจัง",
+      "englishText": "You’re so fun to talk to",
+      "thai": {
+        "audio": "/lessons/drafts/compliments/audio/draft-compliments-5-th.m4a",
+        "status": "matched",
+        "start": 16.950000000000003,
+        "end": 18.53,
+        "transcriptMatch": " คุยสนุกจัง",
+        "confidence": 0.9996774039268493,
+        "candidates": [
+          {
+            "start": 16.99,
+            "end": 18.53,
+            "transcriptMatch": " คุยสนุกจัง",
+            "confidence": 0.9996774039268493,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/compliments/audio/draft-compliments-5-en.m4a",
+        "status": "matched",
+        "start": 18.53,
+        "end": 20.36,
+        "transcriptMatch": " You’re so fun to talk to",
+        "confidence": 0.9961116655170917,
+        "candidates": [
+          {
+            "start": 18.53,
+            "end": 20.11,
+            "transcriptMatch": " You’re so fun to talk to",
+            "confidence": 0.9961116655170917,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "pairStatus": "complete"
     }
   ]
 }

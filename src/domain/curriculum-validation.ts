@@ -157,12 +157,16 @@ export function validateCurriculum(
       if (path && options.assetExists && !options.assetExists(path)) issues.push({ lessonId: lesson.id, message: `Bundled media is missing: ${path}.` });
     }
     if (lesson.cueCardIds.length < 1 || lesson.cueCardIds.length > 10) issues.push({ lessonId: lesson.id, message: "Verified lessons require 1–10 cue cards." });
-    if (lessonCards.some((card) => card.verificationStatus !== "verified" || !card.usage || !localExtension(card.phraseAudioSrc, [".m4a", ".mp3", ".wav", ".ogg"]))) {
-      issues.push({ lessonId: lesson.id, message: "Verified cue cards require verified language and bundled phrase audio." });
+    if (lessonCards.some((card) => card.verificationStatus !== "verified" || !card.usage
+      || !localExtension(card.thaiAudioSrc, [".m4a", ".mp3", ".wav", ".ogg"])
+      || !localExtension(card.englishAudioSrc, [".m4a", ".mp3", ".wav", ".ogg"]))) {
+      issues.push({ lessonId: lesson.id, message: "Verified cue cards require verified language and bundled Thai and English audio." });
     }
     for (const card of lessonCards) {
-      if (card.phraseAudioSrc && options.assetExists && !options.assetExists(card.phraseAudioSrc)) {
-        issues.push({ lessonId: lesson.id, message: `Bundled phrase audio is missing: ${card.phraseAudioSrc}.` });
+      for (const audioPath of [card.thaiAudioSrc, card.englishAudioSrc]) {
+        if (audioPath && options.assetExists && !options.assetExists(audioPath)) {
+          issues.push({ lessonId: lesson.id, message: `Bundled concept audio is missing: ${audioPath}.` });
+        }
       }
     }
 
@@ -175,6 +179,10 @@ export function validateCurriculum(
       if (question.verificationStatus === "verified" && question.interactionType === "listening"
         && !localExtension(question.audioSrc, [".m4a", ".mp3", ".wav", ".ogg"])) {
         issues.push({ lessonId: lesson.id, message: `Verified listening question ${question.id} requires explicit bundled local audio.` });
+      }
+      const questionCard = cardById.get(question.itemId);
+      if (question.audioSrc && questionCard?.thaiAudioSrc && question.audioSrc !== questionCard.thaiAudioSrc) {
+        issues.push({ lessonId: lesson.id, message: `Question ${question.id} must reuse its cue card's Thai audio.` });
       }
     }
 
