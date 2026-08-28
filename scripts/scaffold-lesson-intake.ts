@@ -23,7 +23,8 @@ for (const draft of draftLessons) {
   mkdirSync(packageDir, { recursive: true });
   const cards = draftCards.filter((card) => card.lessonId === draft.id).map((card) => ({
     ...card,
-    phraseAudioSrc: `/lessons/${draft.id}/audio/${card.id}.m4a`,
+    thaiAudioSrc: `/lessons/${draft.id}/audio/${card.id}-th.m4a`,
+    englishAudioSrc: `/lessons/${draft.id}/audio/${card.id}-en.m4a`,
   }));
   const lesson = {
     ...draft,
@@ -35,7 +36,11 @@ for (const draft of draftLessons) {
   };
   writeFileSync(join(packageDir, "lesson.json"), `${JSON.stringify({ lesson, cueCards: cards }, null, 2)}\n`);
   writeFileSync(join(packageDir, "audio-clips.template.json"), `${JSON.stringify({
-    clips: cards.map((card) => ({ output: `${card.id}.m4a`, startSeconds: null, endSeconds: null })),
+    clips: cards.map((card) => ({
+      cueCardId: card.id,
+      thai: { output: `${card.id}-th.m4a`, startSeconds: null, endSeconds: null },
+      english: { output: `${card.id}-en.m4a`, startSeconds: null, endSeconds: null },
+    })),
   }, null, 2)}\n`);
   writeFileSync(join(packageDir, "REVIEW.md"), reviewChecklist(draft.id, draft.title, cards.length));
   const sourceFile = join(repoRoot, "public", draft.media.videoSrc.replace(/^\/+/, ""));
@@ -50,7 +55,7 @@ function reviewChecklist(id: string, title: string, cardCount: number) {
     `- [ ] Confirm the lesson topic emoji and every cue-card emoji match the intended meaning.\n` +
     `- [ ] Verify Thai, romanization, and natural meaning for all ${cardCount} cards.\n` +
     `- [ ] Add a practical usage note to every card.\n` +
-    `- [ ] Fill exact phrase timestamps, then rename audio-clips.template.json to audio-clips.json.\n` +
+    `- [ ] Fill exact Thai and English timestamps, then rename audio-clips.template.json to audio-clips.json.\n` +
     `- [ ] Add at least two verified scored variants per card and all four required interaction types.\n` +
     `- [ ] Mark cards, questions, and lesson verified only after reviewer sign-off.\n` +
     `- [ ] Run npm run lesson:import -- ${outputArg}/${id} and resolve every reported issue.\n`;

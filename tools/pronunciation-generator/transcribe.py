@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Local Thai transcript writer used by scripts/generate-pronunciation.ts."""
+"""Local multilingual transcript writer used by the lesson audio generator."""
 import argparse
 import json
 from pathlib import Path
@@ -24,7 +24,6 @@ def main():
     )
     segments, info = model.transcribe(
         args.audio,
-        language="th",
         task="transcribe",
         beam_size=5,
         word_timestamps=True,
@@ -32,10 +31,12 @@ def main():
         vad_parameters={"min_silence_duration_ms": 400},
         hotwords=args.hotwords or None,
         condition_on_previous_text=False,
+        multilingual=True,
     )
     payload = {
         "language": info.language,
         "languageProbability": info.language_probability,
+        "mode": "multilingual",
         "model": args.model,
         "segments": [],
     }

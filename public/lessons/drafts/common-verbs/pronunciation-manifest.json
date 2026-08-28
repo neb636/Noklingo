@@ -3,107 +3,217 @@
   "sourceVideo": "/lessons/drafts/common-verbs/intro.mp4",
   "sourceHash": "3f83ccd706e547723f02dd2c2f58675522160fc96836d57c516edbb1dc12c139",
   "model": "large-v3",
-  "generatedAt": "2026-08-25T22:19:19.344Z",
+  "generatedAt": "2026-08-27T23:44:27.375Z",
   "clips": [
     {
       "cueCardId": "draft-common-verbs-1",
-      "thai": "กิน",
-      "audio": "/lessons/drafts/common-verbs/audio/draft-common-verbs-1.m4a",
-      "status": "matched",
-      "start": 0.41000000000000003,
-      "end": 2.09,
-      "transcriptMatch": " กิน",
-      "confidence": 0.9800271677970886,
-      "candidates": [
-        {
-          "start": 0.56,
-          "end": 1.84,
-          "transcriptMatch": " กิน",
-          "confidence": 0.9800271677970886,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "กิน",
+      "englishText": "eat",
+      "thai": {
+        "audio": "/lessons/drafts/common-verbs/audio/draft-common-verbs-1-th.m4a",
+        "status": "matched",
+        "start": 0.7,
+        "end": 1.7974999999999999,
+        "transcriptMatch": " กิน",
+        "confidence": 0.9664480096101761,
+        "candidates": [
+          {
+            "start": 0.7,
+            "end": 1.7,
+            "transcriptMatch": " กิน",
+            "confidence": 0.9664480096101761,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/common-verbs/audio/draft-common-verbs-1-en.m4a",
+        "status": "matched",
+        "start": 0,
+        "end": 0.7,
+        "transcriptMatch": "eat",
+        "confidence": 0.9725002551078796,
+        "candidates": [
+          {
+            "start": 0,
+            "end": 0.7,
+            "transcriptMatch": "eat",
+            "confidence": 0.9725002551078796,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-common-verbs-2",
-      "thai": "นอน",
-      "audio": "/lessons/drafts/common-verbs/audio/draft-common-verbs-2.m4a",
-      "status": "matched",
-      "start": 1.6900000000000002,
-      "end": 4.35,
-      "transcriptMatch": " นอน",
-      "confidence": 0.9646559381484985,
-      "candidates": [
-        {
-          "start": 1.84,
-          "end": 4.1,
-          "transcriptMatch": " นอน",
-          "confidence": 0.9646559381484985,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "นอน",
+      "englishText": "sleep",
+      "thai": {
+        "audio": "/lessons/drafts/common-verbs/audio/draft-common-verbs-2-th.m4a",
+        "status": "matched",
+        "start": 2.99,
+        "end": 4.182499999999999,
+        "transcriptMatch": " นอน",
+        "confidence": 0.9995865643024444,
+        "candidates": [
+          {
+            "start": 3.12,
+            "end": 4.26,
+            "transcriptMatch": " นอน",
+            "confidence": 0.9995865643024444,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/common-verbs/audio/draft-common-verbs-2-en.m4a",
+        "status": "matched",
+        "start": 1.7974999999999999,
+        "end": 2.99,
+        "transcriptMatch": " sleep",
+        "confidence": 0.9561713814735413,
+        "candidates": [
+          {
+            "start": 1.7,
+            "end": 2.86,
+            "transcriptMatch": " sleep",
+            "confidence": 0.9561713814735413,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-common-verbs-3",
-      "thai": "ชอบ",
-      "audio": "/lessons/drafts/common-verbs/audio/draft-common-verbs-3.m4a",
-      "status": "matched",
-      "start": 4.17,
-      "end": 6.77,
-      "transcriptMatch": " ชอบ",
-      "confidence": 0.9988553524017334,
-      "candidates": [
-        {
-          "start": 4.32,
-          "end": 6.52,
-          "transcriptMatch": " ชอบ",
-          "confidence": 0.9988553524017334,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "ชอบ",
+      "englishText": "like",
+      "thai": {
+        "audio": "/lessons/drafts/common-verbs/audio/draft-common-verbs-3-th.m4a",
+        "status": "matched",
+        "start": 5.119999999999999,
+        "end": 6.3675,
+        "transcriptMatch": " ชอบ",
+        "confidence": 0.9998922920227051,
+        "candidates": [
+          {
+            "start": 5.22,
+            "end": 6.4,
+            "transcriptMatch": " ชอบ",
+            "confidence": 0.9998922920227051,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/common-verbs/audio/draft-common-verbs-3-en.m4a",
+        "status": "matched",
+        "start": 4.182499999999999,
+        "end": 5.119999999999999,
+        "transcriptMatch": " like",
+        "confidence": 0.993228144645691,
+        "candidates": [
+          {
+            "start": 4.26,
+            "end": 5.02,
+            "transcriptMatch": " like",
+            "confidence": 0.993228144645691,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-common-verbs-4",
-      "thai": "ไป",
-      "audio": "/lessons/drafts/common-verbs/audio/draft-common-verbs-4.m4a",
-      "status": "matched",
-      "start": 6.409999999999999,
-      "end": 8.37,
-      "transcriptMatch": " ไป",
-      "confidence": 0.9905744886398316,
-      "candidates": [
-        {
-          "start": 6.56,
-          "end": 8.12,
-          "transcriptMatch": " ไป",
-          "confidence": 0.9905744886398316,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "ไป",
+      "englishText": "go",
+      "thai": {
+        "audio": "/lessons/drafts/common-verbs/audio/draft-common-verbs-4-th.m4a",
+        "status": "matched",
+        "start": 7.449999999999999,
+        "end": 8.567499999999999,
+        "transcriptMatch": " ไป",
+        "confidence": 0.9979630088806153,
+        "candidates": [
+          {
+            "start": 7.6,
+            "end": 8.44,
+            "transcriptMatch": " ไป",
+            "confidence": 0.9979630088806153,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/common-verbs/audio/draft-common-verbs-4-en.m4a",
+        "status": "matched",
+        "start": 6.3675,
+        "end": 7.449999999999999,
+        "transcriptMatch": " go",
+        "confidence": 0.9611103296279907,
+        "candidates": [
+          {
+            "start": 6.4,
+            "end": 7.3,
+            "transcriptMatch": " go",
+            "confidence": 0.9611103296279907,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-common-verbs-5",
-      "thai": "พูด",
-      "audio": "/lessons/drafts/common-verbs/audio/draft-common-verbs-5.m4a",
-      "status": "matched",
-      "start": 8.67,
-      "end": 10.39,
-      "transcriptMatch": " พูด",
-      "confidence": 0.999793119430542,
-      "candidates": [
-        {
-          "start": 8.82,
-          "end": 10.14,
-          "transcriptMatch": " พูด",
-          "confidence": 0.999793119430542,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "พูด",
+      "englishText": "speak",
+      "thai": {
+        "audio": "/lessons/drafts/common-verbs/audio/draft-common-verbs-5-th.m4a",
+        "status": "matched",
+        "start": 9.84,
+        "end": 11.43,
+        "transcriptMatch": " พูด",
+        "confidence": 0.9998334407806396,
+        "candidates": [
+          {
+            "start": 9.88,
+            "end": 11.18,
+            "transcriptMatch": " พูด",
+            "confidence": 0.9998334407806396,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/common-verbs/audio/draft-common-verbs-5-en.m4a",
+        "status": "matched",
+        "start": 8.567499999999999,
+        "end": 9.84,
+        "transcriptMatch": " speak",
+        "confidence": 0.9958124566078186,
+        "candidates": [
+          {
+            "start": 8.44,
+            "end": 9.8,
+            "transcriptMatch": " speak",
+            "confidence": 0.9958124566078186,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     }
   ]
 }

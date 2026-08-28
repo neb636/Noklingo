@@ -33,7 +33,7 @@ describe("learning engine primitives", () => {
     const card = CueCardSchema.parse({
       id: "thin-card", lessonId: "thin", thai: "หนึ่งแสน", romanization: "neung saen",
       emoji: "1️⃣", naturalMeaning: "one hundred thousand", usage: "Use this when stating an amount of 100,000.",
-      phraseAudioSrc: "/lessons/thin/audio/thin-card.m4a", verificationStatus: "verified",
+      thaiAudioSrc: "/lessons/thin/audio/thin-card-th.m4a", englishAudioSrc: "/lessons/thin/audio/thin-card-en.m4a", verificationStatus: "verified",
     });
     const common = { itemId: card.id, scored: true, verificationStatus: "verified" as const, explanation: "หนึ่งแสน means one hundred thousand." };
     const lesson = VideoLessonSchema.parse({
@@ -42,13 +42,19 @@ describe("learning engine primitives", () => {
       cueCardIds: [card.id], contentStatus: "verified",
       source: { label: "Authorized test source", url: "https://example.com/source", permissionStatus: "authorized" },
       quizBank: [
-        { ...common, id: "thin-listen", interactionType: "listening", prompt: "What amount do you hear?", choices: ["one hundred thousand", "ten thousand"], correctIndex: 0, audioSrc: card.phraseAudioSrc },
+        { ...common, id: "thin-listen", interactionType: "listening", prompt: "What amount do you hear?", choices: ["one hundred thousand", "ten thousand"], correctIndex: 0, audioSrc: card.thaiAudioSrc },
         { ...common, id: "thin-situation", interactionType: "situation-response", prompt: "Choose 100,000 in Thai.", choices: ["หนึ่งแสน", "หนึ่งหมื่น"], correctIndex: 0 },
         { ...common, id: "thin-meaning", interactionType: "meaning-recognition", prompt: "What does หนึ่งแสน mean?", choices: ["one hundred thousand", "one million"], correctIndex: 0 },
         { ...common, id: "thin-build", interactionType: "phrase-construction", prompt: "Build 100,000.", constructionTokens: ["หนึ่ง", "แสน", "หมื่น"], correctConstruction: ["หนึ่ง", "แสน"] },
       ],
     });
     expect(validateCurriculum([lesson], [card])).toEqual([]);
+    expect(validateCurriculum([lesson], [{ ...card, englishAudioSrc: undefined }]).some((issue) => issue.message.includes("Thai and English audio"))).toBe(true);
+    const wrongQuizAudio = {
+      ...lesson,
+      quizBank: lesson.quizBank.map((question) => question.id === "thin-listen" ? { ...question, audioSrc: card.englishAudioSrc } : question),
+    };
+    expect(validateCurriculum([wrongQuizAudio], [card]).some((issue) => issue.message.includes("must reuse its cue card's Thai audio"))).toBe(true);
 
     const intro = buildSession({ mode: "introduction", lesson, snapshot: defaultSnapshot, today: "2026-08-25", nowIso: "2026-08-25T12:00:00.000Z" });
     const mastery = buildSession({ mode: "mastery", lesson, snapshot: defaultSnapshot, today: "2026-08-26", nowIso: "2026-08-26T12:00:00.000Z" });

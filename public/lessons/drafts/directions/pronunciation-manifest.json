@@ -3,179 +3,175 @@
   "sourceVideo": "/lessons/drafts/directions/intro.mp4",
   "sourceHash": "0a7882eaea6be4f98527b8f994189b3a58aff15b6cae6c130797dccee5b29177",
   "model": "large-v3",
-  "generatedAt": "2026-08-25T22:25:37.015Z",
+  "generatedAt": "2026-08-27T23:44:29.498Z",
   "clips": [
     {
       "cueCardId": "draft-directions-1",
-      "thai": "ตรงไป",
-      "audio": "/lessons/drafts/directions/audio/draft-directions-1.m4a",
-      "status": "matched",
-      "start": 0,
-      "end": 2.59,
-      "transcriptMatch": "ตรงไป",
-      "confidence": 0.9701886417716742,
-      "candidates": [
-        {
-          "start": 0,
-          "end": 2.34,
-          "transcriptMatch": "ตรงไป",
-          "confidence": 0.9701886417716742,
-          "exact": true,
-          "segmentIndex": 0
-        },
-        {
-          "start": 0,
-          "end": 4.66,
-          "transcriptMatch": "ตรงไป เล",
-          "confidence": 0.812101876517137,
-          "exact": false,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "ตรงไป",
+      "englishText": "Go straight",
+      "thai": {
+        "audio": "/lessons/drafts/directions/audio/draft-directions-1-th.m4a",
+        "status": "matched",
+        "start": 0.9500000000000001,
+        "end": 2.4275,
+        "transcriptMatch": " ตรงไป",
+        "confidence": 0.9995411348342895,
+        "candidates": [
+          {
+            "start": 1.1,
+            "end": 2.24,
+            "transcriptMatch": " ตรงไป",
+            "confidence": 0.9995411348342895,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/directions/audio/draft-directions-1-en.m4a",
+        "status": "matched",
+        "start": 0,
+        "end": 0.8800000000000001,
+        "transcriptMatch": "Go straight",
+        "confidence": 0.9359815868735314,
+        "candidates": [
+          {
+            "start": 0,
+            "end": 0.66,
+            "transcriptMatch": "Go straight",
+            "confidence": 0.9359815868735314,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-directions-2",
-      "thai": "เลี้ยวขวา",
-      "audio": "/lessons/drafts/directions/audio/draft-directions-2.m4a",
-      "status": "matched",
-      "start": 2.37,
-      "end": 6.61,
-      "transcriptMatch": " เลี้ยวขวา",
-      "confidence": 0.9788758000305721,
-      "candidates": [
-        {
-          "start": 2.52,
-          "end": 6.36,
-          "transcriptMatch": " เลี้ยวขวา",
-          "confidence": 0.9788758000305721,
-          "exact": true,
-          "segmentIndex": 0
-        },
-        {
-          "start": 1.9,
-          "end": 6.36,
-          "transcriptMatch": "ไป เลี้ยวขวา",
-          "confidence": 0.8932892349064351,
-          "exact": false,
-          "segmentIndex": 0
-        },
-        {
-          "start": 2.52,
-          "end": 7.66,
-          "transcriptMatch": " เลี้ยวขวา เล",
-          "confidence": 0.8899735060036182,
-          "exact": false,
-          "segmentIndex": 0
-        },
-        {
-          "start": 2.52,
-          "end": 5.98,
-          "transcriptMatch": " เลี้ยวขว",
-          "confidence": 0.8776663096083535,
-          "exact": false,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "เลี้ยวขวา",
+      "englishText": "Turn right",
+      "thai": {
+        "audio": "/lessons/drafts/directions/audio/draft-directions-2-th.m4a",
+        "status": "matched",
+        "start": 4.18,
+        "end": 6.2475000000000005,
+        "transcriptMatch": " เลี้ยวขวา",
+        "confidence": 0.9952482843399048,
+        "candidates": [
+          {
+            "start": 4.28,
+            "end": 6.34,
+            "transcriptMatch": " เลี้ยวขวา",
+            "confidence": 0.9952482843399048,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/directions/audio/draft-directions-2-en.m4a",
+        "status": "matched",
+        "start": 2.4275,
+        "end": 4.18,
+        "transcriptMatch": " Turn right",
+        "confidence": 0.9400382417067885,
+        "candidates": [
+          {
+            "start": 2.24,
+            "end": 4.08,
+            "transcriptMatch": " Turn right",
+            "confidence": 0.9400382417067885,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-directions-3",
-      "thai": "เลี้ยวซ้าย",
-      "status": "ambiguous",
-      "candidates": [
-        {
-          "start": 6.46,
-          "end": 9.92,
-          "transcriptMatch": " เลี้ยวซ้าย",
-          "confidence": 0.9931029830660139,
-          "exact": true,
-          "segmentIndex": 0
-        },
-        {
-          "start": 5.98,
-          "end": 9.92,
-          "transcriptMatch": "า เลี้ยวซ้าย",
-          "confidence": 0.9138983696699141,
-          "exact": false,
-          "segmentIndex": 0
-        },
-        {
-          "start": 6.46,
-          "end": 10.32,
-          "transcriptMatch": " เลี้ยวซ้าย ก",
-          "confidence": 0.9083187025785445,
-          "exact": false,
-          "segmentIndex": 0
-        },
-        {
-          "start": 5.7,
-          "end": 9.92,
-          "transcriptMatch": "วา เลี้ยวซ้าย",
-          "confidence": 0.8472412562370301,
-          "exact": false,
-          "segmentIndex": 0
-        },
-        {
-          "start": 6.46,
-          "end": 12.56,
-          "transcriptMatch": " เลี้ยวซ้าย กล",
-          "confidence": 0.8429019252459209,
-          "exact": false,
-          "segmentIndex": 0
-        },
-        {
-          "start": 5.98,
-          "end": 10.32,
-          "transcriptMatch": "า เลี้ยวซ้าย ก",
-          "confidence": 0.8428906329472861,
-          "exact": false,
-          "segmentIndex": 0
-        }
-      ],
-      "diagnostic": "The top candidate is too close to another occurrence."
+      "thaiText": "เลี้ยวซ้าย",
+      "englishText": "Turn left",
+      "thai": {
+        "audio": "/lessons/drafts/directions/audio/draft-directions-3-th.m4a",
+        "status": "matched",
+        "start": 8.030000000000001,
+        "end": 9.91,
+        "transcriptMatch": " เลี้ยวซ้าย",
+        "confidence": 0.9980697955404009,
+        "candidates": [
+          {
+            "start": 8.14,
+            "end": 10,
+            "transcriptMatch": " เลี้ยวซ้าย",
+            "confidence": 0.9980697955404009,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/directions/audio/draft-directions-3-en.m4a",
+        "status": "matched",
+        "start": 6.2475000000000005,
+        "end": 8.030000000000001,
+        "transcriptMatch": " Turn left",
+        "confidence": 0.9776301908493042,
+        "candidates": [
+          {
+            "start": 6.34,
+            "end": 7.92,
+            "transcriptMatch": " Turn left",
+            "confidence": 0.9776301908493042,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-directions-4",
-      "thai": "กลับรถ",
-      "audio": "/lessons/drafts/directions/audio/draft-directions-4.m4a",
-      "status": "matched",
-      "start": 9.77,
-      "end": 13.39,
-      "transcriptMatch": " กลับรถ",
-      "confidence": 0.9921012580394745,
-      "candidates": [
-        {
-          "start": 9.92,
-          "end": 13.14,
-          "transcriptMatch": " กลับรถ",
-          "confidence": 0.9921012580394745,
-          "exact": true,
-          "segmentIndex": 0
-        },
-        {
-          "start": 9.66,
-          "end": 13.14,
-          "transcriptMatch": "าย กลับรถ",
-          "confidence": 0.8675096542494638,
-          "exact": false,
-          "segmentIndex": 0
-        },
-        {
-          "start": 10.32,
-          "end": 13.14,
-          "transcriptMatch": "ลับรถ",
-          "confidence": 0.8528890951474508,
-          "exact": false,
-          "segmentIndex": 0
-        },
-        {
-          "start": 9.92,
-          "end": 12.94,
-          "transcriptMatch": " กลับร",
-          "confidence": 0.8438776725133261,
-          "exact": false,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "กลับรถ",
+      "englishText": "U turn",
+      "thai": {
+        "audio": "/lessons/drafts/directions/audio/draft-directions-4-th.m4a",
+        "status": "matched",
+        "start": 11.85,
+        "end": 13.39,
+        "transcriptMatch": "กลับรถ",
+        "confidence": 0.9803754790127277,
+        "candidates": [
+          {
+            "start": 12,
+            "end": 13.14,
+            "transcriptMatch": "กลับรถ",
+            "confidence": 0.9803754790127277,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/directions/audio/draft-directions-4-en.m4a",
+        "status": "matched",
+        "start": 9.91,
+        "end": 11.51,
+        "transcriptMatch": " U turn",
+        "confidence": 0.9223401615023613,
+        "candidates": [
+          {
+            "start": 10,
+            "end": 11.26,
+            "transcriptMatch": " U turn",
+            "confidence": 0.9223401615023613,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     }
   ]
 }

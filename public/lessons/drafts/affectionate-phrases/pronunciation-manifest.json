@@ -3,219 +3,217 @@
   "sourceVideo": "/lessons/drafts/affectionate-phrases/intro.mp4",
   "sourceHash": "df675d99453f3f290b77bdeb2b5024bdf4641df51ed1b217a52b0f4b44c84976",
   "model": "large-v3",
-  "generatedAt": "2026-08-25T22:34:14.408Z",
+  "generatedAt": "2026-08-27T23:44:34.680Z",
   "clips": [
     {
       "cueCardId": "draft-affectionate-phrases-1",
-      "thai": "รักนะ",
-      "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-1.m4a",
-      "status": "matched",
-      "start": 3.75,
-      "end": 4.85,
-      "transcriptMatch": "รักนะ",
-      "confidence": 0.992692237496376,
-      "candidates": [
-        {
-          "start": 3.9,
-          "end": 4.6,
-          "transcriptMatch": "รักนะ",
-          "confidence": 0.992692237496376,
-          "exact": true,
-          "segmentIndex": 1
-        },
-        {
-          "start": 3.9,
-          "end": 5.96,
-          "transcriptMatch": "รักนะ ค",
-          "confidence": 0.8325219384034476,
-          "exact": false,
-          "segmentIndex": 1
-        }
-      ]
+      "thaiText": "รักนะ",
+      "englishText": "Love you",
+      "thai": {
+        "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-1-th.m4a",
+        "status": "matched",
+        "start": 3.9499999999999997,
+        "end": 4.6,
+        "transcriptMatch": " รักนะ",
+        "confidence": 0.9979281848669053,
+        "candidates": [
+          {
+            "start": 4.1,
+            "end": 4.6,
+            "transcriptMatch": " รักนะ",
+            "confidence": 0.9979281848669053,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-1-en.m4a",
+        "status": "matched",
+        "start": 4.6,
+        "end": 6.404999999999999,
+        "transcriptMatch": " Love you",
+        "confidence": 0.9499897658824921,
+        "candidates": [
+          {
+            "start": 4.6,
+            "end": 6.18,
+            "transcriptMatch": " Love you",
+            "confidence": 0.9499897658824921,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-affectionate-phrases-2",
-      "thai": "คุณสวยมาก",
-      "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-2.m4a",
-      "status": "matched",
-      "start": 4.7299999999999995,
-      "end": 8.89,
-      "transcriptMatch": " คุณสวยมาก",
-      "confidence": 0.9887127540792737,
-      "candidates": [
-        {
-          "start": 4.88,
-          "end": 8.64,
-          "transcriptMatch": " คุณสวยมาก",
-          "confidence": 0.9887127540792737,
-          "exact": true,
-          "segmentIndex": 1
-        },
-        {
-          "start": 5.96,
-          "end": 8.64,
-          "transcriptMatch": "ุณสวยมาก",
-          "confidence": 0.9015247560871971,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 4.88,
-          "end": 10.72,
-          "transcriptMatch": " คุณสวยมาก ค",
-          "confidence": 0.9013477343022823,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 4.46,
-          "end": 8.64,
-          "transcriptMatch": "นะ คุณสวยมาก",
-          "confidence": 0.9013351216614247,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 4.88,
-          "end": 8,
-          "transcriptMatch": " คุณสวยมา",
-          "confidence": 0.8890651734007728,
-          "exact": false,
-          "segmentIndex": 1
-        }
-      ]
+      "thaiText": "คุณสวยมาก",
+      "englishText": "you are very pretty",
+      "thai": {
+        "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-2-th.m4a",
+        "status": "matched",
+        "start": 6.404999999999999,
+        "end": 8.46,
+        "transcriptMatch": " คุณสวยมาก",
+        "confidence": 0.9994092283930097,
+        "candidates": [
+          {
+            "start": 6.28,
+            "end": 8.46,
+            "transcriptMatch": " คุณสวยมาก",
+            "confidence": 0.9994092283930097,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-2-en.m4a",
+        "status": "matched",
+        "start": 8.46,
+        "end": 10.49,
+        "transcriptMatch": " you are very pretty",
+        "confidence": 0.9631497913971543,
+        "candidates": [
+          {
+            "start": 8.46,
+            "end": 10.24,
+            "transcriptMatch": " you are very pretty",
+            "confidence": 0.9631497913971543,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-affectionate-phrases-3",
-      "thai": "คิดถึงจัง",
-      "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-3.m4a",
-      "status": "matched",
-      "start": 8.49,
-      "end": 13.07,
-      "transcriptMatch": " คิดถึงจัง",
-      "confidence": 0.9989921069145202,
-      "candidates": [
-        {
-          "start": 8.64,
-          "end": 12.82,
-          "transcriptMatch": " คิดถึงจัง",
-          "confidence": 0.9989921069145202,
-          "exact": true,
-          "segmentIndex": 1
-        },
-        {
-          "start": 8,
-          "end": 12.82,
-          "transcriptMatch": "ก คิดถึงจัง",
-          "confidence": 0.9110860533714294,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 8.64,
-          "end": 13.02,
-          "transcriptMatch": " คิดถึงจัง ก",
-          "confidence": 0.9052260868549348,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 10.78,
-          "end": 12.82,
-          "transcriptMatch": "ิดถึงจัง",
-          "confidence": 0.9018642680181397,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 8.64,
-          "end": 12.44,
-          "transcriptMatch": " คิดถึงจั",
-          "confidence": 0.901098649336232,
-          "exact": false,
-          "segmentIndex": 1
-        }
-      ]
+      "thaiText": "คิดถึงจัง",
+      "englishText": "I miss you so much",
+      "thai": {
+        "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-3-th.m4a",
+        "status": "matched",
+        "start": 10.53,
+        "end": 12.62,
+        "transcriptMatch": " คิดถึงจัง",
+        "confidence": 0.9992644039789835,
+        "candidates": [
+          {
+            "start": 10.68,
+            "end": 12.62,
+            "transcriptMatch": " คิดถึงจัง",
+            "confidence": 0.9992644039789835,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-3-en.m4a",
+        "status": "matched",
+        "start": 12.62,
+        "end": 14.7925,
+        "transcriptMatch": " I miss you so much",
+        "confidence": 0.987351333141327,
+        "candidates": [
+          {
+            "start": 12.62,
+            "end": 14.94,
+            "transcriptMatch": " I miss you so much",
+            "confidence": 0.987351333141327,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-affectionate-phrases-4",
-      "thai": "กอดหน่อย",
-      "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-4.m4a",
-      "status": "matched",
-      "start": 12.67,
-      "end": 16.67,
-      "transcriptMatch": " กอดหน่อย",
-      "confidence": 0.9744811695814133,
-      "candidates": [
-        {
-          "start": 12.82,
-          "end": 16.42,
-          "transcriptMatch": " กอดหน่อย",
-          "confidence": 0.9744811695814133,
-          "exact": true,
-          "segmentIndex": 1
-        },
-        {
-          "start": 12.44,
-          "end": 16.42,
-          "transcriptMatch": "ง กอดหน่อย",
-          "confidence": 0.8803371597660912,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 12.82,
-          "end": 19.49,
-          "transcriptMatch": " กอดหน่อย ฝ",
-          "confidence": 0.8801841946632143,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 13.02,
-          "end": 16.42,
-          "transcriptMatch": "อดหน่อย",
-          "confidence": 0.8711110222339631,
-          "exact": false,
-          "segmentIndex": 1
-        }
-      ]
+      "thaiText": "กอดหน่อย",
+      "englishText": "Can I have a hug?",
+      "thai": {
+        "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-4-th.m4a",
+        "status": "matched",
+        "start": 14.7925,
+        "end": 16.57,
+        "transcriptMatch": " กอดหน่อย",
+        "confidence": 0.9852823221683502,
+        "candidates": [
+          {
+            "start": 14.94,
+            "end": 16.32,
+            "transcriptMatch": " กอดหน่อย",
+            "confidence": 0.9852823221683502,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-4-en.m4a",
+        "status": "matched",
+        "start": 17.12,
+        "end": 18.78,
+        "transcriptMatch": "Can I have a hug?",
+        "confidence": 0.9750370577052235,
+        "candidates": [
+          {
+            "start": 17.27,
+            "end": 18.53,
+            "transcriptMatch": "Can I have a hug?",
+            "confidence": 0.9750370577052235,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-affectionate-phrases-5",
-      "thai": "ฝันดีนะ",
-      "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-5.m4a",
-      "status": "matched",
-      "start": 16.560000000000002,
-      "end": 20.68,
-      "transcriptMatch": " ฝันดีนะ",
-      "confidence": 0.9979639202356339,
-      "candidates": [
-        {
-          "start": 16.71,
-          "end": 20.43,
-          "transcriptMatch": " ฝันดีนะ",
-          "confidence": 0.9979639202356339,
-          "exact": true,
-          "segmentIndex": 1
-        },
-        {
-          "start": 16.04,
-          "end": 20.43,
-          "transcriptMatch": "อย ฝันดีนะ",
-          "confidence": 0.8882473960944585,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 19.59,
-          "end": 20.43,
-          "transcriptMatch": "ันดีนะ",
-          "confidence": 0.872073060648782,
-          "exact": false,
-          "segmentIndex": 1
-        }
-      ]
+      "thaiText": "ฝันดีนะ",
+      "englishText": "goodnight",
+      "thai": {
+        "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-5-th.m4a",
+        "status": "matched",
+        "start": 19.12,
+        "end": 20.43,
+        "transcriptMatch": " ฝันดีนะ",
+        "confidence": 0.9988641548156738,
+        "candidates": [
+          {
+            "start": 19.27,
+            "end": 20.43,
+            "transcriptMatch": " ฝันดีนะ",
+            "confidence": 0.9988641548156738,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-5-en.m4a",
+        "status": "matched",
+        "start": 20.43,
+        "end": 22,
+        "transcriptMatch": " goodnight",
+        "confidence": 0.88819917678833,
+        "candidates": [
+          {
+            "start": 20.43,
+            "end": 21.75,
+            "transcriptMatch": " goodnight",
+            "confidence": 0.88819917678833,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "pairStatus": "complete"
     }
   ]
 }

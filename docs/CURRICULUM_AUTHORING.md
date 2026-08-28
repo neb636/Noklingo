@@ -29,7 +29,7 @@ qualified review. A verified package needs:
 - an authorized source record;
 - a confirmed local MP4 and poster;
 - reviewed topic and cue-card emoji metadata;
-- 1–10 verified cue cards with usage text and bundled phrase audio;
+- 1–10 verified cue cards with usage text and bundled Thai and English audio;
 - at least two valid, verified scored variants per card and at least four
   questions per lesson, including the required interaction types.
 
@@ -49,11 +49,22 @@ npm run lesson:import -- content-inbox/<lesson-id> --apply
 
 The package input contains `lesson.json`, `source.mp4`, and exactly one audio
 source: either an `audio/` directory or `audio-clips.json`. The clip manifest
-contains `{ "clips": [{ "output": "phrase-name.m4a", "startSeconds": 1.2,
-"endSeconds": 2.8 }] }` records and must exactly cover the audio paths declared
-by the cards and questions. The importer creates `intro.mp4` and `poster.jpg`,
-extracts or copies audio, validates media and curriculum rules, then updates the
-reviewed registry.
+groups both source ranges by cue-card ID:
+
+```json
+{
+  "clips": [{
+    "cueCardId": "phrase-name",
+    "thai": { "output": "phrase-name-th.m4a", "startSeconds": 1.2, "endSeconds": 2.1 },
+    "english": { "output": "phrase-name-en.m4a", "startSeconds": 2.5, "endSeconds": 3.2 }
+  }]
+}
+```
+
+It must exactly cover the Thai and English paths declared by the cards and the
+Thai paths reused by quiz questions. The importer creates `intro.mp4` and
+`poster.jpg`, extracts every language range in one FFmpeg pass, validates media
+and curriculum rules, then updates the reviewed registry.
 
 To validate or install every reviewed package below one intake directory in a
 single release batch:
@@ -66,10 +77,12 @@ npm run lesson:import-all -- content-inbox --apply
 ## Generate instructor pronunciation locally
 
 Pronunciation audio is derived from the local lesson MP4, never synthesized in
-the browser. The generator transcribes Thai locally, matches the supplied Thai
-cue-card text against timestamped speech, and extracts AAC `.m4a` excerpts from
-the original video. It is deliberately conservative: ambiguous or low-confidence
-matches remain ungenerated instead of guessing.
+the browser. The generator transcribes mixed Thai and English locally, matches
+each cue card's Thai text and English meaning independently, aligns the pair in
+cue-card order regardless of which language the source says first, and extracts
+separate `-th.m4a` and `-en.m4a` files in one FFmpeg pass. It is deliberately
+conservative: ambiguous or low-confidence matches remain ungenerated instead
+of guessing.
 
 Install FFmpeg and create the local Python environment once:
 
@@ -94,8 +107,8 @@ Use `--force` after changing a video or model; ordinary cue-card edits reuse the
 MP4-hash transcript cache. Draft clips are written below
 `public/lessons/drafts/<lesson-id>/audio/`, with matching/debug data in the
 draft's `pronunciation-manifest.json` and the app's generated pronunciation
-index. The app only enables pronunciation playback for a `matched` or
-`overridden` clip.
+index. The app only enables each language asset for a `matched` or `overridden`
+result. Thai-only drafts remain playable; verified lessons require both assets.
 
 Tune padding, duration, and conservative matching thresholds in
 `tools/pronunciation-generator/config.json`.
@@ -109,21 +122,32 @@ npm run pronunciation:generate -- --package content-inbox/<lesson-id>
 
 This writes `audio-clips.json` and `pronunciation-manifest.json` in the package.
 The existing `lesson:import --apply` command then extracts and installs the
-final `audio/` assets from `source.mp4`; this preserves its existing one-audio-
-source contract. It will still reject the package until every declared
-phrase-audio path has a generated clip and all editorial/publication
-requirements are met.
+final `audio/` assets from `source.mp4`. It will still reject the package until
+every card has both language assets, listening questions reuse their card's
+Thai asset, and all editorial/publication requirements are met.
 
 When a repeated phrase cannot be selected safely, retain the diagnosis and add a
 reviewed manual override to that cue card:
 
 ```json
-"pronunciationOverride": {
-  "startSeconds": 12.4,
-  "endSeconds": 13.5,
-  "matchText": "ร้อน"
+"pronunciationOverrides": {
+  "thai": {
+    "startSeconds": 12.4,
+    "endSeconds": 13.5,
+    "matchText": "ร้อน"
+  },
+  "english": {
+    "startSeconds": 13.8,
+    "endSeconds": 14.4,
+    "matchText": "hot"
+  }
 }
 ```
+
+To audit or apply the one-time repository migration, use
+`npm run pronunciation:migrate -- --apply`. It writes
+`dual-audio-migration-report.json`, verifies every generated asset, and removes
+legacy combined clips only after a Thai replacement exists.
 
 The original MP4 and cue-card definition remain the source of truth. The audio,
 cache, and manifests can be regenerated. If a phrase is not clearly visible in

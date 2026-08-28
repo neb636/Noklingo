@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { matchThaiPhrase, normalizeThai, paddedClipRange, type TranscriptSegment } from "../src/domain/pronunciation";
+import { matchEnglishPhrase, matchThaiPhrase, normalizeEnglish, normalizeThai, paddedClipRange, type TranscriptSegment } from "../src/domain/pronunciation";
 
 const segment = (text: string, start = 1, end = 2): TranscriptSegment => ({
   text,
@@ -11,6 +11,26 @@ const segment = (text: string, start = 1, end = 2): TranscriptSegment => ({
 describe("Thai pronunciation matching", () => {
   it("normalizes Thai spacing and punctuation", () => {
     expect(normalizeThai("ไป กินข้าว กันมั้ย؟")).toBe("ไปกินข้าวกันมั้ย");
+  });
+
+  it("normalizes English capitalization, spacing, and punctuation", () => {
+    expect(normalizeEnglish("  Can I have a hug? ")).toBe("canihaveahug");
+  });
+
+  it("matches an English meaning across timestamped words", () => {
+    const result = matchEnglishPhrase("I miss you so much", [{
+      text: "คิดถึงจัง I miss you so much", start: 1, end: 3, words: [
+        { text: "คิดถึงจัง", start: 1, end: 1.5, probability: 0.98 },
+        { text: " I", start: 1.5, end: 1.7, probability: 0.99 },
+        { text: " miss", start: 1.7, end: 2, probability: 0.99 },
+        { text: " you", start: 2, end: 2.2, probability: 0.99 },
+        { text: " so", start: 2.2, end: 2.4, probability: 0.99 },
+        { text: " much", start: 2.4, end: 2.8, probability: 0.99 },
+      ],
+    }]);
+    expect(result.status).toBe("matched");
+    expect(result.start).toBe(1.5);
+    expect(result.end).toBe(2.8);
   });
 
   it("uses timestamped transcript units for an exact Thai phrase", () => {

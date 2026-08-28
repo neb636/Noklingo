@@ -58,7 +58,14 @@ export const defaultClipPaddingOptions: ClipPaddingOptions = {
 
 export type PronunciationManifestClip = {
   cueCardId: string;
-  thai: string;
+  thaiText: string;
+  englishText: string;
+  thai: PronunciationLanguageClip;
+  english: PronunciationLanguageClip;
+  pairStatus: "complete" | "thai-only" | "english-only" | "ambiguous" | "unmatched";
+};
+
+export type PronunciationLanguageClip = {
   audio?: string;
   status: MatchResult["status"];
   start?: number;
@@ -91,6 +98,11 @@ export function normalizeThai(value: string): string {
     .replace(/[\p{P}\p{S}]+/gu, "");
 }
 
+/** Match-friendly English text; punctuation, spaces, and capitalization are not meaningful. */
+export function normalizeEnglish(value: string): string {
+  return value.normalize("NFKC").toLocaleLowerCase("en").replace(/[^\p{L}\p{N}]+/gu, "");
+}
+
 function levenshtein(left: string, right: string): number {
   const previous = Array.from({ length: right.length + 1 }, (_, index) => index);
   for (let i = 0; i < left.length; i += 1) {
@@ -112,16 +124,16 @@ function unitsFor(segment: TranscriptSegment): TranscriptWord[] {
 }
 
 function candidateForRange(
-  target: string,
   segment: TranscriptSegment,
   segmentIndex: number,
   startCharacter: number,
   endCharacter: number,
   exact: boolean,
   textScore: number,
+  normalize: (value: string) => string,
 ): TranscriptCandidate | undefined {
   const units = unitsFor(segment);
-  const normalizedUnits = units.map((unit) => normalizeThai(unit.text));
+  const normalizedUnits = units.map((unit) => normalize(unit.text));
   let offset = 0;
   let first = -1;
   let last = -1;
@@ -145,34 +157,35 @@ function candidateForRange(
   };
 }
 
-/**
- * Finds phrase envelopes from Whisper timestamp units. Fuzzy matching is deliberately
- * limited to a single recognized segment so unrelated speech cannot be stitched together.
- */
-export function matchThaiPhrase(targetText: string, segments: TranscriptSegment[], options: ThaiMatchOptions = defaultThaiMatchOptions): MatchResult {
-  const target = normalizeThai(targetText);
-  if (!target) return { status: "unmatched", candidates: [], diagnostic: "Cue-card Thai text normalizes to empty." };
+function matchPhrase(
+  targetText: string,
+  segments: TranscriptSegment[],
+  normalize: (value: string) => string,
+  options: ThaiMatchOptions,
+): MatchResult {
+  const target = normalize(targetText);
+  if (!target) return { status: "unmatched", candidates: [], diagnostic: "Target text normalizes to empty." };
   const candidates: TranscriptCandidate[] = [];
 
   for (const [segmentIndex, segment] of segments.entries()) {
-    const text = unitsFor(segment).map((unit) => normalizeThai(unit.text)).join("");
+    const text = unitsFor(segment).map((unit) => normalize(unit.text)).join("");
     if (!text) continue;
     let cursor = text.indexOf(target);
     while (cursor !== -1) {
-      const candidate = candidateForRange(target, segment, segmentIndex, cursor, cursor + target.length, true, 1);
+      const candidate = candidateForRange(segment, segmentIndex, cursor, cursor + target.length, true, 1, normalize);
       if (candidate) candidates.push(candidate);
       cursor = text.indexOf(target, cursor + 1);
     }
 
-    // A bounded edit-distance search tolerates one small ASR spelling/particle error.
-    const minLength = Math.max(1, target.length - Math.max(1, Math.floor(target.length * 0.2)));
-    const maxLength = Math.min(text.length, target.length + Math.max(1, Math.floor(target.length * 0.2)));
+    const tolerance = Math.max(1, Math.floor(target.length * 0.2));
+    const minLength = Math.max(1, target.length - tolerance);
+    const maxLength = Math.min(text.length, target.length + tolerance);
     for (let start = 0; start < text.length; start += 1) {
       for (let length = minLength; length <= maxLength && start + length <= text.length; length += 1) {
         const sample = text.slice(start, start + length);
         const score = 1 - levenshtein(target, sample) / Math.max(target.length, sample.length);
         if (score < 0.82 || sample === target) continue;
-        const candidate = candidateForRange(target, segment, segmentIndex, start, start + length, false, score);
+        const candidate = candidateForRange(segment, segmentIndex, start, start + length, false, score, normalize);
         if (candidate) candidates.push(candidate);
       }
     }
@@ -180,7 +193,12 @@ export function matchThaiPhrase(targetText: string, segments: TranscriptSegment[
 
   const deduped = candidates
     .sort((left, right) => right.confidence - left.confidence || left.start - right.start)
-    .filter((candidate, index, values) => index === 0 || !values.slice(0, index).some((other) => Math.abs(other.start - candidate.start) < 0.04 && Math.abs(other.end - candidate.end) < 0.04));
+    .filter((candidate, index, values) => index === 0 || !values.slice(0, index).some((other) => {
+      const overlap = Math.max(0, Math.min(other.end, candidate.end) - Math.max(other.start, candidate.start));
+      const shorter = Math.min(other.end - other.start, candidate.end - candidate.start);
+      return (Math.abs(other.start - candidate.start) < 0.04 && Math.abs(other.end - candidate.end) < 0.04)
+        || (shorter > 0 && overlap / shorter >= 0.65);
+    }));
   const best = deduped[0];
   if (!best || best.confidence < options.confidenceThreshold) return { status: "unmatched", candidates: deduped, diagnostic: "No candidate reached the confidence threshold." };
   const next = deduped[1];
@@ -188,6 +206,18 @@ export function matchThaiPhrase(targetText: string, segments: TranscriptSegment[
     return { status: "ambiguous", candidates: deduped, diagnostic: "The top candidate is too close to another occurrence." };
   }
   return { status: "matched", candidates: deduped, start: best.start, end: best.end, transcriptMatch: best.transcriptMatch, confidence: best.confidence };
+}
+
+/**
+ * Finds phrase envelopes from Whisper timestamp units. Fuzzy matching is deliberately
+ * limited to a single recognized segment so unrelated speech cannot be stitched together.
+ */
+export function matchThaiPhrase(targetText: string, segments: TranscriptSegment[], options: ThaiMatchOptions = defaultThaiMatchOptions): MatchResult {
+  return matchPhrase(targetText, segments, normalizeThai, options);
+}
+
+export function matchEnglishPhrase(targetText: string, segments: TranscriptSegment[], options: ThaiMatchOptions = defaultThaiMatchOptions): MatchResult {
+  return matchPhrase(targetText, segments, normalizeEnglish, options);
 }
 
 export function paddedClipRange(

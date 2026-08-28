@@ -3,163 +3,217 @@
   "sourceVideo": "/lessons/drafts/question-words/intro.mp4",
   "sourceHash": "d32d3fb844c51f0bc7420081cbae5f0fefc6801dcc05a3d858876a78939a7a25",
   "model": "large-v3",
-  "generatedAt": "2026-08-25T22:19:37.851Z",
+  "generatedAt": "2026-08-27T23:44:27.639Z",
   "clips": [
     {
       "cueCardId": "draft-question-words-1",
-      "thai": "อะไร",
-      "audio": "/lessons/drafts/question-words/audio/draft-question-words-1.m4a",
-      "status": "matched",
-      "start": 0.41000000000000003,
-      "end": 1.51,
-      "transcriptMatch": " อะไร",
-      "confidence": 0.9169803667068481,
-      "candidates": [
-        {
-          "start": 0.56,
-          "end": 1.26,
-          "transcriptMatch": " อะไร",
-          "confidence": 0.9169803667068481,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "อะไร",
+      "englishText": "What",
+      "thai": {
+        "audio": "/lessons/drafts/question-words/audio/draft-question-words-1-th.m4a",
+        "status": "matched",
+        "start": 0.51,
+        "end": 1.375,
+        "transcriptMatch": " อะไร",
+        "confidence": 0.9169803667068481,
+        "candidates": [
+          {
+            "start": 0.56,
+            "end": 1.24,
+            "transcriptMatch": " อะไร",
+            "confidence": 0.9169803667068481,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/question-words/audio/draft-question-words-1-en.m4a",
+        "status": "matched",
+        "start": 0,
+        "end": 0.51,
+        "transcriptMatch": "What",
+        "confidence": 0.9573506164550781,
+        "candidates": [
+          {
+            "start": 0,
+            "end": 0.46,
+            "transcriptMatch": "What",
+            "confidence": 0.9573506164550781,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-question-words-2",
-      "thai": "ที่ไหน",
-      "audio": "/lessons/drafts/question-words/audio/draft-question-words-2.m4a",
-      "status": "matched",
-      "start": 1.6300000000000001,
-      "end": 4.49,
-      "transcriptMatch": " ที่ไหน",
-      "confidence": 0.983668802678585,
-      "candidates": [
-        {
-          "start": 1.78,
-          "end": 4.24,
-          "transcriptMatch": " ที่ไหน",
-          "confidence": 0.983668802678585,
-          "exact": true,
-          "segmentIndex": 0
-        },
-        {
-          "start": 1.78,
-          "end": 5.7,
-          "transcriptMatch": " ที่ไหน เม",
-          "confidence": 0.8567456315926143,
-          "exact": false,
-          "segmentIndex": 0
-        },
-        {
-          "start": 2.06,
-          "end": 4.24,
-          "transcriptMatch": "ี่ไหน",
-          "confidence": 0.8525955708821615,
-          "exact": false,
-          "segmentIndex": 0
-        },
-        {
-          "start": 0.56,
-          "end": 4.24,
-          "transcriptMatch": " อะไร ที่ไหน",
-          "confidence": 0.844616829769952,
-          "exact": false,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "ที่ไหน",
+      "englishText": "Where",
+      "thai": {
+        "audio": "/lessons/drafts/question-words/audio/draft-question-words-2-th.m4a",
+        "status": "matched",
+        "start": 2.41,
+        "end": 3.9775,
+        "transcriptMatch": " ที่ไหน",
+        "confidence": 0.9989792084693909,
+        "candidates": [
+          {
+            "start": 2.46,
+            "end": 4.24,
+            "transcriptMatch": " ที่ไหน",
+            "confidence": 0.9989792084693909,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/question-words/audio/draft-question-words-2-en.m4a",
+        "status": "matched",
+        "start": 1.375,
+        "end": 2.41,
+        "transcriptMatch": " Where",
+        "confidence": 0.8987033706903458,
+        "candidates": [
+          {
+            "start": 1.24,
+            "end": 2.36,
+            "transcriptMatch": " Where",
+            "confidence": 0.8987033706903458,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-question-words-3",
-      "thai": "เมื่อไหร่",
-      "audio": "/lessons/drafts/question-words/audio/draft-question-words-3.m4a",
-      "status": "matched",
-      "start": 4.09,
-      "end": 7.31,
-      "transcriptMatch": " เมื่อไหร่",
-      "confidence": 0.982391757113593,
-      "candidates": [
-        {
-          "start": 4.24,
-          "end": 7.06,
-          "transcriptMatch": " เมื่อไหร่",
-          "confidence": 0.982391757113593,
-          "exact": true,
-          "segmentIndex": 0
-        },
-        {
-          "start": 3.68,
-          "end": 7.06,
-          "transcriptMatch": "หน เมื่อไหร่",
-          "confidence": 0.8965824913680553,
-          "exact": false,
-          "segmentIndex": 0
-        },
-        {
-          "start": 4.24,
-          "end": 8.66,
-          "transcriptMatch": " เมื่อไหร่ ทำ",
-          "confidence": 0.8964293631613255,
-          "exact": false,
-          "segmentIndex": 0
-        },
-        {
-          "start": 4.24,
-          "end": 6.66,
-          "transcriptMatch": " เมื่อไหร",
-          "confidence": 0.8835874362124336,
-          "exact": false,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "เมื่อไหร่",
+      "englishText": "When",
+      "thai": {
+        "audio": "/lessons/drafts/question-words/audio/draft-question-words-3-th.m4a",
+        "status": "matched",
+        "start": 4.92,
+        "end": 6.859999999999999,
+        "transcriptMatch": " เมื่อไหร่",
+        "confidence": 0.987519986970084,
+        "candidates": [
+          {
+            "start": 4.92,
+            "end": 7.16,
+            "transcriptMatch": " เมื่อไหร่",
+            "confidence": 0.987519986970084,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/question-words/audio/draft-question-words-3-en.m4a",
+        "status": "matched",
+        "start": 4.09,
+        "end": 4.92,
+        "transcriptMatch": " When",
+        "confidence": 0.9532615780830384,
+        "candidates": [
+          {
+            "start": 4.24,
+            "end": 4.92,
+            "transcriptMatch": " When",
+            "confidence": 0.9532615780830384,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-question-words-4",
-      "thai": "ทำไม",
-      "audio": "/lessons/drafts/question-words/audio/draft-question-words-4.m4a",
-      "status": "matched",
-      "start": 6.909999999999999,
-      "end": 9.45,
-      "transcriptMatch": " ทำไม",
-      "confidence": 0.9967770898342132,
-      "candidates": [
-        {
-          "start": 7.06,
-          "end": 9.2,
-          "transcriptMatch": " ทำไม",
-          "confidence": 0.9967770898342132,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "ทำไม",
+      "englishText": "Why",
+      "thai": {
+        "audio": "/lessons/drafts/question-words/audio/draft-question-words-4-th.m4a",
+        "status": "matched",
+        "start": 8.129999999999999,
+        "end": 9.272499999999999,
+        "transcriptMatch": " ทำไม",
+        "confidence": 0.9984840297698975,
+        "candidates": [
+          {
+            "start": 8.28,
+            "end": 9.16,
+            "transcriptMatch": " ทำไม",
+            "confidence": 0.9984840297698975,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/question-words/audio/draft-question-words-4-en.m4a",
+        "status": "matched",
+        "start": 7.01,
+        "end": 8.1,
+        "transcriptMatch": " Why",
+        "confidence": 0.9570156550407409,
+        "candidates": [
+          {
+            "start": 7.16,
+            "end": 7.92,
+            "transcriptMatch": " Why",
+            "confidence": 0.9570156550407409,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-question-words-5",
-      "thai": "ยังไง",
-      "audio": "/lessons/drafts/question-words/audio/draft-question-words-5.m4a",
-      "status": "matched",
-      "start": 9.45,
-      "end": 12.13,
-      "transcriptMatch": " ยังไง",
-      "confidence": 0.9964022650718689,
-      "candidates": [
-        {
-          "start": 9.6,
-          "end": 11.88,
-          "transcriptMatch": " ยังไง",
-          "confidence": 0.9964022650718689,
-          "exact": true,
-          "segmentIndex": 0
-        },
-        {
-          "start": 8.66,
-          "end": 11.88,
-          "transcriptMatch": "ไม ยังไง",
-          "confidence": 0.8494788165887197,
-          "exact": false,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "ยังไง",
+      "englishText": "How",
+      "thai": {
+        "audio": "/lessons/drafts/question-words/audio/draft-question-words-5-th.m4a",
+        "status": "matched",
+        "start": 10.57,
+        "end": 12.09,
+        "transcriptMatch": " ยังไง",
+        "confidence": 0.9985078334808349,
+        "candidates": [
+          {
+            "start": 10.72,
+            "end": 11.84,
+            "transcriptMatch": " ยังไง",
+            "confidence": 0.9985078334808349,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/question-words/audio/draft-question-words-5-en.m4a",
+        "status": "matched",
+        "start": 9.272499999999999,
+        "end": 10.54,
+        "transcriptMatch": " How",
+        "confidence": 0.9957354521751404,
+        "candidates": [
+          {
+            "start": 9.16,
+            "end": 10.36,
+            "transcriptMatch": " How",
+            "confidence": 0.9957354521751404,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     }
   ]
 }

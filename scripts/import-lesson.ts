@@ -27,16 +27,33 @@ if (hasAudioDir === hasAudioClips) throw new Error("Provide exactly one audio so
 
 const AudioClipManifestSchema = z.object({
   clips: z.array(z.object({
-    output: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*\.m4a$/),
-    startSeconds: z.number().finite().nonnegative(),
-    endSeconds: z.number().finite().positive(),
+    cueCardId: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
+    thai: z.object({
+      output: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*-th\.m4a$/),
+      startSeconds: z.number().finite().nonnegative(),
+      endSeconds: z.number().finite().positive(),
+    }),
+    english: z.object({
+      output: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*-en\.m4a$/),
+      startSeconds: z.number().finite().nonnegative(),
+      endSeconds: z.number().finite().positive(),
+    }),
   })).min(1),
 });
 const audioClipManifest = hasAudioClips
   ? AudioClipManifestSchema.parse(JSON.parse(readFileSync(audioClipsPath, "utf8")))
   : undefined;
-const clipByOutput = new Map(audioClipManifest?.clips.map((clip) => [clip.output, clip]) ?? []);
-if (clipByOutput.size !== (audioClipManifest?.clips.length ?? 0)) throw new Error("Audio clip output names must be unique.");
+if (audioClipManifest && new Set(audioClipManifest.clips.map((clip) => clip.cueCardId)).size !== audioClipManifest.clips.length) {
+  throw new Error("Audio clip cue-card ids must be unique.");
+}
+for (const clip of audioClipManifest?.clips ?? []) {
+  if (clip.thai.output !== `${clip.cueCardId}-th.m4a` || clip.english.output !== `${clip.cueCardId}-en.m4a`) {
+    throw new Error(`Audio outputs must use the cue-card id and -th/-en suffixes: ${clip.cueCardId}.`);
+  }
+}
+const audioRanges = audioClipManifest?.clips.flatMap((clip) => [clip.thai, clip.english]) ?? [];
+const clipByOutput = new Map(audioRanges.map((clip) => [clip.output, clip]));
+if (clipByOutput.size !== audioRanges.length) throw new Error("Audio clip output names must be unique.");
 
 const raw = JSON.parse(readFileSync(definitionPath, "utf8"));
 const lesson = VideoLessonSchema.parse(raw.lesson);
@@ -59,7 +76,7 @@ if (packageCards.length !== declaredCardIds.size
   throw new Error("The package cue cards must exactly match lesson.cueCardIds, without duplicates or extras.");
 }
 for (const audioPath of [
-  ...packageCards.map((card) => card.phraseAudioSrc),
+  ...packageCards.flatMap((card) => [card.thaiAudioSrc, card.englishAudioSrc]),
   ...lesson.quizBank.map((question) => question.audioSrc),
 ].filter((path): path is string => Boolean(path))) {
   if (!audioPath.startsWith(`${expectedMediaRoot}/audio/`)) {
@@ -77,7 +94,7 @@ if (!sourceMetadata.videoCodecs.includes("h264") || !sourceMetadata.audioCodecs.
 if (Math.abs(sourceMetadata.durationSeconds - lesson.media.durationSeconds) > 0.25) {
   throw new Error(`Declared duration ${lesson.media.durationSeconds}s does not match source duration ${sourceMetadata.durationSeconds.toFixed(3)}s.`);
 }
-for (const clip of audioClipManifest?.clips ?? []) {
+for (const clip of audioRanges) {
   const duration = clip.endSeconds - clip.startSeconds;
   if (duration < 0.25 || duration > 10 || clip.endSeconds > sourceMetadata.durationSeconds) {
     throw new Error(`Invalid audio excerpt ${clip.output}: use a 0.25–10 second range inside source.mp4.`);
@@ -104,7 +121,7 @@ if (packageIssues.length) {
 }
 
 const declaredAudio = [...new Set([
-  ...packageCards.map((card) => card.phraseAudioSrc),
+  ...packageCards.flatMap((card) => [card.thaiAudioSrc, card.englishAudioSrc]),
   ...lesson.quizBank.map((question) => question.audioSrc),
 ].filter((path): path is string => Boolean(path)))];
 const declaredOutputs = new Set(declaredAudio.map((path) => path.split("/audio/")[1]));
@@ -133,12 +150,12 @@ execFileSync("ffmpeg", ["-y", "-ss", "00:00:01", "-i", sourcePath, "-frames:v", 
 const installedAudioDir = join(mediaDir, "audio");
 mkdirSync(installedAudioDir, { recursive: true });
 if (hasAudioDir) cpSync(audioDir, installedAudioDir, { recursive: true });
-for (const clip of audioClipManifest?.clips ?? []) {
-  const clipDuration = clip.endSeconds - clip.startSeconds;
-  execFileSync("ffmpeg", [
-    "-y", "-ss", String(clip.startSeconds), "-i", sourcePath, "-t", String(clipDuration),
-    "-vn", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", join(installedAudioDir, clip.output),
-  ], { stdio: "inherit" });
+if (audioRanges.length) {
+  const filters = audioRanges.map((clip, index) => `[0:a]atrim=start=${clip.startSeconds}:end=${clip.endSeconds},asetpts=PTS-STARTPTS[a${index}]`).join(";");
+  const outputs = audioRanges.flatMap((clip, index) => [
+    "-map", `[a${index}]`, "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", join(installedAudioDir, clip.output),
+  ]);
+  execFileSync("ffmpeg", ["-y", "-i", sourcePath, "-filter_complex", filters, ...outputs], { stdio: "inherit" });
 }
 
 const normalizedMetadata = probeMedia(join(mediaDir, "intro.mp4"));
@@ -146,7 +163,7 @@ if (!normalizedMetadata.videoCodecs.includes("h264") || !normalizedMetadata.audi
   || Math.abs(normalizedMetadata.durationSeconds - lesson.media.durationSeconds) > 0.25) {
   throw new Error("Normalized lesson media failed codec or duration verification.");
 }
-for (const path of [lesson.media.videoSrc, lesson.media.posterSrc, ...packageCards.map((card) => card.phraseAudioSrc), ...lesson.quizBank.map((question) => question.audioSrc)]) {
+for (const path of [lesson.media.videoSrc, lesson.media.posterSrc, ...packageCards.flatMap((card) => [card.thaiAudioSrc, card.englishAudioSrc]), ...lesson.quizBank.map((question) => question.audioSrc)]) {
   if (path && !existsSync(publicAsset(path))) throw new Error(`Generated bundle is missing declared asset: ${path}`);
 }
 for (const audioPath of declaredAudio) {
@@ -165,7 +182,7 @@ function intakeAsset(localPath: string, targetLesson: VideoLesson, cards: CueCar
   if (localPath === targetLesson.media.videoSrc) return sourcePath;
   if (localPath === targetLesson.media.posterSrc) return sourcePath; // The importer creates the poster from this verified source.
   const declaredAudio = new Set([
-    ...cards.map((card) => card.phraseAudioSrc),
+    ...cards.flatMap((card) => [card.thaiAudioSrc, card.englishAudioSrc]),
     ...targetLesson.quizBank.map((question) => question.audioSrc),
   ].filter((path): path is string => Boolean(path)));
   if (!declaredAudio.has(localPath)) return undefined;

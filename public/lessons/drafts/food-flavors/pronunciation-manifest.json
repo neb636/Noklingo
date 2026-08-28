@@ -3,151 +3,246 @@
   "sourceVideo": "/lessons/drafts/food-flavors/intro.mp4",
   "sourceHash": "812494cc82f9901cce5a1c71c4f06cb7f052767ae5f8b43915bdd2537c247655",
   "model": "large-v3",
-  "generatedAt": "2026-08-25T22:27:06.008Z",
+  "generatedAt": "2026-08-27T23:44:30.645Z",
   "clips": [
     {
       "cueCardId": "draft-food-flavors-1",
-      "thai": "เปรี้ยว",
-      "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-1.m4a",
-      "status": "matched",
-      "start": 0.49,
-      "end": 2.13,
-      "transcriptMatch": " เปรี้ยว",
-      "confidence": 0.9987120833396912,
-      "candidates": [
-        {
-          "start": 0.64,
-          "end": 1.88,
-          "transcriptMatch": " เปรี้ยว",
-          "confidence": 0.9987120833396912,
-          "exact": true,
-          "segmentIndex": 0
-        },
-        {
-          "start": 0.4,
-          "end": 1.88,
-          "transcriptMatch": "์ เปรี้ยว",
-          "confidence": 0.8885639214515686,
-          "exact": false,
-          "segmentIndex": 0
-        },
-        {
-          "start": 0.64,
-          "end": 1.48,
-          "transcriptMatch": " เปรี้ย",
-          "confidence": 0.8726848128012249,
-          "exact": false,
-          "segmentIndex": 0
-        },
-        {
-          "start": 0.64,
-          "end": 2.42,
-          "transcriptMatch": " เปรี้ยว ห",
-          "confidence": 0.8720234689116478,
-          "exact": false,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "เปรี้ยว",
+      "englishText": "Sour",
+      "thai": {
+        "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-1-th.m4a",
+        "status": "matched",
+        "start": 0.52,
+        "end": 1.7375000000000003,
+        "transcriptMatch": " เปรี้ยว",
+        "confidence": 0.996177234172821,
+        "candidates": [
+          {
+            "start": 0.58,
+            "end": 1.86,
+            "transcriptMatch": " เปรี้ยว",
+            "confidence": 0.996177234172821,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-1-en.m4a",
+        "status": "matched",
+        "start": 0,
+        "end": 0.52,
+        "transcriptMatch": "Sour",
+        "confidence": 0.9648634642362595,
+        "candidates": [
+          {
+            "start": 0,
+            "end": 0.46,
+            "transcriptMatch": "Sour",
+            "confidence": 0.9648634642362595,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-food-flavors-2",
-      "thai": "หวาน",
-      "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-2.m4a",
-      "status": "matched",
-      "start": 1.73,
-      "end": 4.07,
-      "transcriptMatch": " หวาน",
-      "confidence": 0.9659659880399704,
-      "candidates": [
-        {
-          "start": 1.88,
-          "end": 3.82,
-          "transcriptMatch": " หวาน",
-          "confidence": 0.9659659880399704,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "หวาน",
+      "englishText": "Sweet",
+      "thai": {
+        "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-2-th.m4a",
+        "status": "matched",
+        "start": 2.61,
+        "end": 3.8175,
+        "transcriptMatch": " หวาน",
+        "confidence": 0.9997550773620606,
+        "candidates": [
+          {
+            "start": 2.76,
+            "end": 3.88,
+            "transcriptMatch": " หวาน",
+            "confidence": 0.9997550773620606,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-2-en.m4a",
+        "status": "matched",
+        "start": 1.7375000000000003,
+        "end": 2.61,
+        "transcriptMatch": " Sweet",
+        "confidence": 0.9241528654098511,
+        "candidates": [
+          {
+            "start": 1.86,
+            "end": 2.46,
+            "transcriptMatch": " Sweet",
+            "confidence": 0.9241528654098511,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-food-flavors-3",
-      "thai": "เค็ม",
-      "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-3.m4a",
-      "status": "matched",
-      "start": 3.67,
-      "end": 5.91,
-      "transcriptMatch": " เค็ม",
-      "confidence": 0.9761244118213653,
-      "candidates": [
-        {
-          "start": 3.82,
-          "end": 5.66,
-          "transcriptMatch": " เค็ม",
-          "confidence": 0.9761244118213653,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "เค็ม",
+      "englishText": "Salty",
+      "thai": {
+        "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-3-th.m4a",
+        "status": "matched",
+        "start": 4.8,
+        "end": 5.77,
+        "transcriptMatch": " เค็ม",
+        "confidence": 0.9829679322242737,
+        "candidates": [
+          {
+            "start": 4.8,
+            "end": 5.8,
+            "transcriptMatch": " เค็ม",
+            "confidence": 0.9829679322242737,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-3-en.m4a",
+        "status": "matched",
+        "start": 3.8175,
+        "end": 4.8,
+        "transcriptMatch": " Salty",
+        "confidence": 0.9640818399190902,
+        "candidates": [
+          {
+            "start": 3.88,
+            "end": 4.8,
+            "transcriptMatch": " Salty",
+            "confidence": 0.9640818399190902,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-food-flavors-4",
-      "thai": "เผ็ด",
-      "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-4.m4a",
-      "status": "matched",
-      "start": 5.51,
-      "end": 7.87,
-      "transcriptMatch": " เผ็ด",
-      "confidence": 0.9853024023771286,
-      "candidates": [
-        {
-          "start": 5.66,
-          "end": 7.62,
-          "transcriptMatch": " เผ็ด",
-          "confidence": 0.9853024023771286,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "เผ็ด",
+      "englishText": "Spicy",
+      "thai": {
+        "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-4-th.m4a",
+        "status": "matched",
+        "start": 6.58,
+        "end": 7.945,
+        "transcriptMatch": " เผ็ด",
+        "confidence": 0.9935555112361908,
+        "candidates": [
+          {
+            "start": 6.58,
+            "end": 7.9,
+            "transcriptMatch": " เผ็ด",
+            "confidence": 0.9935555112361908,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-4-en.m4a",
+        "status": "matched",
+        "start": 5.77,
+        "end": 6.58,
+        "transcriptMatch": " Spicy",
+        "confidence": 0.9951196527481079,
+        "candidates": [
+          {
+            "start": 5.8,
+            "end": 6.58,
+            "transcriptMatch": " Spicy",
+            "confidence": 0.9951196527481079,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-food-flavors-5",
-      "thai": "ขม",
-      "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-5.m4a",
-      "status": "matched",
-      "start": 7.949999999999999,
-      "end": 10.33,
-      "transcriptMatch": " ขม",
-      "confidence": 0.9954673063755035,
-      "candidates": [
-        {
-          "start": 8.1,
-          "end": 10.08,
-          "transcriptMatch": " ขม",
-          "confidence": 0.9954673063755035,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "ขม",
+      "englishText": "bitter",
+      "thai": {
+        "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-5-th.m4a",
+        "status": "matched",
+        "start": 9.3,
+        "end": 10.51,
+        "transcriptMatch": " ขม",
+        "confidence": 0.9973410367965698,
+        "candidates": [
+          {
+            "start": 9.3,
+            "end": 10.26,
+            "transcriptMatch": " ขม",
+            "confidence": 0.9973410367965698,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-5-en.m4a",
+        "status": "matched",
+        "start": 7.945,
+        "end": 9.3,
+        "transcriptMatch": " Bitter",
+        "confidence": 0.9954091024398803,
+        "candidates": [
+          {
+            "start": 7.9,
+            "end": 9.3,
+            "transcriptMatch": " Bitter",
+            "confidence": 0.9954091024398803,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-food-flavors-6",
-      "thai": "จืด",
-      "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-6.m4a",
-      "status": "matched",
-      "start": 10.29,
-      "end": 12.47,
-      "transcriptMatch": " จืด",
-      "confidence": 0.9945257759094238,
-      "candidates": [
-        {
-          "start": 10.44,
-          "end": 12.22,
-          "transcriptMatch": " จืด",
-          "confidence": 0.9945257759094238,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "จืด",
+      "englishText": "bland",
+      "thai": {
+        "audio": "/lessons/drafts/food-flavors/audio/draft-food-flavors-6-th.m4a",
+        "status": "matched",
+        "start": 10.6425,
+        "end": 12.49,
+        "transcriptMatch": " จืด",
+        "confidence": 0.9612162482738495,
+        "candidates": [
+          {
+            "start": 10.42,
+            "end": 12.24,
+            "transcriptMatch": " จืด",
+            "confidence": 0.9612162482738495,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "status": "unmatched",
+        "candidates": [],
+        "diagnostic": "No candidate reached the confidence threshold."
+      },
+      "pairStatus": "thai-only"
     }
   ]
 }

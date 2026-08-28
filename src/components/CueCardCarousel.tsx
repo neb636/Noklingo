@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, RotateCcw, Sparkles, VolumeX } from "lucide-react";
 import type { CueCard, VideoLesson } from "@/domain/schemas";
 import { withPreferredParticle } from "@/lib/language-display";
-import { pronunciationAudioSrc } from "@/lib/pronunciation-audio";
+import { pronunciationAudioAssets } from "@/lib/pronunciation-audio";
 import { useStudyStore } from "@/state/study-store";
-import { PhraseAudioButton } from "./PhraseAudioButton";
+import { ConceptAudioButton } from "./PhraseAudioButton";
 
 export function CueCardCarousel({
   lesson,
@@ -83,7 +83,7 @@ export function CueCardCarousel({
       <div className="cue-carousel-track" ref={trackRef} onScroll={syncActiveCard} tabIndex={0} aria-label={`${lesson.title} cue cards`}>
         {cards.map((card, index) => {
           const hasBack = Boolean(card.usage || card.literalNote || card.culturalNote);
-          const hasAudio = Boolean(pronunciationAudioSrc(card));
+          const hasAudio = Boolean(pronunciationAudioAssets(card).thaiSrc);
           const flipped = flippedId === card.id;
           return (
             <article
@@ -98,7 +98,7 @@ export function CueCardCarousel({
                   <h2>{card.naturalMeaning}</h2>
                   {settings.showThaiScript && <p className="thai cue-card-thai" lang="th">{withPreferredParticle(card.thai, settings.politeParticle)}</p>}
                   {settings.showRomanization && <p className="cue-card-romanization">{withPreferredParticle(card.romanization, settings.politeParticle)}</p>}
-                  {hasAudio ? <div className="cue-card-listen"><PhraseAudioButton card={card} compact /><span>Listen again</span></div> : <div className="cue-card-audio-unavailable"><VolumeX size={17} /><span>Audio coming soon</span></div>}
+                  {hasAudio ? <div className="cue-card-listen"><ConceptAudioButton card={card} compact /><span>Listen again</span></div> : <div className="cue-card-audio-unavailable"><VolumeX size={17} /><span>Audio coming soon</span></div>}
                   {hasBack && <button ref={(node) => { frontFlipRefs.current[index] = node; }} type="button" className="flip-card-button" onClick={() => { flipFocusIndex.current = index; setFlippedId(card.id); }}><RotateCcw size={18} /> Tap to flip</button>}
                 </div>
                 {hasBack && <div className="learning-card-face learning-card-back" aria-hidden={!flipped} inert={!flipped}>

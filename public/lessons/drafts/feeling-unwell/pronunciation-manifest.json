@@ -3,195 +3,217 @@
   "sourceVideo": "/lessons/drafts/feeling-unwell/intro.mp4",
   "sourceHash": "94e3f2b14f06afaeb60917f3dcd8fdc14a9c634ce475a85a211856e014bd4f8f",
   "model": "large-v3",
-  "generatedAt": "2026-08-25T22:26:41.037Z",
+  "generatedAt": "2026-08-27T23:44:30.282Z",
   "clips": [
     {
       "cueCardId": "draft-feeling-unwell-1",
-      "thai": "ก็ดี",
-      "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-1.m4a",
-      "status": "matched",
-      "start": 4.2299999999999995,
-      "end": 5.69,
-      "transcriptMatch": "ก็ดี",
-      "confidence": 0.9860913676023484,
-      "candidates": [
-        {
-          "start": 4.38,
-          "end": 5.44,
-          "transcriptMatch": "ก็ดี",
-          "confidence": 0.9860913676023484,
-          "exact": true,
-          "segmentIndex": 2
-        }
-      ]
+      "thaiText": "ก็ดี",
+      "englishText": "I’m good",
+      "thai": {
+        "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-1-th.m4a",
+        "status": "matched",
+        "start": 4.2299999999999995,
+        "end": 5.44,
+        "transcriptMatch": " ก็ดี",
+        "confidence": 0.9739591403305531,
+        "candidates": [
+          {
+            "start": 4.38,
+            "end": 5.44,
+            "transcriptMatch": " ก็ดี",
+            "confidence": 0.9739591403305531,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-1-en.m4a",
+        "status": "matched",
+        "start": 5.44,
+        "end": 6.59,
+        "transcriptMatch": " I’m good",
+        "confidence": 0.9243135538534907,
+        "candidates": [
+          {
+            "start": 5.44,
+            "end": 6.34,
+            "transcriptMatch": " I’m good",
+            "confidence": 0.9243135538534907,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-feeling-unwell-2",
-      "thai": "ไม่ค่อยสบาย",
-      "status": "ambiguous",
-      "candidates": [
-        {
-          "start": 6.36,
-          "end": 8.2,
-          "transcriptMatch": " ไม่ค่อยสบาย",
-          "confidence": 0.9993963885307312,
-          "exact": true,
-          "segmentIndex": 2
-        },
-        {
-          "start": 6,
-          "end": 8.2,
-          "transcriptMatch": " good ไม่ค่อยสบาย",
-          "confidence": 0.9255862347284952,
-          "exact": false,
-          "segmentIndex": 2
-        }
-      ],
-      "diagnostic": "The top candidate is too close to another occurrence."
+      "thaiText": "ไม่ค่อยสบาย",
+      "englishText": "I’m not feeling very well",
+      "thai": {
+        "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-2-th.m4a",
+        "status": "matched",
+        "start": 6.62,
+        "end": 8.22,
+        "transcriptMatch": " ไม่ค่อยสบาย",
+        "confidence": 0.9989498123526573,
+        "candidates": [
+          {
+            "start": 6.38,
+            "end": 8.22,
+            "transcriptMatch": " ไม่ค่อยสบาย",
+            "confidence": 0.9989498123526573,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-2-en.m4a",
+        "status": "matched",
+        "start": 8.22,
+        "end": 10.344999999999999,
+        "transcriptMatch": " I’m not feeling very well",
+        "confidence": 0.990149757521493,
+        "candidates": [
+          {
+            "start": 8.22,
+            "end": 10.46,
+            "transcriptMatch": " I’m not feeling very well",
+            "confidence": 0.990149757521493,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-feeling-unwell-3",
-      "thai": "ช่วงนี้ยุ่งมาก",
-      "status": "ambiguous",
-      "candidates": [
-        {
-          "start": 10.58,
-          "end": 11.96,
-          "transcriptMatch": " ช่วงนี้ยุ่งมาก",
-          "confidence": 0.9990667182207107,
-          "exact": true,
-          "segmentIndex": 3
-        },
-        {
-          "start": 10.06,
-          "end": 11.96,
-          "transcriptMatch": " well ช่วงนี้ยุ่งมาก",
-          "confidence": 0.9404372059259659,
-          "exact": false,
-          "segmentIndex": 3
-        },
-        {
-          "start": 10.74,
-          "end": 11.96,
-          "transcriptMatch": "่วงนี้ยุ่งมาก",
-          "confidence": 0.9361655362550314,
-          "exact": false,
-          "segmentIndex": 3
-        },
-        {
-          "start": 10.58,
-          "end": 11.56,
-          "transcriptMatch": " ช่วงนี้ยุ่งมา",
-          "confidence": 0.9361320083172291,
-          "exact": false,
-          "segmentIndex": 3
-        },
-        {
-          "start": 10.06,
-          "end": 11.56,
-          "transcriptMatch": " well ช่วงนี้ยุ่งมา",
-          "confidence": 0.8733215799501964,
-          "exact": false,
-          "segmentIndex": 3
-        },
-        {
-          "start": 10.84,
-          "end": 11.96,
-          "transcriptMatch": "วงนี้ยุ่งมาก",
-          "confidence": 0.8732395719460079,
-          "exact": false,
-          "segmentIndex": 3
-        },
-        {
-          "start": 10.74,
-          "end": 11.56,
-          "transcriptMatch": "่วงนี้ยุ่งมา",
-          "confidence": 0.8732186657360622,
-          "exact": false,
-          "segmentIndex": 3
-        }
-      ],
-      "diagnostic": "The top candidate is too close to another occurrence."
+      "thaiText": "ช่วงนี้ยุ่งมาก",
+      "englishText": "I’ve been very busy lately",
+      "thai": {
+        "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-3-th.m4a",
+        "status": "matched",
+        "start": 10.45,
+        "end": 12,
+        "transcriptMatch": " ช่วงนี้ยุ่งมาก",
+        "confidence": 0.9989505565166473,
+        "candidates": [
+          {
+            "start": 10.6,
+            "end": 12,
+            "transcriptMatch": " ช่วงนี้ยุ่งมาก",
+            "confidence": 0.9989505565166473,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-3-en.m4a",
+        "status": "matched",
+        "start": 12,
+        "end": 13.655000000000001,
+        "transcriptMatch": " I’ve been very busy lately",
+        "confidence": 0.9935371484075274,
+        "candidates": [
+          {
+            "start": 12,
+            "end": 13.8,
+            "transcriptMatch": " I’ve been very busy lately",
+            "confidence": 0.9935371484075274,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-feeling-unwell-4",
-      "thai": "ก็โอเค",
-      "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-4.m4a",
-      "status": "matched",
-      "start": 13.629999999999999,
-      "end": 15.19,
-      "transcriptMatch": " ก็โอเค",
-      "confidence": 0.9884405303001403,
-      "candidates": [
-        {
-          "start": 13.78,
-          "end": 14.94,
-          "transcriptMatch": " ก็โอเค",
-          "confidence": 0.9884405303001403,
-          "exact": true,
-          "segmentIndex": 4
-        },
-        {
-          "start": 13.28,
-          "end": 14.94,
-          "transcriptMatch": " lately ก็โอเค",
-          "confidence": 0.8645277294090816,
-          "exact": false,
-          "segmentIndex": 4
-        },
-        {
-          "start": 13.78,
-          "end": 15.62,
-          "transcriptMatch": " ก็โอเค I",
-          "confidence": 0.8557644363812038,
-          "exact": false,
-          "segmentIndex": 4
-        },
-        {
-          "start": 14.28,
-          "end": 14.94,
-          "transcriptMatch": "็โอเค",
-          "confidence": 0.8521669479211172,
-          "exact": false,
-          "segmentIndex": 4
-        }
-      ]
+      "thaiText": "ก็โอเค",
+      "englishText": "I’m okay",
+      "thai": {
+        "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-4-th.m4a",
+        "status": "matched",
+        "start": 13.655000000000001,
+        "end": 14.92,
+        "transcriptMatch": " ก็โอเค",
+        "confidence": 0.9945780882835389,
+        "candidates": [
+          {
+            "start": 13.8,
+            "end": 14.92,
+            "transcriptMatch": " ก็โอเค",
+            "confidence": 0.9945780882835389,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-4-en.m4a",
+        "status": "matched",
+        "start": 14.92,
+        "end": 16.439999999999998,
+        "transcriptMatch": " I’m okay",
+        "confidence": 0.982327444255352,
+        "candidates": [
+          {
+            "start": 14.92,
+            "end": 16.52,
+            "transcriptMatch": " I’m okay",
+            "confidence": 0.982327444255352,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-feeling-unwell-5",
-      "thai": "เหมือนเดิม",
-      "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-5.m4a",
-      "status": "matched",
-      "start": 16.37,
-      "end": 17.93,
-      "transcriptMatch": "เหมือนเดิม",
-      "confidence": 0.990411593743733,
-      "candidates": [
-        {
-          "start": 16.52,
-          "end": 17.68,
-          "transcriptMatch": "เหมือนเดิม",
-          "confidence": 0.990411593743733,
-          "exact": true,
-          "segmentIndex": 5
-        },
-        {
-          "start": 16.52,
-          "end": 18.5,
-          "transcriptMatch": "เหมือนเดิม Same",
-          "confidence": 0.9039551119506358,
-          "exact": false,
-          "segmentIndex": 5
-        },
-        {
-          "start": 16.52,
-          "end": 17.46,
-          "transcriptMatch": "เหมือนเดิ",
-          "confidence": 0.900820168375969,
-          "exact": false,
-          "segmentIndex": 5
-        }
-      ]
+      "thaiText": "เหมือนเดิม",
+      "englishText": "Same as always",
+      "thai": {
+        "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-5-th.m4a",
+        "status": "matched",
+        "start": 16.439999999999998,
+        "end": 17.7,
+        "transcriptMatch": " เหมือนเดิม",
+        "confidence": 0.9973208206040518,
+        "candidates": [
+          {
+            "start": 16.52,
+            "end": 17.7,
+            "transcriptMatch": " เหมือนเดิม",
+            "confidence": 0.9973208206040518,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-5-en.m4a",
+        "status": "matched",
+        "start": 17.7,
+        "end": 19.31,
+        "transcriptMatch": " Same as always",
+        "confidence": 0.9801266527175904,
+        "candidates": [
+          {
+            "start": 17.7,
+            "end": 19.06,
+            "transcriptMatch": " Same as always",
+            "confidence": 0.9801266527175904,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     }
   ]
 }

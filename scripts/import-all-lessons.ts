@@ -44,7 +44,7 @@ for (const packageDir of packageDirs) {
   packageCards.push(...cards);
   suppliedAssets.add(lesson.media.videoSrc);
   suppliedAssets.add(lesson.media.posterSrc);
-  for (const path of [...cards.map((card) => card.phraseAudioSrc), ...lesson.quizBank.map((question) => question.audioSrc)]) {
+  for (const path of [...cards.flatMap((card) => [card.thaiAudioSrc, card.englishAudioSrc]), ...lesson.quizBank.map((question) => question.audioSrc)]) {
     if (path) suppliedAssets.add(path);
   }
 }

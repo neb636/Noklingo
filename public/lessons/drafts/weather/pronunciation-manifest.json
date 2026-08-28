@@ -3,203 +3,283 @@
   "sourceVideo": "/lessons/drafts/weather/intro.mp4",
   "sourceHash": "dc1953b9f0ca785e90c0c58ef66859383eacb730ed155a3d269f91062a682846",
   "model": "large-v3",
-  "generatedAt": "2026-08-25T22:26:01.953Z",
+  "generatedAt": "2026-08-27T23:44:29.887Z",
   "clips": [
     {
       "cueCardId": "draft-weather-1",
-      "thai": "ร้อน",
-      "audio": "/lessons/drafts/weather/audio/draft-weather-1.m4a",
-      "status": "matched",
-      "start": 0.39,
-      "end": 1.73,
-      "transcriptMatch": " ร้อน",
-      "confidence": 0.9993429017066956,
-      "candidates": [
-        {
-          "start": 0.54,
-          "end": 1.48,
-          "transcriptMatch": " ร้อน",
-          "confidence": 0.9993429017066956,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "ร้อน",
+      "englishText": "Hot",
+      "thai": {
+        "audio": "/lessons/drafts/weather/audio/draft-weather-1-th.m4a",
+        "status": "overridden",
+        "start": 0.52,
+        "end": 1.49,
+        "transcriptMatch": "ร้อน",
+        "confidence": 1,
+        "candidates": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/weather/audio/draft-weather-1-en.m4a",
+        "status": "matched",
+        "start": 0,
+        "end": 0.52,
+        "transcriptMatch": "Hot",
+        "confidence": 0.9662606751918793,
+        "candidates": [
+          {
+            "start": 0,
+            "end": 0.5,
+            "transcriptMatch": "Hot",
+            "confidence": 0.9662606751918793,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-weather-2",
-      "thai": "เย็น",
-      "audio": "/lessons/drafts/weather/audio/draft-weather-2.m4a",
-      "status": "matched",
-      "start": 1.33,
-      "end": 3.75,
-      "transcriptMatch": " เย็น",
-      "confidence": 0.9770587703771889,
-      "candidates": [
-        {
-          "start": 1.48,
-          "end": 3.5,
-          "transcriptMatch": " เย็น",
-          "confidence": 0.9770587703771889,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "เย็น",
+      "englishText": "Cold",
+      "thai": {
+        "audio": "/lessons/drafts/weather/audio/draft-weather-2-th.m4a",
+        "status": "matched",
+        "start": 1.49,
+        "end": 3.36,
+        "transcriptMatch": " เย็น",
+        "confidence": 0.9643937532231212,
+        "candidates": [
+          {
+            "start": 0.5,
+            "end": 3.36,
+            "transcriptMatch": " เย็น",
+            "confidence": 0.9643937532231212,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/weather/audio/draft-weather-2-en.m4a",
+        "status": "overridden",
+        "start": 3.36,
+        "end": 4.1975,
+        "transcriptMatch": "Cold",
+        "confidence": 1,
+        "candidates": []
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-weather-3",
-      "thai": "หนาว",
-      "audio": "/lessons/drafts/weather/audio/draft-weather-3.m4a",
-      "status": "matched",
-      "start": 3.35,
-      "end": 6.07,
-      "transcriptMatch": " หนาว",
-      "confidence": 0.9973347449302673,
-      "candidates": [
-        {
-          "start": 3.5,
-          "end": 5.82,
-          "transcriptMatch": " หนาว",
-          "confidence": 0.9973347449302673,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "หนาว",
+      "englishText": "Very cold",
+      "thai": {
+        "audio": "/lessons/drafts/weather/audio/draft-weather-3-th.m4a",
+        "status": "matched",
+        "start": 4.890000000000001,
+        "end": 5.7925,
+        "transcriptMatch": " หนาว",
+        "confidence": 0.9986996388435364,
+        "candidates": [
+          {
+            "start": 4.98,
+            "end": 5.78,
+            "transcriptMatch": " หนาว",
+            "confidence": 0.9986996388435364,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/weather/audio/draft-weather-3-en.m4a",
+        "status": "matched",
+        "start": 4.1975,
+        "end": 4.890000000000001,
+        "transcriptMatch": " Very cold",
+        "confidence": 0.9252294486761093,
+        "candidates": [
+          {
+            "start": 4.22,
+            "end": 4.8,
+            "transcriptMatch": " Very cold",
+            "confidence": 0.9252294486761093,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-weather-4",
-      "thai": "ฝนตก",
-      "audio": "/lessons/drafts/weather/audio/draft-weather-4.m4a",
-      "status": "matched",
-      "start": 5.67,
-      "end": 7.91,
-      "transcriptMatch": " ฝนตก",
-      "confidence": 0.9989290690422058,
-      "candidates": [
-        {
-          "start": 5.82,
-          "end": 7.66,
-          "transcriptMatch": " ฝนตก",
-          "confidence": 0.9989290690422058,
-          "exact": true,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "ฝนตก",
+      "englishText": "Raining",
+      "thai": {
+        "audio": "/lessons/drafts/weather/audio/draft-weather-4-th.m4a",
+        "status": "matched",
+        "start": 6.619999999999999,
+        "end": 7.5649999999999995,
+        "transcriptMatch": " ฝนตก",
+        "confidence": 0.9985654097795487,
+        "candidates": [
+          {
+            "start": 6.72,
+            "end": 7.62,
+            "transcriptMatch": " ฝนตก",
+            "confidence": 0.9985654097795487,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/weather/audio/draft-weather-4-en.m4a",
+        "status": "matched",
+        "start": 5.7925,
+        "end": 6.619999999999999,
+        "transcriptMatch": " Raining",
+        "confidence": 0.9429121335595846,
+        "candidates": [
+          {
+            "start": 5.78,
+            "end": 6.52,
+            "transcriptMatch": " Raining",
+            "confidence": 0.9429121335595846,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-weather-5",
-      "thai": "แดดออก",
-      "audio": "/lessons/drafts/weather/audio/draft-weather-5.m4a",
-      "status": "matched",
-      "start": 7.529999999999999,
-      "end": 9.77,
-      "transcriptMatch": " แดดออก",
-      "confidence": 0.996461925983429,
-      "candidates": [
-        {
-          "start": 7.68,
-          "end": 9.52,
-          "transcriptMatch": " แดดออก",
-          "confidence": 0.996461925983429,
-          "exact": true,
-          "segmentIndex": 0
-        },
-        {
-          "start": 7.36,
-          "end": 9.52,
-          "transcriptMatch": "ก แดดออก",
-          "confidence": 0.8713183447292874,
-          "exact": false,
-          "segmentIndex": 0
-        },
-        {
-          "start": 7.68,
-          "end": 10.72,
-          "transcriptMatch": " แดดออก เม",
-          "confidence": 0.8661776873043605,
-          "exact": false,
-          "segmentIndex": 0
-        },
-        {
-          "start": 8.62,
-          "end": 9.52,
-          "transcriptMatch": "ดดออก",
-          "confidence": 0.8521827818950017,
-          "exact": false,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "แดดออก",
+      "englishText": "Sunny",
+      "thai": {
+        "audio": "/lessons/drafts/weather/audio/draft-weather-5-th.m4a",
+        "status": "matched",
+        "start": 8.3,
+        "end": 9.440000000000001,
+        "transcriptMatch": " แดดออก",
+        "confidence": 0.9987030925750733,
+        "candidates": [
+          {
+            "start": 8.44,
+            "end": 9.5,
+            "transcriptMatch": " แดดออก",
+            "confidence": 0.9987030925750733,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/weather/audio/draft-weather-5-en.m4a",
+        "status": "matched",
+        "start": 7.5649999999999995,
+        "end": 8.3,
+        "transcriptMatch": " Sunny",
+        "confidence": 0.9968311738967895,
+        "candidates": [
+          {
+            "start": 7.62,
+            "end": 8.16,
+            "transcriptMatch": " Sunny",
+            "confidence": 0.9968311738967895,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-weather-6",
-      "thai": "เมฆมาก",
-      "audio": "/lessons/drafts/weather/audio/draft-weather-6.m4a",
-      "status": "matched",
-      "start": 9.37,
-      "end": 11.83,
-      "transcriptMatch": " เมฆมาก",
-      "confidence": 0.976386913433671,
-      "candidates": [
-        {
-          "start": 9.52,
-          "end": 11.58,
-          "transcriptMatch": " เมฆมาก",
-          "confidence": 0.976386913433671,
-          "exact": true,
-          "segmentIndex": 0
-        },
-        {
-          "start": 9.08,
-          "end": 11.58,
-          "transcriptMatch": "อก เมฆมาก",
-          "confidence": 0.8553886117509434,
-          "exact": false,
-          "segmentIndex": 0
-        },
-        {
-          "start": 9.52,
-          "end": 12.58,
-          "transcriptMatch": " เมฆมาก ล",
-          "confidence": 0.8551313228181431,
-          "exact": false,
-          "segmentIndex": 0
-        },
-        {
-          "start": 9.52,
-          "end": 11.18,
-          "transcriptMatch": " เมฆมา",
-          "confidence": 0.8218545060356459,
-          "exact": false,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "เมฆมาก",
+      "englishText": "Cloudy",
+      "thai": {
+        "audio": "/lessons/drafts/weather/audio/draft-weather-6-th.m4a",
+        "status": "matched",
+        "start": 10.36,
+        "end": 11.4825,
+        "transcriptMatch": " เมฆมาก",
+        "confidence": 0.9803909680247307,
+        "candidates": [
+          {
+            "start": 10.36,
+            "end": 11.56,
+            "transcriptMatch": " เมฆมาก",
+            "confidence": 0.9803909680247307,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/weather/audio/draft-weather-6-en.m4a",
+        "status": "matched",
+        "start": 9.440000000000001,
+        "end": 10.36,
+        "transcriptMatch": " Cloudy",
+        "confidence": 0.9927081608772278,
+        "candidates": [
+          {
+            "start": 9.5,
+            "end": 10.36,
+            "transcriptMatch": " Cloudy",
+            "confidence": 0.9927081608772278,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-weather-7",
-      "thai": "ลมแรง",
-      "audio": "/lessons/drafts/weather/audio/draft-weather-7.m4a",
-      "status": "matched",
-      "start": 11.43,
-      "end": 13.71,
-      "transcriptMatch": " ลมแรง",
-      "confidence": 0.9994947118759155,
-      "candidates": [
-        {
-          "start": 11.58,
-          "end": 13.46,
-          "transcriptMatch": " ลมแรง",
-          "confidence": 0.9994947118759155,
-          "exact": true,
-          "segmentIndex": 0
-        },
-        {
-          "start": 11.18,
-          "end": 13.46,
-          "transcriptMatch": "ก ลมแรง",
-          "confidence": 0.852909615834554,
-          "exact": false,
-          "segmentIndex": 0
-        }
-      ]
+      "thaiText": "ลมแรง",
+      "englishText": "Windy",
+      "thai": {
+        "audio": "/lessons/drafts/weather/audio/draft-weather-7-th.m4a",
+        "status": "matched",
+        "start": 12.35,
+        "end": 13.75,
+        "transcriptMatch": " ลมแรง",
+        "confidence": 0.9996136989593506,
+        "candidates": [
+          {
+            "start": 12.36,
+            "end": 13.5,
+            "transcriptMatch": " ลมแรง",
+            "confidence": 0.9996136989593506,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/weather/audio/draft-weather-7-en.m4a",
+        "status": "matched",
+        "start": 11.4825,
+        "end": 12.35,
+        "transcriptMatch": " Windy",
+        "confidence": 0.9979890298843384,
+        "candidates": [
+          {
+            "start": 11.56,
+            "end": 12.34,
+            "transcriptMatch": " Windy",
+            "confidence": 0.9979890298843384,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ]
+      },
+      "pairStatus": "complete"
     }
   ]
 }

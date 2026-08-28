@@ -7,7 +7,7 @@ import { AnimatePresence, motion, useReducedMotionConfig } from "framer-motion";
 import { AppLink } from "@/components/AppLink";
 import { LessonExperience } from "@/components/LessonExperience";
 import { LessonVideoScreen } from "@/components/LessonVideoScreen";
-import { LocalAudioButton, PhraseAudioButton } from "@/components/PhraseAudioButton";
+import { ConceptAudioButton, LocalAudioButton } from "@/components/PhraseAudioButton";
 import { cueCards, lessons } from "@/domain/seed";
 import type { ActiveStudySession, QuizQuestion, SessionQueueEntry, VideoLesson } from "@/domain/schemas";
 import { writeSnapshot } from "@/data/db";
@@ -96,7 +96,7 @@ function CueCardStage({ card, session }: { card: (typeof cueCards)[number]; sess
   const settings = useStudyStore((state) => state.settings);
   const advance = useStudyStore((state) => state.advanceCard);
   return <section className="single-card-stage"><div className="section-lead"><p className="eyebrow">Cue card {session.cardIndex + 1} of {session.cardOrder.length}</p><h2>Notice the phrase in context</h2><p>Read for natural use rather than word-for-word equivalence.</p></div>
-    <article className="cue-card tactile-card focused-card"><PhraseAudioButton card={card} compact /><span className="cue-emoji" aria-hidden="true">{card.emoji}</span><h3>{card.naturalMeaning}</h3>{settings.showThaiScript && <p className="thai cue-thai">{withPreferredParticle(card.thai, settings.politeParticle)}</p>}{settings.showRomanization && <p className="romanization">{withPreferredParticle(card.romanization, settings.politeParticle)}</p>}<p>{card.usage}</p>{card.literalNote && <p className="card-note"><b>Literal note</b> {card.literalNote}</p>}{card.culturalNote && <p className="card-note"><b>Context</b> {card.culturalNote}</p>}<span className="draft-label">{card.verificationStatus} language</span></article>
+    <article className="cue-card tactile-card focused-card"><ConceptAudioButton card={card} compact /><span className="cue-emoji" aria-hidden="true">{card.emoji}</span><h3>{card.naturalMeaning}</h3>{settings.showThaiScript && <p className="thai cue-thai">{withPreferredParticle(card.thai, settings.politeParticle)}</p>}{settings.showRomanization && <p className="romanization">{withPreferredParticle(card.romanization, settings.politeParticle)}</p>}<p>{card.usage}</p>{card.literalNote && <p className="card-note"><b>Literal note</b> {card.literalNote}</p>}{card.culturalNote && <p className="card-note"><b>Context</b> {card.culturalNote}</p>}<span className="draft-label">{card.verificationStatus} language</span></article>
     <footer className="study-footer"><span>{session.cardIndex + 1} of {session.cardOrder.length}</span><button className="primary-button" onClick={advance}>{session.cardIndex === session.cardOrder.length - 1 ? "Begin diagnostic" : "Next cue card"}<ArrowRight size={18} /></button></footer>
   </section>;
 }
@@ -107,7 +107,7 @@ function RetrievalStage({ card, session }: { card: (typeof cueCards)[number]; se
   const advance = useStudyStore((state) => state.advanceCard);
   return <section className="retrieval-focus"><div className="section-lead"><p className="eyebrow">Retrieval {session.cardIndex + 1} of {session.cardOrder.length}</p><h2>Find the Thai before looking</h2><p>Use the situation and meaning as your prompt. Say your answer aloud if useful.</p></div>
     <article className={`recall-card retrieval-large ${session.cardRevealed ? "revealed" : ""}`}><div><span className="eyebrow">Meaning and context</span><h2>{card.naturalMeaning}</h2><p>{card.usage}</p></div>
-      {!session.cardRevealed ? <button className="secondary-button" onClick={reveal}>Reveal Thai <Eye size={17} /></button> : <div className="recall-answer"><span className="speaking-label"><Mic2 size={15} /> Self-guided speaking · unscored</span>{settings.showThaiScript && <p className="thai">{withPreferredParticle(card.thai, settings.politeParticle)}</p>}{settings.showRomanization && <p className="romanization">{withPreferredParticle(card.romanization, settings.politeParticle)}</p>}<PhraseAudioButton card={card} /><button className="primary-button" onClick={advance}>{session.cardIndex === session.cardOrder.length - 1 ? "Begin mastery check" : "Next retrieval"}<ArrowRight size={17} /></button></div>}
+      {!session.cardRevealed ? <button className="secondary-button" onClick={reveal}>Reveal Thai <Eye size={17} /></button> : <div className="recall-answer"><span className="speaking-label"><Mic2 size={15} /> Self-guided speaking · unscored</span>{settings.showThaiScript && <p className="thai">{withPreferredParticle(card.thai, settings.politeParticle)}</p>}{settings.showRomanization && <p className="romanization">{withPreferredParticle(card.romanization, settings.politeParticle)}</p>}<ConceptAudioButton card={card} /><button className="primary-button" onClick={advance}>{session.cardIndex === session.cardOrder.length - 1 ? "Begin mastery check" : "Next retrieval"}<ArrowRight size={17} /></button></div>}
     </article>
   </section>;
 }
@@ -130,7 +130,7 @@ function AnswerFeedback({ entry, question, correct }: { entry: SessionQueueEntry
   useEffect(() => { feedbackRef.current?.focus(); }, []);
   return <article className={`quiz-card answer-feedback ${correct ? "correct" : "incorrect"}`} role="status">
     <p ref={feedbackRef} tabIndex={-1} className="eyebrow">{correct ? "Recalled accurately" : "Keep this correction"}</p>
-    {card && <><p className="thai correction-answer" lang="th">{card.thai}</p><p className="romanization">{card.romanization}</p><h3>{card.naturalMeaning}</h3><PhraseAudioButton card={card} /></>}
+    {card && <><p className="thai correction-answer" lang="th">{card.thai}</p><p className="romanization">{card.romanization}</p><h3>{card.naturalMeaning}</h3><ConceptAudioButton card={card} /></>}
     <p>{question.explanation}</p>
     <button className="primary-button" onClick={continueAfterFeedback}>Continue <ArrowRight size={17} /></button>
   </article>;

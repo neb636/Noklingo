@@ -3,431 +3,217 @@
   "sourceVideo": "/lessons/drafts/its-okay/intro.mp4",
   "sourceHash": "d1fa9fe35c4c1649b186f2bc2a0d94a381e00de3ce196e9de5a79a67271c8a3f",
   "model": "large-v3",
-  "generatedAt": "2026-08-25T22:33:17.571Z",
+  "generatedAt": "2026-08-27T23:44:33.692Z",
   "clips": [
     {
       "cueCardId": "draft-its-okay-1",
-      "thai": "ไม่เป็นไร",
-      "status": "ambiguous",
-      "candidates": [
-        {
-          "start": 4.36,
-          "end": 5.6,
-          "transcriptMatch": " ไม่เป็นไร",
-          "confidence": 0.9946130359172821,
-          "exact": true,
-          "segmentIndex": 1
-        },
-        {
-          "start": 2.56,
-          "end": 3.96,
-          "transcriptMatch": "ไม่เป็นไร",
-          "confidence": 0.9783336770534515,
-          "exact": true,
-          "segmentIndex": 1
-        },
-        {
-          "start": 3.68,
-          "end": 5.6,
-          "transcriptMatch": "ไร ไม่เป็นไร",
-          "confidence": 0.9059426299503872,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 4.36,
-          "end": 6.18,
-          "transcriptMatch": " ไม่เป็นไร ช",
-          "confidence": 0.891697005706174,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 2.56,
-          "end": 5.02,
-          "transcriptMatch": "ไม่เป็นไร ไม",
-          "confidence": 0.8896999303272792,
-          "exact": false,
-          "segmentIndex": 1
-        }
-      ],
-      "diagnostic": "The top candidate is too close to another occurrence."
+      "thaiText": "ไม่เป็นไร",
+      "englishText": "It’s okay / No worries",
+      "thai": {
+        "audio": "/lessons/drafts/its-okay/audio/draft-its-okay-1-th.m4a",
+        "status": "matched",
+        "start": 2.37,
+        "end": 3.92,
+        "transcriptMatch": "ไม่เป็นไร",
+        "confidence": 0.9765599185228347,
+        "candidates": [
+          {
+            "start": 2.52,
+            "end": 3.92,
+            "transcriptMatch": "ไม่เป็นไร",
+            "confidence": 0.9765599185228347,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/its-okay/audio/draft-its-okay-1-en.m4a",
+        "status": "matched",
+        "start": 3.92,
+        "end": 6.9825,
+        "transcriptMatch": " It’s okay No worries",
+        "confidence": 0.9600766828656196,
+        "candidates": [
+          {
+            "start": 3.92,
+            "end": 7.5,
+            "transcriptMatch": " It’s okay No worries",
+            "confidence": 0.9600766828656196,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-its-okay-2",
-      "thai": "ช่างมันเถอะ",
-      "status": "ambiguous",
-      "candidates": [
-        {
-          "start": 5.82,
-          "end": 8.8,
-          "transcriptMatch": " ช่างมันเถอะ",
-          "confidence": 0.9794780179485678,
-          "exact": true,
-          "segmentIndex": 1
-        },
-        {
-          "start": 26.02,
-          "end": 28.32,
-          "transcriptMatch": " ช่างมันเถอะ",
-          "confidence": 0.9154997556749731,
-          "exact": true,
-          "segmentIndex": 3
-        },
-        {
-          "start": 6.18,
-          "end": 8.8,
-          "transcriptMatch": "่างมันเถอะ",
-          "confidence": 0.9122319027355739,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 5.4,
-          "end": 8.8,
-          "transcriptMatch": "ไร ช่างมันเถอะ",
-          "confidence": 0.9078532406687736,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 5.82,
-          "end": 11.1,
-          "transcriptMatch": " ช่างมันเถอะ ไม",
-          "confidence": 0.9062613388895988,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 5.4,
-          "end": 11.1,
-          "transcriptMatch": "ไร ช่างมันเถอะ ไม",
-          "confidence": 0.8457360918590655,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 27.56,
-          "end": 28.32,
-          "transcriptMatch": "่างมันเถอะ",
-          "confidence": 0.8404487044018294,
-          "exact": false,
-          "segmentIndex": 3
-        },
-        {
-          "start": 26.02,
-          "end": 28.72,
-          "transcriptMatch": " ช่างมันเถอะ ไม",
-          "confidence": 0.8389622863382101,
-          "exact": false,
-          "segmentIndex": 3
-        },
-        {
-          "start": 25.52,
-          "end": 28.32,
-          "transcriptMatch": "ไร ช่างมันเถอะ",
-          "confidence": 0.8382708283824225,
-          "exact": false,
-          "segmentIndex": 3
-        },
-        {
-          "start": 25.52,
-          "end": 28.72,
-          "transcriptMatch": "ไร ช่างมันเถอะ ไม",
-          "confidence": 0.7737253833239754,
-          "exact": false,
-          "segmentIndex": 3
-        }
-      ],
-      "diagnostic": "The top candidate is too close to another occurrence."
+      "thaiText": "ช่างมันเถอะ",
+      "englishText": "Forget it",
+      "thai": {
+        "audio": "/lessons/drafts/its-okay/audio/draft-its-okay-2-th.m4a",
+        "status": "matched",
+        "start": 7.43,
+        "end": 8.83,
+        "transcriptMatch": " ช่างมันเถอะ",
+        "confidence": 0.9937309041619301,
+        "candidates": [
+          {
+            "start": 7.58,
+            "end": 8.8,
+            "transcriptMatch": " ช่างมันเถอะ",
+            "confidence": 0.9937309041619301,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/its-okay/audio/draft-its-okay-2-en.m4a",
+        "status": "matched",
+        "start": 8.83,
+        "end": 11.3825,
+        "transcriptMatch": " Forget it",
+        "confidence": 0.9426614386588335,
+        "candidates": [
+          {
+            "start": 8.86,
+            "end": 11.54,
+            "transcriptMatch": " Forget it",
+            "confidence": 0.9426614386588335,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-its-okay-3",
-      "thai": "ไม่ต้องห่วง",
-      "status": "ambiguous",
-      "candidates": [
-        {
-          "start": 9.66,
-          "end": 13.48,
-          "transcriptMatch": " ไม่ต้องห่วง",
-          "confidence": 0.9959392627080281,
-          "exact": true,
-          "segmentIndex": 1
-        },
-        {
-          "start": 28.4,
-          "end": 30.34,
-          "transcriptMatch": " ไม่ต้องห่วง",
-          "confidence": 0.9419950740536054,
-          "exact": true,
-          "segmentIndex": 3
-        },
-        {
-          "start": 8.64,
-          "end": 13.48,
-          "transcriptMatch": "อะ ไม่ต้องห่วง",
-          "confidence": 0.9230000290075937,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 9.66,
-          "end": 16.9,
-          "transcriptMatch": " ไม่ต้องห่วง ไม",
-          "confidence": 0.9226407839457194,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 9.66,
-          "end": 13,
-          "transcriptMatch": " ไม่ต้องห่ว",
-          "confidence": 0.9154361981153487,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 27.9,
-          "end": 30.34,
-          "transcriptMatch": "อะ ไม่ต้องห่วง",
-          "confidence": 0.8728055908779303,
-          "exact": false,
-          "segmentIndex": 3
-        },
-        {
-          "start": 28.4,
-          "end": 31.28,
-          "transcriptMatch": " ไม่ต้องห่วง ไม",
-          "confidence": 0.8633898812929789,
-          "exact": false,
-          "segmentIndex": 3
-        },
-        {
-          "start": 8.64,
-          "end": 16.9,
-          "transcriptMatch": "อะ ไม่ต้องห่วง ไม",
-          "confidence": 0.8609446056906159,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 28.4,
-          "end": 30.08,
-          "transcriptMatch": " ไม่ต้องห่ว",
-          "confidence": 0.8548347083851694,
-          "exact": false,
-          "segmentIndex": 3
-        },
-        {
-          "start": 27.9,
-          "end": 31.28,
-          "transcriptMatch": "อะ ไม่ต้องห่วง ไม",
-          "confidence": 0.8055849956965946,
-          "exact": false,
-          "segmentIndex": 3
-        }
-      ],
-      "diagnostic": "The top candidate is too close to another occurrence."
+      "thaiText": "ไม่ต้องห่วง",
+      "englishText": "Don’t worry",
+      "thai": {
+        "audio": "/lessons/drafts/its-okay/audio/draft-its-okay-3-th.m4a",
+        "status": "matched",
+        "start": 11.43,
+        "end": 13.48,
+        "transcriptMatch": " ไม่ต้องห่วง",
+        "confidence": 0.9986896626154582,
+        "candidates": [
+          {
+            "start": 11.58,
+            "end": 13.48,
+            "transcriptMatch": " ไม่ต้องห่วง",
+            "confidence": 0.9986896626154582,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/its-okay/audio/draft-its-okay-3-en.m4a",
+        "status": "matched",
+        "start": 13.48,
+        "end": 16.330000000000002,
+        "transcriptMatch": " Don’t worry",
+        "confidence": 0.9721466246247291,
+        "candidates": [
+          {
+            "start": 13.48,
+            "end": 16.44,
+            "transcriptMatch": " Don’t worry",
+            "confidence": 0.9721466246247291,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-its-okay-4",
-      "thai": "ไม่ต้องคิดมาก",
-      "status": "ambiguous",
-      "candidates": [
-        {
-          "start": 13.54,
-          "end": 18.98,
-          "transcriptMatch": " ไม่ต้องคิดมาก",
-          "confidence": 0.9979890720844269,
-          "exact": true,
-          "segmentIndex": 1
-        },
-        {
-          "start": 19,
-          "end": 21,
-          "transcriptMatch": " ไม่ต้องคิดมาก",
-          "confidence": 0.9906128252744675,
-          "exact": true,
-          "segmentIndex": 1
-        },
-        {
-          "start": 31.18,
-          "end": 32.24,
-          "transcriptMatch": " ไม่ต้องคิดมาก",
-          "confidence": 0.9482243607975542,
-          "exact": true,
-          "segmentIndex": 3
-        },
-        {
-          "start": 13,
-          "end": 18.98,
-          "transcriptMatch": "ง ไม่ต้องคิดมาก",
-          "confidence": 0.935311448078651,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 13.54,
-          "end": 18.5,
-          "transcriptMatch": " ไม่ต้องคิดมา",
-          "confidence": 0.9300777752582844,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 13.54,
-          "end": 19.68,
-          "transcriptMatch": " ไม่ต้องคิดมาก ไม",
-          "confidence": 0.92953952577207,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 18.5,
-          "end": 21,
-          "transcriptMatch": "ก ไม่ต้องคิดมาก",
-          "confidence": 0.9286054232368222,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 19,
-          "end": 20.66,
-          "transcriptMatch": " ไม่ต้องคิดมา",
-          "confidence": 0.9218983240310963,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 30.08,
-          "end": 32.24,
-          "transcriptMatch": "ง ไม่ต้องคิดมาก",
-          "confidence": 0.8900084578134604,
-          "exact": false,
-          "segmentIndex": 3
-        },
-        {
-          "start": 31.18,
-          "end": 33.96,
-          "transcriptMatch": " ไม่ต้องคิดมาก ช",
-          "confidence": 0.8793503735306395,
-          "exact": false,
-          "segmentIndex": 3
-        },
-        {
-          "start": 31.18,
-          "end": 31.76,
-          "transcriptMatch": " ไม่ต้องคิดมา",
-          "confidence": 0.878731653467776,
-          "exact": false,
-          "segmentIndex": 3
-        },
-        {
-          "start": 13,
-          "end": 19.68,
-          "transcriptMatch": "ง ไม่ต้องคิดมาก ไม",
-          "confidence": 0.8756939278642337,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 18.24,
-          "end": 21,
-          "transcriptMatch": "มาก ไม่ต้องคิดมาก",
-          "confidence": 0.8747873501578968,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 16.9,
-          "end": 18.98,
-          "transcriptMatch": "่ต้องคิดมาก",
-          "confidence": 0.8627934859960507,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 13,
-          "end": 18.5,
-          "transcriptMatch": "ง ไม่ต้องคิดมา",
-          "confidence": 0.8626048372158637,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 19.68,
-          "end": 21,
-          "transcriptMatch": "่ต้องคิดมาก",
-          "confidence": 0.8612437866895626,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 18.5,
-          "end": 20.66,
-          "transcriptMatch": "ก ไม่ต้องคิดมา",
-          "confidence": 0.8552429505953422,
-          "exact": false,
-          "segmentIndex": 1
-        },
-        {
-          "start": 30.08,
-          "end": 33.96,
-          "transcriptMatch": "ง ไม่ต้องคิดมาก ช",
-          "confidence": 0.8296300566388916,
-          "exact": false,
-          "segmentIndex": 3
-        },
-        {
-          "start": 31.28,
-          "end": 32.24,
-          "transcriptMatch": "่ต้องคิดมาก",
-          "confidence": 0.81938950997037,
-          "exact": false,
-          "segmentIndex": 3
-        },
-        {
-          "start": 30.08,
-          "end": 31.76,
-          "transcriptMatch": "ง ไม่ต้องคิดมา",
-          "confidence": 0.816324749599569,
-          "exact": false,
-          "segmentIndex": 3
-        }
-      ],
-      "diagnostic": "The top candidate is too close to another occurrence."
+      "thaiText": "ไม่ต้องคิดมาก",
+      "englishText": "Don’t overthink it",
+      "thai": {
+        "audio": "/lessons/drafts/its-okay/audio/draft-its-okay-4-th.m4a",
+        "status": "matched",
+        "start": 16.330000000000002,
+        "end": 18.86,
+        "transcriptMatch": "ไม่ต้องคิดมาก",
+        "confidence": 0.9939885859489441,
+        "candidates": [
+          {
+            "start": 16.44,
+            "end": 18.86,
+            "transcriptMatch": "ไม่ต้องคิดมาก",
+            "confidence": 0.9939885859489441,
+            "exact": true,
+            "segmentIndex": 2
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/its-okay/audio/draft-its-okay-4-en.m4a",
+        "status": "matched",
+        "start": 18.86,
+        "end": 21.685000000000002,
+        "transcriptMatch": " Don’t overthink it",
+        "confidence": 0.9774901443719863,
+        "candidates": [
+          {
+            "start": 18.86,
+            "end": 22.32,
+            "transcriptMatch": " Don’t overthink it",
+            "confidence": 0.9774901443719863,
+            "exact": true,
+            "segmentIndex": 2
+          }
+        ]
+      },
+      "pairStatus": "complete"
     },
     {
       "cueCardId": "draft-its-okay-5",
-      "thai": "ชิลๆ",
-      "status": "ambiguous",
-      "candidates": [
-        {
-          "start": 23.36,
-          "end": 24.84,
-          "transcriptMatch": " ชิลๆ",
-          "confidence": 0.9941328340768814,
-          "exact": true,
-          "segmentIndex": 2
-        },
-        {
-          "start": 21.9,
-          "end": 23.06,
-          "transcriptMatch": "ชิลๆ",
-          "confidence": 0.9220329234004021,
-          "exact": true,
-          "segmentIndex": 2
-        },
-        {
-          "start": 33.96,
-          "end": 33.96,
-          "transcriptMatch": " ชิลๆ",
-          "confidence": 0.8808409713837319,
-          "exact": true,
-          "segmentIndex": 3
-        }
-      ],
-      "diagnostic": "The top candidate is too close to another occurrence."
+      "thaiText": "ชิลๆ",
+      "englishText": "It’s all good",
+      "thai": {
+        "audio": "/lessons/drafts/its-okay/audio/draft-its-okay-5-th.m4a",
+        "status": "matched",
+        "start": 22.25,
+        "end": 23.06,
+        "transcriptMatch": " ชิลๆ",
+        "confidence": 0.9535670356452465,
+        "candidates": [
+          {
+            "start": 22.4,
+            "end": 23.06,
+            "transcriptMatch": " ชิลๆ",
+            "confidence": 0.9535670356452465,
+            "exact": true,
+            "segmentIndex": 2
+          }
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/its-okay/audio/draft-its-okay-5-en.m4a",
+        "status": "matched",
+        "start": 23.06,
+        "end": 26.15,
+        "transcriptMatch": " It’s all good",
+        "confidence": 0.99092245054245,
+        "candidates": [
+          {
+            "start": 23.06,
+            "end": 25.9,
+            "transcriptMatch": " It’s all good",
+            "confidence": 0.99092245054245,
+            "exact": true,
+            "segmentIndex": 2
+          }
+        ]
+      },
+      "pairStatus": "complete"
     }
   ]
 }

@@ -18,10 +18,11 @@ for (const lesson of drafts) {
     : draftCards.filter((card) => card.lessonId === lesson.id);
   const verifiedCards = cards.filter((card) => card.verificationStatus === "verified").length;
   const usage = cards.filter((card) => Boolean(card.usage)).length;
-  const audio = cards.filter((card) => Boolean(card.phraseAudioSrc)).length;
+  const thaiAudio = cards.filter((card) => Boolean(card.thaiAudioSrc)).length;
+  const englishAudio = cards.filter((card) => Boolean(card.englishAudioSrc)).length;
   const questions = published?.quizBank.filter((question) => question.scored && question.verificationStatus === "verified").length ?? 0;
   const requiredQuestions = minimumQuestionBankSize(lesson);
   const ready = reviewedIds.has(lesson.id);
   console.log(`${String(lesson.order).padStart(2, "0")} ${lesson.title} — ${ready ? "PUBLISHED" : "BLOCKED"}`);
-  console.log(`   cards ${verifiedCards}/${cards.length} verified · usage ${usage}/${cards.length} · audio ${audio}/${cards.length} · questions ${questions}/${requiredQuestions}+`);
+  console.log(`   cards ${verifiedCards}/${cards.length} verified · usage ${usage}/${cards.length} · Thai audio ${thaiAudio}/${cards.length} · English audio ${englishAudio}/${cards.length} · questions ${questions}/${requiredQuestions}+`);
 }
