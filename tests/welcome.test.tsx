@@ -29,6 +29,23 @@ describe("NokLingo welcome flow", () => {
     fireEvent.click(getStarted);
     expect(window.localStorage.getItem(WELCOME_SEEN_KEY)).toBe("true");
   });
+
+  it("publishes the Noklingo phone-install name and cache-busted icon assets", () => {
+    const html = readFileSync(join(process.cwd(), "public", "index.html"), "utf8");
+    const manifest = JSON.parse(
+      readFileSync(join(process.cwd(), "public", "manifest.webmanifest"), "utf8"),
+    ) as { name: string; short_name: string; icons: Array<{ src: string }> };
+
+    expect(html).toContain('<meta name="apple-mobile-web-app-title" content="Noklingo" />');
+    expect(html).toContain('href="./noklingo-apple-touch-icon.png"');
+    expect(manifest.name).toBe("Noklingo");
+    expect(manifest.short_name).toBe("Noklingo");
+    expect(manifest.icons.map((icon) => icon.src)).toEqual([
+      "./noklingo-icon-192.png",
+      "./noklingo-icon-512.png",
+      "./noklingo-icon-512.png",
+    ]);
+  });
 });
 
 function runRootDispatcher(storedValue: string | null): string | undefined {

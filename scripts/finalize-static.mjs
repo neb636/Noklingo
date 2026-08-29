@@ -51,10 +51,10 @@ const precachePaths = [
   "./",
   ...routes.map((route) => `./${route}/`),
   "./manifest.webmanifest",
-  "./icon.svg",
-  "./icon-192.png",
-  "./icon-512.png",
-  "./apple-touch-icon.png",
+  "./noklingo-logo-black.png",
+  "./noklingo-icon-192.png",
+  "./noklingo-icon-512.png",
+  "./noklingo-apple-touch-icon.png",
   ...staticFiles.map((filePath) => `./${filePath}`),
 ];
 
