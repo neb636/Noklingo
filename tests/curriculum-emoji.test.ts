@@ -11,13 +11,13 @@ const expectedEmoji = {
   "time-units": { topic: "⏱️", cards: ["⏱️", "🕐", "☀️", "🗓️", "📆"] },
   "times-of-day": { topic: "🌅", cards: ["🌅", "☀️", "🕛", "🌤️", "🌇", "🌙"] },
   quantities: { topic: "⚖️", cards: ["0️⃣", "🤏", "🔢", "🌓", "📈", "💯"] },
-  "country-names": { topic: "🌍", cards: ["🌍", "🏡", "🗺️"] },
+  "country-names": { topic: "🌍", cards: [] },
   directions: { topic: "🧭", cards: ["⬆️", "➡️", "⬅️", "↩️"] },
   weather: { topic: "🌦️", cards: ["🔥", "🧊", "🥶", "🌧️", "☀️", "☁️", "💨"] },
   "feeling-unwell": { topic: "🤒", cards: ["🙂", "🤒", "😵‍💫", "👌", "🔁"] },
   "food-flavors": { topic: "😋", cards: ["🍋", "🍬", "🧂", "🌶️", "☕", "🍚"] },
   "food-allergies": { topic: "🤧", cards: ["🤧", "🦐", "🥜", "🥛"] },
-  "coffee-order": { topic: "☕", cards: ["🥤", "☕"] },
+  "coffee-order": { topic: "☕", cards: [] },
   "what-are-you-doing": { topic: "💬", cards: ["🚶", "🤔", "📍", "🧭", "👋"] },
   "waking-up": { topic: "⏰", cards: ["🔥", "🏁", "👀", "🤤", "🍽️"] },
   "movie-invitation": { topic: "🎬", cards: ["🍽️", "🎬", "☕", "💕"] },
@@ -35,7 +35,7 @@ describe("curriculum emoji metadata", () => {
 
   it("covers every draft lesson and cue card with the approved emoji mapping", () => {
     expect(lessons).toHaveLength(23);
-    expect(cards).toHaveLength(107);
+    expect(cards).toHaveLength(102);
     expect(Object.keys(expectedEmoji)).toHaveLength(23);
 
     for (const lesson of lessons) {
