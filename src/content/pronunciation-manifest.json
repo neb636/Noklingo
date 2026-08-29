@@ -6,7 +6,7 @@
       "sourceVideo": "/lessons/drafts/affectionate-phrases/intro.mp4",
       "sourceHash": "df675d99453f3f290b77bdeb2b5024bdf4641df51ed1b217a52b0f4b44c84976",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T07:41:07.069Z",
+      "generatedAt": "2026-08-29T08:26:55.651Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -276,7 +276,7 @@
       "sourceVideo": "/lessons/drafts/coffee-order/intro.mp4",
       "sourceHash": "9d4014a3d22986099e9e0903aec3df3d7f70794f118ffc8e73b2302bc1f57b0d",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T08:00:01.667Z",
+      "generatedAt": "2026-08-29T08:26:52.329Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": []
     },
@@ -285,7 +285,7 @@
       "sourceVideo": "/lessons/drafts/common-verbs/intro.mp4",
       "sourceHash": "3f83ccd706e547723f02dd2c2f58675522160fc96836d57c516edbb1dc12c139",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T07:41:00.176Z",
+      "generatedAt": "2026-08-29T08:26:48.522Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -555,7 +555,7 @@
       "sourceVideo": "/lessons/drafts/compliments/intro.mp4",
       "sourceHash": "46b0935f16058c669f6196def7082c6cdf1c4b0f05e919517a2f302cd27d9a2d",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T07:41:05.873Z",
+      "generatedAt": "2026-08-29T08:26:54.284Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -933,7 +933,7 @@
       "sourceVideo": "/lessons/drafts/connectors/intro.mp4",
       "sourceHash": "bfc7a8905266679b712968943e43755dfb33fa1a8c8ea3b2adca4710dc43fd1f",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T07:41:00.679Z",
+      "generatedAt": "2026-08-29T08:26:48.999Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -1376,7 +1376,7 @@
       "sourceVideo": "/lessons/drafts/country-names/intro.mp4",
       "sourceHash": "74c71e51953c5f10952f72ef664239d7046472f6187884a7240ae765a6002ea0",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T08:07:19.174Z",
+      "generatedAt": "2026-08-29T08:26:50.586Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": []
     },
@@ -1385,7 +1385,7 @@
       "sourceVideo": "/lessons/drafts/directions/intro.mp4",
       "sourceHash": "0a7882eaea6be4f98527b8f994189b3a58aff15b6cae6c130797dccee5b29177",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T07:41:02.384Z",
+      "generatedAt": "2026-08-29T08:26:50.591Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -1693,7 +1693,7 @@
       "sourceVideo": "/lessons/drafts/encouragement/intro.mp4",
       "sourceHash": "c37ef63e2427f5385e41e9541dc9743c8608e5c2062d1ac0307772259afe0e5d",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T07:41:05.547Z",
+      "generatedAt": "2026-08-29T08:26:53.861Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -1993,7 +1993,7 @@
       "sourceVideo": "/lessons/drafts/feeling-unwell/intro.mp4",
       "sourceHash": "94e3f2b14f06afaeb60917f3dcd8fdc14a9c634ce475a85a211856e014bd4f8f",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T08:17:39.339Z",
+      "generatedAt": "2026-08-29T08:26:51.316Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -2263,7 +2263,7 @@
       "sourceVideo": "/lessons/drafts/food-allergies/intro.mp4",
       "sourceHash": "208e36f313d9213df0f0642484c2de85a9efeb483fa5d9a4c0a90ba65ec4d7b0",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T07:41:03.663Z",
+      "generatedAt": "2026-08-29T08:26:51.999Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -2601,7 +2601,7 @@
       "sourceVideo": "/lessons/drafts/food-flavors/intro.mp4",
       "sourceHash": "812494cc82f9901cce5a1c71c4f06cb7f052767ae5f8b43915bdd2537c247655",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T08:26:22.255Z",
+      "generatedAt": "2026-08-29T08:26:51.716Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -2923,7 +2923,7 @@
       "sourceVideo": "/lessons/drafts/its-okay/intro.mp4",
       "sourceHash": "d1fa9fe35c4c1649b186f2bc2a0d94a381e00de3ce196e9de5a79a67271c8a3f",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T07:41:06.292Z",
+      "generatedAt": "2026-08-29T08:26:54.722Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -3283,7 +3283,7 @@
       "sourceVideo": "/lessons/drafts/large-numbers/intro.mp4",
       "sourceHash": "e90f4ddf03265fd55242ffb18eb06b75ec43d23eca480d8180f981a41f52d7b7",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T07:41:00.939Z",
+      "generatedAt": "2026-08-29T08:26:49.368Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -3443,7 +3443,7 @@
       "sourceVideo": "/lessons/drafts/making-up/intro.mp4",
       "sourceHash": "12aa3b11f037d675f0704a6f8feaa6937412049dc53c4510e52b90aa18a0388f",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T07:41:06.709Z",
+      "generatedAt": "2026-08-29T08:26:55.171Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -3733,7 +3733,7 @@
       "sourceVideo": "/lessons/drafts/movie-invitation/intro.mp4",
       "sourceHash": "987613dd5f5722c3c404e70d7ee6854d799815c3689627c131d2cc8d512bb7ab",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T07:41:04.849Z",
+      "generatedAt": "2026-08-29T08:26:53.148Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -4030,7 +4030,7 @@
       "sourceVideo": "/lessons/drafts/parting-safely/intro.mp4",
       "sourceHash": "3bb51dfe20f4b41cec8987fd3fd2145c9708523038aa9781ee61d9bc164d2b71",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T07:41:05.269Z",
+      "generatedAt": "2026-08-29T08:26:53.570Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -4349,7 +4349,7 @@
       "sourceVideo": "/lessons/drafts/quantities/intro.mp4",
       "sourceHash": "a96e169c21cd452a36684c00ddfcbdbffc4c587216c12ee33fc9d5d8a945e427",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T07:41:01.800Z",
+      "generatedAt": "2026-08-29T08:26:50.231Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -4787,7 +4787,7 @@
       "sourceVideo": "/lessons/drafts/question-words/intro.mp4",
       "sourceHash": "d32d3fb844c51f0bc7420081cbae5f0fefc6801dcc05a3d858876a78939a7a25",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T07:41:00.421Z",
+      "generatedAt": "2026-08-29T08:26:48.763Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -5169,7 +5169,7 @@
       "sourceVideo": "/lessons/drafts/time-units/intro.mp4",
       "sourceHash": "5f3c8cab77a3e0b214612ae27de44fa58607175710483881aa258818e21c7661",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T07:41:01.128Z",
+      "generatedAt": "2026-08-29T08:26:49.466Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -5545,7 +5545,7 @@
       "sourceVideo": "/lessons/drafts/times-of-day/intro.mp4",
       "sourceHash": "6a30c26d9d7687bcfa08545612b6a09dce58a361b0636306d1d9d4cf219caebc",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T07:41:01.411Z",
+      "generatedAt": "2026-08-29T08:26:49.840Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -6007,7 +6007,7 @@
       "sourceVideo": "/lessons/drafts/waking-up/intro.mp4",
       "sourceHash": "38ac7b13d8838e5d0be70af7769124b728df855f31cb215d72b864a2bfe1abd4",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T07:41:04.498Z",
+      "generatedAt": "2026-08-29T08:26:52.789Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -6386,7 +6386,7 @@
       "sourceVideo": "/lessons/drafts/weather/intro.mp4",
       "sourceHash": "dc1953b9f0ca785e90c0c58ef66859383eacb730ed155a3d269f91062a682846",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T07:41:02.711Z",
+      "generatedAt": "2026-08-29T08:26:50.948Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -6897,7 +6897,7 @@
       "sourceVideo": "/lessons/drafts/what-are-you-doing/intro.mp4",
       "sourceHash": "122ba024e22a4893251e3b20c0098db4c685a66ca8252c9e8fb881bb67daf931",
       "model": "large-v3",
-      "generatedAt": "2026-08-29T07:41:04.120Z",
+      "generatedAt": "2026-08-29T08:26:52.346Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {

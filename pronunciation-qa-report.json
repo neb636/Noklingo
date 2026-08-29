@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T08:07:32.342Z",
+  "generatedAt": "2026-08-29T08:26:56.083Z",
   "algorithmFingerprint": "a94210fc1c3198f8",
   "entries": [
     {
@@ -417,79 +417,6 @@
         "overlapping-speech-envelopes"
       ],
       "status": "matched"
-    },
-    {
-      "lessonId": "feeling-unwell",
-      "cueCardId": "draft-feeling-unwell-1",
-      "language": "thai",
-      "warnings": [
-        "overlapping-speech-envelopes",
-        "touching-speech-envelopes",
-        "unrefined-whisper-envelope"
-      ],
-      "status": "matched"
-    },
-    {
-      "lessonId": "feeling-unwell",
-      "cueCardId": "draft-feeling-unwell-1",
-      "language": "english",
-      "warnings": [
-        "end-fallback",
-        "overlapping-speech-envelopes",
-        "touching-speech-envelopes",
-        "tight-next-neighbor",
-        "unrefined-whisper-envelope"
-      ],
-      "status": "matched"
-    },
-    {
-      "lessonId": "feeling-unwell",
-      "cueCardId": "draft-feeling-unwell-2",
-      "language": "thai",
-      "warnings": [
-        "start-fallback",
-        "overlapping-speech-envelopes",
-        "tight-previous-neighbor",
-        "unrefined-whisper-envelope"
-      ],
-      "status": "matched"
-    },
-    {
-      "lessonId": "feeling-unwell",
-      "cueCardId": "draft-feeling-unwell-2",
-      "language": "english",
-      "warnings": [
-        "invalid-proposal"
-      ],
-      "status": "unmatched"
-    },
-    {
-      "lessonId": "feeling-unwell",
-      "cueCardId": "draft-feeling-unwell-3",
-      "language": "thai",
-      "warnings": [
-        "overlapping-speech-envelopes",
-        "unrefined-whisper-envelope"
-      ],
-      "status": "matched"
-    },
-    {
-      "lessonId": "food-flavors",
-      "cueCardId": "draft-food-flavors-1",
-      "language": "english",
-      "warnings": [
-        "start-fallback"
-      ],
-      "status": "matched"
-    },
-    {
-      "lessonId": "food-flavors",
-      "cueCardId": "draft-food-flavors-6",
-      "language": "english",
-      "warnings": [
-        "unmatched"
-      ],
-      "status": "unmatched"
     },
     {
       "lessonId": "waking-up",
