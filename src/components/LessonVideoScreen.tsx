@@ -21,6 +21,7 @@ export function LessonVideoScreen({
   const [mediaError, setMediaError] = useState(lesson.media.availability !== "available");
   const [retryKey, setRetryKey] = useState(0);
   const [watchComplete, setWatchComplete] = useState(false);
+  const [playbackControlsVisible, setPlaybackControlsVisible] = useState(false);
   const screenRef = useRef<HTMLElement>(null);
   const watchedSeconds = useRef(0);
   const lastTime = useRef(0);
@@ -59,6 +60,16 @@ export function LessonVideoScreen({
     onContinue(bypassed);
   }
 
+  function showPlaybackControls() {
+    setPlaybackControlsVisible(true);
+  }
+
+  function retryPlayback() {
+    setPlaybackControlsVisible(false);
+    setMediaError(false);
+    setRetryKey((value) => value + 1);
+  }
+
   const canContinue = mediaError || !requireCompletedWatch || watchComplete;
 
   return (
@@ -74,11 +85,20 @@ export function LessonVideoScreen({
           <video
             key={retryKey}
             className="immersive-video-element"
-            controls
+            controls={playbackControlsVisible}
             playsInline
             autoPlay
             preload="metadata"
             poster={assetPath(lesson.media.posterSrc)}
+            tabIndex={0}
+            aria-label={playbackControlsVisible ? `${lesson.title} video` : `Show controls for ${lesson.title} video`}
+            onClick={showPlaybackControls}
+            onKeyDown={(event) => {
+              if (!playbackControlsVisible && (event.key === "Enter" || event.key === " ")) {
+                event.preventDefault();
+                showPlaybackControls();
+              }
+            }}
             onLoadedMetadata={resetPlayback}
             onTimeUpdate={(event) => noteProgress(event.currentTarget)}
             onEnded={(event) => finishPlayback(event.currentTarget)}
@@ -91,7 +111,7 @@ export function LessonVideoScreen({
             <CircleAlert size={34} />
             <h2>Video unavailable</h2>
             <p>{lesson.media.fallbackMessage}</p>
-            <button type="button" className="video-retry-button" onClick={() => { setMediaError(false); setRetryKey((value) => value + 1); }}>
+            <button type="button" className="video-retry-button" onClick={retryPlayback}>
               <RefreshCw size={17} /> Retry video
             </button>
           </div>
