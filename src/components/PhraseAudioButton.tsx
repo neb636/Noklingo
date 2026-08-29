@@ -21,9 +21,11 @@ function AudioSequenceButton({ sources, label, compact = false, pauseMs = 0, aut
   const soundRef = useRef<Howl | null>(null);
   const pauseRef = useRef<number | undefined>(undefined);
   const autoplayRef = useRef<number | undefined>(undefined);
+  const autoPlayedRequestRef = useRef<string | undefined>(undefined);
   const settings = useStudyStore((state) => state.settings);
   const updateSettings = useStudyStore((state) => state.updateSettings);
   const sourceKey = sources.join("\u0000");
+  const autoPlayRequestKey = `${autoPlayKey ?? "default"}\u0000${sourceKey}`;
 
   const stop = useCallback((next: AudioState = "idle") => {
     if (pauseRef.current !== undefined) window.clearTimeout(pauseRef.current);
@@ -46,9 +48,9 @@ function AudioSequenceButton({ sources, label, compact = false, pauseMs = 0, aut
     }
     if (!sourceKey || audioState === "loading" || audioState === "playing") return;
     activeAudio?.stop();
-    activeAudio = { owner: ownerRef.current, stop: () => stop("idle") };
     const playbackSources = sourceKey.split("\u0000");
     stop("loading");
+    activeAudio = { owner: ownerRef.current, stop: () => stop("idle") };
     const playAt = (index: number) => {
       const sound = new Howl({
         src: [assetPath(playbackSources[index])],
@@ -74,19 +76,44 @@ function AudioSequenceButton({ sources, label, compact = false, pauseMs = 0, aut
     playAt(0);
   }, [audioState, pauseMs, settings.audioEnabled, settings.speechRate, settings.volume, sourceKey, stop, updateSettings]);
 
+  const playRef = useRef(play);
   useEffect(() => {
-    if (autoPlayDelayMs === undefined || !settings.audioEnabled || !sourceKey) return;
-    autoplayRef.current = window.setTimeout(play, autoPlayDelayMs);
+    playRef.current = play;
+  }, [play]);
+
+  useEffect(() => {
+    if (autoPlayDelayMs === undefined || !sourceKey) return;
+    if (autoPlayedRequestRef.current === autoPlayRequestKey) return;
+    if (!settings.audioEnabled) {
+      autoPlayedRequestRef.current = autoPlayRequestKey;
+      return;
+    }
+    const timer = window.setTimeout(() => {
+      autoPlayedRequestRef.current = autoPlayRequestKey;
+      if (autoplayRef.current === timer) autoplayRef.current = undefined;
+      playRef.current();
+    }, autoPlayDelayMs);
+    autoplayRef.current = timer;
     return () => {
-      if (autoplayRef.current !== undefined) window.clearTimeout(autoplayRef.current);
+      window.clearTimeout(timer);
+      if (autoplayRef.current === timer) autoplayRef.current = undefined;
     };
-  }, [autoPlayDelayMs, autoPlayKey, play, settings.audioEnabled, sourceKey]);
+  }, [autoPlayDelayMs, autoPlayRequestKey, settings.audioEnabled, sourceKey]);
+
+  const handlePlay = useCallback(() => {
+    if (autoPlayDelayMs !== undefined) {
+      autoPlayedRequestRef.current = autoPlayRequestKey;
+      if (autoplayRef.current !== undefined) window.clearTimeout(autoplayRef.current);
+      autoplayRef.current = undefined;
+    }
+    play();
+  }, [autoPlayDelayMs, autoPlayRequestKey, play]);
 
   const unavailable = !sourceKey;
   const buttonLabel = !settings.audioEnabled ? `Turn sound on for ${label}` : unavailable ? `${label} is unavailable` : audioState === "error" ? `Retry ${label}` : audioState === "playing" ? `Playing ${label}` : `Play ${label}`;
   const Icon = !settings.audioEnabled || unavailable ? VolumeX : audioState === "loading" ? LoaderCircle : audioState === "error" ? RotateCcw : Volume2;
-  return <button type="button" className={`${compact ? "icon-button" : "audio-button"}${audioState === "error" ? " audio-error" : ""}`} onClick={play} disabled={unavailable} aria-label={buttonLabel} aria-live="polite">
-    <Icon className={audioState === "loading" ? "spin" : undefined} size={compact ? 18 : 17} aria-hidden="true" />
+  return <button type="button" className={`${compact ? "icon-button" : "audio-button"}${audioState === "error" ? " audio-error" : ""}`} onClick={handlePlay} disabled={unavailable} aria-label={buttonLabel} aria-live="polite">
+    <Icon className={audioState === "loading" ? "spin" : undefined} size={22} aria-hidden="true" />
     {!compact && <span>{displayLabel ?? buttonLabel}</span>}
   </button>;
 }

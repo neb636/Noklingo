@@ -494,18 +494,18 @@ h2 { font-size: clamp(1.45rem,2.4vw,2.05rem); }
 
 /* Immersive video */
 .durable-video-host { position:fixed;inset:0;z-index:120;background:#050609; }
-.immersive-video { position:fixed;inset:0;z-index:120;background:#050609;color:#fff;display:grid;grid-template-rows:auto minmax(0,1fr) auto;overflow:hidden; }
-.immersive-video-topbar { z-index:2;display:grid;grid-template-columns:44px 1fr 44px;align-items:center;gap:10px;padding:max(10px,env(safe-area-inset-top)) 16px 8px;background:linear-gradient(180deg,rgba(0,0,0,.68),transparent); }
+.immersive-video { position:fixed;inset:0;z-index:120;background:#000;color:#fff;overflow:hidden; }
+.immersive-video-topbar { position:absolute;inset:0 0 auto;z-index:2;display:grid;grid-template-columns:44px 1fr 44px;align-items:center;gap:10px;padding:max(10px,env(safe-area-inset-top)) 16px 32px;background:linear-gradient(180deg,rgba(0,0,0,.68),transparent); }
 .immersive-video-topbar>span { text-align:center;font-weight:700;font-size:.82rem; }
 .glass-icon-button { color:#fff;background:rgba(255,255,255,.12);backdrop-filter:blur(10px); }
-.immersive-video-media { min-height:0;display:grid;place-items:center;overflow:hidden;padding:4px 16px; }
-.immersive-video-element { display:block;height:100%;max-height:100%;width:auto;max-width:100%;aspect-ratio:9/16;object-fit:contain;background:#000;border-radius:15px;box-shadow:0 18px 50px rgba(0,0,0,.38); }
+.immersive-video-media { position:absolute;inset:0;display:grid;place-items:center;overflow:hidden;background:#000; }
+.immersive-video-element { position:absolute;inset:0;display:block;width:100%;height:100%;min-width:0;min-height:0;object-fit:contain;background:#000; }
 .immersive-video-element::cue { color:#fff;background:rgba(0,0,0,.8); }
 .immersive-video-error { width:min(100%,420px);text-align:center;display:grid;justify-items:center;gap:10px;padding:32px;color:#fff; }
 .immersive-video-error h2 { margin:0;font-size:1.45rem; }
 .immersive-video-error p { color:#b9bdc7;font-size:.82rem; }
 .video-retry-button { display:flex;align-items:center;gap:7px;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(255,255,255,.09);color:#fff;padding:.7rem 1rem; }
-.immersive-video-footer { z-index:2;display:grid;grid-template-columns:1fr auto;align-items:center;gap:18px;padding:18px 22px max(20px,env(safe-area-inset-bottom));background:linear-gradient(0deg,rgba(0,0,0,.9),rgba(0,0,0,.68) 66%,transparent); }
+.immersive-video-footer { position:absolute;inset:auto 0 0;z-index:2;display:grid;grid-template-columns:1fr auto;align-items:center;gap:18px;padding:42px 22px max(20px,env(safe-area-inset-bottom));background:linear-gradient(0deg,rgba(0,0,0,.9),rgba(0,0,0,.68) 66%,transparent); }
 .immersive-video-footer>div { display:grid;gap:3px; }
 .immersive-video-footer strong { font-size:.85rem; }
 .immersive-video-footer span { color:#bfc2ca;font-size:.68rem; }
@@ -523,18 +523,18 @@ h2 { font-size: clamp(1.45rem,2.4vw,2.05rem); }
 .learning-card { flex:0 0 calc(100% - 74px);min-width:0;max-width:540px;min-height:min(62dvh,620px);scroll-snap-align:center;perspective:1200px; }
 .learning-card-inner { position:relative;width:100%;height:100%;min-height:inherit;transform-style:preserve-3d;transition:transform .45s cubic-bezier(.2,.75,.25,1); }
 .learning-card.is-flipped .learning-card-inner { transform:rotateY(180deg); }
-.learning-card-face { position:absolute;inset:0;backface-visibility:hidden;background:var(--card);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center; }
-.learning-card-back { transform:rotateY(180deg);align-items:flex-start;text-align:left;justify-content:center; }
-.learning-card-back>p:not(.eyebrow) { color:var(--muted);font-size:.84rem; }
+.learning-card-face { position:absolute;inset:0;-webkit-backface-visibility:hidden;backface-visibility:hidden;background:var(--card);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer; }
+.learning-card-back { transform:rotateY(180deg); }
 .cue-emoji { display:block;font-size:clamp(4.5rem,18vw,7.5rem);line-height:1;margin-bottom:30px;filter:drop-shadow(0 7px 12px rgba(25,30,45,.08)); }
 .cue-emoji.small { font-size:3rem;margin-bottom:16px; }
 .learning-card h2 { font-size:clamp(1.9rem,7vw,3rem);margin:0 0 10px;font-weight:850; }
-.cue-card-thai { font-size:calc(var(--thai-size)*1.28);margin:0 0 2px; }
-.cue-card-romanization { font-size:1.1rem;margin:0;color:var(--muted); }
-.cue-card-listen { display:flex;align-items:center;gap:8px;color:var(--muted);font-size:.76rem;margin-top:30px; }
-.cue-card-listen .audio-button { border:0;padding:0; }
+.cue-card-thai { font-size:calc(var(--thai-size)*1.55);margin:0 0 6px; }
+.cue-card-romanization { font-size:3rem;margin:0;color:var(--muted); }
+.cue-card-listen { display:flex;align-items:center;gap:8px;color:var(--muted);font-size:1.1rem;margin-top:40px; }
+.cue-card-listen .audio-button { border:0;padding:0;background:none; }
 .cue-card-audio-unavailable { display:flex;align-items:center;gap:8px;color:var(--muted);font-size:.72rem;margin-top:30px; }
-.flip-card-button { margin-top:20px;display:flex;align-items:center;gap:7px;border:0;background:none;color:var(--muted);cursor:pointer;font-size:.76rem; }
+.flip-card-button { opacity: .4; position:absolute;right:16px;bottom:16px;width:46px;height:46px;display:grid;place-items:center;padding:0;border:0;border-radius:50%;background:transparent;color:var(--muted);cursor:pointer; }
+.flip-card-button svg { transition:color .15s ease,transform .15s ease; }
 .carousel-controls { width:min(100% - 56px,560px);margin:0 auto 12px;display:grid;grid-template-columns:44px 1fr 44px;align-items:center;gap:15px; }
 .carousel-controls button { width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:var(--card);color:var(--ink);cursor:pointer; }
 .carousel-controls button:disabled { opacity:.25;cursor:default; }
@@ -651,8 +651,6 @@ h2 { font-size: clamp(1.45rem,2.4vw,2.05rem); }
   .immersive-video-footer { grid-template-columns:1fr;padding-inline:18px;gap:11px; }
   .immersive-video-footer>div { display:none; }
   .video-continue-button { width:100%;justify-content:center; }
-  .immersive-video-media { padding:2px 0; }
-  .immersive-video-element { border-radius:0; }
   .learning-card { min-height:min(64dvh,590px); }
   .learning-card-face { padding:24px 20px; }
   .cue-emoji { margin-bottom:24px; }

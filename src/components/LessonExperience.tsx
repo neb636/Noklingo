@@ -7,7 +7,7 @@ import type { VideoLesson } from "@/domain/schemas";
 import { cueCards } from "@/domain/seed";
 import { assetPath } from "@/lib/asset-path";
 import { CueCardCarousel, StudyTopBar } from "./CueCardCarousel";
-import { LessonVideoScreen, requestContainerFullscreen } from "./LessonVideoScreen";
+import { LessonVideoScreen } from "./LessonVideoScreen";
 import { PracticeQuiz } from "./PracticeQuiz";
 
 type LessonStage = "overview" | "video" | "cards" | "quiz" | "complete";
@@ -16,7 +16,6 @@ export function LessonExperience({ lesson }: { lesson: VideoLesson }) {
   const [stage, setStage] = useState<LessonStage>("overview");
   const [attempt, setAttempt] = useState(1);
   const [result, setResult] = useState({ score: 0, total: 0 });
-  const flowRef = useRef<HTMLDivElement>(null);
   const cards = lesson.cueCardIds.map((id) => cueCards.find((card) => card.id === id)).filter((card): card is (typeof cueCards)[number] => Boolean(card));
 
   function backToLibrary() {
@@ -25,13 +24,12 @@ export function LessonExperience({ lesson }: { lesson: VideoLesson }) {
 
   function playVideo() {
     setStage("video");
-    void requestContainerFullscreen(flowRef.current);
   }
 
   return (
-    <div ref={flowRef} className={`lesson-flow lesson-stage-${stage}`}>
+    <div className={`lesson-flow lesson-stage-${stage}`}>
       {stage === "overview" && <LessonOverview lesson={lesson} cardCount={cards.length} onBack={backToLibrary} onPlay={playVideo} onSkip={() => setStage("cards")} />}
-      {stage === "video" && <LessonVideoScreen lesson={lesson} fullscreenTargetRef={flowRef} onClose={() => setStage("overview")} onContinue={() => setStage("cards")} />}
+      {stage === "video" && <LessonVideoScreen lesson={lesson} onClose={() => setStage("overview")} onContinue={() => setStage("cards")} />}
       {stage === "cards" && <CueCardCarousel lesson={lesson} cards={cards} onBack={() => setStage("overview")} onComplete={() => setStage("quiz")} />}
       {stage === "quiz" && <PracticeQuiz lesson={lesson} lessonCards={cards} allCards={cueCards} seed={`${lesson.id}:practice:${attempt}`} onClose={() => setStage("overview")} onComplete={(score, total) => { setResult({ score, total }); setStage("complete"); }} />}
       {stage === "complete" && <PracticeComplete lesson={lesson} score={result.score} total={result.total} onRetry={() => { setAttempt((value) => value + 1); setStage("quiz"); }} onCards={() => setStage("cards")} onLibrary={backToLibrary} />}
