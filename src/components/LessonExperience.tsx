@@ -1,9 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { flushSync } from "react-dom";
-import Image from "next/image";
-import { ArrowRight, CheckCircle2, Clock3, ExternalLink, Play, RotateCcw, Sparkles } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowRight, CheckCircle2, ExternalLink, Play, RotateCcw, Sparkles } from "lucide-react";
 import type { VideoLesson } from "@/domain/schemas";
 import { cueCards } from "@/domain/seed";
 import { assetPath } from "@/lib/asset-path";
@@ -25,14 +24,31 @@ export function LessonExperience({ lesson }: { lesson: VideoLesson }) {
   }
 
   function playVideo() {
-    flushSync(() => setStage("video"));
-    void videoScreenRef.current?.play();
+    videoScreenRef.current?.startFromGesture();
   }
 
   return (
     <div className={`lesson-flow lesson-stage-${stage}`}>
-      {stage === "overview" && <LessonOverview lesson={lesson} cardCount={cards.length} onBack={backToLibrary} onPlay={playVideo} onSkip={() => setStage("cards")} />}
-      {stage === "video" && <LessonVideoScreen ref={videoScreenRef} lesson={lesson} onClose={() => setStage("overview")} onContinue={() => setStage("cards")} />}
+      {(stage === "overview" || stage === "video") && (
+        <LessonOverview
+          lesson={lesson}
+          cardCount={cards.length}
+          expanded={stage === "video"}
+          onBack={backToLibrary}
+          onPlay={playVideo}
+          onSkip={() => setStage("cards")}
+          player={(
+            <LessonVideoScreen
+              ref={videoScreenRef}
+              lesson={lesson}
+              presentation={stage === "video" ? "immersive" : "poster"}
+              onEnterImmersive={() => setStage("video")}
+              onClose={() => setStage("overview")}
+              onContinue={() => setStage("cards")}
+            />
+          )}
+        />
+      )}
       {stage === "cards" && <CueCardCarousel lesson={lesson} cards={cards} onBack={() => setStage("overview")} onComplete={() => setStage("quiz")} />}
       {stage === "quiz" && <PracticeQuiz lesson={lesson} lessonCards={cards} allCards={cueCards} seed={`${lesson.id}:practice:${attempt}`} onClose={() => setStage("overview")} onComplete={(score, total) => { setResult({ score, total }); setStage("complete"); }} />}
       {stage === "complete" && <PracticeComplete lesson={lesson} score={result.score} total={result.total} onRetry={() => { setAttempt((value) => value + 1); setStage("quiz"); }} onCards={() => setStage("cards")} onLibrary={backToLibrary} />}
@@ -43,35 +59,44 @@ export function LessonExperience({ lesson }: { lesson: VideoLesson }) {
 function LessonOverview({
   lesson,
   cardCount,
+  expanded,
   onBack,
   onPlay,
   onSkip,
+  player,
 }: {
   lesson: VideoLesson;
   cardCount: number;
+  expanded: boolean;
   onBack: () => void;
   onPlay: () => void;
   onSkip: () => void;
+  player: React.ReactNode;
 }) {
-  return <section className="lesson-overview-screen">
-    <StudyTopBar title={`Lesson ${lesson.order}`} onBack={onBack} />
-    <div className="lesson-overview-copy">
-      <p className="lesson-kicker">Watch · notice · practice</p>
-      <h1>{lesson.topicEmoji} {lesson.title}</h1>
-      <p>{lesson.objective.replace(/^Draft plan —\s*/, "")}</p>
-    </div>
-    <button type="button" className="lesson-overview-poster" onClick={onPlay} aria-label={`Play ${lesson.title} video`}>
-      <Image src={assetPath(lesson.media.posterSrc)} width={720} height={1280} sizes="(max-width: 600px) 46vw, 230px" priority unoptimized alt="" />
-      <span className="lesson-poster-emoji" aria-hidden="true">{lesson.topicEmoji}</span>
-      <span className="lesson-poster-play" aria-hidden="true"><Play size={19} fill="currentColor" /></span>
-      <span className="lesson-poster-duration"><Clock3 size={14} /> {formatDuration(lesson.media.durationSeconds)}</span>
-    </button>
-    <div className="lesson-overview-meta"><span>{cardCount} cue card{cardCount === 1 ? "" : "s"}</span><span>Practice quiz included</span></div>
-    <div className="lesson-overview-actions">
-      <button type="button" className="black-button" onClick={onPlay}><Play size={18} fill="currentColor" /> Play video</button>
-      {cardCount > 0 && <button type="button" className="soft-button" onClick={onSkip}>Skip to cards <ArrowRight size={18} /></button>}
-    </div>
-    {lesson.source && <a className="lesson-source-link" href={lesson.source.url} target="_blank" rel="noreferrer">Source: {lesson.source.label} <ExternalLink size={13} /></a>}
+  return <section className={`lesson-overview-screen${expanded ? " is-video-expanded" : ""}`}>
+    <AnimatePresence initial={false}>
+      {!expanded && <motion.div key="lesson-intro" className="lesson-overview-intro" initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.2 }}>
+        <StudyTopBar title={`Lesson ${lesson.order}`} onBack={onBack} />
+        <div className="lesson-overview-copy">
+          <p className="lesson-kicker">Watch · notice · practice</p>
+          <h1>{lesson.topicEmoji} {lesson.title}</h1>
+          <p>{lesson.objective.replace(/^Draft plan —\s*/, "")}</p>
+        </div>
+      </motion.div>}
+    </AnimatePresence>
+
+    {player}
+
+    <AnimatePresence initial={false}>
+      {!expanded && <motion.div key="lesson-actions" className="lesson-overview-tail" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 8 }} transition={{ duration: 0.2 }}>
+        <div className="lesson-overview-meta"><span>{cardCount} cue card{cardCount === 1 ? "" : "s"}</span><span>Practice quiz included</span></div>
+        <div className="lesson-overview-actions">
+          <button type="button" className="black-button" onClick={onPlay}><Play size={18} fill="currentColor" /> Play video</button>
+          {cardCount > 0 && <button type="button" className="soft-button" onClick={onSkip}>Skip to cards <ArrowRight size={18} /></button>}
+        </div>
+        {lesson.source && <a className="lesson-source-link" href={lesson.source.url} target="_blank" rel="noreferrer">Source: {lesson.source.label} <ExternalLink size={13} /></a>}
+      </motion.div>}
+    </AnimatePresence>
   </section>;
 }
 
@@ -92,9 +117,4 @@ function PracticeComplete({ lesson, score, total, onRetry, onCards, onLibrary }:
       <button type="button" className="text-button" onClick={onLibrary}>Back to Library</button>
     </div>
   </section>;
-}
-
-function formatDuration(seconds: number) {
-  const rounded = Math.round(seconds);
-  return `${Math.floor(rounded / 60)}:${String(rounded % 60).padStart(2, "0")}`;
 }
