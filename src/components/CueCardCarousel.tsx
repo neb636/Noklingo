@@ -43,6 +43,7 @@ export function CueCardCarousel({
     const next = Math.max(0, Math.min(cards.length - 1, index));
     cardRefs.current[next]?.scrollIntoView?.({ behavior: settings.reduceMotion ? "auto" : "smooth", inline: "center", block: "nearest" });
     setFlippedId(undefined);
+    setActiveIndex(next);
   }
 
   function flipCard(index: number, cardId?: string) {

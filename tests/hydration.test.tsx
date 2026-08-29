@@ -4,7 +4,7 @@ import { act } from "react";
 import { hydrateRoot, type Root } from "react-dom/client";
 import { renderToString } from "react-dom/server";
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
-import StudyPage from "../src/pages/study";
+import LessonPage from "../src/pages/lessons/[lessonId]";
 import TodayPage from "../src/pages/today";
 import { defaultSnapshot, useStudyStore } from "../src/state/study-store";
 
@@ -61,11 +61,10 @@ describe("server/client hydration", () => {
     await act(async () => root.unmount());
   });
 
-  it("defers preview query rendering until after the shared first render", async () => {
-    routerState.query = { preview: "common-verbs" };
-    const markup = renderToString(<StudyPage />);
+  it("hydrates a static lesson route without changing its first render", async () => {
+    const markup = renderToString(<LessonPage lessonId="common-verbs" />);
     const errors: unknown[] = [];
-    const { container, root } = await hydrate(markup, <StudyPage />, errors);
+    const { container, root } = await hydrate(markup, <LessonPage lessonId="common-verbs" />, errors);
 
     expect(errors).toEqual([]);
     expect(container).toHaveTextContent("Watch · notice · practice");
