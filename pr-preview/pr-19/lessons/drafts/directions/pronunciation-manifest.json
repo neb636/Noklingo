@@ -1,0 +1,308 @@
+{
+  "lessonId": "directions",
+  "sourceVideo": "/lessons/drafts/directions/intro.mp4",
+  "sourceHash": "0a7882eaea6be4f98527b8f994189b3a58aff15b6cae6c130797dccee5b29177",
+  "model": "large-v3",
+  "generatedAt": "2026-08-29T08:26:50.591Z",
+  "algorithmFingerprint": "a94210fc1c3198f8",
+  "clips": [
+    {
+      "cueCardId": "draft-directions-1",
+      "thaiText": "ตรงไป",
+      "englishText": "Go straight",
+      "thai": {
+        "audio": "/lessons/drafts/directions/audio/draft-directions-1-th.m4a",
+        "status": "matched",
+        "start": 1.03,
+        "end": 2.3800000000000003,
+        "rawStart": 1.1,
+        "rawEnd": 2.24,
+        "protectedStart": 1.1,
+        "protectedEnd": 2.24,
+        "envelopeMethod": "whisper",
+        "transcriptMatch": " ตรงไป",
+        "confidence": 0.9995411348342895,
+        "candidates": [
+          {
+            "start": 1.1,
+            "end": 2.24,
+            "transcriptMatch": " ตรงไป",
+            "confidence": 0.9995411348342895,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "fallback"
+        },
+        "boundaryConfidence": {
+          "start": 0.4544812475096624,
+          "end": 0
+        },
+        "warnings": [
+          "end-fallback",
+          "overlapping-speech-envelopes",
+          "unrefined-whisper-envelope"
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/directions/audio/draft-directions-1-en.m4a",
+        "status": "matched",
+        "start": 0.115,
+        "end": 1.48,
+        "rawStart": 0,
+        "rawEnd": 0.66,
+        "protectedStart": 0.23,
+        "protectedEnd": 1.23,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": "Go straight",
+        "confidence": 0.9359815868735314,
+        "candidates": [
+          {
+            "start": 0,
+            "end": 0.66,
+            "transcriptMatch": "Go straight",
+            "confidence": 0.9359815868735314,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.286466854446284,
+          "end": 0.2742000627086985
+        },
+        "warnings": [
+          "overlapping-speech-envelopes"
+        ]
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-directions-2",
+      "thaiText": "เลี้ยวขวา",
+      "englishText": "Turn right",
+      "thai": {
+        "audio": "/lessons/drafts/directions/audio/draft-directions-2-th.m4a",
+        "status": "matched",
+        "start": 4.125,
+        "end": 6.615,
+        "rawStart": 4.28,
+        "rawEnd": 6.34,
+        "protectedStart": 4.28,
+        "protectedEnd": 6.34,
+        "envelopeMethod": "whisper",
+        "transcriptMatch": " เลี้ยวขวา",
+        "confidence": 0.9952482843399048,
+        "candidates": [
+          {
+            "start": 4.28,
+            "end": 6.34,
+            "transcriptMatch": " เลี้ยวขวา",
+            "confidence": 0.9952482843399048,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2256941909767287,
+          "end": 0.5292916137854257
+        },
+        "warnings": [
+          "overlapping-speech-envelopes",
+          "unrefined-whisper-envelope"
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/directions/audio/draft-directions-2-en.m4a",
+        "status": "matched",
+        "start": 1.53,
+        "end": 4.85,
+        "rawStart": 2.24,
+        "rawEnd": 4.08,
+        "protectedStart": 1.71,
+        "protectedEnd": 4.61,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " Turn right",
+        "confidence": 0.9400382417067885,
+        "candidates": [
+          {
+            "start": 2.24,
+            "end": 4.08,
+            "transcriptMatch": " Turn right",
+            "confidence": 0.9400382417067885,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.27580234421662275,
+          "end": 0.3014246961560095
+        },
+        "warnings": [
+          "overlapping-speech-envelopes"
+        ]
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-directions-3",
+      "thaiText": "เลี้ยวซ้าย",
+      "englishText": "Turn left",
+      "thai": {
+        "audio": "/lessons/drafts/directions/audio/draft-directions-3-th.m4a",
+        "status": "matched",
+        "start": 8.075,
+        "end": 10.395,
+        "rawStart": 8.14,
+        "rawEnd": 10,
+        "protectedStart": 8.14,
+        "protectedEnd": 10,
+        "envelopeMethod": "whisper",
+        "transcriptMatch": " เลี้ยวซ้าย",
+        "confidence": 0.9980697955404009,
+        "candidates": [
+          {
+            "start": 8.14,
+            "end": 10,
+            "transcriptMatch": " เลี้ยวซ้าย",
+            "confidence": 0.9980697955404009,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.44257427231747176,
+          "end": 0.523451364600058
+        },
+        "warnings": [
+          "overlapping-speech-envelopes",
+          "unrefined-whisper-envelope"
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/directions/audio/draft-directions-3-en.m4a",
+        "status": "matched",
+        "start": 5.17,
+        "end": 8.51,
+        "rawStart": 6.34,
+        "rawEnd": 7.92,
+        "protectedStart": 5.35,
+        "protectedEnd": 8.25,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " Turn left",
+        "confidence": 0.9776301908493042,
+        "candidates": [
+          {
+            "start": 6.34,
+            "end": 7.92,
+            "transcriptMatch": " Turn left",
+            "confidence": 0.9776301908493042,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.3013595494860621,
+          "end": 0.2986443428991908
+        },
+        "warnings": [
+          "overlapping-speech-envelopes"
+        ]
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-directions-4",
+      "thaiText": "กลับรถ",
+      "englishText": "U turn",
+      "thai": {
+        "audio": "/lessons/drafts/directions/audio/draft-directions-4-th.m4a",
+        "status": "matched",
+        "start": 12.44,
+        "end": 13.4995,
+        "rawStart": 12,
+        "rawEnd": 13.14,
+        "protectedStart": 12.54,
+        "protectedEnd": 13.4,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": "กลับรถ",
+        "confidence": 0.9803754790127277,
+        "candidates": [
+          {
+            "start": 12,
+            "end": 13.14,
+            "transcriptMatch": "กลับรถ",
+            "confidence": 0.9803754790127277,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2804557751188391,
+          "end": 0.48280377076408915
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/directions/audio/draft-directions-4-en.m4a",
+        "status": "matched",
+        "start": 8.94,
+        "end": 12.12,
+        "rawStart": 10,
+        "rawEnd": 11.26,
+        "protectedStart": 9.12,
+        "protectedEnd": 11.88,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " U turn",
+        "confidence": 0.9223401615023613,
+        "candidates": [
+          {
+            "start": 10,
+            "end": 11.26,
+            "transcriptMatch": " U turn",
+            "confidence": 0.9223401615023613,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.282411516387726,
+          "end": 0.25604266879939924
+        },
+        "warnings": [
+          "overlapping-speech-envelopes"
+        ]
+      },
+      "pairStatus": "complete"
+    }
+  ]
+}

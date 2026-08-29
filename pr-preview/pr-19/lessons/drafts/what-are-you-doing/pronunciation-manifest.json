@@ -1,0 +1,376 @@
+{
+  "lessonId": "what-are-you-doing",
+  "sourceVideo": "/lessons/drafts/what-are-you-doing/intro.mp4",
+  "sourceHash": "122ba024e22a4893251e3b20c0098db4c685a66ca8252c9e8fb881bb67daf931",
+  "model": "large-v3",
+  "generatedAt": "2026-08-29T08:26:52.346Z",
+  "algorithmFingerprint": "a94210fc1c3198f8",
+  "clips": [
+    {
+      "cueCardId": "draft-what-are-you-doing-1",
+      "thaiText": "กำลังไป",
+      "englishText": "I’m on my way.",
+      "thai": {
+        "audio": "/lessons/drafts/what-are-you-doing/audio/draft-what-are-you-doing-1-th.m4a",
+        "status": "matched",
+        "start": 2.495,
+        "end": 5.865,
+        "rawStart": 4.04,
+        "rawEnd": 5.04,
+        "protectedStart": 2.54,
+        "protectedEnd": 5.63,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": "กำลังไป",
+        "confidence": 0.9892950320243835,
+        "candidates": [
+          {
+            "start": 4.04,
+            "end": 5.04,
+            "transcriptMatch": "กำลังไป",
+            "confidence": 0.9892950320243835,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.4815013468000957,
+          "end": 0.3556934906560774
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/what-are-you-doing/audio/draft-what-are-you-doing-1-en.m4a",
+        "status": "matched",
+        "start": 5.865,
+        "end": 7.11,
+        "rawStart": 5.04,
+        "rawEnd": 6.78,
+        "protectedStart": 5.92,
+        "protectedEnd": 6.91,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " I’m on my way.",
+        "confidence": 0.9495341557283018,
+        "candidates": [
+          {
+            "start": 5.04,
+            "end": 6.78,
+            "transcriptMatch": " I’m on my way.",
+            "confidence": 0.9495341557283018,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.3556934906560774,
+          "end": 0.3010573551927725
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-what-are-you-doing-2",
+      "thaiText": "ทำอะไรอยู่",
+      "englishText": "What are you doing?",
+      "thai": {
+        "audio": "/lessons/drafts/what-are-you-doing/audio/draft-what-are-you-doing-2-th.m4a",
+        "status": "matched",
+        "start": 7.11,
+        "end": 8.899999999999999,
+        "rawStart": 7.18,
+        "rawEnd": 8.46,
+        "protectedStart": 7.23,
+        "protectedEnd": 8.78,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " ทำอะไรอยู่",
+        "confidence": 0.9942279541492463,
+        "candidates": [
+          {
+            "start": 7.18,
+            "end": 8.46,
+            "transcriptMatch": " ทำอะไรอยู่",
+            "confidence": 0.9942279541492463,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.3010573551927725,
+          "end": 0.22936761655223137
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/what-are-you-doing/audio/draft-what-are-you-doing-2-en.m4a",
+        "status": "matched",
+        "start": 9.11,
+        "end": 10.465,
+        "rawStart": 8.46,
+        "rawEnd": 9.96,
+        "protectedStart": 9.16,
+        "protectedEnd": 10.2,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " What are you doing?",
+        "confidence": 0.986613296866417,
+        "candidates": [
+          {
+            "start": 8.46,
+            "end": 9.96,
+            "transcriptMatch": " What are you doing?",
+            "confidence": 0.986613296866417,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.44437525549211265,
+          "end": 0.29332600222862404
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-what-are-you-doing-3",
+      "thaiText": "อยู่ไหน",
+      "englishText": "Where are you?",
+      "thai": {
+        "audio": "/lessons/drafts/what-are-you-doing/audio/draft-what-are-you-doing-3-th.m4a",
+        "status": "matched",
+        "start": 10.495000000000001,
+        "end": 11.82,
+        "rawStart": 10.7,
+        "rawEnd": 11.36,
+        "protectedStart": 10.75,
+        "protectedEnd": 11.67,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " อยู่ไหน",
+        "confidence": 0.9995357346534729,
+        "candidates": [
+          {
+            "start": 10.7,
+            "end": 11.36,
+            "transcriptMatch": " อยู่ไหน",
+            "confidence": 0.9995357346534729,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.3002331629167977,
+          "end": 0.2664914763512469
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/what-are-you-doing/audio/draft-what-are-you-doing-3-en.m4a",
+        "status": "matched",
+        "start": 11.82,
+        "end": 12.844999999999999,
+        "rawStart": 11.36,
+        "rawEnd": 12.52,
+        "protectedStart": 11.93,
+        "protectedEnd": 12.7,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " Where are you?",
+        "confidence": 0.9947173357009887,
+        "candidates": [
+          {
+            "start": 14.26,
+            "end": 15.28,
+            "transcriptMatch": " Where are you",
+            "confidence": 0.997278470993042,
+            "exact": true,
+            "segmentIndex": 1
+          },
+          {
+            "start": 11.36,
+            "end": 12.52,
+            "transcriptMatch": " Where are you?",
+            "confidence": 0.9947173357009887,
+            "exact": true,
+            "segmentIndex": 1
+          },
+          {
+            "start": 15.82,
+            "end": 16.58,
+            "transcriptMatch": "Where are you",
+            "confidence": 0.9597371803969145,
+            "exact": true,
+            "segmentIndex": 2
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2664914763512469,
+          "end": 0.2138560324014603
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-what-are-you-doing-4",
+      "thaiText": "จะไปไหน",
+      "englishText": "Where are you going?",
+      "thai": {
+        "audio": "/lessons/drafts/what-are-you-doing/audio/draft-what-are-you-doing-4-th.m4a",
+        "status": "matched",
+        "start": 13.25,
+        "end": 14.775,
+        "rawStart": 13.32,
+        "rawEnd": 14.26,
+        "protectedStart": 13.42,
+        "protectedEnd": 14.55,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " จะไปไหน",
+        "confidence": 0.9995836800336838,
+        "candidates": [
+          {
+            "start": 13.32,
+            "end": 14.26,
+            "transcriptMatch": " จะไปไหน",
+            "confidence": 0.9995836800336838,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2698924922279531,
+          "end": 0.34619136028654807
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/what-are-you-doing/audio/draft-what-are-you-doing-4-en.m4a",
+        "status": "matched",
+        "start": 14.775,
+        "end": 16.085,
+        "rawStart": 14.26,
+        "rawEnd": 15.66,
+        "protectedStart": 14.84,
+        "protectedEnd": 15.89,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " Where are you going?",
+        "confidence": 0.9971388536691665,
+        "candidates": [
+          {
+            "start": 14.26,
+            "end": 15.66,
+            "transcriptMatch": " Where are you going?",
+            "confidence": 0.9971388536691665,
+            "exact": true,
+            "segmentIndex": 1
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.34619136028654807,
+          "end": 0.318380122260578
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-what-are-you-doing-5",
+      "thaiText": "แล้วเจอกัน",
+      "englishText": "See you later.",
+      "thai": {
+        "audio": "/lessons/drafts/what-are-you-doing/audio/draft-what-are-you-doing-5-th.m4a",
+        "status": "matched",
+        "start": 17.83,
+        "end": 19.439999999999998,
+        "rawStart": 17.88,
+        "rawEnd": 19.02,
+        "protectedStart": 17.9,
+        "protectedEnd": 19.32,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " แล้วเจอกัน",
+        "confidence": 0.998999833379473,
+        "candidates": [
+          {
+            "start": 17.88,
+            "end": 19.02,
+            "transcriptMatch": " แล้วเจอกัน",
+            "confidence": 0.998999833379473,
+            "exact": true,
+            "segmentIndex": 2
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.3583641446761866,
+          "end": 0.363285992263125
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/what-are-you-doing/audio/draft-what-are-you-doing-5-en.m4a",
+        "status": "matched",
+        "start": 19.73,
+        "end": 20.92309375,
+        "rawStart": 19.02,
+        "rawEnd": 20.3,
+        "protectedStart": 19.89,
+        "protectedEnd": 20.71,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " See you later.",
+        "confidence": 0.9905451893806457,
+        "candidates": [
+          {
+            "start": 19.02,
+            "end": 20.3,
+            "transcriptMatch": " See you later.",
+            "confidence": 0.9905451893806457,
+            "exact": true,
+            "segmentIndex": 2
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.3880618183709841,
+          "end": 0.9512403199134281
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    }
+  ]
+}

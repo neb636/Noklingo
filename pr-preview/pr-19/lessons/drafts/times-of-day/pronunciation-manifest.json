@@ -1,0 +1,462 @@
+{
+  "lessonId": "times-of-day",
+  "sourceVideo": "/lessons/drafts/times-of-day/intro.mp4",
+  "sourceHash": "6a30c26d9d7687bcfa08545612b6a09dce58a361b0636306d1d9d4cf219caebc",
+  "model": "large-v3",
+  "generatedAt": "2026-08-29T08:26:49.840Z",
+  "algorithmFingerprint": "a94210fc1c3198f8",
+  "clips": [
+    {
+      "cueCardId": "draft-times-of-day-1",
+      "thaiText": "เช้า",
+      "englishText": "Morning",
+      "thai": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-1-th.m4a",
+        "status": "matched",
+        "start": 1.15,
+        "end": 2.5650000000000004,
+        "rawStart": 0.6,
+        "rawEnd": 2.24,
+        "protectedStart": 1.26,
+        "protectedEnd": 2.46,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " เช้า",
+        "confidence": 0.9752939710021019,
+        "candidates": [
+          {
+            "start": 0.6,
+            "end": 2.24,
+            "transcriptMatch": " เช้า",
+            "confidence": 0.9752939710021019,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.28727446559041664,
+          "end": 0.2805008741932503
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-1-en.m4a",
+        "status": "matched",
+        "start": 0.065,
+        "end": 1.15,
+        "rawStart": 0,
+        "rawEnd": 0.6,
+        "protectedStart": 0.13,
+        "protectedEnd": 0.96,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": "Morning",
+        "confidence": 0.9837063503265381,
+        "candidates": [
+          {
+            "start": 0,
+            "end": 0.6,
+            "transcriptMatch": "Morning",
+            "confidence": 0.9837063503265381,
+            "exact": true,
+            "segmentIndex": 0
+          },
+          {
+            "start": 2.78,
+            "end": 3.38,
+            "transcriptMatch": " morning",
+            "confidence": 0.9625224661827088,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.24340576708398803,
+          "end": 0.28727446559041664
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-times-of-day-2",
+      "thaiText": "สาย",
+      "englishText": "Late morning",
+      "thai": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-2-th.m4a",
+        "status": "matched",
+        "start": 4.16,
+        "end": 5.25,
+        "rawStart": 3.84,
+        "rawEnd": 4.6,
+        "protectedStart": 4.25,
+        "protectedEnd": 5.19,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " สาย",
+        "confidence": 0.9966738748550414,
+        "candidates": [
+          {
+            "start": 3.84,
+            "end": 4.6,
+            "transcriptMatch": " สาย",
+            "confidence": 0.9966738748550414,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.26722703889122734,
+          "end": 0.2350072951155503
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-2-en.m4a",
+        "status": "matched",
+        "start": 2.5650000000000004,
+        "end": 4.16,
+        "rawStart": 2.24,
+        "rawEnd": 3.38,
+        "protectedStart": 2.64,
+        "protectedEnd": 4.03,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " Late morning",
+        "confidence": 0.9547648310661316,
+        "candidates": [
+          {
+            "start": 2.24,
+            "end": 3.38,
+            "transcriptMatch": " Late morning",
+            "confidence": 0.9547648310661316,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2805008741932503,
+          "end": 0.26722703889122734
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-times-of-day-3",
+      "thaiText": "เที่ยง",
+      "englishText": "Noon",
+      "thai": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-3-th.m4a",
+        "status": "matched",
+        "start": 6.535,
+        "end": 7.65,
+        "rawStart": 6.2,
+        "rawEnd": 7.2,
+        "protectedStart": 6.66,
+        "protectedEnd": 7.49,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " เที่ยง",
+        "confidence": 0.9977383407950401,
+        "candidates": [
+          {
+            "start": 6.2,
+            "end": 7.2,
+            "transcriptMatch": " เที่ยง",
+            "confidence": 0.9977383407950401,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.27005081971691347,
+          "end": 0.2753815283056519
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-3-en.m4a",
+        "status": "matched",
+        "start": 5.41,
+        "end": 6.535,
+        "rawStart": 4.6,
+        "rawEnd": 6.2,
+        "protectedStart": 5.6,
+        "protectedEnd": 6.36,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " Noon",
+        "confidence": 0.9835719704627991,
+        "candidates": [
+          {
+            "start": 11.18,
+            "end": 11.92,
+            "transcriptMatch": " afternoon",
+            "confidence": 0.9991937351226807,
+            "exact": true,
+            "segmentIndex": 0
+          },
+          {
+            "start": 8.12,
+            "end": 8.74,
+            "transcriptMatch": "noon",
+            "confidence": 0.9969743251800537,
+            "exact": true,
+            "segmentIndex": 0
+          },
+          {
+            "start": 4.6,
+            "end": 6.2,
+            "transcriptMatch": " Noon",
+            "confidence": 0.9835719704627991,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2649231365527985,
+          "end": 0.27005081971691347
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-times-of-day-4",
+      "thaiText": "บ่าย",
+      "englishText": "Afternoon",
+      "thai": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-4-th.m4a",
+        "status": "matched",
+        "start": 9.185,
+        "end": 10.36,
+        "rawStart": 8.74,
+        "rawEnd": 9.82,
+        "protectedStart": 9.33,
+        "protectedEnd": 10.23,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " บ่าย",
+        "confidence": 0.993155562877655,
+        "candidates": [
+          {
+            "start": 8.74,
+            "end": 9.82,
+            "transcriptMatch": " บ่าย",
+            "confidence": 0.993155562877655,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2571497829633047,
+          "end": 0.22389081246512887
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-4-en.m4a",
+        "status": "matched",
+        "start": 7.68,
+        "end": 9.185,
+        "rawStart": 7.2,
+        "rawEnd": 8.74,
+        "protectedStart": 7.91,
+        "protectedEnd": 9.03,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " Afternoon",
+        "confidence": 0.9953164231777192,
+        "candidates": [
+          {
+            "start": 11.18,
+            "end": 11.92,
+            "transcriptMatch": " afternoon",
+            "confidence": 0.9991937351226807,
+            "exact": true,
+            "segmentIndex": 0
+          },
+          {
+            "start": 7.2,
+            "end": 8.74,
+            "transcriptMatch": " Afternoon",
+            "confidence": 0.9953164231777192,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2758335351031502,
+          "end": 0.2571497829633047
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-times-of-day-5",
+      "thaiText": "เย็น",
+      "englishText": "Late afternoon",
+      "thai": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-5-th.m4a",
+        "status": "matched",
+        "start": 12.83,
+        "end": 13.875,
+        "rawStart": 11.92,
+        "rawEnd": 13.32,
+        "protectedStart": 13.01,
+        "protectedEnd": 13.69,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " เย็น",
+        "confidence": 0.9972290086746216,
+        "candidates": [
+          {
+            "start": 11.92,
+            "end": 13.32,
+            "transcriptMatch": " เย็น",
+            "confidence": 0.9972290086746216,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.29945242933246874,
+          "end": 0.2599219419482439
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-5-en.m4a",
+        "status": "matched",
+        "start": 10.59,
+        "end": 12.8,
+        "rawStart": 9.82,
+        "rawEnd": 11.92,
+        "protectedStart": 10.74,
+        "protectedEnd": 12.58,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " Late afternoon",
+        "confidence": 0.9910422551631928,
+        "candidates": [
+          {
+            "start": 9.82,
+            "end": 11.92,
+            "transcriptMatch": " Late afternoon",
+            "confidence": 0.9910422551631928,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2330953415115115,
+          "end": 0.2845156222761729
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-times-of-day-6",
+      "thaiText": "กลางคืน",
+      "englishText": "Night",
+      "thai": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-6-th.m4a",
+        "status": "matched",
+        "start": 14.875,
+        "end": 16.22109375,
+        "rawStart": 14.16,
+        "rawEnd": 15.88,
+        "protectedStart": 15.01,
+        "protectedEnd": 16.08,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " กลางคืน",
+        "confidence": 0.998897202014923,
+        "candidates": [
+          {
+            "start": 14.16,
+            "end": 15.88,
+            "transcriptMatch": " กลางคืน",
+            "confidence": 0.998897202014923,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2844073524228037,
+          "end": 0.5077851842382736
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/times-of-day/audio/draft-times-of-day-6-en.m4a",
+        "status": "matched",
+        "start": 13.875,
+        "end": 14.875,
+        "rawStart": 13.32,
+        "rawEnd": 14.16,
+        "protectedStart": 14.04,
+        "protectedEnd": 14.7,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " Night",
+        "confidence": 0.9929964017868043,
+        "candidates": [
+          {
+            "start": 13.32,
+            "end": 14.16,
+            "transcriptMatch": " Night",
+            "confidence": 0.9929964017868043,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2599219419482439,
+          "end": 0.2844073524228037
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    }
+  ]
+}
