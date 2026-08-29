@@ -16,16 +16,16 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="color-scheme" content="light dark" />
         <meta key="theme-color-light" name="theme-color" content="#f7f8fc" media="(prefers-color-scheme: light)" />
         <meta key="theme-color-dark" name="theme-color" content="#111318" media="(prefers-color-scheme: dark)" />
-        <meta name="application-name" content="NokLingo" />
+        <meta name="application-name" content="Noklingo" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="NokLingo" />
+        <meta name="apple-mobile-web-app-title" content="Noklingo" />
         <meta name="format-detection" content="telephone=no" />
         <link rel="manifest" href={assetPath("/manifest.webmanifest")} />
-        <link rel="icon" href={assetPath("/icon.svg")} type="image/svg+xml" sizes="any" />
-        <link rel="apple-touch-icon" href={assetPath("/apple-touch-icon.png")} sizes="180x180" />
-        <title>NokLingo</title>
+        <link rel="icon" href={assetPath("/noklingo-icon-192.png")} type="image/png" sizes="192x192" />
+        <link rel="apple-touch-icon" href={assetPath("/noklingo-apple-touch-icon.png")} sizes="180x180" />
+        <title>Noklingo</title>
       </Head>
       <AppProviders>
         {focusedRoute ? (

@@ -24,10 +24,10 @@ export default function WelcomePage() {
         <div className="welcome-brand">
           <Image
             className="welcome-mark"
-            src={assetPath("/icon.svg")}
+            src={assetPath("/noklingo-logo-black.png")}
             width={144}
             height={144}
-            alt="NokLingo black bird"
+            alt="NokLingo black bird mascot"
             priority
           />
           <h1 id="welcome-title">NokLingo</h1>

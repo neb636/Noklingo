@@ -22,7 +22,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <aside className="sidebar">
         <AppLink className="wordmark" href="/today/" aria-label="NokLingo home">
           <span className="wordmark-mark brand-mark" aria-hidden="true">
-            <Image src={assetPath("/icon.svg")} width={31} height={31} alt="" priority />
+            <Image src={assetPath("/noklingo-logo-black.png")} width={31} height={31} alt="" priority />
           </span>
           <span>NokLingo</span>
         </AppLink>
