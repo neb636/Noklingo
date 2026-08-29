@@ -18,6 +18,8 @@ beforeAll(() => {
     value: (value: string) => ({ matches: false, media: value, onchange: null, addListener: vi.fn(), removeListener: vi.fn(), addEventListener: vi.fn(), removeEventListener: vi.fn(), dispatchEvent: vi.fn() }),
   });
   window.scrollTo = vi.fn();
+  Object.defineProperty(HTMLMediaElement.prototype, "play", { configurable: true, value: vi.fn().mockResolvedValue(undefined) });
+  Object.defineProperty(HTMLMediaElement.prototype, "pause", { configurable: true, value: vi.fn() });
 });
 
 beforeEach(() => {
@@ -45,8 +47,7 @@ describe("lesson collection UI", () => {
     const video = container.querySelector("video")!;
     expect(video).toHaveAttribute("autoplay");
     expect(video).not.toHaveAttribute("controls");
-    fireEvent.click(video);
-    expect(video).toHaveAttribute("controls");
+    expect(HTMLMediaElement.prototype.play).toHaveBeenCalled();
     expect(screen.getByRole("button", { name: /continue to cards/i }).closest("footer")).toHaveClass("immersive-video-footer");
     fireEvent.click(screen.getByRole("button", { name: /continue to cards/i }));
     expect(screen.getByText(/cue cards/i)).toBeInTheDocument();
