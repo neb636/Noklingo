@@ -42,7 +42,11 @@ describe("lesson collection UI", () => {
     fireEvent.click(screen.getByRole("button", { name: "Play Essential verbs video" }));
     expect(container.querySelector(".immersive-video")).not.toBeNull();
     expect(screen.queryByRole("button", { name: /fullscreen/i })).not.toBeInTheDocument();
-    expect(container.querySelector("video")).not.toBeNull();
+    const video = container.querySelector("video")!;
+    expect(video).toHaveAttribute("autoplay");
+    expect(video).not.toHaveAttribute("controls");
+    fireEvent.click(video);
+    expect(video).toHaveAttribute("controls");
     expect(screen.getByRole("button", { name: /continue to cards/i }).closest("footer")).toHaveClass("immersive-video-footer");
     fireEvent.click(screen.getByRole("button", { name: /continue to cards/i }));
     expect(screen.getByText(/cue cards/i)).toBeInTheDocument();
