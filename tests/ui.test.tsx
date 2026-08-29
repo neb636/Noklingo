@@ -26,7 +26,6 @@ beforeEach(() => {
 });
 afterEach(() => {
   cleanup();
-  Reflect.deleteProperty(HTMLElement.prototype, "requestFullscreen");
 });
 
 describe("lesson collection UI", () => {
@@ -37,14 +36,12 @@ describe("lesson collection UI", () => {
   });
 
   it("opens the immersive video and lets practice continue to cue cards", () => {
-    const requestFullscreen = vi.fn().mockResolvedValue(undefined);
-    Object.defineProperty(HTMLElement.prototype, "requestFullscreen", { configurable: true, value: requestFullscreen });
     query = { preview: "common-verbs" };
     const { container } = render(<StudyPage />);
     expect(screen.getByRole("heading", { name: /essential verbs/i })).not.toHaveFocus();
     fireEvent.click(screen.getByRole("button", { name: "Play Essential verbs video" }));
-    expect(requestFullscreen).toHaveBeenCalledOnce();
-    expect(requestFullscreen.mock.instances[0]).toBe(container.querySelector(".lesson-flow"));
+    expect(container.querySelector(".immersive-video")).not.toBeNull();
+    expect(screen.queryByRole("button", { name: /fullscreen/i })).not.toBeInTheDocument();
     expect(container.querySelector("video")).not.toBeNull();
     expect(screen.getByRole("button", { name: /continue to cards/i }).closest("footer")).toHaveClass("immersive-video-footer");
     fireEvent.click(screen.getByRole("button", { name: /continue to cards/i }));

@@ -87,9 +87,8 @@ function DurableStudy() {
 }
 
 function VideoStage({ lesson }: { lesson: VideoLesson }) {
-  const fullscreenRef = useRef<HTMLElement>(null);
   const completeVideo = useStudyStore((state) => state.completeVideo);
-  return <section ref={fullscreenRef} className="durable-video-host"><LessonVideoScreen lesson={lesson} fullscreenTargetRef={fullscreenRef} onClose={() => window.location.assign(assetPath("/today/"))} onContinue={(bypassed) => completeVideo(Boolean(bypassed))} requireCompletedWatch /></section>;
+  return <section className="durable-video-host"><LessonVideoScreen lesson={lesson} onClose={() => window.location.assign(assetPath("/today/"))} onContinue={(bypassed) => completeVideo(Boolean(bypassed))} requireCompletedWatch /></section>;
 }
 
 function CueCardStage({ card, session }: { card: (typeof cueCards)[number]; session: ActiveStudySession }) {

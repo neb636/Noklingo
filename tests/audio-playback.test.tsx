@@ -1,5 +1,6 @@
 // @vitest-environment jsdom
 import "@testing-library/jest-dom/vitest";
+import { StrictMode } from "react";
 import { act, cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { ConceptAudioButton, ThaiAudioButton } from "../src/components/PhraseAudioButton";
@@ -48,6 +49,55 @@ describe("dual-language audio playback", () => {
     expect(howls[0].options.src).toEqual([card.thaiAudioSrc]);
     act(() => { (howls[0].options.onend as () => void)(); vi.advanceTimersByTime(1000); });
     expect(howls).toHaveLength(1);
+  });
+
+  it("autoplays each quiz prompt once without replaying the current prompt", () => {
+    const view = render(<StrictMode><ThaiAudioButton key="question-1" card={card} autoPlayDelayMs={1000} autoPlayKey="question-1" /></StrictMode>);
+
+    act(() => vi.advanceTimersByTime(1000));
+    expect(howls).toHaveLength(1);
+
+    act(() => (howls[0].options.onend as () => void)());
+    act(() => vi.advanceTimersByTime(5000));
+    expect(howls).toHaveLength(1);
+
+    view.rerender(<StrictMode><ThaiAudioButton key="question-2" card={card} autoPlayDelayMs={1000} autoPlayKey="question-2" /></StrictMode>);
+    act(() => vi.advanceTimersByTime(1000));
+    expect(howls).toHaveLength(2);
+
+    act(() => (howls[1].options.onend as () => void)());
+    act(() => vi.advanceTimersByTime(5000));
+    expect(howls).toHaveLength(2);
+  });
+
+  it("cancels pending autoplay when the quiz audio button is clicked", () => {
+    render(<ThaiAudioButton card={card} autoPlayDelayMs={1000} autoPlayKey="question-1" />);
+
+    fireEvent.click(screen.getByRole("button"));
+    expect(howls).toHaveLength(1);
+
+    act(() => vi.advanceTimersByTime(5000));
+    expect(howls).toHaveLength(1);
+  });
+
+  it("allows manual replay after a quiz prompt has autoplayed", () => {
+    render(<ThaiAudioButton card={card} autoPlayDelayMs={1000} autoPlayKey="question-1" />);
+
+    act(() => vi.advanceTimersByTime(1000));
+    act(() => (howls[0].options.onend as () => void)());
+    fireEvent.click(screen.getByRole("button"));
+
+    expect(howls).toHaveLength(2);
+  });
+
+  it("does not autoplay a current quiz prompt when audio is enabled after entry", () => {
+    useStudyStore.setState((state) => ({ ...state, settings: { ...state.settings, audioEnabled: false } }));
+    render(<ThaiAudioButton card={card} autoPlayDelayMs={1000} autoPlayKey="question-1" />);
+
+    useStudyStore.setState((state) => ({ ...state, settings: { ...state.settings, audioEnabled: true } }));
+    act(() => vi.advanceTimersByTime(5000));
+
+    expect(howls).toHaveLength(0);
   });
 
   it("cancels a pending English clip when the card unmounts", () => {
