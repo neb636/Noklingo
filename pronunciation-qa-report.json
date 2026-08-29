@@ -1,0 +1,842 @@
+{
+  "generatedAt": "2026-08-29T08:07:32.342Z",
+  "algorithmFingerprint": "a94210fc1c3198f8",
+  "entries": [
+    {
+      "lessonId": "question-words",
+      "cueCardId": "draft-question-words-1",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "question-words",
+      "cueCardId": "draft-question-words-2",
+      "language": "thai",
+      "warnings": [
+        "start-fallback",
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "question-words",
+      "cueCardId": "draft-question-words-2",
+      "language": "english",
+      "warnings": [
+        "end-fallback",
+        "overlapping-speech-envelopes",
+        "tight-next-neighbor",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "question-words",
+      "cueCardId": "draft-question-words-3",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "question-words",
+      "cueCardId": "draft-question-words-4",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "question-words",
+      "cueCardId": "draft-question-words-4",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "question-words",
+      "cueCardId": "draft-question-words-5",
+      "language": "thai",
+      "warnings": [
+        "end-fallback"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "question-words",
+      "cueCardId": "draft-question-words-5",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "connectors",
+      "cueCardId": "draft-connectors-1",
+      "language": "thai",
+      "warnings": [
+        "legacy-unreviewed-override"
+      ],
+      "status": "overridden"
+    },
+    {
+      "lessonId": "connectors",
+      "cueCardId": "draft-connectors-1",
+      "language": "english",
+      "warnings": [
+        "start-fallback",
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "connectors",
+      "cueCardId": "draft-connectors-2",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "connectors",
+      "cueCardId": "draft-connectors-2",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "connectors",
+      "cueCardId": "draft-connectors-3",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "connectors",
+      "cueCardId": "draft-connectors-3",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "connectors",
+      "cueCardId": "draft-connectors-4",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "connectors",
+      "cueCardId": "draft-connectors-4",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "connectors",
+      "cueCardId": "draft-connectors-6",
+      "language": "thai",
+      "warnings": [
+        "end-fallback"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "time-units",
+      "cueCardId": "draft-time-units-1",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes",
+        "touching-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "time-units",
+      "cueCardId": "draft-time-units-1",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "time-units",
+      "cueCardId": "draft-time-units-2",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "time-units",
+      "cueCardId": "draft-time-units-2",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes",
+        "touching-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "time-units",
+      "cueCardId": "draft-time-units-3",
+      "language": "english",
+      "warnings": [
+        "start-fallback",
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "quantities",
+      "cueCardId": "draft-quantities-1",
+      "language": "english",
+      "warnings": [
+        "start-fallback"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "quantities",
+      "cueCardId": "draft-quantities-5",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "quantities",
+      "cueCardId": "draft-quantities-6",
+      "language": "english",
+      "warnings": [
+        "start-fallback",
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "directions",
+      "cueCardId": "draft-directions-1",
+      "language": "thai",
+      "warnings": [
+        "end-fallback",
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "directions",
+      "cueCardId": "draft-directions-1",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "directions",
+      "cueCardId": "draft-directions-2",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "directions",
+      "cueCardId": "draft-directions-2",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "directions",
+      "cueCardId": "draft-directions-3",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "directions",
+      "cueCardId": "draft-directions-3",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "directions",
+      "cueCardId": "draft-directions-4",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "weather",
+      "cueCardId": "draft-weather-1",
+      "language": "thai",
+      "warnings": [
+        "legacy-unreviewed-override"
+      ],
+      "status": "overridden"
+    },
+    {
+      "lessonId": "weather",
+      "cueCardId": "draft-weather-1",
+      "language": "english",
+      "warnings": [
+        "start-fallback"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "weather",
+      "cueCardId": "draft-weather-2",
+      "language": "english",
+      "warnings": [
+        "legacy-unreviewed-override"
+      ],
+      "status": "overridden"
+    },
+    {
+      "lessonId": "weather",
+      "cueCardId": "draft-weather-4",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "weather",
+      "cueCardId": "draft-weather-4",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "weather",
+      "cueCardId": "draft-weather-5",
+      "language": "thai",
+      "warnings": [
+        "start-fallback",
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "weather",
+      "cueCardId": "draft-weather-5",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "weather",
+      "cueCardId": "draft-weather-6",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "weather",
+      "cueCardId": "draft-weather-6",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "weather",
+      "cueCardId": "draft-weather-7",
+      "language": "thai",
+      "warnings": [
+        "start-fallback",
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "weather",
+      "cueCardId": "draft-weather-7",
+      "language": "english",
+      "warnings": [
+        "end-fallback",
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "feeling-unwell",
+      "cueCardId": "draft-feeling-unwell-1",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes",
+        "touching-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "feeling-unwell",
+      "cueCardId": "draft-feeling-unwell-1",
+      "language": "english",
+      "warnings": [
+        "end-fallback",
+        "overlapping-speech-envelopes",
+        "touching-speech-envelopes",
+        "tight-next-neighbor",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "feeling-unwell",
+      "cueCardId": "draft-feeling-unwell-2",
+      "language": "thai",
+      "warnings": [
+        "start-fallback",
+        "overlapping-speech-envelopes",
+        "tight-previous-neighbor",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "feeling-unwell",
+      "cueCardId": "draft-feeling-unwell-2",
+      "language": "english",
+      "warnings": [
+        "invalid-proposal"
+      ],
+      "status": "unmatched"
+    },
+    {
+      "lessonId": "feeling-unwell",
+      "cueCardId": "draft-feeling-unwell-3",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "food-flavors",
+      "cueCardId": "draft-food-flavors-1",
+      "language": "english",
+      "warnings": [
+        "start-fallback"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "food-flavors",
+      "cueCardId": "draft-food-flavors-6",
+      "language": "english",
+      "warnings": [
+        "unmatched"
+      ],
+      "status": "unmatched"
+    },
+    {
+      "lessonId": "waking-up",
+      "cueCardId": "draft-waking-up-1",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "waking-up",
+      "cueCardId": "draft-waking-up-2",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "waking-up",
+      "cueCardId": "draft-waking-up-2",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "waking-up",
+      "cueCardId": "draft-waking-up-3",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "waking-up",
+      "cueCardId": "draft-waking-up-3",
+      "language": "english",
+      "warnings": [
+        "start-fallback",
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "waking-up",
+      "cueCardId": "draft-waking-up-4",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "waking-up",
+      "cueCardId": "draft-waking-up-4",
+      "language": "english",
+      "warnings": [
+        "start-fallback",
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "movie-invitation",
+      "cueCardId": "draft-movie-invitation-2",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "movie-invitation",
+      "cueCardId": "draft-movie-invitation-2",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "movie-invitation",
+      "cueCardId": "draft-movie-invitation-3",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "parting-safely",
+      "cueCardId": "draft-parting-safely-1",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "parting-safely",
+      "cueCardId": "draft-parting-safely-2",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "parting-safely",
+      "cueCardId": "draft-parting-safely-3",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "parting-safely",
+      "cueCardId": "draft-parting-safely-3",
+      "language": "english",
+      "warnings": [
+        "legacy-unreviewed-override"
+      ],
+      "status": "overridden"
+    },
+    {
+      "lessonId": "parting-safely",
+      "cueCardId": "draft-parting-safely-4",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "parting-safely",
+      "cueCardId": "draft-parting-safely-4",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "encouragement",
+      "cueCardId": "draft-encouragement-1",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "encouragement",
+      "cueCardId": "draft-encouragement-1",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "encouragement",
+      "cueCardId": "draft-encouragement-3",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "encouragement",
+      "cueCardId": "draft-encouragement-3",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "compliments",
+      "cueCardId": "draft-compliments-1",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "compliments",
+      "cueCardId": "draft-compliments-1",
+      "language": "english",
+      "warnings": [
+        "start-fallback",
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "compliments",
+      "cueCardId": "draft-compliments-2",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "compliments",
+      "cueCardId": "draft-compliments-2",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "compliments",
+      "cueCardId": "draft-compliments-3",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "compliments",
+      "cueCardId": "draft-compliments-3",
+      "language": "english",
+      "warnings": [
+        "overlapping-speech-envelopes"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "compliments",
+      "cueCardId": "draft-compliments-4",
+      "language": "thai",
+      "warnings": [
+        "overlapping-speech-envelopes",
+        "unrefined-whisper-envelope"
+      ],
+      "status": "matched"
+    },
+    {
+      "lessonId": "making-up",
+      "cueCardId": "draft-making-up-1",
+      "language": "thai",
+      "warnings": [
+        "legacy-unreviewed-override"
+      ],
+      "status": "overridden"
+    },
+    {
+      "lessonId": "making-up",
+      "cueCardId": "draft-making-up-1",
+      "language": "english",
+      "warnings": [
+        "legacy-unreviewed-override"
+      ],
+      "status": "overridden"
+    },
+    {
+      "lessonId": "making-up",
+      "cueCardId": "draft-making-up-2",
+      "language": "thai",
+      "warnings": [
+        "legacy-unreviewed-override"
+      ],
+      "status": "overridden"
+    },
+    {
+      "lessonId": "making-up",
+      "cueCardId": "draft-making-up-2",
+      "language": "english",
+      "warnings": [
+        "legacy-unreviewed-override"
+      ],
+      "status": "overridden"
+    },
+    {
+      "lessonId": "making-up",
+      "cueCardId": "draft-making-up-3",
+      "language": "thai",
+      "warnings": [
+        "legacy-unreviewed-override"
+      ],
+      "status": "overridden"
+    },
+    {
+      "lessonId": "making-up",
+      "cueCardId": "draft-making-up-3",
+      "language": "english",
+      "warnings": [
+        "legacy-unreviewed-override"
+      ],
+      "status": "overridden"
+    },
+    {
+      "lessonId": "making-up",
+      "cueCardId": "draft-making-up-4",
+      "language": "thai",
+      "warnings": [
+        "legacy-unreviewed-override"
+      ],
+      "status": "overridden"
+    },
+    {
+      "lessonId": "making-up",
+      "cueCardId": "draft-making-up-4",
+      "language": "english",
+      "warnings": [
+        "legacy-unreviewed-override"
+      ],
+      "status": "overridden"
+    },
+    {
+      "lessonId": "making-up",
+      "cueCardId": "draft-making-up-5",
+      "language": "thai",
+      "warnings": [
+        "legacy-unreviewed-override"
+      ],
+      "status": "overridden"
+    },
+    {
+      "lessonId": "making-up",
+      "cueCardId": "draft-making-up-5",
+      "language": "english",
+      "warnings": [
+        "legacy-unreviewed-override"
+      ],
+      "status": "overridden"
+    }
+  ]
+}

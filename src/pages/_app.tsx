@@ -8,7 +8,9 @@ import "@/styles/globals.css";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  const focusedRoute = router.pathname === "/welcome" || router.pathname === "/study";
+  const lessonRoute = router.pathname === "/lessons/[lessonId]";
+  const focusedRoute = router.pathname === "/welcome" || router.pathname === "/study" || lessonRoute;
+  const focusedRouteName = lessonRoute ? "lesson" : router.pathname.slice(1);
 
   return (
     <>
@@ -30,7 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <AppProviders>
         {focusedRoute ? (
           <main
-            className={`focused-route focused-route--${router.pathname.slice(1)}`}
+            className={`focused-route focused-route--${focusedRouteName}`}
             id="main-content"
             tabIndex={-1}
           >

@@ -3,7 +3,8 @@
   "sourceVideo": "/lessons/drafts/food-allergies/intro.mp4",
   "sourceHash": "208e36f313d9213df0f0642484c2de85a9efeb483fa5d9a4c0a90ba65ec4d7b0",
   "model": "large-v3",
-  "generatedAt": "2026-08-27T23:44:30.973Z",
+  "generatedAt": "2026-08-29T07:41:03.663Z",
+  "algorithmFingerprint": "a94210fc1c3198f8",
   "clips": [
     {
       "cueCardId": "draft-food-allergies-1",
@@ -12,8 +13,13 @@
       "thai": {
         "audio": "/lessons/drafts/food-allergies/audio/draft-food-allergies-1-th.m4a",
         "status": "matched",
-        "start": 2.79,
-        "end": 3.58,
+        "start": 2.585,
+        "end": 4.949999999999999,
+        "rawStart": 2.94,
+        "rawEnd": 3.58,
+        "protectedStart": 2.65,
+        "protectedEnd": 4.79,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " ฉันแพ้",
         "confidence": 0.9799896013736725,
         "candidates": [
@@ -49,13 +55,27 @@
             "exact": true,
             "segmentIndex": 1
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.9524710692659011,
+          "end": 0.2482271838154691
+        },
+        "warnings": []
       },
       "english": {
         "audio": "/lessons/drafts/food-allergies/audio/draft-food-allergies-1-en.m4a",
         "status": "matched",
-        "start": 3.58,
-        "end": 5.405,
+        "start": 5.02,
+        "end": 5.755,
+        "rawStart": 3.58,
+        "rawEnd": 5.36,
+        "protectedStart": 5.07,
+        "protectedEnd": 5.61,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " I’m allergic to..",
         "confidence": 0.950244951141135,
         "candidates": [
@@ -91,7 +111,16 @@
             "exact": true,
             "segmentIndex": 1
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.3240408017816484,
+          "end": 0.49302760303585
+        },
+        "warnings": []
       },
       "pairStatus": "complete"
     },
@@ -102,8 +131,13 @@
       "thai": {
         "audio": "/lessons/drafts/food-allergies/audio/draft-food-allergies-2-th.m4a",
         "status": "matched",
-        "start": 5.405,
-        "end": 7.22,
+        "start": 5.755,
+        "end": 6.880000000000001,
+        "rawStart": 5.36,
+        "rawEnd": 7.22,
+        "protectedStart": 5.82,
+        "protectedEnd": 6.78,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " ฉันแพ้กุ้ง",
         "confidence": 0.9978701004115018,
         "candidates": [
@@ -115,13 +149,27 @@
             "exact": true,
             "segmentIndex": 1
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.49302760303585,
+          "end": 0.5936129549677749
+        },
+        "warnings": []
       },
       "english": {
         "audio": "/lessons/drafts/food-allergies/audio/draft-food-allergies-2-en.m4a",
         "status": "matched",
-        "start": 7.22,
-        "end": 9.45,
+        "start": 7.745,
+        "end": 9.595,
+        "rawStart": 7.22,
+        "rawEnd": 9.2,
+        "protectedStart": 7.82,
+        "protectedEnd": 9.47,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " I’m allergic to shrimp",
         "confidence": 0.9946202898025512,
         "candidates": [
@@ -133,7 +181,16 @@
             "exact": true,
             "segmentIndex": 1
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.318873863789857,
+          "end": 0.34167151240055443
+        },
+        "warnings": []
       },
       "pairStatus": "complete"
     },
@@ -144,8 +201,13 @@
       "thai": {
         "audio": "/lessons/drafts/food-allergies/audio/draft-food-allergies-3-th.m4a",
         "status": "matched",
-        "start": 10.59,
-        "end": 11.38,
+        "start": 9.595,
+        "end": 11.735,
+        "rawStart": 10.74,
+        "rawEnd": 11.38,
+        "protectedStart": 9.71,
+        "protectedEnd": 11.59,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " ฉันแพ้ถั่ว",
         "confidence": 0.9897672964334487,
         "candidates": [
@@ -157,13 +219,27 @@
             "exact": true,
             "segmentIndex": 2
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.34167151240055443,
+          "end": 0.3678372014748561
+        },
+        "warnings": []
       },
       "english": {
         "audio": "/lessons/drafts/food-allergies/audio/draft-food-allergies-3-en.m4a",
         "status": "matched",
-        "start": 11.38,
-        "end": 13.21,
+        "start": 11.735,
+        "end": 13.18,
+        "rawStart": 11.38,
+        "rawEnd": 12.96,
+        "protectedStart": 11.82,
+        "protectedEnd": 13.01,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " I’m allergic to nuts",
         "confidence": 0.9976508247852325,
         "candidates": [
@@ -175,7 +251,16 @@
             "exact": true,
             "segmentIndex": 2
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.3678372014748561,
+          "end": 0.5275213622644278
+        },
+        "warnings": []
       },
       "pairStatus": "complete"
     },
@@ -186,8 +271,13 @@
       "thai": {
         "audio": "/lessons/drafts/food-allergies/audio/draft-food-allergies-4-th.m4a",
         "status": "matched",
-        "start": 14.709999999999999,
-        "end": 15.5,
+        "start": 13.55,
+        "end": 15.825,
+        "rawStart": 14.86,
+        "rawEnd": 15.5,
+        "protectedStart": 13.62,
+        "protectedEnd": 15.55,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " ฉันแพ้นมวัว",
         "confidence": 0.9934109449386597,
         "candidates": [
@@ -199,13 +289,27 @@
             "exact": true,
             "segmentIndex": 3
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.5847263548555025,
+          "end": 0.35502920264746113
+        },
+        "warnings": []
       },
       "english": {
         "audio": "/lessons/drafts/food-allergies/audio/draft-food-allergies-4-en.m4a",
         "status": "matched",
-        "start": 15.5,
-        "end": 17.17,
+        "start": 15.825,
+        "end": 17.715,
+        "rawStart": 15.5,
+        "rawEnd": 16.92,
+        "protectedStart": 15.89,
+        "protectedEnd": 17.53,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " I’m allergic to dairy",
         "confidence": 0.99827927172184,
         "candidates": [
@@ -217,7 +321,16 @@
             "exact": true,
             "segmentIndex": 3
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.35502920264746113,
+          "end": 0.649441606010604
+        },
+        "warnings": []
       },
       "pairStatus": "complete"
     }

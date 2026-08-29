@@ -23,7 +23,11 @@ for (const required of [definitionPath, sourcePath]) {
 }
 const hasAudioDir = existsSync(audioDir) && statSync(audioDir).isDirectory();
 const hasAudioClips = existsSync(audioClipsPath);
-if (hasAudioDir === hasAudioClips) throw new Error("Provide exactly one audio source: audio/ or audio-clips.json.");
+const raw = JSON.parse(readFileSync(definitionPath, "utf8"));
+const lesson = VideoLessonSchema.parse(raw.lesson);
+const videoOnly = lesson.activityMode === "video-only";
+if (videoOnly && (hasAudioDir || hasAudioClips)) throw new Error("Video-only packages must not include pronunciation audio.");
+if (!videoOnly && hasAudioDir === hasAudioClips) throw new Error("Provide exactly one audio source: audio/ or audio-clips.json.");
 
 const AudioClipManifestSchema = z.object({
   clips: z.array(z.object({
@@ -55,8 +59,6 @@ const audioRanges = audioClipManifest?.clips.flatMap((clip) => [clip.thai, clip.
 const clipByOutput = new Map(audioRanges.map((clip) => [clip.output, clip]));
 if (clipByOutput.size !== audioRanges.length) throw new Error("Audio clip output names must be unique.");
 
-const raw = JSON.parse(readFileSync(definitionPath, "utf8"));
-const lesson = VideoLessonSchema.parse(raw.lesson);
 const packageCards = CueCardSchema.array().parse(raw.cueCards);
 if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(lesson.id)) throw new Error("Lesson ids must be lowercase URL-safe slugs.");
 if (lesson.contentStatus !== "verified") throw new Error("Only reviewed packages marked verified may be imported.");

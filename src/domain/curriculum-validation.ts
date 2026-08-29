@@ -130,7 +130,11 @@ export function validateCurriculum(
   }
 
   for (const lesson of curriculum) {
+    const videoOnly = lesson.activityMode === "video-only";
     if (new Set(lesson.cueCardIds).size !== lesson.cueCardIds.length) issues.push({ lessonId: lesson.id, message: "Duplicate cue-card entry." });
+    if (videoOnly && (lesson.cueCardIds.length > 0 || lesson.quizBank.length > 0)) {
+      issues.push({ lessonId: lesson.id, message: "Video-only lessons cannot include cue cards or quiz questions." });
+    }
 
     for (const itemId of lesson.cueCardIds) {
       const card = cardById.get(itemId);
@@ -156,7 +160,7 @@ export function validateCurriculum(
     for (const path of [lesson.media.videoSrc, lesson.media.posterSrc]) {
       if (path && options.assetExists && !options.assetExists(path)) issues.push({ lessonId: lesson.id, message: `Bundled media is missing: ${path}.` });
     }
-    if (lesson.cueCardIds.length < 1 || lesson.cueCardIds.length > 10) issues.push({ lessonId: lesson.id, message: "Verified lessons require 1–10 cue cards." });
+    if (!videoOnly && (lesson.cueCardIds.length < 1 || lesson.cueCardIds.length > 10)) issues.push({ lessonId: lesson.id, message: "Verified practice lessons require 1–10 cue cards." });
     if (lessonCards.some((card) => card.verificationStatus !== "verified" || !card.usage
       || !localExtension(card.thaiAudioSrc, [".m4a", ".mp3", ".wav", ".ogg"])
       || !localExtension(card.englishAudioSrc, [".m4a", ".mp3", ".wav", ".ogg"]))) {
@@ -209,10 +213,10 @@ export function validateCurriculum(
         issues.push({ lessonId: lesson.id, message: `Cue card ${card.id} requires a contextual or productive quiz variant.` });
       }
     }
-    const minimumQuestions = minimumQuestionBankSize(lesson);
+    const minimumQuestions = videoOnly ? 0 : minimumQuestionBankSize(lesson);
     if (activeQuestions.length < minimumQuestions) issues.push({ lessonId: lesson.id, message: `Verified lessons require at least ${minimumQuestions} valid active questions.` });
     if (scored.some((question) => question.verificationStatus !== "verified")) issues.push({ lessonId: lesson.id, message: "Verified lessons cannot score unverified questions." });
-    for (const type of requiredQuestionTypes) {
+    for (const type of videoOnly ? [] : requiredQuestionTypes) {
       if (!activeQuestions.some((question) => question.interactionType === type)) issues.push({ lessonId: lesson.id, message: `Verified lesson is missing valid ${type} questions.` });
     }
   }

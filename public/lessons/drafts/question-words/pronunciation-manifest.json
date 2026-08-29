@@ -3,7 +3,8 @@
   "sourceVideo": "/lessons/drafts/question-words/intro.mp4",
   "sourceHash": "d32d3fb844c51f0bc7420081cbae5f0fefc6801dcc05a3d858876a78939a7a25",
   "model": "large-v3",
-  "generatedAt": "2026-08-27T23:44:27.639Z",
+  "generatedAt": "2026-08-29T08:26:48.763Z",
+  "algorithmFingerprint": "a94210fc1c3198f8",
   "clips": [
     {
       "cueCardId": "draft-question-words-1",
@@ -12,8 +13,13 @@
       "thai": {
         "audio": "/lessons/drafts/question-words/audio/draft-question-words-1-th.m4a",
         "status": "matched",
-        "start": 0.51,
-        "end": 1.375,
+        "start": 0.8,
+        "end": 3.135,
+        "rawStart": 0.56,
+        "rawEnd": 1.24,
+        "protectedStart": 0.89,
+        "protectedEnd": 2.78,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " อะไร",
         "confidence": 0.9169803667068481,
         "candidates": [
@@ -25,13 +31,29 @@
             "exact": true,
             "segmentIndex": 0
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2662497682486694,
+          "end": 0.29854374094453423
+        },
+        "warnings": [
+          "overlapping-speech-envelopes"
         ]
       },
       "english": {
         "audio": "/lessons/drafts/question-words/audio/draft-question-words-1-en.m4a",
         "status": "matched",
-        "start": 0,
-        "end": 0.51,
+        "start": 0.04,
+        "end": 0.8,
+        "rawStart": 0,
+        "rawEnd": 0.46,
+        "protectedStart": 0.1,
+        "protectedEnd": 0.65,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": "What",
         "confidence": 0.9573506164550781,
         "candidates": [
@@ -43,7 +65,16 @@
             "exact": true,
             "segmentIndex": 0
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.28908898258092347,
+          "end": 0.2662497682486694
+        },
+        "warnings": []
       },
       "pairStatus": "complete"
     },
@@ -54,8 +85,13 @@
       "thai": {
         "audio": "/lessons/drafts/question-words/audio/draft-question-words-2-th.m4a",
         "status": "matched",
-        "start": 2.41,
-        "end": 3.9775,
+        "start": 2.36,
+        "end": 4.36,
+        "rawStart": 2.46,
+        "rawEnd": 4.24,
+        "protectedStart": 2.46,
+        "protectedEnd": 4.24,
+        "envelopeMethod": "whisper",
         "transcriptMatch": " ที่ไหน",
         "confidence": 0.9989792084693909,
         "candidates": [
@@ -67,13 +103,31 @@
             "exact": true,
             "segmentIndex": 0
           }
+        ],
+        "boundaryMethod": {
+          "start": "fallback",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0,
+          "end": 0.3311400759771834
+        },
+        "warnings": [
+          "start-fallback",
+          "overlapping-speech-envelopes",
+          "unrefined-whisper-envelope"
         ]
       },
       "english": {
         "audio": "/lessons/drafts/question-words/audio/draft-question-words-2-en.m4a",
         "status": "matched",
-        "start": 1.375,
-        "end": 2.41,
+        "start": 1.175,
+        "end": 2.46,
+        "rawStart": 1.24,
+        "rawEnd": 2.36,
+        "protectedStart": 1.24,
+        "protectedEnd": 2.36,
+        "envelopeMethod": "whisper",
         "transcriptMatch": " Where",
         "confidence": 0.8987033706903458,
         "candidates": [
@@ -85,6 +139,20 @@
             "exact": true,
             "segmentIndex": 0
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "fallback"
+        },
+        "boundaryConfidence": {
+          "start": 0.4319297098467223,
+          "end": 0
+        },
+        "warnings": [
+          "end-fallback",
+          "overlapping-speech-envelopes",
+          "tight-next-neighbor",
+          "unrefined-whisper-envelope"
         ]
       },
       "pairStatus": "complete"
@@ -96,8 +164,13 @@
       "thai": {
         "audio": "/lessons/drafts/question-words/audio/draft-question-words-3-th.m4a",
         "status": "matched",
-        "start": 4.92,
-        "end": 6.859999999999999,
+        "start": 5.9399999999999995,
+        "end": 7.335,
+        "rawStart": 4.92,
+        "rawEnd": 7.16,
+        "protectedStart": 6.07,
+        "protectedEnd": 7.19,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " เมื่อไหร่",
         "confidence": 0.987519986970084,
         "candidates": [
@@ -109,13 +182,27 @@
             "exact": true,
             "segmentIndex": 0
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2875886411938527,
+          "end": 0.29113130473072046
+        },
+        "warnings": []
       },
       "english": {
         "audio": "/lessons/drafts/question-words/audio/draft-question-words-3-en.m4a",
         "status": "matched",
-        "start": 4.09,
-        "end": 4.92,
+        "start": 3.31,
+        "end": 5.73,
+        "rawStart": 4.24,
+        "rawEnd": 4.92,
+        "protectedStart": 3.49,
+        "protectedEnd": 5.34,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " When",
         "confidence": 0.9532615780830384,
         "candidates": [
@@ -127,6 +214,17 @@
             "exact": true,
             "segmentIndex": 0
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.25031274573376394,
+          "end": 0.37727448317510376
+        },
+        "warnings": [
+          "overlapping-speech-envelopes"
         ]
       },
       "pairStatus": "complete"
@@ -138,8 +236,13 @@
       "thai": {
         "audio": "/lessons/drafts/question-words/audio/draft-question-words-4-th.m4a",
         "status": "matched",
-        "start": 8.129999999999999,
-        "end": 9.272499999999999,
+        "start": 8.135,
+        "end": 9.385,
+        "rawStart": 8.28,
+        "rawEnd": 9.16,
+        "protectedStart": 8.28,
+        "protectedEnd": 9.16,
+        "envelopeMethod": "whisper",
         "transcriptMatch": " ทำไม",
         "confidence": 0.9984840297698975,
         "candidates": [
@@ -151,13 +254,30 @@
             "exact": true,
             "segmentIndex": 0
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.189636432603996,
+          "end": 0.1775783185326437
+        },
+        "warnings": [
+          "overlapping-speech-envelopes",
+          "unrefined-whisper-envelope"
         ]
       },
       "english": {
         "audio": "/lessons/drafts/question-words/audio/draft-question-words-4-en.m4a",
         "status": "matched",
-        "start": 7.01,
-        "end": 8.1,
+        "start": 7.335,
+        "end": 8.625,
+        "rawStart": 7.16,
+        "rawEnd": 7.92,
+        "protectedStart": 7.39,
+        "protectedEnd": 8.4,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " Why",
         "confidence": 0.9570156550407409,
         "candidates": [
@@ -169,6 +289,17 @@
             "exact": true,
             "segmentIndex": 0
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.29113130473072046,
+          "end": 0.3709810943349091
+        },
+        "warnings": [
+          "overlapping-speech-envelopes"
         ]
       },
       "pairStatus": "complete"
@@ -180,8 +311,13 @@
       "thai": {
         "audio": "/lessons/drafts/question-words/audio/draft-question-words-5-th.m4a",
         "status": "matched",
-        "start": 10.57,
-        "end": 12.09,
+        "start": 11.07,
+        "end": 12.0729375,
+        "rawStart": 10.72,
+        "rawEnd": 11.84,
+        "protectedStart": 11.13,
+        "protectedEnd": 12.06,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " ยังไง",
         "confidence": 0.9985078334808349,
         "candidates": [
@@ -193,13 +329,29 @@
             "exact": true,
             "segmentIndex": 0
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "fallback"
+        },
+        "boundaryConfidence": {
+          "start": 0.4086162857800946,
+          "end": 0
+        },
+        "warnings": [
+          "end-fallback"
         ]
       },
       "english": {
         "audio": "/lessons/drafts/question-words/audio/draft-question-words-5-en.m4a",
         "status": "matched",
-        "start": 9.272499999999999,
-        "end": 10.54,
+        "start": 8.625,
+        "end": 11.07,
+        "rawStart": 9.16,
+        "rawEnd": 10.36,
+        "protectedStart": 8.7,
+        "protectedEnd": 10.92,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " How",
         "confidence": 0.9957354521751404,
         "candidates": [
@@ -211,6 +363,17 @@
             "exact": true,
             "segmentIndex": 0
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.3709810943349091,
+          "end": 0.4086162857800946
+        },
+        "warnings": [
+          "overlapping-speech-envelopes"
         ]
       },
       "pairStatus": "complete"

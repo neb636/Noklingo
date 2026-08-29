@@ -44,6 +44,22 @@ export type ClipPaddingOptions = {
   maximumClipDurationMs: number;
 };
 
+export type BoundaryOptions = ClipPaddingOptions & {
+  frameDurationMs: number;
+  boundarySearchBeforeMs: number;
+  boundarySearchAfterMs: number;
+  protectivePaddingBeforeMs: number;
+  protectivePaddingAfterMs: number;
+  quietRunMs: number;
+  quietThresholdDbAboveNoise: number;
+  fadeMs: number;
+  speechThresholdDbAboveNoise: number;
+  speechIslandMergeGapMs: number;
+  minimumSpeechIslandMs: number;
+  speechIslandSearchMs: number;
+  minimumSpeechIslandScore: number;
+};
+
 export const defaultThaiMatchOptions: ThaiMatchOptions = {
   confidenceThreshold: 0.84,
   ambiguityMargin: 0.08,
@@ -54,6 +70,23 @@ export const defaultClipPaddingOptions: ClipPaddingOptions = {
   paddingAfterMs: 250,
   minimumClipDurationMs: 450,
   maximumClipDurationMs: 5500,
+};
+
+export const defaultBoundaryOptions: BoundaryOptions = {
+  ...defaultClipPaddingOptions,
+  frameDurationMs: 10,
+  boundarySearchBeforeMs: 350,
+  boundarySearchAfterMs: 450,
+  protectivePaddingBeforeMs: 100,
+  protectivePaddingAfterMs: 140,
+  quietRunMs: 40,
+  quietThresholdDbAboveNoise: 6,
+  fadeMs: 8,
+  speechThresholdDbAboveNoise: 10,
+  speechIslandMergeGapMs: 180,
+  minimumSpeechIslandMs: 60,
+  speechIslandSearchMs: 1000,
+  minimumSpeechIslandScore: 0.2,
 };
 
 export type PronunciationManifestClip = {
@@ -74,6 +107,14 @@ export type PronunciationLanguageClip = {
   confidence?: number;
   candidates: TranscriptCandidate[];
   diagnostic?: string;
+  rawStart?: number;
+  rawEnd?: number;
+  protectedStart?: number;
+  protectedEnd?: number;
+  envelopeMethod?: "whisper" | "energy-island" | "override";
+  boundaryMethod?: { start: "quiet" | "fallback" | "override"; end: "quiet" | "fallback" | "override" };
+  boundaryConfidence?: { start: number; end: number };
+  warnings?: string[];
 };
 
 export type PronunciationLessonManifest = {
@@ -82,6 +123,7 @@ export type PronunciationLessonManifest = {
   sourceHash: string;
   model: string;
   generatedAt: string;
+  algorithmFingerprint?: string;
   clips: PronunciationManifestClip[];
 };
 
@@ -89,6 +131,14 @@ export type PronunciationIndex = {
   version: number;
   lessons: PronunciationLessonManifest[];
 };
+
+export function pronunciationReviewIsStale(
+  review: { sourceHash: string; algorithmFingerprint: string } | undefined,
+  sourceHash: string,
+  algorithmFingerprint: string,
+): boolean {
+  return Boolean(review && (review.sourceHash !== sourceHash || review.algorithmFingerprint !== algorithmFingerprint));
+}
 
 /** Match-friendly Thai text: Thai normally has no mandatory word spaces. */
 export function normalizeThai(value: string): string {

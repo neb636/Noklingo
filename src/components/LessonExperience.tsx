@@ -18,6 +18,7 @@ export function LessonExperience({ lesson }: { lesson: VideoLesson }) {
   const [result, setResult] = useState({ score: 0, total: 0 });
   const videoScreenRef = useRef<LessonVideoScreenHandle>(null);
   const cards = lesson.cueCardIds.map((id) => cueCards.find((card) => card.id === id)).filter((card): card is (typeof cueCards)[number] => Boolean(card));
+  const videoOnly = lesson.activityMode === "video-only";
 
   function backToLibrary() {
     window.location.assign(assetPath("/library/"));
@@ -36,7 +37,7 @@ export function LessonExperience({ lesson }: { lesson: VideoLesson }) {
           expanded={stage === "video"}
           onBack={backToLibrary}
           onPlay={playVideo}
-          onSkip={() => setStage("cards")}
+          onSkip={videoOnly ? undefined : () => setStage("cards")}
           player={(
             <LessonVideoScreen
               ref={videoScreenRef}
@@ -44,13 +45,15 @@ export function LessonExperience({ lesson }: { lesson: VideoLesson }) {
               presentation={stage === "video" ? "immersive" : "poster"}
               onEnterImmersive={() => setStage("video")}
               onClose={() => setStage("overview")}
-              onContinue={() => setStage("cards")}
+              onContinue={videoOnly ? backToLibrary : () => setStage("cards")}
+              continueLabel={videoOnly ? "Finish class" : undefined}
+              continueHint={videoOnly ? "That’s the whole class—there’s no homework attached." : undefined}
             />
           )}
         />
       )}
-      {stage === "cards" && <CueCardCarousel lesson={lesson} cards={cards} onBack={() => setStage("overview")} onComplete={() => setStage("quiz")} />}
-      {stage === "quiz" && <PracticeQuiz lesson={lesson} lessonCards={cards} allCards={cueCards} seed={`${lesson.id}:practice:${attempt}`} onClose={() => setStage("overview")} onComplete={(score, total) => { setResult({ score, total }); setStage("complete"); }} />}
+      {!videoOnly && stage === "cards" && <CueCardCarousel lesson={lesson} cards={cards} onBack={() => setStage("overview")} onComplete={() => setStage("quiz")} />}
+      {!videoOnly && stage === "quiz" && <PracticeQuiz lesson={lesson} lessonCards={cards} allCards={cueCards} seed={`${lesson.id}:practice:${attempt}`} onClose={() => setStage("overview")} onComplete={(score, total) => { setResult({ score, total }); setStage("complete"); }} />}
       {stage === "complete" && <PracticeComplete lesson={lesson} score={result.score} total={result.total} onRetry={() => { setAttempt((value) => value + 1); setStage("quiz"); }} onCards={() => setStage("cards")} onLibrary={backToLibrary} />}
     </div>
   );
@@ -70,7 +73,7 @@ function LessonOverview({
   expanded: boolean;
   onBack: () => void;
   onPlay: () => void;
-  onSkip: () => void;
+  onSkip?: () => void;
   player: React.ReactNode;
 }) {
   return <section className={`lesson-overview-screen${expanded ? " is-video-expanded" : ""}`}>
@@ -78,7 +81,7 @@ function LessonOverview({
       {!expanded && <motion.div key="lesson-intro" className="lesson-overview-intro" initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.2 }}>
         <StudyTopBar title={`Lesson ${lesson.order}`} onBack={onBack} />
         <div className="lesson-overview-copy">
-          <p className="lesson-kicker">Watch · notice · practice</p>
+          <p className="lesson-kicker">{lesson.activityMode === "video-only" ? "Watch · learn" : "Watch · notice · practice"}</p>
           <h1>{lesson.topicEmoji} {lesson.title}</h1>
           <p>{lesson.objective.replace(/^Draft plan —\s*/, "")}</p>
         </div>
@@ -89,10 +92,10 @@ function LessonOverview({
 
     <AnimatePresence initial={false}>
       {!expanded && <motion.div key="lesson-actions" className="lesson-overview-tail" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 8 }} transition={{ duration: 0.2 }}>
-        <div className="lesson-overview-meta"><span>{cardCount} cue card{cardCount === 1 ? "" : "s"}</span><span>Practice quiz included</span></div>
+        <div className="lesson-overview-meta">{lesson.activityMode === "video-only" ? <><span>Video class</span><span>No homework</span></> : <><span>{cardCount} cue card{cardCount === 1 ? "" : "s"}</span><span>Practice quiz included</span></>}</div>
         <div className="lesson-overview-actions">
           <button type="button" className="black-button" onClick={onPlay}><Play size={18} fill="currentColor" /> Play video</button>
-          {cardCount > 0 && <button type="button" className="soft-button" onClick={onSkip}>Skip to cards <ArrowRight size={18} /></button>}
+          {cardCount > 0 && onSkip && <button type="button" className="soft-button" onClick={onSkip}>Skip to cards <ArrowRight size={18} /></button>}
         </div>
         {lesson.source && <a className="lesson-source-link" href={lesson.source.url} target="_blank" rel="noreferrer">Source: {lesson.source.label} <ExternalLink size={13} /></a>}
       </motion.div>}

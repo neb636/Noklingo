@@ -35,13 +35,15 @@ for (const draft of draftLessons) {
     },
   };
   writeFileSync(join(packageDir, "lesson.json"), `${JSON.stringify({ lesson, cueCards: cards }, null, 2)}\n`);
-  writeFileSync(join(packageDir, "audio-clips.template.json"), `${JSON.stringify({
-    clips: cards.map((card) => ({
-      cueCardId: card.id,
-      thai: { output: `${card.id}-th.m4a`, startSeconds: null, endSeconds: null },
-      english: { output: `${card.id}-en.m4a`, startSeconds: null, endSeconds: null },
-    })),
-  }, null, 2)}\n`);
+  if (draft.activityMode !== "video-only") {
+    writeFileSync(join(packageDir, "audio-clips.template.json"), `${JSON.stringify({
+      clips: cards.map((card) => ({
+        cueCardId: card.id,
+        thai: { output: `${card.id}-th.m4a`, startSeconds: null, endSeconds: null },
+        english: { output: `${card.id}-en.m4a`, startSeconds: null, endSeconds: null },
+      })),
+    }, null, 2)}\n`);
+  }
   writeFileSync(join(packageDir, "REVIEW.md"), reviewChecklist(draft.id, draft.title, cards.length));
   const sourceFile = join(repoRoot, "public", draft.media.videoSrc.replace(/^\/+/, ""));
   if (!existsSync(sourceFile)) throw new Error(`Draft source media is missing: ${sourceFile}`);
@@ -50,13 +52,17 @@ for (const draft of draftLessons) {
 console.log(`Created ${draftLessons.length} review packages. Fill each checklist, rename audio-clips.template.json, then run the batch dry run.`);
 
 function reviewChecklist(id: string, title: string, cardCount: number) {
+  const lesson = draftLessons.find((entry) => entry.id === id)!;
+  const activityReview = lesson.activityMode === "video-only"
+    ? `- [ ] Confirm this is intentionally a video-only class with no attached homework.\n`
+    : `- [ ] Verify Thai, romanization, and natural meaning for all ${cardCount} cards.\n` +
+      `- [ ] Add a practical usage note to every card.\n` +
+      `- [ ] Fill exact Thai and English timestamps, then rename audio-clips.template.json to audio-clips.json.\n` +
+      `- [ ] Add at least two verified scored variants per card and all four required interaction types.\n`;
   return `# ${title} review\n\n` +
     `- [ ] Confirm public redistribution rights for video and extracted audio.\n` +
     `- [ ] Confirm the lesson topic emoji and every cue-card emoji match the intended meaning.\n` +
-    `- [ ] Verify Thai, romanization, and natural meaning for all ${cardCount} cards.\n` +
-    `- [ ] Add a practical usage note to every card.\n` +
-    `- [ ] Fill exact Thai and English timestamps, then rename audio-clips.template.json to audio-clips.json.\n` +
-    `- [ ] Add at least two verified scored variants per card and all four required interaction types.\n` +
+    activityReview +
     `- [ ] Mark cards, questions, and lesson verified only after reviewer sign-off.\n` +
     `- [ ] Run npm run lesson:import -- ${outputArg}/${id} and resolve every reported issue.\n`;
 }

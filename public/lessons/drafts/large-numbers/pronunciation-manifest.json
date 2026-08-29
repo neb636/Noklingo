@@ -3,7 +3,8 @@
   "sourceVideo": "/lessons/drafts/large-numbers/intro.mp4",
   "sourceHash": "e90f4ddf03265fd55242ffb18eb06b75ec43d23eca480d8180f981a41f52d7b7",
   "model": "large-v3",
-  "generatedAt": "2026-08-27T23:44:28.181Z",
+  "generatedAt": "2026-08-29T07:41:00.939Z",
+  "algorithmFingerprint": "a94210fc1c3198f8",
   "clips": [
     {
       "cueCardId": "draft-large-numbers-1",
@@ -12,8 +13,13 @@
       "thai": {
         "audio": "/lessons/drafts/large-numbers/audio/draft-large-numbers-1-th.m4a",
         "status": "matched",
-        "start": 0,
-        "end": 0.78,
+        "start": 0.1,
+        "end": 1.155,
+        "rawStart": 0,
+        "rawEnd": 0.78,
+        "protectedStart": 0.21,
+        "protectedEnd": 0.91,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": "หนึ่ง",
         "confidence": 0.9733858934789896,
         "candidates": [
@@ -105,13 +111,27 @@
             "exact": true,
             "segmentIndex": 1
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.29363320097096984,
+          "end": 0.267826510241008
+        },
+        "warnings": []
       },
       "english": {
         "audio": "/lessons/drafts/large-numbers/audio/draft-large-numbers-1-en.m4a",
         "status": "matched",
-        "start": 0.78,
-        "end": 1.81,
+        "start": 1.235,
+        "end": 1.9249999999999998,
+        "rawStart": 0.78,
+        "rawEnd": 1.56,
+        "protectedStart": 1.47,
+        "protectedEnd": 1.78,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " 10",
         "confidence": 0.8816456353664398,
         "candidates": [
@@ -123,7 +143,16 @@
             "exact": true,
             "segmentIndex": 0
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.29132325016800564,
+          "end": 0.1858074894257579
+        },
+        "warnings": []
       },
       "pairStatus": "complete"
     }

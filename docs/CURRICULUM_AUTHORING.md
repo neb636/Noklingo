@@ -113,6 +113,26 @@ result. Thai-only drafts remain playable; verified lessons require both assets.
 Tune padding, duration, and conservative matching thresholds in
 `tools/pronunciation-generator/config.json`.
 
+For fast boundary review, start the local authoring UI for one lesson:
+
+```bash
+npm run pronunciation:review -- common-verbs
+```
+
+Open the printed localhost URL. The reviewer synchronizes the video and
+waveform, shows the protected Whisper envelope and proposed cut, supports
+context/current/baseline playback, and provides draggable or millisecond nudge
+controls. Approving a range records exact final boundaries plus the source hash
+and algorithm fingerprint in `draft-cue-cards.json`, then regenerates only that
+language clip. Reviewed timestamps are never padded or clamped. A changed video,
+model, or boundary configuration marks the approval stale for another listen.
+
+The generator now searches for local low-energy valleys around matched speech.
+If no safe valley exists it uses protective fallback padding; touching or
+overlapping speech remains overlapping rather than cutting inside a matched
+word. `--report <path>` writes a structured QA report, while `--only-card` and
+`--only-language` support targeted regeneration.
+
 For a reviewed intake package, generate directly from the package after
 scaffolding it:
 

@@ -23,7 +23,7 @@ export default function LibraryPage() {
 
       <div className="lesson-library-track" aria-label="Lesson collection">
         {lessons.map((lesson) => <article key={lesson.id} className="compact-lesson-card">
-          <AppLink href={`/study/?preview=${encodeURIComponent(lesson.id)}`} className="compact-lesson-link" aria-label={`Open lesson ${lesson.order}: ${lesson.title}`}>
+          <AppLink href={`/lessons/${encodeURIComponent(lesson.id)}/`} className="compact-lesson-link" aria-label={`Open lesson ${lesson.order}: ${lesson.title}`}>
             <div className="compact-lesson-poster" aria-hidden="true">
               <Image className="compact-lesson-backdrop" src={assetPath(lesson.media.posterSrc)} width={720} height={1280} sizes="(max-width: 767px) 112px, 168px" unoptimized alt="" />
               <Image className="compact-lesson-portrait" src={assetPath(lesson.media.posterSrc)} width={720} height={1280} sizes="(max-width: 767px) 92px, 126px" unoptimized alt="" />

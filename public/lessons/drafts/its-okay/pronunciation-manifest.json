@@ -3,7 +3,8 @@
   "sourceVideo": "/lessons/drafts/its-okay/intro.mp4",
   "sourceHash": "d1fa9fe35c4c1649b186f2bc2a0d94a381e00de3ce196e9de5a79a67271c8a3f",
   "model": "large-v3",
-  "generatedAt": "2026-08-27T23:44:33.692Z",
+  "generatedAt": "2026-08-29T07:41:06.292Z",
+  "algorithmFingerprint": "a94210fc1c3198f8",
   "clips": [
     {
       "cueCardId": "draft-its-okay-1",
@@ -12,8 +13,13 @@
       "thai": {
         "audio": "/lessons/drafts/its-okay/audio/draft-its-okay-1-th.m4a",
         "status": "matched",
-        "start": 2.37,
-        "end": 3.92,
+        "start": 0.27,
+        "end": 4.859999999999999,
+        "rawStart": 2.52,
+        "rawEnd": 3.92,
+        "protectedStart": 0.39,
+        "protectedEnd": 4.46,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": "ไม่เป็นไร",
         "confidence": 0.9765599185228347,
         "candidates": [
@@ -25,13 +31,27 @@
             "exact": true,
             "segmentIndex": 1
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.42398918585526324,
+          "end": 0.5336435865220371
+        },
+        "warnings": []
       },
       "english": {
         "audio": "/lessons/drafts/its-okay/audio/draft-its-okay-1-en.m4a",
         "status": "matched",
-        "start": 3.92,
-        "end": 6.9825,
+        "start": 4.92,
+        "end": 7.7,
+        "rawStart": 3.92,
+        "rawEnd": 7.5,
+        "protectedStart": 5.02,
+        "protectedEnd": 7.65,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " It’s okay No worries",
         "confidence": 0.9600766828656196,
         "candidates": [
@@ -43,7 +63,16 @@
             "exact": true,
             "segmentIndex": 1
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.29494422781589535,
+          "end": 0.12047631123322627
+        },
+        "warnings": []
       },
       "pairStatus": "complete"
     },
@@ -54,8 +83,13 @@
       "thai": {
         "audio": "/lessons/drafts/its-okay/audio/draft-its-okay-2-th.m4a",
         "status": "matched",
-        "start": 7.43,
-        "end": 8.83,
+        "start": 7.805,
+        "end": 9.18,
+        "rawStart": 7.58,
+        "rawEnd": 8.8,
+        "protectedStart": 7.87,
+        "protectedEnd": 8.86,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " ช่างมันเถอะ",
         "confidence": 0.9937309041619301,
         "candidates": [
@@ -67,13 +101,27 @@
             "exact": true,
             "segmentIndex": 1
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.71005422088682,
+          "end": 0.2712464422074308
+        },
+        "warnings": []
       },
       "english": {
         "audio": "/lessons/drafts/its-okay/audio/draft-its-okay-2-en.m4a",
         "status": "matched",
-        "start": 8.83,
-        "end": 11.3825,
+        "start": 9.67,
+        "end": 10.825,
+        "rawStart": 8.86,
+        "rawEnd": 11.54,
+        "protectedStart": 9.76,
+        "protectedEnd": 10.57,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " Forget it",
         "confidence": 0.9426614386588335,
         "candidates": [
@@ -85,7 +133,16 @@
             "exact": true,
             "segmentIndex": 1
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.29355247971396875,
+          "end": 0.23825289513963732
+        },
+        "warnings": []
       },
       "pairStatus": "complete"
     },
@@ -96,8 +153,13 @@
       "thai": {
         "audio": "/lessons/drafts/its-okay/audio/draft-its-okay-3-th.m4a",
         "status": "matched",
-        "start": 11.43,
-        "end": 13.48,
+        "start": 11.835,
+        "end": 13.74,
+        "rawStart": 11.58,
+        "rawEnd": 13.48,
+        "protectedStart": 11.92,
+        "protectedEnd": 13.58,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " ไม่ต้องห่วง",
         "confidence": 0.9986896626154582,
         "candidates": [
@@ -109,13 +171,27 @@
             "exact": true,
             "segmentIndex": 1
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.31141548958406734,
+          "end": 0.3288809545333275
+        },
+        "warnings": []
       },
       "english": {
         "audio": "/lessons/drafts/its-okay/audio/draft-its-okay-3-en.m4a",
         "status": "matched",
-        "start": 13.48,
-        "end": 16.330000000000002,
+        "start": 14.16,
+        "end": 15.805,
+        "rawStart": 13.48,
+        "rawEnd": 16.44,
+        "protectedStart": 14.34,
+        "protectedEnd": 15.67,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " Don’t worry",
         "confidence": 0.9721466246247291,
         "candidates": [
@@ -127,7 +203,16 @@
             "exact": true,
             "segmentIndex": 1
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2380562273213837,
+          "end": 0.3375478552396898
+        },
+        "warnings": []
       },
       "pairStatus": "complete"
     },
@@ -138,8 +223,13 @@
       "thai": {
         "audio": "/lessons/drafts/its-okay/audio/draft-its-okay-4-th.m4a",
         "status": "matched",
-        "start": 16.330000000000002,
-        "end": 18.86,
+        "start": 15.805,
+        "end": 19.095,
+        "rawStart": 16.44,
+        "rawEnd": 18.86,
+        "protectedStart": 15.93,
+        "protectedEnd": 18.94,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": "ไม่ต้องคิดมาก",
         "confidence": 0.9939885859489441,
         "candidates": [
@@ -151,13 +241,27 @@
             "exact": true,
             "segmentIndex": 2
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.3375478552396898,
+          "end": 0.5009081103309091
+        },
+        "warnings": []
       },
       "english": {
         "audio": "/lessons/drafts/its-okay/audio/draft-its-okay-4-en.m4a",
         "status": "matched",
-        "start": 18.86,
-        "end": 21.685000000000002,
+        "start": 19.585,
+        "end": 21.225,
+        "rawStart": 18.86,
+        "rawEnd": 22.32,
+        "protectedStart": 19.69,
+        "protectedEnd": 21.02,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " Don’t overthink it",
         "confidence": 0.9774901443719863,
         "candidates": [
@@ -169,7 +273,16 @@
             "exact": true,
             "segmentIndex": 2
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.3105660519582993,
+          "end": 0.3247240340851
+        },
+        "warnings": []
       },
       "pairStatus": "complete"
     },
@@ -180,8 +293,13 @@
       "thai": {
         "audio": "/lessons/drafts/its-okay/audio/draft-its-okay-5-th.m4a",
         "status": "matched",
-        "start": 22.25,
-        "end": 23.06,
+        "start": 22.505000000000003,
+        "end": 23.71,
+        "rawStart": 22.4,
+        "rawEnd": 23.06,
+        "protectedStart": 22.57,
+        "protectedEnd": 23.5,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " ชิลๆ",
         "confidence": 0.9535670356452465,
         "candidates": [
@@ -193,13 +311,27 @@
             "exact": true,
             "segmentIndex": 2
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.4462703076269392,
+          "end": 0.39957585630147935
+        },
+        "warnings": []
       },
       "english": {
         "audio": "/lessons/drafts/its-okay/audio/draft-its-okay-5-en.m4a",
         "status": "matched",
-        "start": 23.06,
-        "end": 26.15,
+        "start": 24.165,
+        "end": 25.25,
+        "rawStart": 23.06,
+        "rawEnd": 25.9,
+        "protectedStart": 24.26,
+        "protectedEnd": 25.12,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " It’s all good",
         "confidence": 0.99092245054245,
         "candidates": [
@@ -211,7 +343,16 @@
             "exact": true,
             "segmentIndex": 2
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2943097496763348,
+          "end": 0.7725304524049316
+        },
+        "warnings": []
       },
       "pairStatus": "complete"
     }

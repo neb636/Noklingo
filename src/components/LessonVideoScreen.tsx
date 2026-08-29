@@ -21,6 +21,7 @@ type LessonVideoScreenProps = {
   onEnterImmersive?: () => void;
   requireCompletedWatch?: boolean;
   continueLabel?: string;
+  continueHint?: string;
 };
 
 export const LessonVideoScreen = forwardRef<LessonVideoScreenHandle, LessonVideoScreenProps>(function LessonVideoScreen({
@@ -31,6 +32,7 @@ export const LessonVideoScreen = forwardRef<LessonVideoScreenHandle, LessonVideo
   onEnterImmersive,
   requireCompletedWatch = false,
   continueLabel = "Continue to cards",
+  continueHint = "Your cards are ready whenever you are.",
 }, ref) {
   const immersive = presentation === "immersive";
   const [mediaError, setMediaError] = useState(lesson.media.availability !== "available");
@@ -316,7 +318,7 @@ export const LessonVideoScreen = forwardRef<LessonVideoScreenHandle, LessonVideo
           <motion.footer className="immersive-video-footer" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}>
             <div>
               <strong>{watchComplete ? "Video complete" : mediaError ? "Keep learning without the clip" : playbackStatus === "blocked" ? "Tap play to start" : playbackStatus === "paused" ? "Video paused" : "Watch at your own pace"}</strong>
-              <span>{requireCompletedWatch && !canContinue ? "Finish the clip to continue." : "Your cards are ready whenever you are."}</span>
+              <span>{requireCompletedWatch && !canContinue ? "Finish the clip to continue." : continueHint}</span>
             </div>
             <button type="button" className="video-continue-button" disabled={!canContinue} onClick={continueToCards}>
               {mediaError && requireCompletedWatch ? "Continue without video" : continueLabel} <ArrowRight size={19} />

@@ -11,13 +11,15 @@ import {
 import { extname, join, relative, sep } from "node:path";
 
 const output = join(process.cwd(), "dist", "client");
-const routes = ["welcome", "today", "study", "results", "library", "settings"];
+const coreRoutes = ["welcome", "today", "study", "results", "library", "settings"];
 const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH ?? "");
 const baseSegments = basePath ? basePath.slice(1).split("/") : [];
 const viewportTag = '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" data-next-head="" />';
 const compressedExtensions = new Set([".br", ".gz", ".zst", ".map"]);
 
 await normalizeVinextAssetLayout();
+const lessonRoutes = await discoverLessonRoutes();
+const routes = [...coreRoutes, ...lessonRoutes];
 
 for (const route of routes) {
   const source = join(output, `${route}.html`);
@@ -100,6 +102,20 @@ function normalizeBasePath(value) {
     throw new Error(`NEXT_PUBLIC_BASE_PATH contains an unsafe segment: ${value}`);
   }
   return `/${segments.join("/")}`;
+}
+
+async function discoverLessonRoutes() {
+  const lessonsDirectory = join(output, "lessons");
+  if (!(await exists(lessonsDirectory))) {
+    throw new Error("Static build emitted no lesson route directory.");
+  }
+  const entries = await readdir(lessonsDirectory, { withFileTypes: true });
+  const discovered = entries
+    .filter((entry) => entry.isFile() && entry.name.endsWith(".html"))
+    .map((entry) => `lessons/${entry.name.slice(0, -".html".length)}`)
+    .sort();
+  if (!discovered.length) throw new Error("Static build emitted no per-lesson HTML routes.");
+  return discovered;
 }
 
 async function normalizeVinextAssetLayout() {

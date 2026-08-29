@@ -12,29 +12,23 @@ import { cueCards, lessons } from "@/domain/seed";
 import type { ActiveStudySession, QuizQuestion, SessionQueueEntry, VideoLesson } from "@/domain/schemas";
 import { writeSnapshot } from "@/data/db";
 import { assetPath } from "@/lib/asset-path";
-import { useClientReady } from "@/lib/use-client-ready";
 import { withPreferredParticle } from "@/lib/language-display";
 import { answerFor } from "@/engine/learning-engine";
 import { activeCard, activeQuestion, snapshotFromState, useStudyStore } from "@/state/study-store";
 
 export default function StudyPage() {
   const router = useRouter();
-  const clientReady = useClientReady();
-  const previewId = typeof router.query.preview === "string" ? router.query.preview : undefined;
   const replayId = typeof router.query.replay === "string" ? router.query.replay : undefined;
-  const previewLesson = previewId ? lessons.find((lesson) => lesson.id === previewId) : undefined;
   const replayLesson = replayId ? lessons.find((lesson) => lesson.id === replayId) : undefined;
   const hydrated = useStudyStore((state) => state.hydrated);
   const progress = useStudyStore((state) => state.lessonProgress);
 
-  if (!clientReady) return <StudyEmpty title="Opening your session…" body="Reading the exact stage and fixed queue stored in this browser." />;
-  if (previewLesson) return <LessonExperience lesson={previewLesson} />;
   if (replayLesson) {
     if (!hydrated) return <StudyEmpty title="Opening the library…" body="Checking that this replay is available in your local record." />;
     if (progress.some((entry) => entry.lessonId === replayLesson.id && entry.status === "mastered")) return <LessonExperience lesson={replayLesson} />;
     return <StudyEmpty title="Replay unavailable" body="Only mastered lessons can be replayed. Browse the lesson library to watch any short lesson." />;
   }
-  if (previewId || replayId) return <StudyEmpty title="Lesson not found" body="This preview does not match the bundled curriculum." />;
+  if (replayId) return <StudyEmpty title="Lesson not found" body="This replay does not match the bundled curriculum." />;
   return <DurableStudy />;
 }
 

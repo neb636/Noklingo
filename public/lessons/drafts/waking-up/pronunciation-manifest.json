@@ -3,7 +3,8 @@
   "sourceVideo": "/lessons/drafts/waking-up/intro.mp4",
   "sourceHash": "38ac7b13d8838e5d0be70af7769124b728df855f31cb215d72b864a2bfe1abd4",
   "model": "large-v3",
-  "generatedAt": "2026-08-27T23:44:31.803Z",
+  "generatedAt": "2026-08-29T07:41:04.498Z",
+  "algorithmFingerprint": "a94210fc1c3198f8",
   "clips": [
     {
       "cueCardId": "draft-waking-up-1",
@@ -12,8 +13,13 @@
       "thai": {
         "audio": "/lessons/drafts/waking-up/audio/draft-waking-up-1-th.m4a",
         "status": "matched",
-        "start": 2.5700000000000003,
-        "end": 4.52,
+        "start": 3.145,
+        "end": 4.85,
+        "rawStart": 2.72,
+        "rawEnd": 4.52,
+        "protectedStart": 3.22,
+        "protectedEnd": 4.61,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " ร้อนจัง",
         "confidence": 0.9765668484994343,
         "candidates": [
@@ -25,13 +31,27 @@
             "exact": true,
             "segmentIndex": 0
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.29407704497324105,
+          "end": 0.3339191388634614
+        },
+        "warnings": []
       },
       "english": {
         "audio": "/lessons/drafts/waking-up/audio/draft-waking-up-1-en.m4a",
         "status": "matched",
-        "start": 4.52,
-        "end": 5.609999999999999,
+        "start": 4.85,
+        "end": 5.985,
+        "rawStart": 4.52,
+        "rawEnd": 5.54,
+        "protectedStart": 4.93,
+        "protectedEnd": 5.81,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " It’s so hot",
         "confidence": 0.9638040157491605,
         "candidates": [
@@ -43,6 +63,17 @@
             "exact": true,
             "segmentIndex": 0
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.3339191388634614,
+          "end": 0.3475082398452045
+        },
+        "warnings": [
+          "overlapping-speech-envelopes"
         ]
       },
       "pairStatus": "complete"
@@ -54,8 +85,13 @@
       "thai": {
         "audio": "/lessons/drafts/waking-up/audio/draft-waking-up-2-th.m4a",
         "status": "matched",
-        "start": 5.609999999999999,
-        "end": 6.74,
+        "start": 5.385,
+        "end": 6.785,
+        "rawStart": 5.54,
+        "rawEnd": 6.74,
+        "protectedStart": 5.54,
+        "protectedEnd": 6.74,
+        "envelopeMethod": "whisper",
         "transcriptMatch": " ถึงยัง",
         "confidence": 0.9967568322590419,
         "candidates": [
@@ -67,13 +103,30 @@
             "exact": true,
             "segmentIndex": 0
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.28853368274518704,
+          "end": 0.3645703794415272
+        },
+        "warnings": [
+          "overlapping-speech-envelopes",
+          "unrefined-whisper-envelope"
         ]
       },
       "english": {
         "audio": "/lessons/drafts/waking-up/audio/draft-waking-up-2-en.m4a",
         "status": "matched",
-        "start": 6.74,
-        "end": 8.51,
+        "start": 5.985,
+        "end": 8.92,
+        "rawStart": 6.74,
+        "rawEnd": 8.26,
+        "protectedStart": 6.1,
+        "protectedEnd": 8.52,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " Have you arrived yet?",
         "confidence": 0.9911919921636582,
         "candidates": [
@@ -85,6 +138,17 @@
             "exact": true,
             "segmentIndex": 0
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.3475082398452045,
+          "end": 0.6178560819276903
+        },
+        "warnings": [
+          "overlapping-speech-envelopes"
         ]
       },
       "pairStatus": "complete"
@@ -96,8 +160,13 @@
       "thai": {
         "audio": "/lessons/drafts/waking-up/audio/draft-waking-up-3-th.m4a",
         "status": "matched",
-        "start": 9.29,
-        "end": 10.02,
+        "start": 8.95,
+        "end": 11.055,
+        "rawStart": 9.44,
+        "rawEnd": 10.02,
+        "protectedStart": 9.05,
+        "protectedEnd": 10.79,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " ตื่นแล้ว",
         "confidence": 0.9974130037852696,
         "candidates": [
@@ -109,13 +178,29 @@
             "exact": true,
             "segmentIndex": 0
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.28409114874753766,
+          "end": 0.3010926819919264
+        },
+        "warnings": [
+          "overlapping-speech-envelopes"
         ]
       },
       "english": {
         "audio": "/lessons/drafts/waking-up/audio/draft-waking-up-3-en.m4a",
         "status": "matched",
-        "start": 10.02,
-        "end": 10.985,
+        "start": 9.92,
+        "end": 11.055,
+        "rawStart": 10.02,
+        "rawEnd": 10.74,
+        "protectedStart": 10.02,
+        "protectedEnd": 10.74,
+        "envelopeMethod": "whisper",
         "transcriptMatch": " I’m awake",
         "confidence": 0.9689366249367595,
         "candidates": [
@@ -127,6 +212,19 @@
             "exact": true,
             "segmentIndex": 0
           }
+        ],
+        "boundaryMethod": {
+          "start": "fallback",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0,
+          "end": 0.3010926819919264
+        },
+        "warnings": [
+          "start-fallback",
+          "overlapping-speech-envelopes",
+          "unrefined-whisper-envelope"
         ]
       },
       "pairStatus": "complete"
@@ -138,8 +236,13 @@
       "thai": {
         "audio": "/lessons/drafts/waking-up/audio/draft-waking-up-4-th.m4a",
         "status": "matched",
-        "start": 10.985,
-        "end": 12.34,
+        "start": 11.095,
+        "end": 13.64,
+        "rawStart": 10.74,
+        "rawEnd": 12.34,
+        "protectedStart": 11.41,
+        "protectedEnd": 13.42,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " หิวแล้ว",
         "confidence": 0.9919408416748047,
         "candidates": [
@@ -151,13 +254,29 @@
             "exact": true,
             "segmentIndex": 0
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.3540162724598004,
+          "end": 0.23821594026677595
+        },
+        "warnings": [
+          "overlapping-speech-envelopes"
         ]
       },
       "english": {
         "audio": "/lessons/drafts/waking-up/audio/draft-waking-up-4-en.m4a",
         "status": "matched",
-        "start": 12.34,
-        "end": 13.39,
+        "start": 12.24,
+        "end": 13.530000000000001,
+        "rawStart": 12.34,
+        "rawEnd": 13.14,
+        "protectedStart": 12.34,
+        "protectedEnd": 13.14,
+        "envelopeMethod": "whisper",
         "transcriptMatch": " I’m hungry",
         "confidence": 0.997823010981083,
         "candidates": [
@@ -169,6 +288,19 @@
             "exact": true,
             "segmentIndex": 0
           }
+        ],
+        "boundaryMethod": {
+          "start": "fallback",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0,
+          "end": 0.5146969464058936
+        },
+        "warnings": [
+          "start-fallback",
+          "overlapping-speech-envelopes",
+          "unrefined-whisper-envelope"
         ]
       },
       "pairStatus": "complete"
@@ -180,8 +312,13 @@
       "thai": {
         "audio": "/lessons/drafts/waking-up/audio/draft-waking-up-5-th.m4a",
         "status": "matched",
-        "start": 13.475000000000001,
-        "end": 15.18,
+        "start": 14.15,
+        "end": 15.64,
+        "rawStart": 13.14,
+        "rawEnd": 15.18,
+        "protectedStart": 14.29,
+        "protectedEnd": 15.46,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " กินไรดี",
         "confidence": 0.9761260768771172,
         "candidates": [
@@ -193,13 +330,27 @@
             "exact": true,
             "segmentIndex": 0
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2966067493092758,
+          "end": 0.4319979852233165
+        },
+        "warnings": []
       },
       "english": {
         "audio": "/lessons/drafts/waking-up/audio/draft-waking-up-5-en.m4a",
         "status": "matched",
-        "start": 15.18,
-        "end": 16.69,
+        "start": 15.64,
+        "end": 16.59,
+        "rawStart": 15.18,
+        "rawEnd": 16.44,
+        "protectedStart": 15.68,
+        "protectedEnd": 16.49,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " What should we eat?",
         "confidence": 0.987366436123848,
         "candidates": [
@@ -211,7 +362,16 @@
             "exact": true,
             "segmentIndex": 0
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.4319979852233165,
+          "end": 0.627679534206669
+        },
+        "warnings": []
       },
       "pairStatus": "complete"
     }

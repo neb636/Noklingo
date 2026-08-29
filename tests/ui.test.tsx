@@ -3,9 +3,9 @@ import "@testing-library/jest-dom/vitest";
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import { PracticeQuiz } from "../src/components/PracticeQuiz";
+import { LessonExperience } from "../src/components/LessonExperience";
 import { cueCards, lessons } from "../src/domain/seed";
 import LibraryPage from "../src/pages/library";
-import StudyPage from "../src/pages/study";
 import TodayPage from "../src/pages/today";
 import { defaultSnapshot, useStudyStore } from "../src/state/study-store";
 
@@ -44,8 +44,7 @@ describe("lesson collection UI", () => {
   });
 
   it("moves from swipeable cue cards into the unscored visual quiz", () => {
-    query = { preview: "food-flavors" };
-    render(<StudyPage />);
+    render(<LessonExperience lesson={lessons.find((item) => item.id === "food-flavors")!} />);
     fireEvent.click(screen.getByRole("button", { name: /skip to cards/i }));
 
     expect(screen.getByText("🍋")).toBeInTheDocument();
@@ -65,6 +64,15 @@ describe("lesson collection UI", () => {
     fireEvent.click(check);
     expect(screen.getByRole("status")).toBeInTheDocument();
     expect(useStudyStore.getState().activeSession).toBeNull();
+  });
+
+  it("presents a video-only lesson as a class without homework", () => {
+    render(<LessonExperience lesson={lessons.find((item) => item.id === "coffee-order")!} />);
+
+    expect(screen.getByText("Video class")).toBeInTheDocument();
+    expect(screen.getByText("No homework")).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /skip to cards/i })).not.toBeInTheDocument();
+    expect(screen.queryByText(/practice quiz included/i)).not.toBeInTheDocument();
   });
 
   it("includes a correct final practice answer in the local result", () => {

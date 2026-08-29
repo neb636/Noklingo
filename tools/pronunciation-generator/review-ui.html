@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pronunciation Review</title><link rel="stylesheet" href="/review-ui.css"><style>.legend .protected:before{background:#617eaa}</style></head>
+<body><main>
+  <header><div><p class="eyebrow">Local authoring tool</p><h1 id="title">Pronunciation review</h1></div><div id="progress" class="progress"></div></header>
+  <section class="workspace">
+    <div class="media"><video id="video" src="/video" controls playsinline></video><canvas id="waveform" height="180"></canvas><div class="legend"><span class="raw">Whisper guess</span><span class="protected">Detected speech</span><span class="cut">Final cut</span></div></div>
+    <aside>
+      <div class="nav"><button id="previous">← Previous</button><span id="position"></span><button id="next">Next →</button></div>
+      <p id="language" class="language"></p><h2 id="text"></h2><p id="counterpart" class="counterpart"></p><div id="status"></div>
+      <div class="times"><label>Start <input id="start" type="number" min="0" step="0.01"></label><label>End <input id="end" type="number" min="0" step="0.01"></label></div>
+      <div class="nudges"><button data-nudge="start:-.05">Start −50</button><button data-nudge="start:-.01">−10</button><button data-nudge="start:.01">+10</button><button data-nudge="start:.05">+50</button><button data-nudge="end:-.05">End −50</button><button data-nudge="end:-.01">−10</button><button data-nudge="end:.01">+10</button><button data-nudge="end:.05">+50</button></div>
+      <div class="playback"><button id="context">Play context</button><button id="preview" class="primary">Play exact cut</button><button id="current">Play generated</button><button id="baseline">Play old baseline</button><label><input id="loop" type="checkbox"> Loop cut</label></div>
+      <audio id="audio" controls></audio><button id="approve" class="approve">Approve these boundaries</button><p id="message" role="status"></p>
+      <details><summary>Keyboard shortcuts</summary><p>Space: exact cut · ←/→: previous/next · A: approve · Shift + arrows: nudge selected boundary 10 ms.</p></details>
+    </aside>
+  </section>
+</main><script type="module" src="/review-ui.js"></script></body></html>

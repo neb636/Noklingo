@@ -3,64 +3,7 @@
   "sourceVideo": "/lessons/drafts/coffee-order/intro.mp4",
   "sourceHash": "9d4014a3d22986099e9e0903aec3df3d7f70794f118ffc8e73b2302bc1f57b0d",
   "model": "large-v3",
-  "generatedAt": "2026-08-27T23:44:31.395Z",
-  "clips": [
-    {
-      "cueCardId": "draft-coffee-order-1",
-      "thaiText": "เอาโกโก้เย็นหวานน้อยครับ",
-      "englishText": "I’ll have an iced cocoa, less sweet, please.",
-      "thai": {
-        "status": "unmatched",
-        "candidates": [],
-        "diagnostic": "No candidate reached the confidence threshold."
-      },
-      "english": {
-        "status": "unmatched",
-        "candidates": [],
-        "diagnostic": "No candidate reached the confidence threshold."
-      },
-      "pairStatus": "unmatched"
-    },
-    {
-      "cueCardId": "draft-coffee-order-2",
-      "thaiText": "เอาคาราเมลมัคคิอาโตหวานน้อยค่ะ",
-      "englishText": "I’ll have a caramel macchiato, less sweet, please",
-      "thai": {
-        "status": "ambiguous",
-        "candidates": [
-          {
-            "start": 20.46,
-            "end": 20.46,
-            "transcriptMatch": "อ้ คาราเมลมัคคิอาโตหวานน้อยค่ะ",
-            "confidence": 0.9378569066365561,
-            "exact": false,
-            "segmentIndex": 5
-          },
-          {
-            "start": 19.82,
-            "end": 20.46,
-            "transcriptMatch": " โอ้ คาราเมลมัคคิอาโตหวานน้อยค่ะ",
-            "confidence": 0.9334710668936754,
-            "exact": false,
-            "segmentIndex": 5
-          },
-          {
-            "start": 16.64,
-            "end": 19.82,
-            "transcriptMatch": " โอ้ คาราเมลมัคคิอาโตหวานน้อยค่ะ",
-            "confidence": 0.9044328770407137,
-            "exact": false,
-            "segmentIndex": 5
-          }
-        ],
-        "diagnostic": "The top candidate is too close to another occurrence."
-      },
-      "english": {
-        "status": "unmatched",
-        "candidates": [],
-        "diagnostic": "No candidate reached the confidence threshold."
-      },
-      "pairStatus": "ambiguous"
-    }
-  ]
+  "generatedAt": "2026-08-29T08:00:01.667Z",
+  "algorithmFingerprint": "a94210fc1c3198f8",
+  "clips": []
 }

@@ -3,7 +3,8 @@
   "sourceVideo": "/lessons/drafts/parting-safely/intro.mp4",
   "sourceHash": "3bb51dfe20f4b41cec8987fd3fd2145c9708523038aa9781ee61d9bc164d2b71",
   "model": "large-v3",
-  "generatedAt": "2026-08-27T23:44:32.603Z",
+  "generatedAt": "2026-08-29T07:41:05.269Z",
+  "algorithmFingerprint": "a94210fc1c3198f8",
   "clips": [
     {
       "cueCardId": "draft-parting-safely-1",
@@ -12,8 +13,13 @@
       "thai": {
         "audio": "/lessons/drafts/parting-safely/audio/draft-parting-safely-1-th.m4a",
         "status": "matched",
-        "start": 4.43,
-        "end": 5.22,
+        "start": 4.58,
+        "end": 5.57,
+        "rawStart": 4.58,
+        "rawEnd": 5.22,
+        "protectedStart": 4.65,
+        "protectedEnd": 5.39,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": "ไปละนะ",
         "confidence": 0.9474977485090494,
         "candidates": [
@@ -25,13 +31,27 @@
             "exact": true,
             "segmentIndex": 2
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.30261656098867223,
+          "end": 0.24504412987117202
+        },
+        "warnings": []
       },
       "english": {
         "audio": "/lessons/drafts/parting-safely/audio/draft-parting-safely-1-en.m4a",
         "status": "matched",
-        "start": 5.22,
-        "end": 6.2225,
+        "start": 5.57,
+        "end": 6.51,
+        "rawStart": 5.22,
+        "rawEnd": 6.12,
+        "protectedStart": 5.71,
+        "protectedEnd": 6.26,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " I’m off",
         "confidence": 0.9242944037645213,
         "candidates": [
@@ -43,6 +63,17 @@
             "exact": true,
             "segmentIndex": 2
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.24504412987117202,
+          "end": 0.3361979396068485
+        },
+        "warnings": [
+          "overlapping-speech-envelopes"
         ]
       },
       "pairStatus": "complete"
@@ -54,8 +85,13 @@
       "thai": {
         "audio": "/lessons/drafts/parting-safely/audio/draft-parting-safely-2-th.m4a",
         "status": "matched",
-        "start": 6.2225,
-        "end": 7.133125,
+        "start": 5.93,
+        "end": 7.115,
+        "rawStart": 6.12,
+        "rawEnd": 7.08,
+        "protectedStart": 6.12,
+        "protectedEnd": 7.08,
+        "envelopeMethod": "whisper",
         "transcriptMatch": " กลับดีๆนะ",
         "confidence": 0.9459226324583869,
         "candidates": [
@@ -83,13 +119,30 @@
             "exact": true,
             "segmentIndex": 2
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.5923919915981364,
+          "end": 0.5800421195046148
+        },
+        "warnings": [
+          "overlapping-speech-envelopes",
+          "unrefined-whisper-envelope"
         ]
       },
       "english": {
         "audio": "/lessons/drafts/parting-safely/audio/draft-parting-safely-2-en.m4a",
         "status": "matched",
-        "start": 10.49,
-        "end": 12.17,
+        "start": 11.085,
+        "end": 12.28,
+        "rawStart": 10.64,
+        "rawEnd": 11.92,
+        "protectedStart": 11.19,
+        "protectedEnd": 12.11,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " Get home safe",
         "confidence": 0.9808398270606995,
         "candidates": [
@@ -109,7 +162,16 @@
             "exact": true,
             "segmentIndex": 3
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.30652266483135077,
+          "end": 0.43583540037734636
+        },
+        "warnings": []
       },
       "pairStatus": "complete"
     },
@@ -120,8 +182,13 @@
       "thai": {
         "audio": "/lessons/drafts/parting-safely/audio/draft-parting-safely-3-th.m4a",
         "status": "matched",
-        "start": 7.133125,
-        "end": 8.05,
+        "start": 6.72,
+        "end": 9.555,
+        "rawStart": 7.08,
+        "rawEnd": 7.82,
+        "protectedStart": 6.8,
+        "protectedEnd": 9.25,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " ขับรถดีๆ",
         "confidence": 0.9899636888504029,
         "candidates": [
@@ -133,16 +200,43 @@
             "exact": true,
             "segmentIndex": 2
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2902587654489892,
+          "end": 0.269056260445343
+        },
+        "warnings": [
+          "overlapping-speech-envelopes"
         ]
       },
       "english": {
         "audio": "/lessons/drafts/parting-safely/audio/draft-parting-safely-3-en.m4a",
         "status": "overridden",
-        "start": 8.129999999999999,
-        "end": 9.11,
+        "start": 8.28,
+        "end": 8.86,
+        "rawStart": 8.28,
+        "rawEnd": 8.86,
+        "protectedStart": 8.28,
+        "protectedEnd": 8.86,
+        "envelopeMethod": "override",
         "transcriptMatch": "Drive safe",
         "confidence": 1,
-        "candidates": []
+        "candidates": [],
+        "boundaryMethod": {
+          "start": "override",
+          "end": "override"
+        },
+        "boundaryConfidence": {
+          "start": 1,
+          "end": 1
+        },
+        "warnings": [
+          "legacy-unreviewed-override"
+        ]
       },
       "pairStatus": "complete"
     },
@@ -153,8 +247,13 @@
       "thai": {
         "audio": "/lessons/drafts/parting-safely/audio/draft-parting-safely-4-th.m4a",
         "status": "matched",
-        "start": 12.35,
-        "end": 13.76,
+        "start": 12.285,
+        "end": 13.855,
+        "rawStart": 12.5,
+        "rawEnd": 13.76,
+        "protectedStart": 12.5,
+        "protectedEnd": 13.76,
+        "envelopeMethod": "whisper",
         "transcriptMatch": "ถึงแล้วบอกด้วยนะ",
         "confidence": 0.9994126695394516,
         "candidates": [
@@ -166,13 +265,30 @@
             "exact": true,
             "segmentIndex": 4
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.44786267894620635,
+          "end": 0.4167960918971417
+        },
+        "warnings": [
+          "overlapping-speech-envelopes",
+          "unrefined-whisper-envelope"
         ]
       },
       "english": {
         "audio": "/lessons/drafts/parting-safely/audio/draft-parting-safely-4-en.m4a",
         "status": "matched",
-        "start": 13.76,
-        "end": 15.87,
+        "start": 12.61,
+        "end": 16.13,
+        "rawStart": 13.76,
+        "rawEnd": 15.62,
+        "protectedStart": 12.71,
+        "protectedEnd": 15.78,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " Let me know when you get there",
         "confidence": 0.9839952363286699,
         "candidates": [
@@ -184,6 +300,17 @@
             "exact": true,
             "segmentIndex": 4
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.4414739118872022,
+          "end": 0.3711775408167739
+        },
+        "warnings": [
+          "overlapping-speech-envelopes"
         ]
       },
       "pairStatus": "complete"

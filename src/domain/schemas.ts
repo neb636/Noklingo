@@ -46,6 +46,7 @@ export const VideoLessonSchema = z.object({
   title: z.string().min(1),
   objective: z.string().min(1),
   description: z.string().min(1),
+  activityMode: z.enum(["video-and-practice", "video-only"]).optional(),
   media: LessonMediaSchema,
   cueCardIds: z.array(z.string().min(1)),
   quizBank: z.array(QuizQuestionSchema),
@@ -74,6 +75,11 @@ export const KnowledgeItemSchema = z.object({
       startSeconds: z.number().finite().nonnegative(),
       endSeconds: z.number().finite().positive(),
       matchText: z.string().min(1).optional(),
+      review: z.object({
+        sourceHash: z.string().regex(/^[a-f0-9]{64}$/),
+        algorithmFingerprint: z.string().min(1),
+        reviewedAt: z.string().datetime(),
+      }).optional(),
     }).refine((value) => value.endSeconds > value.startSeconds, {
       message: "Thai pronunciation override endSeconds must be after startSeconds.",
     }).optional(),
@@ -81,6 +87,11 @@ export const KnowledgeItemSchema = z.object({
       startSeconds: z.number().finite().nonnegative(),
       endSeconds: z.number().finite().positive(),
       matchText: z.string().min(1).optional(),
+      review: z.object({
+        sourceHash: z.string().regex(/^[a-f0-9]{64}$/),
+        algorithmFingerprint: z.string().min(1),
+        reviewedAt: z.string().datetime(),
+      }).optional(),
     }).refine((value) => value.endSeconds > value.startSeconds, {
       message: "English pronunciation override endSeconds must be after startSeconds.",
     }).optional(),

@@ -21,7 +21,7 @@ for (const lesson of drafts) {
   const thaiAudio = cards.filter((card) => Boolean(card.thaiAudioSrc)).length;
   const englishAudio = cards.filter((card) => Boolean(card.englishAudioSrc)).length;
   const questions = published?.quizBank.filter((question) => question.scored && question.verificationStatus === "verified").length ?? 0;
-  const requiredQuestions = minimumQuestionBankSize(lesson);
+  const requiredQuestions = lesson.activityMode === "video-only" ? 0 : minimumQuestionBankSize(lesson);
   const ready = reviewedIds.has(lesson.id);
   console.log(`${String(lesson.order).padStart(2, "0")} ${lesson.title} — ${ready ? "PUBLISHED" : "BLOCKED"}`);
   console.log(`   cards ${verifiedCards}/${cards.length} verified · usage ${usage}/${cards.length} · Thai audio ${thaiAudio}/${cards.length} · English audio ${englishAudio}/${cards.length} · questions ${questions}/${requiredQuestions}+`);
