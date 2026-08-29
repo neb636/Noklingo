@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { matchEnglishPhrase, matchThaiPhrase, normalizeEnglish, normalizeThai, paddedClipRange, type TranscriptSegment } from "../src/domain/pronunciation";
+import { matchEnglishPhrase, matchThaiPhrase, normalizeEnglish, normalizeThai, paddedClipRange, pronunciationReviewIsStale, type TranscriptSegment } from "../src/domain/pronunciation";
 
 const segment = (text: string, start = 1, end = 2): TranscriptSegment => ({
   text,
@@ -61,5 +61,12 @@ describe("Thai pronunciation matching", () => {
   it("adds natural padding while clamping to source duration", () => {
     expect(paddedClipRange(0.05, 0.2, 1)).toEqual({ start: 0, end: 0.45 });
     expect(paddedClipRange(1, 8, 10)).toBeUndefined();
+  });
+
+  it("invalidates reviewed boundaries when their source or algorithm changes", () => {
+    const review = { sourceHash: "source-a", algorithmFingerprint: "algorithm-a" };
+    expect(pronunciationReviewIsStale(review, "source-a", "algorithm-a")).toBe(false);
+    expect(pronunciationReviewIsStale(review, "source-b", "algorithm-a")).toBe(true);
+    expect(pronunciationReviewIsStale(review, "source-a", "algorithm-b")).toBe(true);
   });
 });

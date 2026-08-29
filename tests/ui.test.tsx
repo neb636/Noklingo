@@ -3,9 +3,9 @@ import "@testing-library/jest-dom/vitest";
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import { PracticeQuiz } from "../src/components/PracticeQuiz";
+import { LessonExperience } from "../src/components/LessonExperience";
 import { cueCards, lessons } from "../src/domain/seed";
 import LibraryPage from "../src/pages/library";
-import StudyPage from "../src/pages/study";
 import TodayPage from "../src/pages/today";
 import { defaultSnapshot, useStudyStore } from "../src/state/study-store";
 
@@ -18,8 +18,6 @@ beforeAll(() => {
     value: (value: string) => ({ matches: false, media: value, onchange: null, addListener: vi.fn(), removeListener: vi.fn(), addEventListener: vi.fn(), removeEventListener: vi.fn(), dispatchEvent: vi.fn() }),
   });
   window.scrollTo = vi.fn();
-  Object.defineProperty(HTMLMediaElement.prototype, "play", { configurable: true, value: vi.fn().mockResolvedValue(undefined) });
-  Object.defineProperty(HTMLMediaElement.prototype, "pause", { configurable: true, value: vi.fn() });
 });
 
 beforeEach(() => {
@@ -37,24 +35,6 @@ describe("lesson collection UI", () => {
     expect(screen.getByRole("link", { name: /browse lessons/i })).toBeInTheDocument();
   });
 
-  it("opens the immersive video and lets practice continue to cue cards", () => {
-    query = { preview: "common-verbs" };
-    const { container } = render(<StudyPage />);
-    expect(screen.getByRole("heading", { name: /essential verbs/i })).not.toHaveFocus();
-    fireEvent.click(screen.getByRole("button", { name: "Play Essential verbs video" }));
-    expect(container.querySelector(".immersive-video")).not.toBeNull();
-    expect(screen.queryByRole("button", { name: /fullscreen/i })).not.toBeInTheDocument();
-    const video = container.querySelector("video")!;
-    expect(video).toHaveAttribute("autoplay");
-    expect(video).not.toHaveAttribute("controls");
-    expect(HTMLMediaElement.prototype.play).toHaveBeenCalled();
-    expect(screen.getByRole("button", { name: /continue to cards/i }).closest("footer")).toHaveClass("immersive-video-footer");
-    fireEvent.click(screen.getByRole("button", { name: /continue to cards/i }));
-    expect(screen.getByText(/cue cards/i)).toBeInTheDocument();
-    expect(screen.getByText("กิน")).toBeInTheDocument();
-    expect(screen.getByText("eat")).toBeInTheDocument();
-  });
-
   it("presents the supplied clips as a learner-facing collection", () => {
     const { container } = render(<LibraryPage />);
     expect(screen.getByRole("heading", { name: /explore the collection/i })).toBeInTheDocument();
@@ -64,8 +44,7 @@ describe("lesson collection UI", () => {
   });
 
   it("moves from swipeable cue cards into the unscored visual quiz", () => {
-    query = { preview: "food-flavors" };
-    render(<StudyPage />);
+    render(<LessonExperience lesson={lessons.find((item) => item.id === "food-flavors")!} />);
     fireEvent.click(screen.getByRole("button", { name: /skip to cards/i }));
 
     expect(screen.getByText("🍋")).toBeInTheDocument();
@@ -85,6 +64,15 @@ describe("lesson collection UI", () => {
     fireEvent.click(check);
     expect(screen.getByRole("status")).toBeInTheDocument();
     expect(useStudyStore.getState().activeSession).toBeNull();
+  });
+
+  it("presents a video-only lesson as a class without homework", () => {
+    render(<LessonExperience lesson={lessons.find((item) => item.id === "coffee-order")!} />);
+
+    expect(screen.getByText("Video class")).toBeInTheDocument();
+    expect(screen.getByText("No homework")).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /skip to cards/i })).not.toBeInTheDocument();
+    expect(screen.queryByText(/practice quiz included/i)).not.toBeInTheDocument();
   });
 
   it("includes a correct final practice answer in the local result", () => {

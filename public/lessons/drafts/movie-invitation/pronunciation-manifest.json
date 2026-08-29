@@ -3,7 +3,8 @@
   "sourceVideo": "/lessons/drafts/movie-invitation/intro.mp4",
   "sourceHash": "987613dd5f5722c3c404e70d7ee6854d799815c3689627c131d2cc8d512bb7ab",
   "model": "large-v3",
-  "generatedAt": "2026-08-27T23:44:32.182Z",
+  "generatedAt": "2026-08-29T08:26:53.148Z",
+  "algorithmFingerprint": "a94210fc1c3198f8",
   "clips": [
     {
       "cueCardId": "draft-movie-invitation-1",
@@ -12,8 +13,13 @@
       "thai": {
         "audio": "/lessons/drafts/movie-invitation/audio/draft-movie-invitation-1-th.m4a",
         "status": "matched",
-        "start": 4.25,
-        "end": 6.54,
+        "start": 3.5250000000000004,
+        "end": 7.244999999999999,
+        "rawStart": 4.4,
+        "rawEnd": 6.54,
+        "protectedStart": 3.61,
+        "protectedEnd": 7.08,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": "ไปกินข้าวกันมั้ย",
         "confidence": 0.982843718459973,
         "candidates": [
@@ -25,13 +31,27 @@
             "exact": true,
             "segmentIndex": 1
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.31103591636734745,
+          "end": 0.2717491768256532
+        },
+        "warnings": []
       },
       "english": {
         "audio": "/lessons/drafts/movie-invitation/audio/draft-movie-invitation-1-en.m4a",
         "status": "matched",
-        "start": 6.54,
-        "end": 8.81,
+        "start": 7.244999999999999,
+        "end": 9.005,
+        "rawStart": 6.54,
+        "rawEnd": 8.56,
+        "protectedStart": 7.32,
+        "protectedEnd": 8.84,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " Wanna grab a meal together?",
         "confidence": 0.9753947479128837,
         "candidates": [
@@ -43,7 +63,16 @@
             "exact": true,
             "segmentIndex": 1
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2717491768256532,
+          "end": 0.4709745339585617
+        },
+        "warnings": []
       },
       "pairStatus": "complete"
     },
@@ -54,8 +83,13 @@
       "thai": {
         "audio": "/lessons/drafts/movie-invitation/audio/draft-movie-invitation-2-th.m4a",
         "status": "matched",
-        "start": 9.07,
-        "end": 10.88,
+        "start": 9.35,
+        "end": 11.345,
+        "rawStart": 9.22,
+        "rawEnd": 10.88,
+        "protectedStart": 9.44,
+        "protectedEnd": 11.18,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " ไปดูหนังกันมั้ย",
         "confidence": 0.998868800997734,
         "candidates": [
@@ -67,13 +101,29 @@
             "exact": true,
             "segmentIndex": 1
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.3119590147424442,
+          "end": 0.2856346815343211
+        },
+        "warnings": [
+          "overlapping-speech-envelopes"
         ]
       },
       "english": {
         "audio": "/lessons/drafts/movie-invitation/audio/draft-movie-invitation-2-en.m4a",
         "status": "matched",
-        "start": 10.88,
-        "end": 13.05,
+        "start": 10.81,
+        "end": 13.18,
+        "rawStart": 10.88,
+        "rawEnd": 12.8,
+        "protectedStart": 10.88,
+        "protectedEnd": 12.8,
+        "envelopeMethod": "whisper",
         "transcriptMatch": " Wanna go watch a movie?",
         "confidence": 0.9808992350101471,
         "candidates": [
@@ -85,6 +135,18 @@
             "exact": true,
             "segmentIndex": 1
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2089219497674725,
+          "end": 0.8918823682385827
+        },
+        "warnings": [
+          "overlapping-speech-envelopes",
+          "unrefined-whisper-envelope"
         ]
       },
       "pairStatus": "complete"
@@ -96,8 +158,13 @@
       "thai": {
         "audio": "/lessons/drafts/movie-invitation/audio/draft-movie-invitation-3-th.m4a",
         "status": "matched",
-        "start": 13.19,
-        "end": 15.42,
+        "start": 11.600000000000001,
+        "end": 15.66,
+        "rawStart": 13.34,
+        "rawEnd": 15.42,
+        "protectedStart": 11.67,
+        "protectedEnd": 15.52,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " ไปดื่มกาแฟกันมั้ย",
         "confidence": 0.9992920792102814,
         "candidates": [
@@ -109,13 +176,29 @@
             "exact": true,
             "segmentIndex": 1
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2902422668338123,
+          "end": 0.6239503252090847
+        },
+        "warnings": [
+          "overlapping-speech-envelopes"
         ]
       },
       "english": {
         "audio": "/lessons/drafts/movie-invitation/audio/draft-movie-invitation-3-en.m4a",
         "status": "matched",
-        "start": 15.42,
-        "end": 17.35,
+        "start": 16.02,
+        "end": 17.509999999999998,
+        "rawStart": 15.42,
+        "rawEnd": 17.1,
+        "protectedStart": 16.07,
+        "protectedEnd": 17.32,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " Wanna grab a coffee?",
         "confidence": 0.9861792117357254,
         "candidates": [
@@ -127,7 +210,16 @@
             "exact": true,
             "segmentIndex": 1
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.5353508649801171,
+          "end": 0.3642482589610686
+        },
+        "warnings": []
       },
       "pairStatus": "complete"
     },
@@ -138,8 +230,13 @@
       "thai": {
         "audio": "/lessons/drafts/movie-invitation/audio/draft-movie-invitation-4-th.m4a",
         "status": "matched",
-        "start": 17.470000000000002,
-        "end": 19.38,
+        "start": 17.509999999999998,
+        "end": 18.805,
+        "rawStart": 17.62,
+        "rawEnd": 19.38,
+        "protectedStart": 17.7,
+        "protectedEnd": 18.73,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " อยากไปเดทกับผมมั้ย",
         "confidence": 0.9951598876714707,
         "candidates": [
@@ -151,13 +248,27 @@
             "exact": true,
             "segmentIndex": 1
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.3642482589610686,
+          "end": 0.4728773558560558
+        },
+        "warnings": []
       },
       "english": {
         "audio": "/lessons/drafts/movie-invitation/audio/draft-movie-invitation-4-en.m4a",
         "status": "matched",
-        "start": 19.38,
-        "end": 21.81,
+        "start": 19.915,
+        "end": 22,
+        "rawStart": 19.38,
+        "rawEnd": 21.56,
+        "protectedStart": 20.18,
+        "protectedEnd": 21.81,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " Wanna go on a date with me?",
         "confidence": 0.9879663157463073,
         "candidates": [
@@ -169,7 +280,16 @@
             "exact": true,
             "segmentIndex": 1
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.3526223931011406,
+          "end": 0.3176667619150635
+        },
+        "warnings": []
       },
       "pairStatus": "complete"
     }

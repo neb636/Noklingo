@@ -3,7 +3,8 @@
   "sourceVideo": "/lessons/drafts/encouragement/intro.mp4",
   "sourceHash": "c37ef63e2427f5385e41e9541dc9743c8608e5c2062d1ac0307772259afe0e5d",
   "model": "large-v3",
-  "generatedAt": "2026-08-27T23:44:32.904Z",
+  "generatedAt": "2026-08-29T08:26:53.861Z",
+  "algorithmFingerprint": "a94210fc1c3198f8",
   "clips": [
     {
       "cueCardId": "draft-encouragement-1",
@@ -12,8 +13,13 @@
       "thai": {
         "audio": "/lessons/drafts/encouragement/audio/draft-encouragement-1-th.m4a",
         "status": "matched",
-        "start": 3.35,
-        "end": 5.64,
+        "start": 3.415,
+        "end": 5.795,
+        "rawStart": 3.5,
+        "rawEnd": 5.64,
+        "protectedStart": 3.5,
+        "protectedEnd": 5.64,
+        "envelopeMethod": "whisper",
         "transcriptMatch": "อยู่ด้วยกันไปนานๆนะ",
         "confidence": 0.9920666067416851,
         "candidates": [
@@ -25,13 +31,30 @@
             "exact": true,
             "segmentIndex": 1
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.7762088776223356,
+          "end": 0.6741114353521209
+        },
+        "warnings": [
+          "overlapping-speech-envelopes",
+          "unrefined-whisper-envelope"
         ]
       },
       "english": {
         "audio": "/lessons/drafts/encouragement/audio/draft-encouragement-1-en.m4a",
         "status": "matched",
-        "start": 5.64,
-        "end": 8.69,
+        "start": 3.925,
+        "end": 8.684999999999999,
+        "rawStart": 5.64,
+        "rawEnd": 8.44,
+        "protectedStart": 4,
+        "protectedEnd": 8.48,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " Let’s stay together for a long time",
         "confidence": 0.960592754067887,
         "candidates": [
@@ -43,6 +66,17 @@
             "exact": true,
             "segmentIndex": 1
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.44255011361419605,
+          "end": 0.3839283909802707
+        },
+        "warnings": [
+          "overlapping-speech-envelopes"
         ]
       },
       "pairStatus": "complete"
@@ -54,8 +88,13 @@
       "thai": {
         "audio": "/lessons/drafts/encouragement/audio/draft-encouragement-2-th.m4a",
         "status": "matched",
-        "start": 8.85,
-        "end": 9.66,
+        "start": 8.955,
+        "end": 10.02,
+        "rawStart": 9,
+        "rawEnd": 9.66,
+        "protectedStart": 9.09,
+        "protectedEnd": 9.85,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " สู้ๆนะ",
         "confidence": 0.9496183739509434,
         "candidates": [
@@ -67,13 +106,27 @@
             "exact": true,
             "segmentIndex": 1
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.9125999900975432,
+          "end": 0.3171943357481008
+        },
+        "warnings": []
       },
       "english": {
         "audio": "/lessons/drafts/encouragement/audio/draft-encouragement-2-en.m4a",
         "status": "matched",
-        "start": 9.66,
-        "end": 11.13,
+        "start": 9.985,
+        "end": 10.469999999999999,
+        "rawStart": 9.66,
+        "rawEnd": 10.88,
+        "protectedStart": 10.05,
+        "protectedEnd": 10.31,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " Keep going!",
         "confidence": 0.9655664157867432,
         "candidates": [
@@ -85,7 +138,16 @@
             "exact": true,
             "segmentIndex": 1
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.3171943357481008,
+          "end": 0.9575210054477764
+        },
+        "warnings": []
       },
       "pairStatus": "complete"
     },
@@ -96,8 +158,13 @@
       "thai": {
         "audio": "/lessons/drafts/encouragement/audio/draft-encouragement-3-th.m4a",
         "status": "matched",
-        "start": 11.14,
-        "end": 12.74,
+        "start": 11.04,
+        "end": 13.115,
+        "rawStart": 11.18,
+        "rawEnd": 12.74,
+        "protectedStart": 11.18,
+        "protectedEnd": 12.74,
+        "envelopeMethod": "whisper",
         "transcriptMatch": "อยากได้อะไรมั้ย",
         "confidence": 0.9729998338036239,
         "candidates": [
@@ -109,13 +176,30 @@
             "exact": true,
             "segmentIndex": 2
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.20770406487394844,
+          "end": 0.661329278977827
+        },
+        "warnings": [
+          "overlapping-speech-envelopes",
+          "unrefined-whisper-envelope"
         ]
       },
       "english": {
         "audio": "/lessons/drafts/encouragement/audio/draft-encouragement-3-en.m4a",
         "status": "matched",
-        "start": 12.74,
-        "end": 14.825,
+        "start": 11.365,
+        "end": 15.344999999999999,
+        "rawStart": 12.74,
+        "rawEnd": 14.8,
+        "protectedStart": 11.42,
+        "protectedEnd": 15.08,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " Is there anything you want?",
         "confidence": 0.9764790191054344,
         "candidates": [
@@ -127,6 +211,17 @@
             "exact": true,
             "segmentIndex": 2
           }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.5999556473186168,
+          "end": 0.3082185573174196
+        },
+        "warnings": [
+          "overlapping-speech-envelopes"
         ]
       },
       "pairStatus": "complete"
@@ -138,8 +233,13 @@
       "thai": {
         "audio": "/lessons/drafts/encouragement/audio/draft-encouragement-4-th.m4a",
         "status": "matched",
-        "start": 14.87,
-        "end": 16.64,
+        "start": 15.344999999999999,
+        "end": 17.13,
+        "rawStart": 15.02,
+        "rawEnd": 16.64,
+        "protectedStart": 15.51,
+        "protectedEnd": 16.79,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " เดี๋ยวโทรหานะ",
         "confidence": 0.9919302695447748,
         "candidates": [
@@ -151,13 +251,27 @@
             "exact": true,
             "segmentIndex": 2
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.3028927619705952,
+          "end": 0.30381471329193643
+        },
+        "warnings": []
       },
       "english": {
         "audio": "/lessons/drafts/encouragement/audio/draft-encouragement-4-en.m4a",
         "status": "matched",
-        "start": 16.64,
-        "end": 18.49,
+        "start": 17.155,
+        "end": 18.08,
+        "rawStart": 16.64,
+        "rawEnd": 18.24,
+        "protectedStart": 17.37,
+        "protectedEnd": 17.99,
+        "envelopeMethod": "energy-island",
         "transcriptMatch": " I’ll call you soon",
         "confidence": 0.9794103283435106,
         "candidates": [
@@ -169,7 +283,16 @@
             "exact": true,
             "segmentIndex": 2
           }
-        ]
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.29054238404672206,
+          "end": 0.32011189554611463
+        },
+        "warnings": []
       },
       "pairStatus": "complete"
     }

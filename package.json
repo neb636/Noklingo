@@ -20,6 +20,7 @@
     "lesson:scaffold-all": "node --import tsx scripts/scaffold-lesson-intake.ts",
     "pronunciation:setup": "zsh scripts/setup-pronunciation.sh",
     "pronunciation:generate": "node --import tsx scripts/generate-pronunciation.ts",
+    "pronunciation:review": "node --import tsx scripts/review-pronunciation.ts",
     "pronunciation:migrate": "node --import tsx scripts/migrate-dual-audio.ts",
     "check:release": "npm run validate:curriculum && npm run typecheck && npm run lint && npm run build",
     "check": "npm run validate:curriculum && npm run typecheck && npm run lint && npm run test && npm run build"

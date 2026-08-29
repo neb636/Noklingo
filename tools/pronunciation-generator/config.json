@@ -6,5 +6,18 @@
   "maximumClipDurationMs": 5500,
   "confidenceThreshold": 0.84,
   "ambiguityMargin": 0.08,
-  "maximumPairDistanceSeconds": 5
+  "maximumPairDistanceSeconds": 5,
+  "frameDurationMs": 10,
+  "boundarySearchBeforeMs": 350,
+  "boundarySearchAfterMs": 450,
+  "protectivePaddingBeforeMs": 100,
+  "protectivePaddingAfterMs": 140,
+  "quietRunMs": 40,
+  "quietThresholdDbAboveNoise": 6,
+  "fadeMs": 8,
+  "speechThresholdDbAboveNoise": 10,
+  "speechIslandMergeGapMs": 180,
+  "minimumSpeechIslandMs": 60,
+  "speechIslandSearchMs": 1000,
+  "minimumSpeechIslandScore": 0.2
 }

@@ -214,8 +214,9 @@
       "order": 8,
       "topicEmoji": "🌍",
       "title": "Countries in Thai",
-      "objective": "Draft plan — Recognize a selection of country names in Thai.",
-      "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
+      "objective": "Watch the country-name explanation and notice the Thai patterns in context.",
+      "description": "A standalone video class whose examples do not have complete Thai and English pronunciation pairs.",
+      "activityMode": "video-only",
       "contentStatus": "draft",
       "source": {
         "label": "Learn Thai IRL · supplied local Reel",
@@ -230,11 +231,7 @@
         "availability": "available",
         "fallbackMessage": "This local draft clip could not be played on this device."
       },
-      "cueCardIds": [
-        "draft-country-names-1",
-        "draft-country-names-2",
-        "draft-country-names-3"
-      ],
+      "cueCardIds": [],
       "quizBank": []
     },
     {
@@ -393,8 +390,9 @@
       "order": 14,
       "topicEmoji": "☕",
       "title": "Ordering coffee",
-      "objective": "Draft plan — Follow a real café visit and identify the ordering pattern.",
-      "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
+      "objective": "Follow a real café visit and notice how an order unfolds naturally.",
+      "description": "A standalone video class with general café context and no attached homework.",
+      "activityMode": "video-only",
       "contentStatus": "draft",
       "source": {
         "label": "Learn Thai IRL · supplied local Reel",
@@ -409,10 +407,7 @@
         "availability": "available",
         "fallbackMessage": "This local draft clip could not be played on this device."
       },
-      "cueCardIds": [
-        "draft-coffee-order-1",
-        "draft-coffee-order-2"
-      ],
+      "cueCardIds": [],
       "quizBank": []
     },
     {

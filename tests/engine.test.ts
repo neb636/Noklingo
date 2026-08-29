@@ -26,6 +26,18 @@ describe("lesson collection", () => {
     expect(isSessionCompatible(session)).toBe(false);
     expect(reconcileSnapshot({ ...defaultSnapshot, activeSession: session }).activeSession).toBeNull();
   });
+
+  it("accepts a verified video-only class and rejects attached homework", () => {
+    const lesson = VideoLessonSchema.parse({
+      id: "video-class", order: 1, topicEmoji: "🎥", title: "Video class",
+      objective: "Watch a real conversation.", description: "A class without homework.",
+      activityMode: "video-only", cueCardIds: [], quizBank: [], contentStatus: "verified",
+      media: { videoSrc: "/lessons/video-class/intro.mp4", posterSrc: "/lessons/video-class/poster.jpg", durationSeconds: 30, durationStatus: "confirmed", availability: "available", fallbackMessage: "Unavailable." },
+      source: { label: "Authorized test source", url: "https://example.com/source", permissionStatus: "authorized" },
+    });
+    expect(validateCurriculum([lesson], [])).toEqual([]);
+    expect(validateCurriculum([{ ...lesson, cueCardIds: ["unexpected-card"] }], []).some((issue) => issue.message.includes("Video-only lessons cannot include"))).toBe(true);
+  });
 });
 
 describe("learning engine primitives", () => {
