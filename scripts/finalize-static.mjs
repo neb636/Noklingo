@@ -11,15 +11,16 @@ import {
 import { extname, join, relative, sep } from "node:path";
 
 const output = join(process.cwd(), "dist", "client");
-const coreRoutes = ["welcome", "today", "study", "results", "library", "settings"];
+const coreRoutes = ["welcome", "today", "study", "results", "library", "library-2", "settings"];
 const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH ?? "");
 const baseSegments = basePath ? basePath.slice(1).split("/") : [];
 const viewportTag = '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" data-next-head="" />';
 const compressedExtensions = new Set([".br", ".gz", ".zst", ".map"]);
 
 await normalizeVinextAssetLayout();
-const lessonRoutes = await discoverLessonRoutes();
-const routes = [...coreRoutes, ...lessonRoutes];
+const lessonRoutes = await discoverLessonRoutes("lessons", "lesson");
+const library2LessonRoutes = await discoverLessonRoutes("library-2", "Library 2 lesson");
+const routes = [...coreRoutes, ...lessonRoutes, ...library2LessonRoutes];
 
 for (const route of routes) {
   const source = join(output, `${route}.html`);
@@ -104,17 +105,17 @@ function normalizeBasePath(value) {
   return `/${segments.join("/")}`;
 }
 
-async function discoverLessonRoutes() {
-  const lessonsDirectory = join(output, "lessons");
+async function discoverLessonRoutes(routeDirectory, routeLabel) {
+  const lessonsDirectory = join(output, routeDirectory);
   if (!(await exists(lessonsDirectory))) {
-    throw new Error("Static build emitted no lesson route directory.");
+    throw new Error(`Static build emitted no ${routeLabel} route directory.`);
   }
   const entries = await readdir(lessonsDirectory, { withFileTypes: true });
   const discovered = entries
     .filter((entry) => entry.isFile() && entry.name.endsWith(".html"))
-    .map((entry) => `lessons/${entry.name.slice(0, -".html".length)}`)
+    .map((entry) => `${routeDirectory}/${entry.name.slice(0, -".html".length)}`)
     .sort();
-  if (!discovered.length) throw new Error("Static build emitted no per-lesson HTML routes.");
+  if (!discovered.length) throw new Error(`Static build emitted no per-${routeLabel} HTML routes.`);
   return discovered;
 }
 

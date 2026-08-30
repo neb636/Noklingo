@@ -9,8 +9,9 @@ import "@/styles/globals.css";
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const lessonRoute = router.pathname === "/lessons/[lessonId]";
-  const focusedRoute = router.pathname === "/welcome" || router.pathname === "/study" || lessonRoute;
-  const focusedRouteName = lessonRoute ? "lesson" : router.pathname.slice(1);
+  const library2LessonRoute = router.pathname === "/library-2/[lessonId]";
+  const focusedRoute = router.pathname === "/welcome" || router.pathname === "/study" || lessonRoute || library2LessonRoute;
+  const focusedRouteName = lessonRoute ? "lesson" : library2LessonRoute ? "library-2-lesson" : router.pathname.slice(1);
 
   return (
     <>

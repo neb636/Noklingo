@@ -13,11 +13,13 @@ export function CueCardCarousel({
   cards,
   onBack,
   onComplete,
+  completeLabel = "Start practice quiz",
 }: {
   lesson: VideoLesson;
   cards: CueCard[];
   onBack: () => void;
   onComplete: () => void;
+  completeLabel?: string;
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [flippedId, setFlippedId] = useState<string>();
@@ -138,7 +140,7 @@ export function CueCardCarousel({
       </div>
 
       <div className="cue-cards-footer">
-        {activeIndex === cards.length - 1 ? <button type="button" className="gradient-button" onClick={onComplete}><Sparkles size={18} /> Start practice quiz</button> : <button type="button" className="black-button" onClick={() => scrollTo(activeIndex + 1)}>Next card <ArrowRight size={19} /></button>}
+        {activeIndex === cards.length - 1 ? <button type="button" className="gradient-button" onClick={onComplete}><Sparkles size={18} /> {completeLabel}</button> : <button type="button" className="black-button" onClick={() => scrollTo(activeIndex + 1)}>Next card <ArrowRight size={19} /></button>}
       </div>
     </section>
   );

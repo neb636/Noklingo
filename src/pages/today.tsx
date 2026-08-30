@@ -15,8 +15,8 @@ import { snapshotFromState, useStudyStore } from "@/state/study-store";
 export default function TodayPage() {
   const state = useStudyStore();
   const clientReady = useClientReady();
-  const today = localDateKey();
-  const action = state.hydrated ? selectTodayAction(snapshotFromState(state), today) : undefined;
+  const today = clientReady ? localDateKey() : undefined;
+  const action = state.hydrated && today ? selectTodayAction(snapshotFromState(state), today) : undefined;
   const dateLabel = clientReady
     ? new Intl.DateTimeFormat(undefined, {
       weekday: "long",
