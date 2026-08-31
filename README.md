@@ -12,11 +12,11 @@ path. The interface presents one relevant action at a time.
 
 ## Current curriculum state
 
-The repository contains 23 locally bundled Reel plans in an editorially useful
+The repository contains 34 locally bundled Reel plans in an editorially useful
 order. Every draft has a same-origin MP4, poster, confirmed duration, and
 screenshot-derived cue cards.
 
-All 23 remain explicitly `draft`. Draft previews open with a compact lesson
+All 34 remain explicitly `draft`. Draft previews open with a compact lesson
 plan, use an immersive video player, move through swipeable cue cards, and end
 with a visual practice quiz. That practice stays local and does not alter the
 mastery record. An Instagram URL is attribution, not evidence that the language

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { firstLesson } from "../src/domain/seed";
+import { authoringLessons, firstLesson, lessons } from "../src/domain/seed";
 import { diagnosticQuestionCount, masteryQuestionCount, minimumQuestionBankSize, passesAdaptiveMastery } from "../src/domain/lesson-sizing";
 import { AppSnapshotSchema, CueCardSchema, VideoLessonSchema, type SessionAnswer } from "../src/domain/schemas";
 import { isSessionCompatible, reconcileSnapshot, validateCurriculum } from "../src/domain/curriculum-validation";
@@ -13,6 +13,10 @@ describe("lesson collection", () => {
     expect(validateCurriculum()).toEqual([]);
     expect(firstLesson.contentStatus).toBe("draft");
     expect(firstLesson.cueCardIds).toHaveLength(5);
+  });
+
+  it("publishes every authored lesson to the learner-facing library", () => {
+    expect(lessons.map((lesson) => lesson.id)).toEqual(authoringLessons.map((lesson) => lesson.id));
   });
 
   it("offers the lesson library while no scored lessons exist", () => {
