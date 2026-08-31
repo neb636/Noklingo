@@ -58,6 +58,9 @@ const precachePaths = [
   "./noklingo-icon-192.png",
   "./noklingo-icon-512.png",
   "./noklingo-apple-touch-icon.png",
+  "./lessons/audio/quiz-feedback/correct.mp3",
+  "./lessons/audio/quiz-feedback/incorrect.mp3",
+  "./lessons/audio/quiz-feedback/perfect.mp3",
   ...staticFiles.map((filePath) => `./${filePath}`),
 ];
 

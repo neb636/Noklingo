@@ -30,16 +30,16 @@ beforeEach(() => {
 afterEach(() => { cleanup(); vi.useRealTimers(); });
 
 describe("dual-language audio playback", () => {
-  it("plays Thai, waits 750 ms after it ends, then plays English", () => {
+  it("plays English, waits 750 ms after it ends, then plays Thai", () => {
     render(<ConceptAudioButton card={card} />);
     fireEvent.click(screen.getByRole("button"));
     expect(howls).toHaveLength(1);
-    expect(howls[0].options.src).toEqual([card.thaiAudioSrc]);
+    expect(howls[0].options.src).toEqual([card.englishAudioSrc]);
     act(() => { (howls[0].options.onend as () => void)(); vi.advanceTimersByTime(749); });
     expect(howls).toHaveLength(1);
     act(() => vi.advanceTimersByTime(1));
     expect(howls).toHaveLength(2);
-    expect(howls[1].options.src).toEqual([card.englishAudioSrc]);
+    expect(howls[1].options.src).toEqual([card.thaiAudioSrc]);
   });
 
   it("autoplays both languages for a display card", () => {
@@ -47,11 +47,11 @@ describe("dual-language audio playback", () => {
 
     act(() => vi.advanceTimersByTime(1000));
     expect(howls).toHaveLength(1);
-    expect(howls[0].options.src).toEqual([card.thaiAudioSrc]);
+    expect(howls[0].options.src).toEqual([card.englishAudioSrc]);
 
     act(() => { (howls[0].options.onend as () => void)(); vi.advanceTimersByTime(750); });
     expect(howls).toHaveLength(2);
-    expect(howls[1].options.src).toEqual([card.englishAudioSrc]);
+    expect(howls[1].options.src).toEqual([card.thaiAudioSrc]);
   });
 
   it("never loads English for Thai-only quiz playback", () => {

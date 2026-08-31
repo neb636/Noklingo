@@ -32,7 +32,7 @@ describe("cue-card modes", () => {
     expect(screen.queryByRole("button", { name: /see meaning|back to thai/i })).not.toBeInTheDocument();
     fireEvent.click(screen.getByText(card.thai));
     expect(learningCard).not.toHaveClass("is-flipped");
-    expect(screen.getByRole("button", { name: new RegExp(`play ${card.thai} then ${card.naturalMeaning}`, "i") })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: new RegExp(`play ${card.naturalMeaning} then ${card.thai}`, "i") })).toBeInTheDocument();
   });
 
   it("flips review cards from the card surface without making the audio control flip the card", () => {

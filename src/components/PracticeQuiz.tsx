@@ -14,6 +14,7 @@ export function PracticeQuiz({
   allCards,
   seed,
   onClose,
+  onAnswerChecked,
   onComplete,
 }: {
   lesson: VideoLesson;
@@ -21,6 +22,7 @@ export function PracticeQuiz({
   allCards: CueCard[];
   seed: string;
   onClose: () => void;
+  onAnswerChecked?: (correct: boolean) => void;
   onComplete: (score: number, total: number) => void;
 }) {
   const questions = useMemo(() => buildPracticeQuiz(lessonCards, allCards, seed), [lessonCards, allCards, seed]);
@@ -28,6 +30,7 @@ export function PracticeQuiz({
   const [selectedId, setSelectedId] = useState<string>();
   const [checked, setChecked] = useState(false);
   const [score, setScore] = useState(0);
+  const answerCommittedRef = useRef(false);
   const promptRef = useRef<HTMLDivElement>(null);
   const settings = useStudyStore((state) => state.settings);
   const question = questions[questionIndex];
@@ -43,9 +46,12 @@ export function PracticeQuiz({
   }
 
   function checkAnswer() {
-    if (!selectedId || checked) return;
-    if (selectedId === question.correctChoiceId) setScore((value) => value + 1);
+    if (!selectedId || checked || answerCommittedRef.current) return;
+    answerCommittedRef.current = true;
+    const correct = selectedId === question.correctChoiceId;
+    if (correct) setScore((value) => value + 1);
     setChecked(true);
+    onAnswerChecked?.(correct);
   }
 
   function continueQuiz() {
@@ -57,6 +63,7 @@ export function PracticeQuiz({
     setQuestionIndex((value) => value + 1);
     setSelectedId(undefined);
     setChecked(false);
+    answerCommittedRef.current = false;
   }
 
   return (
