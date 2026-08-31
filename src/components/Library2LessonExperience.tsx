@@ -92,6 +92,7 @@ export function Library2LessonExperience({ initialLessonId }: { initialLessonId:
     return <CueCardCarousel
       lesson={activeLesson}
       cards={cards}
+      mode="display"
       onBack={() => setStage("video")}
       onComplete={() => setStage("video")}
       completeLabel="Back to video"

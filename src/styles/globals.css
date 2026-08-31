@@ -580,12 +580,23 @@ h2 { font-size: clamp(1.45rem,2.4vw,2.05rem); }
 .cue-lesson-label b { color:var(--ink);font-size:.72rem; }
 /* Keep the track's percentage basis definite; Safari can shrink-wrap width:min(100%, ...) flex items. */
 .cue-carousel-track { width:100%;max-width:760px;min-width:0;align-self:center;margin:auto;display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:37px;padding:18px 37px 22px;outline:0;overscroll-behavior-inline:contain;scrollbar-width:none; }
+.cue-carousel-track--display { max-width:640px; }
 .cue-carousel-track:focus-visible { outline:3px solid color-mix(in srgb,var(--accent) 62%,transparent);outline-offset:-3px;border-radius:12px; }
 .cue-carousel-track::-webkit-scrollbar { display:none; }
 .learning-card { flex:0 0 calc(100% - 74px);min-width:0;max-width:540px;min-height:min(62dvh,620px);scroll-snap-align:center;perspective:1200px; }
 .learning-card-inner { position:relative;width:100%;height:100%;min-height:inherit;transform-style:preserve-3d;transition:transform .45s cubic-bezier(.2,.75,.25,1); }
 .learning-card.is-flipped .learning-card-inner { transform:rotateY(180deg); }
 .learning-card-face { position:absolute;inset:0;-webkit-backface-visibility:hidden;backface-visibility:hidden;background:var(--card);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer; }
+.learning-card.learning-card--display { flex-basis:calc(100% - 34px);max-width:500px;min-height:clamp(440px,58dvh,540px);transition:opacity .2s ease,transform .2s ease; }
+.learning-card--display:not(.is-active) { opacity:.48;transform:scale(.965); }
+.learning-card--display .learning-card-face { cursor:default;padding:clamp(24px,5vw,42px); }
+.learning-card--display .cue-emoji { font-size:clamp(3.4rem,11vw,5.4rem);line-height:1;margin-bottom:18px; }
+.learning-card--display h2 { font-size:clamp(1.8rem,5vw,2.5rem);line-height:1.08;margin:0 0 10px; }
+.learning-card--display .cue-card-thai { font-size:clamp(2.3rem,6vw,3.25rem);line-height:1.12;margin:0; }
+.learning-card--display .cue-card-romanization { font-size:clamp(1.4rem,3.5vw,2rem);line-height:1.15;margin-top:8px; }
+.learning-card--display .cue-card-listen { margin-top:30px; }
+.learning-card--display .cue-card-listen .audio-button { min-height:44px;padding:10px 15px;border:1px solid var(--line);border-radius:999px;background:color-mix(in srgb,var(--paper) 72%,var(--card));color:var(--muted);font-size:.78rem;font-weight:700;transition:border-color .15s ease,color .15s ease,background .15s ease; }
+.learning-card--display .cue-card-listen .audio-button:hover { border-color:color-mix(in srgb,var(--accent) 36%,var(--line));background:var(--card);color:var(--ink); }
 .learning-card-back { transform:rotateY(180deg); }
 .cue-emoji { display:block;font-size:clamp(4.5rem,18vw,7.5rem);line-height:1;margin-bottom:30px;filter:drop-shadow(0 7px 12px rgba(25,30,45,.08)); }
 .cue-emoji.small { font-size:3rem;margin-bottom:16px; }

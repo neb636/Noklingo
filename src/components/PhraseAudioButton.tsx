@@ -128,9 +128,9 @@ export function ThaiAudioButton({ card, compact = false, autoPlayDelayMs, autoPl
   return <LocalAudioButton src={thaiSrc} label={withPreferredParticle(card.thai, particle)} compact={compact} autoPlayDelayMs={autoPlayDelayMs} autoPlayKey={autoPlayKey} displayLabel={displayLabel} />;
 }
 
-export function ConceptAudioButton({ card, compact = false, displayLabel }: { card: CueCard; compact?: boolean; displayLabel?: string }) {
+export function ConceptAudioButton({ card, compact = false, autoPlayDelayMs, autoPlayKey, displayLabel }: { card: CueCard; compact?: boolean; autoPlayDelayMs?: number; autoPlayKey?: string; displayLabel?: string }) {
   const particle = useStudyStore((state) => state.settings.politeParticle);
   const assets = pronunciationAudioAssets(card);
   const sources = assets.thaiSrc ? [assets.thaiSrc, assets.englishSrc].filter((value): value is string => Boolean(value)) : [];
-  return <AudioSequenceButton sources={sources} label={`${withPreferredParticle(card.thai, particle)} then ${card.naturalMeaning}`} compact={compact} pauseMs={CUE_CARD_TRANSLATION_PAUSE_MS} displayLabel={displayLabel} />;
+  return <AudioSequenceButton sources={sources} label={`${withPreferredParticle(card.thai, particle)} then ${card.naturalMeaning}`} compact={compact} pauseMs={CUE_CARD_TRANSLATION_PAUSE_MS} autoPlayDelayMs={autoPlayDelayMs} autoPlayKey={autoPlayKey} displayLabel={displayLabel} />;
 }

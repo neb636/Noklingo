@@ -6,17 +6,21 @@ import type { CueCard, VideoLesson } from "@/domain/schemas";
 import { withPreferredParticle } from "@/lib/language-display";
 import { pronunciationAudioAssets } from "@/lib/pronunciation-audio";
 import { useStudyStore } from "@/state/study-store";
-import { ThaiAudioButton } from "./PhraseAudioButton";
+import { ConceptAudioButton, ThaiAudioButton } from "./PhraseAudioButton";
+
+export type CueCardMode = "display" | "review";
 
 export function CueCardCarousel({
   lesson,
   cards,
+  mode,
   onBack,
   onComplete,
   completeLabel = "Start practice quiz",
 }: {
   lesson: VideoLesson;
   cards: CueCard[];
+  mode: CueCardMode;
   onBack: () => void;
   onComplete: () => void;
   completeLabel?: string;
@@ -92,41 +96,51 @@ export function CueCardCarousel({
       <StudyTopBar title="Cue cards" onBack={onBack} action={<span className="lesson-counter">{activeIndex + 1} / {cards.length}</span>} />
       <div className="cue-lesson-label"><span>Lesson {lesson.order}</span><b>{lesson.topicEmoji} {lesson.title}</b></div>
 
-      <div className="cue-carousel-track" ref={trackRef} onScroll={syncActiveCard} tabIndex={0} aria-label={`${lesson.title} cue cards`}>
+      <div className={`cue-carousel-track cue-carousel-track--${mode}`} ref={trackRef} onScroll={syncActiveCard} tabIndex={0} aria-label={`${lesson.title} cue cards`}>
         {cards.map((card, index) => {
           const hasAudio = Boolean(pronunciationAudioAssets(card).thaiSrc);
-          const flipped = flippedId === card.id;
+          const reviewMode = mode === "review";
+          const flipped = reviewMode && flippedId === card.id;
+          const thai = withPreferredParticle(card.thai, settings.politeParticle);
           return (
             <article
               key={card.id}
               ref={(node) => { cardRefs.current[index] = node; }}
-              className={`learning-card${flipped ? " is-flipped" : ""}`}
-              aria-label={`${flipped ? card.naturalMeaning : withPreferredParticle(card.thai, settings.politeParticle)}, card ${index + 1} of ${cards.length}`}
+              className={`learning-card learning-card--${mode}${index === activeIndex ? " is-active" : ""}${flipped ? " is-flipped" : ""}`}
+              aria-label={`${reviewMode ? (flipped ? card.naturalMeaning : thai) : `${thai}, ${card.naturalMeaning}`}, card ${index + 1} of ${cards.length}`}
             >
               <div className="learning-card-inner">
-                <div className="learning-card-face learning-card-front" aria-hidden={flipped} inert={flipped} onClick={(event) => flipFromCardSurface(event, index, card.id)}>
-                  {settings.showThaiScript && <p className="thai cue-card-thai" lang="th">{withPreferredParticle(card.thai, settings.politeParticle)}</p>}
-                  {settings.showRomanization && <p className="cue-card-romanization">{withPreferredParticle(card.romanization, settings.politeParticle)}</p>}
-                  {hasAudio ? <div className="cue-card-listen"><ThaiAudioButton card={card} autoPlayDelayMs={index === activeIndex ? 1000 : undefined} autoPlayKey={card.id} displayLabel="Listen again" /></div> : <div className="cue-card-audio-unavailable"><VolumeX size={17} /><span>Audio coming soon</span></div>}
-                  <button
-                    ref={(node) => { frontFlipRefs.current[index] = node; }}
-                    type="button"
-                    className="flip-card-button"
-                    onClick={() => flipCard(index, card.id)}
-                    aria-label={`See meaning for ${withPreferredParticle(card.thai, settings.politeParticle)}`}
-                  ><RotateCcw size={30} aria-hidden="true" /></button>
-                </div>
-                <div className="learning-card-face learning-card-back" aria-hidden={!flipped} inert={!flipped} onClick={(event) => flipFromCardSurface(event, index)}>
+                {reviewMode ? <>
+                  <div className="learning-card-face learning-card-front" aria-hidden={flipped} inert={flipped} onClick={(event) => flipFromCardSurface(event, index, card.id)}>
+                    {settings.showThaiScript && <p className="thai cue-card-thai" lang="th">{thai}</p>}
+                    {settings.showRomanization && <p className="cue-card-romanization">{withPreferredParticle(card.romanization, settings.politeParticle)}</p>}
+                    {hasAudio ? <div className="cue-card-listen"><ThaiAudioButton card={card} autoPlayDelayMs={index === activeIndex ? 1000 : undefined} autoPlayKey={card.id} displayLabel="Listen again" /></div> : <div className="cue-card-audio-unavailable"><VolumeX size={17} /><span>Audio coming soon</span></div>}
+                    <button
+                      ref={(node) => { frontFlipRefs.current[index] = node; }}
+                      type="button"
+                      className="flip-card-button"
+                      onClick={() => flipCard(index, card.id)}
+                      aria-label={`See meaning for ${thai}`}
+                    ><RotateCcw size={30} aria-hidden="true" /></button>
+                  </div>
+                  <div className="learning-card-face learning-card-back" aria-hidden={!flipped} inert={!flipped} onClick={(event) => flipFromCardSurface(event, index)}>
+                    <span className="cue-emoji" aria-hidden="true">{card.emoji}</span>
+                    <h2>{card.naturalMeaning}</h2>
+                    <button
+                      ref={(node) => { backFlipRefs.current[index] = node; }}
+                      type="button"
+                      className="flip-card-button"
+                      onClick={() => flipCard(index)}
+                      aria-label={`Back to Thai for ${card.naturalMeaning}`}
+                    ><RotateCcw size={30} aria-hidden="true" /></button>
+                  </div>
+                </> : <div className="learning-card-face learning-card-front">
                   <span className="cue-emoji" aria-hidden="true">{card.emoji}</span>
                   <h2>{card.naturalMeaning}</h2>
-                  <button
-                    ref={(node) => { backFlipRefs.current[index] = node; }}
-                    type="button"
-                    className="flip-card-button"
-                    onClick={() => flipCard(index)}
-                    aria-label={`Back to Thai for ${card.naturalMeaning}`}
-                  ><RotateCcw size={30} aria-hidden="true" /></button>
-                </div>
+                  {settings.showThaiScript && <p className="thai cue-card-thai" lang="th">{thai}</p>}
+                  {settings.showRomanization && <p className="cue-card-romanization">{withPreferredParticle(card.romanization, settings.politeParticle)}</p>}
+                  {hasAudio ? <div className="cue-card-listen"><ConceptAudioButton card={card} autoPlayDelayMs={index === activeIndex ? 1000 : undefined} autoPlayKey={card.id} displayLabel="Listen again" /></div> : <div className="cue-card-audio-unavailable"><VolumeX size={17} /><span>Audio coming soon</span></div>}
+                </div>}
               </div>
             </article>
           );

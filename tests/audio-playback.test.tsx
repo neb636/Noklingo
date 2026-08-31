@@ -42,6 +42,18 @@ describe("dual-language audio playback", () => {
     expect(howls[1].options.src).toEqual([card.englishAudioSrc]);
   });
 
+  it("autoplays both languages for a display card", () => {
+    render(<ConceptAudioButton card={card} autoPlayDelayMs={1000} autoPlayKey={card.id} />);
+
+    act(() => vi.advanceTimersByTime(1000));
+    expect(howls).toHaveLength(1);
+    expect(howls[0].options.src).toEqual([card.thaiAudioSrc]);
+
+    act(() => { (howls[0].options.onend as () => void)(); vi.advanceTimersByTime(750); });
+    expect(howls).toHaveLength(2);
+    expect(howls[1].options.src).toEqual([card.englishAudioSrc]);
+  });
+
   it("never loads English for Thai-only quiz playback", () => {
     render(<ThaiAudioButton card={card} />);
     fireEvent.click(screen.getByRole("button"));

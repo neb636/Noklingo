@@ -19,11 +19,24 @@ beforeEach(() => {
 
 afterEach(cleanup);
 
-describe("cue-card flipping", () => {
-  it("flips from the card surface without making the audio control flip the card", () => {
-    const lesson = lessons.find((item) => item.id === "common-verbs")!;
-    const card = cueCards.find((item) => item.lessonId === lesson.id)!;
-    const { container } = render(<CueCardCarousel lesson={lesson} cards={[card]} onBack={vi.fn()} onComplete={vi.fn()} />);
+describe("cue-card modes", () => {
+  const lesson = lessons.find((item) => item.id === "common-verbs")!;
+  const card = cueCards.find((item) => item.lessonId === lesson.id)!;
+
+  it("keeps display cards single-sided with both languages visible", () => {
+    const { container } = render(<CueCardCarousel lesson={lesson} cards={[card]} mode="display" onBack={vi.fn()} onComplete={vi.fn()} />);
+    const learningCard = container.querySelector(".learning-card")!;
+
+    expect(screen.getByRole("heading", { name: card.naturalMeaning })).toBeVisible();
+    expect(screen.getByText(card.thai)).toBeVisible();
+    expect(screen.queryByRole("button", { name: /see meaning|back to thai/i })).not.toBeInTheDocument();
+    fireEvent.click(screen.getByText(card.thai));
+    expect(learningCard).not.toHaveClass("is-flipped");
+    expect(screen.getByRole("button", { name: new RegExp(`play ${card.thai} then ${card.naturalMeaning}`, "i") })).toBeInTheDocument();
+  });
+
+  it("flips review cards from the card surface without making the audio control flip the card", () => {
+    const { container } = render(<CueCardCarousel lesson={lesson} cards={[card]} mode="review" onBack={vi.fn()} onComplete={vi.fn()} />);
     const learningCard = container.querySelector(".learning-card")!;
     const front = container.querySelector(".learning-card-front")!;
     const back = container.querySelector(".learning-card-back")!;

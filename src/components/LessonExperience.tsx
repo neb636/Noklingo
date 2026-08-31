@@ -52,7 +52,7 @@ export function LessonExperience({ lesson }: { lesson: VideoLesson }) {
           )}
         />
       )}
-      {!videoOnly && stage === "cards" && <CueCardCarousel lesson={lesson} cards={cards} onBack={() => setStage("overview")} onComplete={() => setStage("quiz")} />}
+      {!videoOnly && stage === "cards" && <CueCardCarousel lesson={lesson} cards={cards} mode="display" onBack={() => setStage("overview")} onComplete={() => setStage("quiz")} />}
       {!videoOnly && stage === "quiz" && <PracticeQuiz lesson={lesson} lessonCards={cards} allCards={cueCards} seed={`${lesson.id}:practice:${attempt}`} onClose={() => setStage("overview")} onComplete={(score, total) => { setResult({ score, total }); setStage("complete"); }} />}
       {stage === "complete" && <PracticeComplete lesson={lesson} score={result.score} total={result.total} onRetry={() => { setAttempt((value) => value + 1); setStage("quiz"); }} onCards={() => setStage("cards")} onLibrary={backToLibrary} />}
     </div>
