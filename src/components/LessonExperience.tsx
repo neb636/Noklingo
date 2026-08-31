@@ -6,6 +6,7 @@ import { ArrowRight, CheckCircle2, ExternalLink, Play, RotateCcw, Sparkles } fro
 import type { VideoLesson } from "@/domain/schemas";
 import { cueCards } from "@/domain/seed";
 import { assetPath } from "@/lib/asset-path";
+import { useQuizSounds } from "@/lib/use-quiz-sounds";
 import { CueCardCarousel, StudyTopBar } from "./CueCardCarousel";
 import { LessonVideoScreen, type LessonVideoScreenHandle } from "./LessonVideoScreen";
 import { PracticeQuiz } from "./PracticeQuiz";
@@ -16,6 +17,7 @@ export function LessonExperience({ lesson }: { lesson: VideoLesson }) {
   const [stage, setStage] = useState<LessonStage>("overview");
   const [attempt, setAttempt] = useState(1);
   const [result, setResult] = useState({ score: 0, total: 0 });
+  const quizSounds = useQuizSounds(stage === "quiz" || stage === "complete");
   const videoScreenRef = useRef<LessonVideoScreenHandle>(null);
   const cards = lesson.cueCardIds.map((id) => cueCards.find((card) => card.id === id)).filter((card): card is (typeof cueCards)[number] => Boolean(card));
   const videoOnly = lesson.activityMode === "video-only";
@@ -52,8 +54,8 @@ export function LessonExperience({ lesson }: { lesson: VideoLesson }) {
           )}
         />
       )}
-      {!videoOnly && stage === "cards" && <CueCardCarousel lesson={lesson} cards={cards} onBack={() => setStage("overview")} onComplete={() => setStage("quiz")} />}
-      {!videoOnly && stage === "quiz" && <PracticeQuiz lesson={lesson} lessonCards={cards} allCards={cueCards} seed={`${lesson.id}:practice:${attempt}`} onClose={() => setStage("overview")} onComplete={(score, total) => { setResult({ score, total }); setStage("complete"); }} />}
+      {!videoOnly && stage === "cards" && <CueCardCarousel lesson={lesson} cards={cards} mode="display" onBack={() => setStage("overview")} onComplete={() => setStage("quiz")} />}
+      {!videoOnly && stage === "quiz" && <PracticeQuiz lesson={lesson} lessonCards={cards} allCards={cueCards} seed={`${lesson.id}:practice:${attempt}`} onClose={() => setStage("overview")} onAnswerChecked={(correct) => quizSounds.play(correct ? "correct" : "incorrect")} onComplete={(score, total) => { if (total > 0 && score === total) quizSounds.play("perfect"); setResult({ score, total }); setStage("complete"); }} />}
       {stage === "complete" && <PracticeComplete lesson={lesson} score={result.score} total={result.total} onRetry={() => { setAttempt((value) => value + 1); setStage("quiz"); }} onCards={() => setStage("cards")} onLibrary={backToLibrary} />}
     </div>
   );

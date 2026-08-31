@@ -13,16 +13,19 @@ const reviewedCards = CueCardSchema.array().parse(reviewedPackages.cueCards);
 // a Map before the publication gate sees them. A reviewed package may replace
 // its matching draft plan only after the combined registry is known to be sane.
 const reviewedIds = new Set(reviewedLessons.map((lesson) => lesson.id));
-const combinedLessons: VideoLesson[] = [
+export const authoringLessons: VideoLesson[] = [
   ...draftLessons.filter((lesson) => !reviewedIds.has(lesson.id)),
   ...reviewedLessons,
 ].sort((a, b) => a.order - b.order || a.id.localeCompare(b.id));
 
-export const lessons = combinedLessons;
-export const cueCards: CueCard[] = [
+export const authoringCueCards: CueCard[] = [
   ...draftCards.filter((card) => !reviewedIds.has(card.lessonId)),
   ...reviewedCards,
 ];
+const visibleLessonIds = new Set(authoringLessons.filter((lesson) => lesson.visibility !== "hidden").map((lesson) => lesson.id));
+
+export const lessons = authoringLessons.filter((lesson) => visibleLessonIds.has(lesson.id));
+export const cueCards = authoringCueCards.filter((card) => visibleLessonIds.has(card.lessonId));
 export const curriculumIssues = validateCurriculum(lessons, cueCards);
 export const studyLessons = lessons.filter((lesson) => lessonIsReleaseReady(lesson, lessons, cueCards));
 export const firstLesson = studyLessons[0] ?? lessons[0];

@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { LoaderCircle, RotateCcw, Volume2, VolumeX } from "lucide-react";
 import { Howl } from "howler";
 import type { CueCard } from "@/domain/schemas";
+import { claimAudioChannel, releaseAudioChannel } from "@/lib/audio-channel";
 import { assetPath } from "@/lib/asset-path";
 import { CUE_CARD_TRANSLATION_PAUSE_MS } from "@/lib/audio-config";
 import { pronunciationAudioAssets } from "@/lib/pronunciation-audio";
@@ -11,7 +12,6 @@ import { useStudyStore } from "@/state/study-store";
 import { withPreferredParticle } from "@/lib/language-display";
 
 type AudioState = "idle" | "loading" | "playing" | "error";
-let activeAudio: { owner: symbol; stop: () => void } | undefined;
 
 function AudioSequenceButton({ sources, label, compact = false, pauseMs = 0, autoPlayDelayMs, autoPlayKey, displayLabel }: {
   sources: string[]; label: string; compact?: boolean; pauseMs?: number; autoPlayDelayMs?: number; autoPlayKey?: string; displayLabel?: string;
@@ -34,7 +34,7 @@ function AudioSequenceButton({ sources, label, compact = false, pauseMs = 0, aut
     autoplayRef.current = undefined;
     soundRef.current?.unload();
     soundRef.current = null;
-    if (activeAudio?.owner === ownerRef.current) activeAudio = undefined;
+    releaseAudioChannel(ownerRef.current);
     setAudioState(next);
   }, []);
 
@@ -47,10 +47,9 @@ function AudioSequenceButton({ sources, label, compact = false, pauseMs = 0, aut
       return;
     }
     if (!sourceKey || audioState === "loading" || audioState === "playing") return;
-    activeAudio?.stop();
     const playbackSources = sourceKey.split("\u0000");
     stop("loading");
-    activeAudio = { owner: ownerRef.current, stop: () => stop("idle") };
+    claimAudioChannel(ownerRef.current, () => stop("idle"));
     const playAt = (index: number) => {
       const sound = new Howl({
         src: [assetPath(playbackSources[index])],
@@ -128,9 +127,9 @@ export function ThaiAudioButton({ card, compact = false, autoPlayDelayMs, autoPl
   return <LocalAudioButton src={thaiSrc} label={withPreferredParticle(card.thai, particle)} compact={compact} autoPlayDelayMs={autoPlayDelayMs} autoPlayKey={autoPlayKey} displayLabel={displayLabel} />;
 }
 
-export function ConceptAudioButton({ card, compact = false, displayLabel }: { card: CueCard; compact?: boolean; displayLabel?: string }) {
+export function ConceptAudioButton({ card, compact = false, autoPlayDelayMs, autoPlayKey, displayLabel }: { card: CueCard; compact?: boolean; autoPlayDelayMs?: number; autoPlayKey?: string; displayLabel?: string }) {
   const particle = useStudyStore((state) => state.settings.politeParticle);
   const assets = pronunciationAudioAssets(card);
-  const sources = assets.thaiSrc ? [assets.thaiSrc, assets.englishSrc].filter((value): value is string => Boolean(value)) : [];
-  return <AudioSequenceButton sources={sources} label={`${withPreferredParticle(card.thai, particle)} then ${card.naturalMeaning}`} compact={compact} pauseMs={CUE_CARD_TRANSLATION_PAUSE_MS} displayLabel={displayLabel} />;
+  const sources = assets.thaiSrc ? [assets.englishSrc, assets.thaiSrc].filter((value): value is string => Boolean(value)) : [];
+  return <AudioSequenceButton sources={sources} label={`${card.naturalMeaning} then ${withPreferredParticle(card.thai, particle)}`} compact={compact} pauseMs={CUE_CARD_TRANSLATION_PAUSE_MS} autoPlayDelayMs={autoPlayDelayMs} autoPlayKey={autoPlayKey} displayLabel={displayLabel} />;
 }

@@ -676,6 +676,83 @@
         "draft-affectionate-phrases-5"
       ],
       "quizBank": []
+    },
+    {
+      "id": "reel-2026-07-25", "order": 24, "topicEmoji": "📊", "title": "Always through never",
+      "objective": "Draft plan — Compare Thai frequency words from always through never.", "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.", "contentStatus": "draft", "visibility": "hidden",
+      "source": { "label": "Learn Thai IRL · supplied local Reel", "url": "https://www.instagram.com/learnthai_irl/reel/DbNu_njSnx9/", "permissionStatus": "authorized" },
+      "media": { "videoSrc": "/lessons/drafts/reel-2026-07-25/intro.mp4", "posterSrc": "/lessons/drafts/reel-2026-07-25/poster.jpg", "durationSeconds": 27.861088, "durationStatus": "confirmed", "availability": "available", "fallbackMessage": "This local draft clip could not be played on this device." },
+      "cueCardIds": ["draft-reel-2026-07-25-1", "draft-reel-2026-07-25-2", "draft-reel-2026-07-25-3", "draft-reel-2026-07-25-4", "draft-reel-2026-07-25-5", "draft-reel-2026-07-25-6", "draft-reel-2026-07-25-7", "draft-reel-2026-07-25-8"], "quizBank": []
+    },
+    {
+      "id": "reel-2026-07-26", "order": 25, "topicEmoji": "🗯️", "title": "Everyday Thai slang",
+      "objective": "Draft plan — Recognize five informal slang words used in conversation.", "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.", "contentStatus": "draft", "visibility": "hidden",
+      "source": { "label": "Learn Thai IRL · supplied local Reel", "url": "https://www.instagram.com/learnthai_irl/reel/DbQWY7HSxH5/", "permissionStatus": "authorized" },
+      "media": { "videoSrc": "/lessons/drafts/reel-2026-07-26/intro.mp4", "posterSrc": "/lessons/drafts/reel-2026-07-26/poster.jpg", "durationSeconds": 43.116599, "durationStatus": "confirmed", "availability": "available", "fallbackMessage": "This local draft clip could not be played on this device." },
+      "cueCardIds": ["draft-reel-2026-07-26-1", "draft-reel-2026-07-26-2", "draft-reel-2026-07-26-3", "draft-reel-2026-07-26-4", "draft-reel-2026-07-26-5"], "quizBank": []
+    },
+    {
+      "id": "reel-2026-07-27", "order": 26, "topicEmoji": "💍", "title": "Relationship status",
+      "objective": "Draft plan — Describe whether someone is single, partnered, married, or a parent.", "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.", "contentStatus": "draft", "visibility": "hidden",
+      "source": { "label": "Learn Thai IRL · supplied local Reel", "url": "https://www.instagram.com/learnthai_irl/reel/DbTDQityhNc/", "permissionStatus": "authorized" },
+      "media": { "videoSrc": "/lessons/drafts/reel-2026-07-27/intro.mp4", "posterSrc": "/lessons/drafts/reel-2026-07-27/poster.jpg", "durationSeconds": 26.444671, "durationStatus": "confirmed", "availability": "available", "fallbackMessage": "This local draft clip could not be played on this device." },
+      "cueCardIds": ["draft-reel-2026-07-27-1", "draft-reel-2026-07-27-2", "draft-reel-2026-07-27-3", "draft-reel-2026-07-27-4", "draft-reel-2026-07-27-5"], "quizBank": []
+    },
+    {
+      "id": "reel-2026-07-28", "order": 27, "topicEmoji": "💬", "title": "Natural conversation fillers",
+      "objective": "Draft plan — Notice short informal responses Thai speakers use in everyday conversation.", "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.", "contentStatus": "draft", "visibility": "hidden",
+      "source": { "label": "Learn Thai IRL · supplied local Reel", "url": "https://www.instagram.com/learnthai_irl/reel/DbVk4fESUw3/", "permissionStatus": "authorized" },
+      "media": { "videoSrc": "/lessons/drafts/reel-2026-07-28/intro.mp4", "posterSrc": "/lessons/drafts/reel-2026-07-28/poster.jpg", "durationSeconds": 31.622721, "durationStatus": "confirmed", "availability": "available", "fallbackMessage": "This local draft clip could not be played on this device." },
+      "cueCardIds": ["draft-reel-2026-07-28-1", "draft-reel-2026-07-28-2", "draft-reel-2026-07-28-3", "draft-reel-2026-07-28-4", "draft-reel-2026-07-28-5", "draft-reel-2026-07-28-6"], "quizBank": []
+    },
+    {
+      "id": "reel-2026-07-30", "order": 28, "topicEmoji": "💗", "title": "Sweet things to say",
+      "objective": "Draft plan — Listen for warm, affectionate phrases used with someone close.", "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.", "contentStatus": "draft", "visibility": "hidden",
+      "source": { "label": "Learn Thai IRL · supplied local Reel", "url": "https://www.instagram.com/learnthai_irl/reel/DbawvlUS4gK/", "permissionStatus": "authorized" },
+      "media": { "videoSrc": "/lessons/drafts/reel-2026-07-30/intro.mp4", "posterSrc": "/lessons/drafts/reel-2026-07-30/poster.jpg", "durationSeconds": 29.231066, "durationStatus": "confirmed", "availability": "available", "fallbackMessage": "This local draft clip could not be played on this device." },
+      "cueCardIds": ["draft-reel-2026-07-30-1", "draft-reel-2026-07-30-2", "draft-reel-2026-07-30-3", "draft-reel-2026-07-30-4"], "quizBank": []
+    },
+    {
+      "id": "reel-2026-08-25", "order": 29, "topicEmoji": "🌦️", "title": "Seasons in Thailand",
+      "objective": "Draft plan — Recognize Thai words for seasons and seasonal weather.", "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.", "contentStatus": "draft", "visibility": "hidden",
+      "source": { "label": "Learn Thai IRL · supplied local Reel", "url": "https://www.instagram.com/learnthai_irl/reel/DcdsTUDS1b1/", "permissionStatus": "authorized" },
+      "media": { "videoSrc": "/lessons/drafts/reel-2026-08-25/intro.mp4", "posterSrc": "/lessons/drafts/reel-2026-08-25/poster.jpg", "durationSeconds": 16.71551, "durationStatus": "confirmed", "availability": "available", "fallbackMessage": "This local draft clip could not be played on this device." },
+      "cueCardIds": ["draft-reel-2026-08-25-1", "draft-reel-2026-08-25-2", "draft-reel-2026-08-25-3", "draft-reel-2026-08-25-4", "draft-reel-2026-08-25-5"], "quizBank": []
+    },
+    {
+      "id": "reel-2026-08-27", "order": 30, "topicEmoji": "🍜", "title": "Eating khao soi",
+      "objective": "Draft plan — Follow casual Thai narration while ordering and tasting khao soi.", "description": "A locally bundled Reel presented as a video-only class.", "contentStatus": "draft", "activityMode": "video-only", "visibility": "hidden",
+      "source": { "label": "Learn Thai IRL · supplied local Reel", "url": "https://www.instagram.com/learnthai_irl/reel/Dci2mBzSmRv/", "permissionStatus": "authorized" },
+      "media": { "videoSrc": "/lessons/drafts/reel-2026-08-27/intro.mp4", "posterSrc": "/lessons/drafts/reel-2026-08-27/poster.jpg", "durationSeconds": 26.444671, "durationStatus": "confirmed", "availability": "available", "fallbackMessage": "This local draft clip could not be played on this device." },
+      "cueCardIds": [], "quizBank": []
+    },
+    {
+      "id": "reel-2026-08-28", "order": 31, "topicEmoji": "🙏", "title": "Ways to say thanks",
+      "objective": "Draft plan — Compare polite and casual ways to thank someone in Thai.", "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.", "contentStatus": "draft", "visibility": "hidden",
+      "source": { "label": "Learn Thai IRL · supplied local Reel", "url": "https://www.instagram.com/learnthai_irl/reel/DclcJF-JRVX/", "permissionStatus": "authorized" },
+      "media": { "videoSrc": "/lessons/drafts/reel-2026-08-28/intro.mp4", "posterSrc": "/lessons/drafts/reel-2026-08-28/poster.jpg", "durationSeconds": 27.652109, "durationStatus": "confirmed", "availability": "available", "fallbackMessage": "This local draft clip could not be played on this device." },
+      "cueCardIds": ["draft-reel-2026-08-28-1", "draft-reel-2026-08-28-2", "draft-reel-2026-08-28-3", "draft-reel-2026-08-28-4"], "quizBank": []
+    },
+    {
+      "id": "reel-2026-08-29", "order": 32, "topicEmoji": "🎯", "title": "Possible or impossible",
+      "objective": "Draft plan — Express possibility and certainty on a simple scale.", "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.", "contentStatus": "draft", "visibility": "hidden",
+      "source": { "label": "Learn Thai IRL · supplied local Reel", "url": "https://www.instagram.com/learnthai_irl/reel/DcoA9K_JiHf/", "permissionStatus": "authorized" },
+      "media": { "videoSrc": "/lessons/drafts/reel-2026-08-29/intro.mp4", "posterSrc": "/lessons/drafts/reel-2026-08-29/poster.jpg", "durationSeconds": 18.317687, "durationStatus": "confirmed", "availability": "available", "fallbackMessage": "This local draft clip could not be played on this device." },
+      "cueCardIds": ["draft-reel-2026-08-29-1", "draft-reel-2026-08-29-2", "draft-reel-2026-08-29-3", "draft-reel-2026-08-29-4", "draft-reel-2026-08-29-5", "draft-reel-2026-08-29-6"], "quizBank": []
+    },
+    {
+      "id": "reel-2026-08-30", "order": 33, "topicEmoji": "🥡", "title": "Ordering takeaway",
+      "objective": "Draft plan — Ask for food to go, in a container, or in a bag.", "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.", "contentStatus": "draft", "visibility": "hidden",
+      "source": { "label": "Learn Thai IRL · supplied local Reel", "url": "https://www.instagram.com/learnthai_irl/reel/DcqndOJS5ef/", "permissionStatus": "authorized" },
+      "media": { "videoSrc": "/lessons/drafts/reel-2026-08-30/intro.mp4", "posterSrc": "/lessons/drafts/reel-2026-08-30/poster.jpg", "durationSeconds": 24.842494, "durationStatus": "confirmed", "availability": "available", "fallbackMessage": "This local draft clip could not be played on this device." },
+      "cueCardIds": ["draft-reel-2026-08-30-1", "draft-reel-2026-08-30-2", "draft-reel-2026-08-30-3"], "quizBank": []
+    },
+    {
+      "id": "reel-2026-08-31", "order": 34, "topicEmoji": "📅", "title": "Yesterday through right now",
+      "objective": "Draft plan — Recognize common Thai words for relative time.", "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.", "contentStatus": "draft", "visibility": "hidden",
+      "source": { "label": "Learn Thai IRL · supplied local Reel", "url": "https://www.instagram.com/learnthai_irl/reel/DctLXVIyfj9/", "permissionStatus": "authorized" },
+      "media": { "videoSrc": "/lessons/drafts/reel-2026-08-31/intro.mp4", "posterSrc": "/lessons/drafts/reel-2026-08-31/poster.jpg", "durationSeconds": 14.532834, "durationStatus": "confirmed", "availability": "available", "fallbackMessage": "This local draft clip could not be played on this device." },
+      "cueCardIds": ["draft-reel-2026-08-31-1", "draft-reel-2026-08-31-2", "draft-reel-2026-08-31-3", "draft-reel-2026-08-31-4", "draft-reel-2026-08-31-5"], "quizBank": []
     }
   ]
 }

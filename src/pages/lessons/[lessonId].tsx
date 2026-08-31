@@ -1,4 +1,5 @@
 import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
+import ErrorPage from "next/error";
 import { LessonExperience } from "@/components/LessonExperience";
 import { lessons } from "@/domain/seed";
 
@@ -19,6 +20,6 @@ export const getStaticProps: GetStaticProps<LessonPageProps> = async ({ params }
 
 export default function LessonPage({ lessonId }: InferGetStaticPropsType<typeof getStaticProps>) {
   const lesson = lessons.find((item) => item.id === lessonId);
-  if (!lesson) throw new Error(`Static lesson route is missing bundled lesson: ${lessonId}`);
+  if (!lesson) return <ErrorPage statusCode={404} />;
   return <LessonExperience lesson={lesson} />;
 }

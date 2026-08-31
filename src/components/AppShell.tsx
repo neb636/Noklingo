@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import {
-  CalendarDays, ClipboardCheck, Library, Settings,
+  CalendarDays, Clapperboard, ClipboardCheck, Library, Settings,
 } from "lucide-react";
 import { assetPath } from "@/lib/asset-path";
 import { AppLink } from "./AppLink";
@@ -11,6 +11,7 @@ import { AppLink } from "./AppLink";
 const navItems = [
   { href: "/today", label: "Today", icon: CalendarDays },
   { href: "/library", label: "Library", icon: Library },
+  { href: "/library-2", label: "Library 2", icon: Clapperboard, mobileOnly: true },
   { href: "/results", label: "Results", icon: ClipboardCheck },
   { href: "/settings", label: "Settings", icon: Settings },
 ];
@@ -27,7 +28,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           <span>NokLingo</span>
         </AppLink>
         <nav className="side-nav" aria-label="Primary navigation">
-          {navItems.map(({ href, label, icon: Icon }) => {
+          {navItems.filter(({ mobileOnly }) => !mobileOnly).map(({ href, label, icon: Icon }) => {
             const active = router.pathname === href;
             return (
               <AppLink key={href} href={`${href}/`} className="nav-link" aria-current={active ? "page" : undefined}>

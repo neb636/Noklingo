@@ -102,5 +102,66 @@
     {"id":"draft-affectionate-phrases-3","lessonId":"affectionate-phrases","emoji":"🥺","thai":"คิดถึงจัง","romanization":"kít tĕung jang","naturalMeaning":"I miss you so much","pronunciationOverrides":{"thai":{"startSeconds":11.37,"endSeconds":13.11,"review":{"sourceHash":"df675d99453f3f290b77bdeb2b5024bdf4641df51ed1b217a52b0f4b44c84976","algorithmFingerprint":"a94210fc1c3198f8","reviewedAt":"2026-08-29T07:31:19.662Z"}},"english":{"startSeconds":13.635,"endSeconds":15.38,"review":{"sourceHash":"df675d99453f3f290b77bdeb2b5024bdf4641df51ed1b217a52b0f4b44c84976","algorithmFingerprint":"a94210fc1c3198f8","reviewedAt":"2026-08-29T07:32:44.360Z"}}},"verificationStatus":"draft"},
     {"id":"draft-affectionate-phrases-4","lessonId":"affectionate-phrases","emoji":"🤗","thai":"กอดหน่อย","romanization":"gòt nòi","naturalMeaning":"Can I have a hug?","pronunciationOverrides":{"thai":{"startSeconds":15.44,"endSeconds":16.765,"review":{"sourceHash":"df675d99453f3f290b77bdeb2b5024bdf4641df51ed1b217a52b0f4b44c84976","algorithmFingerprint":"a94210fc1c3198f8","reviewedAt":"2026-08-29T07:32:52.707Z"}},"english":{"startSeconds":17.7,"endSeconds":18.85,"review":{"sourceHash":"df675d99453f3f290b77bdeb2b5024bdf4641df51ed1b217a52b0f4b44c84976","algorithmFingerprint":"a94210fc1c3198f8","reviewedAt":"2026-08-29T07:33:13.346Z"}}},"verificationStatus":"draft"},
     {"id":"draft-affectionate-phrases-5","lessonId":"affectionate-phrases","emoji":"🌙","thai":"ฝันดีนะ","romanization":"făn dee ná","naturalMeaning":"goodnight","pronunciationOverrides":{"thai":{"startSeconds":19.55,"endSeconds":20.835,"review":{"sourceHash":"df675d99453f3f290b77bdeb2b5024bdf4641df51ed1b217a52b0f4b44c84976","algorithmFingerprint":"a94210fc1c3198f8","reviewedAt":"2026-08-29T07:33:28.934Z"}},"english":{"startSeconds":21.345,"endSeconds":22.14,"review":{"sourceHash":"df675d99453f3f290b77bdeb2b5024bdf4641df51ed1b217a52b0f4b44c84976","algorithmFingerprint":"a94210fc1c3198f8","reviewedAt":"2026-08-29T07:34:20.383Z"}}},"verificationStatus":"draft"}
+    ,
+    { "id": "draft-reel-2026-07-25-1", "lessonId": "reel-2026-07-25", "emoji": "💯", "thai": "เสมอ", "romanization": "sà-mĕr", "naturalMeaning": "always", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-25-2", "lessonId": "reel-2026-07-25", "emoji": "🔁", "thai": "ปกติ", "romanization": "bpòk-gà-dtì", "naturalMeaning": "usually", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-25-3", "lessonId": "reel-2026-07-25", "emoji": "📆", "thai": "เป็นประจำ", "romanization": "bpen bprà-jam", "naturalMeaning": "frequently", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-25-4", "lessonId": "reel-2026-07-25", "emoji": "🔂", "thai": "บ่อย", "romanization": "bòi", "naturalMeaning": "often", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-25-5", "lessonId": "reel-2026-07-25", "emoji": "🎲", "thai": "บางครั้ง", "romanization": "baang kráng", "naturalMeaning": "sometimes", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-25-6", "lessonId": "reel-2026-07-25", "emoji": "🕰️", "thai": "นานๆที", "romanization": "naan naan tee", "naturalMeaning": "occasionally", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-25-7", "lessonId": "reel-2026-07-25", "emoji": "🌘", "thai": "แทบจะไม่", "romanization": "tâep jà mâi", "naturalMeaning": "rarely", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-25-8", "lessonId": "reel-2026-07-25", "emoji": "🚫", "thai": "ไม่เคย", "romanization": "mâi koie", "naturalMeaning": "never", "verificationStatus": "draft" },
+
+    { "id": "draft-reel-2026-07-26-1", "lessonId": "reel-2026-07-26", "emoji": "😈", "thai": "แกล้ง", "romanization": "gâeng", "naturalMeaning": "to prank or trick someone", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-26-2", "lessonId": "reel-2026-07-26", "emoji": "💀", "thai": "อ่อม", "romanization": "òm", "naturalMeaning": "dead boring", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-26-3", "lessonId": "reel-2026-07-26", "emoji": "👀", "thai": "เม้าท์", "romanization": "máo", "naturalMeaning": "to gossip", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-26-4", "lessonId": "reel-2026-07-26", "emoji": "✨", "thai": "ปัง", "romanization": "bpang", "naturalMeaning": "slay or fabulous", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-26-5", "lessonId": "reel-2026-07-26", "emoji": "👋", "thai": "เท", "romanization": "tay", "naturalMeaning": "to ditch someone", "verificationStatus": "draft" },
+
+    { "id": "draft-reel-2026-07-27-1", "lessonId": "reel-2026-07-27", "emoji": "👤", "thai": "โสด", "romanization": "sòht", "naturalMeaning": "single", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-27-2", "lessonId": "reel-2026-07-27", "emoji": "💑", "thai": "มีแฟน", "romanization": "mee faen", "naturalMeaning": "I have a girlfriend or boyfriend", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-27-3", "lessonId": "reel-2026-07-27", "emoji": "💍", "thai": "หมั้นแล้ว", "romanization": "mân láew", "naturalMeaning": "engaged", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-27-4", "lessonId": "reel-2026-07-27", "emoji": "👰", "thai": "แต่งงานแล้ว", "romanization": "dtàeng ngaan láew", "naturalMeaning": "married", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-27-5", "lessonId": "reel-2026-07-27", "emoji": "👶", "thai": "มีลูก", "romanization": "mee lôok", "naturalMeaning": "I have a child", "verificationStatus": "draft" },
+
+    { "id": "draft-reel-2026-07-28-1", "lessonId": "reel-2026-07-28", "emoji": "👍", "thai": "เออ", "romanization": "er", "naturalMeaning": "yeah", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-28-2", "lessonId": "reel-2026-07-28", "emoji": "🏃", "thai": "ไปดิ", "romanization": "bpai di", "naturalMeaning": "let’s go", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-28-3", "lessonId": "reel-2026-07-28", "emoji": "👉", "thai": "ป่ะ", "romanization": "bpà", "naturalMeaning": "let’s go", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-28-4", "lessonId": "reel-2026-07-28", "emoji": "💡", "thai": "อ๋อ", "romanization": "ŏr", "naturalMeaning": "oh, I see", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-28-5", "lessonId": "reel-2026-07-28", "emoji": "⏱️", "thai": "แป๊บนะ", "romanization": "bpáep ná", "naturalMeaning": "wait a second", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-28-6", "lessonId": "reel-2026-07-28", "emoji": "🤔", "thai": "เอาไง", "romanization": "ao ngai", "naturalMeaning": "so, what’s the plan?", "verificationStatus": "draft" },
+
+    { "id": "draft-reel-2026-07-30-1", "lessonId": "reel-2026-07-30", "emoji": "🥺", "thai": "เป็นห่วงนะ", "romanization": "bpen hùuang ná", "naturalMeaning": "I’m worried about you", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-30-2", "lessonId": "reel-2026-07-30", "emoji": "😘", "thai": "อยากเจอแล้ว", "romanization": "yàak jer láew", "naturalMeaning": "I can’t wait to see you", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-30-3", "lessonId": "reel-2026-07-30", "emoji": "😍", "thai": "เธอน่ารักที่สุด", "romanization": "ter nâa rák têe sùt", "naturalMeaning": "You are the cutest", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-07-30-4", "lessonId": "reel-2026-07-30", "emoji": "🌟", "thai": "เก่งจัง", "romanization": "gèng jang", "naturalMeaning": "You’re amazing", "verificationStatus": "draft" },
+
+    { "id": "draft-reel-2026-08-25-1", "lessonId": "reel-2026-08-25", "emoji": "🌸", "thai": "ฤดูใบไม้ผลิ", "romanization": "réu-doo bai mái plì", "naturalMeaning": "spring", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-08-25-2", "lessonId": "reel-2026-08-25", "emoji": "☀️", "thai": "ฤดูร้อน", "romanization": "réu-doo rón", "naturalMeaning": "summer", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-08-25-3", "lessonId": "reel-2026-08-25", "emoji": "🍂", "thai": "ฤดูใบไม้ร่วง", "romanization": "réu-doo bai mái rûuang", "naturalMeaning": "autumn", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-08-25-4", "lessonId": "reel-2026-08-25", "emoji": "❄️", "thai": "ฤดูหนาว", "romanization": "réu-doo năao", "naturalMeaning": "winter", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-08-25-5", "lessonId": "reel-2026-08-25", "emoji": "🌧️", "thai": "ฤดูฝน", "romanization": "réu-doo fŏn", "naturalMeaning": "rainy season", "verificationStatus": "draft" },
+
+    { "id": "draft-reel-2026-08-28-1", "lessonId": "reel-2026-08-28", "emoji": "🙏", "thai": "ขอบคุณ", "romanization": "kòrp kun", "naturalMeaning": "thank you", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-08-28-2", "lessonId": "reel-2026-08-28", "emoji": "🙇", "thai": "ขอบคุณนะ", "romanization": "kòrp kun ná", "naturalMeaning": "thank you", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-08-28-3", "lessonId": "reel-2026-08-28", "emoji": "🥹", "thai": "ขอบคุณมาก", "romanization": "kòrp kun mâak", "naturalMeaning": "thank you very much", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-08-28-4", "lessonId": "reel-2026-08-28", "emoji": "😉", "thai": "ขอบใจ", "romanization": "kòrp jai", "naturalMeaning": "thanks", "verificationStatus": "draft" },
+
+    { "id": "draft-reel-2026-08-29-1", "lessonId": "reel-2026-08-29", "emoji": "🚫", "thai": "เป็นไปไม่ได้", "romanization": "bpen bpai mâi dâai", "naturalMeaning": "impossible", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-08-29-2", "lessonId": "reel-2026-08-29", "emoji": "✅", "thai": "เป็นไปได้", "romanization": "bpen bpai dâai", "naturalMeaning": "possible", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-08-29-3", "lessonId": "reel-2026-08-29", "emoji": "🤷", "thai": "อาจจะ", "romanization": "àat jà", "naturalMeaning": "maybe", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-08-29-4", "lessonId": "reel-2026-08-29", "emoji": "❔", "thai": "ไม่แน่ใจ", "romanization": "mâi nâe jai", "naturalMeaning": "not sure", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-08-29-5", "lessonId": "reel-2026-08-29", "emoji": "🎯", "thai": "แน่ใจ", "romanization": "nâe jai", "naturalMeaning": "sure", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-08-29-6", "lessonId": "reel-2026-08-29", "emoji": "💯", "thai": "แน่นอน", "romanization": "nâe non", "naturalMeaning": "of course", "verificationStatus": "draft" },
+
+    { "id": "draft-reel-2026-08-30-1", "lessonId": "reel-2026-08-30", "emoji": "🥡", "thai": "สั่งกลับบ้าน", "romanization": "sàng glàp bâan", "naturalMeaning": "order to go or take away", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-08-30-2", "lessonId": "reel-2026-08-30", "emoji": "📦", "thai": "ใส่กล่อง", "romanization": "sài glòng", "naturalMeaning": "put it in a container", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-08-30-3", "lessonId": "reel-2026-08-30", "emoji": "🛍️", "thai": "ใส่ถุง", "romanization": "sài tŭng", "naturalMeaning": "put it in a bag", "verificationStatus": "draft" },
+
+    { "id": "draft-reel-2026-08-31-1", "lessonId": "reel-2026-08-31", "emoji": "⏪", "thai": "เมื่อวาน", "romanization": "mêua waan", "naturalMeaning": "yesterday", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-08-31-2", "lessonId": "reel-2026-08-31", "emoji": "📍", "thai": "วันนี้", "romanization": "wan née", "naturalMeaning": "today", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-08-31-3", "lessonId": "reel-2026-08-31", "emoji": "⏩", "thai": "พรุ่งนี้", "romanization": "prûng née", "naturalMeaning": "tomorrow", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-08-31-4", "lessonId": "reel-2026-08-31", "emoji": "🔁", "thai": "ทุกวัน", "romanization": "túk wan", "naturalMeaning": "every day", "verificationStatus": "draft" },
+    { "id": "draft-reel-2026-08-31-5", "lessonId": "reel-2026-08-31", "emoji": "⏱️", "thai": "ตอนนี้", "romanization": "dton née", "naturalMeaning": "right now", "verificationStatus": "draft" }
   ]
 }

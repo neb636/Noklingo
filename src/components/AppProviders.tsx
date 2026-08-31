@@ -51,7 +51,15 @@ export function AppProviders({ children }: { children: React.ReactNode }) {
   }, [settings]);
 
   useEffect(() => {
-    if (!("serviceWorker" in navigator) || process.env.NODE_ENV !== "production") return;
+    if (!("serviceWorker" in navigator)) return;
+    if (process.env.NODE_ENV !== "production") {
+      // A worker from a local production preview can otherwise intercept Vite's
+      // CSS-as-JavaScript modules when development reuses the same origin.
+      void navigator.serviceWorker.getRegistration(assetPath("/"))
+        .then((registration) => registration?.unregister())
+        .catch(() => undefined);
+      return;
+    }
     void navigator.serviceWorker.register(assetPath("/sw.js"), { scope: `${basePath || ""}/` });
   }, []);
 

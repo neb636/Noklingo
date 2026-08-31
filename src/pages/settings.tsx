@@ -59,11 +59,11 @@ export default function SettingsPage() {
       <div className="settings-layout">
         <section className="settings-section">
           <div className="settings-title"><Volume2 size={20} /><div><p className="eyebrow">Audio</p><h2>Listening</h2></div></div>
-          <SettingRow title="Phrase audio" description="Play the exact local recordings bundled with reviewed lessons.">
-            <Switch checked={settings.audioEnabled} onChange={(value) => updateSettings({ audioEnabled: value })} label="Phrase audio" />
+          <SettingRow title="Lesson and quiz audio" description="Play bundled lesson recordings and quiz feedback sounds.">
+            <Switch checked={settings.audioEnabled} onChange={(value) => updateSettings({ audioEnabled: value })} label="Lesson and quiz audio" />
           </SettingRow>
-          <SettingRow title="Volume" description={`${Math.round(settings.volume * 100)}% for bundled lesson audio`}>
-            <input aria-label="Phrase audio volume" type="range" min="0" max="1" step="0.05" value={settings.volume} onChange={(event) => updateSettings({ volume: Number(event.target.value) })} />
+          <SettingRow title="Volume" description={`${Math.round(settings.volume * 100)}% for lesson and quiz audio`}>
+            <input aria-label="Lesson and quiz audio volume" type="range" min="0" max="1" step="0.05" value={settings.volume} onChange={(event) => updateSettings({ volume: Number(event.target.value) })} />
           </SettingRow>
           <SettingRow title="Phrase playback speed" description={`${settings.speechRate.toFixed(2)}× playback rate`}>
             <input aria-label="Phrase playback speed" type="range" min="0.5" max="1.25" step="0.05" value={settings.speechRate} onChange={(event) => updateSettings({ speechRate: Number(event.target.value) })} />

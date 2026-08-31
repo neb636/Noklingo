@@ -4,6 +4,11 @@ Draft Reels live in `src/content/draft-reels.json`; their screenshot-derived
 cue cards live in `src/content/draft-cue-cards.json`. A draft preview is always
 unscored: watch the local clip, then step through its cue cards.
 
+Set a draft lesson's optional `"visibility"` to `"hidden"` to keep it in the
+authoring, pronunciation-generation, and review workflows without exposing it
+in the learner-facing Today or Library screens. Remove that field (or set it to
+`"visible"`) only when the draft is ready for learner review.
+
 Create non-overwriting review packages for every draft with:
 
 ```
