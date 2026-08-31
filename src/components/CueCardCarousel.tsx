@@ -17,15 +17,24 @@ export function CueCardCarousel({
   onBack,
   onComplete,
   completeLabel = "Start practice quiz",
+  title = "Cue cards",
+  contextLabel,
+  initialIndex = 0,
+  onActiveIndexChange,
 }: {
-  lesson: VideoLesson;
+  lesson?: VideoLesson;
   cards: CueCard[];
   mode: CueCardMode;
   onBack: () => void;
   onComplete: () => void;
   completeLabel?: string;
+  title?: string;
+  contextLabel?: string;
+  initialIndex?: number;
+  onActiveIndexChange?: (index: number) => void;
 }) {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(() => Math.max(0, Math.min(cards.length - 1, initialIndex)));
+  const didRestoreInitialPosition = useRef(false);
   const [flippedId, setFlippedId] = useState<string>();
   const trackRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<Array<HTMLElement | null>>([]);
@@ -35,8 +44,11 @@ export function CueCardCarousel({
   const settings = useStudyStore((state) => state.settings);
 
   useEffect(() => {
+    if (didRestoreInitialPosition.current) return;
+    didRestoreInitialPosition.current = true;
     trackRef.current?.focus();
-  }, []);
+    cardRefs.current[activeIndex]?.scrollIntoView?.({ behavior: "auto", inline: "center", block: "nearest" });
+  }, [activeIndex]);
 
   useEffect(() => {
     const index = flipFocusIndex.current;
@@ -50,6 +62,7 @@ export function CueCardCarousel({
     cardRefs.current[next]?.scrollIntoView?.({ behavior: settings.reduceMotion ? "auto" : "smooth", inline: "center", block: "nearest" });
     setFlippedId(undefined);
     setActiveIndex(next);
+    onActiveIndexChange?.(next);
   }
 
   function flipCard(index: number, cardId?: string) {
@@ -80,11 +93,12 @@ export function CueCardCarousel({
     if (closest !== activeIndex) {
       setFlippedId(undefined);
       setActiveIndex(closest);
+      onActiveIndexChange?.(closest);
     }
   }
 
   if (!cards.length) {
-    return <section className="cue-cards-screen"><StudyTopBar title="Cue cards" onBack={onBack} /><div className="lesson-empty-state"><span>🗂️</span><h1>No cue cards yet</h1><p>This lesson is still waiting for its phrase cards.</p></div></section>;
+    return <section className="cue-cards-screen"><StudyTopBar title={title} onBack={onBack} /><div className="lesson-empty-state"><span>🗂️</span><h1>No cue cards yet</h1><p>This lesson is still waiting for its phrase cards.</p></div></section>;
   }
 
   return (
@@ -93,10 +107,10 @@ export function CueCardCarousel({
       if (event.key === "ArrowLeft") { event.preventDefault(); scrollTo(activeIndex - 1); }
       if (event.key === "ArrowRight") { event.preventDefault(); scrollTo(activeIndex + 1); }
     }}>
-      <StudyTopBar title="Cue cards" onBack={onBack} action={<span className="lesson-counter">{activeIndex + 1} / {cards.length}</span>} />
-      <div className="cue-lesson-label"><span>Lesson {lesson.order}</span><b>{lesson.topicEmoji} {lesson.title}</b></div>
+      <StudyTopBar title={title} onBack={onBack} action={<span className="lesson-counter">{activeIndex + 1} / {cards.length}</span>} />
+      {(lesson || contextLabel) && <div className="cue-lesson-label">{lesson ? <><span>Lesson {lesson.order}</span><b>{lesson.topicEmoji} {lesson.title}</b></> : <><span>Mixed practice</span><b>{contextLabel}</b></>}</div>}
 
-      <div className={`cue-carousel-track cue-carousel-track--${mode}`} ref={trackRef} onScroll={syncActiveCard} tabIndex={0} aria-label={`${lesson.title} cue cards`}>
+      <div className={`cue-carousel-track cue-carousel-track--${mode}`} ref={trackRef} onScroll={syncActiveCard} tabIndex={0} aria-label={`${lesson?.title ?? title} cue cards`}>
         {cards.map((card, index) => {
           const hasAudio = Boolean(pronunciationAudioAssets(card).thaiSrc);
           const reviewMode = mode === "review";

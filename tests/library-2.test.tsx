@@ -62,6 +62,6 @@ describe("Library 2 UI", () => {
     render(<Library2LessonExperience initialLessonId="common-verbs" />);
     const playControl = screen.getByRole("button", { name: /play essential verbs/i });
     fireEvent.keyDown(playControl, { key: "ArrowDown" });
-    expect(screen.getByText(/what, where, when, why, how/i)).toBeInTheDocument();
+    expect(screen.getByText(/powers of ten/i)).toBeInTheDocument();
   });
 });

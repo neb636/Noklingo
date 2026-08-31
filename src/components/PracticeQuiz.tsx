@@ -118,6 +118,6 @@ export function PracticeQuiz({
   );
 }
 
-function QuizTopBar({ title, progress, count, onClose }: { title: string; progress: number; count: string; onClose: () => void }) {
+export function QuizTopBar({ title, progress, count, onClose }: { title: string; progress: number; count: string; onClose: () => void }) {
   return <header className="quiz-topbar"><button type="button" className="plain-icon-button" onClick={onClose} aria-label="Close quiz"><X size={22} /></button><div><span><i style={{ width: `${Math.max(0, Math.min(1, progress)) * 100}%` }} /></span><small>{title}</small></div><b>{count}</b></header>;
 }

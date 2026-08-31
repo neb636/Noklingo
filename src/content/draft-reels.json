@@ -38,6 +38,7 @@
       "objective": "Draft plan — Notice the core words used to ask for information.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
       "contentStatus": "draft",
+      "visibility": "hidden",
       "source": {
         "label": "Learn Thai IRL · supplied local Reel",
         "url": "https://www.instagram.com/learnthai_irl/reel/Dbsw7PxyKUN/",
@@ -68,6 +69,7 @@
       "objective": "Draft plan — Recognize small words that connect ideas in speech.",
       "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.",
       "contentStatus": "draft",
+      "visibility": "hidden",
       "source": {
         "label": "Learn Thai IRL · supplied local Reel",
         "url": "https://www.instagram.com/learnthai_irl/reel/DcLreBDSxkH/",

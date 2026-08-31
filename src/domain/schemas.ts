@@ -202,8 +202,36 @@ export const StreakStateSchema = z.object({
   longestDays: z.number().int().nonnegative(),
   lastStudyDate: LocalDateSchema.optional(),
 });
-export const AppSnapshotSchema = z.object({
-  version: z.literal(3),
+
+export const PracticeCompletionSchema = z.object({
+  lessonId: z.string().min(1),
+  completedAt: z.string().datetime(),
+});
+
+export const MixedReviewAnswerSchema = z.object({
+  cardId: z.string().min(1),
+  selectedCardId: z.string().min(1),
+  correct: z.boolean(),
+  answeredAt: z.string().datetime(),
+});
+
+export const MixedReviewSessionSchema = z.object({
+  id: z.string().min(1),
+  seed: z.string().min(1),
+  eligibleLessonIds: z.array(z.string().min(1)).min(1),
+  cardOrder: z.array(z.string().min(1)).min(1),
+  cardIndex: z.number().int().nonnegative(),
+  quizOrder: z.array(z.string().min(1)).min(1),
+  questionIndex: z.number().int().nonnegative(),
+  answers: z.array(MixedReviewAnswerSchema),
+  feedbackCardId: z.string().min(1).optional(),
+  stage: z.enum(["cards", "quiz", "results"]),
+  startedAt: z.string().datetime(),
+  completedAt: z.string().datetime().optional(),
+});
+
+const AppSnapshotV4Schema = z.object({
+  version: z.literal(4),
   curriculumVersion: z.string().min(1),
   lessonProgress: z.array(LessonProgressSchema),
   reviewStates: z.array(ItemReviewStateSchema),
@@ -211,9 +239,21 @@ export const AppSnapshotSchema = z.object({
   completedSessions: z.array(CompletedStudySessionSchema),
   activeSession: ActiveStudySessionSchema.nullable(),
   lastResultSessionId: z.string().optional(),
+  practiceCompletions: z.array(PracticeCompletionSchema),
+  activeMixedReviewSession: MixedReviewSessionSchema.nullable(),
   settings: SettingsSchema,
   streak: StreakStateSchema,
 });
+
+export const AppSnapshotSchema = z.preprocess((value) => {
+  if (!value || typeof value !== "object" || !("version" in value) || value.version !== 3) return value;
+  return {
+    ...value,
+    version: 4,
+    practiceCompletions: [],
+    activeMixedReviewSession: null,
+  };
+}, AppSnapshotV4Schema);
 
 export type VideoLesson = z.infer<typeof VideoLessonSchema>;
 export type LessonMedia = z.infer<typeof LessonMediaSchema>;
@@ -231,4 +271,7 @@ export type CompletedStudySession = z.infer<typeof CompletedStudySessionSchema>;
 export type StudyAttempt = z.infer<typeof StudyAttemptSchema>;
 export type Settings = z.infer<typeof SettingsSchema>;
 export type StreakState = z.infer<typeof StreakStateSchema>;
+export type PracticeCompletion = z.infer<typeof PracticeCompletionSchema>;
+export type MixedReviewAnswer = z.infer<typeof MixedReviewAnswerSchema>;
+export type MixedReviewSession = z.infer<typeof MixedReviewSessionSchema>;
 export type AppSnapshot = z.infer<typeof AppSnapshotSchema>;

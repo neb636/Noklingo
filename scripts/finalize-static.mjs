@@ -11,7 +11,7 @@ import {
 import { extname, join, relative, sep } from "node:path";
 
 const output = join(process.cwd(), "dist", "client");
-const coreRoutes = ["welcome", "today", "study", "results", "library", "library-2", "settings"];
+const coreRoutes = ["welcome", "today", "study", "results", "review", "library", "library-2", "settings"];
 const basePath = normalizeBasePath(process.env.NEXT_PUBLIC_BASE_PATH ?? "");
 const baseSegments = basePath ? basePath.slice(1).split("/") : [];
 const viewportTag = '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" data-next-head="" />';

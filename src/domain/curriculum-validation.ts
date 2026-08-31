@@ -3,6 +3,7 @@ import type {
   AppSnapshot,
   CompletedStudySession,
   CueCard,
+  MixedReviewSession,
   QuizQuestion,
   SessionAnswer,
   SessionQueueEntry,
@@ -357,6 +358,21 @@ function uniqueBy<T>(values: readonly T[], key: (value: T) => string): T[] {
   });
 }
 
+function mixedReviewSessionIsCurrent(session: MixedReviewSession, curriculum: readonly VideoLesson[], cards: readonly CueCard[]): boolean {
+  const lessonById = new Map(curriculum.map((lesson) => [lesson.id, lesson]));
+  const cardIds = new Set(cards.map((card) => card.id));
+  const sessionLessonIds = new Set(session.eligibleLessonIds);
+  const expectedCardIds = new Set(session.eligibleLessonIds.flatMap((id) => lessonById.get(id)?.cueCardIds ?? []));
+  if (sessionLessonIds.size !== session.eligibleLessonIds.length || session.eligibleLessonIds.some((id) => {
+    const lesson = lessonById.get(id);
+    return !lesson || lesson.activityMode === "video-only" || !lesson.cueCardIds.length;
+  })) return false;
+  if (expectedCardIds.size !== session.cardOrder.length || new Set(session.cardOrder).size !== session.cardOrder.length
+    || new Set(session.quizOrder).size !== session.quizOrder.length || session.quizOrder.length !== session.cardOrder.length) return false;
+  if ([...expectedCardIds].some((id) => !session.cardOrder.includes(id) || !session.quizOrder.includes(id) || !cardIds.has(id))) return false;
+  return session.cardIndex < session.cardOrder.length && session.questionIndex <= session.quizOrder.length;
+}
+
 export function reconcileSnapshot(
   snapshot: AppSnapshot,
   curriculum: readonly VideoLesson[] = bundledLessons,
@@ -375,10 +391,23 @@ export function reconcileSnapshot(
     ? snapshot.activeSession
     : null;
   const completedIds = new Set(completedSessions.map((session) => session.id));
+  const practiceCompletions = uniqueBy(snapshot.practiceCompletions.filter((entry) => {
+    const lesson = curriculum.find((item) => item.id === entry.lessonId);
+    return Boolean(lesson && lesson.activityMode !== "video-only" && lesson.cueCardIds.length);
+  }), (entry) => entry.lessonId);
+  const reviewEligibleLessonIds = new Set([
+    ...practiceCompletions.map((entry) => entry.lessonId),
+    ...lessonProgress.filter((entry) => entry.status !== "unseen").map((entry) => entry.lessonId),
+  ]);
+  const activeMixedReviewSession = snapshot.activeMixedReviewSession
+    && snapshot.activeMixedReviewSession.eligibleLessonIds.every((id) => reviewEligibleLessonIds.has(id))
+    && mixedReviewSessionIsCurrent(snapshot.activeMixedReviewSession, curriculum, cards)
+    ? snapshot.activeMixedReviewSession
+    : null;
 
   return {
     ...snapshot,
-    version: 3,
+    version: 4,
     curriculumVersion,
     lessonProgress,
     reviewStates,
@@ -386,5 +415,7 @@ export function reconcileSnapshot(
     completedSessions,
     activeSession,
     lastResultSessionId: snapshot.lastResultSessionId && completedIds.has(snapshot.lastResultSessionId) ? snapshot.lastResultSessionId : undefined,
+    practiceCompletions,
+    activeMixedReviewSession,
   };
 }
