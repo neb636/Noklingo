@@ -665,6 +665,12 @@ h2 { font-size: clamp(1.45rem,2.4vw,2.05rem); }
 .practice-score-ring b { margin-top:2px; }
 .practice-complete-content>.gradient-button,.practice-complete-content>.soft-button { width:min(100%,390px);margin-top:10px; }
 .practice-complete-content>.text-button { margin-top:18px; }
+.review-complete-card { width:min(100%,620px);margin:30px auto 0;padding:38px;display:flex;flex-direction:column;align-items:center;text-align:center;border:1px solid var(--line);border-radius:24px;background:var(--card);box-shadow:var(--shadow); }
+.review-complete-card>svg { color:var(--accent);margin-top:12px; }
+.review-complete-card h2 { margin:8px 0 4px;font-size:2.4rem; }
+.review-complete-card>p { color:var(--muted);max-width:430px; }
+.review-complete-actions { width:min(100%,390px);display:grid;gap:10px;margin-top:22px; }
+.review-complete-status { display:flex;align-items:center;gap:6px;margin-top:20px;color:var(--muted);font-size:.68rem; }
 .lesson-empty-state { margin:auto;text-align:center;padding:40px 24px; }
 .lesson-empty-state>span { font-size:4rem; }
 .lesson-empty-state h1 { font-size:2rem;margin:12px 0 5px; }

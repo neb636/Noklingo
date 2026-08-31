@@ -3,7 +3,8 @@ import type { EntityTable } from "dexie";
 import {
   AppSnapshotSchema,
   type ActiveStudySession, type AppSnapshot, type CompletedStudySession,
-  type ItemReviewState, type LessonProgress, type Settings, type StreakState, type StudyAttempt,
+  type ItemReviewState, type LessonProgress, type MixedReviewSession, type PracticeCompletion,
+  type Settings, type StreakState, type StudyAttempt,
 } from "@/domain/schemas";
 import { reconcileSnapshot } from "@/domain/curriculum-validation";
 import { cueCards, lessons } from "@/domain/seed";
@@ -15,6 +16,7 @@ const CURRICULUM_VERSION_KEY = "curriculumVersion";
 type SettingsRow = Settings & { id: "settings" };
 type StreakRow = StreakState & { id: "streak" };
 type ActiveSessionRow = ActiveStudySession & { recordId: "active" };
+type MixedReviewSessionRow = MixedReviewSession & { recordId: "active" };
 type MetaRow = { key: string; value: unknown };
 
 class ThaiStudyDatabase extends Dexie {
@@ -23,6 +25,8 @@ class ThaiStudyDatabase extends Dexie {
   attempts!: EntityTable<StudyAttempt, "id">;
   completedSessions!: EntityTable<CompletedStudySession, "id">;
   activeSessions!: EntityTable<ActiveSessionRow, "recordId">;
+  practiceCompletions!: EntityTable<PracticeCompletion, "lessonId">;
+  mixedReviewSessions!: EntityTable<MixedReviewSessionRow, "recordId">;
   settings!: EntityTable<SettingsRow, "id">;
   streak!: EntityTable<StreakRow, "id">;
   meta!: EntityTable<MetaRow, "key">;
@@ -59,6 +63,15 @@ class ThaiStudyDatabase extends Dexie {
       await Promise.all(tables.map((table) => transaction.table(table).clear()));
       await transaction.table("meta").put({ key: REDESIGN_NOTICE_KEY, value: true });
     });
+    this.version(4).stores({
+      lessonProgress: "&lessonId, status, masteryEligibleDate, lastStudiedAt",
+      reviewStates: "&itemId, dueDate", attempts: "&id, sessionId, lessonId, itemId, createdAt",
+      completedSessions: "&id, mode, lessonId, localDate, completedAt",
+      activeSessions: "&recordId, id, mode, lessonId, localDate",
+      practiceCompletions: "&lessonId, completedAt",
+      mixedReviewSessions: "&recordId, id, stage, startedAt",
+      settings: "&id", streak: "&id", meta: "&key",
+    });
   }
 }
 
@@ -71,9 +84,10 @@ export type ReadSnapshotResult = {
 };
 
 export async function readSnapshot(fallback: AppSnapshot): Promise<ReadSnapshotResult> {
-  const [lessonProgress, reviewStates, attempts, completedSessions, active, settings, streak, notice, lastResult, storedCurriculumVersion] = await Promise.all([
+  const [lessonProgress, reviewStates, attempts, completedSessions, active, practiceCompletions, mixedReview, settings, streak, notice, lastResult, storedCurriculumVersion] = await Promise.all([
     db.lessonProgress.toArray(), db.reviewStates.toArray(), db.attempts.toArray(), db.completedSessions.toArray(),
-    db.activeSessions.get("active"), db.settings.get("settings"), db.streak.get("streak"), db.meta.get(REDESIGN_NOTICE_KEY),
+    db.activeSessions.get("active"), db.practiceCompletions.toArray(), db.mixedReviewSessions.get("active"),
+    db.settings.get("settings"), db.streak.get("streak"), db.meta.get(REDESIGN_NOTICE_KEY),
     db.meta.get("lastResultSessionId"), db.meta.get(CURRICULUM_VERSION_KEY),
   ]);
   const incompatible = notice?.value === true;
@@ -81,13 +95,15 @@ export async function readSnapshot(fallback: AppSnapshot): Promise<ReadSnapshotR
   if (!settings) return { snapshot: fallback, incompatible, staleSessionDropped: false };
   try {
     const parsed = AppSnapshotSchema.parse({
-      version: 3,
+      version: 4,
       curriculumVersion: typeof storedCurriculumVersion?.value === "string"
         ? storedCurriculumVersion.value
         : fallback.curriculumVersion,
       lessonProgress, reviewStates, attempts, completedSessions,
       activeSession: active ? withoutKeys(active, ["recordId"]) : null,
       lastResultSessionId: lastResult?.value,
+      practiceCompletions,
+      activeMixedReviewSession: mixedReview ? withoutKeys(mixedReview, ["recordId"]) : null,
       settings: withoutKeys(settings, ["id"]), streak: streak ? withoutKeys(streak, ["id"]) : fallback.streak,
     });
     const reconciled = reconcileSnapshot(parsed, lessons, cueCards, CURRICULUM_VERSION);
@@ -113,12 +129,14 @@ export async function writeSnapshot(snapshot: AppSnapshot): Promise<void> {
   await db.transaction("rw", db.tables, async () => {
     await Promise.all([
       db.lessonProgress.clear(), db.reviewStates.clear(), db.attempts.clear(),
-      db.completedSessions.clear(), db.activeSessions.clear(),
+      db.completedSessions.clear(), db.activeSessions.clear(), db.practiceCompletions.clear(), db.mixedReviewSessions.clear(),
     ]);
     await Promise.all([
       db.lessonProgress.bulkPut(parsed.lessonProgress), db.reviewStates.bulkPut(parsed.reviewStates),
       db.attempts.bulkPut(parsed.attempts), db.completedSessions.bulkPut(parsed.completedSessions),
       parsed.activeSession ? db.activeSessions.put({ recordId: "active", ...parsed.activeSession }) : Promise.resolve(),
+      db.practiceCompletions.bulkPut(parsed.practiceCompletions),
+      parsed.activeMixedReviewSession ? db.mixedReviewSessions.put({ recordId: "active", ...parsed.activeMixedReviewSession }) : Promise.resolve(),
       db.settings.put({ id: "settings", ...parsed.settings }), db.streak.put({ id: "streak", ...parsed.streak }),
       db.meta.put({ key: CURRICULUM_VERSION_KEY, value: parsed.curriculumVersion }),
       parsed.lastResultSessionId

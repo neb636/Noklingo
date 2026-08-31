@@ -12,15 +12,23 @@ import {
 } from "@/engine/learning-engine";
 import { addLocalDays, localDateKey } from "@/engine/local-date";
 import { compareLocalDates } from "@/engine/local-date";
+import {
+  buildMixedReviewSession,
+  eligibleMixedReviewCards,
+  eligibleMixedReviewLessonIds,
+  mixedReviewQuestions,
+} from "@/engine/mixed-review";
 
 export const defaultSnapshot: AppSnapshot = {
-  version: 3,
+  version: 4,
   curriculumVersion: CURRICULUM_VERSION,
   lessonProgress: [],
   reviewStates: [],
   attempts: [],
   completedSessions: [],
   activeSession: null,
+  practiceCompletions: [],
+  activeMixedReviewSession: null,
   settings: {
     audioEnabled: true, volume: 0.75, speechRate: 0.85, theme: "system",
     showRomanization: true, showThaiScript: true, thaiSize: "standard",
@@ -49,6 +57,12 @@ interface StudyState extends AppSnapshot {
   finishSession: () => void;
   abandonSession: () => void;
   clearLastResult: () => void;
+  recordPracticeCompletion: (lessonId: string) => void;
+  startMixedReview: () => void;
+  setMixedReviewCardIndex: (index: number) => void;
+  startMixedReviewQuiz: () => void;
+  answerMixedReview: (selectedCardId: string) => void;
+  continueMixedReviewQuiz: () => void;
   updateSettings: (patch: Partial<Settings>) => void;
   replaceSnapshot: (snapshot: AppSnapshot) => void;
   reset: () => void;
@@ -229,6 +243,63 @@ export const useStudyStore = create<StudyState>((set) => ({
   }),
   abandonSession: () => set({ activeSession: null }),
   clearLastResult: () => set({ lastResultSessionId: undefined }),
+  recordPracticeCompletion: (lessonId) => set((state) => {
+    const lesson = lessonById(lessonId);
+    if (!lesson || lesson.activityMode === "video-only" || !lesson.cueCardIds.length
+      || state.practiceCompletions.some((entry) => entry.lessonId === lessonId)) return state;
+    return { practiceCompletions: [...state.practiceCompletions, { lessonId, completedAt: new Date().toISOString() }] };
+  }),
+  startMixedReview: () => set((state) => {
+    const lessonIds = eligibleMixedReviewLessonIds(state);
+    const cards = eligibleMixedReviewCards(state);
+    const session = buildMixedReviewSession(lessonIds, cards, new Date().toISOString());
+    return session ? { activeMixedReviewSession: session } : state;
+  }),
+  setMixedReviewCardIndex: (index) => set((state) => {
+    const session = state.activeMixedReviewSession;
+    if (!session || session.stage !== "cards" || index < 0 || index >= session.cardOrder.length) return state;
+    return { activeMixedReviewSession: { ...session, cardIndex: index } };
+  }),
+  startMixedReviewQuiz: () => set((state) => {
+    const session = state.activeMixedReviewSession;
+    if (!session || session.stage !== "cards" || session.cardIndex !== session.cardOrder.length - 1) return state;
+    return { activeMixedReviewSession: { ...session, stage: "quiz", questionIndex: 0 } };
+  }),
+  answerMixedReview: (selectedCardId) => set((state) => {
+    const session = state.activeMixedReviewSession;
+    const questions = session ? mixedReviewQuestions(session) : [];
+    const question = session && questions[session.questionIndex];
+    if (!session || session.stage !== "quiz" || session.feedbackCardId || !question
+      || !question.choiceCardIds.includes(selectedCardId)) return state;
+    const cardId = question.promptCardId;
+    return { activeMixedReviewSession: {
+      ...session,
+      answers: [...session.answers, {
+        cardId,
+        selectedCardId,
+        correct: selectedCardId === question.correctChoiceId,
+        answeredAt: new Date().toISOString(),
+      }],
+      feedbackCardId: cardId,
+    } };
+  }),
+  continueMixedReviewQuiz: () => set((state) => {
+    const session = state.activeMixedReviewSession;
+    if (!session || session.stage !== "quiz" || !session.feedbackCardId) return state;
+    const nextIndex = session.questionIndex + 1;
+    if (nextIndex === session.quizOrder.length) return { activeMixedReviewSession: {
+      ...session,
+      stage: "results",
+      questionIndex: nextIndex,
+      feedbackCardId: undefined,
+      completedAt: new Date().toISOString(),
+    } };
+    return { activeMixedReviewSession: {
+      ...session,
+      questionIndex: nextIndex,
+      feedbackCardId: undefined,
+    } };
+  }),
   updateSettings: (patch) => set((state) => {
     const next = { ...state.settings, ...patch };
     if (!next.showRomanization && !next.showThaiScript) {
@@ -258,10 +329,12 @@ export function reconcileForCurrentCurriculum(snapshot: AppSnapshot): AppSnapsho
 
 export function snapshotFromState(state: StudyState): AppSnapshot {
   return AppSnapshotSchema.parse({
-    version: 3, curriculumVersion: CURRICULUM_VERSION,
+    version: 4, curriculumVersion: CURRICULUM_VERSION,
     lessonProgress: state.lessonProgress, reviewStates: state.reviewStates,
     attempts: state.attempts, completedSessions: state.completedSessions,
     activeSession: state.activeSession, lastResultSessionId: state.lastResultSessionId,
+    practiceCompletions: state.practiceCompletions,
+    activeMixedReviewSession: state.activeMixedReviewSession,
     settings: state.settings, streak: state.streak,
   });
 }

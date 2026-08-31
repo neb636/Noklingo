@@ -30,7 +30,9 @@ afterEach(() => {
 
 describe("lesson collection UI", () => {
   it("offers the lesson collection while scored study is unavailable", () => {
-    expect(lessons).toHaveLength(23);
+    expect(lessons).toHaveLength(21);
+    expect(lessons.some((lesson) => lesson.id === "question-words")).toBe(false);
+    expect(lessons.some((lesson) => lesson.id === "connectors")).toBe(false);
     expect(lessons.some((lesson) => lesson.id.startsWith("reel-2026-"))).toBe(false);
     render(<TodayPage />);
     expect(screen.getByRole("heading", { name: new RegExp(`${lessons.length} short lessons are ready`, "i") })).toBeInTheDocument();
@@ -89,5 +91,20 @@ describe("lesson collection UI", () => {
     fireEvent.click(screen.getByRole("button", { name: /see results/i }));
 
     expect(onComplete).toHaveBeenCalledWith(1, 1);
+  });
+
+  it("unlocks a lesson for mixed review only after its practice quiz is completed", () => {
+    const lesson = lessons.find((item) => item.id === "large-numbers")!;
+    const card = cueCards.find((item) => item.lessonId === lesson.id)!;
+    render(<LessonExperience lesson={lesson} />);
+
+    fireEvent.click(screen.getByRole("button", { name: /skip to cards/i }));
+    expect(useStudyStore.getState().practiceCompletions).toEqual([]);
+    fireEvent.click(screen.getByRole("button", { name: /start practice quiz/i }));
+    fireEvent.click(screen.getByRole("button", { name: card.naturalMeaning }));
+    fireEvent.click(screen.getByRole("button", { name: /check answer/i }));
+    fireEvent.click(screen.getByRole("button", { name: /see results/i }));
+
+    expect(useStudyStore.getState().practiceCompletions.map((entry) => entry.lessonId)).toEqual([lesson.id]);
   });
 });
