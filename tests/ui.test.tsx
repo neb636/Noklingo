@@ -30,8 +30,10 @@ afterEach(() => {
 
 describe("lesson collection UI", () => {
   it("offers the lesson collection while scored study is unavailable", () => {
+    expect(lessons).toHaveLength(23);
+    expect(lessons.some((lesson) => lesson.id.startsWith("reel-2026-"))).toBe(false);
     render(<TodayPage />);
-    expect(screen.getByRole("heading", { name: /23 short lessons are ready/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: new RegExp(`${lessons.length} short lessons are ready`, "i") })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /browse lessons/i })).toBeInTheDocument();
   });
 

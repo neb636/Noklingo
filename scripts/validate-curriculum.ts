@@ -1,7 +1,7 @@
 import { existsSync } from "node:fs";
 import { resolve, sep } from "node:path";
 import { validateCurriculum } from "../src/domain/curriculum-validation";
-import { cueCards, lessons } from "../src/domain/seed";
+import { authoringCueCards, authoringLessons } from "../src/domain/seed";
 
 const publicRoot = resolve(import.meta.dirname, "..", "public");
 
@@ -11,7 +11,7 @@ function assetFile(localPath: string) {
   return file;
 }
 
-const issues = validateCurriculum(lessons, cueCards, {
+const issues = validateCurriculum(authoringLessons, authoringCueCards, {
   assetExists: (localPath) => existsSync(assetFile(localPath)),
 });
 if (issues.length) {

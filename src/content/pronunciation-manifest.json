@@ -6,7 +6,7 @@
       "sourceVideo": "/lessons/drafts/affectionate-phrases/intro.mp4",
       "sourceHash": "df675d99453f3f290b77bdeb2b5024bdf4641df51ed1b217a52b0f4b44c84976",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:23.863Z",
+      "generatedAt": "2026-08-31T15:57:00.404Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -276,7 +276,7 @@
       "sourceVideo": "/lessons/drafts/coffee-order/intro.mp4",
       "sourceHash": "9d4014a3d22986099e9e0903aec3df3d7f70794f118ffc8e73b2302bc1f57b0d",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:20.273Z",
+      "generatedAt": "2026-08-31T15:56:57.456Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": []
     },
@@ -285,7 +285,7 @@
       "sourceVideo": "/lessons/drafts/common-verbs/intro.mp4",
       "sourceHash": "3f83ccd706e547723f02dd2c2f58675522160fc96836d57c516edbb1dc12c139",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:15.938Z",
+      "generatedAt": "2026-08-31T15:56:54.100Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -555,7 +555,7 @@
       "sourceVideo": "/lessons/drafts/compliments/intro.mp4",
       "sourceHash": "46b0935f16058c669f6196def7082c6cdf1c4b0f05e919517a2f302cd27d9a2d",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:22.339Z",
+      "generatedAt": "2026-08-31T15:56:59.233Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -933,7 +933,7 @@
       "sourceVideo": "/lessons/drafts/connectors/intro.mp4",
       "sourceHash": "bfc7a8905266679b712968943e43755dfb33fa1a8c8ea3b2adca4710dc43fd1f",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:16.507Z",
+      "generatedAt": "2026-08-31T15:56:54.570Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -1376,7 +1376,7 @@
       "sourceVideo": "/lessons/drafts/country-names/intro.mp4",
       "sourceHash": "74c71e51953c5f10952f72ef664239d7046472f6187884a7240ae765a6002ea0",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:18.324Z",
+      "generatedAt": "2026-08-31T15:56:55.880Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": []
     },
@@ -1385,7 +1385,7 @@
       "sourceVideo": "/lessons/drafts/directions/intro.mp4",
       "sourceHash": "0a7882eaea6be4f98527b8f994189b3a58aff15b6cae6c130797dccee5b29177",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:18.330Z",
+      "generatedAt": "2026-08-31T15:56:55.886Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -1693,7 +1693,7 @@
       "sourceVideo": "/lessons/drafts/encouragement/intro.mp4",
       "sourceHash": "c37ef63e2427f5385e41e9541dc9743c8608e5c2062d1ac0307772259afe0e5d",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:21.846Z",
+      "generatedAt": "2026-08-31T15:56:58.870Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -1993,7 +1993,7 @@
       "sourceVideo": "/lessons/drafts/feeling-unwell/intro.mp4",
       "sourceHash": "94e3f2b14f06afaeb60917f3dcd8fdc14a9c634ce475a85a211856e014bd4f8f",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:19.220Z",
+      "generatedAt": "2026-08-31T15:56:56.540Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -2263,7 +2263,7 @@
       "sourceVideo": "/lessons/drafts/food-allergies/intro.mp4",
       "sourceHash": "208e36f313d9213df0f0642484c2de85a9efeb483fa5d9a4c0a90ba65ec4d7b0",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:19.925Z",
+      "generatedAt": "2026-08-31T15:56:57.142Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -2601,7 +2601,7 @@
       "sourceVideo": "/lessons/drafts/food-flavors/intro.mp4",
       "sourceHash": "812494cc82f9901cce5a1c71c4f06cb7f052767ae5f8b43915bdd2537c247655",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:19.596Z",
+      "generatedAt": "2026-08-31T15:56:56.857Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -2923,7 +2923,7 @@
       "sourceVideo": "/lessons/drafts/its-okay/intro.mp4",
       "sourceHash": "d1fa9fe35c4c1649b186f2bc2a0d94a381e00de3ce196e9de5a79a67271c8a3f",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:22.918Z",
+      "generatedAt": "2026-08-31T15:56:59.623Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -3283,7 +3283,7 @@
       "sourceVideo": "/lessons/drafts/large-numbers/intro.mp4",
       "sourceHash": "e90f4ddf03265fd55242ffb18eb06b75ec43d23eca480d8180f981a41f52d7b7",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:16.871Z",
+      "generatedAt": "2026-08-31T15:56:54.876Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -3443,7 +3443,7 @@
       "sourceVideo": "/lessons/drafts/making-up/intro.mp4",
       "sourceHash": "12aa3b11f037d675f0704a6f8feaa6937412049dc53c4510e52b90aa18a0388f",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:23.398Z",
+      "generatedAt": "2026-08-31T15:57:00.045Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -3733,7 +3733,7 @@
       "sourceVideo": "/lessons/drafts/movie-invitation/intro.mp4",
       "sourceHash": "987613dd5f5722c3c404e70d7ee6854d799815c3689627c131d2cc8d512bb7ab",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:21.094Z",
+      "generatedAt": "2026-08-31T15:56:58.209Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -4030,7 +4030,7 @@
       "sourceVideo": "/lessons/drafts/parting-safely/intro.mp4",
       "sourceHash": "3bb51dfe20f4b41cec8987fd3fd2145c9708523038aa9781ee61d9bc164d2b71",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:21.511Z",
+      "generatedAt": "2026-08-31T15:56:58.596Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -4349,7 +4349,7 @@
       "sourceVideo": "/lessons/drafts/quantities/intro.mp4",
       "sourceHash": "a96e169c21cd452a36684c00ddfcbdbffc4c587216c12ee33fc9d5d8a945e427",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:17.835Z",
+      "generatedAt": "2026-08-31T15:56:55.565Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -4787,7 +4787,7 @@
       "sourceVideo": "/lessons/drafts/question-words/intro.mp4",
       "sourceHash": "d32d3fb844c51f0bc7420081cbae5f0fefc6801dcc05a3d858876a78939a7a25",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:16.219Z",
+      "generatedAt": "2026-08-31T15:56:54.328Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -5165,11 +5165,4396 @@
       ]
     },
     {
+      "lessonId": "reel-2026-07-25",
+      "sourceVideo": "/lessons/drafts/reel-2026-07-25/intro.mp4",
+      "sourceHash": "5410224fc53b35a023c69cc554f5871aed4e50ddaf3bc2aafd3301ab2e8d9134",
+      "model": "large-v3",
+      "generatedAt": "2026-08-31T15:57:35.413Z",
+      "algorithmFingerprint": "a94210fc1c3198f8",
+      "clips": [
+        {
+          "cueCardId": "draft-reel-2026-07-25-1",
+          "thaiText": "เสมอ",
+          "englishText": "always",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-25/audio/draft-reel-2026-07-25-1-th.m4a",
+            "status": "matched",
+            "start": 1.72,
+            "end": 2.7199999999999998,
+            "rawStart": 0.98,
+            "rawEnd": 2.08,
+            "protectedStart": 1.78,
+            "protectedEnd": 2.45,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " เสมอ",
+            "confidence": 0.9739810900390148,
+            "candidates": [
+              {
+                "start": 0.98,
+                "end": 2.08,
+                "transcriptMatch": " เสมอ",
+                "confidence": 0.9739810900390148,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.339928303289145,
+              "end": 0.24645605685008298
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-25/audio/draft-reel-2026-07-25-1-en.m4a",
+            "status": "matched",
+            "start": 0.31,
+            "end": 1.4100000000000001,
+            "rawStart": 0,
+            "rawEnd": 0.98,
+            "protectedStart": 0.4,
+            "protectedEnd": 1.15,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": "always",
+            "confidence": 0.9453738723695279,
+            "candidates": [
+              {
+                "start": 0,
+                "end": 0.98,
+                "transcriptMatch": "always",
+                "confidence": 0.9453738723695279,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.22408287296787557,
+              "end": 0.23351795287951818
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-25-2",
+          "thaiText": "ปกติ",
+          "englishText": "usually",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-25/audio/draft-reel-2026-07-25-2-th.m4a",
+            "status": "matched",
+            "start": 5.822500000000001,
+            "end": 6.405,
+            "rawStart": 5.17,
+            "rawEnd": 6.77,
+            "protectedStart": 6.02,
+            "protectedEnd": 6.09,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " ปกติ",
+            "confidence": 0.9996863389015198,
+            "candidates": [
+              {
+                "start": 5.17,
+                "end": 6.77,
+                "transcriptMatch": " ปกติ",
+                "confidence": 0.9996863389015198,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.12334798413102514,
+              "end": 0.14544009181505047
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-25/audio/draft-reel-2026-07-25-2-en.m4a",
+            "status": "matched",
+            "start": 3.9099999999999997,
+            "end": 5.55,
+            "rawStart": 3.63,
+            "rawEnd": 4.75,
+            "protectedStart": 4.02,
+            "protectedEnd": 5.3,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " usually",
+            "confidence": 0.8816681504994631,
+            "candidates": [
+              {
+                "start": 3.63,
+                "end": 4.75,
+                "transcriptMatch": " usually",
+                "confidence": 0.8816681504994631,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.1941382803616073,
+              "end": 0.2429572059242595
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-25-3",
+          "thaiText": "เป็นประจำ",
+          "englishText": "frequently",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-25/audio/draft-reel-2026-07-25-3-th.m4a",
+            "status": "matched",
+            "start": 9.46,
+            "end": 10.600000000000001,
+            "rawStart": 8.7,
+            "rawEnd": 10.56,
+            "protectedStart": 9.58,
+            "protectedEnd": 10.46,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " เป็นประจำ",
+            "confidence": 0.998092542716435,
+            "candidates": [
+              {
+                "start": 8.7,
+                "end": 10.56,
+                "transcriptMatch": " เป็นประจำ",
+                "confidence": 0.998092542716435,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "fallback"
+            },
+            "boundaryConfidence": {
+              "start": 0.2383817549017735,
+              "end": 0
+            },
+            "warnings": [
+              "end-fallback"
+            ]
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-25/audio/draft-reel-2026-07-25-3-en.m4a",
+            "status": "matched",
+            "start": 6.48,
+            "end": 7.51,
+            "rawStart": 6.8,
+            "rawEnd": 8.08,
+            "protectedStart": 6.59,
+            "protectedEnd": 7.23,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " frequently",
+            "confidence": 0.9045833200216293,
+            "candidates": [
+              {
+                "start": 6.8,
+                "end": 8.08,
+                "transcriptMatch": " frequently",
+                "confidence": 0.9045833200216293,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2747820116663596,
+              "end": 0.24609496053403154
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-25-4",
+          "thaiText": "บ่อย",
+          "englishText": "often",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-25/audio/draft-reel-2026-07-25-4-th.m4a",
+            "status": "matched",
+            "start": 12.805,
+            "end": 14.2,
+            "rawStart": 11.94,
+            "rawEnd": 13.26,
+            "protectedStart": 13.02,
+            "protectedEnd": 13.93,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " บ่อย",
+            "confidence": 0.9993801474571228,
+            "candidates": [
+              {
+                "start": 11.94,
+                "end": 13.26,
+                "transcriptMatch": " บ่อย",
+                "confidence": 0.9993801474571228,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2492869553412985,
+              "end": 0.26045456920524834
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-25/audio/draft-reel-2026-07-25-4-en.m4a",
+            "status": "matched",
+            "start": 10.620000000000001,
+            "end": 12.2,
+            "rawStart": 10.56,
+            "rawEnd": 11.62,
+            "protectedStart": 10.72,
+            "protectedEnd": 11.99,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " often",
+            "confidence": 0.9174060475826263,
+            "candidates": [
+              {
+                "start": 10.56,
+                "end": 11.62,
+                "transcriptMatch": " often",
+                "confidence": 0.9174060475826263,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "fallback",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0,
+              "end": 0.23993067792731498
+            },
+            "warnings": [
+              "start-fallback"
+            ]
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-25-5",
+          "thaiText": "บางครั้ง",
+          "englishText": "sometimes",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-25/audio/draft-reel-2026-07-25-5-th.m4a",
+            "status": "matched",
+            "start": 15.875,
+            "end": 16.564999999999998,
+            "rawStart": 15.35,
+            "rawEnd": 17.13,
+            "protectedStart": 16.09,
+            "protectedEnd": 16.46,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " บางครั้ง",
+            "confidence": 0.9992466883659363,
+            "candidates": [
+              {
+                "start": 15.35,
+                "end": 17.13,
+                "transcriptMatch": " บางครั้ง",
+                "confidence": 0.9992466883659363,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.25242237922737903,
+              "end": 0.319997220866587
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-25/audio/draft-reel-2026-07-25-5-en.m4a",
+            "status": "matched",
+            "start": 14.325,
+            "end": 15.415,
+            "rawStart": 13.26,
+            "rawEnd": 14.66,
+            "protectedStart": 14.5,
+            "protectedEnd": 15.29,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " sometimes",
+            "confidence": 0.9237974798679351,
+            "candidates": [
+              {
+                "start": 13.26,
+                "end": 14.66,
+                "transcriptMatch": " sometimes",
+                "confidence": 0.9237974798679351,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.1959783494292036,
+              "end": 0.2180524793625563
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-25-6",
+          "thaiText": "นานๆที",
+          "englishText": "occasionally",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-25/audio/draft-reel-2026-07-25-6-th.m4a",
+            "status": "matched",
+            "start": 19.78,
+            "end": 20.645,
+            "rawStart": 19.24,
+            "rawEnd": 21.08,
+            "protectedStart": 19.97,
+            "protectedEnd": 20.47,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " นานๆที",
+            "confidence": 0.987775255203247,
+            "candidates": [
+              {
+                "start": 19.24,
+                "end": 21.08,
+                "transcriptMatch": " นานๆที",
+                "confidence": 0.987775255203247,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2796187588359622,
+              "end": 0.25841250631609824
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-25/audio/draft-reel-2026-07-25-6-en.m4a",
+            "status": "matched",
+            "start": 17.235,
+            "end": 17.975,
+            "rawStart": 17.16,
+            "rawEnd": 18.4,
+            "protectedStart": 17.32,
+            "protectedEnd": 17.77,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " occasionally",
+            "confidence": 0.9240299272537231,
+            "candidates": [
+              {
+                "start": 17.16,
+                "end": 18.4,
+                "transcriptMatch": " occasionally",
+                "confidence": 0.9240299272537231,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2754785993884461,
+              "end": 0.25162155150389626
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-25-7",
+          "thaiText": "แทบจะไม่",
+          "englishText": "rarely",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-25/audio/draft-reel-2026-07-25-7-th.m4a",
+            "status": "matched",
+            "start": 23.08,
+            "end": 24.884999999999998,
+            "rawStart": 22.48,
+            "rawEnd": 24.12,
+            "protectedStart": 23.19,
+            "protectedEnd": 24.72,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " แทบจะไม่",
+            "confidence": 0.9978319585323334,
+            "candidates": [
+              {
+                "start": 22.48,
+                "end": 24.12,
+                "transcriptMatch": " แทบจะไม่",
+                "confidence": 0.9978319585323334,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.17550886324128553,
+              "end": 0.22465874308080952
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-25/audio/draft-reel-2026-07-25-7-en.m4a",
+            "status": "matched",
+            "start": 20.645,
+            "end": 22.7,
+            "rawStart": 21.08,
+            "rawEnd": 22.22,
+            "protectedStart": 20.73,
+            "protectedEnd": 22.62,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " rarely",
+            "confidence": 0.9938350176811218,
+            "candidates": [
+              {
+                "start": 21.08,
+                "end": 22.22,
+                "transcriptMatch": " rarely",
+                "confidence": 0.9938350176811218,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.25841250631609824,
+              "end": 0.16683951971339578
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-25-8",
+          "thaiText": "ไม่เคย",
+          "englishText": "never",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-25/audio/draft-reel-2026-07-25-8-th.m4a",
+            "status": "matched",
+            "start": 26.08,
+            "end": 27.585,
+            "rawStart": 25.68,
+            "rawEnd": 26.84,
+            "protectedStart": 26.31,
+            "protectedEnd": 27.28,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " ไม่เคย",
+            "confidence": 0.9998788499832153,
+            "candidates": [
+              {
+                "start": 25.68,
+                "end": 26.84,
+                "transcriptMatch": " ไม่เคย",
+                "confidence": 0.9998788499832153,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2308157824604484,
+              "end": 0.2620854325504279
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-25/audio/draft-reel-2026-07-25-8-en.m4a",
+            "status": "matched",
+            "start": 24.884999999999998,
+            "end": 26.025,
+            "rawStart": 24.12,
+            "rawEnd": 25.2,
+            "protectedStart": 25,
+            "protectedEnd": 25.79,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " never",
+            "confidence": 0.9352741515636445,
+            "candidates": [
+              {
+                "start": 24.12,
+                "end": 25.2,
+                "transcriptMatch": " never",
+                "confidence": 0.9352741515636445,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.22465874308080952,
+              "end": 0.21432958604199154
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        }
+      ]
+    },
+    {
+      "lessonId": "reel-2026-07-26",
+      "sourceVideo": "/lessons/drafts/reel-2026-07-26/intro.mp4",
+      "sourceHash": "a398bbf9b9aa6654cb94ef8c249d358637c74903fe29469f3c1b95c237a3428c",
+      "model": "large-v3",
+      "generatedAt": "2026-08-31T16:16:11.668Z",
+      "algorithmFingerprint": "a94210fc1c3198f8",
+      "clips": [
+        {
+          "cueCardId": "draft-reel-2026-07-26-1",
+          "thaiText": "แกล้ง",
+          "englishText": "to prank or trick someone",
+          "thai": {
+            "status": "unmatched",
+            "candidates": [],
+            "diagnostic": "No candidate reached the confidence threshold.",
+            "warnings": [
+              "unmatched"
+            ]
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-26/audio/draft-reel-2026-07-26-1-en.m4a",
+            "status": "matched",
+            "start": 6.035,
+            "end": 6.949999999999999,
+            "rawStart": 5.31,
+            "rawEnd": 7.69,
+            "protectedStart": 6.08,
+            "protectedEnd": 6.74,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " to prank or trick someone",
+            "confidence": 0.9304335946114733,
+            "candidates": [
+              {
+                "start": 5.31,
+                "end": 7.69,
+                "transcriptMatch": " to prank or trick someone",
+                "confidence": 0.9304335946114733,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2612825283378402,
+              "end": 0.33701024107718147
+            },
+            "warnings": []
+          },
+          "pairStatus": "english-only"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-26-2",
+          "thaiText": "อ่อม",
+          "englishText": "dead boring",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-26/audio/draft-reel-2026-07-26-2-th.m4a",
+            "status": "matched",
+            "start": 11.405,
+            "end": 12.415,
+            "rawStart": 11.25,
+            "rawEnd": 11.75,
+            "protectedStart": 11.53,
+            "protectedEnd": 12.15,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " อ่อม",
+            "confidence": 0.9960195392370224,
+            "candidates": [
+              {
+                "start": 14.95,
+                "end": 15.43,
+                "transcriptMatch": "อ่อม",
+                "confidence": 0.9981114995479584,
+                "exact": true,
+                "segmentIndex": 1
+              },
+              {
+                "start": 11.25,
+                "end": 11.75,
+                "transcriptMatch": " อ่อม",
+                "confidence": 0.9960195392370224,
+                "exact": true,
+                "segmentIndex": 1
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.30687365485431745,
+              "end": 0.3079269274456343
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-26/audio/draft-reel-2026-07-26-2-en.m4a",
+            "status": "matched",
+            "start": 12.5025,
+            "end": 12.959999999999999,
+            "rawStart": 11.75,
+            "rawEnd": 13.25,
+            "protectedStart": 12.54,
+            "protectedEnd": 12.83,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " dead boring",
+            "confidence": 0.9338060322741513,
+            "candidates": [
+              {
+                "start": 17.39,
+                "end": 18.23,
+                "transcriptMatch": " dead boring",
+                "confidence": 0.9993814396858215,
+                "exact": true,
+                "segmentIndex": 2
+              },
+              {
+                "start": 11.75,
+                "end": 13.25,
+                "transcriptMatch": " dead boring",
+                "confidence": 0.9338060322741513,
+                "exact": true,
+                "segmentIndex": 1
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.10367709571818927,
+              "end": 0.5459180944014198
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-26-3",
+          "thaiText": "เม้าท์",
+          "englishText": "to gossip",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-26/audio/draft-reel-2026-07-26-3-th.m4a",
+            "status": "matched",
+            "start": 19.189999999999998,
+            "end": 20.15,
+            "rawStart": 18.71,
+            "rawEnd": 19.77,
+            "protectedStart": 19.3,
+            "protectedEnd": 19.89,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " เม้าท์",
+            "confidence": 0.9462529777735472,
+            "candidates": [
+              {
+                "start": 21.95,
+                "end": 22.21,
+                "transcriptMatch": "เม้าท์",
+                "confidence": 0.992589216709137,
+                "exact": true,
+                "segmentIndex": 2
+              },
+              {
+                "start": 18.71,
+                "end": 19.77,
+                "transcriptMatch": " เม้าท์",
+                "confidence": 0.9462529777735472,
+                "exact": true,
+                "segmentIndex": 2
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.31444904544054314,
+              "end": 0.33632449209705506
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-26/audio/draft-reel-2026-07-26-3-en.m4a",
+            "status": "matched",
+            "start": 20.5,
+            "end": 21.490000000000002,
+            "rawStart": 19.77,
+            "rawEnd": 21.07,
+            "protectedStart": 20.63,
+            "protectedEnd": 21.24,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " to gossip",
+            "confidence": 0.9680268275737762,
+            "candidates": [
+              {
+                "start": 23.63,
+                "end": 24.13,
+                "transcriptMatch": " to gossip",
+                "confidence": 0.9974864912033081,
+                "exact": true,
+                "segmentIndex": 3
+              },
+              {
+                "start": 19.77,
+                "end": 21.07,
+                "transcriptMatch": " to gossip",
+                "confidence": 0.9680268275737762,
+                "exact": true,
+                "segmentIndex": 2
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.27590473469868315,
+              "end": 0.4901153234596636
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-26-4",
+          "thaiText": "ปัง",
+          "englishText": "slay or fabulous",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-26/audio/draft-reel-2026-07-26-4-th.m4a",
+            "status": "matched",
+            "start": 23.39,
+            "end": 25.755,
+            "rawStart": 25.03,
+            "rawEnd": 25.99,
+            "protectedStart": 23.43,
+            "protectedEnd": 25.63,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " ปัง",
+            "confidence": 0.988390383720398,
+            "candidates": [
+              {
+                "start": 30.09,
+                "end": 30.43,
+                "transcriptMatch": " ปัง",
+                "confidence": 0.9887121033668518,
+                "exact": true,
+                "segmentIndex": 4
+              },
+              {
+                "start": 25.03,
+                "end": 25.99,
+                "transcriptMatch": " ปัง",
+                "confidence": 0.988390383720398,
+                "exact": true,
+                "segmentIndex": 3
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2830784213664622,
+              "end": 0.3317979046994661
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-26/audio/draft-reel-2026-07-26-4-en.m4a",
+            "status": "matched",
+            "start": 27.39,
+            "end": 29.244999999999997,
+            "rawStart": 25.99,
+            "rawEnd": 28.77,
+            "protectedStart": 27.57,
+            "protectedEnd": 29,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " slay or fabulous",
+            "confidence": 0.9441161588020622,
+            "candidates": [
+              {
+                "start": 25.99,
+                "end": 28.77,
+                "transcriptMatch": " slay or fabulous",
+                "confidence": 0.9441161588020622,
+                "exact": true,
+                "segmentIndex": 3
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.36591581298514103,
+              "end": 0.3190201197861021
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-26-5",
+          "thaiText": "เท",
+          "englishText": "to ditch someone",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-26/audio/draft-reel-2026-07-26-5-th.m4a",
+            "status": "matched",
+            "start": 32.504999999999995,
+            "end": 34.24,
+            "rawStart": 32.95,
+            "rawEnd": 33.45,
+            "protectedStart": 32.6,
+            "protectedEnd": 33.94,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " เท",
+            "confidence": 0.9439455956220627,
+            "candidates": [
+              {
+                "start": 36.23,
+                "end": 36.51,
+                "transcriptMatch": "เท",
+                "confidence": 0.9982374131679534,
+                "exact": true,
+                "segmentIndex": 4
+              },
+              {
+                "start": 32.95,
+                "end": 33.45,
+                "transcriptMatch": " เท",
+                "confidence": 0.9439455956220627,
+                "exact": true,
+                "segmentIndex": 4
+              },
+              {
+                "start": 0,
+                "end": 0.08,
+                "transcriptMatch": "เท",
+                "confidence": 0.9417048580944538,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2838866847520916,
+              "end": 0.24375423118413803
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-26/audio/draft-reel-2026-07-26-5-en.m4a",
+            "status": "matched",
+            "start": 34.295,
+            "end": 35.085,
+            "rawStart": 33.45,
+            "rawEnd": 35.29,
+            "protectedStart": 34.49,
+            "protectedEnd": 34.96,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " to ditch someone",
+            "confidence": 0.9440120765566826,
+            "candidates": [
+              {
+                "start": 33.45,
+                "end": 35.29,
+                "transcriptMatch": " to ditch someone",
+                "confidence": 0.9440120765566826,
+                "exact": true,
+                "segmentIndex": 4
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.23486780504336244,
+              "end": 0.41179641852332655
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        }
+      ]
+    },
+    {
+      "lessonId": "reel-2026-07-27",
+      "sourceVideo": "/lessons/drafts/reel-2026-07-27/intro.mp4",
+      "sourceHash": "12250903a7d065b3c95fb4482e9c24e57cd1348da73fc3b677b1471d3b388bb8",
+      "model": "large-v3",
+      "generatedAt": "2026-08-31T15:59:25.054Z",
+      "algorithmFingerprint": "a94210fc1c3198f8",
+      "clips": [
+        {
+          "cueCardId": "draft-reel-2026-07-27-1",
+          "thaiText": "โสด",
+          "englishText": "single",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-27/audio/draft-reel-2026-07-27-1-th.m4a",
+            "status": "matched",
+            "start": 7.16,
+            "end": 8.895,
+            "rawStart": 7.66,
+            "rawEnd": 8.42,
+            "protectedStart": 7.33,
+            "protectedEnd": 8.58,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": "โสด",
+            "confidence": 0.995493586063385,
+            "candidates": [
+              {
+                "start": 7.66,
+                "end": 8.42,
+                "transcriptMatch": "โสด",
+                "confidence": 0.995493586063385,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2401102420584209,
+              "end": 0.2932973136081658
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-27/audio/draft-reel-2026-07-27-1-en.m4a",
+            "status": "matched",
+            "start": 5.82,
+            "end": 7.16,
+            "rawStart": 6.12,
+            "rawEnd": 6.46,
+            "protectedStart": 6,
+            "protectedEnd": 6.85,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " single",
+            "confidence": 0.9985513854026794,
+            "candidates": [
+              {
+                "start": 6.12,
+                "end": 6.46,
+                "transcriptMatch": " single",
+                "confidence": 0.9985513854026794,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.3297647115689857,
+              "end": 0.25120660237379866
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-27-2",
+          "thaiText": "มีแฟน",
+          "englishText": "I have a girlfriend or boyfriend",
+          "thai": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "start": 12.68,
+                "end": 13.66,
+                "transcriptMatch": "มีแฟน",
+                "confidence": 0.9998021895885467,
+                "exact": true,
+                "segmentIndex": 0
+              },
+              {
+                "start": 3.58,
+                "end": 4.92,
+                "transcriptMatch": "มีแฟน",
+                "confidence": 0.999002411365509,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "diagnostic": "The top candidate is too close to another occurrence.",
+            "warnings": [
+              "ambiguous"
+            ]
+          },
+          "english": {
+            "status": "unmatched",
+            "candidates": [],
+            "diagnostic": "No candidate reached the confidence threshold.",
+            "warnings": [
+              "unmatched"
+            ]
+          },
+          "pairStatus": "ambiguous"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-27-3",
+          "thaiText": "หมั้นแล้ว",
+          "englishText": "engaged",
+          "thai": {
+            "status": "unmatched",
+            "candidates": [],
+            "diagnostic": "No candidate reached the confidence threshold.",
+            "warnings": [
+              "unmatched"
+            ]
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-27/audio/draft-reel-2026-07-27-3-en.m4a",
+            "status": "matched",
+            "start": 15.02,
+            "end": 16.424999999999997,
+            "rawStart": 15.28,
+            "rawEnd": 15.66,
+            "protectedStart": 15.07,
+            "protectedEnd": 16.18,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " engaged",
+            "confidence": 0.9977383470535278,
+            "candidates": [
+              {
+                "start": 15.28,
+                "end": 15.66,
+                "transcriptMatch": " engaged",
+                "confidence": 0.9977383470535278,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.37668337365321886,
+              "end": 0.25865693774123283
+            },
+            "warnings": []
+          },
+          "pairStatus": "english-only"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-27-4",
+          "thaiText": "แต่งงานแล้ว",
+          "englishText": "married",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-27/audio/draft-reel-2026-07-27-4-th.m4a",
+            "status": "matched",
+            "start": 19.655,
+            "end": 22.58,
+            "rawStart": 20.28,
+            "rawEnd": 22.12,
+            "protectedStart": 19.84,
+            "protectedEnd": 22.46,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": "แต่งงานแล้ว",
+            "confidence": 0.9994161474704742,
+            "candidates": [
+              {
+                "start": 20.28,
+                "end": 22.12,
+                "transcriptMatch": "แต่งงานแล้ว",
+                "confidence": 0.9994161474704742,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.26140691026220253,
+              "end": 0.46346758716673186
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-27/audio/draft-reel-2026-07-27-4-en.m4a",
+            "status": "matched",
+            "start": 16.72,
+            "end": 19.595,
+            "rawStart": 18.6,
+            "rawEnd": 19.02,
+            "protectedStart": 16.83,
+            "protectedEnd": 19.26,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " married",
+            "confidence": 0.99640944480896,
+            "candidates": [
+              {
+                "start": 18.6,
+                "end": 19.02,
+                "transcriptMatch": " married",
+                "confidence": 0.99640944480896,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2615601919667196,
+              "end": 0.28820650967525313
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-27-5",
+          "thaiText": "มีลูก",
+          "englishText": "I have a child",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-27/audio/draft-reel-2026-07-27-5-th.m4a",
+            "status": "matched",
+            "start": 24.545,
+            "end": 26.33,
+            "rawStart": 25.1,
+            "rawEnd": 26.16,
+            "protectedStart": 24.64,
+            "protectedEnd": 26.26,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": "มีลูก",
+            "confidence": 0.9998587427139283,
+            "candidates": [
+              {
+                "start": 25.1,
+                "end": 26.16,
+                "transcriptMatch": "มีลูก",
+                "confidence": 0.9998587427139283,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "fallback"
+            },
+            "boundaryConfidence": {
+              "start": 0.2504717692140864,
+              "end": 0
+            },
+            "warnings": [
+              "end-fallback"
+            ]
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-27/audio/draft-reel-2026-07-27-5-en.m4a",
+            "status": "matched",
+            "start": 22.58,
+            "end": 24.305,
+            "rawStart": 22.12,
+            "rawEnd": 23.8,
+            "protectedStart": 22.67,
+            "protectedEnd": 24,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " I have a child",
+            "confidence": 0.9988145208358765,
+            "candidates": [
+              {
+                "start": 22.12,
+                "end": 23.8,
+                "transcriptMatch": " I have a child",
+                "confidence": 0.9988145208358765,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.46346758716673186,
+              "end": 0.29805101532058687
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        }
+      ]
+    },
+    {
+      "lessonId": "reel-2026-07-28",
+      "sourceVideo": "/lessons/drafts/reel-2026-07-28/intro.mp4",
+      "sourceHash": "0d2e0c6a7e9dc51e66b01db7112ec5e9e2b30811550ad1f57e749be8879f5530",
+      "model": "large-v3",
+      "generatedAt": "2026-08-31T16:00:31.152Z",
+      "algorithmFingerprint": "a94210fc1c3198f8",
+      "clips": [
+        {
+          "cueCardId": "draft-reel-2026-07-28-1",
+          "thaiText": "เออ",
+          "englishText": "yeah",
+          "thai": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "start": 13.6,
+                "end": 13.98,
+                "transcriptMatch": " เออ",
+                "confidence": 0.9977177798748016,
+                "exact": true,
+                "segmentIndex": 4
+              },
+              {
+                "start": 11.92,
+                "end": 12.02,
+                "transcriptMatch": " เออ",
+                "confidence": 0.9966523921489716,
+                "exact": true,
+                "segmentIndex": 3
+              },
+              {
+                "start": 12.02,
+                "end": 12.58,
+                "transcriptMatch": " เออ",
+                "confidence": 0.9959126675128936,
+                "exact": true,
+                "segmentIndex": 3
+              },
+              {
+                "start": 10.88,
+                "end": 11.82,
+                "transcriptMatch": " เออ",
+                "confidence": 0.966333749294281,
+                "exact": true,
+                "segmentIndex": 3
+              },
+              {
+                "start": 10.18,
+                "end": 10.58,
+                "transcriptMatch": "เออ",
+                "confidence": 0.9247905194759369,
+                "exact": true,
+                "segmentIndex": 3
+              }
+            ],
+            "diagnostic": "The top candidate is too close to another occurrence.",
+            "warnings": [
+              "ambiguous"
+            ]
+          },
+          "english": {
+            "status": "unmatched",
+            "candidates": [],
+            "diagnostic": "No candidate reached the confidence threshold.",
+            "warnings": [
+              "unmatched"
+            ]
+          },
+          "pairStatus": "ambiguous"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-28-2",
+          "thaiText": "ไปดิ",
+          "englishText": "let’s go",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-28/audio/draft-reel-2026-07-28-2-th.m4a",
+            "status": "matched",
+            "start": 16.575000000000003,
+            "end": 17.43,
+            "rawStart": 16.6,
+            "rawEnd": 17.04,
+            "protectedStart": 16.6,
+            "protectedEnd": 17.04,
+            "envelopeMethod": "whisper",
+            "transcriptMatch": "ไปดิ",
+            "confidence": 0.9530022399127484,
+            "candidates": [
+              {
+                "start": 16.6,
+                "end": 17.04,
+                "transcriptMatch": "ไปดิ",
+                "confidence": 0.9530022399127484,
+                "exact": true,
+                "segmentIndex": 5
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.5118250347430018,
+              "end": 0.4933577168783181
+            },
+            "warnings": [
+              "unrefined-whisper-envelope"
+            ]
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-28/audio/draft-reel-2026-07-28-2-en.m4a",
+            "status": "matched",
+            "start": 17.735,
+            "end": 18.38,
+            "rawStart": 17.98,
+            "rawEnd": 19.1,
+            "protectedStart": 17.9,
+            "protectedEnd": 18.16,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " let’s go",
+            "confidence": 0.914319445252272,
+            "candidates": [
+              {
+                "start": 19.7,
+                "end": 19.7,
+                "transcriptMatch": " let’s go",
+                "confidence": 0.9762708508968353,
+                "exact": true,
+                "segmentIndex": 5
+              },
+              {
+                "start": 17.98,
+                "end": 19.1,
+                "transcriptMatch": " let’s go",
+                "confidence": 0.914319445252272,
+                "exact": true,
+                "segmentIndex": 5
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.3676937196573628,
+              "end": 0.3259406481696637
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-28-3",
+          "thaiText": "ป่ะ",
+          "englishText": "let’s go",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-28/audio/draft-reel-2026-07-28-3-th.m4a",
+            "status": "matched",
+            "start": 18.59,
+            "end": 19.515,
+            "rawStart": 19.2,
+            "rawEnd": 19.7,
+            "protectedStart": 18.73,
+            "protectedEnd": 19.37,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " ป่ะ",
+            "confidence": 0.9524925217032433,
+            "candidates": [
+              {
+                "start": 17.2,
+                "end": 17.98,
+                "transcriptMatch": " ป่ะ",
+                "confidence": 0.96842378616333,
+                "exact": true,
+                "segmentIndex": 5
+              },
+              {
+                "start": 19.2,
+                "end": 19.7,
+                "transcriptMatch": " ป่ะ",
+                "confidence": 0.9524925217032433,
+                "exact": true,
+                "segmentIndex": 5
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.24458342492136056,
+              "end": 0.3706605131580613
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-28/audio/draft-reel-2026-07-28-3-en.m4a",
+            "status": "matched",
+            "start": 19.845,
+            "end": 20.955,
+            "rawStart": 19.7,
+            "rawEnd": 19.7,
+            "protectedStart": 19.9,
+            "protectedEnd": 20.66,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " let’s go",
+            "confidence": 0.9762708508968353,
+            "candidates": [
+              {
+                "start": 19.7,
+                "end": 19.7,
+                "transcriptMatch": " let’s go",
+                "confidence": 0.9762708508968353,
+                "exact": true,
+                "segmentIndex": 5
+              },
+              {
+                "start": 17.98,
+                "end": 19.1,
+                "transcriptMatch": " let’s go",
+                "confidence": 0.914319445252272,
+                "exact": true,
+                "segmentIndex": 5
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.3726463236037618,
+              "end": 0.27655977475667964
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-28-4",
+          "thaiText": "อ๋อ",
+          "englishText": "oh, I see",
+          "thai": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "start": 20.56,
+                "end": 21.52,
+                "transcriptMatch": " อ๋อ",
+                "confidence": 0.9959382498264313,
+                "exact": true,
+                "segmentIndex": 6
+              },
+              {
+                "start": 21.66,
+                "end": 21.72,
+                "transcriptMatch": " อ๋อ",
+                "confidence": 0.9921406197547913,
+                "exact": true,
+                "segmentIndex": 6
+              },
+              {
+                "start": 19.7,
+                "end": 20.38,
+                "transcriptMatch": "อ๋อ",
+                "confidence": 0.9640086543560028,
+                "exact": true,
+                "segmentIndex": 6
+              }
+            ],
+            "diagnostic": "The top candidate is too close to another occurrence.",
+            "warnings": [
+              "ambiguous"
+            ]
+          },
+          "english": {
+            "status": "unmatched",
+            "candidates": [],
+            "diagnostic": "No candidate reached the confidence threshold.",
+            "warnings": [
+              "unmatched"
+            ]
+          },
+          "pairStatus": "ambiguous"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-28-5",
+          "thaiText": "แป๊บนะ",
+          "englishText": "wait a second",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-28/audio/draft-reel-2026-07-28-5-th.m4a",
+            "status": "matched",
+            "start": 25.655,
+            "end": 26.66,
+            "rawStart": 25.42,
+            "rawEnd": 26.22,
+            "protectedStart": 25.84,
+            "protectedEnd": 26.47,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": "แป๊บนะ",
+            "confidence": 0.970394162774086,
+            "candidates": [
+              {
+                "start": 25.42,
+                "end": 26.22,
+                "transcriptMatch": "แป๊บนะ",
+                "confidence": 0.970394162774086,
+                "exact": true,
+                "segmentIndex": 8
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2964370497223704,
+              "end": 0.31754345218302404
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-28/audio/draft-reel-2026-07-28-5-en.m4a",
+            "status": "matched",
+            "start": 26.895,
+            "end": 28,
+            "rawStart": 26.22,
+            "rawEnd": 27.62,
+            "protectedStart": 27.02,
+            "protectedEnd": 27.79,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " wait a second",
+            "confidence": 0.9732913243770599,
+            "candidates": [
+              {
+                "start": 26.22,
+                "end": 27.62,
+                "transcriptMatch": " wait a second",
+                "confidence": 0.9732913243770599,
+                "exact": true,
+                "segmentIndex": 8
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.26069081096281366,
+              "end": 0.3731795290067947
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-28-6",
+          "thaiText": "เอาไง",
+          "englishText": "so, what’s the plan?",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-28/audio/draft-reel-2026-07-28-6-th.m4a",
+            "status": "matched",
+            "start": 28,
+            "end": 29.145,
+            "rawStart": 27.82,
+            "rawEnd": 28.52,
+            "protectedStart": 28.09,
+            "protectedEnd": 28.92,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " เอาไง",
+            "confidence": 0.9885880321264267,
+            "candidates": [
+              {
+                "start": 27.82,
+                "end": 28.52,
+                "transcriptMatch": " เอาไง",
+                "confidence": 0.9885880321264267,
+                "exact": true,
+                "segmentIndex": 8
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.3731795290067947,
+              "end": 0.31446703591152986
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-28/audio/draft-reel-2026-07-28-6-en.m4a",
+            "status": "matched",
+            "start": 29.415,
+            "end": 30.235,
+            "rawStart": 28.78,
+            "rawEnd": 31.14,
+            "protectedStart": 29.66,
+            "protectedEnd": 30.11,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " so, what’s the plan?",
+            "confidence": 0.9506136545153123,
+            "candidates": [
+              {
+                "start": 28.78,
+                "end": 31.14,
+                "transcriptMatch": " so, what’s the plan?",
+                "confidence": 0.9506136545153123,
+                "exact": true,
+                "segmentIndex": 9
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.3210258515118475,
+              "end": 0.1872971136502094
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        }
+      ]
+    },
+    {
+      "lessonId": "reel-2026-07-30",
+      "sourceVideo": "/lessons/drafts/reel-2026-07-30/intro.mp4",
+      "sourceHash": "051b4b03446568dc255502efdc64c9d98af2270dfd4c5f4ebb528fd1533c1777",
+      "model": "large-v3",
+      "generatedAt": "2026-08-31T16:01:19.421Z",
+      "algorithmFingerprint": "a94210fc1c3198f8",
+      "clips": [
+        {
+          "cueCardId": "draft-reel-2026-07-30-1",
+          "thaiText": "เป็นห่วงนะ",
+          "englishText": "I’m worried about you",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-30/audio/draft-reel-2026-07-30-1-th.m4a",
+            "status": "matched",
+            "start": 3.3600000000000003,
+            "end": 4.875,
+            "rawStart": 2.9,
+            "rawEnd": 4.36,
+            "protectedStart": 3.45,
+            "protectedEnd": 4.68,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " เป็นห่วงนะ",
+            "confidence": 0.9983318707346917,
+            "candidates": [
+              {
+                "start": 2.9,
+                "end": 4.36,
+                "transcriptMatch": " เป็นห่วงนะ",
+                "confidence": 0.9983318707346917,
+                "exact": true,
+                "segmentIndex": 0
+              },
+              {
+                "start": 25.54,
+                "end": 26.58,
+                "transcriptMatch": " เป็นห่วงนะคะ",
+                "confidence": 0.9967591127753258,
+                "exact": true,
+                "segmentIndex": 1
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.29121303223944595,
+              "end": 0.5355015516015982
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-30/audio/draft-reel-2026-07-30-1-en.m4a",
+            "status": "matched",
+            "start": 5.210000000000001,
+            "end": 6.904999999999999,
+            "rawStart": 4.36,
+            "rawEnd": 6.48,
+            "protectedStart": 5.25,
+            "protectedEnd": 6.71,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " I’m worried about you",
+            "confidence": 0.9534360378999236,
+            "candidates": [
+              {
+                "start": 4.36,
+                "end": 6.48,
+                "transcriptMatch": " I’m worried about you",
+                "confidence": 0.9534360378999236,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.43889412534532746,
+              "end": 0.28625143142051634
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-30-2",
+          "thaiText": "อยากเจอแล้ว",
+          "englishText": "I can’t wait to see you",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-30/audio/draft-reel-2026-07-30-2-th.m4a",
+            "status": "matched",
+            "start": 6.904999999999999,
+            "end": 8.719999999999999,
+            "rawStart": 6.7,
+            "rawEnd": 8.22,
+            "protectedStart": 7.01,
+            "protectedEnd": 8.48,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " อยากเจอแล้ว",
+            "confidence": 0.9983050794260843,
+            "candidates": [
+              {
+                "start": 26.92,
+                "end": 28.3,
+                "transcriptMatch": " อยากเจอแล้ว",
+                "confidence": 0.9995947090217046,
+                "exact": true,
+                "segmentIndex": 1
+              },
+              {
+                "start": 6.7,
+                "end": 8.22,
+                "transcriptMatch": " อยากเจอแล้ว",
+                "confidence": 0.9983050794260843,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.28625143142051634,
+              "end": 0.31504117745100363
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-30/audio/draft-reel-2026-07-30-2-en.m4a",
+            "status": "matched",
+            "start": 8.719999999999999,
+            "end": 10.739999999999998,
+            "rawStart": 8.22,
+            "rawEnd": 10.42,
+            "protectedStart": 8.79,
+            "protectedEnd": 10.63,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " I can’t wait to see you",
+            "confidence": 0.9752329557016493,
+            "candidates": [
+              {
+                "start": 8.22,
+                "end": 10.42,
+                "transcriptMatch": " I can’t wait to see you",
+                "confidence": 0.9752329557016493,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.31504117745100363,
+              "end": 0.1942642498360835
+            },
+            "warnings": [
+              "overlapping-speech-envelopes"
+            ]
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-30-3",
+          "thaiText": "เธอน่ารักที่สุด",
+          "englishText": "You are the cutest",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-30/audio/draft-reel-2026-07-30-3-th.m4a",
+            "status": "matched",
+            "start": 10.32,
+            "end": 12.745,
+            "rawStart": 10.42,
+            "rawEnd": 12.64,
+            "protectedStart": 10.42,
+            "protectedEnd": 12.64,
+            "envelopeMethod": "whisper",
+            "transcriptMatch": " เธอน่ารักที่สุด",
+            "confidence": 0.9961589219353416,
+            "candidates": [
+              {
+                "start": 10.42,
+                "end": 12.64,
+                "transcriptMatch": " เธอน่ารักที่สุด",
+                "confidence": 0.9961589219353416,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "fallback",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0,
+              "end": 0.45002600369636014
+            },
+            "warnings": [
+              "start-fallback",
+              "overlapping-speech-envelopes",
+              "unrefined-whisper-envelope"
+            ]
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-30/audio/draft-reel-2026-07-30-3-en.m4a",
+            "status": "matched",
+            "start": 11.26,
+            "end": 14.129999999999999,
+            "rawStart": 12.64,
+            "rawEnd": 13.62,
+            "protectedStart": 11.34,
+            "protectedEnd": 13.87,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " You are the cutest",
+            "confidence": 0.9718334972858429,
+            "candidates": [
+              {
+                "start": 12.64,
+                "end": 13.62,
+                "transcriptMatch": " You are the cutest",
+                "confidence": 0.9718334972858429,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.34266576265747517,
+              "end": 0.3469158902278906
+            },
+            "warnings": [
+              "overlapping-speech-envelopes"
+            ]
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-07-30-4",
+          "thaiText": "เก่งจัง",
+          "englishText": "You’re amazing",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-07-30/audio/draft-reel-2026-07-30-4-th.m4a",
+            "status": "matched",
+            "start": 14.129999999999999,
+            "end": 15.35,
+            "rawStart": 13.62,
+            "rawEnd": 14.86,
+            "protectedStart": 14.2,
+            "protectedEnd": 15.11,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " เก่งจัง",
+            "confidence": 0.9978037345409393,
+            "candidates": [
+              {
+                "start": 13.62,
+                "end": 14.86,
+                "transcriptMatch": " เก่งจัง",
+                "confidence": 0.9978037345409393,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.3469158902278906,
+              "end": 0.28519367635258497
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-07-30/audio/draft-reel-2026-07-30-4-en.m4a",
+            "status": "matched",
+            "start": 15.35,
+            "end": 16.759999999999998,
+            "rawStart": 14.86,
+            "rawEnd": 16.12,
+            "protectedStart": 15.44,
+            "protectedEnd": 16.63,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " You’re amazing",
+            "confidence": 0.9666591144353152,
+            "candidates": [
+              {
+                "start": 14.86,
+                "end": 16.12,
+                "transcriptMatch": " You’re amazing",
+                "confidence": 0.9666591144353152,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.28519367635258497,
+              "end": 0.550101619682289
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        }
+      ]
+    },
+    {
+      "lessonId": "reel-2026-08-25",
+      "sourceVideo": "/lessons/drafts/reel-2026-08-25/intro.mp4",
+      "sourceHash": "c3a4ab6e17b22e3dfad605a85497f25c6ad270073ca1dd056c94805593ed8991",
+      "model": "large-v3",
+      "generatedAt": "2026-08-31T16:01:55.398Z",
+      "algorithmFingerprint": "a94210fc1c3198f8",
+      "clips": [
+        {
+          "cueCardId": "draft-reel-2026-08-25-1",
+          "thaiText": "ฤดูใบไม้ผลิ",
+          "englishText": "spring",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-25/audio/draft-reel-2026-08-25-1-th.m4a",
+            "status": "matched",
+            "start": 1.44,
+            "end": 3.455,
+            "rawStart": 0.78,
+            "rawEnd": 3.06,
+            "protectedStart": 1.53,
+            "protectedEnd": 3.21,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " ฤดูใบไม้ผลิ",
+            "confidence": 0.9731464833803475,
+            "candidates": [
+              {
+                "start": 0.78,
+                "end": 3.06,
+                "transcriptMatch": " ฤดูใบไม้ผลิ",
+                "confidence": 0.9731464833803475,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.23401535402224896,
+              "end": 0.2627024603596474
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-25/audio/draft-reel-2026-08-25-1-en.m4a",
+            "status": "matched",
+            "start": 0,
+            "end": 1.44,
+            "rawStart": 0.08,
+            "rawEnd": 0.72,
+            "protectedStart": 0,
+            "protectedEnd": 1.3,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": "spring",
+            "confidence": 0.9005029916763305,
+            "candidates": [
+              {
+                "start": 0.08,
+                "end": 0.72,
+                "transcriptMatch": "spring",
+                "confidence": 0.9005029916763305,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "fallback",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0,
+              "end": 0.23401535402224896
+            },
+            "warnings": [
+              "start-fallback"
+            ]
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-25-2",
+          "thaiText": "ฤดูร้อน",
+          "englishText": "summer",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-25/audio/draft-reel-2026-08-25-2-th.m4a",
+            "status": "matched",
+            "start": 4.595000000000001,
+            "end": 6.775,
+            "rawStart": 4.1,
+            "rawEnd": 6.38,
+            "protectedStart": 4.8,
+            "protectedEnd": 6.55,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " ฤดูร้อน",
+            "confidence": 0.9988736259937286,
+            "candidates": [
+              {
+                "start": 4.1,
+                "end": 6.38,
+                "transcriptMatch": " ฤดูร้อน",
+                "confidence": 0.9988736259937286,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.29063829044076467,
+              "end": 0.270245087767736
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-25/audio/draft-reel-2026-08-25-2-en.m4a",
+            "status": "matched",
+            "start": 3.5,
+            "end": 4.545,
+            "rawStart": 3.06,
+            "rawEnd": 3.72,
+            "protectedStart": 3.68,
+            "protectedEnd": 4.32,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " summer",
+            "confidence": 0.8830028396099806,
+            "candidates": [
+              {
+                "start": 3.06,
+                "end": 3.72,
+                "transcriptMatch": " summer",
+                "confidence": 0.8830028396099806,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.25847594939525464,
+              "end": 0.28622984531825324
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-25-3",
+          "thaiText": "ฤดูใบไม้ร่วง",
+          "englishText": "autumn",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-25/audio/draft-reel-2026-08-25-3-th.m4a",
+            "status": "matched",
+            "start": 8.345,
+            "end": 10.75,
+            "rawStart": 7.56,
+            "rawEnd": 10.5,
+            "protectedStart": 8.47,
+            "protectedEnd": 10.62,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " ฤดูใบไม้ร่วง",
+            "confidence": 0.9992798844250765,
+            "candidates": [
+              {
+                "start": 7.56,
+                "end": 10.5,
+                "transcriptMatch": " ฤดูใบไม้ร่วง",
+                "confidence": 0.9992798844250765,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.26579843729932723,
+              "end": 0.2913241206789168
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-25/audio/draft-reel-2026-08-25-3-en.m4a",
+            "status": "matched",
+            "start": 6.945,
+            "end": 7.984999999999999,
+            "rawStart": 6.38,
+            "rawEnd": 7.4,
+            "protectedStart": 7.12,
+            "protectedEnd": 7.77,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " autumn",
+            "confidence": 0.9761466002464294,
+            "candidates": [
+              {
+                "start": 6.38,
+                "end": 7.4,
+                "transcriptMatch": " autumn",
+                "confidence": 0.9761466002464294,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.28077848846452647,
+              "end": 0.25777747707422566
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-25-4",
+          "thaiText": "ฤดูหนาว",
+          "englishText": "winter",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-25/audio/draft-reel-2026-08-25-4-th.m4a",
+            "status": "matched",
+            "start": 11.965,
+            "end": 13.77,
+            "rawStart": 11.28,
+            "rawEnd": 13.26,
+            "protectedStart": 12.14,
+            "protectedEnd": 13.62,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " ฤดูหนาว",
+            "confidence": 0.9990575325489044,
+            "candidates": [
+              {
+                "start": 11.28,
+                "end": 13.26,
+                "transcriptMatch": " ฤดูหนาว",
+                "confidence": 0.9990575325489044,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.27237155747252473,
+              "end": 0.2862868833398377
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-25/audio/draft-reel-2026-08-25-4-en.m4a",
+            "status": "matched",
+            "start": 10.75,
+            "end": 11.765,
+            "rawStart": 10.5,
+            "rawEnd": 11.12,
+            "protectedStart": 10.83,
+            "protectedEnd": 11.51,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " winter",
+            "confidence": 0.9932869029045105,
+            "candidates": [
+              {
+                "start": 10.5,
+                "end": 11.12,
+                "transcriptMatch": " winter",
+                "confidence": 0.9932869029045105,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2913241206789168,
+              "end": 0.29177514845399105
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-25-5",
+          "thaiText": "ฤดูฝน",
+          "englishText": "rainy season",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-25/audio/draft-reel-2026-08-25-5-th.m4a",
+            "status": "matched",
+            "start": 14.844999999999999,
+            "end": 16.510406250000003,
+            "rawStart": 14.26,
+            "rawEnd": 16.06,
+            "protectedStart": 15.02,
+            "protectedEnd": 16.34,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " ฤดูฝน",
+            "confidence": 0.9997841057777405,
+            "candidates": [
+              {
+                "start": 14.26,
+                "end": 16.06,
+                "transcriptMatch": " ฤดูฝน",
+                "confidence": 0.9997841057777405,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.24335931857338977,
+              "end": 0.5599564255154684
+            },
+            "warnings": []
+          },
+          "english": {
+            "status": "unmatched",
+            "candidates": [],
+            "diagnostic": "No candidate reached the confidence threshold.",
+            "warnings": [
+              "unmatched"
+            ]
+          },
+          "pairStatus": "thai-only"
+        }
+      ]
+    },
+    {
+      "lessonId": "reel-2026-08-27",
+      "sourceVideo": "/lessons/drafts/reel-2026-08-27/intro.mp4",
+      "sourceHash": "a795e8586e04b87d9651c6d59463c0995e87213f5f006a52a24fd13d71eb7729",
+      "model": "large-v3",
+      "generatedAt": "2026-08-31T16:03:35.692Z",
+      "algorithmFingerprint": "a94210fc1c3198f8",
+      "clips": [
+        {
+          "cueCardId": "draft-reel-2026-08-27-1",
+          "thaiText": "วันนี้มากินข้าวซอยค่ะ",
+          "englishText": "Today, I came to eat khao soi",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-27/audio/draft-reel-2026-08-27-1-th.m4a",
+            "status": "matched",
+            "start": 0.02,
+            "end": 3.5549999999999997,
+            "rawStart": 0,
+            "rawEnd": 3.22,
+            "protectedStart": 0.17,
+            "protectedEnd": 3.32,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": "วันนี้มากินข้าวซอยค่ะ",
+            "confidence": 0.9971751441675074,
+            "candidates": [
+              {
+                "start": 0,
+                "end": 3.22,
+                "transcriptMatch": "วันนี้มากินข้าวซอยค่ะ",
+                "confidence": 0.9971751441675074,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 1,
+              "end": 0.29678862677502593
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-27/audio/draft-reel-2026-08-27-1-en.m4a",
+            "status": "matched",
+            "start": 3.65,
+            "end": 4.18,
+            "rawStart": 3.22,
+            "rawEnd": 4.28,
+            "protectedStart": 3.84,
+            "protectedEnd": 3.99,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " Today, I came to eat khao soi",
+            "confidence": 0.9370070923676181,
+            "candidates": [
+              {
+                "start": 3.22,
+                "end": 4.28,
+                "transcriptMatch": " Today, I came to eat khao soi",
+                "confidence": 0.9370070923676181,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2990920311931412,
+              "end": 0.2554664108726562
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-27-2",
+          "thaiText": "ดูคนทำอาหาร",
+          "englishText": "Watching people cook",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-27/audio/draft-reel-2026-08-27-2-th.m4a",
+            "status": "matched",
+            "start": 4.18,
+            "end": 7.234999999999999,
+            "rawStart": 4.28,
+            "rawEnd": 6.52,
+            "protectedStart": 4.35,
+            "protectedEnd": 7,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " ดูคนทำอาหาร",
+            "confidence": 0.9861768254637718,
+            "candidates": [
+              {
+                "start": 4.28,
+                "end": 6.52,
+                "transcriptMatch": " ดูคนทำอาหาร",
+                "confidence": 0.9861768254637718,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2554664108726562,
+              "end": 0.26972877775094795
+            },
+            "warnings": [
+              "overlapping-speech-envelopes"
+            ]
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-27/audio/draft-reel-2026-08-27-2-en.m4a",
+            "status": "matched",
+            "start": 6.42,
+            "end": 6.875,
+            "rawStart": 6.52,
+            "rawEnd": 6.78,
+            "protectedStart": 6.52,
+            "protectedEnd": 6.78,
+            "envelopeMethod": "whisper",
+            "transcriptMatch": " Watching people cook",
+            "confidence": 0.9131624711197946,
+            "candidates": [
+              {
+                "start": 6.52,
+                "end": 6.78,
+                "transcriptMatch": " Watching people cook",
+                "confidence": 0.9131624711197946,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "fallback",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0,
+              "end": 0.26113945493097407
+            },
+            "warnings": [
+              "start-fallback",
+              "overlapping-speech-envelopes",
+              "unrefined-whisper-envelope"
+            ]
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-27-3",
+          "thaiText": "น่ากินมากค่ะ",
+          "englishText": "It looks very delicious",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-27/audio/draft-reel-2026-08-27-3-th.m4a",
+            "status": "matched",
+            "start": 7.245,
+            "end": 9.33,
+            "rawStart": 6.78,
+            "rawEnd": 8.96,
+            "protectedStart": 7.42,
+            "protectedEnd": 9.1,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " น่ากินมากค่ะ",
+            "confidence": 0.999073755979538,
+            "candidates": [
+              {
+                "start": 6.78,
+                "end": 8.96,
+                "transcriptMatch": " น่ากินมากค่ะ",
+                "confidence": 0.999073755979538,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.26453509744398535,
+              "end": 0.2856391952741962
+            },
+            "warnings": []
+          },
+          "english": {
+            "status": "unmatched",
+            "candidates": [],
+            "diagnostic": "No candidate reached the confidence threshold.",
+            "warnings": [
+              "unmatched"
+            ]
+          },
+          "pairStatus": "thai-only"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-27-4",
+          "thaiText": "มีไก่กับเนื้อ",
+          "englishText": "They have chicken and beef",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-27/audio/draft-reel-2026-08-27-4-th.m4a",
+            "status": "matched",
+            "start": 9.69,
+            "end": 12.255,
+            "rawStart": 9.64,
+            "rawEnd": 11.64,
+            "protectedStart": 9.88,
+            "protectedEnd": 11.93,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " มีไก่กับเนื้อ",
+            "confidence": 0.999219460120568,
+            "candidates": [
+              {
+                "start": 9.64,
+                "end": 11.64,
+                "transcriptMatch": " มีไก่กับเนื้อ",
+                "confidence": 0.999219460120568,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2516729172317535,
+              "end": 0.3333333333333333
+            },
+            "warnings": [
+              "overlapping-speech-envelopes"
+            ]
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-27/audio/draft-reel-2026-08-27-4-en.m4a",
+            "status": "matched",
+            "start": 11.454999999999998,
+            "end": 12.22,
+            "rawStart": 11.64,
+            "rawEnd": 11.86,
+            "protectedStart": 11.64,
+            "protectedEnd": 11.86,
+            "envelopeMethod": "whisper",
+            "transcriptMatch": " They have chicken and beef",
+            "confidence": 0.9635231537073851,
+            "candidates": [
+              {
+                "start": 11.64,
+                "end": 11.86,
+                "transcriptMatch": " They have chicken and beef",
+                "confidence": 0.9635231537073851,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.22071437429855953,
+              "end": 0.3333333333333333
+            },
+            "warnings": [
+              "overlapping-speech-envelopes",
+              "unrefined-whisper-envelope"
+            ]
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-27-5",
+          "thaiText": "สั่งข้าวซอยเนื้อ",
+          "englishText": "I ordered beef khao soi",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-27/audio/draft-reel-2026-08-27-5-th.m4a",
+            "status": "matched",
+            "start": 12.64,
+            "end": 15.39,
+            "rawStart": 11.86,
+            "rawEnd": 15.09,
+            "protectedStart": 12.86,
+            "protectedEnd": 15.29,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " สั่งข้าวซอยเนื้อ",
+            "confidence": 0.9962687402112144,
+            "candidates": [
+              {
+                "start": 11.86,
+                "end": 15.09,
+                "transcriptMatch": " สั่งข้าวซอยเนื้อ",
+                "confidence": 0.9962687402112144,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.3333333333333333,
+              "end": 0.28302697669837407
+            },
+            "warnings": []
+          },
+          "english": {
+            "status": "unmatched",
+            "candidates": [],
+            "diagnostic": "No candidate reached the confidence threshold.",
+            "warnings": [
+              "unmatched"
+            ]
+          },
+          "pairStatus": "thai-only"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-27-6",
+          "thaiText": "กับเต้าหู้ทอดซอสมะขาม",
+          "englishText": "and fried tofu with tamarind sauce",
+          "thai": {
+            "status": "unmatched",
+            "candidates": [],
+            "diagnostic": "No candidate reached the confidence threshold.",
+            "warnings": [
+              "unmatched"
+            ]
+          },
+          "english": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "start": 18.99,
+                "end": 19.29,
+                "transcriptMatch": " and fried tofu with tamarind sauce",
+                "confidence": 0.944339720637945,
+                "exact": true,
+                "segmentIndex": 0
+              },
+              {
+                "start": 25.78,
+                "end": 25.78,
+                "transcriptMatch": " fried tofu with tamarind sauce",
+                "confidence": 0.8880625848359075,
+                "exact": false,
+                "segmentIndex": 1
+              },
+              {
+                "start": 19.29,
+                "end": 19.29,
+                "transcriptMatch": " fried tofu with tamarind sauce",
+                "confidence": 0.8583275232089597,
+                "exact": false,
+                "segmentIndex": 0
+              }
+            ],
+            "diagnostic": "The top candidate is too close to another occurrence.",
+            "warnings": [
+              "ambiguous"
+            ]
+          },
+          "pairStatus": "ambiguous"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-27-7",
+          "thaiText": "ลองชิมเต้าหู้ทอดค่ะ",
+          "englishText": "I’m trying the fried tofu",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-27/audio/draft-reel-2026-08-27-7-th.m4a",
+            "status": "matched",
+            "start": 20.16,
+            "end": 23.215,
+            "rawStart": 19.29,
+            "rawEnd": 22.86,
+            "protectedStart": 20.26,
+            "protectedEnd": 22.98,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " ลองชิมเต้าหู้ทอดค่ะ",
+            "confidence": 0.9992468761652709,
+            "candidates": [
+              {
+                "start": 19.29,
+                "end": 22.86,
+                "transcriptMatch": " ลองชิมเต้าหู้ทอดค่ะ",
+                "confidence": 0.9992468761652709,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2808907201720956,
+              "end": 0.2712234240473721
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-27/audio/draft-reel-2026-08-27-7-en.m4a",
+            "status": "matched",
+            "start": 23.57,
+            "end": 24.09,
+            "rawStart": 22.86,
+            "rawEnd": 23.78,
+            "protectedStart": 23.79,
+            "protectedEnd": 23.88,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " I’m trying the fried tofu",
+            "confidence": 0.9642552192509174,
+            "candidates": [
+              {
+                "start": 22.86,
+                "end": 23.78,
+                "transcriptMatch": " I’m trying the fried tofu",
+                "confidence": 0.9642552192509174,
+                "exact": true,
+                "segmentIndex": 0
+              },
+              {
+                "start": 25.78,
+                "end": 25.78,
+                "transcriptMatch": " I’m trying the fried tofu",
+                "confidence": 0.9412616173997521,
+                "exact": true,
+                "segmentIndex": 1
+              },
+              {
+                "start": 23.78,
+                "end": 23.78,
+                "transcriptMatch": "m trying the fried tofu",
+                "confidence": 0.9234955871999263,
+                "exact": false,
+                "segmentIndex": 0
+              },
+              {
+                "start": 25.56,
+                "end": 25.78,
+                "transcriptMatch": " I’m trying the fried tofu",
+                "confidence": 0.8810479275628001,
+                "exact": true,
+                "segmentIndex": 1
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2911554119906583,
+              "end": 0.30211484949838685
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-27-8",
+          "thaiText": "อร่อยมากค่ะ",
+          "englishText": "It’s very delicious",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-27/audio/draft-reel-2026-08-27-8-th.m4a",
+            "status": "matched",
+            "start": 24.045,
+            "end": 25.54,
+            "rawStart": 23.78,
+            "rawEnd": 25.36,
+            "protectedStart": 24.09,
+            "protectedEnd": 25.45,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " อร่อยมากค่ะ",
+            "confidence": 0.9994836680094401,
+            "candidates": [
+              {
+                "start": 23.78,
+                "end": 25.36,
+                "transcriptMatch": " อร่อยมากค่ะ",
+                "confidence": 0.9994836680094401,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.28774715575243687,
+              "end": 0.25631717359457123
+            },
+            "warnings": [
+              "overlapping-speech-envelopes"
+            ]
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-27/audio/draft-reel-2026-08-27-8-en.m4a",
+            "status": "matched",
+            "start": 25.060000000000002,
+            "end": 25.585,
+            "rawStart": 25.36,
+            "rawEnd": 25.56,
+            "protectedStart": 25.36,
+            "protectedEnd": 25.56,
+            "envelopeMethod": "whisper",
+            "transcriptMatch": " It’s very delicious",
+            "confidence": 0.9770590212345123,
+            "candidates": [
+              {
+                "start": 25.36,
+                "end": 25.56,
+                "transcriptMatch": " It’s very delicious",
+                "confidence": 0.9770590212345123,
+                "exact": true,
+                "segmentIndex": 0
+              },
+              {
+                "start": 25.78,
+                "end": 25.78,
+                "transcriptMatch": " It’s very delicious",
+                "confidence": 0.9076843206211924,
+                "exact": true,
+                "segmentIndex": 1
+              },
+              {
+                "start": 8.96,
+                "end": 9.64,
+                "transcriptMatch": " It’s very delicious",
+                "confidence": 0.9025576852998932,
+                "exact": true,
+                "segmentIndex": 0
+              },
+              {
+                "start": 25.56,
+                "end": 25.56,
+                "transcriptMatch": "s very delicious",
+                "confidence": 0.8725043416023255,
+                "exact": false,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.594050106871501,
+              "end": 0.24552028896209382
+            },
+            "warnings": [
+              "overlapping-speech-envelopes",
+              "unrefined-whisper-envelope"
+            ]
+          },
+          "pairStatus": "complete"
+        }
+      ]
+    },
+    {
+      "lessonId": "reel-2026-08-28",
+      "sourceVideo": "/lessons/drafts/reel-2026-08-28/intro.mp4",
+      "sourceHash": "693e21552544352706fbf98671e0b09107ae5940300038248c78802ac1013afc",
+      "model": "large-v3",
+      "generatedAt": "2026-08-31T16:06:51.327Z",
+      "algorithmFingerprint": "a94210fc1c3198f8",
+      "clips": [
+        {
+          "cueCardId": "draft-reel-2026-08-28-1",
+          "thaiText": "ขอบคุณ",
+          "englishText": "thank you",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-28/audio/draft-reel-2026-08-28-1-th.m4a",
+            "status": "matched",
+            "start": 4.29,
+            "end": 5.9,
+            "rawStart": 4.58,
+            "rawEnd": 5.76,
+            "protectedStart": 4.58,
+            "protectedEnd": 5.76,
+            "envelopeMethod": "whisper",
+            "transcriptMatch": " ขอบคุณ",
+            "confidence": 0.9990699303150177,
+            "candidates": [
+              {
+                "start": 9.73,
+                "end": 11.5,
+                "transcriptMatch": " ขอบคุณ",
+                "confidence": 0.9999240219593049,
+                "exact": true,
+                "segmentIndex": 0
+              },
+              {
+                "start": 12.48,
+                "end": 13.82,
+                "transcriptMatch": " ขอบคุณ",
+                "confidence": 0.9998932564258576,
+                "exact": true,
+                "segmentIndex": 0
+              },
+              {
+                "start": 6.22,
+                "end": 8.02,
+                "transcriptMatch": " ขอบคุณ",
+                "confidence": 0.9996395611763,
+                "exact": true,
+                "segmentIndex": 0
+              },
+              {
+                "start": 4.58,
+                "end": 5.76,
+                "transcriptMatch": " ขอบคุณ",
+                "confidence": 0.9990699303150177,
+                "exact": true,
+                "segmentIndex": 0
+              },
+              {
+                "start": 0,
+                "end": 0.56,
+                "transcriptMatch": "ขอบคุณ",
+                "confidence": 0.9987410473823547,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.8106374515128683,
+              "end": 0.29415752951586643
+            },
+            "warnings": [
+              "unrefined-whisper-envelope"
+            ]
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-28/audio/draft-reel-2026-08-28-1-en.m4a",
+            "status": "matched",
+            "start": 9.195,
+            "end": 10.125,
+            "rawStart": 8.3,
+            "rawEnd": 9.73,
+            "protectedStart": 9.32,
+            "protectedEnd": 9.87,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " thank you",
+            "confidence": 0.9610063153505325,
+            "candidates": [
+              {
+                "start": 14.54,
+                "end": 15.06,
+                "transcriptMatch": " thank you",
+                "confidence": 0.9851724588871003,
+                "exact": true,
+                "segmentIndex": 0
+              },
+              {
+                "start": 21.06,
+                "end": 23.2,
+                "transcriptMatch": " thank you",
+                "confidence": 0.9686376184225083,
+                "exact": true,
+                "segmentIndex": 1
+              },
+              {
+                "start": 8.3,
+                "end": 9.73,
+                "transcriptMatch": " thank you",
+                "confidence": 0.9610063153505325,
+                "exact": true,
+                "segmentIndex": 0
+              },
+              {
+                "start": 20.26,
+                "end": 21.06,
+                "transcriptMatch": "thank you",
+                "confidence": 0.9396955646458082,
+                "exact": true,
+                "segmentIndex": 1
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2319744018622403,
+              "end": 0.27991405727639557
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-28-2",
+          "thaiText": "ขอบคุณนะ",
+          "englishText": "thank you",
+          "thai": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "start": 4.58,
+                "end": 6.06,
+                "transcriptMatch": " ขอบคุณนะ",
+                "confidence": 0.997886940411159,
+                "exact": true,
+                "segmentIndex": 0
+              },
+              {
+                "start": 6.22,
+                "end": 8.3,
+                "transcriptMatch": " ขอบคุณนะ",
+                "confidence": 0.9961957396779741,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "diagnostic": "The top candidate is too close to another occurrence.",
+            "warnings": [
+              "ambiguous"
+            ]
+          },
+          "english": {
+            "status": "ambiguous",
+            "candidates": [
+              {
+                "start": 14.54,
+                "end": 15.06,
+                "transcriptMatch": " thank you",
+                "confidence": 0.9851724588871003,
+                "exact": true,
+                "segmentIndex": 0
+              },
+              {
+                "start": 21.06,
+                "end": 23.2,
+                "transcriptMatch": " thank you",
+                "confidence": 0.9686376184225083,
+                "exact": true,
+                "segmentIndex": 1
+              },
+              {
+                "start": 8.3,
+                "end": 9.73,
+                "transcriptMatch": " thank you",
+                "confidence": 0.9610063153505325,
+                "exact": true,
+                "segmentIndex": 0
+              },
+              {
+                "start": 20.26,
+                "end": 21.06,
+                "transcriptMatch": "thank you",
+                "confidence": 0.9396955646458082,
+                "exact": true,
+                "segmentIndex": 1
+              }
+            ],
+            "diagnostic": "The top candidate is too close to another occurrence.",
+            "warnings": [
+              "ambiguous"
+            ]
+          },
+          "pairStatus": "ambiguous"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-28-3",
+          "thaiText": "ขอบคุณมาก",
+          "englishText": "thank you very much",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-28/audio/draft-reel-2026-08-28-3-th.m4a",
+            "status": "matched",
+            "start": 10.615,
+            "end": 12.54,
+            "rawStart": 9.73,
+            "rawEnd": 12.46,
+            "protectedStart": 10.74,
+            "protectedEnd": 12.5,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " ขอบคุณมาก",
+            "confidence": 0.999895356297493,
+            "candidates": [
+              {
+                "start": 9.73,
+                "end": 12.46,
+                "transcriptMatch": " ขอบคุณมาก",
+                "confidence": 0.999895356297493,
+                "exact": true,
+                "segmentIndex": 0
+              },
+              {
+                "start": 12.48,
+                "end": 14.54,
+                "transcriptMatch": " ขอบคุณมาก",
+                "confidence": 0.9997899016737938,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2879763484552416,
+              "end": 0.20591180121537966
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-28/audio/draft-reel-2026-08-28-3-en.m4a",
+            "status": "matched",
+            "start": 14.745000000000001,
+            "end": 16.13,
+            "rawStart": 14.54,
+            "rawEnd": 15.64,
+            "protectedStart": 14.81,
+            "protectedEnd": 16.02,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " thank you very much",
+            "confidence": 0.9921103018522263,
+            "candidates": [
+              {
+                "start": 14.54,
+                "end": 15.64,
+                "transcriptMatch": " thank you very much",
+                "confidence": 0.9921103018522263,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2879633228389243,
+              "end": 0.2443100720497679
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-28-4",
+          "thaiText": "ขอบใจ",
+          "englishText": "thanks",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-28/audio/draft-reel-2026-08-28-4-th.m4a",
+            "status": "matched",
+            "start": 16.13,
+            "end": 17.66,
+            "rawStart": 15.76,
+            "rawEnd": 17.14,
+            "protectedStart": 16.21,
+            "protectedEnd": 17.51,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " ขอบใจ",
+            "confidence": 0.9995656409263611,
+            "candidates": [
+              {
+                "start": 17.26,
+                "end": 19.02,
+                "transcriptMatch": " ขอบใจ",
+                "confidence": 0.9998441715240478,
+                "exact": true,
+                "segmentIndex": 0
+              },
+              {
+                "start": 15.76,
+                "end": 17.14,
+                "transcriptMatch": " ขอบใจ",
+                "confidence": 0.9995656409263611,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2443100720497679,
+              "end": 0.15138122475468663
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-28/audio/draft-reel-2026-08-28-4-en.m4a",
+            "status": "matched",
+            "start": 19.439999999999998,
+            "end": 20.35,
+            "rawStart": 19.02,
+            "rawEnd": 19.8,
+            "protectedStart": 19.6,
+            "protectedEnd": 20.14,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " thanks",
+            "confidence": 0.9617071747779846,
+            "candidates": [
+              {
+                "start": 2.46,
+                "end": 2.9,
+                "transcriptMatch": " thanks",
+                "confidence": 0.9628269648551941,
+                "exact": true,
+                "segmentIndex": 0
+              },
+              {
+                "start": 19.02,
+                "end": 19.8,
+                "transcriptMatch": " thanks",
+                "confidence": 0.9617071747779846,
+                "exact": true,
+                "segmentIndex": 0
+              },
+              {
+                "start": 14.54,
+                "end": 15.06,
+                "transcriptMatch": " thank you",
+                "confidence": 0.8385057922204336,
+                "exact": false,
+                "segmentIndex": 0
+              },
+              {
+                "start": 21.06,
+                "end": 23.2,
+                "transcriptMatch": " thank you",
+                "confidence": 0.8219709517558417,
+                "exact": false,
+                "segmentIndex": 1
+              },
+              {
+                "start": 8.3,
+                "end": 9.73,
+                "transcriptMatch": " thank you",
+                "confidence": 0.8143396486838659,
+                "exact": false,
+                "segmentIndex": 0
+              },
+              {
+                "start": 20.26,
+                "end": 21.06,
+                "transcriptMatch": "thank you",
+                "confidence": 0.7930288979791416,
+                "exact": false,
+                "segmentIndex": 1
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.28314880969871425,
+              "end": 0.2722484707228527
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        }
+      ]
+    },
+    {
+      "lessonId": "reel-2026-08-29",
+      "sourceVideo": "/lessons/drafts/reel-2026-08-29/intro.mp4",
+      "sourceHash": "59c4f8034ec602cd7ddcc5f7d7d827ad20ba294bd654ddce638ecdc53a46a31f",
+      "model": "large-v3",
+      "generatedAt": "2026-08-31T16:07:33.598Z",
+      "algorithmFingerprint": "a94210fc1c3198f8",
+      "clips": [
+        {
+          "cueCardId": "draft-reel-2026-08-29-1",
+          "thaiText": "เป็นไปไม่ได้",
+          "englishText": "impossible",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-29/audio/draft-reel-2026-08-29-1-th.m4a",
+            "status": "matched",
+            "start": 1.99,
+            "end": 3.92,
+            "rawStart": 1.2,
+            "rawEnd": 3.65,
+            "protectedStart": 2.17,
+            "protectedEnd": 3.78,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " เป็นไปไม่ได้",
+            "confidence": 0.9993527516722679,
+            "candidates": [
+              {
+                "start": 1.2,
+                "end": 3.65,
+                "transcriptMatch": " เป็นไปไม่ได้",
+                "confidence": 0.9993527516722679,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.27385601570945617,
+              "end": 0.28025422588202215
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-29/audio/draft-reel-2026-08-29-1-en.m4a",
+            "status": "matched",
+            "start": 0.03,
+            "end": 1.495,
+            "rawStart": 0,
+            "rawEnd": 0.98,
+            "protectedStart": 0.06,
+            "protectedEnd": 1.36,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": "impossible",
+            "confidence": 0.9585833793878555,
+            "candidates": [
+              {
+                "start": 0,
+                "end": 0.98,
+                "transcriptMatch": "impossible",
+                "confidence": 0.9585833793878555,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.23547802022770822,
+              "end": 0.2968776386931269
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-29-2",
+          "thaiText": "เป็นไปได้",
+          "englishText": "possible",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-29/audio/draft-reel-2026-08-29-2-th.m4a",
+            "status": "matched",
+            "start": 4.385,
+            "end": 7.21,
+            "rawStart": 4.69,
+            "rawEnd": 6.96,
+            "protectedStart": 4.69,
+            "protectedEnd": 6.96,
+            "envelopeMethod": "whisper",
+            "transcriptMatch": " เป็นไปได้",
+            "confidence": 0.9997739696502685,
+            "candidates": [
+              {
+                "start": 4.69,
+                "end": 6.96,
+                "transcriptMatch": " เป็นไปได้",
+                "confidence": 0.9997739696502685,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.3524258364667341,
+              "end": 0.5371778934525966
+            },
+            "warnings": [
+              "overlapping-speech-envelopes",
+              "unrefined-whisper-envelope"
+            ]
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-29/audio/draft-reel-2026-08-29-2-en.m4a",
+            "status": "matched",
+            "start": 3.92,
+            "end": 5.05,
+            "rawStart": 3.65,
+            "rawEnd": 4.41,
+            "protectedStart": 4.05,
+            "protectedEnd": 4.87,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " possible",
+            "confidence": 0.9019879466295242,
+            "candidates": [
+              {
+                "start": 0,
+                "end": 0.98,
+                "transcriptMatch": "impossible",
+                "confidence": 0.9585833793878555,
+                "exact": true,
+                "segmentIndex": 0
+              },
+              {
+                "start": 3.65,
+                "end": 4.41,
+                "transcriptMatch": " possible",
+                "confidence": 0.9019879466295242,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.28025422588202215,
+              "end": 0.2991888786839978
+            },
+            "warnings": [
+              "overlapping-speech-envelopes"
+            ]
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-29-3",
+          "thaiText": "อาจจะ",
+          "englishText": "maybe",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-29/audio/draft-reel-2026-08-29-3-th.m4a",
+            "status": "matched",
+            "start": 8.504999999999999,
+            "end": 9.735,
+            "rawStart": 7.8,
+            "rawEnd": 9.2,
+            "protectedStart": 8.68,
+            "protectedEnd": 9.55,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " อาจจะ",
+            "confidence": 0.9995536231994628,
+            "candidates": [
+              {
+                "start": 7.8,
+                "end": 9.2,
+                "transcriptMatch": " อาจจะ",
+                "confidence": 0.9995536231994628,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2983162932799696,
+              "end": 0.2734058347739755
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-29/audio/draft-reel-2026-08-29-3-en.m4a",
+            "status": "matched",
+            "start": 5.495,
+            "end": 8.305,
+            "rawStart": 6.96,
+            "rawEnd": 7.44,
+            "protectedStart": 5.67,
+            "protectedEnd": 8.08,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " maybe",
+            "confidence": 0.9770363712310791,
+            "candidates": [
+              {
+                "start": 6.96,
+                "end": 7.44,
+                "transcriptMatch": " maybe",
+                "confidence": 0.9770363712310791,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2767889238087812,
+              "end": 0.28052707792110076
+            },
+            "warnings": [
+              "overlapping-speech-envelopes"
+            ]
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-29-4",
+          "thaiText": "ไม่แน่ใจ",
+          "englishText": "not sure",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-29/audio/draft-reel-2026-08-29-4-th.m4a",
+            "status": "matched",
+            "start": 11.105,
+            "end": 12.85,
+            "rawStart": 10.58,
+            "rawEnd": 12.34,
+            "protectedStart": 11.28,
+            "protectedEnd": 12.66,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " ไม่แน่ใจ",
+            "confidence": 0.9997992890221732,
+            "candidates": [
+              {
+                "start": 10.58,
+                "end": 12.34,
+                "transcriptMatch": " ไม่แน่ใจ",
+                "confidence": 0.9997992890221732,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2639580796632141,
+              "end": 0.2934011091618842
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-29/audio/draft-reel-2026-08-29-4-en.m4a",
+            "status": "matched",
+            "start": 9.735,
+            "end": 10.95,
+            "rawStart": 9.2,
+            "rawEnd": 10.36,
+            "protectedStart": 9.91,
+            "protectedEnd": 10.72,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " not sure",
+            "confidence": 0.9547394251823426,
+            "candidates": [
+              {
+                "start": 9.2,
+                "end": 10.36,
+                "transcriptMatch": " not sure",
+                "confidence": 0.9547394251823426,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2586173759036217,
+              "end": 0.2738432488148277
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-29-5",
+          "thaiText": "แน่ใจ",
+          "englishText": "sure",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-29/audio/draft-reel-2026-08-29-5-th.m4a",
+            "status": "matched",
+            "start": 14.1,
+            "end": 15.57,
+            "rawStart": 13.32,
+            "rawEnd": 15.06,
+            "protectedStart": 14.28,
+            "protectedEnd": 15.42,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " แน่ใจ",
+            "confidence": 0.9999086017608643,
+            "candidates": [
+              {
+                "start": 13.32,
+                "end": 15.06,
+                "transcriptMatch": " แน่ใจ",
+                "confidence": 0.9999086017608643,
+                "exact": true,
+                "segmentIndex": 0
+              },
+              {
+                "start": 11.48,
+                "end": 12.34,
+                "transcriptMatch": "แน่ใจ",
+                "confidence": 0.9998344097137452,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.3036719675035131,
+              "end": 0.29457489388783703
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-29/audio/draft-reel-2026-08-29-5-en.m4a",
+            "status": "matched",
+            "start": 12.85,
+            "end": 13.79,
+            "rawStart": 12.34,
+            "rawEnd": 13.18,
+            "protectedStart": 13.01,
+            "protectedEnd": 13.56,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " sure",
+            "confidence": 0.9261699080467224,
+            "candidates": [
+              {
+                "start": 10.02,
+                "end": 10.36,
+                "transcriptMatch": " sure",
+                "confidence": 0.9978001666069031,
+                "exact": true,
+                "segmentIndex": 0
+              },
+              {
+                "start": 12.34,
+                "end": 13.18,
+                "transcriptMatch": " sure",
+                "confidence": 0.9261699080467224,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2934011091618842,
+              "end": 0.2854308942019325
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-29-6",
+          "thaiText": "แน่นอน",
+          "englishText": "of course",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-29/audio/draft-reel-2026-08-29-6-th.m4a",
+            "status": "matched",
+            "start": 16.915,
+            "end": 18.203,
+            "rawStart": 16.4,
+            "rawEnd": 17.9,
+            "protectedStart": 17.09,
+            "protectedEnd": 18.19,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " แน่นอน",
+            "confidence": 0.9994383254051209,
+            "candidates": [
+              {
+                "start": 16.4,
+                "end": 17.9,
+                "transcriptMatch": " แน่นอน",
+                "confidence": 0.9994383254051209,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "fallback"
+            },
+            "boundaryConfidence": {
+              "start": 0.28001135740931776,
+              "end": 0
+            },
+            "warnings": [
+              "end-fallback"
+            ]
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-29/audio/draft-reel-2026-08-29-6-en.m4a",
+            "status": "matched",
+            "start": 15.57,
+            "end": 16.700000000000003,
+            "rawStart": 15.06,
+            "rawEnd": 16.12,
+            "protectedStart": 15.71,
+            "protectedEnd": 16.47,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " of course",
+            "confidence": 0.9837667059898376,
+            "candidates": [
+              {
+                "start": 15.06,
+                "end": 16.12,
+                "transcriptMatch": " of course",
+                "confidence": 0.9837667059898376,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.29457489388783703,
+              "end": 0.2848264915251788
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        }
+      ]
+    },
+    {
+      "lessonId": "reel-2026-08-30",
+      "sourceVideo": "/lessons/drafts/reel-2026-08-30/intro.mp4",
+      "sourceHash": "bf6db73cde9f4f032520ed64ea477e6c1d6e758ad8eb67e75c277cf86558f4a0",
+      "model": "large-v3",
+      "generatedAt": "2026-08-31T16:08:22.756Z",
+      "algorithmFingerprint": "a94210fc1c3198f8",
+      "clips": [
+        {
+          "cueCardId": "draft-reel-2026-08-30-1",
+          "thaiText": "สั่งกลับบ้าน",
+          "englishText": "order to go or take away",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-30/audio/draft-reel-2026-08-30-1-th.m4a",
+            "status": "matched",
+            "start": 3.46,
+            "end": 5.865,
+            "rawStart": 3.52,
+            "rawEnd": 5.46,
+            "protectedStart": 3.52,
+            "protectedEnd": 5.46,
+            "envelopeMethod": "whisper",
+            "transcriptMatch": " สั่งกลับบ้าน",
+            "confidence": 0.9934682767391205,
+            "candidates": [
+              {
+                "start": 3.52,
+                "end": 5.46,
+                "transcriptMatch": " สั่งกลับบ้าน",
+                "confidence": 0.9934682767391205,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.5812736932639138,
+              "end": 0.7578176829522228
+            },
+            "warnings": [
+              "unrefined-whisper-envelope"
+            ]
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-30/audio/draft-reel-2026-08-30-1-en.m4a",
+            "status": "matched",
+            "start": 6.575,
+            "end": 8.41,
+            "rawStart": 5.56,
+            "rawEnd": 10.24,
+            "protectedStart": 6.68,
+            "protectedEnd": 8.35,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " order to go or take away",
+            "confidence": 0.9660404056799599,
+            "candidates": [
+              {
+                "start": 5.56,
+                "end": 10.24,
+                "transcriptMatch": " order to go or take away",
+                "confidence": 0.9660404056799599,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.30411315198036387,
+              "end": 0.10505649434586041
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-30-2",
+          "thaiText": "ใส่กล่อง",
+          "englishText": "put it in a container",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-30/audio/draft-reel-2026-08-30-2-th.m4a",
+            "status": "matched",
+            "start": 8.59,
+            "end": 12.485,
+            "rawStart": 10.24,
+            "rawEnd": 12,
+            "protectedStart": 8.7,
+            "protectedEnd": 12.26,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": "ใส่กล่อง",
+            "confidence": 0.9823828440053123,
+            "candidates": [
+              {
+                "start": 12.2,
+                "end": 14.02,
+                "transcriptMatch": " ใส่กล่อง",
+                "confidence": 0.9954289446558271,
+                "exact": true,
+                "segmentIndex": 1
+              },
+              {
+                "start": 10.24,
+                "end": 12,
+                "transcriptMatch": "ใส่กล่อง",
+                "confidence": 0.9823828440053123,
+                "exact": true,
+                "segmentIndex": 1
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.30090494768170434,
+              "end": 0.31288928335945737
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-30/audio/draft-reel-2026-08-30-2-en.m4a",
+            "status": "matched",
+            "start": 14.525,
+            "end": 16.36,
+            "rawStart": 14.02,
+            "rawEnd": 15.64,
+            "protectedStart": 14.69,
+            "protectedEnd": 16.18,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " put it in a container",
+            "confidence": 0.9809001805782318,
+            "candidates": [
+              {
+                "start": 14.02,
+                "end": 15.64,
+                "transcriptMatch": " put it in a container",
+                "confidence": 0.9809001805782318,
+                "exact": true,
+                "segmentIndex": 1
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.27397425375815804,
+              "end": 0.296509028888219
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-30-3",
+          "thaiText": "ใส่ถุง",
+          "englishText": "put it in a bag",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-30/audio/draft-reel-2026-08-30-3-th.m4a",
+            "status": "matched",
+            "start": 16.36,
+            "end": 17.685000000000002,
+            "rawStart": 15.94,
+            "rawEnd": 17.18,
+            "protectedStart": 16.44,
+            "protectedEnd": 17.45,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " ใส่ถุง",
+            "confidence": 0.9992237389087677,
+            "candidates": [
+              {
+                "start": 17.34,
+                "end": 19.1,
+                "transcriptMatch": " ใส่ถุง",
+                "confidence": 0.9997401678562164,
+                "exact": true,
+                "segmentIndex": 1
+              },
+              {
+                "start": 15.94,
+                "end": 17.18,
+                "transcriptMatch": " ใส่ถุง",
+                "confidence": 0.9992237389087677,
+                "exact": true,
+                "segmentIndex": 1
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.296509028888219,
+              "end": 0.2977105544606573
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-30/audio/draft-reel-2026-08-30-3-en.m4a",
+            "status": "matched",
+            "start": 19.02,
+            "end": 20.814999999999998,
+            "rawStart": 19.1,
+            "rawEnd": 20.44,
+            "protectedStart": 19.1,
+            "protectedEnd": 20.44,
+            "envelopeMethod": "whisper",
+            "transcriptMatch": " put it in a bag",
+            "confidence": 0.9867584176063537,
+            "candidates": [
+              {
+                "start": 19.1,
+                "end": 20.44,
+                "transcriptMatch": " put it in a bag",
+                "confidence": 0.9867584176063537,
+                "exact": true,
+                "segmentIndex": 1
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.22045423672817913,
+              "end": 0.39437230306916743
+            },
+            "warnings": [
+              "unrefined-whisper-envelope"
+            ]
+          },
+          "pairStatus": "complete"
+        }
+      ]
+    },
+    {
+      "lessonId": "reel-2026-08-31",
+      "sourceVideo": "/lessons/drafts/reel-2026-08-31/intro.mp4",
+      "sourceHash": "ed45827d8d41d5c01c55347cc2b1e57a97faf7834300face4df1ff45cb2a5c5b",
+      "model": "large-v3",
+      "generatedAt": "2026-08-31T16:09:02.435Z",
+      "algorithmFingerprint": "a94210fc1c3198f8",
+      "clips": [
+        {
+          "cueCardId": "draft-reel-2026-08-31-1",
+          "thaiText": "เมื่อวาน",
+          "englishText": "yesterday",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-31/audio/draft-reel-2026-08-31-1-th.m4a",
+            "status": "matched",
+            "start": 1.42,
+            "end": 2.925,
+            "rawStart": 0.54,
+            "rawEnd": 2.52,
+            "protectedStart": 1.59,
+            "protectedEnd": 2.79,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " เมื่อวาน",
+            "confidence": 0.9917967126369477,
+            "candidates": [
+              {
+                "start": 0.54,
+                "end": 2.52,
+                "transcriptMatch": " เมื่อวาน",
+                "confidence": 0.9917967126369477,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2884187777533411,
+              "end": 0.29177702387511556
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-31/audio/draft-reel-2026-08-31-1-en.m4a",
+            "status": "matched",
+            "start": 0.035,
+            "end": 1.1099999999999999,
+            "rawStart": 0,
+            "rawEnd": 0.54,
+            "protectedStart": 0.07,
+            "protectedEnd": 1,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": "yesterday",
+            "confidence": 0.9654367953538895,
+            "candidates": [
+              {
+                "start": 0,
+                "end": 0.54,
+                "transcriptMatch": "yesterday",
+                "confidence": 0.9654367953538895,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.308175985843602,
+              "end": 0.2917669231948936
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-31-2",
+          "thaiText": "วันนี้",
+          "englishText": "today",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-31/audio/draft-reel-2026-08-31-2-th.m4a",
+            "status": "matched",
+            "start": 4.155,
+            "end": 5.7,
+            "rawStart": 3.46,
+            "rawEnd": 5.16,
+            "protectedStart": 4.33,
+            "protectedEnd": 5.47,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " วันนี้",
+            "confidence": 0.9995790594816207,
+            "candidates": [
+              {
+                "start": 3.46,
+                "end": 5.16,
+                "transcriptMatch": " วันนี้",
+                "confidence": 0.9995790594816207,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.29771422691423294,
+              "end": 0.3005420332396006
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-31/audio/draft-reel-2026-08-31-2-en.m4a",
+            "status": "matched",
+            "start": 2.925,
+            "end": 3.9850000000000003,
+            "rawStart": 2.52,
+            "rawEnd": 3.2,
+            "protectedStart": 3.05,
+            "protectedEnd": 3.75,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " today",
+            "confidence": 0.9421337795257568,
+            "candidates": [
+              {
+                "start": 2.52,
+                "end": 3.2,
+                "transcriptMatch": " today",
+                "confidence": 0.9421337795257568,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.29177702387511556,
+              "end": 0.2973586637457662
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-31-3",
+          "thaiText": "พรุ่งนี้",
+          "englishText": "tomorrow",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-31/audio/draft-reel-2026-08-31-3-th.m4a",
+            "status": "matched",
+            "start": 7.195,
+            "end": 8.89,
+            "rawStart": 6.54,
+            "rawEnd": 8.18,
+            "protectedStart": 7.37,
+            "protectedEnd": 8.59,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " พรุ่งนี้",
+            "confidence": 0.9992302448408944,
+            "candidates": [
+              {
+                "start": 6.54,
+                "end": 8.18,
+                "transcriptMatch": " พรุ่งนี้",
+                "confidence": 0.9992302448408944,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.30015269188640936,
+              "end": 0.2712391909837011
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-31/audio/draft-reel-2026-08-31-3-en.m4a",
+            "status": "matched",
+            "start": 5.785,
+            "end": 6.890000000000001,
+            "rawStart": 5.16,
+            "rawEnd": 6.18,
+            "protectedStart": 5.96,
+            "protectedEnd": 6.66,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " tomorrow",
+            "confidence": 0.9901301002502442,
+            "candidates": [
+              {
+                "start": 5.16,
+                "end": 6.18,
+                "transcriptMatch": " tomorrow",
+                "confidence": 0.9901301002502442,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.29393905553187794,
+              "end": 0.29474855616503093
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-31-4",
+          "thaiText": "ทุกวัน",
+          "englishText": "every day",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-31/audio/draft-reel-2026-08-31-4-th.m4a",
+            "status": "matched",
+            "start": 10.305,
+            "end": 11.64,
+            "rawStart": 9.84,
+            "rawEnd": 11.3,
+            "protectedStart": 10.48,
+            "protectedEnd": 11.41,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " ทุกวัน",
+            "confidence": 0.9994130551815033,
+            "candidates": [
+              {
+                "start": 9.84,
+                "end": 11.3,
+                "transcriptMatch": " ทุกวัน",
+                "confidence": 0.9994130551815033,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.29312478494802796,
+              "end": 0.2753889117232002
+            },
+            "warnings": []
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-31/audio/draft-reel-2026-08-31-4-en.m4a",
+            "status": "matched",
+            "start": 8.915,
+            "end": 10.165,
+            "rawStart": 8.18,
+            "rawEnd": 9.64,
+            "protectedStart": 9.09,
+            "protectedEnd": 9.94,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " every day",
+            "confidence": 0.9489400574564933,
+            "candidates": [
+              {
+                "start": 8.18,
+                "end": 9.64,
+                "transcriptMatch": " every day",
+                "confidence": 0.9489400574564933,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.26397275792823965,
+              "end": 0.28387396674245874
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        },
+        {
+          "cueCardId": "draft-reel-2026-08-31-5",
+          "thaiText": "ตอนนี้",
+          "englishText": "right now",
+          "thai": {
+            "audio": "/lessons/drafts/reel-2026-08-31/audio/draft-reel-2026-08-31-5-th.m4a",
+            "status": "matched",
+            "start": 13.205,
+            "end": 14.418125,
+            "rawStart": 12.76,
+            "rawEnd": 14.04,
+            "protectedStart": 13.38,
+            "protectedEnd": 14.34,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " ตอนนี้",
+            "confidence": 0.9997442531585693,
+            "candidates": [
+              {
+                "start": 12.76,
+                "end": 14.04,
+                "transcriptMatch": " ตอนนี้",
+                "confidence": 0.9997442531585693,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "fallback"
+            },
+            "boundaryConfidence": {
+              "start": 0.2729403768068816,
+              "end": 0
+            },
+            "warnings": [
+              "end-fallback"
+            ]
+          },
+          "english": {
+            "audio": "/lessons/drafts/reel-2026-08-31/audio/draft-reel-2026-08-31-5-en.m4a",
+            "status": "matched",
+            "start": 11.695,
+            "end": 13.100000000000001,
+            "rawStart": 11.3,
+            "rawEnd": 12.48,
+            "protectedStart": 11.87,
+            "protectedEnd": 12.86,
+            "envelopeMethod": "energy-island",
+            "transcriptMatch": " right now",
+            "confidence": 0.9922293400764466,
+            "candidates": [
+              {
+                "start": 11.3,
+                "end": 12.48,
+                "transcriptMatch": " right now",
+                "confidence": 0.9922293400764466,
+                "exact": true,
+                "segmentIndex": 0
+              }
+            ],
+            "boundaryMethod": {
+              "start": "quiet",
+              "end": "quiet"
+            },
+            "boundaryConfidence": {
+              "start": 0.2811835911801389,
+              "end": 0.2717115902165735
+            },
+            "warnings": []
+          },
+          "pairStatus": "complete"
+        }
+      ]
+    },
+    {
       "lessonId": "time-units",
       "sourceVideo": "/lessons/drafts/time-units/intro.mp4",
       "sourceHash": "5f3c8cab77a3e0b214612ae27de44fa58607175710483881aa258818e21c7661",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:16.952Z",
+      "generatedAt": "2026-08-31T15:56:54.941Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -5545,7 +9930,7 @@
       "sourceVideo": "/lessons/drafts/times-of-day/intro.mp4",
       "sourceHash": "6a30c26d9d7687bcfa08545612b6a09dce58a361b0636306d1d9d4cf219caebc",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:17.385Z",
+      "generatedAt": "2026-08-31T15:56:55.215Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -6007,7 +10392,7 @@
       "sourceVideo": "/lessons/drafts/waking-up/intro.mp4",
       "sourceHash": "38ac7b13d8838e5d0be70af7769124b728df855f31cb215d72b864a2bfe1abd4",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:20.709Z",
+      "generatedAt": "2026-08-31T15:56:57.830Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -6386,7 +10771,7 @@
       "sourceVideo": "/lessons/drafts/weather/intro.mp4",
       "sourceHash": "dc1953b9f0ca785e90c0c58ef66859383eacb730ed155a3d269f91062a682846",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:18.749Z",
+      "generatedAt": "2026-08-31T15:56:56.200Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {
@@ -6897,7 +11282,7 @@
       "sourceVideo": "/lessons/drafts/what-are-you-doing/intro.mp4",
       "sourceHash": "122ba024e22a4893251e3b20c0098db4c685a66ca8252c9e8fb881bb67daf931",
       "model": "large-v3",
-      "generatedAt": "2026-08-31T15:02:20.292Z",
+      "generatedAt": "2026-08-31T15:56:57.472Z",
       "algorithmFingerprint": "a94210fc1c3198f8",
       "clips": [
         {

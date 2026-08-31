@@ -47,6 +47,7 @@ export const VideoLessonSchema = z.object({
   objective: z.string().min(1),
   description: z.string().min(1),
   activityMode: z.enum(["video-and-practice", "video-only"]).optional(),
+  visibility: z.enum(["visible", "hidden"]).optional(),
   media: LessonMediaSchema,
   cueCardIds: z.array(z.string().min(1)),
   quizBank: z.array(QuizQuestionSchema),

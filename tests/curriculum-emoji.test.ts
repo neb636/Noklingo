@@ -27,6 +27,17 @@ const expectedEmoji = {
   "its-okay": { topic: "🤝", cards: ["👌", "🍃", "😌", "🧘", "👍"] },
   "making-up": { topic: "🕊️", cards: ["🙏", "❌", "🤝", "😌", "🫶"] },
   "affectionate-phrases": { topic: "❤️", cards: ["❤️", "🌸", "🥺", "🤗", "🌙"] },
+  "reel-2026-07-25": { topic: "📊", cards: ["💯", "🔁", "📆", "🔂", "🎲", "🕰️", "🌘", "🚫"] },
+  "reel-2026-07-26": { topic: "🗯️", cards: ["😈", "💀", "👀", "✨", "👋"] },
+  "reel-2026-07-27": { topic: "💍", cards: ["👤", "💑", "💍", "👰", "👶"] },
+  "reel-2026-07-28": { topic: "💬", cards: ["👍", "🏃", "👉", "💡", "⏱️", "🤔"] },
+  "reel-2026-07-30": { topic: "💗", cards: ["🥺", "😘", "😍", "🌟"] },
+  "reel-2026-08-25": { topic: "🌦️", cards: ["🌸", "☀️", "🍂", "❄️", "🌧️"] },
+  "reel-2026-08-27": { topic: "🍜", cards: [] },
+  "reel-2026-08-28": { topic: "🙏", cards: ["🙏", "🙇", "🥹", "😉"] },
+  "reel-2026-08-29": { topic: "🎯", cards: ["🚫", "✅", "🤷", "❔", "🎯", "💯"] },
+  "reel-2026-08-30": { topic: "🥡", cards: ["🥡", "📦", "🛍️"] },
+  "reel-2026-08-31": { topic: "📅", cards: ["⏪", "📍", "⏩", "🔁", "⏱️"] },
 } as const;
 
 describe("curriculum emoji metadata", () => {
@@ -34,9 +45,9 @@ describe("curriculum emoji metadata", () => {
   const cards = CueCardSchema.array().parse(draftCueCardsJson.cueCards);
 
   it("covers every draft lesson and cue card with the approved emoji mapping", () => {
-    expect(lessons).toHaveLength(23);
-    expect(cards).toHaveLength(102);
-    expect(Object.keys(expectedEmoji)).toHaveLength(23);
+    expect(lessons).toHaveLength(34);
+    expect(cards).toHaveLength(153);
+    expect(Object.keys(expectedEmoji)).toHaveLength(34);
 
     for (const lesson of lessons) {
       const expected = expectedEmoji[lesson.id as keyof typeof expectedEmoji];
