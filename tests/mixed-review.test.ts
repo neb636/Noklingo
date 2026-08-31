@@ -8,7 +8,7 @@ import {
   mixedReviewQuestions,
   mixedReviewSessionIsCompatible,
 } from "../src/engine/mixed-review";
-import { defaultSnapshot } from "../src/state/study-store";
+import { defaultSnapshot, useStudyStore } from "../src/state/study-store";
 
 const completedAt = "2026-08-31T12:00:00.000Z";
 
@@ -64,5 +64,22 @@ describe("mixed lesson review", () => {
     expect(migrated.version).toBe(4);
     expect(migrated.practiceCompletions).toEqual([]);
     expect(migrated.activeMixedReviewSession).toBeNull();
+  });
+
+  it("drops a saved queue when a newly completed lesson expands the eligible deck", () => {
+    const completedLesson = lessons.find((lesson) => lesson.activityMode !== "video-only" && lesson.cueCardIds.length)!;
+    const newlyCompletedLesson = lessons.find((lesson) => lesson.id !== completedLesson.id && lesson.activityMode !== "video-only" && lesson.cueCardIds.length)!;
+    const state = snapshot({ practiceCompletions: [{ lessonId: completedLesson.id, completedAt }] });
+    useStudyStore.setState({ ...state, hydrated: true });
+    useStudyStore.getState().startMixedReview();
+    expect(useStudyStore.getState().activeMixedReviewSession).not.toBeNull();
+
+    useStudyStore.getState().recordPracticeCompletion(newlyCompletedLesson.id);
+
+    expect(useStudyStore.getState().activeMixedReviewSession).toBeNull();
+    expect(useStudyStore.getState().practiceCompletions.map((entry) => entry.lessonId)).toEqual([
+      completedLesson.id,
+      newlyCompletedLesson.id,
+    ]);
   });
 });

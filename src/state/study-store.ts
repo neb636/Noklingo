@@ -247,7 +247,10 @@ export const useStudyStore = create<StudyState>((set) => ({
     const lesson = lessonById(lessonId);
     if (!lesson || lesson.activityMode === "video-only" || !lesson.cueCardIds.length
       || state.practiceCompletions.some((entry) => entry.lessonId === lessonId)) return state;
-    return { practiceCompletions: [...state.practiceCompletions, { lessonId, completedAt: new Date().toISOString() }] };
+    return {
+      practiceCompletions: [...state.practiceCompletions, { lessonId, completedAt: new Date().toISOString() }],
+      activeMixedReviewSession: null,
+    };
   }),
   startMixedReview: () => set((state) => {
     const lessonIds = eligibleMixedReviewLessonIds(state);
