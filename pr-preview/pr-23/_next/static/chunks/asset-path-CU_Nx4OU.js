@@ -1,1 +1,0 @@
-var e=`/${`/Noklingo/pr-preview/pr-23`.replace(/^\/+|\/+$/g,``)}`;function t(t){if(/^(?:[a-z]+:)?\/\//i.test(t)||t.startsWith(`data:`)||t.startsWith(`blob:`))return t;let n=`/${t.replace(/^\/+/,``)}`;return e&&(n===e||n.startsWith(`${e}/`))?n:`${e}${n}`}export{e as n,t};
