@@ -1,0 +1,9 @@
+{
+  "lessonId": "coffee-order",
+  "sourceVideo": "/lessons/drafts/coffee-order/intro.mp4",
+  "sourceHash": "9d4014a3d22986099e9e0903aec3df3d7f70794f118ffc8e73b2302bc1f57b0d",
+  "model": "large-v3",
+  "generatedAt": "2026-08-31T15:56:57.456Z",
+  "algorithmFingerprint": "a94210fc1c3198f8",
+  "clips": []
+}

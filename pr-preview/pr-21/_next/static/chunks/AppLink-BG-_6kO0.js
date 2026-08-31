@@ -1,0 +1,1 @@
+import{t as e}from"./framework-B8V_a_AU.js";import{t}from"./asset-path-CN-jiMmN.js";var n=e();function r({href:e,...r}){return(0,n.jsx)(`a`,{href:t(e),...r})}export{r as t};

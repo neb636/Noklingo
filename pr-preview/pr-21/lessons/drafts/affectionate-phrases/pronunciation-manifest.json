@@ -1,0 +1,270 @@
+{
+  "lessonId": "affectionate-phrases",
+  "sourceVideo": "/lessons/drafts/affectionate-phrases/intro.mp4",
+  "sourceHash": "df675d99453f3f290b77bdeb2b5024bdf4641df51ed1b217a52b0f4b44c84976",
+  "model": "large-v3",
+  "generatedAt": "2026-08-31T15:57:00.404Z",
+  "algorithmFingerprint": "a94210fc1c3198f8",
+  "clips": [
+    {
+      "cueCardId": "draft-affectionate-phrases-1",
+      "thaiText": "รักนะ",
+      "englishText": "Love you",
+      "thai": {
+        "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-1-th.m4a",
+        "status": "overridden",
+        "start": 4.04,
+        "end": 5.175,
+        "rawStart": 4.04,
+        "rawEnd": 5.175,
+        "protectedStart": 4.04,
+        "protectedEnd": 5.175,
+        "envelopeMethod": "override",
+        "transcriptMatch": "รักนะ",
+        "confidence": 1,
+        "candidates": [],
+        "boundaryMethod": {
+          "start": "override",
+          "end": "override"
+        },
+        "boundaryConfidence": {
+          "start": 1,
+          "end": 1
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-1-en.m4a",
+        "status": "overridden",
+        "start": 5.555,
+        "end": 6.515,
+        "rawStart": 5.555,
+        "rawEnd": 6.515,
+        "protectedStart": 5.555,
+        "protectedEnd": 6.515,
+        "envelopeMethod": "override",
+        "transcriptMatch": "Love you",
+        "confidence": 1,
+        "candidates": [],
+        "boundaryMethod": {
+          "start": "override",
+          "end": "override"
+        },
+        "boundaryConfidence": {
+          "start": 1,
+          "end": 1
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-affectionate-phrases-2",
+      "thaiText": "คุณสวยมาก",
+      "englishText": "you are very pretty",
+      "thai": {
+        "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-2-th.m4a",
+        "status": "overridden",
+        "start": 7.04,
+        "end": 8.735,
+        "rawStart": 7.04,
+        "rawEnd": 8.735,
+        "protectedStart": 7.04,
+        "protectedEnd": 8.735,
+        "envelopeMethod": "override",
+        "transcriptMatch": "คุณสวยมาก",
+        "confidence": 1,
+        "candidates": [],
+        "boundaryMethod": {
+          "start": "override",
+          "end": "override"
+        },
+        "boundaryConfidence": {
+          "start": 1,
+          "end": 1
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-2-en.m4a",
+        "status": "overridden",
+        "start": 9.285,
+        "end": 10.86,
+        "rawStart": 9.285,
+        "rawEnd": 10.86,
+        "protectedStart": 9.285,
+        "protectedEnd": 10.86,
+        "envelopeMethod": "override",
+        "transcriptMatch": "you are very pretty",
+        "confidence": 1,
+        "candidates": [],
+        "boundaryMethod": {
+          "start": "override",
+          "end": "override"
+        },
+        "boundaryConfidence": {
+          "start": 1,
+          "end": 1
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-affectionate-phrases-3",
+      "thaiText": "คิดถึงจัง",
+      "englishText": "I miss you so much",
+      "thai": {
+        "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-3-th.m4a",
+        "status": "overridden",
+        "start": 11.37,
+        "end": 13.11,
+        "rawStart": 11.37,
+        "rawEnd": 13.11,
+        "protectedStart": 11.37,
+        "protectedEnd": 13.11,
+        "envelopeMethod": "override",
+        "transcriptMatch": "คิดถึงจัง",
+        "confidence": 1,
+        "candidates": [],
+        "boundaryMethod": {
+          "start": "override",
+          "end": "override"
+        },
+        "boundaryConfidence": {
+          "start": 1,
+          "end": 1
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-3-en.m4a",
+        "status": "overridden",
+        "start": 13.635,
+        "end": 15.38,
+        "rawStart": 13.635,
+        "rawEnd": 15.38,
+        "protectedStart": 13.635,
+        "protectedEnd": 15.38,
+        "envelopeMethod": "override",
+        "transcriptMatch": "I miss you so much",
+        "confidence": 1,
+        "candidates": [],
+        "boundaryMethod": {
+          "start": "override",
+          "end": "override"
+        },
+        "boundaryConfidence": {
+          "start": 1,
+          "end": 1
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-affectionate-phrases-4",
+      "thaiText": "กอดหน่อย",
+      "englishText": "Can I have a hug?",
+      "thai": {
+        "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-4-th.m4a",
+        "status": "overridden",
+        "start": 15.44,
+        "end": 16.765,
+        "rawStart": 15.44,
+        "rawEnd": 16.765,
+        "protectedStart": 15.44,
+        "protectedEnd": 16.765,
+        "envelopeMethod": "override",
+        "transcriptMatch": "กอดหน่อย",
+        "confidence": 1,
+        "candidates": [],
+        "boundaryMethod": {
+          "start": "override",
+          "end": "override"
+        },
+        "boundaryConfidence": {
+          "start": 1,
+          "end": 1
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-4-en.m4a",
+        "status": "overridden",
+        "start": 17.7,
+        "end": 18.85,
+        "rawStart": 17.7,
+        "rawEnd": 18.85,
+        "protectedStart": 17.7,
+        "protectedEnd": 18.85,
+        "envelopeMethod": "override",
+        "transcriptMatch": "Can I have a hug?",
+        "confidence": 1,
+        "candidates": [],
+        "boundaryMethod": {
+          "start": "override",
+          "end": "override"
+        },
+        "boundaryConfidence": {
+          "start": 1,
+          "end": 1
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-affectionate-phrases-5",
+      "thaiText": "ฝันดีนะ",
+      "englishText": "goodnight",
+      "thai": {
+        "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-5-th.m4a",
+        "status": "overridden",
+        "start": 19.55,
+        "end": 20.835,
+        "rawStart": 19.55,
+        "rawEnd": 20.835,
+        "protectedStart": 19.55,
+        "protectedEnd": 20.835,
+        "envelopeMethod": "override",
+        "transcriptMatch": "ฝันดีนะ",
+        "confidence": 1,
+        "candidates": [],
+        "boundaryMethod": {
+          "start": "override",
+          "end": "override"
+        },
+        "boundaryConfidence": {
+          "start": 1,
+          "end": 1
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/affectionate-phrases/audio/draft-affectionate-phrases-5-en.m4a",
+        "status": "overridden",
+        "start": 21.345,
+        "end": 22.14,
+        "rawStart": 21.345,
+        "rawEnd": 22.14,
+        "protectedStart": 21.345,
+        "protectedEnd": 22.14,
+        "envelopeMethod": "override",
+        "transcriptMatch": "goodnight",
+        "confidence": 1,
+        "candidates": [],
+        "boundaryMethod": {
+          "start": "override",
+          "end": "override"
+        },
+        "boundaryConfidence": {
+          "start": 1,
+          "end": 1
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    }
+  ]
+}
