@@ -1,0 +1,1 @@
+import{t as e}from"./framework-B8V_a_AU.js";import{n as t}from"./vinext-yQoKx2dr.js";import{t as n}from"./LessonExperience-BrCjo9DR.js";import{s as r}from"./createLucideIcon-DMQI9ITF.js";var i=e();function a({lessonId:e}){let a=r.find(t=>t.id===e);return a?(0,i.jsx)(n,{lesson:a}):(0,i.jsx)(t,{statusCode:404})}export{a as default};

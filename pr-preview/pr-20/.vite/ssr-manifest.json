@@ -4,11 +4,11 @@
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js"
   ],
   "\u0000vinext:async-hooks-stub": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "\u0000virtual:vinext-client-entry": [],
   "\u0000vite/preload-helper.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "__vite-optional-peer-dep:@emotion/is-prop-valid:framer-motion": [
     "_next/static/chunks/filter-props-C_olJvd_.js",
@@ -16,19 +16,19 @@
     "_next/static/chunks/framework-B8V_a_AU.js"
   ],
   "node_modules/@unpic/core/dist/auto.mjs": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/@unpic/core/dist/chunk-7DG3H6KO.mjs": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/@unpic/react/dist/chunk-SNIEDJZS.mjs": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/@unpic/react/dist/chunk-VTEFGNYT.mjs": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/@unpic/react/dist/index.mjs": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/dexie/dist/dexie.mjs": [
     "_next/static/chunks/db-BfQdINcd.js"
@@ -49,7 +49,7 @@
     "_next/static/chunks/LessonExperience-BrCjo9DR.js"
   ],
   "node_modules/framer-motion/dist/es/components/MotionConfig/index.mjs": [
-    "_next/static/chunks/_app-TCo6EJzL.js",
+    "_next/static/chunks/_app-Cv9mMyDA.js",
     "_next/static/css/_app.twY-kNfN.css"
   ],
   "node_modules/framer-motion/dist/es/context/LayoutGroupContext.mjs": [
@@ -209,10 +209,10 @@
     "_next/static/chunks/proxy-BH9eZ7t3.js"
   ],
   "node_modules/framer-motion/dist/es/utils/reduced-motion/use-reduced-motion-config.mjs": [
-    "_next/static/chunks/study-BlNJz8LD.js"
+    "_next/static/chunks/study-BJFxw0sy.js"
   ],
   "node_modules/framer-motion/dist/es/utils/reduced-motion/use-reduced-motion.mjs": [
-    "_next/static/chunks/study-BlNJz8LD.js"
+    "_next/static/chunks/study-BJFxw0sy.js"
   ],
   "node_modules/framer-motion/dist/es/utils/use-composed-ref.mjs": [
     "_next/static/chunks/LessonExperience-BrCjo9DR.js"
@@ -227,7 +227,7 @@
     "_next/static/chunks/CueCardCarousel-Lp5DSRi8.js"
   ],
   "node_modules/ipaddr.js/lib/ipaddr.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/lucide-react/dist/esm/Icon.js": [
     "_next/static/chunks/createLucideIcon-DMQI9ITF.js"
@@ -254,7 +254,7 @@
     "_next/static/chunks/today-DQUCN2oo.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/calendar-days.js": [
-    "_next/static/chunks/_app-TCo6EJzL.js",
+    "_next/static/chunks/_app-Cv9mMyDA.js",
     "_next/static/css/_app.twY-kNfN.css"
   ],
   "node_modules/lucide-react/dist/esm/icons/check.js": [
@@ -270,11 +270,11 @@
     "_next/static/chunks/LessonExperience-BrCjo9DR.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/clapperboard.js": [
-    "_next/static/chunks/_app-TCo6EJzL.js",
+    "_next/static/chunks/_app-Cv9mMyDA.js",
     "_next/static/css/_app.twY-kNfN.css"
   ],
   "node_modules/lucide-react/dist/esm/icons/clipboard-check.js": [
-    "_next/static/chunks/_app-TCo6EJzL.js",
+    "_next/static/chunks/_app-Cv9mMyDA.js",
     "_next/static/css/_app.twY-kNfN.css"
   ],
   "node_modules/lucide-react/dist/esm/icons/clock-3.js": [
@@ -287,7 +287,7 @@
     "_next/static/chunks/LessonExperience-BrCjo9DR.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/eye.js": [
-    "_next/static/chunks/study-BlNJz8LD.js"
+    "_next/static/chunks/study-BJFxw0sy.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/hard-drive.js": [
     "_next/static/chunks/settings-BtLwyrEJ.js"
@@ -299,14 +299,14 @@
     "_next/static/chunks/layers-C5K9S9vO.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/library.js": [
-    "_next/static/chunks/_app-TCo6EJzL.js",
+    "_next/static/chunks/_app-Cv9mMyDA.js",
     "_next/static/css/_app.twY-kNfN.css"
   ],
   "node_modules/lucide-react/dist/esm/icons/loader-circle.js": [
     "_next/static/chunks/CueCardCarousel-Lp5DSRi8.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/mic-vocal.js": [
-    "_next/static/chunks/study-BlNJz8LD.js"
+    "_next/static/chunks/study-BJFxw0sy.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/moon.js": [
     "_next/static/chunks/settings-BtLwyrEJ.js"
@@ -324,7 +324,7 @@
     "_next/static/chunks/rotate-ccw-Bxjudbyb.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/settings.js": [
-    "_next/static/chunks/_app-TCo6EJzL.js",
+    "_next/static/chunks/_app-Cv9mMyDA.js",
     "_next/static/css/_app.twY-kNfN.css"
   ],
   "node_modules/lucide-react/dist/esm/icons/sparkles.js": [
@@ -988,353 +988,353 @@
     "_next/static/chunks/framework-B8V_a_AU.js"
   ],
   "node_modules/unpic/esm/data/domains.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/data/paths.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/data/subdomains.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/detect.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/appwrite.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/astro.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/builder.io.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/bunny.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/cloudflare.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/cloudflare_images.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/cloudimage.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/cloudinary.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/contentful.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/contentstack.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/directus.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/hygraph.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/imageengine.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/imagekit.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/imgix.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/ipx.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/keycdn.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/kontent.ai.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/netlify.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/nextjs.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/scene7.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/shopify.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/storyblok.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/supabase.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/uploadcare.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/vercel.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/wordpress.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/providers/wsrv.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/transform.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/unpic/esm/src/utils.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/client/app-nav-failure-handler.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/client/client-rewrite-matcher.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/client/empty-module.js": [],
   "node_modules/vinext/dist/client/instrumentation-client-state.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/client/instrumentation-client.js": [],
   "node_modules/vinext/dist/client/navigation-runtime.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/client/react-instance-bootstrap.js": [],
   "node_modules/vinext/dist/client/react-instance.js": [],
   "node_modules/vinext/dist/client/validate-module-path.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/client/vinext-next-data.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/client/window-next.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/config/config-matchers.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/config/request-context.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/routing/route-matching.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/routing/route-pattern.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/routing/route-trie.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/routing/utils.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/server/app-bfcache-id.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/server/app-browser-interception-context.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/server/app-browser-mpa-navigation.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/server/app-browser-rsc-redirect.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/server/app-elements-wire.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/server/app-elements.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/server/app-history-state.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/server/app-mounted-slots-header.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/server/app-render-dependency.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/server/app-rsc-cache-busting.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/server/app-rsc-render-mode.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/server/app-rsc-state-fingerprint.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/server/artifact-compatibility.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/server/headers.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/server/navigation-planner.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/server/navigation-trace.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/server/normalize-path.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/server/operation-token.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/server/rsc-completion-metadata.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/app-router-scroll-state.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/client-locale.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/error.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/hash-scroll.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/head.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/image-config.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/image.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/internal/als-registry.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/internal/app-prefetch-fetch-queue.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/internal/app-route-detection.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/internal/app-router-context.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/internal/hybrid-client-route-owner-direct.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/internal/hybrid-client-route-owner.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/internal/interpolate-as.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/internal/make-hanging-promise.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/internal/navigation-untracked.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/internal/pages-data-fetch-dedup.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/internal/pages-data-target.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/internal/pages-data-url.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/internal/pages-router-accessor.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/internal/pages-router-components.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/internal/router-context.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/navigation-context-state.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/navigation-errors.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/navigation.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/pages-router-runtime.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/ppr-fallback-shell.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/readonly-url-search-params.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/router.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/unrecognized-action-error.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/url-safety.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/url-utils.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/shims/use-merged-ref.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/utils/base-path.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/utils/compare.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/utils/deployment-id.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/utils/domain-locale.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/utils/external-url.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/utils/hash.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/utils/html-limited-bots.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/utils/middleware-request-headers.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/utils/number.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/utils/parse-cookie.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/utils/promise.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/utils/protocol-headers.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/utils/query.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/utils/record.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/utils/redirect-digest.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/vinext/dist/utils/regex-safety.js": [
-    "_next/static/chunks/vinext-DTdK61wO.js"
+    "_next/static/chunks/vinext-yQoKx2dr.js"
   ],
   "node_modules/zod/v4/classic/errors.js": [
     "_next/static/chunks/createLucideIcon-DMQI9ITF.js"
@@ -1399,11 +1399,11 @@
     "_next/static/chunks/asset-path-PlkvC0u1.js"
   ],
   "src/components/AppProviders.tsx": [
-    "_next/static/chunks/_app-TCo6EJzL.js",
+    "_next/static/chunks/_app-Cv9mMyDA.js",
     "_next/static/css/_app.twY-kNfN.css",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
-    "_next/static/chunks/vinext-DTdK61wO.js",
+    "_next/static/chunks/vinext-yQoKx2dr.js",
     "_next/static/chunks/filter-props-C_olJvd_.js",
     "_next/static/chunks/db-BfQdINcd.js",
     "_next/static/chunks/createLucideIcon-DMQI9ITF.js",
@@ -1412,11 +1412,11 @@
     "_next/static/chunks/AppLink-COpaIV0Z.js"
   ],
   "src/components/AppShell.tsx": [
-    "_next/static/chunks/_app-TCo6EJzL.js",
+    "_next/static/chunks/_app-Cv9mMyDA.js",
     "_next/static/css/_app.twY-kNfN.css",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
-    "_next/static/chunks/vinext-DTdK61wO.js",
+    "_next/static/chunks/vinext-yQoKx2dr.js",
     "_next/static/chunks/filter-props-C_olJvd_.js",
     "_next/static/chunks/db-BfQdINcd.js",
     "_next/static/chunks/createLucideIcon-DMQI9ITF.js",
@@ -1687,11 +1687,11 @@
     "_next/static/chunks/volume-2-D40PIRLh.js"
   ],
   "src/pages/_app.tsx": [
-    "_next/static/chunks/_app-TCo6EJzL.js",
+    "_next/static/chunks/_app-Cv9mMyDA.js",
     "_next/static/css/_app.twY-kNfN.css",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
-    "_next/static/chunks/vinext-DTdK61wO.js",
+    "_next/static/chunks/vinext-yQoKx2dr.js",
     "_next/static/chunks/filter-props-C_olJvd_.js",
     "_next/static/chunks/db-BfQdINcd.js",
     "_next/static/chunks/createLucideIcon-DMQI9ITF.js",
@@ -1700,8 +1700,9 @@
     "_next/static/chunks/AppLink-COpaIV0Z.js"
   ],
   "src/pages/lessons/[lessonId].tsx": [
-    "_next/static/chunks/_lessonId_-CL9lFwwx.js",
+    "_next/static/chunks/_lessonId_-BresyrNA.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
+    "_next/static/chunks/vinext-yQoKx2dr.js",
     "_next/static/chunks/LessonExperience-BrCjo9DR.js",
     "_next/static/chunks/createLucideIcon-DMQI9ITF.js"
   ],
@@ -1716,9 +1717,9 @@
     "_next/static/chunks/volume-2-D40PIRLh.js"
   ],
   "src/pages/library-2/index.tsx": [
-    "_next/static/chunks/library-2-BXeesU_4.js",
+    "_next/static/chunks/library-2-Bqw4rS5m.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
-    "_next/static/chunks/vinext-DTdK61wO.js",
+    "_next/static/chunks/vinext-yQoKx2dr.js",
     "_next/static/chunks/createLucideIcon-DMQI9ITF.js",
     "_next/static/chunks/asset-path-PlkvC0u1.js",
     "_next/static/chunks/clock-3-BDjsLTTI.js",
@@ -1728,9 +1729,9 @@
     "_next/static/chunks/PageHeader-BW8-in7A.js"
   ],
   "src/pages/library.tsx": [
-    "_next/static/chunks/library-CpOhkOt2.js",
+    "_next/static/chunks/library-DOjhYtuO.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
-    "_next/static/chunks/vinext-DTdK61wO.js",
+    "_next/static/chunks/vinext-yQoKx2dr.js",
     "_next/static/chunks/createLucideIcon-DMQI9ITF.js",
     "_next/static/chunks/asset-path-PlkvC0u1.js",
     "_next/static/chunks/arrow-right-BjdGBV7Y.js",
@@ -1764,10 +1765,10 @@
     "_next/static/chunks/PageHeader-BW8-in7A.js"
   ],
   "src/pages/study.tsx": [
-    "_next/static/chunks/study-BlNJz8LD.js",
+    "_next/static/chunks/study-BJFxw0sy.js",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
-    "_next/static/chunks/vinext-DTdK61wO.js",
+    "_next/static/chunks/vinext-yQoKx2dr.js",
     "_next/static/chunks/proxy-BH9eZ7t3.js",
     "_next/static/chunks/filter-props-C_olJvd_.js",
     "_next/static/chunks/LessonExperience-BrCjo9DR.js",
@@ -1797,9 +1798,9 @@
     "_next/static/chunks/PageHeader-BW8-in7A.js"
   ],
   "src/pages/welcome.tsx": [
-    "_next/static/chunks/welcome-nZ0r5CNh.js",
+    "_next/static/chunks/welcome-C5k4xmdk.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
-    "_next/static/chunks/vinext-DTdK61wO.js",
+    "_next/static/chunks/vinext-yQoKx2dr.js",
     "_next/static/chunks/asset-path-PlkvC0u1.js",
     "_next/static/chunks/AppLink-COpaIV0Z.js"
   ],
@@ -1810,11 +1811,11 @@
     "_next/static/chunks/createLucideIcon-DMQI9ITF.js"
   ],
   "src/styles/globals.css": [
-    "_next/static/chunks/_app-TCo6EJzL.js",
+    "_next/static/chunks/_app-Cv9mMyDA.js",
     "_next/static/css/_app.twY-kNfN.css",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
-    "_next/static/chunks/vinext-DTdK61wO.js",
+    "_next/static/chunks/vinext-yQoKx2dr.js",
     "_next/static/chunks/filter-props-C_olJvd_.js",
     "_next/static/chunks/db-BfQdINcd.js",
     "_next/static/chunks/createLucideIcon-DMQI9ITF.js",

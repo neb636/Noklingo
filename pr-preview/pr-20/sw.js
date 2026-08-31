@@ -6,7 +6,7 @@
  * browser runtime to a server or deployment-specific absolute path.
  */
 const PRODUCT_CACHE_VERSION = "noklingo-v4";
-const BUILD_REVISION = "752772235d9e8acb";
+const BUILD_REVISION = "c13cdc0656bdbf53";
 const PRECACHE_PATHS = [
   "./",
   "./welcome/",
@@ -70,14 +70,14 @@ const PRECACHE_PATHS = [
   "./lessons/audio/quiz-feedback/correct.mp3",
   "./lessons/audio/quiz-feedback/incorrect.mp3",
   "./lessons/audio/quiz-feedback/perfect.mp3",
-  "./_next/static/9797fa72-260b-4212-b543-f8dd75b44980/_buildManifest.js",
-  "./_next/static/9797fa72-260b-4212-b543-f8dd75b44980/_ssgManifest.js",
+  "./_next/static/c9193433-3e0c-4b1b-b07b-e62651b5728d/_buildManifest.js",
+  "./_next/static/c9193433-3e0c-4b1b-b07b-e62651b5728d/_ssgManifest.js",
   "./_next/static/chunks/AppLink-COpaIV0Z.js",
   "./_next/static/chunks/CueCardCarousel-Lp5DSRi8.js",
   "./_next/static/chunks/LessonExperience-BrCjo9DR.js",
   "./_next/static/chunks/PageHeader-BW8-in7A.js",
-  "./_next/static/chunks/_app-TCo6EJzL.js",
-  "./_next/static/chunks/_lessonId_-CL9lFwwx.js",
+  "./_next/static/chunks/_app-Cv9mMyDA.js",
+  "./_next/static/chunks/_lessonId_-BresyrNA.js",
   "./_next/static/chunks/_lessonId_-Cj3PTXDl.js",
   "./_next/static/chunks/arrow-right-BjdGBV7Y.js",
   "./_next/static/chunks/asset-path-PlkvC0u1.js",
@@ -86,22 +86,22 @@ const PRECACHE_PATHS = [
   "./_next/static/chunks/db-BfQdINcd.js",
   "./_next/static/chunks/filter-props-C_olJvd_.js",
   "./_next/static/chunks/framework-B8V_a_AU.js",
-  "./_next/static/chunks/index-CvIu_eX_.js",
+  "./_next/static/chunks/index-BqWRoQru.js",
   "./_next/static/chunks/layers-C5K9S9vO.js",
-  "./_next/static/chunks/library-2-BXeesU_4.js",
-  "./_next/static/chunks/library-CpOhkOt2.js",
+  "./_next/static/chunks/library-2-Bqw4rS5m.js",
+  "./_next/static/chunks/library-DOjhYtuO.js",
   "./_next/static/chunks/play-iOl3OcmG.js",
   "./_next/static/chunks/proxy-BH9eZ7t3.js",
   "./_next/static/chunks/results-B8g0ZpsV.js",
   "./_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
   "./_next/static/chunks/rotate-ccw-Bxjudbyb.js",
   "./_next/static/chunks/settings-BtLwyrEJ.js",
-  "./_next/static/chunks/study-BlNJz8LD.js",
+  "./_next/static/chunks/study-BJFxw0sy.js",
   "./_next/static/chunks/study-store-DSt2MIeb.js",
   "./_next/static/chunks/today-DQUCN2oo.js",
-  "./_next/static/chunks/vinext-DTdK61wO.js",
+  "./_next/static/chunks/vinext-yQoKx2dr.js",
   "./_next/static/chunks/volume-2-D40PIRLh.js",
-  "./_next/static/chunks/welcome-nZ0r5CNh.js",
+  "./_next/static/chunks/welcome-C5k4xmdk.js",
   "./_next/static/chunks/x-Cc_BCAVX.js",
   "./_next/static/css/_app.twY-kNfN.css"
 ];
