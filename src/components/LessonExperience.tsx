@@ -5,9 +5,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, CheckCircle2, ExternalLink, Play, RotateCcw, Sparkles } from "lucide-react";
 import type { VideoLesson } from "@/domain/schemas";
 import { cueCards } from "@/domain/seed";
+import { writeSnapshot } from "@/data/db";
 import { assetPath } from "@/lib/asset-path";
 import { useQuizSounds } from "@/lib/use-quiz-sounds";
-import { useStudyStore } from "@/state/study-store";
+import { snapshotFromState, useStudyStore } from "@/state/study-store";
 import { CueCardCarousel, StudyTopBar } from "./CueCardCarousel";
 import { LessonVideoScreen, type LessonVideoScreenHandle } from "./LessonVideoScreen";
 import { PracticeQuiz } from "./PracticeQuiz";
@@ -24,8 +25,12 @@ export function LessonExperience({ lesson }: { lesson: VideoLesson }) {
   const cards = lesson.cueCardIds.map((id) => cueCards.find((card) => card.id === id)).filter((card): card is (typeof cueCards)[number] => Boolean(card));
   const videoOnly = lesson.activityMode === "video-only";
 
-  function backToLibrary() {
-    window.location.assign(assetPath("/library/"));
+  async function backToLibrary() {
+    try {
+      await writeSnapshot(snapshotFromState(useStudyStore.getState()));
+    } finally {
+      window.location.assign(assetPath("/library/"));
+    }
   }
 
   function playVideo() {
@@ -39,7 +44,7 @@ export function LessonExperience({ lesson }: { lesson: VideoLesson }) {
           lesson={lesson}
           cardCount={cards.length}
           expanded={stage === "video"}
-          onBack={backToLibrary}
+          onBack={() => void backToLibrary()}
           onPlay={playVideo}
           onSkip={videoOnly ? undefined : () => setStage("cards")}
           player={(
@@ -49,7 +54,7 @@ export function LessonExperience({ lesson }: { lesson: VideoLesson }) {
               presentation={stage === "video" ? "immersive" : "poster"}
               onEnterImmersive={() => setStage("video")}
               onClose={() => setStage("overview")}
-              onContinue={videoOnly ? backToLibrary : () => setStage("cards")}
+              onContinue={videoOnly ? () => void backToLibrary() : () => setStage("cards")}
               continueLabel={videoOnly ? "Finish class" : undefined}
               continueHint={videoOnly ? "That’s the whole class—there’s no homework attached." : undefined}
             />
@@ -58,7 +63,7 @@ export function LessonExperience({ lesson }: { lesson: VideoLesson }) {
       )}
       {!videoOnly && stage === "cards" && <CueCardCarousel lesson={lesson} cards={cards} mode="display" onBack={() => setStage("overview")} onComplete={() => setStage("quiz")} />}
       {!videoOnly && stage === "quiz" && <PracticeQuiz key={attempt} lesson={lesson} lessonCards={cards} allCards={cueCards} seed={`${lesson.id}:practice:${attempt}`} onClose={() => setStage("overview")} onAnswerChecked={(correct) => quizSounds.play(correct ? "correct" : "incorrect")} onComplete={(score, total) => { if (total > 0 && score === total) quizSounds.play("perfect"); recordPracticeCompletion(lesson.id); setResult({ score, total }); setStage("complete"); }} />}
-      {stage === "complete" && <PracticeComplete lesson={lesson} score={result.score} total={result.total} onRetry={() => { setAttempt((value) => value + 1); setStage("quiz"); }} onCards={() => setStage("cards")} onLibrary={backToLibrary} />}
+      {stage === "complete" && <PracticeComplete lesson={lesson} score={result.score} total={result.total} onRetry={() => { setAttempt((value) => value + 1); setStage("quiz"); }} onCards={() => setStage("cards")} onLibrary={() => void backToLibrary()} />}
     </div>
   );
 }
