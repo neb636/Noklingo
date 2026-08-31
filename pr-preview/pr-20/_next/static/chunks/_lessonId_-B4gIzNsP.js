@@ -1,1 +1,0 @@
-import{t as e}from"./framework-B8V_a_AU.js";import{t}from"./LessonExperience-iodwJI6j.js";import{s as n}from"./createLucideIcon-D-h3xglt.js";var r=e();function i({lessonId:e}){let i=n.find(t=>t.id===e);if(!i)throw Error(`Static lesson route is missing bundled lesson: ${e}`);return(0,r.jsx)(t,{lesson:i})}export{i as default};
