@@ -34,23 +34,23 @@
     "_next/static/chunks/db-Da_Nc79c.js"
   ],
   "node_modules/framer-motion/dist/es/components/AnimatePresence/PopChild.mjs": [
-    "_next/static/chunks/LessonExperience-iodwJI6j.js"
+    "_next/static/chunks/LessonExperience-BO_7Sxjq.js"
   ],
   "node_modules/framer-motion/dist/es/components/AnimatePresence/PresenceChild.mjs": [
-    "_next/static/chunks/LessonExperience-iodwJI6j.js"
+    "_next/static/chunks/LessonExperience-BO_7Sxjq.js"
   ],
   "node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs": [
-    "_next/static/chunks/LessonExperience-iodwJI6j.js"
+    "_next/static/chunks/LessonExperience-BO_7Sxjq.js"
   ],
   "node_modules/framer-motion/dist/es/components/AnimatePresence/use-presence.mjs": [
     "_next/static/chunks/proxy-BH9eZ7t3.js"
   ],
   "node_modules/framer-motion/dist/es/components/AnimatePresence/utils.mjs": [
-    "_next/static/chunks/LessonExperience-iodwJI6j.js"
+    "_next/static/chunks/LessonExperience-BO_7Sxjq.js"
   ],
   "node_modules/framer-motion/dist/es/components/MotionConfig/index.mjs": [
-    "_next/static/chunks/_app-Br1ayAiM.js",
-    "_next/static/css/_app.C8t8wFtF.css"
+    "_next/static/chunks/_app-DZ_Va8EQ.js",
+    "_next/static/css/_app.twY-kNfN.css"
   ],
   "node_modules/framer-motion/dist/es/context/LayoutGroupContext.mjs": [
     "_next/static/chunks/proxy-BH9eZ7t3.js"
@@ -209,13 +209,13 @@
     "_next/static/chunks/proxy-BH9eZ7t3.js"
   ],
   "node_modules/framer-motion/dist/es/utils/reduced-motion/use-reduced-motion-config.mjs": [
-    "_next/static/chunks/study-DxlV1Z1n.js"
+    "_next/static/chunks/study-CDAR_nsK.js"
   ],
   "node_modules/framer-motion/dist/es/utils/reduced-motion/use-reduced-motion.mjs": [
-    "_next/static/chunks/study-DxlV1Z1n.js"
+    "_next/static/chunks/study-CDAR_nsK.js"
   ],
   "node_modules/framer-motion/dist/es/utils/use-composed-ref.mjs": [
-    "_next/static/chunks/LessonExperience-iodwJI6j.js"
+    "_next/static/chunks/LessonExperience-BO_7Sxjq.js"
   ],
   "node_modules/framer-motion/dist/es/utils/use-constant.mjs": [
     "_next/static/chunks/filter-props-C_olJvd_.js"
@@ -224,7 +224,7 @@
     "_next/static/chunks/proxy-BH9eZ7t3.js"
   ],
   "node_modules/howler/dist/howler.js": [
-    "_next/static/chunks/CueCardCarousel-kE40h5il.js"
+    "_next/static/chunks/CueCardCarousel-eGcPZXQa.js"
   ],
   "node_modules/ipaddr.js/lib/ipaddr.js": [
     "_next/static/chunks/vinext-DTdK61wO.js"
@@ -239,108 +239,108 @@
     "_next/static/chunks/createLucideIcon-D-h3xglt.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/arrow-down.js": [
-    "_next/static/chunks/_lessonId_-B0Fn3GCg.js"
+    "_next/static/chunks/_lessonId_-C3SFCQ-_.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/arrow-left.js": [
-    "_next/static/chunks/CueCardCarousel-kE40h5il.js"
+    "_next/static/chunks/CueCardCarousel-eGcPZXQa.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/arrow-right.js": [
     "_next/static/chunks/arrow-right-ZNHcjnAA.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/arrow-up.js": [
-    "_next/static/chunks/_lessonId_-B0Fn3GCg.js"
+    "_next/static/chunks/_lessonId_-C3SFCQ-_.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/book-open.js": [
     "_next/static/chunks/today-BZyy-pmM.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/calendar-days.js": [
-    "_next/static/chunks/_app-Br1ayAiM.js",
-    "_next/static/css/_app.C8t8wFtF.css"
+    "_next/static/chunks/_app-DZ_Va8EQ.js",
+    "_next/static/css/_app.twY-kNfN.css"
   ],
   "node_modules/lucide-react/dist/esm/icons/check.js": [
     "_next/static/chunks/x-CwKALzpi.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/chevron-left.js": [
-    "_next/static/chunks/_lessonId_-B0Fn3GCg.js"
+    "_next/static/chunks/_lessonId_-C3SFCQ-_.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/circle-alert.js": [
-    "_next/static/chunks/CueCardCarousel-kE40h5il.js"
+    "_next/static/chunks/CueCardCarousel-eGcPZXQa.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/circle-check.js": [
-    "_next/static/chunks/LessonExperience-iodwJI6j.js"
+    "_next/static/chunks/LessonExperience-BO_7Sxjq.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/clapperboard.js": [
-    "_next/static/chunks/_app-Br1ayAiM.js",
-    "_next/static/css/_app.C8t8wFtF.css"
+    "_next/static/chunks/_app-DZ_Va8EQ.js",
+    "_next/static/css/_app.twY-kNfN.css"
   ],
   "node_modules/lucide-react/dist/esm/icons/clipboard-check.js": [
-    "_next/static/chunks/_app-Br1ayAiM.js",
-    "_next/static/css/_app.C8t8wFtF.css"
+    "_next/static/chunks/_app-DZ_Va8EQ.js",
+    "_next/static/css/_app.twY-kNfN.css"
   ],
   "node_modules/lucide-react/dist/esm/icons/clock-3.js": [
     "_next/static/chunks/clock-3-CapHDjz3.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/download.js": [
-    "_next/static/chunks/settings-DIotIlym.js"
+    "_next/static/chunks/settings-Tlxvm2VO.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/external-link.js": [
-    "_next/static/chunks/LessonExperience-iodwJI6j.js"
+    "_next/static/chunks/LessonExperience-BO_7Sxjq.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/eye.js": [
-    "_next/static/chunks/study-DxlV1Z1n.js"
+    "_next/static/chunks/study-CDAR_nsK.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/hard-drive.js": [
-    "_next/static/chunks/settings-DIotIlym.js"
+    "_next/static/chunks/settings-Tlxvm2VO.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/languages.js": [
-    "_next/static/chunks/settings-DIotIlym.js"
+    "_next/static/chunks/settings-Tlxvm2VO.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/layers.js": [
     "_next/static/chunks/layers-D2lRCNLl.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/library.js": [
-    "_next/static/chunks/_app-Br1ayAiM.js",
-    "_next/static/css/_app.C8t8wFtF.css"
+    "_next/static/chunks/_app-DZ_Va8EQ.js",
+    "_next/static/css/_app.twY-kNfN.css"
   ],
   "node_modules/lucide-react/dist/esm/icons/loader-circle.js": [
-    "_next/static/chunks/CueCardCarousel-kE40h5il.js"
+    "_next/static/chunks/CueCardCarousel-eGcPZXQa.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/mic-vocal.js": [
-    "_next/static/chunks/study-DxlV1Z1n.js"
+    "_next/static/chunks/study-CDAR_nsK.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/moon.js": [
-    "_next/static/chunks/settings-DIotIlym.js"
+    "_next/static/chunks/settings-Tlxvm2VO.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/pause.js": [
-    "_next/static/chunks/_lessonId_-B0Fn3GCg.js"
+    "_next/static/chunks/_lessonId_-C3SFCQ-_.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/play.js": [
     "_next/static/chunks/play-D0_zdgo6.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/refresh-cw.js": [
-    "_next/static/chunks/LessonExperience-iodwJI6j.js"
+    "_next/static/chunks/LessonExperience-BO_7Sxjq.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/rotate-ccw.js": [
     "_next/static/chunks/rotate-ccw-BzFyGKTm.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/settings.js": [
-    "_next/static/chunks/_app-Br1ayAiM.js",
-    "_next/static/css/_app.C8t8wFtF.css"
+    "_next/static/chunks/_app-DZ_Va8EQ.js",
+    "_next/static/css/_app.twY-kNfN.css"
   ],
   "node_modules/lucide-react/dist/esm/icons/sparkles.js": [
-    "_next/static/chunks/CueCardCarousel-kE40h5il.js"
+    "_next/static/chunks/CueCardCarousel-eGcPZXQa.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/sun-medium.js": [
-    "_next/static/chunks/settings-DIotIlym.js"
+    "_next/static/chunks/settings-Tlxvm2VO.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/upload.js": [
-    "_next/static/chunks/settings-DIotIlym.js"
+    "_next/static/chunks/settings-Tlxvm2VO.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/volume-2.js": [
     "_next/static/chunks/volume-2-BYf2FohE.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/volume-x.js": [
-    "_next/static/chunks/CueCardCarousel-kE40h5il.js"
+    "_next/static/chunks/CueCardCarousel-eGcPZXQa.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/x.js": [
     "_next/static/chunks/x-CwKALzpi.js"
@@ -1399,8 +1399,8 @@
     "_next/static/chunks/asset-path-PlkvC0u1.js"
   ],
   "src/components/AppProviders.tsx": [
-    "_next/static/chunks/_app-Br1ayAiM.js",
-    "_next/static/css/_app.C8t8wFtF.css",
+    "_next/static/chunks/_app-DZ_Va8EQ.js",
+    "_next/static/css/_app.twY-kNfN.css",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
     "_next/static/chunks/vinext-DTdK61wO.js",
@@ -1412,8 +1412,8 @@
     "_next/static/chunks/AppLink-COpaIV0Z.js"
   ],
   "src/components/AppShell.tsx": [
-    "_next/static/chunks/_app-Br1ayAiM.js",
-    "_next/static/css/_app.C8t8wFtF.css",
+    "_next/static/chunks/_app-DZ_Va8EQ.js",
+    "_next/static/css/_app.twY-kNfN.css",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
     "_next/static/chunks/vinext-DTdK61wO.js",
@@ -1425,7 +1425,7 @@
     "_next/static/chunks/AppLink-COpaIV0Z.js"
   ],
   "src/components/CueCardCarousel.tsx": [
-    "_next/static/chunks/CueCardCarousel-kE40h5il.js",
+    "_next/static/chunks/CueCardCarousel-eGcPZXQa.js",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
     "_next/static/chunks/createLucideIcon-D-h3xglt.js",
@@ -1436,7 +1436,7 @@
     "_next/static/chunks/volume-2-BYf2FohE.js"
   ],
   "src/components/LessonExperience.tsx": [
-    "_next/static/chunks/LessonExperience-iodwJI6j.js",
+    "_next/static/chunks/LessonExperience-BO_7Sxjq.js",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
     "_next/static/chunks/proxy-BH9eZ7t3.js",
@@ -1444,7 +1444,7 @@
     "_next/static/chunks/createLucideIcon-D-h3xglt.js",
     "_next/static/chunks/study-store-BvN-qlOj.js",
     "_next/static/chunks/asset-path-PlkvC0u1.js",
-    "_next/static/chunks/CueCardCarousel-kE40h5il.js",
+    "_next/static/chunks/CueCardCarousel-eGcPZXQa.js",
     "_next/static/chunks/arrow-right-ZNHcjnAA.js",
     "_next/static/chunks/x-CwKALzpi.js",
     "_next/static/chunks/clock-3-CapHDjz3.js",
@@ -1453,7 +1453,7 @@
     "_next/static/chunks/volume-2-BYf2FohE.js"
   ],
   "src/components/LessonVideoScreen.tsx": [
-    "_next/static/chunks/LessonExperience-iodwJI6j.js",
+    "_next/static/chunks/LessonExperience-BO_7Sxjq.js",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
     "_next/static/chunks/proxy-BH9eZ7t3.js",
@@ -1461,7 +1461,7 @@
     "_next/static/chunks/createLucideIcon-D-h3xglt.js",
     "_next/static/chunks/study-store-BvN-qlOj.js",
     "_next/static/chunks/asset-path-PlkvC0u1.js",
-    "_next/static/chunks/CueCardCarousel-kE40h5il.js",
+    "_next/static/chunks/CueCardCarousel-eGcPZXQa.js",
     "_next/static/chunks/arrow-right-ZNHcjnAA.js",
     "_next/static/chunks/x-CwKALzpi.js",
     "_next/static/chunks/clock-3-CapHDjz3.js",
@@ -1470,12 +1470,12 @@
     "_next/static/chunks/volume-2-BYf2FohE.js"
   ],
   "src/components/Library2LessonExperience.tsx": [
-    "_next/static/chunks/_lessonId_-B0Fn3GCg.js",
+    "_next/static/chunks/_lessonId_-C3SFCQ-_.js",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
     "_next/static/chunks/createLucideIcon-D-h3xglt.js",
     "_next/static/chunks/asset-path-PlkvC0u1.js",
-    "_next/static/chunks/CueCardCarousel-kE40h5il.js",
+    "_next/static/chunks/CueCardCarousel-eGcPZXQa.js",
     "_next/static/chunks/play-D0_zdgo6.js",
     "_next/static/chunks/volume-2-BYf2FohE.js"
   ],
@@ -1484,7 +1484,7 @@
     "_next/static/chunks/framework-B8V_a_AU.js"
   ],
   "src/components/PhraseAudioButton.tsx": [
-    "_next/static/chunks/CueCardCarousel-kE40h5il.js",
+    "_next/static/chunks/CueCardCarousel-eGcPZXQa.js",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
     "_next/static/chunks/createLucideIcon-D-h3xglt.js",
@@ -1495,7 +1495,7 @@
     "_next/static/chunks/volume-2-BYf2FohE.js"
   ],
   "src/components/PracticeQuiz.tsx": [
-    "_next/static/chunks/LessonExperience-iodwJI6j.js",
+    "_next/static/chunks/LessonExperience-BO_7Sxjq.js",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
     "_next/static/chunks/proxy-BH9eZ7t3.js",
@@ -1503,7 +1503,7 @@
     "_next/static/chunks/createLucideIcon-D-h3xglt.js",
     "_next/static/chunks/study-store-BvN-qlOj.js",
     "_next/static/chunks/asset-path-PlkvC0u1.js",
-    "_next/static/chunks/CueCardCarousel-kE40h5il.js",
+    "_next/static/chunks/CueCardCarousel-eGcPZXQa.js",
     "_next/static/chunks/arrow-right-ZNHcjnAA.js",
     "_next/static/chunks/x-CwKALzpi.js",
     "_next/static/chunks/clock-3-CapHDjz3.js",
@@ -1527,7 +1527,7 @@
     "_next/static/chunks/framework-B8V_a_AU.js"
   ],
   "src/content/pronunciation-manifest.json": [
-    "_next/static/chunks/CueCardCarousel-kE40h5il.js",
+    "_next/static/chunks/CueCardCarousel-eGcPZXQa.js",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
     "_next/static/chunks/createLucideIcon-D-h3xglt.js",
@@ -1581,7 +1581,7 @@
     "_next/static/chunks/createLucideIcon-D-h3xglt.js"
   ],
   "src/engine/practice-quiz.ts": [
-    "_next/static/chunks/LessonExperience-iodwJI6j.js",
+    "_next/static/chunks/LessonExperience-BO_7Sxjq.js",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
     "_next/static/chunks/proxy-BH9eZ7t3.js",
@@ -1589,7 +1589,7 @@
     "_next/static/chunks/createLucideIcon-D-h3xglt.js",
     "_next/static/chunks/study-store-BvN-qlOj.js",
     "_next/static/chunks/asset-path-PlkvC0u1.js",
-    "_next/static/chunks/CueCardCarousel-kE40h5il.js",
+    "_next/static/chunks/CueCardCarousel-eGcPZXQa.js",
     "_next/static/chunks/arrow-right-ZNHcjnAA.js",
     "_next/static/chunks/x-CwKALzpi.js",
     "_next/static/chunks/clock-3-CapHDjz3.js",
@@ -1600,8 +1600,19 @@
   "src/lib/asset-path.ts": [
     "_next/static/chunks/asset-path-PlkvC0u1.js"
   ],
+  "src/lib/audio-channel.ts": [
+    "_next/static/chunks/CueCardCarousel-eGcPZXQa.js",
+    "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
+    "_next/static/chunks/framework-B8V_a_AU.js",
+    "_next/static/chunks/createLucideIcon-D-h3xglt.js",
+    "_next/static/chunks/study-store-BvN-qlOj.js",
+    "_next/static/chunks/asset-path-PlkvC0u1.js",
+    "_next/static/chunks/arrow-right-ZNHcjnAA.js",
+    "_next/static/chunks/rotate-ccw-BzFyGKTm.js",
+    "_next/static/chunks/volume-2-BYf2FohE.js"
+  ],
   "src/lib/audio-config.ts": [
-    "_next/static/chunks/CueCardCarousel-kE40h5il.js",
+    "_next/static/chunks/CueCardCarousel-eGcPZXQa.js",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
     "_next/static/chunks/createLucideIcon-D-h3xglt.js",
@@ -1612,7 +1623,7 @@
     "_next/static/chunks/volume-2-BYf2FohE.js"
   ],
   "src/lib/language-display.ts": [
-    "_next/static/chunks/CueCardCarousel-kE40h5il.js",
+    "_next/static/chunks/CueCardCarousel-eGcPZXQa.js",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
     "_next/static/chunks/createLucideIcon-D-h3xglt.js",
@@ -1623,17 +1634,17 @@
     "_next/static/chunks/volume-2-BYf2FohE.js"
   ],
   "src/lib/lesson-feed.ts": [
-    "_next/static/chunks/_lessonId_-B0Fn3GCg.js",
+    "_next/static/chunks/_lessonId_-C3SFCQ-_.js",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
     "_next/static/chunks/createLucideIcon-D-h3xglt.js",
     "_next/static/chunks/asset-path-PlkvC0u1.js",
-    "_next/static/chunks/CueCardCarousel-kE40h5il.js",
+    "_next/static/chunks/CueCardCarousel-eGcPZXQa.js",
     "_next/static/chunks/play-D0_zdgo6.js",
     "_next/static/chunks/volume-2-BYf2FohE.js"
   ],
   "src/lib/pronunciation-audio.ts": [
-    "_next/static/chunks/CueCardCarousel-kE40h5il.js",
+    "_next/static/chunks/CueCardCarousel-eGcPZXQa.js",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
     "_next/static/chunks/createLucideIcon-D-h3xglt.js",
@@ -1658,9 +1669,26 @@
     "_next/static/chunks/AppLink-COpaIV0Z.js",
     "_next/static/chunks/PageHeader-BW8-in7A.js"
   ],
+  "src/lib/use-quiz-sounds.ts": [
+    "_next/static/chunks/LessonExperience-BO_7Sxjq.js",
+    "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
+    "_next/static/chunks/framework-B8V_a_AU.js",
+    "_next/static/chunks/proxy-BH9eZ7t3.js",
+    "_next/static/chunks/filter-props-C_olJvd_.js",
+    "_next/static/chunks/createLucideIcon-D-h3xglt.js",
+    "_next/static/chunks/study-store-BvN-qlOj.js",
+    "_next/static/chunks/asset-path-PlkvC0u1.js",
+    "_next/static/chunks/CueCardCarousel-eGcPZXQa.js",
+    "_next/static/chunks/arrow-right-ZNHcjnAA.js",
+    "_next/static/chunks/x-CwKALzpi.js",
+    "_next/static/chunks/clock-3-CapHDjz3.js",
+    "_next/static/chunks/play-D0_zdgo6.js",
+    "_next/static/chunks/rotate-ccw-BzFyGKTm.js",
+    "_next/static/chunks/volume-2-BYf2FohE.js"
+  ],
   "src/pages/_app.tsx": [
-    "_next/static/chunks/_app-Br1ayAiM.js",
-    "_next/static/css/_app.C8t8wFtF.css",
+    "_next/static/chunks/_app-DZ_Va8EQ.js",
+    "_next/static/css/_app.twY-kNfN.css",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
     "_next/static/chunks/vinext-DTdK61wO.js",
@@ -1672,18 +1700,18 @@
     "_next/static/chunks/AppLink-COpaIV0Z.js"
   ],
   "src/pages/lessons/[lessonId].tsx": [
-    "_next/static/chunks/_lessonId_-B4gIzNsP.js",
+    "_next/static/chunks/_lessonId_-_TuJhm3z.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
-    "_next/static/chunks/LessonExperience-iodwJI6j.js",
+    "_next/static/chunks/LessonExperience-BO_7Sxjq.js",
     "_next/static/chunks/createLucideIcon-D-h3xglt.js"
   ],
   "src/pages/library-2/[lessonId].tsx": [
-    "_next/static/chunks/_lessonId_-B0Fn3GCg.js",
+    "_next/static/chunks/_lessonId_-C3SFCQ-_.js",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
     "_next/static/chunks/createLucideIcon-D-h3xglt.js",
     "_next/static/chunks/asset-path-PlkvC0u1.js",
-    "_next/static/chunks/CueCardCarousel-kE40h5il.js",
+    "_next/static/chunks/CueCardCarousel-eGcPZXQa.js",
     "_next/static/chunks/play-D0_zdgo6.js",
     "_next/static/chunks/volume-2-BYf2FohE.js"
   ],
@@ -1725,7 +1753,7 @@
     "_next/static/chunks/PageHeader-BW8-in7A.js"
   ],
   "src/pages/settings.tsx": [
-    "_next/static/chunks/settings-DIotIlym.js",
+    "_next/static/chunks/settings-Tlxvm2VO.js",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
     "_next/static/chunks/db-Da_Nc79c.js",
@@ -1736,18 +1764,18 @@
     "_next/static/chunks/PageHeader-BW8-in7A.js"
   ],
   "src/pages/study.tsx": [
-    "_next/static/chunks/study-DxlV1Z1n.js",
+    "_next/static/chunks/study-CDAR_nsK.js",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
     "_next/static/chunks/vinext-DTdK61wO.js",
     "_next/static/chunks/proxy-BH9eZ7t3.js",
     "_next/static/chunks/filter-props-C_olJvd_.js",
-    "_next/static/chunks/LessonExperience-iodwJI6j.js",
+    "_next/static/chunks/LessonExperience-BO_7Sxjq.js",
     "_next/static/chunks/db-Da_Nc79c.js",
     "_next/static/chunks/createLucideIcon-D-h3xglt.js",
     "_next/static/chunks/study-store-BvN-qlOj.js",
     "_next/static/chunks/asset-path-PlkvC0u1.js",
-    "_next/static/chunks/CueCardCarousel-kE40h5il.js",
+    "_next/static/chunks/CueCardCarousel-eGcPZXQa.js",
     "_next/static/chunks/arrow-right-ZNHcjnAA.js",
     "_next/static/chunks/x-CwKALzpi.js",
     "_next/static/chunks/rotate-ccw-BzFyGKTm.js",
@@ -1782,8 +1810,8 @@
     "_next/static/chunks/createLucideIcon-D-h3xglt.js"
   ],
   "src/styles/globals.css": [
-    "_next/static/chunks/_app-Br1ayAiM.js",
-    "_next/static/css/_app.C8t8wFtF.css",
+    "_next/static/chunks/_app-DZ_Va8EQ.js",
+    "_next/static/css/_app.twY-kNfN.css",
     "_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
     "_next/static/chunks/framework-B8V_a_AU.js",
     "_next/static/chunks/vinext-DTdK61wO.js",

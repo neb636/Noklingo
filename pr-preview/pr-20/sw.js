@@ -6,7 +6,7 @@
  * browser runtime to a server or deployment-specific absolute path.
  */
 const PRODUCT_CACHE_VERSION = "noklingo-v4";
-const BUILD_REVISION = "3dea353977d4dbd9";
+const BUILD_REVISION = "4b80eeeb80b6e430";
 const PRECACHE_PATHS = [
   "./",
   "./welcome/",
@@ -67,15 +67,16 @@ const PRECACHE_PATHS = [
   "./noklingo-icon-192.png",
   "./noklingo-icon-512.png",
   "./noklingo-apple-touch-icon.png",
-  "./_next/static/951fab29-41ed-4c95-be94-68592aff58bb/_buildManifest.js",
-  "./_next/static/951fab29-41ed-4c95-be94-68592aff58bb/_ssgManifest.js",
+  "./lessons/audio/quiz-feedback/correct.mp3",
+  "./lessons/audio/quiz-feedback/incorrect.mp3",
+  "./lessons/audio/quiz-feedback/perfect.mp3",
   "./_next/static/chunks/AppLink-COpaIV0Z.js",
-  "./_next/static/chunks/CueCardCarousel-kE40h5il.js",
-  "./_next/static/chunks/LessonExperience-iodwJI6j.js",
+  "./_next/static/chunks/CueCardCarousel-eGcPZXQa.js",
+  "./_next/static/chunks/LessonExperience-BO_7Sxjq.js",
   "./_next/static/chunks/PageHeader-BW8-in7A.js",
-  "./_next/static/chunks/_app-Br1ayAiM.js",
-  "./_next/static/chunks/_lessonId_-B0Fn3GCg.js",
-  "./_next/static/chunks/_lessonId_-B4gIzNsP.js",
+  "./_next/static/chunks/_app-DZ_Va8EQ.js",
+  "./_next/static/chunks/_lessonId_-C3SFCQ-_.js",
+  "./_next/static/chunks/_lessonId_-_TuJhm3z.js",
   "./_next/static/chunks/arrow-right-ZNHcjnAA.js",
   "./_next/static/chunks/asset-path-PlkvC0u1.js",
   "./_next/static/chunks/clock-3-CapHDjz3.js",
@@ -83,7 +84,7 @@ const PRECACHE_PATHS = [
   "./_next/static/chunks/db-Da_Nc79c.js",
   "./_next/static/chunks/filter-props-C_olJvd_.js",
   "./_next/static/chunks/framework-B8V_a_AU.js",
-  "./_next/static/chunks/index-Bk9NIDSp.js",
+  "./_next/static/chunks/index-Bv9kBMXk.js",
   "./_next/static/chunks/layers-D2lRCNLl.js",
   "./_next/static/chunks/library-2-BtiGv9P5.js",
   "./_next/static/chunks/library-DHHMCyC8.js",
@@ -92,15 +93,17 @@ const PRECACHE_PATHS = [
   "./_next/static/chunks/results-hFyU0dN3.js",
   "./_next/static/chunks/rolldown-runtime-B0Z9INg1.js",
   "./_next/static/chunks/rotate-ccw-BzFyGKTm.js",
-  "./_next/static/chunks/settings-DIotIlym.js",
-  "./_next/static/chunks/study-DxlV1Z1n.js",
+  "./_next/static/chunks/settings-Tlxvm2VO.js",
+  "./_next/static/chunks/study-CDAR_nsK.js",
   "./_next/static/chunks/study-store-BvN-qlOj.js",
   "./_next/static/chunks/today-BZyy-pmM.js",
   "./_next/static/chunks/vinext-DTdK61wO.js",
   "./_next/static/chunks/volume-2-BYf2FohE.js",
   "./_next/static/chunks/welcome-nZ0r5CNh.js",
   "./_next/static/chunks/x-CwKALzpi.js",
-  "./_next/static/css/_app.C8t8wFtF.css"
+  "./_next/static/css/_app.twY-kNfN.css",
+  "./_next/static/f32174c4-fae7-4ca3-989d-d5b41f05da44/_buildManifest.js",
+  "./_next/static/f32174c4-fae7-4ca3-989d-d5b41f05da44/_ssgManifest.js"
 ];
 const scopeUrl = new URL(self.registration.scope);
 const scopePath = scopeUrl.pathname.endsWith("/") ? scopeUrl.pathname : `${scopeUrl.pathname}/`;
