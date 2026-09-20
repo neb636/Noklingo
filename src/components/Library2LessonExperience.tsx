@@ -4,8 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowDown, ArrowUp, ChevronLeft, CircleAlert, Pause, Play, Volume2, VolumeX } from "lucide-react";
 import { cueCards, lessons } from "@/domain/seed";
 import { assetPath } from "@/lib/asset-path";
-import { useClientReady } from "@/lib/use-client-ready";
-import { markKidsLessonCompleteForSession, orderKidsLessonsForSession } from "@/lib/kids-session";
+import { markKidsLessonCompleteForSession } from "@/lib/kids-session";
 import { filterLessonsForKidsMode } from "@/lib/lesson-audience";
 import { lessonIndexForId, nextLessonIndex } from "@/lib/lesson-feed";
 import { useStudyStore } from "@/state/study-store";
@@ -18,9 +17,7 @@ const swipeThreshold = 56;
 
 export function Library2LessonExperience({ initialLessonId }: { initialLessonId: string }) {
   const kidsMode = useStudyStore((state) => state.settings.kidsMode);
-  const clientReady = useClientReady();
-  const filteredLessons = filterLessonsForKidsMode(lessons, kidsMode);
-  const availableLessons = kidsMode && clientReady ? orderKidsLessonsForSession(filteredLessons) : filteredLessons;
+  const availableLessons = filterLessonsForKidsMode(lessons, kidsMode);
   const [activeLessonId, setActiveLessonId] = useState(initialLessonId);
   const activeIndex = lessonIndexForId(availableLessons.map((lesson) => lesson.id), activeLessonId);
   const [stage, setStage] = useState<ReelStage>("video");
