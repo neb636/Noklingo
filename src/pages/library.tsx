@@ -12,6 +12,17 @@ import { useStudyStore } from "@/state/study-store";
 export default function LibraryPage() {
   const kidsMode = useStudyStore((state) => state.settings.kidsMode);
   const visibleLessons = filterLessonsForKidsMode(lessons, kidsMode);
+  const kidsPosterImageStyle = kidsMode
+    ? {
+        width: "100%",
+        height: "100%",
+        maxWidth: "none",
+        objectFit: "cover" as const,
+        borderRadius: 0,
+        boxShadow: "none",
+        transform: "scale(1.1)",
+      }
+    : undefined;
 
   return <div className="page library-page">
     <PageHeader
@@ -33,7 +44,7 @@ export default function LibraryPage() {
           <AppLink href={`/lessons/${encodeURIComponent(lesson.id)}/`} className="compact-lesson-link" aria-label={`Open lesson ${lesson.order}: ${lesson.title}`}>
             <div className="compact-lesson-poster" aria-hidden="true">
               <Image className="compact-lesson-backdrop" src={assetPath(posterSrc)} width={720} height={1280} sizes="(max-width: 767px) 112px, 168px" unoptimized alt="" />
-              <Image className="compact-lesson-portrait" src={assetPath(posterSrc)} width={720} height={1280} sizes="(max-width: 767px) 92px, 126px" unoptimized alt="" />
+              <Image className="compact-lesson-portrait" src={assetPath(posterSrc)} width={720} height={1280} sizes="(max-width: 767px) 112px, 168px" unoptimized alt="" style={kidsPosterImageStyle} />
               <span className="compact-lesson-play"><Play size={16} fill="currentColor" /></span>
             </div>
             <div className="compact-lesson-copy">
