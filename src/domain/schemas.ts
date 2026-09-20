@@ -12,6 +12,7 @@ export const LocalAssetPathSchema = z.string().min(2).superRefine((path, context
 export const LessonMediaSchema = z.object({
   videoSrc: LocalAssetPathSchema,
   posterSrc: LocalAssetPathSchema,
+  kidsPosterSrc: LocalAssetPathSchema.optional(),
   durationSeconds: z.number().finite().positive(),
   durationStatus: z.enum(["estimated", "confirmed"]),
   availability: z.enum(["draft-unavailable", "available"]),

@@ -6,7 +6,7 @@ import { AppLink } from "@/components/AppLink";
 import { PageHeader } from "@/components/PageHeader";
 import { cueCards, lessons } from "@/domain/seed";
 import { assetPath } from "@/lib/asset-path";
-import { filterLessonsForKidsMode } from "@/lib/lesson-audience";
+import { filterLessonsForKidsMode, lessonPosterSrc } from "@/lib/lesson-audience";
 import { useStudyStore } from "@/state/study-store";
 
 export default function LibraryPage() {
@@ -27,11 +27,13 @@ export default function LibraryPage() {
       </div>
 
       <div className="lesson-library-track" aria-label="Lesson collection">
-        {visibleLessons.map((lesson) => <article key={lesson.id} className="compact-lesson-card">
+        {visibleLessons.map((lesson) => {
+          const posterSrc = lessonPosterSrc(lesson, kidsMode);
+          return <article key={lesson.id} className="compact-lesson-card">
           <AppLink href={`/lessons/${encodeURIComponent(lesson.id)}/`} className="compact-lesson-link" aria-label={`Open lesson ${lesson.order}: ${lesson.title}`}>
             <div className="compact-lesson-poster" aria-hidden="true">
-              <Image className="compact-lesson-backdrop" src={assetPath(lesson.media.posterSrc)} width={720} height={1280} sizes="(max-width: 767px) 112px, 168px" unoptimized alt="" />
-              <Image className="compact-lesson-portrait" src={assetPath(lesson.media.posterSrc)} width={720} height={1280} sizes="(max-width: 767px) 92px, 126px" unoptimized alt="" />
+              <Image className="compact-lesson-backdrop" src={assetPath(posterSrc)} width={720} height={1280} sizes="(max-width: 767px) 112px, 168px" unoptimized alt="" />
+              <Image className="compact-lesson-portrait" src={assetPath(posterSrc)} width={720} height={1280} sizes="(max-width: 767px) 92px, 126px" unoptimized alt="" />
               <span className="compact-lesson-play"><Play size={16} fill="currentColor" /></span>
             </div>
             <div className="compact-lesson-copy">
@@ -42,7 +44,8 @@ export default function LibraryPage() {
               <span className="compact-lesson-action">Start lesson <ArrowRight size={17} /></span>
             </div>
           </AppLink>
-        </article>)}
+        </article>;
+        })}
       </div>
 
     </section>
