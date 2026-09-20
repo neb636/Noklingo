@@ -6,7 +6,7 @@ import { AppLink } from "@/components/AppLink";
 import { PageHeader } from "@/components/PageHeader";
 import { cueCards, lessons } from "@/domain/seed";
 import { assetPath } from "@/lib/asset-path";
-import { filterLessonsForKidsMode } from "@/lib/lesson-audience";
+import { filterLessonsForKidsMode, lessonPosterSrc } from "@/lib/lesson-audience";
 import { useStudyStore } from "@/state/study-store";
 
 export default function Library2Page() {
@@ -29,8 +29,9 @@ export default function Library2Page() {
         {visibleLessons.map((lesson) => {
           const cards = cueCards.filter((card) => card.lessonId === lesson.id).length;
           const videoOnly = lesson.activityMode === "video-only";
+          const posterSrc = lessonPosterSrc(lesson, kidsMode);
           return <AppLink key={lesson.id} href={`/library-2/${encodeURIComponent(lesson.id)}/`} className="reel-library-card" aria-label={`Watch lesson ${lesson.order}: ${lesson.title}`}>
-            <Image src={assetPath(lesson.media.posterSrc)} fill sizes="(max-width: 767px) 50vw, 260px" unoptimized alt="" className="reel-library-poster" />
+            <Image src={assetPath(posterSrc)} fill sizes="(max-width: 767px) 50vw, 260px" unoptimized alt="" className="reel-library-poster" />
             <span className="reel-library-shade" aria-hidden="true" />
             <span className="reel-library-play" aria-hidden="true"><Play size={17} fill="currentColor" /></span>
             <span className="reel-library-order">Lesson {String(lesson.order).padStart(2, "0")}</span>
