@@ -3,6 +3,7 @@
     {
       "id": "common-verbs",
       "order": 1,
+      "categories": ["kids"],
       "topicEmoji": "🏃",
       "title": "Essential verbs",
       "objective": "Draft plan — Recognize a small set of high-frequency action words.",
@@ -33,6 +34,7 @@
     {
       "id": "question-words",
       "order": 2,
+      "categories": ["kids"],
       "topicEmoji": "❓",
       "title": "What, where, when, why, how",
       "objective": "Draft plan — Notice the core words used to ask for information.",
@@ -120,6 +122,7 @@
     {
       "id": "time-units",
       "order": 5,
+      "categories": ["kids"],
       "topicEmoji": "⏱️",
       "title": "Minute through year",
       "objective": "Draft plan — Recognize words for minutes, hours, days, months, and years.",
@@ -150,6 +153,7 @@
     {
       "id": "times-of-day",
       "order": 6,
+      "categories": ["kids"],
       "topicEmoji": "🌅",
       "title": "Morning through night",
       "objective": "Draft plan — Distinguish common parts of the day in context.",
@@ -181,6 +185,7 @@
     {
       "id": "quantities",
       "order": 7,
+      "categories": ["kids"],
       "topicEmoji": "⚖️",
       "title": "None through all",
       "objective": "Draft plan — Compare expressions for none, some, half, most, and all.",
@@ -237,6 +242,7 @@
     {
       "id": "directions",
       "order": 9,
+      "categories": ["kids"],
       "topicEmoji": "🧭",
       "title": "Straight, turns, and U-turns",
       "objective": "Draft plan — Listen for practical movement and turning directions.",
@@ -266,6 +272,7 @@
     {
       "id": "weather",
       "order": 10,
+      "categories": ["kids"],
       "topicEmoji": "🌦️",
       "title": "Everyday weather",
       "objective": "Draft plan — Recognize several everyday ways to describe the weather.",
@@ -328,6 +335,7 @@
     {
       "id": "food-flavors",
       "order": 12,
+      "categories": ["kids"],
       "topicEmoji": "😋",
       "title": "Describing flavors",
       "objective": "Draft plan — Distinguish several basic ways to describe food.",
@@ -443,6 +451,7 @@
     {
       "id": "waking-up",
       "order": 16,
+      "categories": ["kids"],
       "topicEmoji": "⏰",
       "title": "Morning check-ins",
       "objective": "Draft plan — Follow a few short phrases used after waking up.",
@@ -531,6 +540,7 @@
     {
       "id": "encouragement",
       "order": 19,
+      "categories": ["kids"],
       "topicEmoji": "💪",
       "title": "Keep going",
       "objective": "Draft plan — Listen for short phrases that encourage someone to continue.",
@@ -560,6 +570,7 @@
     {
       "id": "compliments",
       "order": 20,
+      "categories": ["kids"],
       "topicEmoji": "✨",
       "title": "Kind things to say",
       "objective": "Draft plan — Notice short, friendly compliments for everyday conversation.",
@@ -714,6 +725,7 @@
     },
     {
       "id": "reel-2026-08-25", "order": 29, "topicEmoji": "🌦️", "title": "Seasons in Thailand",
+      "categories": ["kids"],
       "objective": "Draft plan — Recognize Thai words for seasons and seasonal weather.", "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.", "contentStatus": "draft",
       "source": { "label": "Learn Thai IRL · supplied local Reel", "url": "https://www.instagram.com/learnthai_irl/reel/DcdsTUDS1b1/", "permissionStatus": "authorized" },
       "media": { "videoSrc": "/lessons/drafts/reel-2026-08-25/intro.mp4", "posterSrc": "/lessons/drafts/reel-2026-08-25/poster.jpg", "durationSeconds": 16.71551, "durationStatus": "confirmed", "availability": "available", "fallbackMessage": "This local draft clip could not be played on this device." },
@@ -728,6 +740,7 @@
     },
     {
       "id": "reel-2026-08-28", "order": 31, "topicEmoji": "🙏", "title": "Ways to say thanks",
+      "categories": ["kids"],
       "objective": "Draft plan — Compare polite and casual ways to thank someone in Thai.", "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.", "contentStatus": "draft",
       "source": { "label": "Learn Thai IRL · supplied local Reel", "url": "https://www.instagram.com/learnthai_irl/reel/DclcJF-JRVX/", "permissionStatus": "authorized" },
       "media": { "videoSrc": "/lessons/drafts/reel-2026-08-28/intro.mp4", "posterSrc": "/lessons/drafts/reel-2026-08-28/poster.jpg", "durationSeconds": 27.652109, "durationStatus": "confirmed", "availability": "available", "fallbackMessage": "This local draft clip could not be played on this device." },
@@ -749,6 +762,7 @@
     },
     {
       "id": "reel-2026-08-31", "order": 34, "topicEmoji": "📅", "title": "Yesterday through right now",
+      "categories": ["kids"],
       "objective": "Draft plan — Recognize common Thai words for relative time.", "description": "A locally bundled Reel with screenshot-derived cue cards awaiting Thai-language editorial review.", "contentStatus": "draft",
       "source": { "label": "Learn Thai IRL · supplied local Reel", "url": "https://www.instagram.com/learnthai_irl/reel/DctLXVIyfj9/", "permissionStatus": "authorized" },
       "media": { "videoSrc": "/lessons/drafts/reel-2026-08-31/intro.mp4", "posterSrc": "/lessons/drafts/reel-2026-08-31/poster.jpg", "durationSeconds": 14.532834, "durationStatus": "confirmed", "availability": "available", "fallbackMessage": "This local draft clip could not be played on this device." },

@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { Download, HardDrive, Languages, Moon, RotateCcw, SunMedium, Upload, Volume2 } from "lucide-react";
+import { Baby, Download, HardDrive, Languages, Moon, RotateCcw, SunMedium, Upload, Volume2 } from "lucide-react";
 import { AppSnapshotSchema } from "@/domain/schemas";
 import { clearLocalData, writeSnapshot } from "@/data/db";
 import { PageHeader } from "@/components/PageHeader";
@@ -57,6 +57,13 @@ export default function SettingsPage() {
       {message && <div className="toast" role="status">{message}<button onClick={() => setMessage("")} aria-label="Dismiss message">×</button></div>}
 
       <div className="settings-layout">
+        <section className="settings-section">
+          <div className="settings-title"><Baby size={20} /><div><p className="eyebrow">Learning mode</p><h2>Kids</h2></div></div>
+          <SettingRow title="Kids mode" description="Show only simple, kid-friendly topics in the lesson libraries.">
+            <Switch checked={settings.kidsMode} onChange={(value) => updateSettings({ kidsMode: value })} label="Kids mode" />
+          </SettingRow>
+        </section>
+
         <section className="settings-section">
           <div className="settings-title"><Volume2 size={20} /><div><p className="eyebrow">Audio</p><h2>Listening</h2></div></div>
           <SettingRow title="Lesson and quiz audio" description="Play bundled lesson recordings and quiz feedback sounds.">

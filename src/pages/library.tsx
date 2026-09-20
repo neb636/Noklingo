@@ -6,14 +6,19 @@ import { AppLink } from "@/components/AppLink";
 import { PageHeader } from "@/components/PageHeader";
 import { cueCards, lessons } from "@/domain/seed";
 import { assetPath } from "@/lib/asset-path";
+import { filterLessonsForKidsMode } from "@/lib/lesson-audience";
+import { useStudyStore } from "@/state/study-store";
 
 export default function LibraryPage() {
+  const kidsMode = useStudyStore((state) => state.settings.kidsMode);
+  const visibleLessons = filterLessonsForKidsMode(lessons, kidsMode);
+
   return <div className="page library-page">
     <PageHeader
       eyebrow="Lesson library"
       title="Thai you can use today."
       intro="Short real-world videos, friendly cue cards, and a quick practice round—at your own pace."
-      side={<span className="count-label">{lessons.length} lessons</span>}
+      side={<span className="count-label">{visibleLessons.length} {kidsMode ? "kids " : ""}lessons</span>}
     />
 
     <section className="lesson-library-section" aria-labelledby="lesson-library-heading">
@@ -22,7 +27,7 @@ export default function LibraryPage() {
       </div>
 
       <div className="lesson-library-track" aria-label="Lesson collection">
-        {lessons.map((lesson) => <article key={lesson.id} className="compact-lesson-card">
+        {visibleLessons.map((lesson) => <article key={lesson.id} className="compact-lesson-card">
           <AppLink href={`/lessons/${encodeURIComponent(lesson.id)}/`} className="compact-lesson-link" aria-label={`Open lesson ${lesson.order}: ${lesson.title}`}>
             <div className="compact-lesson-poster" aria-hidden="true">
               <Image className="compact-lesson-backdrop" src={assetPath(lesson.media.posterSrc)} width={720} height={1280} sizes="(max-width: 767px) 112px, 168px" unoptimized alt="" />
