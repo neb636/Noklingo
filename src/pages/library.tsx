@@ -6,12 +6,16 @@ import { AppLink } from "@/components/AppLink";
 import { PageHeader } from "@/components/PageHeader";
 import { cueCards, lessons } from "@/domain/seed";
 import { assetPath } from "@/lib/asset-path";
+import { useClientReady } from "@/lib/use-client-ready";
+import { orderKidsLessonsForSession } from "@/lib/kids-session";
 import { filterLessonsForKidsMode, lessonPosterSrc } from "@/lib/lesson-audience";
 import { useStudyStore } from "@/state/study-store";
 
 export default function LibraryPage() {
   const kidsMode = useStudyStore((state) => state.settings.kidsMode);
-  const visibleLessons = filterLessonsForKidsMode(lessons, kidsMode);
+  const clientReady = useClientReady();
+  const filteredLessons = filterLessonsForKidsMode(lessons, kidsMode);
+  const visibleLessons = kidsMode && clientReady ? orderKidsLessonsForSession(filteredLessons) : filteredLessons;
   const kidsPosterImageStyle = kidsMode
     ? {
         width: "100%",
@@ -26,29 +30,29 @@ export default function LibraryPage() {
 
   return <div className="page library-page">
     <PageHeader
-      eyebrow="Lesson library"
-      title="Thai you can use today."
-      intro="Short real-world videos, friendly cue cards, and a quick practice round—at your own pace."
+      eyebrow={kidsMode ? "Pick a lesson" : "Lesson library"}
+      title={kidsMode ? "What do you want to learn?" : "Thai you can use today."}
+      intro={kidsMode ? "Choose any picture to start." : "Short real-world videos, friendly cue cards, and a quick practice round—at your own pace."}
       side={<span className="count-label">{visibleLessons.length} {kidsMode ? "kids " : ""}lessons</span>}
     />
 
     <section className="lesson-library-section" aria-labelledby="lesson-library-heading">
       <div className="lesson-library-heading">
-        <div><p className="eyebrow">Choose your next topic</p><h2 id="lesson-library-heading">Explore the collection</h2></div>
+        <div><p className="eyebrow">{kidsMode ? "Choose one" : "Choose your next topic"}</p><h2 id="lesson-library-heading">{kidsMode ? "Lessons" : "Explore the collection"}</h2></div>
       </div>
 
       <div className="lesson-library-track" aria-label="Lesson collection">
         {visibleLessons.map((lesson) => {
           const posterSrc = lessonPosterSrc(lesson, kidsMode);
           return <article key={lesson.id} className="compact-lesson-card">
-          <AppLink href={`/lessons/${encodeURIComponent(lesson.id)}/`} className="compact-lesson-link" aria-label={`Open lesson ${lesson.order}: ${lesson.title}`}>
+          <AppLink href={`/lessons/${encodeURIComponent(lesson.id)}/`} className="compact-lesson-link" aria-label={kidsMode ? `Open ${lesson.title}` : `Open lesson ${lesson.order}: ${lesson.title}`}>
             <div className="compact-lesson-poster" aria-hidden="true">
               <Image className="compact-lesson-backdrop" src={assetPath(posterSrc)} width={720} height={1280} sizes="(max-width: 767px) 112px, 168px" unoptimized alt="" />
               <Image className="compact-lesson-portrait" src={assetPath(posterSrc)} width={720} height={1280} sizes="(max-width: 767px) 112px, 168px" unoptimized alt="" style={kidsPosterImageStyle} />
               <span className="compact-lesson-play"><Play size={16} fill="currentColor" /></span>
             </div>
             <div className="compact-lesson-copy">
-              <span className="compact-lesson-order">Lesson {String(lesson.order).padStart(2, "0")}</span>
+              {!kidsMode && <span className="compact-lesson-order">Lesson {String(lesson.order).padStart(2, "0")}</span>}
               <div className="compact-lesson-title"><span className="lesson-topic-emoji" aria-hidden="true">{lesson.topicEmoji}</span><h3>{lesson.title}</h3></div>
               <p>{lesson.objective.replace(/^Draft plan —\s*/, "")}</p>
               <div className="compact-lesson-meta"><span><Clock3 size={14} /> {formatDuration(lesson.media.durationSeconds)}</span><span><Layers3 size={14} /> {cardCount(lesson.id)} cards</span></div>
@@ -60,7 +64,7 @@ export default function LibraryPage() {
       </div>
 
     </section>
-    <p className="library-footnote">Library visits and practice quizzes do not change your mastery record.</p>
+    {!kidsMode && <p className="library-footnote">Library visits and practice quizzes do not change your mastery record.</p>}
   </div>;
 }
 
