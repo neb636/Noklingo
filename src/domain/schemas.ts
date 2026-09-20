@@ -42,6 +42,7 @@ export const QuizQuestionSchema = z.object({
 export const VideoLessonSchema = z.object({
   id: z.string().min(1),
   order: z.number().int().positive(),
+  categories: z.array(z.enum(["kids"])).optional(),
   topicEmoji: z.string().trim().min(1),
   title: z.string().min(1),
   objective: z.string().min(1),
@@ -196,6 +197,7 @@ export const SettingsSchema = z.object({
   thaiSize: z.enum(["standard", "large"]),
   reduceMotion: z.boolean(),
   politeParticle: z.enum(["khráp", "khâ", "both"]),
+  kidsMode: z.boolean().default(false),
 });
 export const StreakStateSchema = z.object({
   currentDays: z.number().int().nonnegative(),

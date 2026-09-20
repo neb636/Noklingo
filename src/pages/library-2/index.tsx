@@ -6,14 +6,19 @@ import { AppLink } from "@/components/AppLink";
 import { PageHeader } from "@/components/PageHeader";
 import { cueCards, lessons } from "@/domain/seed";
 import { assetPath } from "@/lib/asset-path";
+import { filterLessonsForKidsMode } from "@/lib/lesson-audience";
+import { useStudyStore } from "@/state/study-store";
 
 export default function Library2Page() {
+  const kidsMode = useStudyStore((state) => state.settings.kidsMode);
+  const visibleLessons = filterLessonsForKidsMode(lessons, kidsMode);
+
   return <div className="page library-2-page">
     <PageHeader
       eyebrow="Library 2"
       title="Watch Thai in the moment."
       intro="A mobile reel experiment: watch the whole clip, then open the phrases worth keeping."
-      side={<span className="count-label">{lessons.length} reels</span>}
+      side={<span className="count-label">{visibleLessons.length} {kidsMode ? "kids " : ""}reels</span>}
     />
     <section className="reel-library" aria-labelledby="reel-library-heading">
       <div className="reel-library-heading">
@@ -21,7 +26,7 @@ export default function Library2Page() {
         <span>Swipe between lessons after you open one.</span>
       </div>
       <div className="reel-library-grid">
-        {lessons.map((lesson) => {
+        {visibleLessons.map((lesson) => {
           const cards = cueCards.filter((card) => card.lessonId === lesson.id).length;
           const videoOnly = lesson.activityMode === "video-only";
           return <AppLink key={lesson.id} href={`/library-2/${encodeURIComponent(lesson.id)}/`} className="reel-library-card" aria-label={`Watch lesson ${lesson.order}: ${lesson.title}`}>

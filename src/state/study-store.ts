@@ -32,7 +32,7 @@ export const defaultSnapshot: AppSnapshot = {
   settings: {
     audioEnabled: true, volume: 0.75, speechRate: 0.85, theme: "system",
     showRomanization: true, showThaiScript: true, thaiSize: "standard",
-    reduceMotion: false, politeParticle: "both",
+    reduceMotion: false, politeParticle: "both", kidsMode: false,
   },
   streak: { currentDays: 0, longestDays: 0 },
 };

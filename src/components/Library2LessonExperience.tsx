@@ -4,7 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowDown, ArrowUp, ChevronLeft, CircleAlert, Pause, Play, Volume2, VolumeX } from "lucide-react";
 import { cueCards, lessons } from "@/domain/seed";
 import { assetPath } from "@/lib/asset-path";
+import { filterLessonsForKidsMode } from "@/lib/lesson-audience";
 import { lessonIndexForId, nextLessonIndex } from "@/lib/lesson-feed";
+import { useStudyStore } from "@/state/study-store";
 import { CueCardCarousel } from "./CueCardCarousel";
 
 type ReelStage = "video" | "cards";
@@ -13,7 +15,10 @@ type PlaybackStatus = "loading" | "playing" | "paused" | "blocked" | "ended" | "
 const swipeThreshold = 56;
 
 export function Library2LessonExperience({ initialLessonId }: { initialLessonId: string }) {
-  const [activeIndex, setActiveIndex] = useState(() => lessonIndexForId(lessons.map((lesson) => lesson.id), initialLessonId));
+  const kidsMode = useStudyStore((state) => state.settings.kidsMode);
+  const availableLessons = filterLessonsForKidsMode(lessons, kidsMode);
+  const [activeLessonId, setActiveLessonId] = useState(initialLessonId);
+  const activeIndex = lessonIndexForId(availableLessons.map((lesson) => lesson.id), activeLessonId);
   const [stage, setStage] = useState<ReelStage>("video");
   const [completedLessonIds, setCompletedLessonIds] = useState<Set<string>>(() => new Set());
   const [muted, setMuted] = useState(false);
@@ -22,7 +27,7 @@ export function Library2LessonExperience({ initialLessonId }: { initialLessonId:
   const mutedRef = useRef(false);
   const gestureStart = useRef<{ x: number; y: number } | undefined>(undefined);
   const swiped = useRef(false);
-  const activeLesson = lessons[activeIndex];
+  const activeLesson = availableLessons[activeIndex];
   const cards = activeLesson.cueCardIds.map((id) => cueCards.find((card) => card.id === id)).filter((card): card is (typeof cueCards)[number] => Boolean(card));
   const videoOnly = activeLesson.activityMode === "video-only";
   const videoCompleted = completedLessonIds.has(activeLesson.id);
@@ -43,11 +48,11 @@ export function Library2LessonExperience({ initialLessonId }: { initialLessonId:
   }
 
   function changeLesson(direction: -1 | 1) {
-    const nextIndex = nextLessonIndex(activeIndex, direction, lessons.length);
+    const nextIndex = nextLessonIndex(activeIndex, direction, availableLessons.length);
     if (nextIndex === activeIndex) return;
     videoRef.current?.pause();
     setStage("video");
-    setActiveIndex(nextIndex);
+    setActiveLessonId(availableLessons[nextIndex].id);
   }
 
   function togglePlayback() {
@@ -100,12 +105,12 @@ export function Library2LessonExperience({ initialLessonId }: { initialLessonId:
   }
 
   const atFirstLesson = activeIndex === 0;
-  const atLastLesson = activeIndex === lessons.length - 1;
+  const atLastLesson = activeIndex === availableLessons.length - 1;
   const showPlayButton = playbackStatus !== "playing";
 
   return <section
     className="library-2-reel"
-    aria-label={`${activeLesson.title}, lesson ${activeIndex + 1} of ${lessons.length}`}
+    aria-label={`${activeLesson.title}, lesson ${activeIndex + 1} of ${availableLessons.length}`}
     onKeyDown={(event) => {
       if (event.key === "ArrowUp") {
         event.preventDefault();
@@ -150,7 +155,7 @@ export function Library2LessonExperience({ initialLessonId }: { initialLessonId:
 
     <header className="library-2-reel-topbar">
       <button type="button" className="library-2-top-icon" onClick={closeToLibrary} aria-label="Back to Library 2"><ChevronLeft size={25} /></button>
-      <div><span>Lesson {String(activeLesson.order).padStart(2, "0")} · {activeIndex + 1} of {lessons.length}</span><strong>{activeLesson.topicEmoji} {activeLesson.title}</strong></div>
+      <div><span>Lesson {String(activeLesson.order).padStart(2, "0")} · {activeIndex + 1} of {availableLessons.length}</span><strong>{activeLesson.topicEmoji} {activeLesson.title}</strong></div>
       <button type="button" className="library-2-top-icon" onClick={toggleMuted} aria-label={muted ? "Turn sound on" : "Mute video"}>{muted ? <VolumeX size={21} /> : <Volume2 size={21} />}</button>
     </header>
 
