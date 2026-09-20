@@ -1,0 +1,270 @@
+{
+  "lessonId": "feeling-unwell",
+  "sourceVideo": "/lessons/drafts/feeling-unwell/intro.mp4",
+  "sourceHash": "94e3f2b14f06afaeb60917f3dcd8fdc14a9c634ce475a85a211856e014bd4f8f",
+  "model": "large-v3",
+  "generatedAt": "2026-08-31T15:56:56.540Z",
+  "algorithmFingerprint": "a94210fc1c3198f8",
+  "clips": [
+    {
+      "cueCardId": "draft-feeling-unwell-1",
+      "thaiText": "ก็ดี",
+      "englishText": "I’m good",
+      "thai": {
+        "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-1-th.m4a",
+        "status": "overridden",
+        "start": 4.839,
+        "end": 5.847,
+        "rawStart": 4.839,
+        "rawEnd": 5.847,
+        "protectedStart": 4.839,
+        "protectedEnd": 5.847,
+        "envelopeMethod": "override",
+        "transcriptMatch": "ก็ดี",
+        "confidence": 1,
+        "candidates": [],
+        "boundaryMethod": {
+          "start": "override",
+          "end": "override"
+        },
+        "boundaryConfidence": {
+          "start": 1,
+          "end": 1
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-1-en.m4a",
+        "status": "overridden",
+        "start": 5.807,
+        "end": 6.56,
+        "rawStart": 5.807,
+        "rawEnd": 6.56,
+        "protectedStart": 5.807,
+        "protectedEnd": 6.56,
+        "envelopeMethod": "override",
+        "transcriptMatch": "I’m good",
+        "confidence": 1,
+        "candidates": [],
+        "boundaryMethod": {
+          "start": "override",
+          "end": "override"
+        },
+        "boundaryConfidence": {
+          "start": 1,
+          "end": 1
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-feeling-unwell-2",
+      "thaiText": "ไม่ค่อยสบาย",
+      "englishText": "I’m not feeling very well",
+      "thai": {
+        "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-2-th.m4a",
+        "status": "overridden",
+        "start": 7.2,
+        "end": 8.58,
+        "rawStart": 7.2,
+        "rawEnd": 8.58,
+        "protectedStart": 7.2,
+        "protectedEnd": 8.58,
+        "envelopeMethod": "override",
+        "transcriptMatch": "ไม่ค่อยสบาย",
+        "confidence": 1,
+        "candidates": [],
+        "boundaryMethod": {
+          "start": "override",
+          "end": "override"
+        },
+        "boundaryConfidence": {
+          "start": 1,
+          "end": 1
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-2-en.m4a",
+        "status": "overridden",
+        "start": 8.926,
+        "end": 10.663,
+        "rawStart": 8.926,
+        "rawEnd": 10.663,
+        "protectedStart": 8.926,
+        "protectedEnd": 10.663,
+        "envelopeMethod": "override",
+        "transcriptMatch": "I’m not feeling very well",
+        "confidence": 1,
+        "candidates": [],
+        "boundaryMethod": {
+          "start": "override",
+          "end": "override"
+        },
+        "boundaryConfidence": {
+          "start": 1,
+          "end": 1
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-feeling-unwell-3",
+      "thaiText": "ช่วงนี้ยุ่งมาก",
+      "englishText": "I’ve been very busy lately",
+      "thai": {
+        "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-3-th.m4a",
+        "status": "overridden",
+        "start": 10.565,
+        "end": 12.21,
+        "rawStart": 10.565,
+        "rawEnd": 12.21,
+        "protectedStart": 10.565,
+        "protectedEnd": 12.21,
+        "envelopeMethod": "override",
+        "transcriptMatch": "ช่วงนี้ยุ่งมาก",
+        "confidence": 1,
+        "candidates": [],
+        "boundaryMethod": {
+          "start": "override",
+          "end": "override"
+        },
+        "boundaryConfidence": {
+          "start": 1,
+          "end": 1
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-3-en.m4a",
+        "status": "overridden",
+        "start": 12.35,
+        "end": 14.205,
+        "rawStart": 12.35,
+        "rawEnd": 14.205,
+        "protectedStart": 12.35,
+        "protectedEnd": 14.205,
+        "envelopeMethod": "override",
+        "transcriptMatch": "I’ve been very busy lately",
+        "confidence": 1,
+        "candidates": [],
+        "boundaryMethod": {
+          "start": "override",
+          "end": "override"
+        },
+        "boundaryConfidence": {
+          "start": 1,
+          "end": 1
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-feeling-unwell-4",
+      "thaiText": "ก็โอเค",
+      "englishText": "I’m okay",
+      "thai": {
+        "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-4-th.m4a",
+        "status": "overridden",
+        "start": 14.265,
+        "end": 15.795,
+        "rawStart": 14.265,
+        "rawEnd": 15.795,
+        "protectedStart": 14.265,
+        "protectedEnd": 15.795,
+        "envelopeMethod": "override",
+        "transcriptMatch": "ก็โอเค",
+        "confidence": 1,
+        "candidates": [],
+        "boundaryMethod": {
+          "start": "override",
+          "end": "override"
+        },
+        "boundaryConfidence": {
+          "start": 1,
+          "end": 1
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-4-en.m4a",
+        "status": "overridden",
+        "start": 16.02,
+        "end": 16.905,
+        "rawStart": 16.02,
+        "rawEnd": 16.905,
+        "protectedStart": 16.02,
+        "protectedEnd": 16.905,
+        "envelopeMethod": "override",
+        "transcriptMatch": "I’m okay",
+        "confidence": 1,
+        "candidates": [],
+        "boundaryMethod": {
+          "start": "override",
+          "end": "override"
+        },
+        "boundaryConfidence": {
+          "start": 1,
+          "end": 1
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-feeling-unwell-5",
+      "thaiText": "เหมือนเดิม",
+      "englishText": "Same as always",
+      "thai": {
+        "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-5-th.m4a",
+        "status": "overridden",
+        "start": 16.905,
+        "end": 18.075,
+        "rawStart": 16.905,
+        "rawEnd": 18.075,
+        "protectedStart": 16.905,
+        "protectedEnd": 18.075,
+        "envelopeMethod": "override",
+        "transcriptMatch": "เหมือนเดิม",
+        "confidence": 1,
+        "candidates": [],
+        "boundaryMethod": {
+          "start": "override",
+          "end": "override"
+        },
+        "boundaryConfidence": {
+          "start": 1,
+          "end": 1
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/feeling-unwell/audio/draft-feeling-unwell-5-en.m4a",
+        "status": "overridden",
+        "start": 18.235,
+        "end": 19.505,
+        "rawStart": 18.235,
+        "rawEnd": 19.505,
+        "protectedStart": 18.235,
+        "protectedEnd": 19.505,
+        "envelopeMethod": "override",
+        "transcriptMatch": "Same as always",
+        "confidence": 1,
+        "candidates": [],
+        "boundaryMethod": {
+          "start": "override",
+          "end": "override"
+        },
+        "boundaryConfidence": {
+          "start": 1,
+          "end": 1
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    }
+  ]
+}

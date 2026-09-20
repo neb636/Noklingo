@@ -1,0 +1,443 @@
+{
+  "lessonId": "connectors",
+  "sourceVideo": "/lessons/drafts/connectors/intro.mp4",
+  "sourceHash": "bfc7a8905266679b712968943e43755dfb33fa1a8c8ea3b2adca4710dc43fd1f",
+  "model": "large-v3",
+  "generatedAt": "2026-08-31T15:56:54.570Z",
+  "algorithmFingerprint": "a94210fc1c3198f8",
+  "clips": [
+    {
+      "cueCardId": "draft-connectors-1",
+      "thaiText": "และก็",
+      "englishText": "And",
+      "thai": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-1-th.m4a",
+        "status": "overridden",
+        "start": 0.52,
+        "end": 1.42,
+        "rawStart": 0.52,
+        "rawEnd": 1.42,
+        "protectedStart": 0.52,
+        "protectedEnd": 1.42,
+        "envelopeMethod": "override",
+        "transcriptMatch": "แล้วก็",
+        "confidence": 1,
+        "candidates": [],
+        "boundaryMethod": {
+          "start": "override",
+          "end": "override"
+        },
+        "boundaryConfidence": {
+          "start": 1,
+          "end": 1
+        },
+        "warnings": [
+          "legacy-unreviewed-override"
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-1-en.m4a",
+        "status": "matched",
+        "start": 0,
+        "end": 0.81,
+        "rawStart": 0,
+        "rawEnd": 0.3,
+        "protectedStart": 0.05,
+        "protectedEnd": 0.7,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": "And",
+        "confidence": 0.8935213544964791,
+        "candidates": [
+          {
+            "start": 0,
+            "end": 0.3,
+            "transcriptMatch": "And",
+            "confidence": 0.8935213544964791,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "fallback",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0,
+          "end": 0.2815358532574766
+        },
+        "warnings": [
+          "start-fallback",
+          "overlapping-speech-envelopes"
+        ]
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-connectors-2",
+      "thaiText": "หรือ",
+      "englishText": "Or",
+      "thai": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-2-th.m4a",
+        "status": "matched",
+        "start": 2.245,
+        "end": 3.495,
+        "rawStart": 2.42,
+        "rawEnd": 3.32,
+        "protectedStart": 2.42,
+        "protectedEnd": 3.32,
+        "envelopeMethod": "whisper",
+        "transcriptMatch": " หรือ",
+        "confidence": 0.9996163707971573,
+        "candidates": [
+          {
+            "start": 2.42,
+            "end": 3.32,
+            "transcriptMatch": " หรือ",
+            "confidence": 0.9996163707971573,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.24131809800207785,
+          "end": 0.2647740329613934
+        },
+        "warnings": [
+          "overlapping-speech-envelopes",
+          "unrefined-whisper-envelope"
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-2-en.m4a",
+        "status": "matched",
+        "start": 0.81,
+        "end": 3.495,
+        "rawStart": 1.42,
+        "rawEnd": 2.06,
+        "protectedStart": 0.89,
+        "protectedEnd": 3.43,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " Or",
+        "confidence": 0.9005218368768692,
+        "candidates": [
+          {
+            "start": 1.42,
+            "end": 2.06,
+            "transcriptMatch": " Or",
+            "confidence": 0.9005218368768692,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2815358532574766,
+          "end": 0.2619279131713823
+        },
+        "warnings": [
+          "overlapping-speech-envelopes"
+        ]
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-connectors-3",
+      "thaiText": "แต่",
+      "englishText": "But",
+      "thai": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-3-th.m4a",
+        "status": "matched",
+        "start": 4.0600000000000005,
+        "end": 5.22,
+        "rawStart": 4.12,
+        "rawEnd": 5.04,
+        "protectedStart": 4.12,
+        "protectedEnd": 5.04,
+        "envelopeMethod": "whisper",
+        "transcriptMatch": " แต่",
+        "confidence": 0.999250944852829,
+        "candidates": [
+          {
+            "start": 4.12,
+            "end": 5.04,
+            "transcriptMatch": " แต่",
+            "confidence": 0.999250944852829,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.5364975473437481,
+          "end": 0.37236771306702426
+        },
+        "warnings": [
+          "overlapping-speech-envelopes",
+          "unrefined-whisper-envelope"
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-3-en.m4a",
+        "status": "matched",
+        "start": 3.66,
+        "end": 4.359999999999999,
+        "rawStart": 3.32,
+        "rawEnd": 3.84,
+        "protectedStart": 3.72,
+        "protectedEnd": 4.26,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " But",
+        "confidence": 0.9757637095451355,
+        "candidates": [
+          {
+            "start": 3.32,
+            "end": 3.84,
+            "transcriptMatch": " But",
+            "confidence": 0.9757637095451355,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2716831042556617,
+          "end": 0.2997333107675162
+        },
+        "warnings": [
+          "overlapping-speech-envelopes"
+        ]
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-connectors-4",
+      "thaiText": "ก็เลย",
+      "englishText": "So",
+      "thai": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-4-th.m4a",
+        "status": "matched",
+        "start": 5.22,
+        "end": 6.84,
+        "rawStart": 5.42,
+        "rawEnd": 6.44,
+        "protectedStart": 5.42,
+        "protectedEnd": 6.44,
+        "envelopeMethod": "whisper",
+        "transcriptMatch": " ก็เลย",
+        "confidence": 0.9970805931091309,
+        "candidates": [
+          {
+            "start": 5.42,
+            "end": 6.44,
+            "transcriptMatch": " ก็เลย",
+            "confidence": 0.9970805931091309,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.3436105378700955,
+          "end": 0.9315846889462926
+        },
+        "warnings": [
+          "overlapping-speech-envelopes",
+          "unrefined-whisper-envelope"
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-4-en.m4a",
+        "status": "matched",
+        "start": 4.5,
+        "end": 7.005,
+        "rawStart": 5.04,
+        "rawEnd": 5.42,
+        "protectedStart": 4.53,
+        "protectedEnd": 6.84,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " So",
+        "confidence": 0.9510419750213623,
+        "candidates": [
+          {
+            "start": 5.04,
+            "end": 5.42,
+            "transcriptMatch": " So",
+            "confidence": 0.9510419750213623,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.1800684186365547,
+          "end": 0.2949955200944735
+        },
+        "warnings": [
+          "overlapping-speech-envelopes"
+        ]
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-connectors-5",
+      "thaiText": "กับ",
+      "englishText": "With",
+      "thai": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-5-th.m4a",
+        "status": "matched",
+        "start": 7.955,
+        "end": 8.705,
+        "rawStart": 7.28,
+        "rawEnd": 8.3,
+        "protectedStart": 8.13,
+        "protectedEnd": 8.46,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " กับ",
+        "confidence": 0.9888846850395203,
+        "candidates": [
+          {
+            "start": 7.28,
+            "end": 8.3,
+            "transcriptMatch": " กับ",
+            "confidence": 0.9888846850395203,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2873077748282127,
+          "end": 0.2871397487865484
+        },
+        "warnings": []
+      },
+      "english": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-5-en.m4a",
+        "status": "matched",
+        "start": 7.005,
+        "end": 7.930000000000001,
+        "rawStart": 6.44,
+        "rawEnd": 7.28,
+        "protectedStart": 7.14,
+        "protectedEnd": 7.72,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " With",
+        "confidence": 0.9828450918197632,
+        "candidates": [
+          {
+            "start": 6.44,
+            "end": 7.28,
+            "transcriptMatch": " With",
+            "confidence": 0.9828450918197632,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2949955200944735,
+          "end": 0.27763358526352433
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    },
+    {
+      "cueCardId": "draft-connectors-6",
+      "thaiText": "เพราะว่า",
+      "englishText": "Because",
+      "thai": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-6-th.m4a",
+        "status": "matched",
+        "start": 9.690000000000001,
+        "end": 10.67975,
+        "rawStart": 9.08,
+        "rawEnd": 10.48,
+        "protectedStart": 9.8,
+        "protectedEnd": 10.67,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " เพราะว่า",
+        "confidence": 0.996481329032353,
+        "candidates": [
+          {
+            "start": 9.08,
+            "end": 10.48,
+            "transcriptMatch": " เพราะว่า",
+            "confidence": 0.996481329032353,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "fallback"
+        },
+        "boundaryConfidence": {
+          "start": 0.27251958382526925,
+          "end": 0
+        },
+        "warnings": [
+          "end-fallback"
+        ]
+      },
+      "english": {
+        "audio": "/lessons/drafts/connectors/audio/draft-connectors-6-en.m4a",
+        "status": "matched",
+        "start": 8.74,
+        "end": 9.690000000000001,
+        "rawStart": 8.3,
+        "rawEnd": 9.08,
+        "protectedStart": 8.92,
+        "protectedEnd": 9.54,
+        "envelopeMethod": "energy-island",
+        "transcriptMatch": " Because",
+        "confidence": 0.9859579420089721,
+        "candidates": [
+          {
+            "start": 8.3,
+            "end": 9.08,
+            "transcriptMatch": " Because",
+            "confidence": 0.9859579420089721,
+            "exact": true,
+            "segmentIndex": 0
+          }
+        ],
+        "boundaryMethod": {
+          "start": "quiet",
+          "end": "quiet"
+        },
+        "boundaryConfidence": {
+          "start": 0.2905036956380498,
+          "end": 0.27251958382526925
+        },
+        "warnings": []
+      },
+      "pairStatus": "complete"
+    }
+  ]
+}
