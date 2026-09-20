@@ -47,7 +47,11 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </div>
       </aside>
       <main className="main-content" id="main-content" tabIndex={-1}>{children}</main>
-      <nav className="mobile-nav" aria-label="Primary navigation">
+      <nav
+        className="mobile-nav"
+        aria-label="Primary navigation"
+        style={{ gridTemplateColumns: `repeat(${mobileNavItems.length}, minmax(0, 1fr))` }}
+      >
         {mobileNavItems.map(({ href, label, icon: Icon }) => {
           const active = router.pathname === href;
           return (
