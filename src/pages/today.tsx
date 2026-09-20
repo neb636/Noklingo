@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { ArrowRight, BookOpen, Clock3, RotateCcw } from "lucide-react";
 import { motion } from "framer-motion";
 import { PageHeader } from "@/components/PageHeader";
@@ -25,6 +26,12 @@ export default function TodayPage() {
     }).format(new Date())
     : "Today";
 
+  useEffect(() => {
+    if (state.hydrated && state.settings.kidsMode) {
+      window.location.replace(assetPath("/library/"));
+    }
+  }, [state.hydrated, state.settings.kidsMode]);
+
   async function start(kind: "introduction" | "mastery" | "standalone-review", lessonId?: string) {
     if (kind === "introduction" && lessonId) useStudyStore.getState().startIntroduction(lessonId);
     if (kind === "mastery" && lessonId) useStudyStore.getState().startMastery(lessonId);
@@ -34,6 +41,8 @@ export default function TodayPage() {
   }
 
   const copy = actionCopy(action);
+
+  if (state.hydrated && state.settings.kidsMode) return null;
 
   return (
     <div className="page page-today">
