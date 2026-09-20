@@ -6,9 +6,15 @@ import { Brain, CalendarDays, Library, Settings } from "lucide-react";
 import { assetPath } from "@/lib/asset-path";
 import { AppLink } from "./AppLink";
 
-const navItems = [
+const desktopNavItems = [
   { href: "/today", label: "Today", icon: CalendarDays },
   { href: "/library", label: "Library", icon: Library },
+  { href: "/review", label: "Review", icon: Brain },
+  { href: "/settings", label: "Settings", icon: Settings },
+];
+
+const mobileNavItems = [
+  { href: "/library", label: "Lessons", icon: Library },
   { href: "/review", label: "Review", icon: Brain },
   { href: "/settings", label: "Settings", icon: Settings },
 ];
@@ -25,7 +31,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           <span>NokLingo</span>
         </AppLink>
         <nav className="side-nav" aria-label="Primary navigation">
-          {navItems.map(({ href, label, icon: Icon }) => {
+          {desktopNavItems.map(({ href, label, icon: Icon }) => {
             const active = router.pathname === href;
             return (
               <AppLink key={href} href={`${href}/`} className="nav-link" aria-current={active ? "page" : undefined}>
@@ -41,8 +47,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </div>
       </aside>
       <main className="main-content" id="main-content" tabIndex={-1}>{children}</main>
-      <nav className="mobile-nav" aria-label="Primary navigation">
-        {navItems.map(({ href, label, icon: Icon }) => {
+      <nav
+        className="mobile-nav"
+        aria-label="Primary navigation"
+        style={{ gridTemplateColumns: `repeat(${mobileNavItems.length}, minmax(0, 1fr))` }}
+      >
+        {mobileNavItems.map(({ href, label, icon: Icon }) => {
           const active = router.pathname === href;
           return (
             <AppLink key={href} href={`${href}/`} className="mobile-nav-link" aria-current={active ? "page" : undefined}>
